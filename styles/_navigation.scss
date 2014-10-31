@@ -1,0 +1,205 @@
+// Structure
+body {
+  position: relative;
+  overflow-x: hidden; // Required for Side Nav
+
+  &.sidenav-active {
+    .sidenav {
+      right: 0em;
+    }
+    #site {
+      left: -30em;
+    }
+    .site-header {
+      left: -30em;
+    }
+    .mask {
+      display: block;
+    }
+  }
+}
+
+.mask {
+  // Disables interacting with the rest of the site while sidenav is open
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-overlay-mid;
+  width: 100%;
+  height: 100%;
+  display: none;
+  cursor: pointer;
+}
+#site {
+  position: relative;
+  z-index: $z-body-mid;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.sidenav {
+  position: fixed;
+  z-index: $z-overlay-high;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  top: 0;
+  right: -30em;
+  width: 30em;
+  height: 100%;
+  @include box-sizing(border-box);
+  padding-top: 2em;
+
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+  .sidenav-close {
+    display: inline-block;
+    padding: 1.25em;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .icon {
+      @include box-sizing(border-box);
+      padding-left: 0.5em;
+    }
+  }
+  .nav {
+    .nav-list {
+      .nav-item {
+        .nav-link {
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+}
+.site-header {
+  width: 100%;
+  height: 4em;
+  @include box-sizing(border-box);
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+  .logo {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    vertical-align: middle;
+  }
+  .nav {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    height: 4em;
+    @include box-sizing(border-box);
+    vertical-align: middle;
+    float: right;
+
+    .nav-list {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      height: 4em;
+      @include box-sizing(border-box);
+
+      .nav-item {
+        display: inline-block;
+        padding: 0 1em;
+        height: 4em;
+        line-height: 4em;
+        @include box-sizing(border-box);
+
+        .nav-link {
+          font-size: 1.5em;
+          padding-bottom: 0.15em;
+          @include box-sizing(border-box);
+
+          .icon {
+            @include box-sizing(border-box);
+            padding-left: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Presentation
+.mask {
+  background: rgba(0, 0, 0, 0.1);
+}
+.sidenav {
+  background-color: $color-gray-charcoal;
+
+  .sidenav-close {
+    color: $color-white-pure;
+    font-weight: $font-weight-body;
+
+    &:hover, &:focus {
+      text-decoration: none;
+      color: $color-orange-apricot;
+    }
+  }
+  .nav {
+    .nav-list {
+      .nav-item {
+        .nav-link {
+          color: $color-white-pure;
+          font-size: 1.5em;
+          font-weight: $font-weight-body;
+
+          &:hover, &:focus {
+            color: $color-orange-apricot;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.site-header {
+  background: $color-white-pure;
+  border-bottom: 1px solid $color-white-smoke;
+
+  .logo {
+    background: url('/images/ceux/ceux-logo.png');
+    text-indent: -9999px;
+  }
+  .nav {
+    .nav-list {
+      .nav-item {
+        list-style: none;
+
+        .nav-link {
+          color: $color-gray-charcoal;
+          text-decoration: none;
+          font-weight: $font-weight-body;
+          border-bottom: 4px solid $color-white-pure;
+
+          &:hover, &:focus {
+            border-bottom: 4px solid $color-orange-apricot;
+          }
+          &.active {
+            border-bottom: 4px solid $color-orange-sun;
+          }
+        }
+      }
+    }
+  }
+}

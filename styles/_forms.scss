@@ -1,0 +1,67 @@
+// Structure
+input, textarea, select {
+  padding: 0.5em;
+  @include box-sizing(border-box);
+}
+
+fieldset {
+  padding: 1em;
+  @include box-sizing(border-box);
+
+  legend {
+    padding: 0.5em;
+    @include box-sizing(border-box);
+  }
+}
+
+
+// Presentation
+input, textarea, select {
+  border: 1px solid $color-green-shamrock;
+  background: $color-white-pure;
+  color: $color-gray-chateau;
+
+  &:focus {
+    border: 1px solid $color-green-shamrock;
+    color: $color-gray-charcoal;
+    outline: none;
+  }
+}
+
+button, input[type="submit"] {
+  background: $color-green-shamrock;
+  border: none;
+  border-bottom: 3px solid $color-green-jewel;
+  color: $color-white-pure;
+
+  &:hover, &:focus {
+    background: $color-green-jewel;
+  }
+}
+
+fieldset {
+  background: $color-white-smoke;
+  border: 1px solid $color-blue-curious;
+
+  legend {
+    background: $color-blue-curious;
+    color: $color-white-pure;
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: $color-white-lilac;
+
+
+  &.bright {
+    background: $color-orange-sun;
+  }
+  &.info {
+    background: $color-blue-curious;
+  }
+  &.dark {
+    background: $color-gray-charcoal;
+  }
+}
