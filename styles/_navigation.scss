@@ -1,3 +1,6 @@
+// Navigation Variables
+$sidenav-width: 20em;
+
 // Structure
 body {
   position: relative;
@@ -8,10 +11,10 @@ body {
       right: 0em;
     }
     #site {
-      left: -30em;
+      left: -$sidenav-width;
     }
     .site-header {
-      left: -30em;
+      left: -$sidenav-width;
     }
     .mask {
       display: block;
@@ -51,11 +54,11 @@ body {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   top: 0;
-  right: -30em;
-  width: 30em;
+  right: -$sidenav-width;
+  width: $sidenav-width;
   height: 100%;
   @include box-sizing(border-box);
-  padding-top: 2em;
+  padding-top: 4em;
 
   .logo {
     width: 100%;
@@ -75,9 +78,11 @@ body {
   }
   .nav {
     .nav-list {
+      padding: 1.25em;
+
       .nav-item {
         .nav-link {
-          line-height: 1.5em;
+          line-height: 1.6em;
         }
       }
     }

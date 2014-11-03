@@ -16,12 +16,12 @@
   margin: 1em 0;
 
   .ceux-result {
-    @include flex(1 1 10em);
+    @include flex(1 1 5em);
     @include box-sizing(border-box);
     padding: 1em;
   }
   .ceux-code {
-    @include flex(1 1 10em);
+    @include flex(1 1 5em);
     @include box-sizing(border-box);
     padding: 1em;
 
@@ -29,6 +29,28 @@
       background: #1d1f21;
       padding: 1em;
       @include box-sizing(border-box);
+    }
+  }
+}
+
+.ceux-philosophies {
+  @include box-sizing(border-box);
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  margin: 0;
+  padding: 0;
+
+  .ceux-philosophy {
+    @include box-sizing(border-box);
+    @include flex(1 1 20em);
+    list-style: none;
+    padding: 1em;
+
+    ul, li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
   }
 }
@@ -42,7 +64,7 @@
 
 .ceux-color {
   margin-right: 1em;
-  @include flex(1 1 10em);
+  @include flex(1 1 5em);
 
   .ceux-color-swatch {
     display: block;
@@ -71,6 +93,11 @@
     height: 1.5em;
     line-height: 1.5em;
   }
+}
+
+.ceux-color-inline {
+  padding: 0.2em;
+  margin: 0 0.1em;
 }
 
 // Base Color Palette
@@ -152,7 +179,7 @@
 
 
 .ceux-section {
-  padding: 6.0em 0 0 0;
+  padding: 6.0em 0.5em 0 0.5em;
   margin: 2.0em 0;
   border-bottom: 1px solid $color-white-lilac;
 
