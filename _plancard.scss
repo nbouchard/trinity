@@ -1,0 +1,174 @@
+@import "custom_variables";
+
+.plan-cards {
+  @extend .col-lg-9;
+  @extend .col-md-9;
+  @extend .col-sm-9;
+  @extend .col-xs-12;
+  @extend .panel-group;
+  padding: 39px 0;
+}
+
+ul.plans {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 75%;
+    position: absolute;
+    right: 0;
+    a {
+      text-decoration: none;
+    }
+
+    li {
+        padding: 5px 10px;
+        margin: 1px;
+        background: rgba(0,0,0,.15);
+        .plan-price {
+          font-size: 30px;
+        }
+        section {
+            background: rgba(255,255,255,.5);
+        }
+
+        h1 {
+            float: right;
+            font-size: 15px;
+        }
+
+    }
+}
+.top-picks-wrapper {
+  overflow: scroll;
+  max-width: 100%;
+  max-height: 400px;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+ul.top-picks {
+    top: 0;
+    right: 0;
+    display: block;
+    clear: both;
+    border: 1px solid;
+    margin: 5px;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    max-width: 100%;
+    max-height: 500px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    li {
+        display: inline-block;
+        position: relative;
+        width: 25%;
+        padding: 0 0 50px 0;
+        margin: 0;
+        text-align: center;
+        h1, h4 {
+            font-size: 100%;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            display: none;
+        }
+        .plan-price {
+          font-size: 150%;
+          font-weight: 900;
+        }
+        .plan-popularity {
+          display: inline-block;
+        }
+        .plan-short {
+          border-bottom: 1px dashed $gray-light;
+          padding: 10px 0;
+        }
+        .plan-name {
+          overflow: hidden;
+          white-space: nowrap;
+          width: 75%;
+          text-overflow: ellipsis;
+          display: inline-block;
+        }
+        .plan-actions {
+          position: absolute;
+          bottom: 0;
+          left : 0;
+          width: 100%;
+        }
+    }
+}
+
+.glyphicon-star-empty.half:after {
+    content:'\2605';
+    position: absolute;
+    left: -1px;
+    top: -3px;
+    width: 7px;
+    overflow: hidden;
+}
+
+.plan-card .sprite {
+  max-width: 100%;
+}
+
+.plan-card .plan-actions {
+  background: $gray-lighter;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+  .plan-actions .sign-up {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+    overflow: hidden;
+  }
+  .plan-actions .sign-up .btn {
+    height: 50px;
+    border: none;
+  }
+
+    .plan-actions .btn-primary strong {
+      text-transform: uppercase;
+      font-size: 100%;
+      opacity: 1;
+      transition: all 250ms;
+      color: white;
+    }
+
+    .plan-actions .btn-primary:hover strong {
+      opacity: 0;
+      font-size: 200%;
+    }
+
+    .plan-actions .btn-primary i {
+      position: absolute;
+      left: 50%;
+      top: 0px;
+      margin: 0 0 0 -25px;
+      font-size: 500%;
+      opacity: 0;
+      transform: rotateZ(180deg);
+
+      transition: all 250ms;
+    }
+
+    .plan-actions .btn-primary:hover i {
+      left: 50%;
+      top: 14px;
+      margin: 0 0 0 -10px;
+      font-size: 180%;
+      opacity: 1;
+      transform: rotateZ(0deg);
+    }
+
+    .recommanded-plans .plan-card .plan-actions .btn-primary:hover i {
+      top: 12px;
+    }
