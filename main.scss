@@ -26,9 +26,6 @@
 // CE Website Base
 @import "base";
 
-// CEUX-Specific Styles
-@import "ceux";
-
 // CE - Plan Card (Shopping)
 @import "plancard";
 
@@ -123,6 +120,6 @@ $priceToCompare-height: 3em;
   text-align: center;
 }
 // Import Media Queries last
-@import "mediaQueries";
+@import "mq";
 // Import Logo Sprites
 @import "sprites";
