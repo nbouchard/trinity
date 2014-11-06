@@ -8,45 +8,45 @@ button, input[type="submit"] {
 button, input[type="submit"] {
   border: none;
   background: $color-gray-ghost;
-  border-bottom: 3px solid $color-gray-chateau;
+  border-bottom: $button-border-width solid $color-gray-chateau;
   color: $color-white-pure;
 
   &:hover, &:focus {
     background: $color-gray-chateau;
-    border-bottom: 3px solid $color-gray-ghost;
+    border-bottom: $button-border-width solid $color-gray-ghost;
     outline: none;
   }
 
   &:disabled {
     background: $color-white-smoke;
-    border-bottom: 3px solid $color-white-smoke;
+    border-bottom: $button-border-width solid $color-white-smoke;
     color: $color-gray-chateau;
 
     &:hover, &:focus {
       background: $color-white-smoke;
-      border-bottom: 3px solid $color-white-smoke;
+      border-bottom: $button-border-width solid $color-white-smoke;
       cursor: not-allowed;
     }
   }
 
   &.btn-primary {
     background: $color-green-shamrock;
-    border-bottom: 3px solid $color-green-jewel;
+    border-bottom: $button-border-width solid $color-green-jewel;
     color: $color-white-pure;
 
     &:hover, &:focus {
       background: $color-green-jewel;
-      border-bottom: 3px solid $color-green-shamrock;
+      border-bottom: $button-border-width solid $color-green-shamrock;
     }
 
     &:disabled {
       background: $color-green-cruise;
-      border-bottom: 3px solid $color-green-cruise;
+      border-bottom: $button-border-width solid $color-green-cruise;
       color: $color-white-pure;
 
       &:hover, &:focus {
         background: $color-green-cruise;
-        border-bottom: 3px solid $color-green-cruise;
+        border-bottom: $button-border-width solid $color-green-cruise;
         cursor: not-allowed;
       }
     }
@@ -54,22 +54,22 @@ button, input[type="submit"] {
 
   &.btn-bright {
     background: $color-orange-sun;
-    border-bottom: 3px solid $color-orange-fiery;
+    border-bottom: $button-border-width solid $color-orange-fiery;
     color: $color-white-pure;
 
     &:hover, &:focus {
       background: $color-orange-fiery;
-      border-bottom: 3px solid $color-orange-sun;
+      border-bottom: $button-border-width solid $color-orange-sun;
     }
 
     &:disabled {
       background: $color-orange-apricot;
-      border-bottom: 3px solid $color-orange-apricot;
+      border-bottom: $button-border-width solid $color-orange-apricot;
       color: $color-white-pure;
 
       &:hover, &:focus {
         background: $color-orange-apricot;
-        border-bottom: 3px solid $color-orange-apricot;
+        border-bottom: $button-border-width solid $color-orange-apricot;
         cursor: not-allowed;
       }
     }
@@ -77,22 +77,22 @@ button, input[type="submit"] {
 
   &.btn-info {
     background: $color-blue-curious;
-    border-bottom: 3px solid $color-blue-bahama;
+    border-bottom: $button-border-width solid $color-blue-bahama;
     color: $color-white-pure;
 
     &:hover, &:focus {
       background: $color-blue-bahama;
-      border-bottom: 3px solid $color-blue-curious;
+      border-bottom: $button-border-width solid $color-blue-curious;
     }
 
     &:disabled {
       background: $color-blue-perano;
-      border-bottom: 3px solid $color-blue-perano;
+      border-bottom: $button-border-width solid $color-blue-perano;
       color: $color-white-pure;
 
       &:hover, &:focus {
         background: $color-blue-perano;
-        border-bottom: 3px solid $color-blue-perano;
+        border-bottom: $button-border-width solid $color-blue-perano;
         cursor: not-allowed;
       }
     }
@@ -100,22 +100,22 @@ button, input[type="submit"] {
 
   &.btn-dark {
     background: $color-gray-chateau;
-    border-bottom: 3px solid $color-gray-charcoal;
+    border-bottom: $button-border-width solid $color-gray-charcoal;
     color: $color-white-pure;
 
     &:hover, &:focus {
       background: $color-gray-charcoal;
-      border-bottom: 3px solid $color-gray-chateau;
+      border-bottom: $button-border-width solid $color-gray-chateau;
     }
 
     &:disabled {
       background: $color-white-smoke;
-      border-bottom: 3px solid $color-white-smoke;
+      border-bottom: $button-border-width solid $color-white-smoke;
       color: $color-gray-chateau;
 
       &:hover, &:focus {
         background: $color-white-smoke;
-        border-bottom: 3px solid $color-white-smoke;
+        border-bottom: $button-border-width solid $color-white-smoke;
         cursor: not-allowed;
       }
     }
