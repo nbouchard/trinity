@@ -553,118 +553,124 @@ button, input[type="submit"] {
 button, input[type="submit"] {
   border: none;
   background: #bcbdc0;
-  border-bottom: 3px solid #939598;
+  border-bottom: 0.25em solid #939598;
   color: #ffffff;
 }
 /* line 14, ../../styles/_buttons.scss */
 button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
   background: #939598;
-  border-bottom: 3px solid #bcbdc0;
+  border-bottom: 0.25em solid #bcbdc0;
   outline: none;
 }
 /* line 20, ../../styles/_buttons.scss */
 button:disabled, input[type="submit"]:disabled {
   background: #efefef;
-  border-bottom: 3px solid #efefef;
+  border-bottom: 0.25em solid #efefef;
   color: #939598;
 }
 /* line 25, ../../styles/_buttons.scss */
 button:disabled:hover, button:disabled:focus, input[type="submit"]:disabled:hover, input[type="submit"]:disabled:focus {
   background: #efefef;
-  border-bottom: 3px solid #efefef;
+  border-bottom: 0.25em solid #efefef;
   cursor: not-allowed;
 }
 /* line 32, ../../styles/_buttons.scss */
 button.btn-primary, input[type="submit"].btn-primary {
   background: #34ba8c;
-  border-bottom: 3px solid #146e50;
+  border-bottom: 0.25em solid #146e50;
   color: #ffffff;
 }
 /* line 37, ../../styles/_buttons.scss */
 button.btn-primary:hover, button.btn-primary:focus, input[type="submit"].btn-primary:hover, input[type="submit"].btn-primary:focus {
   background: #146e50;
-  border-bottom: 3px solid #34ba8c;
+  border-bottom: 0.25em solid #34ba8c;
 }
 /* line 42, ../../styles/_buttons.scss */
 button.btn-primary:disabled, input[type="submit"].btn-primary:disabled {
   background: #b7dfcc;
-  border-bottom: 3px solid #b7dfcc;
+  border-bottom: 0.25em solid #b7dfcc;
   color: #ffffff;
 }
 /* line 47, ../../styles/_buttons.scss */
 button.btn-primary:disabled:hover, button.btn-primary:disabled:focus, input[type="submit"].btn-primary:disabled:hover, input[type="submit"].btn-primary:disabled:focus {
   background: #b7dfcc;
-  border-bottom: 3px solid #b7dfcc;
+  border-bottom: 0.25em solid #b7dfcc;
   cursor: not-allowed;
 }
 /* line 55, ../../styles/_buttons.scss */
 button.btn-bright, input[type="submit"].btn-bright {
   background: #ee8733;
-  border-bottom: 3px solid #ae6328;
+  border-bottom: 0.25em solid #ae6328;
   color: #ffffff;
 }
 /* line 60, ../../styles/_buttons.scss */
 button.btn-bright:hover, button.btn-bright:focus, input[type="submit"].btn-bright:hover, input[type="submit"].btn-bright:focus {
   background: #ae6328;
-  border-bottom: 3px solid #ee8733;
+  border-bottom: 0.25em solid #ee8733;
 }
 /* line 65, ../../styles/_buttons.scss */
 button.btn-bright:disabled, input[type="submit"].btn-bright:disabled {
   background: #f9caa3;
-  border-bottom: 3px solid #f9caa3;
+  border-bottom: 0.25em solid #f9caa3;
   color: #ffffff;
 }
 /* line 70, ../../styles/_buttons.scss */
 button.btn-bright:disabled:hover, button.btn-bright:disabled:focus, input[type="submit"].btn-bright:disabled:hover, input[type="submit"].btn-bright:disabled:focus {
   background: #f9caa3;
-  border-bottom: 3px solid #f9caa3;
+  border-bottom: 0.25em solid #f9caa3;
   cursor: not-allowed;
 }
 /* line 78, ../../styles/_buttons.scss */
 button.btn-info, input[type="submit"].btn-info {
   background: #328fc9;
-  border-bottom: 3px solid #246289;
+  border-bottom: 0.25em solid #246289;
   color: #ffffff;
 }
 /* line 83, ../../styles/_buttons.scss */
 button.btn-info:hover, button.btn-info:focus, input[type="submit"].btn-info:hover, input[type="submit"].btn-info:focus {
   background: #246289;
-  border-bottom: 3px solid #328fc9;
+  border-bottom: 0.25em solid #328fc9;
 }
 /* line 88, ../../styles/_buttons.scss */
 button.btn-info:disabled, input[type="submit"].btn-info:disabled {
   background: #adc7e6;
-  border-bottom: 3px solid #adc7e6;
+  border-bottom: 0.25em solid #adc7e6;
   color: #ffffff;
 }
 /* line 93, ../../styles/_buttons.scss */
 button.btn-info:disabled:hover, button.btn-info:disabled:focus, input[type="submit"].btn-info:disabled:hover, input[type="submit"].btn-info:disabled:focus {
   background: #adc7e6;
-  border-bottom: 3px solid #adc7e6;
+  border-bottom: 0.25em solid #adc7e6;
   cursor: not-allowed;
 }
 /* line 101, ../../styles/_buttons.scss */
 button.btn-dark, input[type="submit"].btn-dark {
   background: #939598;
-  border-bottom: 3px solid #444444;
+  border-bottom: 0.25em solid #444444;
   color: #ffffff;
 }
 /* line 106, ../../styles/_buttons.scss */
 button.btn-dark:hover, button.btn-dark:focus, input[type="submit"].btn-dark:hover, input[type="submit"].btn-dark:focus {
   background: #444444;
-  border-bottom: 3px solid #939598;
+  border-bottom: 0.25em solid #939598;
 }
 /* line 111, ../../styles/_buttons.scss */
 button.btn-dark:disabled, input[type="submit"].btn-dark:disabled {
   background: #efefef;
-  border-bottom: 3px solid #efefef;
+  border-bottom: 0.25em solid #efefef;
   color: #939598;
 }
 /* line 116, ../../styles/_buttons.scss */
 button.btn-dark:disabled:hover, button.btn-dark:disabled:focus, input[type="submit"].btn-dark:disabled:hover, input[type="submit"].btn-dark:disabled:focus {
   background: #efefef;
-  border-bottom: 3px solid #efefef;
+  border-bottom: 0.25em solid #efefef;
   cursor: not-allowed;
+}
+/* line 124, ../../styles/_buttons.scss */
+button.btn-icon, input[type="submit"].btn-icon {
+  height: 2em;
+  width: 2em;
+  line-height: 1em;
 }
 
 /* line 2, ../../styles/_forms.scss */
@@ -763,19 +769,35 @@ body.sidenav-active .mask {
   display: block;
 }
 
-/* line 24, ../../styles/_navigation.scss */
+/* line 25, ../../styles/_navigation.scss */
 .nav-list {
   padding: 0;
   margin: 0;
 }
-/* line 28, ../../styles/_navigation.scss */
+/* line 29, ../../styles/_navigation.scss */
 .nav-list .nav-item {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 34, ../../styles/_navigation.scss */
+/* line 37, ../../styles/_navigation.scss */
+.paginator .nav-list .nav-item {
+  display: inline-block;
+}
+/* line 40, ../../styles/_navigation.scss */
+.paginator .nav-list .nav-item .nav-link {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  height: 2em;
+  min-width: 2em;
+  line-height: 1em;
+  padding: 0.5em;
+}
+
+/* line 51, ../../styles/_navigation.scss */
 .mask {
   position: fixed;
   top: 0;
@@ -787,7 +809,7 @@ body.sidenav-active .mask {
   cursor: pointer;
 }
 
-/* line 45, ../../styles/_navigation.scss */
+/* line 62, ../../styles/_navigation.scss */
 #site {
   position: relative;
   z-index: 20;
@@ -800,7 +822,7 @@ body.sidenav-active .mask {
   transition: all 0.3s;
 }
 
-/* line 56, ../../styles/_navigation.scss */
+/* line 73, ../../styles/_navigation.scss */
 .sidenav {
   position: fixed;
   z-index: 1030;
@@ -819,12 +841,12 @@ body.sidenav-active .mask {
   box-sizing: border-box;
   padding-top: 4em;
 }
-/* line 72, ../../styles/_navigation.scss */
+/* line 89, ../../styles/_navigation.scss */
 .sidenav .logo {
   width: 100%;
   text-align: center;
 }
-/* line 76, ../../styles/_navigation.scss */
+/* line 93, ../../styles/_navigation.scss */
 .sidenav .sidenav-close {
   display: inline-block;
   padding: 1.25em;
@@ -832,23 +854,23 @@ body.sidenav-active .mask {
   right: 0;
   top: 0;
 }
-/* line 83, ../../styles/_navigation.scss */
+/* line 100, ../../styles/_navigation.scss */
 .sidenav .sidenav-close .icon {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 0.5em;
 }
-/* line 89, ../../styles/_navigation.scss */
+/* line 106, ../../styles/_navigation.scss */
 .sidenav .nav .nav-list {
   padding: 1.25em;
 }
-/* line 93, ../../styles/_navigation.scss */
+/* line 110, ../../styles/_navigation.scss */
 .sidenav .nav .nav-list .nav-item .nav-link {
   line-height: 1.6em;
 }
 
-/* line 100, ../../styles/_navigation.scss */
+/* line 117, ../../styles/_navigation.scss */
 .site-header {
   width: 100%;
   height: 4em;
@@ -864,14 +886,14 @@ body.sidenav-active .mask {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 113, ../../styles/_navigation.scss */
+/* line 130, ../../styles/_navigation.scss */
 .site-header .logo {
   display: inline-block;
   height: 60px;
   width: 60px;
   vertical-align: middle;
 }
-/* line 119, ../../styles/_navigation.scss */
+/* line 136, ../../styles/_navigation.scss */
 .site-header .nav {
   display: inline;
   margin: 0;
@@ -883,7 +905,7 @@ body.sidenav-active .mask {
   vertical-align: middle;
   float: right;
 }
-/* line 128, ../../styles/_navigation.scss */
+/* line 145, ../../styles/_navigation.scss */
 .site-header .nav .nav-list {
   display: inline;
   margin: 0;
@@ -893,7 +915,7 @@ body.sidenav-active .mask {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 135, ../../styles/_navigation.scss */
+/* line 152, ../../styles/_navigation.scss */
 .site-header .nav .nav-list .nav-item {
   display: inline-block;
   padding: 0 1em;
@@ -903,7 +925,7 @@ body.sidenav-active .mask {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 142, ../../styles/_navigation.scss */
+/* line 159, ../../styles/_navigation.scss */
 .site-header .nav .nav-list .nav-item .nav-link {
   font-size: 1.5em;
   padding-bottom: 0.15em;
@@ -911,7 +933,7 @@ body.sidenav-active .mask {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 147, ../../styles/_navigation.scss */
+/* line 164, ../../styles/_navigation.scss */
 .site-header .nav .nav-list .nav-item .nav-link .icon {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -919,65 +941,90 @@ body.sidenav-active .mask {
   padding-left: 0.5em;
 }
 
-/* line 158, ../../styles/_navigation.scss */
+/* line 175, ../../styles/_navigation.scss */
 .mask {
   background: rgba(0, 0, 0, 0.1);
 }
 
-/* line 161, ../../styles/_navigation.scss */
+/* line 178, ../../styles/_navigation.scss */
 .sidenav {
   background-color: #444444;
 }
-/* line 164, ../../styles/_navigation.scss */
+/* line 181, ../../styles/_navigation.scss */
 .sidenav .sidenav-close {
   color: #ffffff;
   font-weight: 300;
 }
-/* line 168, ../../styles/_navigation.scss */
+/* line 185, ../../styles/_navigation.scss */
 .sidenav .sidenav-close:hover, .sidenav .sidenav-close:focus {
   text-decoration: none;
   color: #f9caa3;
 }
-/* line 176, ../../styles/_navigation.scss */
+/* line 193, ../../styles/_navigation.scss */
 .sidenav .nav .nav-list .nav-item .nav-link {
   color: #ffffff;
   font-size: 1.5em;
   font-weight: 300;
 }
-/* line 181, ../../styles/_navigation.scss */
+/* line 198, ../../styles/_navigation.scss */
 .sidenav .nav .nav-list .nav-item .nav-link:hover, .sidenav .nav .nav-list .nav-item .nav-link:focus {
   color: #f9caa3;
   text-decoration: none;
 }
 
-/* line 190, ../../styles/_navigation.scss */
+/* line 207, ../../styles/_navigation.scss */
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid #efefef;
 }
-/* line 194, ../../styles/_navigation.scss */
+/* line 211, ../../styles/_navigation.scss */
 .site-header .logo {
   background: url("/images/ceux/ceux-logo.png");
   text-indent: -9999px;
 }
-/* line 200, ../../styles/_navigation.scss */
+/* line 217, ../../styles/_navigation.scss */
 .site-header .nav .nav-list .nav-item {
   list-style: none;
 }
-/* line 203, ../../styles/_navigation.scss */
+/* line 220, ../../styles/_navigation.scss */
 .site-header .nav .nav-list .nav-item .nav-link {
   color: #444444;
   text-decoration: none;
   font-weight: 300;
   border-bottom: 4px solid #ffffff;
 }
-/* line 209, ../../styles/_navigation.scss */
+/* line 226, ../../styles/_navigation.scss */
 .site-header .nav .nav-list .nav-item .nav-link:hover, .site-header .nav .nav-list .nav-item .nav-link:focus {
   border-bottom: 4px solid #f9caa3;
 }
-/* line 212, ../../styles/_navigation.scss */
+/* line 229, ../../styles/_navigation.scss */
 .site-header .nav .nav-list .nav-item .nav-link.active {
   border-bottom: 4px solid #ee8733;
+}
+
+/* line 240, ../../styles/_navigation.scss */
+.paginator .nav-list .nav-item .nav-link {
+  color: #ffffff;
+  background: #bcbdc0;
+  border-bottom: 0.25em solid #bcbdc0;
+  text-align: center;
+  font-weight: 300;
+}
+/* line 247, ../../styles/_navigation.scss */
+.paginator .nav-list .nav-item .nav-link:hover, .paginator .nav-list .nav-item .nav-link:focus {
+  text-decoration: none;
+  background: #939598;
+  border-bottom: 0.25em solid #bcbdc0;
+}
+/* line 253, ../../styles/_navigation.scss */
+.paginator .nav-list .nav-item .nav-link.active {
+  background: #34ba8c;
+  border-bottom: 0.25em solid #146e50;
+}
+/* line 257, ../../styles/_navigation.scss */
+.paginator .nav-list .nav-item .nav-link.active:hover, .paginator .nav-list .nav-item .nav-link.active:focus {
+  background: #34ba8c;
+  border-bottom: 0.25em solid #146e50;
 }
 
 /* line 1, ../../styles/_content.scss */
