@@ -1,7 +1,7 @@
 .ceux-body {
   margin: 0 auto;
   padding-top: 7em;
-  max-width: 60em;
+  max-width: $site-max-width;
 }
 
 .ceux-heading {
@@ -14,6 +14,10 @@
   @include display-flex;
   @include flex-direction(row);
   margin: 1em 0;
+
+  &.ceux-vertical {
+    display: block;
+  }
 
   .ceux-result {
     @include flex(1 1 5em);

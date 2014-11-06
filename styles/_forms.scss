@@ -28,24 +28,21 @@ input, textarea, select {
   }
 }
 
-button, input[type="submit"] {
-  background: $color-green-shamrock;
-  border: none;
-  border-bottom: 3px solid $color-green-jewel;
-  color: $color-white-pure;
-
-  &:hover, &:focus {
-    background: $color-green-jewel;
-  }
-}
-
 fieldset {
   background: $color-white-smoke;
-  border: 1px solid $color-blue-curious;
+  border: 1px solid $color-gray-chateau;
 
   legend {
-    background: $color-blue-curious;
+    background: $color-gray-chateau;
     color: $color-white-pure;
+  }
+
+  &.highlight {
+    border: 1px solid $color-blue-curious;
+
+    legend {
+      background: $color-blue-curious;
+    }
   }
 }
 

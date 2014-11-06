@@ -569,23 +569,6 @@ p q r s t u v w x y z { | } ~
           <div class="ceux-example">
             <div class="ceux-result">
               <fieldset>
-                <legend>Fieldset with legend</legend>
-                <p><label>Text Input</label>
-                  <input type="text"></p>
-                <p><input type="submit" value="Submit"></p>
-              </fieldset>
-            </div>
-            <div class="ceux-code">
-              <pre><code class="html">&lt;fieldset&gt;
-  &lt;legend&gt;Fieldset with legend&lt;/legend&gt;
-  &lt;p&gt;&lt;label&gt;Text Input&lt;/label&gt; &lt;input type="text"&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;input type="submit" value="Submit"&gt;&lt;/p&gt;
-&lt;/fieldset&gt;</code></pre>
-            </div>
-          </div>
-          <div class="ceux-example">
-            <div class="ceux-result">
-              <fieldset>
                 <p>Fieldset without legend</p>
                 <p><label>Text Input</label>
                   <input type="text"></p>
@@ -595,6 +578,23 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-code">
               <pre><code class="html">&lt;fieldset&gt;
   &lt;p&gt;Fieldset without legend&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;Text Input&lt;/label&gt; &lt;input type="text"&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="Submit"&gt;&lt;/p&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <fieldset>
+                <legend>Fieldset with legend</legend>
+                <p><label>Text Input</label>
+                  <input type="text"></p>
+                <p><input type="submit" value="Submit"></p>
+              </fieldset>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;fieldset&gt;
+  &lt;legend&gt;Fieldset with legend&lt;/legend&gt;
   &lt;p&gt;&lt;label&gt;Text Input&lt;/label&gt; &lt;input type="text"&gt;&lt;/p&gt;
   &lt;p&gt;&lt;input type="submit" value="Submit"&gt;&lt;/p&gt;
 &lt;/fieldset&gt;</code></pre>
@@ -617,9 +617,220 @@ p q r s t u v w x y z { | } ~
 &lt;/fieldset&gt;</code></pre>
             </div>
           </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <fieldset class="highlight">
+                <p>Highlighted Fieldset without legend</p>
+                <p><label>Text Input</label>
+                  <input type="text"></p>
+                <p><input type="submit" value="Submit"></p>
+              </fieldset>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;fieldset class="highlight"&gt;
+  &lt;p&gt;Highlighted Fieldset without legend&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;Text Input&lt;/label&gt; &lt;input type="text"&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="Submit"&gt;&lt;/p&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <fieldset class="highlight">
+                <legend>Highlighted Fieldset with legend</legend>
+                <p><label>Text Input</label>
+                  <input type="text"></p>
+                <p><input type="submit" value="Submit"></p>
+              </fieldset>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;fieldset class="highlight"&gt;
+  &lt;legend&gt;Highlighted Fieldset with legend&lt;/legend&gt;
+  &lt;p&gt;&lt;label&gt;Text Input&lt;/label&gt; &lt;input type="text"&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="Submit"&gt;&lt;/p&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+          </div>
         </div>
 
-        <div class="ceux-structural-forms-default ceux-subsection">
+
+      </section>
+
+
+      <a id="ceux-interactive"></a>
+      <section class="ceux-interactive ceux-section">
+        <h1 class="ceux-heading">Interactive Elements</h1>
+
+        <div class="ceux-interactive-buttons ceux-subsection">
+          <h2 class="ceux-heading">Buttons</h2>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button type="button">Default Button</button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;button type="button"&gt;Default Button&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button type="button" disabled="disabled">Disabled Button</button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;button type="button" disabled="disabled"&gt;Disabled Button&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-primary" type="button">Primary Button</button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;button class="btn-primary" type="button"&gt;Primary Button&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-primary" type="button" disabled="disabled">Disabled Primary Button</button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;button class="btn-primary" type="button"  disabled="disabled"&gt;Disabled Primary Button&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-bright" type="button">Bright Button</button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;button class="btn-bright" type="button"&gt;Bright Button&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-bright" type="button" disabled="disabled">Disabled Bright Button</button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;button class="btn-bright" type="button" disabled="disabled"&gt;Disabled Bright Button&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-info" type="button">Info Button</button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;button class="btn-info" type="button"&gt;Info Button&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-info" type="button" disabled="disabled">Disabled Info Button</button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;button class="btn-info" type="button" disabled="disabled"&gt;Info Button&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-dark" type="button">Dark Button</button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;button class="btn-dark" type="button"&gt;Dark Button&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-dark" type="button" disabled="disabled">Disabled Dark Button</button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">&lt;button class="btn-dark" type="button" disabled="disabled"&gt;Disabled Dark Button&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="ceux-interactive-buttons ceux-subsection">
+          <h2 class="ceux-heading">Icon Buttons</h2>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button type="button"><i class="icon fa fa-bolt"></i></button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">TBD.</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button type="button" disabled="disabled"><i class="icon fa fa-bolt"></i></button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">TBD.</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-primary" type="button"><i class="icon fa fa-shopping-cart"></i></button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">TBD.</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-primary" type="button" disabled="disabled"><i class="icon fa fa-shopping-cart"></i></button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">TBD.</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-bright" type="button"><i class="icon fa fa-exclamation-triangle"></i></button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">TBD.</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-bright" type="button" disabled="disabled"><i class="icon fa fa-exclamation-triangle"></i></button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">TBD.</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-info" type="button"><i class="icon fa fa-info"></i></button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">TBD.</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-info" type="button" disabled="disabled"><i class="icon fa fa-info"></i></button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">TBD.</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-dark" type="button"><i class="icon fa fa-cog"></i></button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">TBD.</code></pre>
+            </div>
+          </div>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <button class="btn-dark" type="button" disabled="disabled"><i class="icon fa fa-cog"></i></button>
+            </div>
+            <div class="ceux-code">
+              <pre><code class="html">TBD.</code></pre>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ceux-interactive-forms-default ceux-subsection">
           <h2 class="ceux-heading">Forms with Default Styled Fields</h2>
 
             <div class="ceux-example">
@@ -1042,7 +1253,7 @@ p q r s t u v w x y z { | } ~
             </div>
         </div>
 
-        <div class="ceux-structural-forms-disabled ceux-subsection">
+        <div class="ceux-interactive-forms-disabled ceux-subsection">
           <h2 class="ceux-heading">Forms with Disabled Fields</h2>
           <div class="ceux-example">
             <div class="ceux-result">
@@ -1178,7 +1389,7 @@ p q r s t u v w x y z { | } ~
           </div>
         </div>
 
-        <div class="ceux-structural-forms-readonly ceux-subsection">
+        <div class="ceux-interactive-forms-readonly ceux-subsection">
           <h2 class="ceux-heading">Forms with Read-Only Fields</h2>
           <div class="ceux-example">
             <div class="ceux-result">
@@ -1252,7 +1463,7 @@ p q r s t u v w x y z { | } ~
           </div>
         </div>
 
-        <div class="ceux-structural-forms-datalist ceux-subsection">
+        <div class="ceux-interactive-forms-datalist ceux-subsection">
           <h2 class="ceux-heading">Forms with Datalist Fields</h2>
           <div class="ceux-example">
             <div class="ceux-result">
@@ -1486,10 +1697,604 @@ p q r s t u v w x y z { | } ~
         </div>
 
       </section>
+
+      <a id="ceux-nav"></a>
+      <section class="ceux-nav ceux-section">
+        <h1 class="ceux-heading">Navigation Structures</h1>
+
+        <div class="ceux-nav-alphabetical ceux-subsection">
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <nav class="nav-alpha">
+                <a href="#" class="nav-alpha-letter">A</a>
+                <a href="#" class="nav-alpha-letter">B</a>
+                <a href="#" class="nav-alpha-letter">C</a>
+                <a href="#" class="nav-alpha-letter">D</a>
+                <a href="#" class="nav-alpha-letter">E</a>
+                <a href="#" class="nav-alpha-letter">F</a>
+                <a href="#" class="nav-alpha-letter">G</a>
+                <a href="#" class="nav-alpha-letter">H</a>
+                <a href="#" class="nav-alpha-letter">I</a>
+                <a href="#" class="nav-alpha-letter">J</a>
+                <a href="#" class="nav-alpha-letter">K</a>
+                <a href="#" class="nav-alpha-letter">L</a>
+                <a href="#" class="nav-alpha-letter">M</a>
+                <a href="#" class="nav-alpha-letter">N</a>
+                <a href="#" class="nav-alpha-letter">O</a>
+                <a href="#" class="nav-alpha-letter">P</a>
+                <a href="#" class="nav-alpha-letter">Q</a>
+                <a href="#" class="nav-alpha-letter">R</a>
+                <a href="#" class="nav-alpha-letter">S</a>
+                <a href="#" class="nav-alpha-letter">T</a>
+                <a href="#" class="nav-alpha-letter">U</a>
+                <a href="#" class="nav-alpha-letter">V</a>
+                <a href="#" class="nav-alpha-letter">W</a>
+                <a href="#" class="nav-alpha-letter">X</a>
+                <a href="#" class="nav-alpha-letter">Y</a>
+                <a href="#" class="nav-alpha-letter">Z</a>
+              </nav>
+            </div>
+            <div class="ceux-code"><pre><code class="html">TBD.</code></pre></div>
+          </div>
+        </div>
+
+        <div class="ceux-nav-breadcrumb ceux-subsection">
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <nav class="nav-breadcrumb">
+                <ol class="nav-list">
+                  <li class="nav-item"><a class="nav-link" href="#">Item 1</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Item 2</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Item 3</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Item 4</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Item 5</a></li>
+                </ol>
+              </nav>
+            </div>
+            <div class="ceux-code"><pre><code>TBD.</code></pre></div>
+          </div>
+        </div>
+
+        <div class="ceux-nav-pagination ceux-subsection">
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <nav class="page">
+                <ul>
+                  <li class="page-prev"><a href="#">← Prev</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li class="page-next"><a href="#">Next →</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="ceux-code"><pre><code>TBD.</code></pre></div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <a id="ceux-blocks"></a>
+      <section class="ceux-blocks ceux-section">
+        <h1 class="ceux-heading">Content Blocks</h1>
+
+        <div class="ceux-blocks-data ceux-subsection">
+          <h2 class="ceux-heading">Data Tables</h2>
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <table>
+                <tr>
+                  <th>Type</th>
+                  <th>Date</th>
+                  <th>Rating</th>
+                </tr>
+                <tr>
+                  <td>Enterprise Energy</td>
+                  <td><time datetime="2014-01-01T00:00:00-700">Jan 1, 2014</time></td>
+                  <td>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star-o"></i>
+                    <i class="icon fa fa-star-o"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Voyager Energy</td>
+                  <td><time datetime="2014-02-05T00:00:00-700">Feb 5, 2014</time></td>
+                  <td>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star-half-o"></i>
+                    <i class="icon fa fa-star-o"></i>
+                    <i class="icon fa fa-star-o"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Next Generation Energy</td>
+                  <td><time datetime="2014-03-07T00:00:00-700">Mar 7, 2014</time></td>
+                  <td>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Deep Solar Nine</td>
+                  <td><time datetime="2014-04-11T00:00:00-700">Apr 11, 2014</time></td>
+                  <td>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star-o"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Star Energy</td>
+                  <td><time datetime="2014-05-15T00:00:00-700">May 15, 2014</time></td>
+                  <td>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star-half-o"></i>
+                    <i class="icon fa fa-star-o"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Star Electrical</td>
+                  <td><time datetime="2014-06-21T00:00:00-700">Jun 21, 2014</time></td>
+                  <td>
+                    <i class="icon fa fa-star"></i>
+                    <i class="icon fa fa-star-half-o"></i>
+                    <i class="icon fa fa-star-o"></i>
+                    <i class="icon fa fa-star-o"></i>
+                    <i class="icon fa fa-star-o"></i>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="ceux-code"><pre><code class="html">TBD</code></pre></div>
+          </div>
+        </div>
+
+        <div class="ceux-blocks-content-grids">
+          <h2 class="ceux-heading">Content Grids</h2>
+          <div class="ceux-example ceux-vertical">
+            <div class="ceux-result">
+              <ol class="slats h-feed">
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/160/90" alt="thumbnail" />
+                    <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
+                    <p class="p-summary">For the first time in two years, Pennsylvania Electricity Prices have dropped for two consecutive months.</p>
+                    <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/160/90" alt="thumbnail" />
+                    <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
+                    <p class="p-summary">AT&amp;T Stadium, nicknamed JerryWorld, is the largest energy consuming sports stadium in the country.</p>
+                    <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/160/90" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <p class="p-summary">Choose Energy, the nation's leading energy marketplace, announced today a small-business offering in New York, Illinois, and Pennsylvania.</p>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="ceux-code"><pre><code>TBD.</code></pre></div>
+          </div>
+
+          <div class="ceux-example">
+            <div class="ceux-result">
+              <ol class="slats slats-compact h-feed">
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/160/90" alt="thumbnail" />
+                    <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
+                    <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/160/90" alt="thumbnail" />
+                    <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
+                    <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/160/90" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="ceux-code"><pre><code>TBD.</code></pre></div>
+          </div>
+
+          <div class="ceux-example ceux-vertical">
+            <div class="ceux-result">
+              <ol class="grid h-feed">
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
+                    <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
+                    <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+              </ol>
+
+            </div>
+            <div class="ceux-code"><pre><code>TBD.</code></pre></div>
+          </div>
+
+
+          <div class="ceux-example ceux-vertical">
+            <div class="ceux-result">
+              <ol class="grid grid-compact h-feed">
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
+                    <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
+                    <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+              </ol>
+
+            </div>
+            <div class="ceux-code"><pre><code>TBD.</code></pre></div>
+          </div>
+
+          <div class="ceux-example ceux-vertical">
+            <div class="ceux-result">
+              <ol class="grid grid-large h-feed">
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
+                    <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
+                    <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+              </ol>
+
+            </div>
+            <div class="ceux-code"><pre><code>TBD.</code></pre></div>
+          </div>
+
+          <div class="ceux-example ceux-vertical">
+            <div class="ceux-result">
+              <ol class="grid grid-jumbo h-feed">
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
+                    <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
+                    <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+                <li class="h-entry">
+                  <a class="u-url" href="#">
+                    <img class="u-photo" src="http://placekitten.com/g/320/180" alt="thumbnail" />
+                    <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                  </a>
+                </li>
+              </ol>
+
+            </div>
+            <div class="ceux-code"><pre><code>TBD.</code></pre></div>
+          </div>
+        </div>
+
+      </section>
     </div>
 </main>
-<footer>
-
+<footer class="site-footer">
+  <div class="footer-primary">
+    <nav class="footer-nav nav">
+      <div class="fnav-box">
+        <h5>Locations</h5>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="#">Texas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pennsylvania</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Ohio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Connecticut</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">New York</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Masschusetts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">California</a></li>
+          <li class="nav-item inactive"><a class="nav-link" href="#">Arkansas</a></li>
+          <li class="nav-item inactive"><a class="nav-link" href="#">Georgia</a></li>
+          <li class="nav-item inactive"><a class="nav-link" href="#">Oregon</a></li>
+          <li class="nav-item inactive"><a class="nav-link" href="#">Indiana</a></li>
+          <li class="nav-item inactive"><a class="nav-link" href="#">Alabama</a></li>
+          <li class="nav-item inactive"><a class="nav-link" href="#">Florida</a></li>
+        </ul>
+        <a href="#" class="fnav-toggle">Show More</a>
+      </div>
+      <div class="fnav-box">
+        <h5>About</h5>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Press</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Ambassadors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="fnav-box">
+        <h5>Energy Academy</h5>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Why Switch?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Deregulation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Our Suppliers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Energy Glossary</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Energy News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="fnav-box">
+        <h5>Energy Products</h5>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="#">Electicity</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Natural Gas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Solar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Heating Oil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Propane</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Residential</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Small Business</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="fnav-box fnav-wider">
+        <h5>Energy News Blog</h5>
+        <ol class="slats slats-compact h-feed">
+          <li class="h-entry">
+            <a class="u-url" href="#">
+              <img class="u-photo" src="http://placekitten.com/g/160/90" alt="thumbnail" />
+              <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
+              <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
+            </a>
+          </li>
+          <li class="h-entry">
+            <a class="u-url" href="#">
+              <img class="u-photo" src="http://placekitten.com/g/160/90" alt="thumbnail" />
+              <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
+              <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
+            </a>
+          </li>
+          <li class="h-entry">
+            <a class="u-url" href="#">
+              <img class="u-photo" src="http://placekitten.com/g/160/90" alt="thumbnail" />
+              <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+              <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-secondary">
+    <nav class="footer-nav nav">
+      <div class="footer-social">
+        <ul class="social-links">
+          <li class="social-item"><a href="#" class="social-link"><i class="icon fa fa-facebook"></i></a></li>
+          <li class="social-item"><a href="#" class="social-link"><i class="icon fa fa-twitter"></i></a></li>
+          <li class="social-item"><a href="#" class="social-link"><i class="icon fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-address">
+        <address class="h-adr"><span class="p-label">Choose Energy, Inc.</span> <span class="p-street-address">330 Townsend St., Suite 212</span>, <span class="p-locality">San Francisco</span>, <span class="p-region"><abbr title="California">CA</abbr></span> <span class="p-postal-code">94107</span></address>
+      </div>
+      <div class="footer-legal">
+        <ul class="legal-links">
+          <li class="legal-item"><a href="#" class="legal-link">Privacy Policy</a></li>
+          <li class="legal-item"><a href="#" class="legal-link">Terms of Use</a></li>
+          <li class="legal-item"><a href="#" class="legal-link">Sitemap</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </footer>
 </div>
 <div id="sidenav-mask" class="mask"></div>
@@ -1504,6 +2309,9 @@ p q r s t u v w x y z { | } ~
       <li class="nav-item"><a class="nav-link" href="#ceux-colors">Colors</a></li>
       <li class="nav-item"><a class="nav-link" href="#ceux-typography">Typography</a></li>
       <li class="nav-item"><a class="nav-link" href="#ceux-structural">Structural</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ceux-interactive">Interactive</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ceux-nav">Navigational</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ceux-blocks">Content Blocks</a></li>
     </ul>
   </nav>
 </aside>

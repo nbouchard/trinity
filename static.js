@@ -25,4 +25,5 @@ app.use(errorHandler({
   showStack: true
 }));
 
-app.listen(port)
+app.listen(port);
+console.log('ChooseUX is now running on http://localhost:' + port);

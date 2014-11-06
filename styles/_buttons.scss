@@ -1,0 +1,123 @@
+// Structure
+button, input[type="submit"] {
+  padding: 0.5em;
+  @include box-sizing(border-box);
+}
+
+// Presentation
+button, input[type="submit"] {
+  border: none;
+  background: $color-gray-ghost;
+  border-bottom: 3px solid $color-gray-chateau;
+  color: $color-white-pure;
+
+  &:hover, &:focus {
+    background: $color-gray-chateau;
+    border-bottom: 3px solid $color-gray-ghost;
+    outline: none;
+  }
+
+  &:disabled {
+    background: $color-white-smoke;
+    border-bottom: 3px solid $color-white-smoke;
+    color: $color-gray-chateau;
+
+    &:hover, &:focus {
+      background: $color-white-smoke;
+      border-bottom: 3px solid $color-white-smoke;
+      cursor: not-allowed;
+    }
+  }
+
+  &.btn-primary {
+    background: $color-green-shamrock;
+    border-bottom: 3px solid $color-green-jewel;
+    color: $color-white-pure;
+
+    &:hover, &:focus {
+      background: $color-green-jewel;
+      border-bottom: 3px solid $color-green-shamrock;
+    }
+
+    &:disabled {
+      background: $color-green-cruise;
+      border-bottom: 3px solid $color-green-cruise;
+      color: $color-white-pure;
+
+      &:hover, &:focus {
+        background: $color-green-cruise;
+        border-bottom: 3px solid $color-green-cruise;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &.btn-bright {
+    background: $color-orange-sun;
+    border-bottom: 3px solid $color-orange-fiery;
+    color: $color-white-pure;
+
+    &:hover, &:focus {
+      background: $color-orange-fiery;
+      border-bottom: 3px solid $color-orange-sun;
+    }
+
+    &:disabled {
+      background: $color-orange-apricot;
+      border-bottom: 3px solid $color-orange-apricot;
+      color: $color-white-pure;
+
+      &:hover, &:focus {
+        background: $color-orange-apricot;
+        border-bottom: 3px solid $color-orange-apricot;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &.btn-info {
+    background: $color-blue-curious;
+    border-bottom: 3px solid $color-blue-bahama;
+    color: $color-white-pure;
+
+    &:hover, &:focus {
+      background: $color-blue-bahama;
+      border-bottom: 3px solid $color-blue-curious;
+    }
+
+    &:disabled {
+      background: $color-blue-perano;
+      border-bottom: 3px solid $color-blue-perano;
+      color: $color-white-pure;
+
+      &:hover, &:focus {
+        background: $color-blue-perano;
+        border-bottom: 3px solid $color-blue-perano;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &.btn-dark {
+    background: $color-gray-chateau;
+    border-bottom: 3px solid $color-gray-charcoal;
+    color: $color-white-pure;
+
+    &:hover, &:focus {
+      background: $color-gray-charcoal;
+      border-bottom: 3px solid $color-gray-chateau;
+    }
+
+    &:disabled {
+      background: $color-white-smoke;
+      border-bottom: 3px solid $color-white-smoke;
+      color: $color-gray-chateau;
+
+      &:hover, &:focus {
+        background: $color-white-smoke;
+        border-bottom: 3px solid $color-white-smoke;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
