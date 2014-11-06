@@ -21,7 +21,16 @@ body {
     }
   }
 }
+.nav-list {
+  padding: 0;
+  margin: 0;
 
+  .nav-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
 .mask {
   // Disables interacting with the rest of the site while sidenav is open
   position: fixed;

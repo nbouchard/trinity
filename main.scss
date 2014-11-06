@@ -9,6 +9,10 @@
 @import "breakpoint";
 @import "bootstrapCustom";
 
+
+// CE Website Base Variables
+@import "base";
+
 // CE Z-Index Variables
 @import "zindex";
 
@@ -18,14 +22,20 @@
 // CE Typography Variables and Styles
 @import "typography";
 
+// CE Buttons
+@import "buttons";
+
 // CE Form Variables and Styles
 @import "forms";
 
 // CE Navigation
 @import "navigation";
 
-// CE Website Base
-@import "base";
+// CE Interactive Elements
+@import "content";
+
+// CE Footer
+@import "footer";
 
 // CE - Plan Card (Shopping)
 @import "plancard";
@@ -38,7 +48,7 @@
 
 /* Space out content a bit */
 body {
-    
+
 }
 
 img {
