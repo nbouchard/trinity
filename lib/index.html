@@ -749,7 +749,7 @@ p q r s t u v w x y z { | } ~
           <h2 class="ceux-heading">Icon Buttons</h2>
           <div class="ceux-example">
             <div class="ceux-result">
-              <button type="button"><i class="icon fa fa-bolt"></i></button>
+              <button class="btn-icon" type="button"><i class="icon fa fa-bolt"></i></button>
             </div>
             <div class="ceux-code">
               <pre><code class="html">TBD.</code></pre>
@@ -757,7 +757,7 @@ p q r s t u v w x y z { | } ~
           </div>
           <div class="ceux-example">
             <div class="ceux-result">
-              <button type="button" disabled="disabled"><i class="icon fa fa-bolt"></i></button>
+              <button class="btn-icon" type="button" disabled="disabled"><i class="icon fa fa-bolt"></i></button>
             </div>
             <div class="ceux-code">
               <pre><code class="html">TBD.</code></pre>
@@ -765,7 +765,7 @@ p q r s t u v w x y z { | } ~
           </div>
           <div class="ceux-example">
             <div class="ceux-result">
-              <button class="btn-primary" type="button"><i class="icon fa fa-shopping-cart"></i></button>
+              <button class="btn-icon btn-primary" type="button"><i class="icon fa fa-shopping-cart"></i></button>
             </div>
             <div class="ceux-code">
               <pre><code class="html">TBD.</code></pre>
@@ -773,7 +773,7 @@ p q r s t u v w x y z { | } ~
           </div>
           <div class="ceux-example">
             <div class="ceux-result">
-              <button class="btn-primary" type="button" disabled="disabled"><i class="icon fa fa-shopping-cart"></i></button>
+              <button class="btn-icon btn-primary" type="button" disabled="disabled"><i class="icon fa fa-shopping-cart"></i></button>
             </div>
             <div class="ceux-code">
               <pre><code class="html">TBD.</code></pre>
@@ -781,7 +781,7 @@ p q r s t u v w x y z { | } ~
           </div>
           <div class="ceux-example">
             <div class="ceux-result">
-              <button class="btn-bright" type="button"><i class="icon fa fa-exclamation-triangle"></i></button>
+              <button class="btn-icon btn-bright" type="button"><i class="icon fa fa-exclamation-triangle"></i></button>
             </div>
             <div class="ceux-code">
               <pre><code class="html">TBD.</code></pre>
@@ -789,7 +789,7 @@ p q r s t u v w x y z { | } ~
           </div>
           <div class="ceux-example">
             <div class="ceux-result">
-              <button class="btn-bright" type="button" disabled="disabled"><i class="icon fa fa-exclamation-triangle"></i></button>
+              <button class="btn-icon btn-bright" type="button" disabled="disabled"><i class="icon fa fa-exclamation-triangle"></i></button>
             </div>
             <div class="ceux-code">
               <pre><code class="html">TBD.</code></pre>
@@ -797,7 +797,7 @@ p q r s t u v w x y z { | } ~
           </div>
           <div class="ceux-example">
             <div class="ceux-result">
-              <button class="btn-info" type="button"><i class="icon fa fa-info"></i></button>
+              <button class="btn-icon btn-info" type="button"><i class="icon fa fa-info"></i></button>
             </div>
             <div class="ceux-code">
               <pre><code class="html">TBD.</code></pre>
@@ -805,7 +805,7 @@ p q r s t u v w x y z { | } ~
           </div>
           <div class="ceux-example">
             <div class="ceux-result">
-              <button class="btn-info" type="button" disabled="disabled"><i class="icon fa fa-info"></i></button>
+              <button class="btn-icon btn-info" type="button" disabled="disabled"><i class="icon fa fa-info"></i></button>
             </div>
             <div class="ceux-code">
               <pre><code class="html">TBD.</code></pre>
@@ -813,7 +813,7 @@ p q r s t u v w x y z { | } ~
           </div>
           <div class="ceux-example">
             <div class="ceux-result">
-              <button class="btn-dark" type="button"><i class="icon fa fa-cog"></i></button>
+              <button class="btn-icon btn-dark" type="button"><i class="icon fa fa-cog"></i></button>
             </div>
             <div class="ceux-code">
               <pre><code class="html">TBD.</code></pre>
@@ -821,7 +821,7 @@ p q r s t u v w x y z { | } ~
           </div>
           <div class="ceux-example">
             <div class="ceux-result">
-              <button class="btn-dark" type="button" disabled="disabled"><i class="icon fa fa-cog"></i></button>
+              <button class="btn-icon btn-dark" type="button" disabled="disabled"><i class="icon fa fa-cog"></i></button>
             </div>
             <div class="ceux-code">
               <pre><code class="html">TBD.</code></pre>
@@ -1758,13 +1758,13 @@ p q r s t u v w x y z { | } ~
         <div class="ceux-nav-pagination ceux-subsection">
           <div class="ceux-example">
             <div class="ceux-result">
-              <nav class="page">
-                <ul>
-                  <li class="page-prev"><a href="#">← Prev</a></li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li class="page-next"><a href="#">Next →</a></li>
+              <nav class="paginator">
+                <ul class="nav-list">
+                  <li class="nav-item nav-prev"><a class="nav-link" href="#">Prev</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="#">1</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">2</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">3</a></li>
+                  <li class="nav-item nav-next"><a class="nav-link" href="#">Next</a></li>
                 </ul>
               </nav>
             </div>
@@ -1775,11 +1775,11 @@ p q r s t u v w x y z { | } ~
       </section>
 
 
-      <a id="ceux-blocks"></a>
-      <section class="ceux-blocks ceux-section">
-        <h1 class="ceux-heading">Content Blocks</h1>
+      <a id="ceux-content"></a>
+      <section class="ceux-content ceux-section">
+        <h1 class="ceux-heading">Content Structures</h1>
 
-        <div class="ceux-blocks-data ceux-subsection">
+        <div class="ceux-content-data ceux-subsection">
           <h2 class="ceux-heading">Data Tables</h2>
           <div class="ceux-example">
             <div class="ceux-result">
@@ -1861,7 +1861,7 @@ p q r s t u v w x y z { | } ~
           </div>
         </div>
 
-        <div class="ceux-blocks-content-grids">
+        <div class="ceux-content-grids ceux-subsection">
           <h2 class="ceux-heading">Content Grids</h2>
           <div class="ceux-example ceux-vertical">
             <div class="ceux-result">
@@ -2311,7 +2311,7 @@ p q r s t u v w x y z { | } ~
       <li class="nav-item"><a class="nav-link" href="#ceux-structural">Structural</a></li>
       <li class="nav-item"><a class="nav-link" href="#ceux-interactive">Interactive</a></li>
       <li class="nav-item"><a class="nav-link" href="#ceux-nav">Navigational</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ceux-blocks">Content Blocks</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ceux-content">Content Structures</a></li>
     </ul>
   </nav>
 </aside>
