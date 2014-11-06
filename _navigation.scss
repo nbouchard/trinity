@@ -21,6 +21,7 @@ body {
     }
   }
 }
+
 .nav-list {
   padding: 0;
   margin: 0;
@@ -29,6 +30,22 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+}
+.paginator {
+  .nav-list {
+    .nav-item {
+      display: inline-block;
+
+      .nav-link {
+        @include box-sizing(border-box);
+        display: block;
+        height: $button-icon-base;
+        min-width: $button-icon-base;
+        line-height: $button-icon-lineheight;
+        padding: 0.5em;
+      }
+    }
   }
 }
 .mask {
@@ -211,6 +228,35 @@ body {
           }
           &.active {
             border-bottom: 4px solid $color-orange-sun;
+          }
+        }
+      }
+    }
+  }
+}
+.paginator {
+  .nav-list {
+    .nav-item {
+      .nav-link {
+        color: $color-white-pure;
+        background: $color-gray-ghost;
+        border-bottom: $button-border-width solid $color-gray-ghost;
+        text-align: center;
+        font-weight: $font-weight-body;
+
+        &:hover, &:focus {
+          text-decoration: none;
+          background: $color-gray-chateau;
+          border-bottom: $button-border-width solid $color-gray-ghost;
+        }
+
+        &.active {
+          background: $color-green-shamrock;
+          border-bottom: $button-border-width solid $color-green-jewel;
+
+          &:hover, &:focus {
+            background: $color-green-shamrock;
+            border-bottom: $button-border-width solid $color-green-jewel;
           }
         }
       }
