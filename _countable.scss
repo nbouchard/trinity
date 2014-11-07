@@ -1,0 +1,33 @@
+// Structure
+.countable {
+  @include box-sizing(border-box);
+
+  .countable-label {
+    @include box-sizing(border-box);
+
+    .countable-data {
+      @include box-sizing(border-box);
+      display: inline-block;
+      min-width: 2em;
+      height: 2em;
+      vertical-align: middle;
+      line-height: 1.33em;
+      padding: 0.5em;
+      text-align: center;
+      @include border-radius(2em);
+    }
+  }
+}
+
+// Presentation
+.countable {
+  .countable-label {
+    .countable-data {
+      font-size: $font-size-smaller;
+      background: $color-gray-ghost;
+      color: $color-white-pure;
+    }
+  }
+}
+
+
