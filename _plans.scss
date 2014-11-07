@@ -1,0 +1,291 @@
+// Structural
+.plan-cards {
+  @include box-sizing(border-box);
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  .plan-card {
+    @include flex(1 1 10em);
+    margin: 0 1em 1em 0;
+    font-size: $font-size-smaller;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: " ";
+    font-size: 0;
+  }
+}
+.plan-card {
+  @include box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  position: relative;
+
+  .plan-details {
+    @include box-sizing(border-box);
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+  }
+  .plan-detail {
+    @include box-sizing(border-box);
+    padding: 1em;
+  }
+  .plan-detail-label {
+    display: none;
+  }
+  .plan-detail-data {
+    font-size: $font-size-larger;
+    line-height: 1.75em;
+  }
+  .plan-price {
+    font-size: $font-size-huger;
+    @include box-sizing(border-box);
+    @include flex(1 1 100%);
+    padding: 0.5em;
+    min-height: 2em;
+    line-height: 1em;
+  }
+
+  .plan-name {
+    font-size: $font-size-normal;
+    @include flex(1 1 100%);
+    @include box-sizing(border-box);
+    min-height: 3em;
+
+    .u-url {
+      @include box-sizing(border-box);
+      display: block;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        top: 0.25em;
+        right: 0.25em;
+        line-height: 1em;
+        font-size: $font-size-huge;
+        height: 1em;
+        width: 1em;
+      }
+
+      .p-name {
+        @include box-sizing(border-box);
+        display: block;
+        width: 100%;
+        min-height: 3em;
+        line-height: 2em;
+        padding: 0.5em 2.5em 0.5em 0.5em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .plan-description {
+    display: none;
+  }
+
+  .plan-supplier {
+    @include flex(1 1 8em);
+
+    > .plan-detail-label {
+      display: block;
+      font-size: $font-size-smaller;
+    }
+
+    .u-url {
+      display: block;
+      width: 100%;
+      height: 3em;
+    }
+  }
+
+  .plan-supplier-rating {
+    font-size: $font-size-smaller;
+    @include flex(1 1 100%);
+
+    .rating-count {
+      display: inline-block;
+    }
+  }
+
+  .plan-contract-term {
+    @include flex(1 1 8em);
+
+    .plan-detail-label {
+      display: block;
+      font-size: $font-size-smaller;
+    }
+  }
+
+  .plan-rate-type {
+    @include flex(1 1 8em);
+
+    .plan-detail-label {
+      display: block;
+      font-size: $font-size-smaller;
+    }
+  }
+
+  .plan-renewable {
+    @include flex(1 1 8em);
+
+    .plan-detail-label {
+      display: block;
+      font-size: $font-size-smaller;
+    }
+  }
+
+  .plan-cost {
+    display: none;
+  }
+
+  .plan-savings {
+    display: none;
+  }
+
+  .plan-popularity {
+    @include flex(1 1 100%);
+    font-size: $font-size-large;
+  }
+
+  .plan-extras {
+    .countable {
+      clear: both;
+      padding: 0.25em;
+
+      .countable-label {
+        height: 1.5em;
+        line-height: 1.5em;
+        padding: 0.25em;
+        font-size: $font-size-normal;
+
+        .countable-data {
+          float: left;
+          margin: 0 1em 0 0;
+          font-size: $font-size-tinier;
+        }
+        .icon {
+          float: right;
+        }
+      }
+      .countable-list {
+        display: none;
+      }
+    }
+  }
+
+  .plan-sign-up {
+    @include box-sizing(border-box);
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    button {
+      @include flex(1 1 5em);
+      min-height: 4em;
+
+      &.btn-primary {
+        @include flex(2 1 8em);
+      }
+    }
+  }
+}
+
+// Presentation
+.plan-card {
+  border: 1px solid $color-gray-ghost;
+
+  .plan-detail {
+    text-align: center;
+  }
+  .plan-price {
+    font-weight: $font-weight-body-strong;
+    background: $color-blue-curious;
+    color: $color-white-pure;
+
+    .p-unit {
+      font-weight: $font-weight-body;
+    }
+  }
+  .plan-name {
+    .u-url {
+      border-top: 1px solid $color-gray-ghost;
+      border-bottom: 1px solid $color-gray-ghost;
+      background: $color-white-smoke;
+      color: $color-blue-bahama;
+      font-weight: $font-weight-body;
+
+      &:hover {
+        color: $color-blue-curious;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .plan-supplier {
+    .u-url {
+      text-indent: -9999px;
+    }
+  }
+
+  .plan-supplier-rating {
+    text-align: center;
+    background: $color-white-smoke;
+    border-bottom: 1px solid $color-gray-ghost;
+  }
+
+  .plan-popularity {
+    color: $color-blue-bahama;
+    background: $color-white-smoke;
+    border-top: 1px solid $color-gray-ghost;
+  }
+
+  .plan-extras {
+    .countable {
+      background: $color-white-smoke;
+      border-top: 1px solid $color-gray-ghost;
+      cursor: pointer;
+
+      &:hover, &:focus {
+        .countable-label {
+          color: $color-blue-bahama;
+
+          .countable-data {
+            background: $color-blue-curious;
+          }
+          .icon {
+            color: $color-blue-curious;
+          }
+        }
+      }
+      &.open {
+        cursor: default;
+      }
+      .countable-label {
+        .countable-data {
+          background: $color-gray-chateau;
+        }
+        .icon {
+          color: $color-gray-chateau;
+        }
+      }
+    }
+  }
+}
