@@ -1,32 +1,33 @@
 @charset "utf-8";
 
-// CE Variables (Legacy)
-@import "customVariables";
 
 @import "compass";
 @import "compass/utilities/sprites";
 @import "compass/css3";
 @import "breakpoint";
-@import "bootstrapCustom";
+
+// CE Variables (Legacy)
+@import "globals/customVariables";
+@import "plugins/bootstrapCustom";
 
 
 // CE Website Base Variables
-@import "base";
+@import "globals/base";
 
 // CE Z-Index Variables
-@import "zindex";
+@import "globals/zindex";
 
 // CE Colors
-@import "colors";
+@import "globals/colors";
 
 // CE Typography Variables and Styles
-@import "typography";
+@import "globals/typography";
 
 // CE Buttons
-@import "buttons";
+@import "globals/buttons";
 
 // CE Form Variables and Styles
-@import "forms";
+@import "globals/forms";
 
 // CE Navigation
 @import "navigation";
@@ -38,10 +39,10 @@
 @import "footer";
 
 // CE - Plan Card (Shopping)
-@import "plancard";
+@import "components/plancard";
 
 // CE - Filters (Shopping)
-@import "filters";
+@import "components/filters";
 
 // CE - Recommendations
 @import "recommendations";

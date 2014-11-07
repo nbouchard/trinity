@@ -1,27 +1,28 @@
 @charset "utf-8";
 
 // Full Reset + Mixins
-@import "normalize";
+@import "bootstrap/normalize";
+//@import "normalize";
 @import "compass/css3";
 @import "breakpoint";
 
 // CE Website Base Variables
-@import "base";
+@import "globals/base";
 
 // CE Z-Index Variables
-@import "zindex";
+@import "globals/zindex";
 
 // CE Colors
-@import "colors";
+@import "globals/colors";
 
 // CE Typography Variables and Styles
-@import "typography";
+@import "globals/typography";
 
 // CE Buttons
-@import "buttons";
+@import "globals/buttons";
 
 // CE Form Variables and Styles
-@import "forms";
+@import "globals/forms";
 
 // CE Countable Component
 @import "countable";
