@@ -1,122 +1,150 @@
 // Structure
 button, input[type="submit"] {
-  padding: 0.5em;
   @include box-sizing(border-box);
+  padding: 0.5em;
+  vertical-align: middle;
 }
 
 // Presentation
 button, input[type="submit"] {
   border: none;
-  background: $color-gray-ghost;
   border-bottom: $button-border-width solid $color-gray-chateau;
+  background: $color-gray-ghost;
   color: $color-white-pure;
 
   &:hover, &:focus {
-    background: $color-gray-chateau;
-    border-bottom: $button-border-width solid $color-gray-ghost;
     outline: none;
+    border-bottom: $button-border-width solid $color-gray-ghost;
+    background: $color-gray-chateau;
   }
   &:disabled {
-    background: $color-white-smoke;
     border-bottom: $button-border-width solid $color-white-smoke;
+    background: $color-white-smoke;
     color: $color-gray-chateau;
 
     &:hover, &:focus {
-      background: $color-white-smoke;
       border-bottom: $button-border-width solid $color-white-smoke;
+      background: $color-white-smoke;
       cursor: not-allowed;
     }
   }
 
   &.btn-primary {
-    background: $color-green-shamrock;
     border-bottom: $button-border-width solid $color-green-jewel;
+    background: $color-green-shamrock;
     color: $color-white-pure;
 
     &:hover, &:focus {
-      background: $color-green-jewel;
       border-bottom: $button-border-width solid $color-green-shamrock;
+      background: $color-green-jewel;
     }
     &:disabled {
-      background: $color-green-cruise;
       border-bottom: $button-border-width solid $color-green-cruise;
+      background: $color-green-cruise;
       color: $color-white-pure;
 
       &:hover, &:focus {
-        background: $color-green-cruise;
         border-bottom: $button-border-width solid $color-green-cruise;
+        background: $color-green-cruise;
         cursor: not-allowed;
       }
     }
   }
   &.btn-bright {
-    background: $color-orange-sun;
     border-bottom: $button-border-width solid $color-orange-fiery;
+    background: $color-orange-sun;
     color: $color-white-pure;
 
     &:hover, &:focus {
-      background: $color-orange-fiery;
       border-bottom: $button-border-width solid $color-orange-sun;
+      background: $color-orange-fiery;
     }
     &:disabled {
-      background: $color-orange-apricot;
       border-bottom: $button-border-width solid $color-orange-apricot;
+      background: $color-orange-apricot;
       color: $color-white-pure;
 
       &:hover, &:focus {
-        background: $color-orange-apricot;
         border-bottom: $button-border-width solid $color-orange-apricot;
+        background: $color-orange-apricot;
         cursor: not-allowed;
       }
     }
   }
   &.btn-info {
-    background: $color-blue-curious;
     border-bottom: $button-border-width solid $color-blue-bahama;
+    background: $color-blue-curious;
     color: $color-white-pure;
 
     &:hover, &:focus {
-      background: $color-blue-bahama;
       border-bottom: $button-border-width solid $color-blue-curious;
+      background: $color-blue-bahama;
     }
     &:disabled {
-      background: $color-blue-perano;
       border-bottom: $button-border-width solid $color-blue-perano;
+      background: $color-blue-perano;
       color: $color-white-pure;
 
       &:hover, &:focus {
-        background: $color-blue-perano;
         border-bottom: $button-border-width solid $color-blue-perano;
+        background: $color-blue-perano;
         cursor: not-allowed;
       }
     }
   }
-
   &.btn-dark {
-    background: $color-gray-chateau;
     border-bottom: $button-border-width solid $color-gray-charcoal;
+    background: $color-gray-chateau;
     color: $color-white-pure;
 
     &:hover, &:focus {
-      background: $color-gray-charcoal;
       border-bottom: $button-border-width solid $color-gray-chateau;
+      background: $color-gray-charcoal;
     }
     &:disabled {
-      background: $color-white-smoke;
       border-bottom: $button-border-width solid $color-white-smoke;
+      background: $color-white-smoke;
       color: $color-gray-chateau;
 
       &:hover, &:focus {
-        background: $color-white-smoke;
         border-bottom: $button-border-width solid $color-white-smoke;
+        background: $color-white-smoke;
         cursor: not-allowed;
       }
     }
   }
 
   &.btn-icon {
-    height: $button-icon-base;
     width: $button-icon-base;
+    height: $button-icon-base;
     line-height: $button-icon-lineheight;
+  }
+
+  &.btn-extrahuger {
+    font-size: $font-size-extrahuger;
+  }
+  &.btn-extrahuge {
+    font-size: $font-size-extrahuge;
+  }
+  &.btn-huger {
+    font-size: $font-size-huger;
+  }
+  &.btn-huge {
+    font-size: $font-size-huge;
+  }
+  &.btn-larger {
+    font-size: $font-size-larger;
+  }
+  &.btn-large {
+    font-size: $font-size-large;
+  }
+  &.btn-normal {
+    font-size: $font-size-normal;
+  }
+  &.btn-smaller {
+    font-size: $font-size-smaller;
+  }
+  &.btn-tinier {
+    font-size: $font-size-tinier;
   }
 }

@@ -1,7 +1,5 @@
 .ceux-body {
-  margin: 0 auto;
   padding-top: 7em;
-  max-width: $site-max-width;
 }
 
 .ceux-heading {
@@ -30,9 +28,9 @@
     padding: 1em;
 
     pre {
-      background: #1d1f21;
-      padding: 1em;
       @include box-sizing(border-box);
+      padding: 1em;
+      background: #1d1f21;
     }
   }
 }
@@ -48,148 +46,156 @@
   .ceux-philosophy {
     @include box-sizing(border-box);
     @include flex(1 1 20em);
-    list-style: none;
     padding: 1em;
+    list-style: none;
 
     ul, li {
-      list-style: none;
-      padding: 0;
       margin: 0;
+      padding: 0;
+      list-style: none;
     }
   }
 }
 
 .ceux-color-grid {
-  padding-bottom: 1em;
 
   @include display-flex;
   @include flex-direction(row);
+  padding-bottom: 1em;
 }
 
 .ceux-color {
-  margin-right: 1em;
   @include flex(1 1 5em);
+  margin-right: 1em;
 
   .ceux-color-swatch {
+    @include box-sizing(border-box);
     display: block;
     margin: 0;
     padding: 4.5em 0.5em 0.5em 0.5em;
     min-height: 8em;
-    @include box-sizing(border-box);
   }
 
   .ceux-color-name {
     margin: 0;
     padding: 0;
-    font-family: $font-family-body;
+    height: 1.0em;
     font-weight: $font-weight-body;
     font-size: 1.0em;
-    height: 1.0em;
+    font-family: $font-family-body;
     line-height: 1.0em;
   }
 
   .ceux-color-value,
   .ceux-color-variable {
-    font-family: $font-family-monospace;
     margin: 0;
     padding: 0;
-    font-size: 0.75em;
     height: 1.5em;
+    font-size: 0.75em;
+    font-family: $font-family-monospace;
     line-height: 1.5em;
   }
 }
 
 .ceux-color-inline {
-  padding: 0.2em;
   margin: 0 0.1em;
+  padding: 0.2em;
 }
 
 // Base Color Palette
 .swatch-green-shamrock {
-  background-color: $color-green-shamrock;
   border: 1px solid $color-green-jewel;
+  background-color: $color-green-shamrock;
   color: $color-white-pure;
 }
 .swatch-green-jewel {
-  background-color: $color-green-jewel;
   border: 1px solid $color-green-jewel;
+  background-color: $color-green-jewel;
   color: $color-white-pure;
 }
 .swatch-green-cruise {
-  background-color: $color-green-cruise;
   border: 1px solid $color-green-shamrock;
+  background-color: $color-green-cruise;
   color: $color-gray-charcoal;
 }
 .swatch-blue-curious {
-  background-color: $color-blue-curious;
   border: 1px solid $color-blue-bahama;
+  background-color: $color-blue-curious;
   color: $color-white-pure;
 }
 .swatch-blue-bahama {
-  background-color: $color-blue-bahama;
   border: 1px solid $color-blue-bahama;
+  background-color: $color-blue-bahama;
   color: $color-white-pure;
 }
 .swatch-blue-perano {
-  background-color: $color-blue-perano;
   border: 1px solid $color-blue-curious;
+  background-color: $color-blue-perano;
   color: $color-gray-charcoal;
 }
 .swatch-orange-sun {
-  background-color: $color-orange-sun;
   border: 1px solid $color-orange-fiery;
+  background-color: $color-orange-sun;
   color: $color-white-pure;
 }
 .swatch-orange-fiery {
-  background-color: $color-orange-fiery;
   border: 1px solid $color-orange-fiery;
+  background-color: $color-orange-fiery;
   color: $color-white-pure;
 }
 .swatch-orange-apricot {
-  background-color: $color-orange-apricot;
   border: 1px solid $color-orange-sun;
+  background-color: $color-orange-apricot;
   color: $color-gray-charcoal;
 }
 .swatch-gray-ghost {
-  background-color: $color-gray-ghost;
   border: 1px solid $color-gray-charcoal;
+  background-color: $color-gray-ghost;
   color: $color-gray-charcoal;
 }
 .swatch-gray-charcoal {
-  background-color: $color-gray-charcoal;
   border: 1px solid $color-gray-charcoal;
+  background-color: $color-gray-charcoal;
   color: $color-white-smoke;
 }
 .swatch-gray-chateau {
-  background-color: $color-gray-chateau;
   border: 1px solid $color-gray-charcoal;
+  background-color: $color-gray-chateau;
   color: $color-white-smoke;
 }
 .swatch-white-pure {
-  background-color: $color-white-pure;
   border: 1px solid $color-white-lilac;
+  background-color: $color-white-pure;
   color: $color-gray-charcoal;
 }
 .swatch-white-lilac {
-  background-color: $color-white-lilac;
   border: 1px solid $color-white-lilac;
+  background-color: $color-white-lilac;
   color: $color-gray-charcoal;
 }
 .swatch-white-smoke {
-  background-color: $color-white-smoke;
   border: 1px solid $color-white-lilac;
+  background-color: $color-white-smoke;
   color: $color-gray-charcoal;
 }
 
+.ceux-editorial-heading {
+  @include box-sizing(border-box);
+  margin: 1em auto;
+  max-width: ($site-max-width / 1.75);
+  width: 100%;
+}
 
 .ceux-section {
+  @include box-sizing(border-box);
+  margin: 2.0em auto;
   padding: 6.0em 0.5em 0 0.5em;
-  margin: 2.0em 0;
+  max-width: $site-max-width;
   border-bottom: 1px solid $color-white-lilac;
 
   .ceux-subsection {
-    padding: 0.5em 0 1.5em 0;
     margin-bottom: 1.0em;
+    padding: 0.5em 0 1.5em 0;
     border-bottom: 1px solid $color-white-smoke;
 
     &:last-child {
@@ -200,25 +206,25 @@
 
 .ceux-typeface {
   .implement {
-    font-size: 0.75em;
     color: $color-gray-ghost;
+    font-size: 0.75em;
 
     code {
-      padding: 0.5em;
       display: inline-block;
+      padding: 0.5em;
       background: $color-white-smoke;
       color: $color-gray-chateau;
     }
   }
 }
 .ceux-typeface-specimen {
-  font-size: 2.0em;
   padding: 0.5em;
   background: $color-white-smoke;
+  font-size: 2.0em;
 
   &.ceux-typeface-body {
-    font-size: 1.0em;
     padding: 1.0em;
+    font-size: 1.0em;
   }
 }
 
@@ -243,4 +249,12 @@
   background-size: contain;
 }
 
+.editorial_cooking_with_gas {
+  background: url('/images/placeholders/cooking_with_gas.jpg') center center no-repeat;
+  background-size: cover;
+}
 
+.editorial_energy_at_dusk {
+  background: url('/images/placeholders/energy_at_dusk.jpg') center center no-repeat;
+  background-size: cover;
+}

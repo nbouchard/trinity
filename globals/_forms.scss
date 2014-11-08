@@ -1,19 +1,18 @@
 // Structure
 input, textarea, select {
+  @include box-sizing(border-box);
   padding: 0.5em;
-  @include box-sizing(border-box);
+  vertical-align: middle;
 }
-
 fieldset {
-  padding: 1em;
   @include box-sizing(border-box);
+  padding: 1em;
 
   legend {
-    padding: 0.5em;
     @include box-sizing(border-box);
+    padding: 0.5em;
   }
 }
-
 
 // Presentation
 input, textarea, select {
@@ -22,15 +21,14 @@ input, textarea, select {
   color: $color-gray-chateau;
 
   &:focus {
+    outline: none;
     border: 1px solid $color-green-shamrock;
     color: $color-gray-charcoal;
-    outline: none;
   }
 }
-
 fieldset {
-  background: $color-white-smoke;
   border: 1px solid $color-gray-chateau;
+  background: $color-white-smoke;
 
   legend {
     background: $color-gray-chateau;
@@ -45,10 +43,9 @@ fieldset {
     }
   }
 }
-
 hr {
-  border: none;
   height: 1px;
+  border: none;
   background: $color-white-lilac;
 
 
@@ -60,5 +57,19 @@ hr {
   }
   &.dark {
     background: $color-gray-charcoal;
+  }
+}
+input {
+  &.input-extrawide {
+    min-width: 20em;
+  }
+  &.input-wide {
+    min-width: 15em;
+  }
+  &.input-med {
+    min-width: 10em;
+  }
+  &.input-narrow {
+    min-width: 5em;
   }
 }

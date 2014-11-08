@@ -14,9 +14,6 @@
 // CE Website Base Variables
 @import "globals/base";
 
-// CE Z-Index Variables
-@import "globals/zindex";
-
 // CE Colors
 @import "globals/colors";
 
@@ -30,13 +27,13 @@
 @import "globals/forms";
 
 // CE Navigation
-@import "navigation";
+@import "components/navigation";
 
-// CE Interactive Elements
-@import "content";
+// CE Content Grids
+@import "components/contentGrids";
 
 // CE Footer
-@import "footer";
+@import "components/footer";
 
 // CE - Plan Card (Shopping)
 @import "components/plancard";
@@ -135,6 +132,6 @@ $priceToCompare-height: 3em;
   text-align: center;
 }
 // Import Media Queries last
-@import "mq";
+@import "mqLegacy";
 // Import Logo Sprites
 @import "sprites";

@@ -1,16 +1,15 @@
 @charset "utf-8";
 
 // Full Reset + Mixins
-@import "bootstrap/normalize";
-//@import "normalize";
+@import "globals/normalize";
 @import "compass/css3";
 @import "breakpoint";
 
 // CE Website Base Variables
 @import "globals/base";
 
-// CE Z-Index Variables
-@import "globals/zindex";
+// CE Website Global Media Queries
+@import "globals/mq";
 
 // CE Colors
 @import "globals/colors";
@@ -25,20 +24,23 @@
 @import "globals/forms";
 
 // CE Countable Component
-@import "countable";
+@import "components/countable";
 
 // CE Navigation
-@import "navigation";
+@import "components/navigation";
 
-// CE Interactive Elements
-@import "content";
+// CE Content Grids
+@import "components/contentGrids";
 
 // CE Shopping Elements
-@import "plans";
-@import "ratings";
+@import "components/plans";
+@import "components/ratings";
+
+// CE Content Experience Elements
+@import "components/editorial";
 
 // CE Footer
-@import "footer";
+@import "components/footer";
 
 // CEUX-Specific Styles
-@import "ceux";
+@import "projects/ceux";

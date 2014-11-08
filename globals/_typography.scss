@@ -14,6 +14,9 @@ $font-weight-accent-strong: 700;
 $font-weight-body: 300;
 $font-weight-body-strong: 600;
 
+$font-size-extrahugest: 4.0em;
+$font-size-extrahuger: 3.5em;
+$font-size-extrahuge: 3.0em;
 $font-size-huger: 2.0em;
 $font-size-huge: 1.75em;
 $font-size-larger: 1.25em;
@@ -23,18 +26,16 @@ $font-size-smaller: 0.8em;
 $font-size-tinier: 0.5em;
 
 html, body {
-  font-family: $font-family-body;
-  font-weight: $font-weight-body;
   color: $color-gray-charcoal;
+  font-weight: $font-weight-body;
+  font-family: $font-family-body;
 }
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-headline;
-  font-weight: $font-weight-headline;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  font-weight: $font-weight-headline;
+  font-family: $font-family-headline;
 }
-
 h1 {
   font-size: 2.0em;
   line-height: 1;
@@ -59,47 +60,38 @@ h6 {
   font-size: 1.0em;
   line-height: 1;
 }
-
 p {
   line-height: 1.6em;
 }
-
 strong {
   font-weight: $font-weight-body-strong;
 }
-
 code {
   font-family: $font-family-monospace;
 }
-
 address {
   font-style: normal;
 }
-
 abbr[title] {
   border-bottom: none;
 }
-
 input, button, textarea, select {
   font-family: $font-family-body;
 }
-
 fieldset {
   legend {
-    font-family: $font-family-subhead;
     font-size: 0.85em;
+    font-family: $font-family-subhead;
     line-height: 1.5em;
   }
 }
-
 pre {
   margin: 0;
 }
-
 a {
   color: $color-green-shamrock;
-  font-weight: $font-weight-body-strong;
   text-decoration: none;
+  font-weight: $font-weight-body-strong;
 
   &:hover, &:focus {
     color: $color-green-shamrock;
@@ -109,32 +101,32 @@ a {
 
 // Note: The following are not intended for general use.
 .font-franklin-gothic-urw-heavy {
-  font-family: 'FranklinGothic URW';
   font-weight: 800;
+  font-family: 'FranklinGothic URW';
 }
 .font-franklin-gothic-urw-demi {
-  font-family: 'FranklinGothic URW';
   font-weight: 600;
+  font-family: 'FranklinGothic URW';
 }
 .font-franklin-gothic-urw-book {
-  font-family: 'FranklinGothic URW';
   font-weight: 400;
+  font-family: 'FranklinGothic URW';
 }
 .font-merriweather-heavy {
-  font-family: 'Merriweather';
   font-weight: 800;
+  font-family: 'Merriweather';
 }
 .font-merriweather-regular {
-  font-family: 'Merriweather';
   font-weight: 400;
+  font-family: 'Merriweather';
 }
 .font-proxima-nova-bold {
-  font-family: 'Proxima Nova';
   font-weight: 600;
+  font-family: 'Proxima Nova';
 }
 .font-proxima-nova-light {
-  font-family: 'Proxima Nova';
   font-weight: 300;
+  font-family: 'Proxima Nova';
 }
 .font-serif {
   font-family: serif;

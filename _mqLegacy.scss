@@ -1,10 +1,4 @@
-// Media Query Breakpoints for breakpoint-sass
-
-// Hi-DPI MQs should be used for higher resolution image/icon replacements where non-vector graphics are used
-$mq-hidpi-base: screen (min-resolution 1.5dppx);
-$mq-hidpi-2x: screen (min-resolution 2dppx);
-$mq-hidpi-3x: screen (min-resolution 3dppx);
-
+// Legacy Media Queries
 @media (min-width: 768px) {
   .container {
     width: auto;
@@ -17,7 +11,7 @@ $mq-hidpi-3x: screen (min-resolution 3dppx);
     ul.energy-types li {
       width: 23%;
       margin: 0 1%;
-      
+
     }
     ul.energy-types li a, ul.energy-types li a.tab-selected {
       padding: 10px 5px;
