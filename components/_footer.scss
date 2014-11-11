@@ -26,6 +26,9 @@
       h5 {
         padding-bottom: 0.5em;
       }
+      .fnav-toggle {
+        font-size: $font-size-smaller;
+      }
 
       &.fnav-wider {
         @include flex(2 1 8em);
@@ -110,6 +113,53 @@
   }
   .footer-secondary {
     background: $color-white-lilac;
+  }
+
+  .footer-nav {
+    .fnav-box {
+      .fnav-toggle {
+        font-weight: $font-weight-body;
+      }
+    }
+  }
+
+  &.footer-dark {
+    border-top: 0.5em solid $color-orange-sun;
+    color: $color-white-lilac;
+
+    .footer-primary {
+      background: $color-gray-charcoal;
+
+      .nav-list {
+        .nav-item {
+          .nav-link {
+            color: $color-gray-ghost;
+          }
+        }
+      }
+    }
+    .footer-secondary {
+      background: $color-gray-nero;
+    }
+    .footer-address {
+      color: $color-gray-ghost;
+    }
+
+    .social-links {
+      .social-item {
+        .social-link {
+          background: $color-gray-chateau;
+          color: $color-white-lilac;
+        }
+      }
+    }
+    .legal-links {
+      .legal-item {
+        .legal-link {
+          color: $color-gray-ghost;
+        }
+      }
+    }
   }
 }
 
