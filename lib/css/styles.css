@@ -436,27 +436,27 @@ th {
   padding: 0;
 }
 
-/* line 25, ../../styles/globals/_colors.scss */
+/* line 27, ../../styles/globals/_colors.scss */
 .text-green-level-lowest {
   color: #444444;
 }
 
-/* line 28, ../../styles/globals/_colors.scss */
+/* line 30, ../../styles/globals/_colors.scss */
 .text-green-level-low {
   color: #3d7360;
 }
 
-/* line 31, ../../styles/globals/_colors.scss */
+/* line 33, ../../styles/globals/_colors.scss */
 .text-green-level-med {
   color: #3a8a6f;
 }
 
-/* line 34, ../../styles/globals/_colors.scss */
+/* line 36, ../../styles/globals/_colors.scss */
 .text-green-level-high {
   color: #37a27d;
 }
 
-/* line 37, ../../styles/globals/_colors.scss */
+/* line 39, ../../styles/globals/_colors.scss */
 .text-green-level-highest {
   color: #34ba8c;
 }
@@ -911,23 +911,23 @@ input.input-narrow {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  display: inline-block;
-  min-width: 2em;
-  height: 2em;
-  vertical-align: middle;
-  line-height: 1.33em;
-  padding: 0.5em;
-  text-align: center;
   -moz-border-radius: 2em;
   -webkit-border-radius: 2em;
   border-radius: 2em;
+  display: inline-block;
+  padding: 0.5em;
+  min-width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 1.33em;
 }
 
 /* line 25, ../../styles/components/_countable.scss */
 .countable .countable-label .countable-data {
-  font-size: 0.8em;
   background: #bcbdc0;
   color: #ffffff;
+  font-size: 0.8em;
 }
 
 /* line 5, ../../styles/components/_navigation.scss */
@@ -1211,13 +1211,13 @@ body.sidenav-active .mask {
   border-bottom: 0.25em solid #146e50;
 }
 
-/* line 1, ../../styles/components/_contentGrids.scss */
+/* line 2, ../../styles/components/_contentGrids.scss */
 .slats {
   clear: both;
   margin: 0;
   padding: 0;
 }
-/* line 6, ../../styles/components/_contentGrids.scss */
+/* line 7, ../../styles/components/_contentGrids.scss */
 .slats .h-entry {
   float: left;
   clear: both;
@@ -1225,18 +1225,7 @@ body.sidenav-active .mask {
   padding: 0;
   list-style: none;
 }
-/* line 13, ../../styles/components/_contentGrids.scss */
-.slats .h-entry .u-url {
-  color: #939598;
-  text-decoration: none;
-  font-weight: 300;
-}
-/* line 18, ../../styles/components/_contentGrids.scss */
-.slats .h-entry .u-url:hover {
-  color: #444444;
-  text-decoration: none;
-}
-/* line 23, ../../styles/components/_contentGrids.scss */
+/* line 14, ../../styles/components/_contentGrids.scss */
 .slats .h-entry .u-photo {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1247,7 +1236,7 @@ body.sidenav-active .mask {
   max-width: 25%;
   width: 100%;
 }
-/* line 31, ../../styles/components/_contentGrids.scss */
+/* line 22, ../../styles/components/_contentGrids.scss */
 .slats .h-entry .p-name {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1259,7 +1248,7 @@ body.sidenav-active .mask {
   width: 100%;
   font-size: 1.25em;
 }
-/* line 40, ../../styles/components/_contentGrids.scss */
+/* line 31, ../../styles/components/_contentGrids.scss */
 .slats .h-entry .p-summary {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1271,7 +1260,7 @@ body.sidenav-active .mask {
   width: 100%;
   font-size: 1em;
 }
-/* line 49, ../../styles/components/_contentGrids.scss */
+/* line 40, ../../styles/components/_contentGrids.scss */
 .slats .h-entry .dt-published {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1283,7 +1272,7 @@ body.sidenav-active .mask {
   width: 100%;
   font-size: 0.8em;
 }
-/* line 63, ../../styles/components/_contentGrids.scss */
+/* line 54, ../../styles/components/_contentGrids.scss */
 .slats.slats-compact .h-entry .u-url {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1291,27 +1280,26 @@ body.sidenav-active .mask {
   display: inline-block;
   clear: both;
 }
-/* line 69, ../../styles/components/_contentGrids.scss */
+/* line 60, ../../styles/components/_contentGrids.scss */
 .slats.slats-compact .h-entry .u-photo {
   max-width: 40%;
   width: 100%;
 }
-/* line 73, ../../styles/components/_contentGrids.scss */
+/* line 64, ../../styles/components/_contentGrids.scss */
 .slats.slats-compact .h-entry .p-name {
   max-width: 59%;
-  font-weight: 300;
   font-size: 1em;
 }
-/* line 78, ../../styles/components/_contentGrids.scss */
+/* line 68, ../../styles/components/_contentGrids.scss */
 .slats.slats-compact .h-entry .p-summary {
   display: none;
 }
-/* line 81, ../../styles/components/_contentGrids.scss */
+/* line 71, ../../styles/components/_contentGrids.scss */
 .slats.slats-compact .h-entry .dt-published {
   max-width: 59%;
 }
 
-/* line 88, ../../styles/components/_contentGrids.scss */
+/* line 77, ../../styles/components/_contentGrids.scss */
 .grid {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1325,7 +1313,7 @@ body.sidenav-active .mask {
   margin: 0;
   padding: 0;
 }
-/* line 96, ../../styles/components/_contentGrids.scss */
+/* line 85, ../../styles/components/_contentGrids.scss */
 .grid .h-entry {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1336,29 +1324,21 @@ body.sidenav-active .mask {
   padding: 0;
   list-style: none;
 }
-/* line 103, ../../styles/components/_contentGrids.scss */
+/* line 92, ../../styles/components/_contentGrids.scss */
 .grid .h-entry .u-url {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
   display: block;
-  color: #e7e7e8;
-  text-decoration: none;
-  font-weight: 300;
 }
-/* line 111, ../../styles/components/_contentGrids.scss */
-.grid .h-entry .u-url:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-/* line 116, ../../styles/components/_contentGrids.scss */
+/* line 97, ../../styles/components/_contentGrids.scss */
 .grid .h-entry .u-photo {
   float: left;
   max-width: 100%;
   width: 100%;
 }
-/* line 121, ../../styles/components/_contentGrids.scss */
+/* line 102, ../../styles/components/_contentGrids.scss */
 .grid .h-entry .p-name {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1369,7 +1349,7 @@ body.sidenav-active .mask {
   width: 60%;
   font-size: 0.8em;
 }
-/* line 129, ../../styles/components/_contentGrids.scss */
+/* line 110, ../../styles/components/_contentGrids.scss */
 .grid .h-entry .dt-published {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1381,45 +1361,82 @@ body.sidenav-active .mask {
   text-align: right;
   font-size: 0.8em;
 }
-/* line 141, ../../styles/components/_contentGrids.scss */
+/* line 122, ../../styles/components/_contentGrids.scss */
 .grid.grid-compact .h-entry {
   -webkit-flex: 1 1 5em;
   flex: 1 1 5em;
 }
-/* line 144, ../../styles/components/_contentGrids.scss */
+/* line 125, ../../styles/components/_contentGrids.scss */
 .grid.grid-compact .h-entry .p-name {
   width: 100%;
   font-size: 0.5em;
 }
-/* line 148, ../../styles/components/_contentGrids.scss */
+/* line 129, ../../styles/components/_contentGrids.scss */
 .grid.grid-compact .h-entry .dt-published {
   display: none;
 }
-/* line 154, ../../styles/components/_contentGrids.scss */
+/* line 135, ../../styles/components/_contentGrids.scss */
 .grid.grid-large .h-entry {
   -webkit-flex: 1 1 15em;
   flex: 1 1 15em;
 }
-/* line 157, ../../styles/components/_contentGrids.scss */
+/* line 138, ../../styles/components/_contentGrids.scss */
 .grid.grid-large .h-entry .p-name {
   font-size: 1em;
 }
-/* line 160, ../../styles/components/_contentGrids.scss */
+/* line 141, ../../styles/components/_contentGrids.scss */
 .grid.grid-large .h-entry .dt-published {
   font-size: 1em;
 }
-/* line 166, ../../styles/components/_contentGrids.scss */
+/* line 147, ../../styles/components/_contentGrids.scss */
 .grid.grid-jumbo .h-entry {
   -webkit-flex: 1 1 20em;
   flex: 1 1 20em;
 }
-/* line 169, ../../styles/components/_contentGrids.scss */
+/* line 150, ../../styles/components/_contentGrids.scss */
 .grid.grid-jumbo .h-entry .p-name {
   font-size: 1.25em;
 }
-/* line 172, ../../styles/components/_contentGrids.scss */
+/* line 153, ../../styles/components/_contentGrids.scss */
 .grid.grid-jumbo .h-entry .dt-published {
   font-size: 1em;
+}
+
+/* line 163, ../../styles/components/_contentGrids.scss */
+.slats .h-entry .u-url {
+  color: #939598;
+  text-decoration: none;
+  font-weight: 300;
+}
+/* line 168, ../../styles/components/_contentGrids.scss */
+.slats .h-entry .u-url:hover {
+  color: #444444;
+  text-decoration: none;
+}
+/* line 177, ../../styles/components/_contentGrids.scss */
+.slats.slats-compact .h-entry .p-name {
+  font-weight: 300;
+}
+
+/* line 185, ../../styles/components/_contentGrids.scss */
+.grid .h-entry .u-url {
+  color: #e7e7e8;
+  text-decoration: none;
+  font-weight: 300;
+}
+/* line 190, ../../styles/components/_contentGrids.scss */
+.grid .h-entry .u-url:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* line 201, ../../styles/components/_contentGrids.scss */
+.footer-dark .slats .h-entry .u-url {
+  color: #bcbdc0;
+}
+/* line 204, ../../styles/components/_contentGrids.scss */
+.footer-dark .slats .h-entry .u-url:hover {
+  color: #e7e7e8;
 }
 
 /* line 2, ../../styles/components/_plans.scss */
@@ -1433,10 +1450,10 @@ body.sidenav-active .mask {
   flex-direction: row;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 100%;
+  position: relative;
   margin: 0;
   padding: 0;
-  position: relative;
+  width: 100%;
 }
 /* line 12, ../../styles/components/_plans.scss */
 .plan-cards .plan-card {
@@ -1464,14 +1481,20 @@ body.sidenav-active .mask {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  display: block;
   margin: 0;
   padding: 0;
   list-style: none;
-  display: block;
-  position: relative;
 }
-/* line 39, ../../styles/components/_plans.scss */
+/* line 41, ../../styles/components/_plans.scss */
 .plan-card .plan-details {
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1482,25 +1505,24 @@ body.sidenav-active .mask {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-/* line 45, ../../styles/components/_plans.scss */
+/* line 49, ../../styles/components/_plans.scss */
 .plan-card .plan-detail {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 1em;
 }
-/* line 49, ../../styles/components/_plans.scss */
+/* line 53, ../../styles/components/_plans.scss */
 .plan-card .plan-detail-label {
   display: none;
 }
-/* line 52, ../../styles/components/_plans.scss */
+/* line 56, ../../styles/components/_plans.scss */
 .plan-card .plan-detail-data {
   font-size: 1.25em;
   line-height: 1.75em;
 }
-/* line 56, ../../styles/components/_plans.scss */
+/* line 60, ../../styles/components/_plans.scss */
 .plan-card .plan-price {
-  font-size: 2em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1508,151 +1530,194 @@ body.sidenav-active .mask {
   flex: 1 1 100%;
   padding: 0.5em;
   min-height: 2em;
+  font-size: 2em;
   line-height: 1em;
 }
-/* line 65, ../../styles/components/_plans.scss */
+/* line 69, ../../styles/components/_plans.scss */
 .plan-card .plan-name {
-  font-size: 1em;
   -webkit-flex: 1 1 100%;
   flex: 1 1 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   min-height: 3em;
+  font-size: 1em;
 }
-/* line 71, ../../styles/components/_plans.scss */
+/* line 75, ../../styles/components/_plans.scss */
 .plan-card .plan-name .u-url {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  display: block;
   position: relative;
+  display: block;
 }
-/* line 76, ../../styles/components/_plans.scss */
+/* line 80, ../../styles/components/_plans.scss */
 .plan-card .plan-name .u-url .icon {
   position: absolute;
   top: 0.25em;
   right: 0.25em;
-  line-height: 1em;
-  font-size: 1.75em;
-  height: 1em;
   width: 1em;
+  height: 1em;
+  font-size: 1.75em;
+  line-height: 1em;
 }
-/* line 86, ../../styles/components/_plans.scss */
+/* line 90, ../../styles/components/_plans.scss */
 .plan-card .plan-name .u-url .p-name {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  min-height: 3em;
-  line-height: 2em;
-  padding: 0.5em 2.5em 0.5em 0.5em;
-  white-space: nowrap;
   overflow: hidden;
+  padding: 0.5em 2.5em 0.5em 0.5em;
+  min-height: 3em;
+  width: 100%;
   text-overflow: ellipsis;
-}
-/* line 100, ../../styles/components/_plans.scss */
-.plan-card .plan-description {
-  display: none;
+  white-space: nowrap;
+  line-height: 2em;
 }
 /* line 104, ../../styles/components/_plans.scss */
+.plan-card .plan-description {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+  padding: 1em;
+}
+/* line 109, ../../styles/components/_plans.scss */
+.plan-card .plan-description p {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+/* line 114, ../../styles/components/_plans.scss */
+.plan-card .plan-description p:last-child {
+  margin-bottom: 0;
+}
+/* line 120, ../../styles/components/_plans.scss */
 .plan-card .plan-supplier {
   -webkit-flex: 1 1 8em;
   flex: 1 1 8em;
 }
-/* line 107, ../../styles/components/_plans.scss */
+/* line 123, ../../styles/components/_plans.scss */
 .plan-card .plan-supplier > .plan-detail-label {
   display: block;
   font-size: 0.8em;
 }
-/* line 112, ../../styles/components/_plans.scss */
+/* line 128, ../../styles/components/_plans.scss */
 .plan-card .plan-supplier .u-url {
   display: block;
   width: 100%;
   height: 3em;
 }
-/* line 119, ../../styles/components/_plans.scss */
+/* line 135, ../../styles/components/_plans.scss */
 .plan-card .plan-supplier-rating {
-  font-size: 0.8em;
   -webkit-flex: 1 1 100%;
   flex: 1 1 100%;
+  font-size: 0.8em;
 }
-/* line 123, ../../styles/components/_plans.scss */
+/* line 139, ../../styles/components/_plans.scss */
 .plan-card .plan-supplier-rating .rating-count {
   display: inline-block;
 }
-/* line 128, ../../styles/components/_plans.scss */
+/* line 144, ../../styles/components/_plans.scss */
 .plan-card .plan-contract-term {
   -webkit-flex: 1 1 8em;
   flex: 1 1 8em;
 }
-/* line 131, ../../styles/components/_plans.scss */
+/* line 147, ../../styles/components/_plans.scss */
 .plan-card .plan-contract-term .plan-detail-label {
   display: block;
   font-size: 0.8em;
 }
-/* line 137, ../../styles/components/_plans.scss */
+/* line 153, ../../styles/components/_plans.scss */
 .plan-card .plan-rate-type {
   -webkit-flex: 1 1 8em;
   flex: 1 1 8em;
 }
-/* line 140, ../../styles/components/_plans.scss */
+/* line 156, ../../styles/components/_plans.scss */
 .plan-card .plan-rate-type .plan-detail-label {
   display: block;
   font-size: 0.8em;
 }
-/* line 146, ../../styles/components/_plans.scss */
+/* line 162, ../../styles/components/_plans.scss */
 .plan-card .plan-renewable {
   -webkit-flex: 1 1 8em;
   flex: 1 1 8em;
 }
-/* line 149, ../../styles/components/_plans.scss */
+/* line 165, ../../styles/components/_plans.scss */
 .plan-card .plan-renewable .plan-detail-label {
   display: block;
   font-size: 0.8em;
 }
-/* line 155, ../../styles/components/_plans.scss */
+/* line 171, ../../styles/components/_plans.scss */
 .plan-card .plan-cost {
   display: none;
 }
-/* line 159, ../../styles/components/_plans.scss */
+/* line 175, ../../styles/components/_plans.scss */
 .plan-card .plan-savings {
   display: none;
 }
-/* line 163, ../../styles/components/_plans.scss */
+/* line 179, ../../styles/components/_plans.scss */
 .plan-card .plan-popularity {
-  -webkit-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  padding: 1em;
+  min-height: 2.5em;
+  text-align: center;
   font-size: 1.1em;
 }
-/* line 169, ../../styles/components/_plans.scss */
+/* line 187, ../../styles/components/_plans.scss */
+.plan-card .plan-popularity .plan-popularity-data {
+  vertical-align: middle;
+}
+/* line 192, ../../styles/components/_plans.scss */
+.plan-card .plan-extras {
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+/* line 195, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable {
   clear: both;
   padding: 0.25em;
 }
-/* line 173, ../../styles/components/_plans.scss */
+/* line 199, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable .countable-label {
-  height: 1.5em;
-  line-height: 1.5em;
   padding: 0.25em;
+  height: 1.5em;
   font-size: 1em;
+  line-height: 1.5em;
 }
-/* line 179, ../../styles/components/_plans.scss */
+/* line 205, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable .countable-label .countable-data {
   float: left;
   margin: 0 1em 0 0;
   font-size: 0.5em;
 }
-/* line 184, ../../styles/components/_plans.scss */
+/* line 210, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable .countable-label .icon {
   float: right;
 }
-/* line 188, ../../styles/components/_plans.scss */
+/* line 214, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable .countable-list {
   display: none;
 }
-/* line 194, ../../styles/components/_plans.scss */
+/* line 219, ../../styles/components/_plans.scss */
+.plan-card .plan-extras .countable.is-open .countable-list {
+  display: block;
+}
+/* line 226, ../../styles/components/_plans.scss */
+.plan-card .plan-actions {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+/* line 231, ../../styles/components/_plans.scss */
 .plan-card .plan-sign-up {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1664,37 +1729,42 @@ body.sidenav-active .mask {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-/* line 200, ../../styles/components/_plans.scss */
+/* line 237, ../../styles/components/_plans.scss */
 .plan-card .plan-sign-up button {
   -webkit-flex: 1 1 5em;
   flex: 1 1 5em;
   min-height: 4em;
 }
-/* line 204, ../../styles/components/_plans.scss */
+/* line 241, ../../styles/components/_plans.scss */
 .plan-card .plan-sign-up button.btn-primary {
   -webkit-flex: 2 1 8em;
   flex: 2 1 8em;
 }
-
-/* line 212, ../../styles/components/_plans.scss */
-.plan-card {
-  border: 1px solid #bcbdc0;
+/* line 248, ../../styles/components/_plans.scss */
+.plan-card.is-expanded .plan-description {
+  display: block;
 }
-/* line 215, ../../styles/components/_plans.scss */
+
+/* line 256, ../../styles/components/_plans.scss */
+.plan-card .plan-details {
+  border: 1px solid #bcbdc0;
+  border-bottom: none;
+}
+/* line 260, ../../styles/components/_plans.scss */
 .plan-card .plan-detail {
   text-align: center;
 }
-/* line 218, ../../styles/components/_plans.scss */
+/* line 263, ../../styles/components/_plans.scss */
 .plan-card .plan-price {
-  font-weight: 600;
   background: #328fc9;
   color: #ffffff;
+  font-weight: 600;
 }
-/* line 223, ../../styles/components/_plans.scss */
+/* line 268, ../../styles/components/_plans.scss */
 .plan-card .plan-price .p-unit {
   font-weight: 300;
 }
-/* line 228, ../../styles/components/_plans.scss */
+/* line 273, ../../styles/components/_plans.scss */
 .plan-card .plan-name .u-url {
   border-top: 1px solid #bcbdc0;
   border-bottom: 1px solid #bcbdc0;
@@ -1702,56 +1772,77 @@ body.sidenav-active .mask {
   color: #246289;
   font-weight: 300;
 }
-/* line 235, ../../styles/components/_plans.scss */
+/* line 280, ../../styles/components/_plans.scss */
 .plan-card .plan-name .u-url:hover {
   color: #328fc9;
   text-decoration: none;
 }
-/* line 243, ../../styles/components/_plans.scss */
+/* line 288, ../../styles/components/_plans.scss */
 .plan-card .plan-supplier .u-url {
   text-indent: -9999px;
 }
-/* line 248, ../../styles/components/_plans.scss */
+/* line 293, ../../styles/components/_plans.scss */
 .plan-card .plan-supplier-rating {
-  text-align: center;
-  background: #efefef;
   border-bottom: 1px solid #bcbdc0;
+  background: #efefef;
+  text-align: center;
 }
-/* line 254, ../../styles/components/_plans.scss */
+/* line 299, ../../styles/components/_plans.scss */
 .plan-card .plan-popularity {
+  border: 1px solid #bcbdc0;
+  border-bottom: none;
+  background: #efefef;
   color: #246289;
-  background: #efefef;
-  border-top: 1px solid #bcbdc0;
 }
-/* line 261, ../../styles/components/_plans.scss */
+/* line 306, ../../styles/components/_plans.scss */
+.plan-card .plan-extras {
+  border: 1px solid #bcbdc0;
+  border-top: none;
+  border-bottom: none;
+}
+/* line 311, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable {
-  background: #efefef;
   border-top: 1px solid #bcbdc0;
+  background: #efefef;
   cursor: pointer;
 }
-/* line 267, ../../styles/components/_plans.scss */
+/* line 317, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable:hover .countable-label, .plan-card .plan-extras .countable:focus .countable-label {
   color: #246289;
 }
-/* line 270, ../../styles/components/_plans.scss */
+/* line 320, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable:hover .countable-label .countable-data, .plan-card .plan-extras .countable:focus .countable-label .countable-data {
   background: #328fc9;
 }
-/* line 273, ../../styles/components/_plans.scss */
+/* line 323, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable:hover .countable-label .icon, .plan-card .plan-extras .countable:focus .countable-label .icon {
   color: #328fc9;
 }
-/* line 278, ../../styles/components/_plans.scss */
-.plan-card .plan-extras .countable.open {
-  cursor: default;
-}
-/* line 282, ../../styles/components/_plans.scss */
+/* line 329, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable .countable-label .countable-data {
   background: #939598;
 }
-/* line 285, ../../styles/components/_plans.scss */
+/* line 332, ../../styles/components/_plans.scss */
 .plan-card .plan-extras .countable .countable-label .icon {
   color: #939598;
+}
+/* line 337, ../../styles/components/_plans.scss */
+.plan-card .plan-extras .countable.is-open {
+  cursor: default;
+}
+/* line 344, ../../styles/components/_plans.scss */
+.plan-card .plan-actions .plan-sign-up {
+  border: 1px solid #bcbdc0;
+}
+/* line 351, ../../styles/components/_plans.scss */
+.plan-card.is-expanded .plan-name .u-url {
+  border-bottom: 1px solid #bcbdc0;
+}
+/* line 356, ../../styles/components/_plans.scss */
+.plan-card.is-expanded .plan-description {
+  border-bottom: 1px solid #bcbdc0;
+  background: #efefef;
+  color: #246289;
 }
 
 /* line 2, ../../styles/components/_ratings.scss */
@@ -1940,42 +2031,46 @@ body.sidenav-active .mask {
 .site-footer .footer-nav .fnav-box h5 {
   padding-bottom: 0.5em;
 }
-/* line 30, ../../styles/components/_footer.scss */
+/* line 29, ../../styles/components/_footer.scss */
+.site-footer .footer-nav .fnav-box .fnav-toggle {
+  font-size: 0.8em;
+}
+/* line 33, ../../styles/components/_footer.scss */
 .site-footer .footer-nav .fnav-box.fnav-wider {
   -webkit-flex: 2 1 8em;
   flex: 2 1 8em;
 }
-/* line 35, ../../styles/components/_footer.scss */
+/* line 38, ../../styles/components/_footer.scss */
 .site-footer .footer-nav .footer-social {
   -webkit-flex: 1 1 4em;
   flex: 1 1 4em;
 }
-/* line 38, ../../styles/components/_footer.scss */
+/* line 41, ../../styles/components/_footer.scss */
 .site-footer .footer-nav .footer-address {
   -webkit-flex: 3 1 10em;
   flex: 3 1 10em;
 }
-/* line 41, ../../styles/components/_footer.scss */
+/* line 44, ../../styles/components/_footer.scss */
 .site-footer .footer-nav .footer-legal {
   -webkit-flex: 2 1 6em;
   flex: 2 1 6em;
 }
 
-/* line 47, ../../styles/components/_footer.scss */
+/* line 50, ../../styles/components/_footer.scss */
 .footer-primary {
   padding-top: 4em;
   padding-bottom: 2em;
 }
-/* line 52, ../../styles/components/_footer.scss */
+/* line 55, ../../styles/components/_footer.scss */
 .footer-primary .nav-list .nav-item {
   line-height: 1.6;
 }
-/* line 55, ../../styles/components/_footer.scss */
+/* line 58, ../../styles/components/_footer.scss */
 .footer-primary .nav-list .nav-item.inactive {
   display: none;
 }
 
-/* line 62, ../../styles/components/_footer.scss */
+/* line 65, ../../styles/components/_footer.scss */
 .social-links {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1983,7 +2078,7 @@ body.sidenav-active .mask {
   padding: 0;
   margin: 0;
 }
-/* line 67, ../../styles/components/_footer.scss */
+/* line 70, ../../styles/components/_footer.scss */
 .social-links .social-item {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1993,14 +2088,14 @@ body.sidenav-active .mask {
   margin: 0;
   display: inline-block;
 }
-/* line 74, ../../styles/components/_footer.scss */
+/* line 77, ../../styles/components/_footer.scss */
 .social-links .social-item .social-link {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 80, ../../styles/components/_footer.scss */
+/* line 83, ../../styles/components/_footer.scss */
 .legal-links {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2012,7 +2107,7 @@ body.sidenav-active .mask {
   -webkit-flex-direction: row;
   flex-direction: row;
 }
-/* line 87, ../../styles/components/_footer.scss */
+/* line 90, ../../styles/components/_footer.scss */
 .legal-links .legal-item {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2025,7 +2120,7 @@ body.sidenav-active .mask {
   flex: 1 1 2em;
   text-align: center;
 }
-/* line 96, ../../styles/components/_footer.scss */
+/* line 99, ../../styles/components/_footer.scss */
 .legal-links .legal-item .legal-link {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2034,33 +2129,67 @@ body.sidenav-active .mask {
   line-height: 3em;
 }
 
-/* line 105, ../../styles/components/_footer.scss */
+/* line 108, ../../styles/components/_footer.scss */
 .site-footer {
   border-top: 0.5em solid #34ba8c;
 }
-/* line 108, ../../styles/components/_footer.scss */
+/* line 111, ../../styles/components/_footer.scss */
 .site-footer .footer-primary {
   background: #efefef;
 }
-/* line 111, ../../styles/components/_footer.scss */
+/* line 114, ../../styles/components/_footer.scss */
 .site-footer .footer-secondary {
   background: #e7e7e8;
 }
+/* line 120, ../../styles/components/_footer.scss */
+.site-footer .footer-nav .fnav-box .fnav-toggle {
+  font-weight: 300;
+}
+/* line 126, ../../styles/components/_footer.scss */
+.site-footer.footer-dark {
+  border-top: 0.5em solid #ee8733;
+  color: #e7e7e8;
+}
+/* line 130, ../../styles/components/_footer.scss */
+.site-footer.footer-dark .footer-primary {
+  background: #444444;
+}
+/* line 135, ../../styles/components/_footer.scss */
+.site-footer.footer-dark .footer-primary .nav-list .nav-item .nav-link {
+  color: #bcbdc0;
+}
+/* line 141, ../../styles/components/_footer.scss */
+.site-footer.footer-dark .footer-secondary {
+  background: #222222;
+}
+/* line 144, ../../styles/components/_footer.scss */
+.site-footer.footer-dark .footer-address {
+  color: #bcbdc0;
+}
+/* line 150, ../../styles/components/_footer.scss */
+.site-footer.footer-dark .social-links .social-item .social-link {
+  background: #939598;
+  color: #e7e7e8;
+}
+/* line 158, ../../styles/components/_footer.scss */
+.site-footer.footer-dark .legal-links .legal-item .legal-link {
+  color: #bcbdc0;
+}
 
-/* line 119, ../../styles/components/_footer.scss */
+/* line 169, ../../styles/components/_footer.scss */
 .footer-primary .nav-list .nav-item .nav-link {
   color: #939598;
   font-weight: 300;
 }
 
-/* line 127, ../../styles/components/_footer.scss */
+/* line 177, ../../styles/components/_footer.scss */
 .footer-address {
   font-size: 0.8em;
   line-height: 3em;
   color: #939598;
 }
 
-/* line 135, ../../styles/components/_footer.scss */
+/* line 185, ../../styles/components/_footer.scss */
 .social-links .social-item .social-link {
   display: block;
   padding: 0.5em;
@@ -2071,12 +2200,12 @@ body.sidenav-active .mask {
   background: #bcbdc0;
   color: #efefef;
 }
-/* line 145, ../../styles/components/_footer.scss */
+/* line 195, ../../styles/components/_footer.scss */
 .social-links .social-item .social-link .icon {
   vertical-align: middle;
 }
 
-/* line 155, ../../styles/components/_footer.scss */
+/* line 205, ../../styles/components/_footer.scss */
 .legal-links .legal-item .legal-link {
   color: #939598;
   font-weight: 300;
