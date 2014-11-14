@@ -25,6 +25,25 @@ $font-size-normal: 1.0em;
 $font-size-smaller: 0.8em;
 $font-size-tinier: 0.5em;
 
+@mixin typeface($usage) {
+  @if $usage == 'headline' {
+    font-family: $font-family-headline;
+    font-weight: $font-weight-headline;
+  }
+  @if $usage == 'subhead' {
+    font-family: $font-family-subhead;
+    font-weight: $font-weight-subhead;
+  }
+  @if $usage == 'accent' {
+    font-family: $font-family-accent;
+    font-weight: $font-weight-accent;
+  }
+  @if $usage == 'body' {
+    font-family: $font-family-body;
+    font-weight: $font-weight-body;
+  }
+}
+
 html, body {
   color: $color-gray-charcoal;
   font-weight: $font-weight-body;
