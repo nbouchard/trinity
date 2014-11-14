@@ -1,5 +1,7 @@
 // Base Site Variables
 $site-max-width: 80em;
+$site-sidenav-width: 20em;
+$site-total-width: $site-max-width + $site-sidenav-width;
 
 // Base Button Variables
 $button-border-width: 0.25em;

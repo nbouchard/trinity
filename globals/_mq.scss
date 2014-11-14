@@ -4,4 +4,7 @@
 $mq-hidpi-base: screen (min-resolution 1.5dppx);
 $mq-hidpi-2x: screen (min-resolution 2dppx);
 $mq-hidpi-3x: screen (min-resolution 3dppx);
-$mq-under-sitemaxwidth: screen (max-width $site-max-width)
+$mq-under-sitemaxwidth: screen (max-width $site-max-width);
+
+// Content-Specific Media Queries
+$mq-over-sitetotalwidth: screen (min-width $site-total-width);
