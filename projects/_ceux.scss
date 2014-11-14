@@ -1,5 +1,5 @@
 .ceux-body {
-  padding-top: 7em;
+  padding-top: 4em;
 }
 
 .ceux-heading {
@@ -202,6 +202,10 @@
       border-bottom: none;
     }
   }
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .ceux-typeface {
@@ -257,4 +261,33 @@
 .editorial_energy_at_dusk {
   background: url('/images/placeholders/energy_at_dusk.jpg') center center no-repeat;
   background-size: cover;
+}
+
+.editorial_brand_positioning {
+  background: url('/images/placeholders/brand_positioning.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_brand_attributes {
+  background: url('/images/placeholders/brand_attributes.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_company_vision {
+  background: url('/images/placeholders/company_vision.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_company_mission {
+  background: url('/images/placeholders/company_mission.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_company_promise {
+  background: url('/images/placeholders/company_promise.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_choose_ux {
+  background: $color-blue-curious;
 }
