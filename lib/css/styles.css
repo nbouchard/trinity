@@ -1213,7 +1213,7 @@ body.sidenav-active .mask {
 }
 /* line 270, ../../styles/components/_navigation.scss */
 .site-header .logo {
-  background: url("/images/ceux/ceux-logo.png");
+  background: url("../images/ceux/ceux-logo.png");
   text-indent: -9999px;
 }
 /* line 276, ../../styles/components/_navigation.scss */
@@ -1538,7 +1538,7 @@ body.sidenav-active .mask {
   border: 1px solid #e7e7e8;
   border-right: none;
   border-left: none;
-  background: url("/images/patterns/grid-trans-blue.png") repeat;
+  background: url("../images/patterns/grid-trans-blue.png") repeat;
   color: #246289;
   text-align: center;
   font-weight: 400;
@@ -2147,7 +2147,7 @@ body.sidenav-active .mask {
 }
 /* line 87, ../../styles/components/_editorial.scss */
 .content-editorial.content-editorial-bg-grid {
-  background: url("/images/patterns/grid-trans-blue.png") repeat;
+  background: url("../images/patterns/grid-trans-blue.png") repeat;
   color: #246289;
 }
 /* line 91, ../../styles/components/_editorial.scss */
@@ -2694,61 +2694,61 @@ body.sidenav-active .mask {
 
 /* line 241, ../../styles/projects/_ceux.scss */
 .supplier_startex {
-  background: url("/images/supplier_logos/startex-power.png") center center no-repeat;
+  background: url("../images/supplier_logos/startex-power.png") center center no-repeat;
   background-size: contain;
 }
 
 /* line 246, ../../styles/projects/_ceux.scss */
 .supplier_txu {
-  background: url("/images/supplier_logos/txu-energy.png") center center no-repeat;
+  background: url("../images/supplier_logos/txu-energy.png") center center no-repeat;
   background-size: contain;
 }
 
 /* line 251, ../../styles/projects/_ceux.scss */
 .supplier_champion {
-  background: url("/images/supplier_logos/champion-energy.png") center center no-repeat;
+  background: url("../images/supplier_logos/champion-energy.png") center center no-repeat;
   background-size: contain;
 }
 
 /* line 256, ../../styles/projects/_ceux.scss */
 .editorial_cooking_with_gas {
-  background: url("/images/placeholders/cooking_with_gas.jpg") center center no-repeat;
+  background: url("../images/placeholders/cooking_with_gas.jpg") center center no-repeat;
   background-size: cover;
 }
 
 /* line 261, ../../styles/projects/_ceux.scss */
 .editorial_energy_at_dusk {
-  background: url("/images/placeholders/energy_at_dusk.jpg") center center no-repeat;
+  background: url("../images/placeholders/energy_at_dusk.jpg") center center no-repeat;
   background-size: cover;
 }
 
 /* line 266, ../../styles/projects/_ceux.scss */
 .editorial_brand_positioning {
-  background: url("/images/placeholders/brand_positioning.jpg") center center no-repeat;
+  background: url("../images/placeholders/brand_positioning.jpg") center center no-repeat;
   background-size: cover;
 }
 
 /* line 271, ../../styles/projects/_ceux.scss */
 .editorial_brand_attributes {
-  background: url("/images/placeholders/brand_attributes.jpg") center center no-repeat;
+  background: url("../images/placeholders/brand_attributes.jpg") center center no-repeat;
   background-size: cover;
 }
 
 /* line 276, ../../styles/projects/_ceux.scss */
 .editorial_company_vision {
-  background: url("/images/placeholders/company_vision.jpg") center center no-repeat;
+  background: url("../images/placeholders/company_vision.jpg") center center no-repeat;
   background-size: cover;
 }
 
 /* line 281, ../../styles/projects/_ceux.scss */
 .editorial_company_mission {
-  background: url("/images/placeholders/company_mission.jpg") center center no-repeat;
+  background: url("../images/placeholders/company_mission.jpg") center center no-repeat;
   background-size: cover;
 }
 
 /* line 286, ../../styles/projects/_ceux.scss */
 .editorial_company_promise {
-  background: url("/images/placeholders/company_promise.jpg") center center no-repeat;
+  background: url("../images/placeholders/company_promise.jpg") center center no-repeat;
   background-size: cover;
 }
 
