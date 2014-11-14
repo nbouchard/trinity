@@ -37,6 +37,10 @@
       font-size: $font-size-large;
     }
   }
+  .content-editorial-note {
+    color: $color-white-lilac;
+    font-size: $font-size-smaller;
+  }
 
   &.content-editorial-bigtalk {
     min-height: (50em / 1.4);
@@ -44,6 +48,57 @@
 
     .content-editorial-container {
       max-width: ($site-max-width / 1.4);
+    }
+  }
+  &.content-editorial-short {
+    min-height: 20em;
+  }
+
+
+  &.content-editorial-bg-primary {
+    background: $color-green-shamrock;
+  }
+  &.content-editorial-bg-info {
+    background: $color-blue-curious;
+  }
+  &.content-editorial-bg-bright {
+    background: $color-orange-sun;
+  }
+  &.content-editorial-bg-light {
+    background: $color-white-smoke;
+    color: $color-gray-charcoal;
+
+    .content-editorial-headline {
+      color: $color-gray-charcoal;
+    }
+    .content-editorial-subhead {
+      color: $color-gray-charcoal;
+    }
+    .content-editorial-cta {
+      color: $color-gray-charcoal;
+    }
+    .content-editorial-note {
+      color: $color-gray-chateau;
+    }
+  }
+  &.content-editorial-bg-dark {
+    background: $color-gray-charcoal;
+  }
+  &.content-editorial-bg-grid {
+    background: url('/images/patterns/grid-trans-blue.png') repeat;
+    color: $color-blue-bahama;
+
+    .content-editorial-headline {
+      color: $color-blue-bahama;
+    }
+    .content-editorial-subhead {
+      color: $color-blue-bahama;
+    }
+    .content-editorial-cta {
+      color: $color-blue-bahama;
+    }
+    .content-editorial-note {
+      color: $color-blue-bahama;
     }
   }
 }
