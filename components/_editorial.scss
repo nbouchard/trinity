@@ -1,5 +1,6 @@
 .content-editorial {
   @include box-sizing(border-box);
+  position: relative;
   min-height: 50em;
   width: 100%;
 
@@ -28,6 +29,9 @@
     font-family: $font-family-subhead;
     line-height: 1.25em;
   }
+  .content-editorial-accent {
+    @include typeface(accent);
+  }
   .content-editorial-cta {
     padding: 1em 0;
     color: $color-white-pure;
@@ -36,7 +40,92 @@
       padding: 0 0 0.9em 0;
       font-size: $font-size-large;
     }
+
+    &.content-editorial-infogrid {
+      @include display-flex;
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      margin: 0;
+      padding: 0;
+
+      .content-editorial-infogrid-cell {
+        @include box-sizing(border-box);
+        @include flex(1 1 10em);
+        display: table-cell;
+        vertical-align: middle;
+        padding: 1em;
+      }
+    }
   }
+  .content-editorial-marker {
+    color: $color-gray-charcoal;
+    font-family: $font-family-accent;
+    font-weight: $font-weight-accent;
+    background: rgba($color-white-pure, 0.6);
+    position: absolute;
+    top: 4em;
+    left: 0;
+    padding: 1em;
+    font-size: $font-size-larger;
+
+    &.content-editorial-marker-primary {
+      color: $color-white-pure;
+      background: rgba($color-green-shamrock, 0.6);
+    }
+    &.content-editorial-marker-info {
+      color: $color-white-pure;
+      background: rgba($color-blue-curious, 0.6);
+    }
+    &.content-editorial-marker-bright {
+      color: $color-white-pure;
+      background: rgba($color-orange-sun, 0.6);
+    }
+
+    &.content-editorial-marker-topper {
+      top: 0;
+      left: 4em;
+    }
+  }
+
+  .content-editorial-infobox {
+    color: $color-gray-charcoal;
+    font-family: $font-family-body;
+    font-weight: $font-weight-body;
+    background: rgba($color-white-pure, 0.6);
+    padding: 1em;
+    font-size: $font-size-larger;
+    max-width: 60%;
+
+    &.is-attached {
+      position: absolute;
+
+      &.attach-top {
+        top: 0;
+      }
+      &.attach-topish {
+        top: 4em;
+      }
+      &.attach-bottom {
+        bottom: 0;
+      }
+      &.attach-bottomish {
+        bottom: 4em;
+      }
+      &.attach-right {
+        right: 0;
+      }
+      &.attach-rightish {
+        right: 4em;
+      }
+      &.attach-left {
+        left: 0;
+      }
+      &.attach-leftish {
+        left: 4em;
+      }
+    }
+  }
+
   .content-editorial-note {
     color: $color-white-lilac;
     font-size: $font-size-smaller;
@@ -99,6 +188,15 @@
     }
     .content-editorial-note {
       color: $color-blue-bahama;
+    }
+  }
+
+  &.content-editorial-centerhero {
+    text-align: center;
+
+    .content-editorial-headline {
+      margin-top: 1em;
+      font-size: 6.0em;
     }
   }
 }
