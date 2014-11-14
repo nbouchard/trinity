@@ -1,6 +1,3 @@
-// Navigation Variables
-$sidenav-width: 20em;
-
 // Structure
 body {
   position: relative;
@@ -11,10 +8,10 @@ body {
       right: 0em;
     }
     #site {
-      left: -$sidenav-width;
+      left: -$site-sidenav-width;
     }
     .site-header {
-      left: -$sidenav-width;
+      left: -$site-sidenav-width;
     }
     .mask {
       display: block;
@@ -68,22 +65,40 @@ body {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+
+  @include breakpoint($mq-over-sitetotalwidth) {
+    padding-right: $site-sidenav-width;
+  }
+}
+#sidenav-open {
+  @include breakpoint($mq-over-sitetotalwidth) {
+    display: none;
+  }
+}
+#sidenav-close {
+  @include breakpoint($mq-over-sitetotalwidth) {
+    display: none;
+  }
 }
 .sidenav {
   @include box-sizing(border-box);
   position: fixed;
   top: 0;
-  right: -$sidenav-width;
+  right: -$site-sidenav-width;
   z-index: $z-overlay-high;
   overflow: hidden;
   padding-top: 4em;
-  width: $sidenav-width;
+  width: $site-sidenav-width;
   height: 100%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+
+  @include breakpoint($mq-over-sitetotalwidth) {
+    right: 0;
+  }
 
   .logo {
     width: 100%;
@@ -135,18 +150,32 @@ body {
   left: 0;
   z-index: $z-overlay-low;
   width: 100%;
-  height: 4em;
+  height: 6em;
+  padding: 1em;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 
+  @include breakpoint($mq-under-sitemaxwidth) {
+    height: 4em;
+    padding: 0;
+  }
+  @include breakpoint($mq-over-sitetotalwidth) {
+    padding-right: $site-sidenav-width;
+  }
+
+
   .logo {
     display: inline-block;
-    width: 60px;
+    width: 200px;
     height: 60px;
     vertical-align: middle;
+
+    @include breakpoint($mq-under-sitemaxwidth) {
+      width: 60px;
+    }
   }
   .nav {
     @include box-sizing(border-box);
@@ -268,8 +297,12 @@ body {
   background: $color-white-pure;
 
   .logo {
-    background: url('../images/ceux/ceux-logo.png');
+    background: url('../images/logos/choose-energy-charcoal.png');
     text-indent: -9999px;
+
+    @include breakpoint($mq-under-sitemaxwidth) {
+      background: url('../images/logos/choose-energy-charcoal-mini.png');
+    }
   }
   .nav {
     .nav-list {
