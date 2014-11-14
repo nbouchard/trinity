@@ -1,5 +1,9 @@
 .ceux-body {
-  padding-top: 4em;
+  padding-top: 6em;
+
+  @include breakpoint($mq-under-sitemaxwidth) {
+    padding-top: 4em;
+  }
 }
 
 .ceux-heading {
