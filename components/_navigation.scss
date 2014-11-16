@@ -173,6 +173,17 @@ body {
     height: 60px;
     vertical-align: middle;
 
+    a {
+      display: block;
+      width: 200px;
+      height: 60px;
+      vertical-align: middle;
+
+      @include breakpoint($mq-under-sitemaxwidth) {
+        width: 60px;
+      }
+    }
+
     @include breakpoint($mq-under-sitemaxwidth) {
       width: 60px;
     }
@@ -297,11 +308,13 @@ body {
   background: $color-white-pure;
 
   .logo {
-    background: url('../images/logos/choose-energy-charcoal.png');
-    text-indent: -9999px;
+    a {
+      background: url('../images/logos/choose-energy-charcoal.png');
+      text-indent: -9999px;
 
-    @include breakpoint($mq-under-sitemaxwidth) {
-      background: url('../images/logos/choose-energy-charcoal-mini.png');
+      @include breakpoint($mq-under-sitemaxwidth) {
+        background: url('../images/logos/choose-energy-charcoal-mini.png');
+      }
     }
   }
   .nav {
