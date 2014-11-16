@@ -829,7 +829,7 @@ fieldset legend {
 
 /* line 18, ../../styles/globals/_forms.scss */
 input, textarea, select {
-  border: 1px solid #34ba8c;
+  border: 1px solid #bcbdc0;
   background: #ffffff;
   color: #939598;
 }
@@ -1131,13 +1131,26 @@ body.sidenav-active .mask {
   height: 60px;
   vertical-align: middle;
 }
+/* line 176, ../../styles/components/_navigation.scss */
+.site-header .logo a {
+  display: block;
+  width: 200px;
+  height: 60px;
+  vertical-align: middle;
+}
+@media screen and (max-width: 80em) {
+  /* line 176, ../../styles/components/_navigation.scss */
+  .site-header .logo a {
+    width: 60px;
+  }
+}
 @media screen and (max-width: 80em) {
   /* line 170, ../../styles/components/_navigation.scss */
   .site-header .logo {
     width: 60px;
   }
 }
-/* line 180, ../../styles/components/_navigation.scss */
+/* line 191, ../../styles/components/_navigation.scss */
 .site-header .nav {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1149,7 +1162,7 @@ body.sidenav-active .mask {
   height: 4em;
   vertical-align: middle;
 }
-/* line 189, ../../styles/components/_navigation.scss */
+/* line 200, ../../styles/components/_navigation.scss */
 .site-header .nav .nav-list {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1159,7 +1172,7 @@ body.sidenav-active .mask {
   padding: 0;
   height: 4em;
 }
-/* line 196, ../../styles/components/_navigation.scss */
+/* line 207, ../../styles/components/_navigation.scss */
 .site-header .nav .nav-list .nav-item {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1169,7 +1182,7 @@ body.sidenav-active .mask {
   height: 4em;
   line-height: 4em;
 }
-/* line 203, ../../styles/components/_navigation.scss */
+/* line 214, ../../styles/components/_navigation.scss */
 .site-header .nav .nav-list .nav-item .nav-link {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1177,7 +1190,7 @@ body.sidenav-active .mask {
   padding-bottom: 0.15em;
   font-size: 1.5em;
 }
-/* line 208, ../../styles/components/_navigation.scss */
+/* line 219, ../../styles/components/_navigation.scss */
 .site-header .nav .nav-list .nav-item .nav-link .icon {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1185,110 +1198,110 @@ body.sidenav-active .mask {
   padding-left: 0.5em;
 }
 
-/* line 219, ../../styles/components/_navigation.scss */
+/* line 230, ../../styles/components/_navigation.scss */
 .mask {
   background: rgba(0, 0, 0, 0.1);
 }
 
-/* line 222, ../../styles/components/_navigation.scss */
+/* line 233, ../../styles/components/_navigation.scss */
 .sidenav {
   background-color: #444444;
 }
-/* line 225, ../../styles/components/_navigation.scss */
+/* line 236, ../../styles/components/_navigation.scss */
 .sidenav .sidenav-close {
   color: #ffffff;
   font-weight: 300;
 }
-/* line 229, ../../styles/components/_navigation.scss */
+/* line 240, ../../styles/components/_navigation.scss */
 .sidenav .sidenav-close:hover, .sidenav .sidenav-close:focus {
   color: #f9caa3;
   text-decoration: none;
 }
-/* line 237, ../../styles/components/_navigation.scss */
+/* line 248, ../../styles/components/_navigation.scss */
 .sidenav .nav .nav-list .nav-item .nav-link {
   color: #ffffff;
   font-weight: 300;
   font-size: 1.5em;
 }
-/* line 242, ../../styles/components/_navigation.scss */
+/* line 253, ../../styles/components/_navigation.scss */
 .sidenav .nav .nav-list .nav-item .nav-link:hover, .sidenav .nav .nav-list .nav-item .nav-link:focus {
   color: #f9caa3;
   text-decoration: none;
 }
-/* line 248, ../../styles/components/_navigation.scss */
+/* line 259, ../../styles/components/_navigation.scss */
 .sidenav .nav .nav-list .nav-item.is-active .nav-link {
   color: #b7dfcc;
 }
-/* line 251, ../../styles/components/_navigation.scss */
+/* line 262, ../../styles/components/_navigation.scss */
 .sidenav .nav .nav-list .nav-item.is-active .nav-link:hover, .sidenav .nav .nav-list .nav-item.is-active .nav-link:focus {
   color: #b7dfcc;
   text-decoration: none;
 }
-/* line 258, ../../styles/components/_navigation.scss */
+/* line 269, ../../styles/components/_navigation.scss */
 .sidenav .nav .nav-list.nav-nested {
   padding: 0 1.25em;
 }
-/* line 262, ../../styles/components/_navigation.scss */
+/* line 273, ../../styles/components/_navigation.scss */
 .sidenav .nav .nav-list.nav-nested .nav-item .nav-link {
   color: #bcbdc0;
   font-weight: 300;
   font-size: 0.8em;
 }
-/* line 267, ../../styles/components/_navigation.scss */
+/* line 278, ../../styles/components/_navigation.scss */
 .sidenav .nav .nav-list.nav-nested .nav-item .nav-link:hover, .sidenav .nav .nav-list.nav-nested .nav-item .nav-link:focus {
   color: #f9caa3;
   text-decoration: none;
 }
-/* line 279, ../../styles/components/_navigation.scss */
+/* line 290, ../../styles/components/_navigation.scss */
 .sidenav .nav.nav-secondary .nav-list .nav-item .nav-link {
   color: #bcbdc0;
   font-weight: 400;
   font-size: 1.1em;
   font-family: "Merriweather", serif;
 }
-/* line 285, ../../styles/components/_navigation.scss */
+/* line 296, ../../styles/components/_navigation.scss */
 .sidenav .nav.nav-secondary .nav-list .nav-item .nav-link:hover, .sidenav .nav.nav-secondary .nav-list .nav-item .nav-link:focus {
   color: #f9caa3;
   text-decoration: none;
 }
 
-/* line 295, ../../styles/components/_navigation.scss */
+/* line 306, ../../styles/components/_navigation.scss */
 .site-header {
   border-bottom: 1px solid #bcbdc0;
   background: #ffffff;
 }
-/* line 299, ../../styles/components/_navigation.scss */
-.site-header .logo {
+/* line 311, ../../styles/components/_navigation.scss */
+.site-header .logo a {
   background: url("../images/logos/choose-energy-charcoal.png");
   text-indent: -9999px;
 }
 @media screen and (max-width: 80em) {
-  /* line 299, ../../styles/components/_navigation.scss */
-  .site-header .logo {
+  /* line 311, ../../styles/components/_navigation.scss */
+  .site-header .logo a {
     background: url("../images/logos/choose-energy-charcoal-mini.png");
   }
 }
-/* line 309, ../../styles/components/_navigation.scss */
+/* line 322, ../../styles/components/_navigation.scss */
 .site-header .nav .nav-list .nav-item {
   list-style: none;
 }
-/* line 312, ../../styles/components/_navigation.scss */
+/* line 325, ../../styles/components/_navigation.scss */
 .site-header .nav .nav-list .nav-item .nav-link {
   border-bottom: 4px solid #ffffff;
   color: #444444;
   text-decoration: none;
   font-weight: 300;
 }
-/* line 318, ../../styles/components/_navigation.scss */
+/* line 331, ../../styles/components/_navigation.scss */
 .site-header .nav .nav-list .nav-item .nav-link:hover, .site-header .nav .nav-list .nav-item .nav-link:focus {
   border-bottom: 4px solid #f9caa3;
 }
-/* line 321, ../../styles/components/_navigation.scss */
+/* line 334, ../../styles/components/_navigation.scss */
 .site-header .nav .nav-list .nav-item .nav-link.active {
   border-bottom: 4px solid #ee8733;
 }
 
-/* line 332, ../../styles/components/_navigation.scss */
+/* line 345, ../../styles/components/_navigation.scss */
 .paginator .nav-list .nav-item .nav-link {
   border-bottom: 0.25em solid #bcbdc0;
   background: #bcbdc0;
@@ -1296,18 +1309,18 @@ body.sidenav-active .mask {
   text-align: center;
   font-weight: 300;
 }
-/* line 339, ../../styles/components/_navigation.scss */
+/* line 352, ../../styles/components/_navigation.scss */
 .paginator .nav-list .nav-item .nav-link:hover, .paginator .nav-list .nav-item .nav-link:focus {
   border-bottom: 0.25em solid #bcbdc0;
   background: #939598;
   text-decoration: none;
 }
-/* line 345, ../../styles/components/_navigation.scss */
+/* line 358, ../../styles/components/_navigation.scss */
 .paginator .nav-list .nav-item .nav-link.active {
   border-bottom: 0.25em solid #146e50;
   background: #34ba8c;
 }
-/* line 349, ../../styles/components/_navigation.scss */
+/* line 362, ../../styles/components/_navigation.scss */
 .paginator .nav-list .nav-item .nav-link.active:hover, .paginator .nav-list .nav-item .nav-link.active:focus {
   border-bottom: 0.25em solid #146e50;
   background: #34ba8c;
