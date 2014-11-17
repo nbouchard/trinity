@@ -11,6 +11,9 @@
 // CE Website Global Media Queries
 @import "globals/mq";
 
+// CE Site Structure
+@import "globals/structure";
+
 // CE Colors
 @import "globals/colors";
 
@@ -23,11 +26,20 @@
 // CE Form Variables and Styles
 @import "globals/forms";
 
+// CE Nav List Reset
+@import "globals/navlist";
+
 // CE Countable Component
 @import "components/countable";
 
-// CE Navigation
-@import "components/navigation";
+// CE Header
+@import "components/header";
+
+// CE Sidenav
+@import "components/sidenav";
+
+// CE Paginator
+@import "components/paginator";
 
 // CE Content Grids
 @import "components/contentGrids";
