@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="supplier">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Choose Energy UX</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="/css/styles.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/tomorrow-night.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.min.js"></script>
+  <script src="/js/supplier.js"></script>
+
+</head>
+
+<body >
+<!-- TODO: Split each section with a different controller into partials -->
+<header-nav></header-nav>
+<main class="ceux-body"> 
+<filter-box></filter-box>
+
+<div class="tabs" ng-controller="tabSupplierController" ng-init="activeTab = 1">
+<tabs></tabs>
+  <div class="plans" ng-show="isSelected(1)">
+    <div class="tab-view">
+      <div class="customer-filter">
+        <div class="filters">
+          <div class="filter-input">
+            <label>progress</label>
+            <select class="plan">
+              <option>Progress</option>
+              <option>Complete</option>
+              <option>Incomplete</option>
+            </select>
+          </div>
+          <div class="filter-input">
+            <label>date</label>
+            <select class="plan">
+              <option>Start Date</option>
+              <option>End Date</option>
+            </select>
+          </div>
+          <div class="filter-input">
+            <label>from</label>
+            <input placeholder="11/06/2014">
+          </div>
+          <div class="filter-input">
+            <label>to</label>
+            <input placeholder="11/06/2015">
+          </div>
+          <a href=>Reset Filters</a>
+        </div>
+      </div>
+    </div>
+    <h4>{{plans.length}} Total Plans</h4>
+    <table>
+      <tr>
+        <th>
+          Plan Name
+        </th>
+        <th>
+          Term
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Renewable
+        </th>
+
+        <th>
+          Progress
+        </th>
+        <th>
+          Activation
+        </th>
+        <th>
+          Deactivation
+        </th>
+        <th>
+          Customers
+        </th>
+        <th>
+          Status
+        </th>
+        <th>
+          Scheduled
+        </th>        
+        <th>
+          
+        </th>
+      </tr>
+      <tr ng-repeat="plan in plans | orderBy: ['status','activation']">
+
+        <td>
+          {{plan.name}}
+        </td>
+        <td>
+          {{plan.term}}
+        </td>
+        <td>
+          {{plan.type}}
+        </td>
+        <td>
+          {{plan.renewable}}
+        </td>
+        <td>
+          {{plan.progress}}
+        </td>
+        <td>
+          {{plan.activation}}
+        </td>
+        <td>
+          {{plan.deactivation}}
+        </td>          
+        <td>
+          {{plan.customers}}
+        </td>
+        <td>
+          <select>
+            <option>
+              {{plan.status}}
+            </option>
+            <option>
+              Active
+            </option>
+            <option>
+              Inactive
+            </option>
+          </select>
+        </td>
+        <td>
+          <a href>{{plan.scheduled}}</a>
+        </td>        
+        <td>
+          <a href="supplier_plan.html">View</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="customers" ng-show="isSelected(0)">
+    <div class="tab-view">
+      <div class="customer-filter">
+        <div class="filters">
+          <div class="filter-input">
+            <label>by zip</label>
+            <input placeholder="94114">
+          </div>
+          <div class="filter-input">
+            <label>by name</label>
+            <input placeholder='"Alex Smith"'>
+          </div>
+          <div class="filter-input">
+            <label>by plan</label>
+            <select class="plan">
+              <option>Plan</option>
+              <option>12 Month Fixed Price Advantage</option>
+              <option ng-repeat="plans in products">{{product}}</option>
+            </select>
+          </div>
+          <a href>Reset Filters</a>
+        </div>
+      </div>
+    </div>
+    <table>
+      <h4>{{customers.length}} Customers</h4><div class="download-csv"><a href>Download CSV</a></div>
+      <tr>
+        <th>
+          Date Submitted
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          Plan
+        </th>
+        <th>
+          Status
+        </th>
+        <th>
+          
+        </th>
+      </tr>
+      <tr ng-repeat="customer in customers | orderBy: '-dateSubmitted'">
+        <td>
+          {{customer.dateSubmitted}}
+        </td>
+        <td>
+          {{customer.firstName}} {{customer.lastName}}
+        </td>
+        <td>
+          {{customer.email}}
+        </td>
+        <td>
+          {{customer.plan}}
+        </td>
+        <td>
+          <select>
+            <option>
+              {{customer.status}}
+            </option>
+            <option>
+              Delivered Successfully
+            </option>
+            <option>
+              Deposit Required
+            </option>            
+            <option>
+              Customer Cancelled
+            </option>
+          </select>
+        </td>        
+        <td>
+          <a href>View</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="create-plan" ng-show="isSelected(2)">
+    <h4> Create a plan in California </h4>
+  </div>
+</div>
+</main>
+<footer-nav></footer-nav>
+<side-nav></side-nav>
+
+<script src="/js/classie.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+<script src="/js/sidenav.js"></script>
+
+</body>
+</html>

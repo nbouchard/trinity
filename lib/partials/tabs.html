@@ -1,0 +1,19 @@
+<h3 ng-show="isSelected(0)">
+  Connecticut Residential Electricity Customers
+</h3>
+<h3 ng-show="isSelected(1)">
+  Connecticut Residential Electricity Plans
+</h3>
+<h3 ng-show="isSelected(2)">
+  Connecticut Residential Electricity Plan
+</h3>
+<div class="tab-section">
+  	<div class="tab" ng-repeat="tab in tabs" ng-class="{active: isSelected($index)}" ng-click="selectTab($index)">
+  		<a href="supplier_admin_state_supplier.html">
+	    	{{tab.title}}
+	    </a>
+  	</div>
+  	<a href="supplier_plan_create.html">
+		<button class="btn-bright " type="button">Create Plan</button>
+  	</a>
+</div>

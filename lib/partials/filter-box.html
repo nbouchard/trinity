@@ -1,0 +1,22 @@
+<div class="filter-box" ng-controller="filterController">
+  <img src="/images/supplier_logos/direct-energy.png" />
+  <div class="filter-left">
+    <select class="state" >
+      <option>State</option>
+      <option ng-repeat="state in states">{{state}}</option>
+    </select>
+    <select class="service">
+      <option>Service Type</option>
+      <option ng-repeat="service in services">{{service}}</option>
+    </select>
+    <select class="product">
+      <option>Product Type</option>
+      <option ng-repeat="product in products">{{product}}</option>
+    </select>
+    <select>
+      <option>Status</option>
+      <option ng-repeat="status in statuses">{{status}}</option>
+    </select>
+    <button class="btn-primary">Go</button>
+  </div>
+</div>
