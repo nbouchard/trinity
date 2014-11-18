@@ -31,4 +31,4 @@ node_modules
 .sass-cache
 
 # Ignore main app compiled CSS: main.css
-lib/css/main.css
+lib/css/
