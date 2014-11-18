@@ -1,4 +1,5 @@
 ## [Git Sub-Tree](http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/)
+Additional reading can be found [here](https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844)
 
 ### Adding a Subtree
 ```sh
