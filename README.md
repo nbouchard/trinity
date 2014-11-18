@@ -1,5 +1,7 @@
 ## [Git Sub-Tree](http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/)
 Additional reading can be found [here](https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844)
+> Caveats
+Contributing back and forth between repos is definitely more complicated. To simplify potential merge conflicts, pulling changes from the libraries should be done in separate pull requests. Also, rebasing after subtree pulls don’t work (on rebases, git loses track of the —prefix, so you will have a big mess in your project’s root).
 
 ### Adding a Subtree
 ```sh
