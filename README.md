@@ -5,22 +5,24 @@ Contributing back and forth between repos is definitely more complicated. To sim
 
 ### Adding a Subtree
 ```sh
-git subtree add --squash  --prefix styles/base git@github.com:chooseenergy/ChooseStlyes.git master
+git subtree add --squash --prefix <prefix> <repository> <branch>
+# i.e. git subtree add --squash  --prefix styles/base git@github.com:chooseenergy/ChooseStyles.git master
 ```
 
 ### Adding the remote
 ```sh
-git remote add -f shopping git@github.com:chooseenergy/shopping.git
+git remote add -f <remote-name> <repository>
+# i.e. git remote add -f shopping git@github.com:chooseenergy/shopping.git
 ```
 
 ### Contributing Upstream
 Once you have made changes that have been accepted in a repo you may need to update the sub-tree that it depends on. This can be done easily (assuming you added the remote above)
 ```sh
-git subtree push --prefix shopping shopping master
+git subtree push --prefix <prefix> <remote-name> <branch>
 ```
 
 ### Pulling Upstream
 The same applies for pulling changes:
 ```sh
-git subtree pull --squash --prefix shopping master
+git subtree pull --squash --prefix <prefix> <remote-name> <branch>
 ```
