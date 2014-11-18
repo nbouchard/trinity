@@ -1,0 +1,20 @@
+// Base Site Variables
+$site-max-width: 80em;
+$site-sidenav-width: 20em;
+$site-total-width: $site-max-width + $site-sidenav-width;
+
+// Base Button Variables
+$button-border-width: 0.25em;
+$button-icon-base: 2em;
+$button-icon-lineheight: 1em;
+
+// Z-Index Variables
+$z-overlay-high: 1030;
+$z-overlay-mid: 1020;
+$z-overlay-low: 1010;
+$z-body-high: 30;
+$z-body-mid: 20;
+$z-body-low: 10;
+$z-underlay-high: 5;
+$z-underlay-mid: 3;
+$z-underlay-low: 1;

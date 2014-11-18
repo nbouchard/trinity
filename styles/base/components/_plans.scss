@@ -1,0 +1,363 @@
+// Structural
+.plan-cards {
+  @include box-sizing(border-box);
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  .plan-card {
+    @include flex(1 1 10em);
+    margin: 0 1em 1em 0;
+    font-size: $font-size-smaller;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: " ";
+    font-size: 0;
+  }
+}
+.plan-card {
+  @include box-sizing(border-box);
+  @include display-flex;
+  @include flex-direction(column);
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .plan-details {
+    @include flex(0 1 auto);
+
+    @include box-sizing(border-box);
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+  }
+  .plan-detail {
+    @include box-sizing(border-box);
+    padding: 1em;
+  }
+  .plan-detail-label {
+    display: none;
+  }
+  .plan-detail-data {
+    font-size: $font-size-larger;
+    line-height: 1.75em;
+  }
+  .plan-price {
+    @include box-sizing(border-box);
+    @include flex(1 1 100%);
+    padding: 0.5em;
+    min-height: 2em;
+    font-size: $font-size-huger;
+    line-height: 1em;
+  }
+
+  .plan-name {
+    @include flex(1 1 100%);
+    @include box-sizing(border-box);
+    min-height: 3em;
+    font-size: $font-size-normal;
+
+    .u-url {
+      @include box-sizing(border-box);
+      position: relative;
+      display: block;
+
+      .icon {
+        position: absolute;
+        top: 0.25em;
+        right: 0.25em;
+        width: 1em;
+        height: 1em;
+        font-size: $font-size-huge;
+        line-height: 1em;
+      }
+
+      .p-name {
+        @include box-sizing(border-box);
+        display: block;
+        overflow: hidden;
+        padding: 0.5em 2.5em 0.5em 0.5em;
+        min-height: 3em;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 2em;
+      }
+    }
+  }
+
+  .plan-description {
+    @include box-sizing(border-box);
+    @include flex(1 1 100%);
+    display: none;
+    padding: 1em;
+
+    p {
+      @include box-sizing(border-box);
+      margin: 0 0 0.5em 0;
+      padding: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .plan-supplier {
+    @include flex(1 1 8em);
+
+    > .plan-detail-label {
+      display: block;
+      font-size: $font-size-smaller;
+    }
+
+    .u-url {
+      display: block;
+      width: 100%;
+      height: 3em;
+    }
+  }
+
+  .plan-supplier-rating {
+    @include flex(1 1 100%);
+    font-size: $font-size-smaller;
+
+    .rating-count {
+      display: inline-block;
+    }
+  }
+
+  .plan-contract-term {
+    @include flex(1 1 8em);
+
+    .plan-detail-label {
+      display: block;
+      font-size: $font-size-smaller;
+    }
+  }
+
+  .plan-rate-type {
+    @include flex(1 1 8em);
+
+    .plan-detail-label {
+      display: block;
+      font-size: $font-size-smaller;
+    }
+  }
+
+  .plan-renewable {
+    @include flex(1 1 8em);
+
+    .plan-detail-label {
+      display: block;
+      font-size: $font-size-smaller;
+    }
+  }
+
+  .plan-cost {
+    display: none;
+  }
+
+  .plan-savings {
+    display: none;
+  }
+
+  .plan-popularity {
+    @include box-sizing(border-box);
+    @include flex(0 1 auto);
+    padding: 1em;
+    min-height: 2.5em;
+    text-align: center;
+    font-size: $font-size-large;
+
+    .plan-popularity-data {
+      vertical-align: middle;
+    }
+  }
+
+  .plan-extras {
+    @include flex(0 1 auto);
+
+    .countable {
+      clear: both;
+      padding: 0.25em;
+
+      .countable-label {
+        padding: 0.25em;
+        height: 1.5em;
+        font-size: $font-size-normal;
+        line-height: 1.5em;
+
+        .countable-data {
+          float: left;
+          margin: 0 1em 0 0;
+          font-size: $font-size-tinier;
+        }
+        .icon {
+          float: right;
+        }
+      }
+      .countable-list {
+        display: none;
+      }
+
+      &.is-open {
+        .countable-list {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .plan-actions {
+    @include flex(1 1 auto);
+    @include align-self(stretch);
+  }
+
+  .plan-sign-up {
+    @include box-sizing(border-box);
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    button {
+      @include flex(1 1 5em);
+      min-height: 4em;
+
+      &.btn-primary {
+        @include flex(2 1 8em);
+      }
+    }
+  }
+
+  &.is-expanded {
+    .plan-description {
+      display: block;
+    }
+  }
+}
+
+// Presentation
+.plan-card {
+  .plan-details {
+    border: 1px solid $color-gray-ghost;
+    border-bottom: none;
+  }
+  .plan-detail {
+    text-align: center;
+  }
+  .plan-price {
+    background: $color-blue-curious;
+    color: $color-white-pure;
+    font-weight: $font-weight-body-strong;
+
+    .p-unit {
+      font-weight: $font-weight-body;
+    }
+  }
+  .plan-name {
+    .u-url {
+      border-top: 1px solid $color-gray-ghost;
+      border-bottom: 1px solid $color-gray-ghost;
+      background: $color-white-smoke;
+      color: $color-blue-bahama;
+      font-weight: $font-weight-body;
+
+      &:hover {
+        color: $color-blue-curious;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .plan-supplier {
+    .u-url {
+      text-indent: -9999px;
+    }
+  }
+
+  .plan-supplier-rating {
+    border-bottom: 1px solid $color-gray-ghost;
+    background: $color-white-smoke;
+    text-align: center;
+  }
+
+  .plan-popularity {
+    border: 1px solid $color-gray-ghost;
+    border-bottom: none;
+    background: $color-white-smoke;
+    color: $color-blue-bahama;
+  }
+
+  .plan-extras {
+    border: 1px solid $color-gray-ghost;
+    border-top: none;
+    border-bottom: none;
+
+    .countable {
+      border-top: 1px solid $color-gray-ghost;
+      background: $color-white-smoke;
+      cursor: pointer;
+
+      &:hover, &:focus {
+        .countable-label {
+          color: $color-blue-bahama;
+
+          .countable-data {
+            background: $color-blue-curious;
+          }
+          .icon {
+            color: $color-blue-curious;
+          }
+        }
+      }
+      .countable-label {
+        .countable-data {
+          background: $color-gray-chateau;
+        }
+        .icon {
+          color: $color-gray-chateau;
+        }
+      }
+
+      &.is-open {
+        cursor: default;
+      }
+    }
+  }
+
+  .plan-actions {
+    .plan-sign-up {
+      border: 1px solid $color-gray-ghost;
+    }
+  }
+
+  &.is-expanded {
+    .plan-name {
+      .u-url {
+        border-bottom: 1px solid $color-gray-ghost;
+      }
+    }
+
+    .plan-description {
+      border-bottom: 1px solid $color-gray-ghost;
+      background: $color-white-smoke;
+      color: $color-blue-bahama;
+    }
+  }
+}
