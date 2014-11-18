@@ -26,3 +26,11 @@ The same applies for pulling changes:
 ```sh
 git subtree pull --squash --prefix <prefix> <remote-name> <branch>
 ```
+
+In my .gitconfig under ```[alias]``` I added this to help:
+```sh
+# Pull changes for the subtree, requires <prefix> <remote> <branch>
+su = subtree pull --squash --prefix
+# Push changes to the subtree, requires <prefix> <remote> <branch>
+sp = subtree push --squash --prefix
+```
