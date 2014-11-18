@@ -1,0 +1,297 @@
+.ceux-body {
+  padding-top: 6em;
+
+  @include breakpoint($mq-under-sitemaxwidth) {
+    padding-top: 4em;
+  }
+}
+
+.ceux-heading {
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid $color-white-smoke;
+}
+
+.ceux-example {
+  @include display-flex;
+  @include flex-direction(row);
+  margin: 1em 0;
+
+  &.ceux-vertical {
+    display: block;
+  }
+
+  .ceux-result {
+    @include flex(1 1 5em);
+    @include box-sizing(border-box);
+    padding: 1em;
+  }
+  .ceux-code {
+    @include flex(1 1 5em);
+    @include box-sizing(border-box);
+    padding: 1em;
+
+    pre {
+      @include box-sizing(border-box);
+      padding: 1em;
+      background: #1d1f21;
+    }
+  }
+}
+
+.ceux-philosophies {
+  @include box-sizing(border-box);
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  margin: 0;
+  padding: 0;
+
+  .ceux-philosophy {
+    @include box-sizing(border-box);
+    @include flex(1 1 20em);
+    padding: 1em;
+    list-style: none;
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+}
+
+.ceux-color-grid {
+
+  @include display-flex;
+  @include flex-direction(row);
+  padding-bottom: 1em;
+}
+
+.ceux-color {
+  @include flex(1 1 5em);
+  margin-right: 1em;
+
+  .ceux-color-swatch {
+    @include box-sizing(border-box);
+    display: block;
+    margin: 0;
+    padding: 4.5em 0.5em 0.5em 0.5em;
+    min-height: 8em;
+  }
+
+  .ceux-color-name {
+    margin: 0;
+    padding: 0;
+    height: 1.0em;
+    font-weight: $font-weight-body;
+    font-size: 1.0em;
+    font-family: $font-family-body;
+    line-height: 1.0em;
+  }
+
+  .ceux-color-value,
+  .ceux-color-variable {
+    margin: 0;
+    padding: 0;
+    height: 1.5em;
+    font-size: 0.75em;
+    font-family: $font-family-monospace;
+    line-height: 1.5em;
+  }
+}
+
+.ceux-color-inline {
+  margin: 0 0.1em;
+  padding: 0.2em;
+}
+
+// Base Color Palette
+.swatch-green-shamrock {
+  border: 1px solid $color-green-jewel;
+  background-color: $color-green-shamrock;
+  color: $color-white-pure;
+}
+.swatch-green-jewel {
+  border: 1px solid $color-green-jewel;
+  background-color: $color-green-jewel;
+  color: $color-white-pure;
+}
+.swatch-green-cruise {
+  border: 1px solid $color-green-shamrock;
+  background-color: $color-green-cruise;
+  color: $color-gray-charcoal;
+}
+.swatch-blue-curious {
+  border: 1px solid $color-blue-bahama;
+  background-color: $color-blue-curious;
+  color: $color-white-pure;
+}
+.swatch-blue-bahama {
+  border: 1px solid $color-blue-bahama;
+  background-color: $color-blue-bahama;
+  color: $color-white-pure;
+}
+.swatch-blue-perano {
+  border: 1px solid $color-blue-curious;
+  background-color: $color-blue-perano;
+  color: $color-gray-charcoal;
+}
+.swatch-orange-sun {
+  border: 1px solid $color-orange-fiery;
+  background-color: $color-orange-sun;
+  color: $color-white-pure;
+}
+.swatch-orange-fiery {
+  border: 1px solid $color-orange-fiery;
+  background-color: $color-orange-fiery;
+  color: $color-white-pure;
+}
+.swatch-orange-apricot {
+  border: 1px solid $color-orange-sun;
+  background-color: $color-orange-apricot;
+  color: $color-gray-charcoal;
+}
+.swatch-gray-ghost {
+  border: 1px solid $color-gray-charcoal;
+  background-color: $color-gray-ghost;
+  color: $color-gray-charcoal;
+}
+.swatch-gray-charcoal {
+  border: 1px solid $color-gray-charcoal;
+  background-color: $color-gray-charcoal;
+  color: $color-white-smoke;
+}
+.swatch-gray-chateau {
+  border: 1px solid $color-gray-charcoal;
+  background-color: $color-gray-chateau;
+  color: $color-white-smoke;
+}
+.swatch-white-pure {
+  border: 1px solid $color-white-lilac;
+  background-color: $color-white-pure;
+  color: $color-gray-charcoal;
+}
+.swatch-white-lilac {
+  border: 1px solid $color-white-lilac;
+  background-color: $color-white-lilac;
+  color: $color-gray-charcoal;
+}
+.swatch-white-smoke {
+  border: 1px solid $color-white-lilac;
+  background-color: $color-white-smoke;
+  color: $color-gray-charcoal;
+}
+
+.ceux-editorial-heading {
+  @include box-sizing(border-box);
+  margin: 1em auto;
+  max-width: ($site-max-width / 1.75);
+  width: 100%;
+}
+
+.ceux-section {
+  @include box-sizing(border-box);
+  margin: 2.0em auto;
+  padding: 6.0em 0.5em 0 0.5em;
+  max-width: $site-max-width;
+  border-bottom: 1px solid $color-white-lilac;
+
+  .ceux-subsection {
+    margin-bottom: 1.0em;
+    padding: 0.5em 0 1.5em 0;
+    border-bottom: 1px solid $color-white-smoke;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.ceux-typeface {
+  .implement {
+    color: $color-gray-ghost;
+    font-size: 0.75em;
+
+    code {
+      display: inline-block;
+      padding: 0.5em;
+      background: $color-white-smoke;
+      color: $color-gray-chateau;
+    }
+  }
+}
+.ceux-typeface-specimen {
+  padding: 0.5em;
+  background: $color-white-smoke;
+  font-size: 2.0em;
+
+  &.ceux-typeface-body {
+    padding: 1.0em;
+    font-size: 1.0em;
+  }
+}
+
+.ceux-all-the-things {
+  text-decoration: underline;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.supplier_startex {
+  background: url('../images/supplier_logos/startex-power.png') center center no-repeat;
+  background-size: contain;
+}
+
+.supplier_txu {
+  background: url('../images/supplier_logos/txu-energy.png') center center no-repeat;
+  background-size: contain;
+}
+
+.supplier_champion {
+  background: url('../images/supplier_logos/champion-energy.png') center center no-repeat;
+  background-size: contain;
+}
+
+.editorial_cooking_with_gas {
+  background: url('../images/placeholders/cooking_with_gas.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_energy_at_dusk {
+  background: url('../images/placeholders/energy_at_dusk.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_brand_positioning {
+  background: url('../images/placeholders/brand_positioning.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_brand_attributes {
+  background: url('../images/placeholders/brand_attributes.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_company_vision {
+  background: url('../images/placeholders/company_vision.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_company_mission {
+  background: url('../images/placeholders/company_mission.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_company_promise {
+  background: url('../images/placeholders/company_promise.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.editorial_choose_ux {
+  background: $color-blue-curious;
+}
