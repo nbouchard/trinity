@@ -1,0 +1,42 @@
+.content-tip {
+  @include box-sizing(border-box);
+  min-height: 6em;
+  width: 100%;
+
+  .content-tip-container {
+    @include box-sizing(border-box);
+    display: table;
+    margin: 0 auto;
+    min-height: 6em;
+    max-width: $site-max-width;
+
+    p {
+      @include box-sizing(border-box);
+      display: table-cell;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+    }
+
+    .content-tip-larger {
+      font-size: 3.0em;
+    }
+    .content-tip-normal {
+      font-size: 1.5em;
+    }
+    .content-tip-smaller {
+      font-size: 1.25em;
+    }
+  }
+}
+
+.content-tip {
+  border: 1px solid $color-white-lilac;
+  border-right: none;
+  border-left: none;
+  background: url('../images/patterns/grid-trans-blue.png') repeat;
+  color: $color-blue-bahama;
+  text-align: center;
+  font-weight: $font-weight-accent;
+  font-family: $font-family-accent;
+}
