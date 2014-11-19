@@ -14,13 +14,28 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.min.js"></script>
   <script src="/js/supplier.js"></script>
-
+  <script src="//use.typekit.net/thu5pgb.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  
 </head>
 
-<body >
+<body class="has-sidenav">
 <!-- TODO: Split each section with a different controller into partials -->
-<header-nav></header-nav>
-<main class="ceux-body"> 
+
+<!-- START SITE-HEADER: Once integrated into an Angular component, this can be rendered as a component instead of inline -->
+<header class="site-header">
+  <h1 class="logo"><a href="supplier_admin.html">Choose Energy</a></h1>
+  <h4>Supplier Dashboard</h4>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a id="sidenav-open" class="nav-link" href="#">Menu<i class="icon fa fa-bars"></i></a></li>
+    </ul>
+  </nav>
+</header>
+<!-- END SITE-HEADER -->
+<!-- this is to account for the header being fixed. We should account for this in probably a better way. -->
+<div style="height:6em; width:100%;">hi</div>
+<main>
 <filter-box></filter-box>
 <div class="tabs" ng-controller="tabSupplierController" ng-init="activeTab = 1">
 <tabs></tabs>
@@ -254,17 +269,41 @@
         <td>
           <a href="supplier_plan_past.html">View</a>
         </td>
-      </tr>      
+      </tr>
     </table>
   </div>
 </div>
 </main>
 <footer-nav></footer-nav>
-<side-nav></side-nav>
+
+<!-- START SIDE-NAV: Once integrated into an Angular component, this can be rendered as a component instead of inline -->
+<div id="sidenav-mask" class="mask"></div>
+<aside class="sidenav">
+  <a id="sidenav-close" class="sidenav-close" href="#">Close <i class="icon fa fa-times"></i></a>
+  <div class="logo">
+    <img src="images/logos/choose-energy-white.png" alt="Choose Energy" title="Choose Energy: Empowering Choice">
+  </div>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item is-active">
+        <a class="nav-link" href="supplier_admin.html">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Manage Account</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="nav nav-secondary">
+    <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>
+    </ul>
+  </nav>
+</aside>
+<!-- END SIDE-NAV -->
 
 <script src="/js/classie.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
 <script src="/js/sidenav.js"></script>
-
 </body>
 </html>
