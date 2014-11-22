@@ -2,8 +2,13 @@ body {
   position: relative;
 }
 .site-root {
-  position: relative;
-  z-index: $z-body-mid;
   @include transition-property(all);
   @include transition-duration(0.3s);
+  position: relative;
+  z-index: $z-body-mid;
+  padding-top: 6em;
+
+  @include breakpoint($mq-under-sitemaxwidth) {
+    padding-top: 4em;
+  }
 }

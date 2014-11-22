@@ -20,9 +20,9 @@ body.has-sidenav {
     top: 0;
     left: 0;
 
-    @include breakpoint($mq-over-sitetotalwidth) {
-      padding-right: $site-sidenav-width;
-    }
+    // @include breakpoint($mq-over-sitetotalwidth) {
+    //   padding-right: $site-sidenav-width;
+    // }
   }
   .mask {
     position: fixed;
@@ -35,22 +35,22 @@ body.has-sidenav {
     cursor: pointer;
   }
   .site-header {
-    @include breakpoint($mq-over-sitetotalwidth) {
-      padding-right: $site-sidenav-width;
-    }
+    // @include breakpoint($mq-over-sitetotalwidth) {
+    //   padding-right: $site-sidenav-width;
+    // }
   }
 }
 
-#sidenav-open {
-  @include breakpoint($mq-over-sitetotalwidth) {
-    display: none;
-  }
-}
-#sidenav-close {
-  @include breakpoint($mq-over-sitetotalwidth) {
-    display: none;
-  }
-}
+// #sidenav-open {
+//   @include breakpoint($mq-over-sitetotalwidth) {
+//     display: none;
+//   }
+// }
+// #sidenav-close {
+//   @include breakpoint($mq-over-sitetotalwidth) {
+//     display: none;
+//   }
+// }
 .sidenav {
   @include box-sizing(border-box);
   position: fixed;
@@ -67,9 +67,9 @@ body.has-sidenav {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 
-  @include breakpoint($mq-over-sitetotalwidth) {
-    right: 0;
-  }
+  // @include breakpoint($mq-over-sitetotalwidth) {
+  //   right: 0;
+  // }
 
   .logo {
     width: 100%;
