@@ -1,11 +1,11 @@
 @import "../globals/customVariables";
 
 .plan-cards {
-  @extend .col-lg-9;
-  @extend .col-md-9;
-  @extend .col-sm-9;
-  @extend .col-xs-12;
-  @extend .panel-group;
+  // @extend .col-lg-9;
+  // @extend .col-md-9;
+  // @extend .col-sm-9;
+  // @extend .col-xs-12;
+  // @extend .panel-group;
   padding: 39px 0;
 }
 
@@ -124,10 +124,10 @@ ul.top-picks {
 }
 
   .plan-actions .sign-up {
-    @extend .col-lg-6;
-    @extend .col-md-6;
-    @extend .col-sm-6;
-    @extend .col-xs-12;
+    // @extend .col-lg-6;
+    // @extend .col-md-6;
+    // @extend .col-sm-6;
+    // @extend .col-xs-12;
     overflow: hidden;
   }
   .plan-actions .sign-up .btn {
