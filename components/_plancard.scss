@@ -10,7 +10,6 @@
 }
 
 ul.plans {
-
     list-style: none;
     padding: 0;
     margin: 0;
@@ -19,24 +18,6 @@ ul.plans {
     right: 0;
     a {
       text-decoration: none;
-    }
-
-    li {
-        padding: 5px 10px;
-        margin: 1px;
-        background: rgba(0,0,0,.15);
-        .plan-price {
-          font-size: 30px;
-        }
-        section {
-            background: rgba(255,255,255,.5);
-        }
-
-        h1 {
-            float: right;
-            font-size: 15px;
-        }
-
     }
 }
 .top-picks-wrapper {
@@ -63,53 +44,7 @@ ul.top-picks {
     li {
         display: inline-block;
         position: relative;
-        width: 25%;
-        padding: 0 0 50px 0;
-        margin: 0;
-        text-align: center;
-        h1, h4 {
-            font-size: 100%;
-            display: block;
-            margin: 0;
-            padding: 0;
-        }
-        section {
-            display: none;
-        }
-        .plan-price {
-          font-size: 150%;
-          font-weight: 900;
-        }
-        .plan-popularity {
-          display: inline-block;
-        }
-        .plan-short {
-          border-bottom: 1px dashed $gray-light;
-          padding: 10px 0;
-        }
-        .plan-name {
-          overflow: hidden;
-          white-space: nowrap;
-          width: 75%;
-          text-overflow: ellipsis;
-          display: inline-block;
-        }
-        .plan-actions {
-          position: absolute;
-          bottom: 0;
-          left : 0;
-          width: 100%;
-        }
     }
-}
-
-.glyphicon-star-empty.half:after {
-    content:'\2605';
-    position: absolute;
-    left: -1px;
-    top: -3px;
-    width: 7px;
-    overflow: hidden;
 }
 
 .plan-card .sprite {
