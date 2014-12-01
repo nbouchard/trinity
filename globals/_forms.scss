@@ -1,8 +1,25 @@
+@import "compass/css3/user-interface";
+
 // Structure
+input {
+  height: $button-base;
+}
+input, select {
+  vertical-align: middle;
+}
 input, textarea, select {
   @include box-sizing(border-box);
-  padding: 0.5em;
-  vertical-align: middle;
+  padding: 0.625em;
+
+  input[type="text"] {
+    @include input-placeholder {
+      color: $color-white-lilac;
+      font-style: italic;
+    }
+  }
+}
+textarea {
+  vertical-align: top;
 }
 fieldset {
   @include box-sizing(border-box);
@@ -13,12 +30,21 @@ fieldset {
     padding: 0.5em;
   }
 }
+select[multiple] {
+  vertical-align: top;
+}
+input[type="search"] {
+  @include box-sizing(border-box);
+}
+input[type="color"] {
+  padding: 0.25em;
+}
 
 // Presentation
 input, textarea, select {
   border: 1px solid $color-gray-ghost;
   background: $color-white-pure;
-  color: $color-gray-chateau;
+  color: $color-gray-charcoal;
 
   &:focus {
     outline: none;
@@ -61,15 +87,19 @@ hr {
 }
 input {
   &.input-extrawide {
-    min-width: 20em;
+    width: 100%;
+    max-width: 16em;
   }
   &.input-wide {
-    min-width: 15em;
+    width: 100%;
+    max-width: 12em;
   }
-  &.input-med {
-    min-width: 10em;
+  &.input-normal {
+    width: 100%;
+    max-width: 8em;
   }
-  &.input-narrow {
-    min-width: 5em;
+  &.input-short {
+    width: 100%;
+    max-width: 6em;
   }
 }

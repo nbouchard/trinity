@@ -4,9 +4,10 @@ $site-sidenav-width: 20em;
 $site-total-width: $site-max-width + $site-sidenav-width;
 
 // Base Button Variables
+$button-base: 3em;
 $button-border-width: 0.25em;
-$button-icon-base: 2em;
-$button-icon-lineheight: 1em;
+$button-icon-base: 3em;
+$button-icon-lineheight: 2em;
 
 // Z-Index Variables
 $z-overlay-high: 1030;
