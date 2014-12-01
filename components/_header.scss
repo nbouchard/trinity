@@ -7,48 +7,62 @@
   z-index: $z-overlay-low;
   width: 100%;
   height: 6em;
-  padding: 1em;
+  padding: 0;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 
-  @include breakpoint($mq-under-sitemaxwidth) {
-    height: 4em;
-    padding: 0;
-  }
+ @include breakpoint($mq-under-sitemaxwidth) {
+   height: 4em;
+ }
 
 
   .logo {
     display: inline-block;
-    width: 200px;
-    height: 60px;
+    width: 12.5em;
+    height: 3.75em;
     vertical-align: middle;
+    font-size: 1.0em;
+    margin: 1em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+   @include breakpoint($mq-under-sitemaxwidth) {
+     margin: 0;
+   }
 
     a {
       display: block;
-      width: 200px;
-      height: 60px;
+      width: 12.5em;
+      height: 3.75em;
       vertical-align: middle;
 
       @include breakpoint($mq-under-sitemaxwidth) {
-        width: 60px;
+        width: 3.75em;
       }
     }
 
     @include breakpoint($mq-under-sitemaxwidth) {
-      width: 60px;
+      width: 3.75em;
     }
   }
   .nav {
     @include box-sizing(border-box);
     display: inline;
     float: right;
-    margin: 0;
+    margin: 1em;
     padding: 0;
     height: 4em;
     vertical-align: middle;
+
+    @include breakpoint($mq-under-sitemaxwidth) {
+      margin: 0;
+    }
 
     .nav-list {
       @include box-sizing(border-box);
@@ -87,10 +101,12 @@
   .logo {
     a {
       background: url('../images/logos/choose-energy-charcoal.png');
+      background-size: contain;
       text-indent: -9999px;
 
       @include breakpoint($mq-under-sitemaxwidth) {
         background: url('../images/logos/choose-energy-charcoal-mini.png');
+        background-size: contain;
       }
     }
   }
