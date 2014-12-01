@@ -24,6 +24,8 @@ Getting Started
   - **Mac**: Open a Terminal window and navigate to the ChooseUX folder. Run `compass watch ./` to autocompile the result CSS as you update the `.scss` source files.
 9. Install Node Dependencies
   - **Mac**: In a Terminal window, navigate to the ChooseUX folder. Run `npm install` (you may need to run `sudo npm install` depending on your setup) to install the static site server's dependencies.
-10. Run the server.
+10. Install Front-end Dependencies
+  - **Mac**: In a Terminal window, navigate to the ChooseUX folder. Run `bower install` to install Angular.js and [ChooseComponents](https://github.com/chooseenergy/ChooseComponents).
+11. Run the server.
   - **Mac**: In a Terminal window, navigate to the ChooseUX folder. Run `node static.js` to run the site at [http://localhost:5585](http://localhost:5585). To change the port the site runs at, simply set it via the environment variable `CE_UX_PORT`  when starting the server like so: `CE_UX_PORT=9000 node static.js`
   
