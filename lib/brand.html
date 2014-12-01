@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" ng-app="ChooseUX">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,17 +13,19 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 
-<body class="has-sidenav">
+<body data-ng-class="{'has-sidenav': hasSidenav, 'sidenav-active':sidenavState}" ce-site-body>
 <a id="ceux-top"></a>
 <div id="site" class="site-root">
-<header class="site-header ceux-container">
+<ce-header>
   <h1 class="logo"><a href="index.html">Choose UX</a></h1>
   <nav class="nav">
     <ul class="nav-list">
-      <li class="nav-item"><a id="sidenav-open" class="nav-link" href="#">Menu<i class="icon fa fa-bars"></i></a></li>
+      <li class="nav-item">
+        <ce-sidenav-opener></ce-sidenav-opener>
+      </li>
     </ul>
   </nav>
-</header>
+</ce-header>
 <main class="ceux-body">
       <div class="content-editorial content-editorial content-editorial-short content-editorial-bg-primary">
         <div class="content-editorial-container">
@@ -37,17 +39,18 @@
         </div>
       </div>
 
-
+      <a id="ceux-brand-positioning"></a>
       <div class="content-editorial editorial_brand_positioning">
         <div class="content-editorial-container">
-          <h1 class="content-editorial-headline">Brand Positioning</h1>
-          <h2 class="content-editorial-subhead">The guiding principle for our brand</h2>
-          <div class="content-editorial-cta">
+          <div class="content-editorial-marker content-editorial-marker-info">Brand Positioning</div>
+          <div class="content-editorial-infobox is-attached attach-left attach-bottomish">
             <p>For consumers who want a smarter, faster, easier way to shop for energy, Choose Energy is a marketplace where customers can compare rates, terms and energy resources and complete the switch in minutes.</p>
             <p>Unlike competitors, we put the customer first by offering an unbiased and straightforward selection of energy services from trusted partners.</p>
           </div>
         </div>
       </div>
+
+      <a id="ceux-brand-attributes"></a>
       <div class="content-editorial content-editorial-short content-editorial-bg-light">
         <div class="content-editorial-container">
           <h1 class="content-editorial-headline">Brand Attributes</h1>
@@ -74,6 +77,45 @@
               <p>Authenticity is the hallmark of everything we do, from our straightforward user experience to our unbiased intelligence.</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <a id="ceux-brand-logo"></a>
+      <div class="content-editorial content-editorial-short content-editorial-bg-dark">
+        <div class="content-editorial-container">
+          <h2 class="content-editorial-headline">Logo</h2>
+        </div>
+      </div>
+
+      <a id="ceux-brand-logo-variants"></a>
+      <div class="content-editorial content-editorial-short content-editorial-bg-info">
+        <div class="content-editorial-container">
+          <h2 class="content-editorial-headline">Logo Variants</h2>
+          <div class="content-editorial-cta content-editorial-infogrid">
+            <div class="content-editorial-infogrid-cell is-centered swatch-white-pure">
+              <img src="images/logos/choose-energy-charcoal.png">
+              <p>Standard Logo on Light</p>
+            </div>
+            <div class="content-editorial-infogrid-cell is-centered swatch-white-pure">
+              <img src="images/logos/choose-energy-charcoal-mini.png">
+              <p>Mini Logo on Light</p>
+            </div>
+            <div class="content-editorial-infogrid-cell is-centered swatch-gray-charcoal">
+              <img src="images/logos/choose-energy-white.png">
+              <p>Standard Logo on Dark</p>
+            </div>
+            <div class="content-editorial-infogrid-cell is-centered swatch-gray-charcoal">
+              <img src="images/logos/choose-energy-white-mini.png">
+              <p>Mini Logo on Dark</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a id="ceux-brand-logo"></a>
+      <div class="content-editorial content-editorial-short content-editorial-bg-primary">
+        <div class="content-editorial-container">
+          <h2 class="content-editorial-headline">Logo Usage</h2>
         </div>
       </div>
 
@@ -246,7 +288,7 @@
       </div>
 
       <div class="ceux-all-typography">
-      <a id="ceux-typography"></a>
+      <a id="ceux-brand-typography"></a>
       <section class="ceux-typography ceux-section">
         <h1 class="ceux-heading">Typography</h1>
 
@@ -284,6 +326,13 @@
       </section>
       </div>
 
+
+      <a id="ceux-brand-writing"></a>
+      <div class="content-editorial content-editorial-short content-editorial-bg-dark">
+        <div class="content-editorial-container">
+          <h2 class="content-editorial-headline">Voice and Tone</h2>
+        </div>
+      </div>
 
 
     </main>
@@ -376,9 +425,9 @@
   </div>
 </footer>
 </div>
-<div id="sidenav-mask" class="mask"></div>
-<aside class="sidenav">
-  <a id="sidenav-close" class="sidenav-close" href="#">Close <i class="icon fa fa-times"></i></a>
+<ce-sidenav-mask></ce-sidenav-mask>
+<ce-sidenav>
+  <ce-sidenav-closer></ce-sidenav-closer>
   <div class="logo">
     <img src="images/logos/choose-energy-white.png" alt="Choose Energy" title="Choose Energy: Empowering Choice">
   </div>
@@ -438,50 +487,18 @@
       <li class="nav-item"><a class="nav-link" href="#">Secondary Nav Item</a></li>
     </ul>
   </nav>
-</aside>
+</ce-sidenav>
 
 
-<script src="js/classie.js"></script>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/ce-components/dist/ce-components-v0.0.1.js"></script>
+<script src="js/ceux.js"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   hljs.initHighlightingOnLoad();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  // Make every sidenav link close the sidenav (but not prevent the default action)
-  var sidenavLinks = document.querySelectorAll('.sidenav .nav-link');
-  for (var i = 0; i < sidenavLinks.length; i++) {
-    sidenavLinks[i].addEventListener( 'click', function(e) {
-      classie.remove( document.body, 'sidenav-active' );
-    });
-  }
-
-  // Add sidenav opening event listener
-  var sidenavOpen = document.getElementById('sidenav-open');
-  sidenavOpen.addEventListener( 'click', function(e){
-    e.preventDefault();
-    classie.add( document.body, 'sidenav-active' );
-    return false;
-  });
-
-  // Add sidenav close event listener
-  var sidenavClose = document.getElementById('sidenav-close');
-  sidenavClose.addEventListener( 'click', function(e) {
-    e.preventDefault();
-    classie.remove( document.body, 'sidenav-active' );
-    return false;
-  });
-
-  // Add sidenav close event listener to the mask that covers pushed to the side page
-  var maskClose = document.getElementById('sidenav-mask');
-  maskClose.addEventListener( 'click', function(e) {
-    e.preventDefault();
-    classie.remove( document.body, 'sidenav-active' );
-    return false;
-  });
-
 });
 </script>
 </body>

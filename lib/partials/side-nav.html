@@ -1,19 +1,23 @@
-<div id="sidenav-mask" class="mask"></div>
-<aside class="sidenav">
-  <a id="sidenav-close" class="sidenav-close" href="#">Close <i class="icon fa fa-times"></i></a>
+<ce-sidenav-mask></ce-sidenav-mask>
+<ce-sidenav>
+  <ce-sidenav-closer></ce-sidenav-closer>
   <div class="logo">
-    <img src="/images/ceux/ceux-logo-white.png" alt="Choose Energy" title="Choose Energy: Empowering Choice">
+    <img src="images/logos/choose-energy-white.png" alt="Choose Energy" title="Choose Energy: Empowering Choice">
   </div>
   <nav class="nav">
     <ul class="nav-list">
-      <li class="nav-item"><a class="nav-link" href="#ceux-intro">Introduction</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ceux-colors">Colors</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ceux-typography">Typography</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ceux-structural">Structural</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ceux-interactive">Interactive</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ceux-nav">Navigational</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ceux-content">Content Structures</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ceux-plans">Plan Structures</a></li>
+      <li class="nav-item is-active">
+        <a class="nav-link" href="supplier_admin.html">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Manage Account</a>
+      </li>
     </ul>
   </nav>
-</aside>
+  <nav class="nav nav-secondary">
+    <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>
+    </ul>
+  </nav>
+</ce-sidenav>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" ng-app="ChooseUX">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,17 +13,19 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 
-<body class="has-sidenav">
+<body data-ng-class="{'has-sidenav': hasSidenav, 'sidenav-active':sidenavState}" ce-site-body>
 <a id="ceux-top"></a>
 <div id="site" class="site-root">
-<header class="site-header ceux-container">
+<ce-header>
   <h1 class="logo"><a href="index.html">Choose UX</a></h1>
   <nav class="nav">
     <ul class="nav-list">
-      <li class="nav-item"><a id="sidenav-open" class="nav-link" href="#">Menu<i class="icon fa fa-bars"></i></a></li>
+      <li class="nav-item">
+        <ce-sidenav-opener></ce-sidenav-opener>
+      </li>
     </ul>
   </nav>
-</header>
+</ce-header>
 <main class="ceux-body">
       <div class="content-editorial content-editorial content-editorial-short content-editorial-bg-info">
         <div class="content-editorial-container">
@@ -127,9 +129,9 @@
   </div>
 </footer>
 </div>
-<div id="sidenav-mask" class="mask"></div>
-<aside class="sidenav">
-  <a id="sidenav-close" class="sidenav-close" href="#">Close <i class="icon fa fa-times"></i></a>
+<ce-sidenav-mask></ce-sidenav-mask>
+<ce-sidenav>
+  <ce-sidenav-closer></ce-sidenav-closer>
   <div class="logo">
     <img src="images/logos/choose-energy-white.png" alt="Choose Energy" title="Choose Energy: Empowering Choice">
   </div>
@@ -181,7 +183,7 @@
       </li>
       <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
       <li class="nav-item"><a class="nav-link" href="interfaces.html">Interfaces</a></li>
-      <li class="nav-item is-active"><a class="nav-link" href="projects.html">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
     </ul>
   </nav>
   <nav class="nav nav-secondary">
@@ -189,50 +191,18 @@
       <li class="nav-item"><a class="nav-link" href="#">Secondary Nav Item</a></li>
     </ul>
   </nav>
-</aside>
+</ce-sidenav>
 
 
-<script src="js/classie.js"></script>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/ce-components/dist/ce-components-v0.0.1.js"></script>
+<script src="js/ceux.js"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   hljs.initHighlightingOnLoad();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  // Make every sidenav link close the sidenav (but not prevent the default action)
-  var sidenavLinks = document.querySelectorAll('.sidenav .nav-link');
-  for (var i = 0; i < sidenavLinks.length; i++) {
-    sidenavLinks[i].addEventListener( 'click', function(e) {
-      classie.remove( document.body, 'sidenav-active' );
-    });
-  }
-
-  // Add sidenav opening event listener
-  var sidenavOpen = document.getElementById('sidenav-open');
-  sidenavOpen.addEventListener( 'click', function(e){
-    e.preventDefault();
-    classie.add( document.body, 'sidenav-active' );
-    return false;
-  });
-
-  // Add sidenav close event listener
-  var sidenavClose = document.getElementById('sidenav-close');
-  sidenavClose.addEventListener( 'click', function(e) {
-    e.preventDefault();
-    classie.remove( document.body, 'sidenav-active' );
-    return false;
-  });
-
-  // Add sidenav close event listener to the mask that covers pushed to the side page
-  var maskClose = document.getElementById('sidenav-mask');
-  maskClose.addEventListener( 'click', function(e) {
-    e.preventDefault();
-    classie.remove( document.body, 'sidenav-active' );
-    return false;
-  });
-
 });
 </script>
 </body>

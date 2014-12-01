@@ -16,10 +16,10 @@
   <script src="/js/supplier.js"></script>
   <script src="//use.typekit.net/thu5pgb.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
-  
+
 </head>
 
-<body class="has-sidenav">
+<body data-ng-class="{'has-sidenav': hasSidenav, 'sidenav-active':sidenavState}" ce-site-body>
 <!-- TODO: Split each section with a different controller into partials -->
 
 <!-- START SITE-HEADER: Once integrated into an Angular component, this can be rendered as a component instead of inline -->
@@ -320,13 +320,12 @@
 <footer-nav></footer-nav>
 
 <!-- START SIDE-NAV: Once integrated into an Angular component, this can be rendered as a component instead of inline -->
-<div id="sidenav-mask" class="mask"></div>
-<aside class="sidenav">
-  <a id="sidenav-close" class="sidenav-close" href="#">Close <i class="icon fa fa-times"></i></a>
+<ce-sidenav-mask></ce-sidenav-mask>
+<ce-sidenav>
+  <ce-sidenav-closer></ce-sidenav-closer>
   <div class="logo">
     <img src="images/logos/choose-energy-white.png" alt="Choose Energy" title="Choose Energy: Empowering Choice">
   </div>
-
   <nav class="nav">
     <ul class="nav-list">
       <li class="nav-item is-active">
@@ -343,7 +342,7 @@
       <li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>
     </ul>
   </nav>
-</aside>
+</ce-sidenav>
 <!-- END SIDE-NAV -->
 
 <script src="/js/classie.js"></script>
