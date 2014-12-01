@@ -72,4 +72,10 @@ input {
   &.input-narrow {
     min-width: 5em;
   }
+  &[type=checkbox] {
+    display: inline-block;
+    background:none;
+    height: 20px;
+    width: 20px;
+  }
 }
