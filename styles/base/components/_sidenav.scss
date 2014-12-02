@@ -49,8 +49,10 @@ body.has-sidenav {
   transition: all 0.3s;
 
   .logo {
+    @include box-sizing(border-box);
     width: 100%;
     text-align: center;
+    padding: 2em;
   }
   .sidenav-close {
     position: absolute;
