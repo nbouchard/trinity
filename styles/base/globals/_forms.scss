@@ -10,13 +10,6 @@ input, select {
 input, textarea, select {
   @include box-sizing(border-box);
   padding: 0.625em;
-
-  input[type="text"] {
-    @include input-placeholder {
-      color: $color-white-lilac;
-      font-style: italic;
-    }
-  }
 }
 textarea {
   vertical-align: top;
@@ -44,12 +37,22 @@ input[type="color"] {
 input, textarea, select {
   border: 1px solid $color-gray-ghost;
   background: $color-white-pure;
-  color: $color-gray-charcoal;
+  color: $color-gray-chateau;
+
+  @include input-placeholder {
+    color: $color-white-lilac;
+    font-style: italic;
+  }
 
   &:focus {
     outline: none;
     border: 1px solid $color-green-shamrock;
     color: $color-gray-charcoal;
+
+    @include input-placeholder {
+      color: $color-gray-ghost;
+      font-style: italic;
+    }
   }
 }
 fieldset {
