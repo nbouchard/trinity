@@ -19,10 +19,11 @@
  }
 
 
-  .logo {
+  .logo-container {
+    @include box-sizing(border-box);
     display: inline-block;
-    width: 12.5em;
-    height: 3.75em;
+    width: 15em;
+    height: 4em;
     vertical-align: middle;
     font-size: 1.0em;
     margin: 1em;
@@ -37,18 +38,20 @@
    }
 
     a {
+      @include box-sizing(border-box);
       display: block;
-      width: 12.5em;
-      height: 3.75em;
+      width: 15em;
+      height: 4em;
       vertical-align: middle;
 
       @include breakpoint($mq-under-sitemaxwidth) {
-        width: 3.75em;
+        width: 4em;
+        padding: 1em 0.5em;
       }
     }
 
     @include breakpoint($mq-under-sitemaxwidth) {
-      width: 3.75em;
+      width: 4em;
     }
   }
   .nav {
@@ -98,18 +101,6 @@
   border-bottom: 1px solid $color-gray-ghost;
   background: $color-white-pure;
 
-  .logo {
-    a {
-      background: url('../images/logos/choose-energy-charcoal.png');
-      background-size: contain;
-      text-indent: -9999px;
-
-      @include breakpoint($mq-under-sitemaxwidth) {
-        background: url('../images/logos/choose-energy-charcoal-mini.png');
-        background-size: contain;
-      }
-    }
-  }
   .nav {
     .nav-list {
       .nav-item {

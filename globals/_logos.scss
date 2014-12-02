@@ -62,26 +62,49 @@
 
 // Logo (SVG) Type
 .logo-svg-full svg {
-  .logo-bolt {
+  &.logo-full {
     display: block;
   }
-  .logo-words {
-    display: block;
+  &.logo-mini {
+    display: none;
   }
 }
 .logo-svg-text svg {
-  .logo-bolt {
-    display: none;
-  }
-  .logo-words {
+  &.logo-full {
     display: block;
+
+    .logo-bolt {
+      display: none;
+    }
+    .logo-words {
+      display: block;
+    }
+  }
+  &.logo-mini {
+    display: none;
   }
 }
 .logo-svg-icon svg {
-  .logo-bolt {
+  &.logo-full {
+    display: none;
+  }
+  &.logo-mini {
     display: block;
   }
-  .logo-words {
+}
+.logo-svg-hybrid svg {
+  &.logo-full {
+    display: block;
+
+    @include breakpoint($mq-under-sitemaxwidth) {
+      display: none;
+    }
+  }
+  &.logo-mini {
     display: none;
+
+    @include breakpoint($mq-under-sitemaxwidth) {
+      display: block;
+    }
   }
 }
