@@ -1,7 +1,8 @@
 // Structure
 button, input[type="submit"] {
   @include box-sizing(border-box);
-  padding: 0.5em;
+  padding: 0.5em 1em;
+  height: $button-base;
   vertical-align: middle;
 }
 
