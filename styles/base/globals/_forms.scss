@@ -2,107 +2,107 @@
 
 // Structure
 input {
-  height: $button-base;
+    height: $button-base;
 }
 input, select {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 input, textarea, select {
-  @include box-sizing(border-box);
-  padding: 0.625em;
+    @include box-sizing(border-box);
+    padding: 0.625em;
 }
 textarea {
-  vertical-align: top;
+    vertical-align: top;
 }
 fieldset {
-  @include box-sizing(border-box);
-  padding: 1em;
-
-  legend {
     @include box-sizing(border-box);
-    padding: 0.5em;
-  }
+    padding: 1em;
+
+    legend {
+        @include box-sizing(border-box);
+        padding: 0.5em;
+    }
 }
 select[multiple] {
-  vertical-align: top;
+    vertical-align: top;
 }
 input[type="search"] {
-  @include box-sizing(border-box);
+    @include box-sizing(border-box);
 }
 input[type="color"] {
-  padding: 0.25em;
+    padding: 0.25em;
 }
 
 // Presentation
 input, textarea, select {
-  border: 1px solid $color-gray-ghost;
-  background: $color-white-pure;
-  color: $color-gray-chateau;
-
-  @include input-placeholder {
-    color: $color-white-lilac;
-    font-style: italic;
-  }
-
-  &:focus {
-    outline: none;
-    border: 1px solid $color-green-shamrock;
-    color: $color-gray-charcoal;
+    border: 1px solid $color-gray-ghost;
+    background: $color-white-pure;
+    color: $color-gray-chateau;
 
     @include input-placeholder {
-      color: $color-gray-ghost;
-      font-style: italic;
+        color: $color-white-lilac;
+        font-style: italic;
     }
-  }
+
+    &:focus {
+        outline: none;
+        border: 1px solid $color-green-shamrock;
+        color: $color-gray-charcoal;
+
+        @include input-placeholder {
+            color: $color-gray-ghost;
+            font-style: italic;
+        }
+    }
 }
 fieldset {
-  border: 1px solid $color-gray-chateau;
-  background: $color-white-smoke;
-
-  legend {
-    background: $color-gray-chateau;
-    color: $color-white-pure;
-  }
-
-  &.highlight {
-    border: 1px solid $color-blue-curious;
+    border: 1px solid $color-gray-chateau;
+    background: $color-white-smoke;
 
     legend {
-      background: $color-blue-curious;
+        background: $color-gray-chateau;
+        color: $color-white-pure;
     }
-  }
+
+    &.highlight {
+        border: 1px solid $color-blue-curious;
+
+        legend {
+            background: $color-blue-curious;
+        }
+    }
 }
 hr {
-  height: 1px;
-  border: none;
-  background: $color-white-lilac;
+    height: 1px;
+    border: none;
+    background: $color-white-lilac;
 
 
-  &.bright {
-    background: $color-orange-sun;
-  }
-  &.info {
-    background: $color-blue-curious;
-  }
-  &.dark {
-    background: $color-gray-charcoal;
-  }
+    &.bright {
+        background: $color-orange-sun;
+    }
+    &.info {
+        background: $color-blue-curious;
+    }
+    &.dark {
+        background: $color-gray-charcoal;
+    }
 }
 input {
-  &.input-extrawide {
-    width: 100%;
-    max-width: 16em;
-  }
-  &.input-wide {
-    width: 100%;
-    max-width: 12em;
-  }
-  &.input-normal {
-    width: 100%;
-    max-width: 8em;
-  }
-  &.input-short {
-    width: 100%;
-    max-width: 6em;
-  }
+    &.input-extrawide {
+        width: 100%;
+        max-width: 16em;
+    }
+    &.input-wide {
+        width: 100%;
+        max-width: 12em;
+    }
+    &.input-normal {
+        width: 100%;
+        max-width: 8em;
+    }
+    &.input-short {
+        width: 100%;
+        max-width: 6em;
+    }
 }

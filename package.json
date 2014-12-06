@@ -1,25 +1,25 @@
 {
-  "name": "ChooseUX",
-  "version": "0.0.6",
-  "description": "Choose UX Style Guide",
-  "main": "static.js",
-  "scripts": {
-    "start": "node static.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/chooseenergy/ChooseUX.git"
-  },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/achooseenergy/ChooseUX/issues"
-  },
-  "homepage": "https://github.com/chooseenergy/ChooseUX",
-  "dependencies": {
-    "express": "4.x.x",
-    "body-parser": "1.x.x",
-    "errorhandler": "1.x.x",
-    "method-override": "1.x.x"
-  }
+    "name": "ChooseUX",
+    "version": "0.0.6",
+    "description": "Choose UX Style Guide",
+    "main": "static.js",
+    "scripts": {
+        "start": "node static.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/chooseenergy/ChooseUX.git"
+    },
+    "author": "",
+    "bugs": {
+        "url": "https://github.com/achooseenergy/ChooseUX/issues"
+    },
+    "homepage": "https://github.com/chooseenergy/ChooseUX",
+    "dependencies": {
+        "express": "4.x.x",
+        "body-parser": "1.x.x",
+        "errorhandler": "1.x.x",
+        "method-override": "1.x.x"
+    }
 }

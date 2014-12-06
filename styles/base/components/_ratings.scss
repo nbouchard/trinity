@@ -1,85 +1,85 @@
 // Structure
 .rating-widget {
-  font-size: 2.0em;
-  text-align: center;
-  width: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 2.0em;
 
-  .rating-value {
-    @include box-sizing(border-box);
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    position: relative;
-    width: 5em;
-    height: 1em;
-    line-height: 1em;
-    padding: 0;
-    margin: 0;
-    font-weight: $font-weight-body;
-    display: inline-block;
-
-    > .icon {
-      @include box-sizing(border-box);
-      display: inline-block;
-      position: relative;
-      height: 1em;
-      width: 1em;
-      vertical-align: middle;
-      line-height: 1em;
-      padding: 0;
-      margin: 0;
-
-      &:hover:before,
-      &:hover ~ .icon:before {
+    .rating-value {
         @include box-sizing(border-box);
-        font-size: 1em;
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 1em;
-        width: 1em;
-        line-height: 1em;
-        padding: 0;
+        position: relative;
+        display: inline-block;
         margin: 0;
-        display: block;
+        padding: 0;
+        width: 5em;
+        height: 1em;
         font-weight: $font-weight-body;
-      }
+        line-height: 1em;
+        unicode-bidi: bidi-override;
+        direction: rtl;
+
+        > .icon {
+            @include box-sizing(border-box);
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            width: 1em;
+            height: 1em;
+            vertical-align: middle;
+            line-height: 1em;
+
+            &:hover:before,
+            &:hover ~ .icon:before {
+                @include box-sizing(border-box);
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                margin: 0;
+                padding: 0;
+                width: 1em;
+                height: 1em;
+                font-weight: $font-weight-body;
+                font-size: 1em;
+                line-height: 1em;
+            }
+        }
     }
-  }
-  .rating-count {
-    display: inline-block;
-    font-size: $font-size-tinier;
-    font-weight: $font-weight-body;
-  }
+    .rating-count {
+        display: inline-block;
+        font-weight: $font-weight-body;
+        font-size: $font-size-tinier;
+    }
 }
 
 // Presentation
 .rating-widget {
-  text-decoration: none;
-
-  &:hover, &:focus {
     text-decoration: none;
-  }
 
-  .rating-value {
-    color: $color-orange-sun;
-    cursor: pointer;
-
-    > .icon {
-
-      &:hover, &:focus,
-      &:hover ~ .icon,
-      &:focus ~ .icon {
-        color: transparent;
-      }
-      &:hover:before,
-      &:hover ~ .icon:before {
-        content: "\f005";
-        font-family: $font-family-icon;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        color: $color-green-shamrock;
-      }
+    &:hover, &:focus {
+        text-decoration: none;
     }
-  }
+
+    .rating-value {
+        color: $color-orange-sun;
+        cursor: pointer;
+
+        > .icon {
+
+            &:hover, &:focus,
+            &:hover ~ .icon,
+            &:focus ~ .icon {
+                color: transparent;
+            }
+            &:hover:before,
+            &:hover ~ .icon:before {
+                color: $color-green-shamrock;
+                content: "\f005";
+                font-family: $font-family-icon;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+    }
 }

@@ -7,7 +7,7 @@ var port = parseInt(process.env.CE_UX_PORT, 10) || 5585;
 var app = express();
 
 app.get("/", function (req, res) {
-  res.redirect("/index.html");
+    res.redirect("/index.html");
 });
 
 app.use(methodOverride());
@@ -15,14 +15,14 @@ app.use(methodOverride());
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({
-  extended: true
+    extended: true
 }));
 
 app.use(express.static(__dirname + '/lib'));
 
 app.use(errorHandler({
-  dumpExceptions: true,
-  showStack: true
+    dumpExceptions: true,
+    showStack: true
 }));
 
 app.listen(port);

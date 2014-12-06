@@ -1,215 +1,210 @@
 // Structural
 .slats {
-  clear: both;
-  margin: 0;
-  padding: 0;
-
-  .h-entry {
-    float: left;
     clear: both;
-    margin: 0 0 1em 0;
-    padding: 0;
-    list-style: none;
-
-    .u-photo {
-      @include box-sizing(border-box);
-      float: left;
-      margin: 0;
-      padding: 0 0.5em 0 0;
-      max-width: 25%;
-      width: 100%;
-    }
-    .p-name {
-      @include box-sizing(border-box);
-      float: right;
-      margin: 0.25em 0 0 0;
-      padding: 0;
-      max-width: 74%;
-      width: 100%;
-      font-size: $font-size-larger;
-    }
-    .p-summary {
-      @include box-sizing(border-box);
-      float: right;
-      margin: 0;
-      padding: 0;
-      max-width: 74%;
-      width: 100%;
-      font-size: $font-size-normal;
-    }
-    .dt-published {
-      @include box-sizing(border-box);
-      float: right;
-      margin: 0;
-      padding: 0;
-      max-width: 74%;
-      width: 100%;
-      font-size: $font-size-smaller;
-    }
-  }
-
-  &.slats-compact {
-    .h-entry {
-
-      .u-url {
-        @include box-sizing(border-box);
-        display: inline-block;
-        clear: both;
-      }
-
-      .u-photo {
-        max-width: 40%;
-        width: 100%;
-      }
-      .p-name {
-        max-width: 59%;
-        font-size: $font-size-normal;
-      }
-      .p-summary {
-        display: none;
-      }
-      .dt-published {
-        max-width: 59%;
-      }
-    }
-  }
-}
-.grid {
-  @include box-sizing(border-box);
-  @include display-flex;
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
-  margin: 0;
-  padding: 0;
-
-  .h-entry {
-    @include box-sizing(border-box);
-    @include flex(1 1 10em);
     margin: 0;
     padding: 0;
-    list-style: none;
 
-    .u-url {
-      @include box-sizing(border-box);
-      position: relative;
-      display: block;
-    }
-    .u-photo {
-      float: left;
-      max-width: 100%;
-      width: 100%;
-    }
-    .p-name {
-      @include box-sizing(border-box);
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      padding: 0.5em;
-      padding-right: 40%;
-      font-size: $font-size-smaller;
-    }
-    .dt-published {
-      @include box-sizing(border-box);
-      position: absolute;
-      top: 0.5em;
-      right: 0.5em;
-      width: 35%;
-      text-align: right;
-      font-size: $font-size-smaller;
-    }
-  }
-
-  &.grid-compact {
     .h-entry {
-      @include flex(1 1 5em);
+        float: left;
+        clear: both;
+        margin: 0 0 1em 0;
+        padding: 0;
+        list-style: none;
 
-      .p-name {
-        width: 100%;
-        font-size: $font-size-tinier;
-      }
-      .dt-published {
-        display: none;
-      }
+        .u-photo {
+            @include box-sizing(border-box);
+            float: left;
+            margin: 0;
+            padding: 0 0.5em 0 0;
+            max-width: 25%;
+            width: 100%;
+        }
+        .p-name {
+            @include box-sizing(border-box);
+            float: right;
+            margin: 0.25em 0 0 0;
+            padding: 0;
+            max-width: 74%;
+            width: 100%;
+            font-size: $font-size-larger;
+        }
+        .p-summary {
+            @include box-sizing(border-box);
+            float: right;
+            margin: 0;
+            padding: 0;
+            max-width: 74%;
+            width: 100%;
+            font-size: $font-size-normal;
+        }
+        .dt-published {
+            @include box-sizing(border-box);
+            float: right;
+            margin: 0;
+            padding: 0;
+            max-width: 74%;
+            width: 100%;
+            font-size: $font-size-smaller;
+        }
     }
-  }
-  &.grid-large {
+
+    &.slats-compact {
+        .h-entry {
+            .u-url {
+                @include box-sizing(border-box);
+                display: inline-block;
+                clear: both;
+            }
+
+            .u-photo {
+                max-width: 40%;
+                width: 100%;
+            }
+            .p-name {
+                max-width: 59%;
+                font-size: $font-size-normal;
+            }
+            .p-summary {
+                display: none;
+            }
+            .dt-published {
+                max-width: 59%;
+            }
+        }
+    }
+}
+.grid {
+    @include box-sizing(border-box);
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    margin: 0;
+    padding: 0;
+
     .h-entry {
-      @include flex(1 1 15em);
+        @include box-sizing(border-box);
+        @include flex(1 1 10em);
+        margin: 0;
+        padding: 0;
+        list-style: none;
 
-      .p-name {
-        font-size: $font-size-normal;
-      }
-      .dt-published {
-        font-size: $font-size-normal;
-      }
+        .u-url {
+            @include box-sizing(border-box);
+            position: relative;
+            display: block;
+        }
+        .u-photo {
+            float: left;
+            max-width: 100%;
+            width: 100%;
+        }
+        .p-name {
+            @include box-sizing(border-box);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 0.5em;
+            padding-right: 40%;
+            font-size: $font-size-smaller;
+        }
+        .dt-published {
+            @include box-sizing(border-box);
+            position: absolute;
+            top: 0.5em;
+            right: 0.5em;
+            width: 35%;
+            text-align: right;
+            font-size: $font-size-smaller;
+        }
     }
-  }
-  &.grid-jumbo {
-    .h-entry {
-      @include flex(1 1 20em);
+    &.grid-compact {
+        .h-entry {
+            @include flex(1 1 5em);
 
-      .p-name {
-        font-size: $font-size-larger;
-      }
-      .dt-published {
-        font-size: $font-size-normal;
-      }
+            .p-name {
+                width: 100%;
+                font-size: $font-size-tinier;
+            }
+            .dt-published {
+                display: none;
+            }
+        }
     }
-  }
+    &.grid-large {
+        .h-entry {
+            @include flex(1 1 15em);
+
+            .p-name {
+                font-size: $font-size-normal;
+            }
+            .dt-published {
+                font-size: $font-size-normal;
+            }
+        }
+    }
+    &.grid-jumbo {
+        .h-entry {
+            @include flex(1 1 20em);
+
+            .p-name {
+                font-size: $font-size-larger;
+            }
+            .dt-published {
+                font-size: $font-size-normal;
+            }
+        }
+    }
 }
 
 // Presentation
 .slats {
-  .h-entry {
-    .u-url {
-      color: $color-gray-chateau;
-      text-decoration: none;
-      font-weight: $font-weight-body;
-
-      &:hover {
-        color: $color-gray-charcoal;
-        text-decoration: none;
-      }
-    }
-  }
-
-  &.slats-compact {
     .h-entry {
-      .p-name {
-        font-weight: $font-weight-body;
-      }
+        .u-url {
+            color: $color-gray-chateau;
+            text-decoration: none;
+            font-weight: $font-weight-body;
+
+            &:hover {
+                color: $color-gray-charcoal;
+                text-decoration: none;
+            }
+        }
     }
-  }
+    &.slats-compact {
+        .h-entry {
+            .p-name {
+                font-weight: $font-weight-body;
+            }
+        }
+    }
 }
 .grid {
-  .h-entry {
-    .u-url {
-      color: $color-white-lilac;
-      text-decoration: none;
-      font-weight: $font-weight-body;
+    .h-entry {
+        .u-url {
+            color: $color-white-lilac;
+            text-decoration: none;
+            font-weight: $font-weight-body;
 
-      &:hover {
-        color: $color-white-pure;
-        text-decoration: none;
-      }
+            &:hover {
+                color: $color-white-pure;
+                text-decoration: none;
+            }
+        }
     }
-  }
 }
 
 .footer-dark {
-  .slats {
-    .h-entry {
-      .u-url {
-        color: $color-gray-ghost;
+    .slats {
+        .h-entry {
+            .u-url {
+                color: $color-gray-ghost;
 
-        &:hover {
-          color: $color-white-lilac;
+                &:hover {
+                    color: $color-white-lilac;
+                }
+            }
         }
-      }
     }
-  }
 }
-
-

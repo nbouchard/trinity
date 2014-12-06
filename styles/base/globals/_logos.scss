@@ -1,110 +1,110 @@
 // Logo (SVG) Variant
 .logo-svg-primary svg {
-  fill: $color-green-shamrock;
+    fill: $color-green-shamrock;
 }
 .logo-svg-bright svg {
-  fill: $color-orange-sun;
+    fill: $color-orange-sun;
 }
 .logo-svg-info svg {
-  fill: $color-blue-curious;
+    fill: $color-blue-curious;
 }
 .logo-svg-light svg {
-  fill: $color-white-pure;
+    fill: $color-white-pure;
 }
 .logo-svg-dark svg {
-  fill: $color-gray-charcoal;
+    fill: $color-gray-charcoal;
 }
 .logo-svg-green-shamrock svg {
-  fill: $color-green-shamrock;
+    fill: $color-green-shamrock;
 }
 .logo-svg-green-cruise svg {
-  fill: $color-green-cruise;
+    fill: $color-green-cruise;
 }
 .logo-svg-green-jewel svg {
-  fill: $color-green-jewel;
+    fill: $color-green-jewel;
 }
 .logo-svg-orange-sun svg {
-  fill: $color-orange-sun;
+    fill: $color-orange-sun;
 }
 .logo-svg-orange-fiery svg {
-  fill: $color-orange-fiery;
+    fill: $color-orange-fiery;
 }
 .logo-svg-orange-apricot svg {
-  fill: $color-orange-apricot;
+    fill: $color-orange-apricot;
 }
 .logo-svg-blue-curious svg {
-  fill: $color-blue-curious;
+    fill: $color-blue-curious;
 }
 .logo-svg-blue-bahama svg {
-  fill: $color-blue-bahama;
+    fill: $color-blue-bahama;
 }
 .logo-svg-blue-perano svg {
-  fill: $color-blue-perano;
+    fill: $color-blue-perano;
 }
 .logo-svg-white-pure svg {
-  fill: $color-white-pure;
+    fill: $color-white-pure;
 }
 .logo-svg-white-lilac svg {
-  fill: $color-white-lilac;
+    fill: $color-white-lilac;
 }
 .logo-svg-white-smoke svg {
-  fill: $color-white-smoke;
+    fill: $color-white-smoke;
 }
 .logo-svg-gray-charcoal svg {
-  fill: $color-gray-charcoal;
+    fill: $color-gray-charcoal;
 }
 .logo-svg-gray-ghost svg {
-  fill: $color-gray-ghost;
+    fill: $color-gray-ghost;
 }
 .logo-svg-gray-chateau svg {
-  fill: $color-gray-chateau;
+    fill: $color-gray-chateau;
 }
 
 // Logo (SVG) Type
 .logo-svg-full svg {
-  &.logo-full {
-    display: block;
-  }
-  &.logo-mini {
-    display: none;
-  }
+    &.logo-full {
+        display: block;
+    }
+    &.logo-mini {
+        display: none;
+    }
 }
 .logo-svg-text svg {
-  &.logo-full {
-    display: block;
+    &.logo-full {
+        display: block;
 
-    .logo-bolt {
-      display: none;
+        .logo-bolt {
+            display: none;
+        }
+        .logo-words {
+            display: block;
+        }
     }
-    .logo-words {
-      display: block;
+    &.logo-mini {
+        display: none;
     }
-  }
-  &.logo-mini {
-    display: none;
-  }
 }
 .logo-svg-icon svg {
-  &.logo-full {
-    display: none;
-  }
-  &.logo-mini {
-    display: block;
-  }
+    &.logo-full {
+        display: none;
+    }
+    &.logo-mini {
+        display: block;
+    }
 }
 .logo-svg-hybrid svg {
-  &.logo-full {
-    display: block;
+    &.logo-full {
+        display: block;
 
-    @include breakpoint($mq-under-sitemaxwidth) {
-      display: none;
+        @include breakpoint($mq-under-sitemaxwidth) {
+            display: none;
+        }
     }
-  }
-  &.logo-mini {
-    display: none;
+    &.logo-mini {
+        display: none;
 
-    @include breakpoint($mq-under-sitemaxwidth) {
-      display: block;
+        @include breakpoint($mq-under-sitemaxwidth) {
+            display: block;
+        }
     }
-  }
 }

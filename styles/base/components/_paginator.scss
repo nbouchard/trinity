@@ -1,48 +1,50 @@
 // Structural
 .paginator {
-  .nav-list {
-    .nav-item {
-      display: inline-block;
+    .nav-list {
+        .nav-item {
+            display: inline-block;
 
-      .nav-link {
-        @include box-sizing(border-box);
-        display: block;
-        padding: 0.5em;
-        min-width: $button-icon-base;
-        height: $button-icon-base;
-        line-height: $button-icon-lineheight;
-      }
+            .nav-link {
+                @include box-sizing(border-box);
+                display: block;
+                padding: 0.5em;
+                min-width: $button-icon-base;
+                height: $button-icon-base;
+                line-height: $button-icon-lineheight;
+            }
+        }
     }
-  }
 }
 
 // Presentation
 .paginator {
-  .nav-list {
-    .nav-item {
-      .nav-link {
-        border-bottom: $button-border-width solid $color-gray-ghost;
-        background: $color-gray-ghost;
-        color: $color-white-pure;
-        text-align: center;
-        font-weight: $font-weight-body;
+    .nav-list {
+        .nav-item {
+            .nav-link {
+                border-bottom: $button-border-width solid $color-gray-ghost;
+                background: $color-gray-ghost;
+                color: $color-white-pure;
+                text-align: center;
+                font-weight: $font-weight-body;
 
-        &:hover, &:focus {
-          border-bottom: $button-border-width solid $color-gray-ghost;
-          background: $color-gray-chateau;
-          text-decoration: none;
+                &:hover,
+                &:focus {
+                    border-bottom: $button-border-width solid $color-gray-ghost;
+                    background: $color-gray-chateau;
+                    text-decoration: none;
+                }
+
+                &.is-active {
+                    border-bottom: $button-border-width solid $color-green-jewel;
+                    background: $color-green-shamrock;
+
+                    &:hover,
+                    &:focus {
+                        border-bottom: $button-border-width solid $color-green-jewel;
+                        background: $color-green-shamrock;
+                    }
+                }
+            }
         }
-
-        &.active {
-          border-bottom: $button-border-width solid $color-green-jewel;
-          background: $color-green-shamrock;
-
-          &:hover, &:focus {
-            border-bottom: $button-border-width solid $color-green-jewel;
-            background: $color-green-shamrock;
-          }
-        }
-      }
     }
-  }
 }
