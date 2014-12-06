@@ -79,6 +79,13 @@ body.has-sidenav {
                         display: block;
                     }
                 }
+                &.nav-hybrid {
+                    display: none;
+
+                    @include breakpoint($mq-under-tablet) {
+                        display: block;
+                    }
+                }
             }
             &.nav-nested {
                 display: none;
