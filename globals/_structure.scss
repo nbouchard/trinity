@@ -1,14 +1,14 @@
 body {
-  position: relative;
+    position: relative;
 }
 .site-root {
-  @include transition-property(all);
-  @include transition-duration(0.3s);
-  position: relative;
-  z-index: $z-body-mid;
-  padding-top: 6em;
+    @include transition-property(all);
+    @include transition-duration(0.3s);
+    position: relative;
+    z-index: $z-body-mid;
+    padding-top: 6em;
 
-  @include breakpoint($mq-under-sitemaxwidth) {
-    padding-top: 4em;
-  }
+    @include breakpoint($mq-under-sitemaxwidth) {
+        padding-top: 4em;
+    }
 }
