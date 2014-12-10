@@ -81,12 +81,16 @@
     margin: 0;
     padding: 0;
 
-    .h-entry {
+    .grid-item {
         @include box-sizing(border-box);
         @include flex(1 1 10em);
         margin: 0;
         padding: 0;
         list-style: none;
+
+        img {
+            max-width: 100%;
+        }
 
         .u-url {
             @include box-sizing(border-box);
@@ -119,8 +123,13 @@
             font-size: $font-size-smaller;
         }
     }
+
+    &.gridpage {
+        @include flex-wrap(nowrap);
+    }
+
     &.grid-compact {
-        .h-entry {
+        .grid-item {
             @include flex(1 1 5em);
 
             .p-name {
@@ -133,7 +142,7 @@
         }
     }
     &.grid-large {
-        .h-entry {
+        .grid-item {
             @include flex(1 1 15em);
 
             .p-name {
@@ -145,7 +154,7 @@
         }
     }
     &.grid-jumbo {
-        .h-entry {
+        .grid-item {
             @include flex(1 1 20em);
 
             .p-name {
