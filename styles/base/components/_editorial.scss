@@ -144,6 +144,23 @@
     &.content-editorial-bg-bright {
         background: $color-orange-sun;
     }
+    &.content-editorial-bg-white {
+        background: $color-white-pure;
+        color: $color-gray-charcoal;
+
+        .content-editorial-headline {
+            color: $color-gray-charcoal;
+        }
+        .content-editorial-subhead {
+            color: $color-gray-charcoal;
+        }
+        .content-editorial-cta {
+            color: $color-gray-charcoal;
+        }
+        .content-editorial-note {
+            color: $color-gray-chateau;
+        }
+    }
     &.content-editorial-bg-light {
         background: $color-white-smoke;
         color: $color-gray-charcoal;
