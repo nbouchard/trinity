@@ -14,6 +14,19 @@
             }
         }
     }
+
+    &.paginator-dots {
+        .nav-list {
+            .nav-item {
+                .nav-link {
+                    padding: 0;
+                    min-width: inherit;
+                    height: auto;
+                    margin: 0.1em;
+                }
+            }
+        }
+    }
 }
 
 // Presentation
@@ -42,6 +55,31 @@
                     &:focus {
                         border-bottom: $button-border-width solid $color-green-jewel;
                         background: $color-green-shamrock;
+                    }
+                }
+            }
+        }
+    }
+
+    &.paginator-dots {
+        .nav-list {
+            .nav-item {
+                .nav-link {
+                    border: none;
+                    background: none;
+                    color: $color-white-lilac;
+
+                    &:hover,
+                    &:focus {
+                        border: none;
+                        background: none;
+                        color: $color-green-cruise;
+                    }
+
+                    &.is-active {
+                        border: none;
+                        background: none;
+                        color: $color-green-shamrock;
                     }
                 }
             }
