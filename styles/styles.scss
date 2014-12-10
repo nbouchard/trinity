@@ -32,6 +32,9 @@
 // CE Nav List Reset
 @import "base/globals/navlist";
 
+// CE Utility Components
+@import "base/components/colorfade";
+
 // CE Countable Component
 @import "base/components/countable";
 
@@ -47,6 +50,7 @@
 // CE Content Grids
 @import "base/components/contentGrids";
 @import "base/components/tips";
+@import "base/components/partnerGrids";
 
 // CE Shopping Elements
 @import "base/components/plans";
