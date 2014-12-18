@@ -2,9 +2,17 @@ section {
 	margin-top:4em;
 	margin-bottom:4em;
 }
-
-
-
+.ten-based-grid {
+	width:20%;
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	float: left;
+}
+.no-pad {
+	padding: 0;
+}
 .content-editorial {
 	height:41.5em;
 	min-height: initial;
@@ -120,7 +128,7 @@ section {
             position: absolute;
             top: 0.5em;
             left: 0.5em;
-            width: 35%;
+            width: 50%;
             font-size: $font-size-smaller;
         }
     }
@@ -238,13 +246,12 @@ section {
 		}
 	}
 	input {
-		width:50%;
-		margin:0 25%;
+		width:80%;
+		margin: 10%;
 	}
 	button {
-		width:50%;
-		margin:0 25%;
-		margin-top: 1em;
+		width: 80%;
+		margin:1em 10% 10% 10%;
 	}
 }
 .academy-search {
@@ -253,14 +260,6 @@ section {
 	}
 	input {
 		width:100%;
-	}
-	.topic-grid {
-		width:20%;
-		position: relative;
-		min-height: 1px;
-		padding-left: 15px;
-		padding-right: 15px;
-		float: left;
 	}
 	ul {
 		list-style: none;
