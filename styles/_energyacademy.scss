@@ -247,3 +247,32 @@ section {
 		margin-top: 1em;
 	}
 }
+.academy-search {
+	h1 {
+		margin:1.5em 0 1em;
+	}
+	input {
+		width:100%;
+	}
+	.topic-grid {
+		width:20%;
+		position: relative;
+		min-height: 1px;
+		padding-left: 15px;
+		padding-right: 15px;
+		float: left;
+	}
+	ul {
+		list-style: none;
+		padding:0;
+		a {
+			color: $color-gray-chateau;
+			font-weight: $font-weight-body;
+			font-size: $font-size-larger;
+		}
+	}
+}
+
+
+
+
