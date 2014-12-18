@@ -33,96 +33,102 @@
 <!-- Start Page Template Contents -->
     <hero-carousel>
     </hero-carousel>
-    <ol class="grid-article overlaid h-feed">
-        <li class="grid-item h-entry">
-            <a class="u-url" href="#">
-                <img class="u-photo" src="http://placekitten.com/320/179" alt="thumbnail" />
-                <div class="grid-item-caption">
-                    <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                    <span class="p-hearts"><i class="fa fa-heart"></i> 12</span>
-                </div>
-                <div class="grid-item-article">
-                    <h1 class="grid-item-article-title">
-                        How solar power can help more than the environment
-                    </h1>
-                    <div class="grid-item-article-description">
-                        Now that many states have deregulated their services, customers are empowered to chvoose power from among a list of suppliers in...
-                    </div>
-                </div>
-            </a>
-        </li>
-        <li class="grid-item h-entry">
-            <a class="u-url" href="#">
-                <img class="u-photo" src="http://placekitten.com/320/180" alt="thumbnail" />
-                <div class="grid-item-caption">                
-                    <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
-                    <span class="p-hearts"><i class="fa fa-heart"></i> 27</span>
-                </div>
-                <div class="grid-item-article">
-                    <h1 class="grid-item-article-title">
-                        Naughty or nice? Devices that hog the most energy during the holidays
-                    </h1>
-                    <div class="grid-item-article-description">
-                        Now that many states have deregulated their services, customers are empowered to chvoose power from...
-                    </div>
-                </div>                
-            </a>
-        </li>
-        <li class="grid-item h-entry">
-            <a class="u-url" href="#">
-                <img class="u-photo" src="http://placekitten.com/320/181" alt="thumbnail" />
-                <div class="grid-item-caption">
-                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                    <span class="p-hearts"><i class="fa fa-heart"></i> 3</span>
-                </div>
-                <div class="grid-item-article">
-                    <h1 class="headline">
-                        Lifestyle changes that can help you save cash 
-                    </h1>
-                    <div class="grid-item-article-description">
-                        Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in...
-                    </div>
-                </div>                
-            </a>
-        </li>
-    </ol>
+    <section class="container popular-articles overlaid">
+        <div class="row">
+            <h1>Popular Articles</h1>
+            <h6 class="alt-header">View by Topic</h6>
+            <div class="row no-pad h-feed">
+                <article class="col-md-4 h-entry">
+                    <a class="u-url" href="#">
+                        <img class="u-photo" src="http://placekitten.com/320/179" alt="thumbnail" />
+                        <div class="grid-item-caption">
+                            <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
+                            <span class="p-hearts"><i class="fa fa-heart"></i> 12</span>
+                        </div>
+                        <div class="grid-item-article">
+                            <h1 class="grid-item-article-title">
+                                How solar power can help more than the environment
+                            </h1>
+                            <div class="grid-item-article-description">
+                                Now that many states have deregulated their services, customers are empowered to chvoose power from among a list of suppliers in...
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-4 h-entry">
+                    <a class="u-url" href="#">
+                        <img class="u-photo" src="http://placekitten.com/320/180" alt="thumbnail" />
+                        <div class="grid-item-caption">                
+                            <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
+                            <span class="p-hearts"><i class="fa fa-heart"></i> 27</span>
+                        </div>
+                        <div class="grid-item-article">
+                            <h1 class="grid-item-article-title">
+                                Naughty or nice? Devices that hog the most energy during the holidays
+                            </h1>
+                            <div class="grid-item-article-description">
+                                Now that many states have deregulated their services, customers are empowered to chvoose power from...
+                            </div>
+                        </div>                
+                    </a>
+                </article>
+                <article class="col-md-4 h-entry">
+                    <a class="u-url" href="#">
+                        <img class="u-photo" src="http://placekitten.com/320/181" alt="thumbnail" />
+                        <div class="grid-item-caption">
+                            <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                            <span class="p-hearts"><i class="fa fa-heart"></i> 3</span>
+                        </div>
+                        <div class="grid-item-article">
+                            <h1 class="headline">
+                                Lifestyle changes that can help you save cash 
+                            </h1>
+                            <div class="grid-item-article-description">
+                                Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in...
+                            </div>
+                        </div>                
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
     <hr class="margin">
-    <div class="academy-search">
+    <div class="academy-search container">
         <h2>Search the Energy Academy</h2>
-        <div>
-            <input type="text"> <button type="button">Search <i class="icon fa fa-search"></i></button>
+        <div class="row">
+            <input class="col-md-10" type="text"> <button class="col-md-2" type="button">Search <i class="icon fa fa-search"></i></button>
         </div>
         <h3>Or Browse by Topic <small><a href="/website_articles_by_topic.html">View all topics »</a></small></h3>
-        <ul>
-            <li><h4>Energy 101</h4>
+        <ul class="row">
+            <li class="col-md-2 col-md-offset-1"><h4>Energy 101</h4>
                 <ul>
                     <li><a href="/website_articles_by_topic.html">How It Works</a></li>
                     <li><a href="/website_articles_by_topic.html">Deregulation</a></li>
                     <li><a href="/website_articles_by_topic.html">Energy Choices</a></li>
                 </ul>
             </li>
-            <li><h4>Energy Innovation</h4>
+            <li class="col-md-2"><h4>Energy Innovation</h4>
                 <ul>
                     <li><a href="/website_articles_by_topic.html">Connected Home</a></li>
                     <li><a href="/website_articles_by_topic.html">Electric Vehicles</a></li>
                     <li><a href="/website_articles_by_topic.html">Smart Grid</a></li>
                 </ul>
             </li>
-            <li><h4>Energy Efficiency</h4>
+            <li class="col-md-2"><h4>Energy Efficiency</h4>
                 <ul>
                     <li><a href="/website_articles_by_topic.html">Home Improvement</a></li>
                     <li><a href="/website_articles_by_topic.html">Tax Credits</a></li>
                     <li><a href="/website_articles_by_topic.html">Energy Star</a></li>
                 </ul>
             </li>
-            <li><h4>Energy Tips</h4>
+            <li class="col-md-2"><h4>Energy Tips</h4>
                 <ul>
                     <li><a href="/website_articles_by_topic.html">Savings</a></li>
                     <li><a href="/website_articles_by_topic.html">Mover's Guide</a></li>
                     <li><a href="/website_articles_by_topic.html">Fun Facts</a></li>
                 </ul>
             </li>
-            <li><h4>Renewable Energy</h4>
+            <li class="col-md-2"><h4>Renewable Energy</h4>
                 <ul>
                     <li><a href="/website_articles_by_topic.html">Solar Panels</a></li>
                     <li><a href="/website_articles_by_topic.html">Renewable Credits</a></li>
@@ -130,222 +136,237 @@
                 </ul>
             </li>
         </ul>
-        <section>
-            <div>
+    </div>
+
+    <section class="guides container">
+        <div class="row">
+            <div class="col-md-4 switch">
                 <h5>Switching Guide</h5>
                 <span>icon</span>
                 <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla.</p>
                 <a href="#">Learn More <i class="icon fa fa-arrow-circle-right"></i></a>
             </div>
-            <div>
+            <div class="col-md-4 movers">
                 <h5>Mover's Guide</h5>
                 <span>icon</span>
                 <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla.</p>
                 <a href="#">Learn More <i class="icon fa fa-arrow-circle-right"></i></a>
             </div>
-            <div>
+            <div class="col-md-4 green">
                 <h5>Going Green Guide</h5>
                 <span>icon</span>
                 <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla.</p>
                 <a href="#">Learn More <i class="icon fa fa-arrow-circle-right"></i></a>
             </div>
-        </section>
-        <section>
-            <dl>
-            <dt>11.2¢/kWh</dt>
-            <dd>Electricity Average Retail Price</dd>
+        </div>
+    </section>
+    <section class="stats container">
+        <div class="row">
+            <dl class="col-md-2">
+                <dt>11.2¢/kWh</dt>
+                <dd>Electricity Average Retail Price</dd>
             </dl>
-            <dl>
-            <dt>9.3¢/kWh</dt>
-            <dd>Electricity Average Price on Choose Energy</dd>
+            <dl class="col-md-2">
+                <dt>9.3¢/kWh</dt>
+                <dd>Electricity Average Price on Choose Energy</dd>
             </dl>
-            <dl>
-            <dt>1000 kWh</dt>
-            <dd>Average 2-Bedroom Electricity Usage</dd>
+            <dl class="col-md-2">
+                <dt>1000 kWh</dt>
+                <dd>Average 2-Bedroom Electricity Usage</dd>
             </dl>
-            <dl>
-            <dt>$19</dt>
-            <dd>Average Monthly Savings for Choose Energy Customers</dd>
+            <dl class="col-md-2">
+                <dt>$19</dt>
+                <dd>Average Monthly Savings for Choose Energy Customers</dd>
             </dl>
-            <div>
-                <input type="text" placeholder="Enter your zipcode">
-                <button type="text" class="btn-primary">Get Your Savings Now</button>
-            </div>
-        </section>
-        <section class="featured-article">
-            <img src="http://placekitten.com/1280/350" alt="article image" />
-            <div class="content-container">
-                <h1 class="content-editorial-headline">Featured Article</h1>
-                <p>Thursday, December 31st &nbsp; &nbsp; <i class="fa fa-heart"></i> 27</p>
-                <p>AT&T Stadium is the home of America's Team, the Dallas Cowboys. Nicknamed "Jerry World," this stadium in ARlington Texas is the largest energy consuming stadium in the country--and possibly the world.</p>
+            <div class="col-md-4">
+                <div class="row">
+                    <input class="col-md-12" type="text" placeholder="Enter your zipcode">
+                    <button class="col-md-12" type="text" class="btn-primary">Get Your Savings Now</button>
+                </div>
             </div>
         </div>
-        </section>
-        <section>
-            <div class="popular-articles">
-                <h1>Popular Articles</h1>
-                <h6 class="alt-header">View by Topic</h6>
+    </section>
+    <section class="featured-article container-fluid" style="height:35em; background:url('../images/page_assets/nilsthor.jpg') no-repeat center; background-size:cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="content-editorial-headline">Featured Article</h1>
+                    <p>Thursday, December 31st &nbsp; &nbsp; <i class="fa fa-heart"></i> 27</p>
+                    <p>AT&T Stadium is the home of America's Team, the Dallas Cowboys. Nicknamed "Jerry World," this stadium in ARlington Texas is the largest energy consuming stadium in the country--and possibly the world.</p>
+                </div>
             </div>
-            <ol class="grid-article h-feed">
-                <li class="grid-item h-entry">
-                    <a class="u-url" href="#">
-                        <img class="u-photo" src="http://placekitten.com/320/179" alt="thumbnail" />
-                        <div class="grid-item-caption">
-                            <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                            <span class="p-hearts"><i class="fa fa-heart"></i> 12</span>
-                        </div>
-                        <div class="grid-item-article">
-                            <h1 class="grid-item-article-title">
-                                How solar power can help more than the environment
-                            </h1>
-                            <div class="grid-item-article-description">
-                                Now that many states have deregulated their services, customers are empowered to chvoose power from among a list of suppliers in...
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="grid-item h-entry">
-                    <a class="u-url" href="#">
-                        <img class="u-photo" src="http://placekitten.com/320/180" alt="thumbnail" />
-                        <div class="grid-item-caption">                
-                            <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
-                            <span class="p-hearts"><i class="fa fa-heart"></i> 27</span>
-                        </div>
-                        <div class="grid-item-article">
-                            <h1 class="grid-item-article-title">
-                                Naughty or nice? Devices that hog the most energy during the holidays
-                            </h1>
-                            <div class="grid-item-article-description">
-                                Now that many states have deregulated their services, customers are empowered to chvoose power from...
-                            </div>
-                        </div>                
-                    </a>
-                </li>
-                <li class="grid-item h-entry">
-                    <a class="u-url" href="#">
-                        <img class="u-photo" src="http://placekitten.com/320/181" alt="thumbnail" />
-                        <div class="grid-item-caption">
-                            <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                            <span class="p-hearts"><i class="fa fa-heart"></i> 3</span>
-                        </div>
-                        <div class="grid-item-article">
-                            <h1 class="headline">
-                                Lifestyle changes that can help you save cash 
-                            </h1>
-                            <div class="grid-item-article-description">
-                                Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in...
-                            </div>
-                        </div>                
-                    </a>
-                </li>
-            </ol>
-            <ol class="grid-article h-feed">
-                <li class="grid-item h-entry">
-                    <a class="u-url" href="#">
-                        <img class="u-photo" src="http://placekitten.com/1080/180" alt="thumbnail" />
-                        <div class="grid-item-caption">
-                            <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                            <span class="p-hearts"><i class="fa fa-heart"></i> 12</span>
-                        </div>
-                        <div class="grid-item-article">
-                            <h1 class="grid-item-article-title">
-                                How solar power can help more than the environment
-                            </h1>
-                            <div class="grid-item-article-description">
-                                Now that many states have deregulated their services, customers are empowered to chvoose power from among a list of suppliers in...
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ol>
-        </section>
-        <section>
-            <div class="blog-posts">
-                <h1>From the Blog</h1>
-                <h6 class="alt-header">View all recent posts</h6>
-            </div>
-            <ol class="grid-article h-feed">
-                <li class="grid-item h-entry">
-                    <a class="u-url" href="#">
-                        <img class="u-photo" src="http://placekitten.com/320/179" alt="thumbnail" />
-                        <div class="grid-item-caption">
-                            <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                            <span class="p-hearts"><i class="fa fa-heart"></i> 12</span>
-                        </div>
-                        <div class="grid-item-article">
-                            <h1 class="grid-item-article-title">
-                                How solar power can help more than the environment
-                            </h1>
-                            <div class="grid-item-article-description">
-                                Now that many states have deregulated their services, customers are empowered to chvoose power from among a list of suppliers in...
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="grid-item h-entry">
-                    <a class="u-url" href="#">
-                        <img class="u-photo" src="http://placekitten.com/320/180" alt="thumbnail" />
-                        <div class="grid-item-caption">                
-                            <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
-                            <span class="p-hearts"><i class="fa fa-heart"></i> 27</span>
-                        </div>
-                        <div class="grid-item-article">
-                            <h1 class="grid-item-article-title">
-                                Naughty or nice? Devices that hog the most energy during the holidays
-                            </h1>
-                            <div class="grid-item-article-description">
-                                Now that many states have deregulated their services, customers are empowered to chvoose power from...
-                            </div>
-                        </div>                
-                    </a>
-                </li>
-                <li class="grid-item h-entry">
-                    <a class="u-url" href="#">
-                        <img class="u-photo" src="http://placekitten.com/320/181" alt="thumbnail" />
-                        <div class="grid-item-caption">
-                            <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                            <span class="p-hearts"><i class="fa fa-heart"></i> 3</span>
-                        </div>
-                        <div class="grid-item-article">
-                            <h1 class="headline">
-                                Lifestyle changes that can help you save cash 
-                            </h1>
-                            <div class="grid-item-article-description">
-                                Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in...
-                            </div>
-                        </div>                
-                    </a>
-                </li>
-            </ol>
-            <ol class="grid-article h-feed">
-                <li class="grid-item h-entry">
-                    <a class="u-url" href="#">
-                        <img class="u-photo" src="http://placekitten.com/1080/180" alt="thumbnail" />
-                        <div class="grid-item-caption">
-                            <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                            <span class="p-hearts"><i class="fa fa-heart"></i> 12</span>
-                        </div>
-                        <div class="grid-item-article">
-                            <h1 class="grid-item-article-title">
-                                How solar power can help more than the environment
-                            </h1>
-                            <div class="grid-item-article-description">
-                                Now that many states have deregulated their services, customers are empowered to chvoose power from among a list of suppliers in...
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ol>
-        </section>            
-        <section>
-            <div>
-                Sidebar Goes Here
-            </div>
-        </section>
-        <section>
-            Sign Up for News Updates Goes Here
-        </section>
+        </div>
     </div>
+    </section>
+    <div class="container">
+        <div class="row no-pad">
+            <div class="col-md-10">
+                <section class="row popular-articles">
+                    <h1>Popular Articles</h1>
+                    <h6 class="alt-header">View by Topic</h6>
+                    <div class="row no-pad h-feed">
+                        <article class="col-md-4 h-entry">
+                            <a class="u-url" href="#">
+                                <img class="u-photo" src="http://placekitten.com/320/179" alt="thumbnail" />
+                                <div class="grid-item-caption">
+                                    <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
+                                    <span class="p-hearts"><i class="fa fa-heart"></i> 12</span>
+                                </div>
+                                <div class="grid-item-article">
+                                    <h1 class="grid-item-article-title">
+                                        How solar power can help more than the environment
+                                    </h1>
+                                    <div class="grid-item-article-description">
+                                        Now that many states have deregulated their services, customers are empowered to chvoose power from among a list of suppliers in...
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="col-md-4 h-entry">
+                            <a class="u-url" href="#">
+                                <img class="u-photo" src="http://placekitten.com/320/180" alt="thumbnail" />
+                                <div class="grid-item-caption">                
+                                    <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
+                                    <span class="p-hearts"><i class="fa fa-heart"></i> 27</span>
+                                </div>
+                                <div class="grid-item-article">
+                                    <h1 class="grid-item-article-title">
+                                        Naughty or nice? Devices that hog the most energy during the holidays
+                                    </h1>
+                                    <div class="grid-item-article-description">
+                                        Now that many states have deregulated their services, customers are empowered to chvoose power from...
+                                    </div>
+                                </div>                
+                            </a>
+                        </article>
+                        <article class="col-md-4 h-entry">
+                            <a class="u-url" href="#">
+                                <img class="u-photo" src="http://placekitten.com/320/181" alt="thumbnail" />
+                                <div class="grid-item-caption">
+                                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                                    <span class="p-hearts"><i class="fa fa-heart"></i> 3</span>
+                                </div>
+                                <div class="grid-item-article">
+                                    <h1 class="headline">
+                                        Lifestyle changes that can help you save cash 
+                                    </h1>
+                                    <div class="grid-item-article-description">
+                                        Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in...
+                                    </div>
+                                </div>                
+                            </a>
+                        </article>
+                    </div>
+                    <div class="row h-feed">
+                        <article class="col-md-12 h-entry">
+                            <a class="u-url" href="#">
+                                <img class="u-photo" src="http://placekitten.com/1000/280" alt="thumbnail" />
+                                <div class="grid-item-caption">
+                                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                                    <span class="p-hearts"><i class="fa fa-heart"></i> 3</span>
+                                </div>
+                                <div class="grid-item-article">
+                                    <h1 class="headline">
+                                        Lifestyle changes that can help you save cash 
+                                    </h1>
+                                    <div class="grid-item-article-description">
+                                        Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in...
+                                    </div>
+                                </div>                
+                            </a>
+                        </article>
+                    </div>
+                </section>
+                <section class="blog-posts">
+                    <h1>From the Blog</h1>
+                    <h6 class="alt-header">View all recent posts</h6>
+                    <div class="row no-pad h-feed">
+                        <article class="col-md-4 h-entry">
+                            <a class="u-url" href="#">
+                                <img class="u-photo" src="http://placekitten.com/320/179" alt="thumbnail" />
+                                <div class="grid-item-caption">
+                                    <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
+                                    <span class="p-hearts"><i class="fa fa-heart"></i> 12</span>
+                                </div>
+                                <div class="grid-item-article">
+                                    <h1 class="grid-item-article-title">
+                                        How solar power can help more than the environment
+                                    </h1>
+                                    <div class="grid-item-article-description">
+                                        Now that many states have deregulated their services, customers are empowered to chvoose power from among a list of suppliers in...
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="col-md-4 h-entry">
+                            <a class="u-url" href="#">
+                                <img class="u-photo" src="http://placekitten.com/320/180" alt="thumbnail" />
+                                <div class="grid-item-caption">                
+                                    <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
+                                    <span class="p-hearts"><i class="fa fa-heart"></i> 27</span>
+                                </div>
+                                <div class="grid-item-article">
+                                    <h1 class="grid-item-article-title">
+                                        Naughty or nice? Devices that hog the most energy during the holidays
+                                    </h1>
+                                    <div class="grid-item-article-description">
+                                        Now that many states have deregulated their services, customers are empowered to chvoose power from...
+                                    </div>
+                                </div>                
+                            </a>
+                        </article>
+                        <article class="col-md-4 h-entry">
+                            <a class="u-url" href="#">
+                                <img class="u-photo" src="http://placekitten.com/320/181" alt="thumbnail" />
+                                <div class="grid-item-caption">
+                                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                                    <span class="p-hearts"><i class="fa fa-heart"></i> 3</span>
+                                </div>
+                                <div class="grid-item-article">
+                                    <h1 class="headline">
+                                        Lifestyle changes that can help you save cash 
+                                    </h1>
+                                    <div class="grid-item-article-description">
+                                        Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in...
+                                    </div>
+                                </div>                
+                            </a>
+                        </article>
+                    </div>
+                    <div class="row h-feed">
+                        <article class="col-md-12 h-entry">
+                            <a class="u-url" href="#">
+                                <img class="u-photo" src="http://placekitten.com/1000/280" alt="thumbnail" />
+                                <div class="grid-item-caption">
+                                    <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
+                                    <span class="p-hearts"><i class="fa fa-heart"></i> 3</span>
+                                </div>
+                                <div class="grid-item-article">
+                                    <h1 class="headline">
+                                        Lifestyle changes that can help you save cash 
+                                    </h1>
+                                    <div class="grid-item-article-description">
+                                        Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in...
+                                    </div>
+                                </div>                
+                            </a>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-2">
+                <section>
+                    <div>
+                        <h1>Side menu</h1>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>            
+
+    <section>
+        Sign Up for News Updates Goes Here
+    </section>
 
 <!-- End Page Template Contents -->
 </main>
