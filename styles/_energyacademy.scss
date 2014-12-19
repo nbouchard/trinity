@@ -316,6 +316,28 @@ section {
 		}
 	}
 }
-
-
+.tag {
+	display: inline-block;
+	border: 1px solid $color-gray-ghost;
+	color: $color-gray-ghost;
+	margin: .25em;
+	padding: .25em;
+	width: auto;
+	&:hover {
+		background: $color-blue-curious;
+		color: $color-white-pure;
+		cursor: pointer;
+	}
+}
+.popular-searches {
+	margin-top: 1em;
+	div {
+		display: inline-block;
+		line-height: 2em;
+		color: $color-gray-ghost;
+	}
+	.tag-list-container {
+		display:inline-block;
+	}
+}
 
