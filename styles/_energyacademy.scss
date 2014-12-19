@@ -271,7 +271,51 @@ section {
 		}
 	}
 }
-
+.side-bar {
+	h1 {
+		border-bottom: 1px solid $color-green-shamrock;
+		margin-bottom: .25em;
+	}
+	.archive {
+		ul {
+			list-style: none;
+			padding: 0;
+			li {
+				padding: .25em 0;
+			}
+			a {
+				color: $color-gray-chateau;
+				font-weight: $font-weight-body;
+			}
+		}
+	}
+	dl {
+		list-style: none;
+		padding: 0;
+		display: inline-block;
+		img {
+			display: block;
+			float: left;
+			width: 25%;
+			align: top;
+			vertical-align: top;
+			margin-right: 5%; 
+		}			
+		dt {
+			display: block;
+			float: left;
+		}
+		dd {
+			display: block;
+			float: left;
+		}
+		.article {
+			display:block;
+			float: left;
+			width:70%;
+		}
+	}
+}
 
 
 
