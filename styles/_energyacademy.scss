@@ -16,6 +16,9 @@ section {
 .content-editorial {
 	height:41.5em;
 	min-height: initial;
+	&.heroImage {
+		height:auto;
+	}
 	.content-editorial-container {
 		max-width: 100%;
 		text-align: left;
