@@ -1,10 +1,5 @@
-<div class="heroImage content-editorial content-editorial content-editorial-bg-info" ng-controller="heroImageCtrl">
-	<div ng-repeat="slide in slides | limitTo : 1" active="slide.active">
-		<img ng-src="{{slide.image}}" style="margin:auto;">
-		<div class="hero-title">
-			<div class="content-editorial-container">
-	  			<h1 class="content-editorial-headline">{{slide.title}}</h1>
-	  		</div>
-		</div>
+<div class="heroImage content-editorial content-editorial content-editorial-bg-info">
+	<img src="http://placekitten.com/2480/300" style="margin:auto;">
+	<div class="hero-title"  ng-transclude>
 	</div>
 </div>
