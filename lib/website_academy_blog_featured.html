@@ -31,7 +31,33 @@
 </ce-header>
 <main class="site-main">
 <!-- Start Page Template Contents -->
-
+    <hero-carousel>
+    </hero-carousel>
+    <section class="container popular-articles overlaid">
+        <div class="row">
+            <popular-articles></popular-articles>
+        </div>
+    </section>
+    <hr class="margin">
+    <div class="container">
+        <div class="row no-pad">
+                <div class="col-md-9">
+                    <section class="row popular-articles">
+                        <h1>Popular Articles</h1>
+                        <h6 class="alt-header">View by Topic</h6>    
+                        <popular-articles></popular-articles>
+                        <wide-popular-articles></wide-popular-articles>
+                        <blog-posts></blog-posts>
+                    </section>
+                </div>
+            <side-bar>
+                <side-articles></side-articles> 
+                <side-archive></side-archive>
+                <side-recent-blog></side-recent-blog>
+                <side-tag-cloud></side-tag-cloud>
+            </side-bar>
+        </div>
+    </div>   
 
 
 <!-- End Page Template Contents -->
