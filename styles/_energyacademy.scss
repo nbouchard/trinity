@@ -279,7 +279,7 @@ section {
 		border-bottom: 1px solid $color-green-shamrock;
 		margin-bottom: .25em;
 	}
-	.archive {
+	.archive, .search {
 		ul {
 			list-style: none;
 			padding: 0;
@@ -316,6 +316,17 @@ section {
 			display:block;
 			float: left;
 			width:70%;
+		}
+	}
+	.search {
+		input { 
+			width:85%; 
+		}
+		button {
+			width:15%;
+		}
+		.popular-searches {
+			margin-top:2em;
 		}
 	}
 }
