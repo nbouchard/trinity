@@ -31,7 +31,7 @@ section {
     .carousel-caption {
         display: inline-block;
         height:41.5em;
-        width: 80%;    
+        width: 80%;
         margin:0 auto;
         .carousel-content-container {
             max-width: 40em;
@@ -86,15 +86,15 @@ section {
     margin: 0 auto;
     display: block;
     h1 {
-        font-size: 3em;        
+        font-size: 3em;
         display: inline-block;
-        margin-right:.5em;    
-    } 
+        margin-right:.5em;
+    }
     h6 {
-        font-size: $font-size-huge;        
+        font-size: $font-size-huge;
         display: inline-block;
     }
-    img { 
+    img {
         width:100%;
     }
     article {
@@ -305,8 +305,8 @@ section {
             width: 25%;
             align: top;
             vertical-align: top;
-            margin-right: 5%; 
-        }            
+            margin-right: 5%;
+        }
         dt {
             display: block;
             float: left;
@@ -322,8 +322,8 @@ section {
         }
     }
     .search {
-        input { 
-            width:85%; 
+        input {
+            width:85%;
         }
         button {
             width:15%;
