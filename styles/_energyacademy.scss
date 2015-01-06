@@ -414,12 +414,12 @@ section {
     td {
         padding: 0;
         margin: 0; 
-        width:auto;
-        height:auto;
+        width: auto;
+        height: auto;
         border: 1px solid $color-gray-ghost;
         text-align: center;
       &:first-child {
-        width:auto;
+        width: auto;
         text-align: center;
         font-weight: normal;
       }
@@ -427,18 +427,18 @@ section {
         background: $color-white-smoke;
       }      
       span {
-        padding:0 9px;
+        padding: 0 9px;
         line-height: 2.4em;
       }
     }
     th {
       font-weight: normal;
       line-height: 2em;
-      border:none;
+      border: none;
     }
   }
   .is-active {
-    background:$color-green-cruise;
+    background: $color-green-cruise;
   }  
   .text-muted {
     color: $color-gray-ghost;
@@ -448,5 +448,82 @@ section {
   }
 
 }
+.pagination {
+    li {
+        a {
+            border: 1px solid $color-gray-ghost;
+            margin: 0 .2em;
+            color: $color-gray-chateau;
+            font-weight: normal;
+        }
+        &:first-child {
+            a {
+                border: none;
+                padding: 5px 5px 5px 0;
+                margin-left: 0;
+            }
+        }
+        &:last-child {
+            a {
+                border: none;
+                padding: 5px;
+            }
+        }
+    }
+    .active {
+        a {
+            background: $color-white-smoke;
+        }
+    }
+}
+.breadcrumb {
+    background: none;
+    padding-left: 0;
+
+    li {
+        a {
+            color: $color-gray-chateau;
+            font-weight: $font-weight-body;
+        }
+        &:last-child {
+            a {
+                font-weight: $font-weight-headline;
+            }
+        }
+    }
+}
+.numberation {
+    ul  {
+        list-style: none; 
+        padding: 0;
+
+        li {
+            display: inline-block;
+            width: 1.25em; 
+            text-align: center;
+
+            a {
+                color: $color-gray-chateau;
+                &:hover {
+                    font-size: 1.5em;
+                    color: $color-green-shamrock;
+                    font-weight: $font-weight-headline; 
+                    text-decoration: none;
+                }
+            }
+        } 
+        .active {
+            padding: 0 .5em;
+            width:2em;
+
+            a {
+                font-size: 1.5em;
+                color: $color-gray-charcoal;
+                font-weight: $font-weight-headline;
+            }
+        }
+    }
+}
+
 // Ends temp namespace
 }
