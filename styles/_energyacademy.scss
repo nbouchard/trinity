@@ -354,10 +354,12 @@ section {
     margin: .25em;
     padding: .25em;
     width: auto;
+    font-weight: normal;
     &:hover {
         background: $color-blue-curious;
         color: $color-white-pure;
         cursor: pointer;
+        border: 1px solid $color-blue-curious;
     }
 }
 .popular-searches {
@@ -414,7 +416,7 @@ section {
         margin: 0; 
         width:auto;
         height:auto;
-        border: 1px solid #efefef;
+        border: 1px solid $color-gray-ghost;
         text-align: center;
       &:first-child {
         width:auto;
