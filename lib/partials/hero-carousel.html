@@ -1,0 +1,14 @@
+<div id="heroCarousel" class="content-editorial" ng-controller="heroCarouselCtrl" style="height: {{clientHeight}}px;">
+  <carousel interval="myInterval">
+    <slide ng-repeat="slide in slides" active="slide.active" style="height: {{slide.height}}px; width: 100%; background:#3285b9;">
+      <img ng-src="{{slide.image}}" style="margin:auto;">
+      <div class="carousel-caption">
+        <div class="carousel-content-container">
+          <h1 class="content-editorial-headline">{{slide.title}}</h1>
+          <p>Thursday, December 31st &nbsp; &nbsp; <i class="fa fa-heart"></i> 27</p>
+          <p>AT&T Stadium is the home of America's Team, the Dallas Cowboys. Nicknamed "Jerry World," this stadium in ARlington Texas is the largest energy consuming stadium in the country--and possibly the world.</p>
+        </div>
+      </div>
+    </slide>
+  </carousel>
+</div>

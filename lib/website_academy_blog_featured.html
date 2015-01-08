@@ -29,9 +29,36 @@
         </ul>
     </nav>
 </ce-header>
-<main class="site-main">
+<main class="site-main energy-academy">
 <!-- Start Page Template Contents -->
-
+    <hero-carousel>
+    </hero-carousel>
+    <section class="container popular-articles overlaid">
+        <div class="row">
+            <popular-articles></popular-articles>
+        </div>
+    </section>
+    <hr class="margin">
+    <div class="container">
+        <div class="row no-pad">
+            <div class="col-md-9">
+                <section class="row popular-articles">
+                    <h1>Popular Articles</h1>
+                    <h6 class="alt-header">View by Topic</h6>    
+                    <popular-articles></popular-articles>
+                    <wide-popular-articles></wide-popular-articles>
+                    <blog-posts></blog-posts>
+                </section>
+            </div>
+            <side-bar>
+                <side-search></side-search>
+                <side-calendar></side-calendar>
+                <side-comments></side-comments>
+                <side-archive></side-archive>
+                <side-tag-cloud></side-tag-cloud>
+            </side-bar>
+        </div>
+    </div>   
 
 
 <!-- End Page Template Contents -->
@@ -60,6 +87,12 @@
 </ce-sidenav>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/ce-components/dist/ce-components-v0.0.1.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="js/ceux.js"></script>
+<script src="js/controllers/heroCarouselCtrl.js"></script>
+<script src="js/controllers/heroImageCtrl.js"></script>
+<script src="js/controllers/paginationCtrl.js"></script></body>
+<script src="js/controllers/calendarCtrl.js"></script></body>
+
 </body>
 </html>

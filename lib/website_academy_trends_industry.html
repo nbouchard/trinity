@@ -29,9 +29,27 @@
         </ul>
     </nav>
 </ce-header>
-<main class="site-main">
+<main class="site-main energy-academy">
+<hero-image>
+    <h1>Energy in Restaurants</h1>
+</hero-image>
 <!-- Start Page Template Contents -->
-
+<breadcrumbs></breadcrumbs>
+<section class="container no-top">
+    <div class="row">
+        <article class="blog-post col-md-8">
+            <blog-title>Current Energy Trends in Restaurants</blog-title>
+            <blog-byline></blog-byline>
+        </article>
+        <side-bar>
+            <side-search></side-search>
+            <side-calendar></side-calendar>
+            <side-comments></side-comments>
+            <side-tag-cloud></side-tag-cloud>
+            <side-recent-blog></side-recent-blog>
+        </side-bar>
+    </div>
+</section>
 
 
 <!-- End Page Template Contents -->
@@ -60,6 +78,12 @@
 </ce-sidenav>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/ce-components/dist/ce-components-v0.0.1.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="js/ceux.js"></script>
+<script src="js/controllers/heroCarouselCtrl.js"></script>
+<script src="js/controllers/heroImageCtrl.js"></script>
+<script src="js/controllers/paginationCtrl.js"></script></body>
+<script src="js/controllers/calendarCtrl.js"></script></body>
+
 </body>
 </html>

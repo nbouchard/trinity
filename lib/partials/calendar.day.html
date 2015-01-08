@@ -1,0 +1,19 @@
+<table role="grid" aria-labelledby="{{uniqueId}}-title" aria-activedescendant="{{activeDateId}}">
+  <thead>
+    <tr>
+      <th class="left-pull" ng-click="move(-1)" tabindex="-1"><i class="fa fa-angle-left"></i></th>
+      <th colspan="5"><div id="{{uniqueId}}-title" role="heading" aria-live="assertive" aria-atomic="true" ng-click="toggleMode()" tabindex="-1">{{title}}</div></th>
+      <th class="right-pull" ng-click="move(1)" tabindex="-1"><i class="fa fa-angle-right"></i></th>
+    </tr>
+    <tr>
+      <th ng-repeat="label in labels track by $index"><small aria-label="{{label.full}}">{{label.abbr}}</small></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in rows track by $index">
+      <td ng-repeat="dt in row track by dt.date"  role="gridcell" id="{{dt.uid}}" aria-disabled="{{!!dt.disabled}}">
+        <div ng-class="{'is-active': dt.selected}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1"><span ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}">{{dt.label}}</span></div>
+      </td>
+    </tr>
+  </tbody>
+</table>

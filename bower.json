@@ -3,6 +3,8 @@
     "version": "0.0.6",
     "dependencies": {
         "angular": "1.2.27",
-        "ce-components": "https://github.com/chooseenergy/ChooseComponents.git"
+        "ce-components": "https://github.com/chooseenergy/ChooseComponents.git",
+	    "bootstrap-sass-official": "~3.3.1",
+	    "angular-bootstrap": "~0.12.0"        
     }
 }
