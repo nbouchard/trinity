@@ -2,8 +2,8 @@
 // No-conflict Temp Namespace
 
 section {
-    margin-top:4em;
-    margin-bottom:4em;
+    margin-top:2em;
+    margin-bottom:2em;
     &.no-top {
         margin-top: 0;
     }
@@ -281,7 +281,7 @@ section {
     }
 }
 .side-bar {
-    h1 {
+    h2 {
         border-bottom: 1px solid $color-green-shamrock;
         margin-bottom: .25em;
     }
@@ -298,30 +298,37 @@ section {
             }
         }
     }
-    dl {
-        list-style: none;
-        padding: 0;
-        display: inline-block;
-        img {
-            display: block;
-            float: left;
-            width: 25%;
-            align: top;
-            vertical-align: top;
-            margin-right: 5%;
-        }
-        dt {
-            display: block;
-            float: left;
-        }
-        dd {
-            display: block;
-            float: left;
-        }
-        .article {
-            display:block;
-            float: left;
-            width:70%;
+    a {
+        color:$color-gray-charcoal;
+        font-weight: normal;
+        dl {
+            list-style: none;
+            padding: 0;
+            display: inline-block;
+
+            img {
+                display: block;
+                float: left;
+                width: 25%;
+                align: top;
+                vertical-align: top;
+                margin-right: 5%;
+            }
+            dt {
+                display: block;
+                float: left;
+                line-height: normal;
+            }
+            dd {
+                display: block;
+                float: left;
+                line-height: normal;
+            }
+            .article {
+                display:block;
+                float: left;
+                width:70%;
+            }
         }
     }
     .search {
@@ -345,21 +352,68 @@ section {
 				border-radius:66px;
 			}
 		}
-	}	
+	}
+    .navigation {
+        ul {
+            list-style: none;
+            padding: 0;
+            font-family: $font-family-headline;
+            li {
+                border-bottom: 1px solid $color-gray-ghost;
+                font-size: 1.4em;
+                padding-top: .5em;
+
+                a {
+                    line-height: 2.5em;
+                    color: $color-gray-chateau;
+                    &:hover {
+                        text-decoration: none;
+                        color: $color-orange-sun;
+                    }
+                }
+            }
+            .is-active {
+                a {
+                    color: $color-orange-sun;
+                    &:hover {
+                        color: $color-gray-charcoal;
+                        text-decoration: none;
+                    }
+                }
+                &:before {
+                    content: "\25B6";
+                    font-size:.5em;
+                    padding-right:1em;
+                    color: $color-orange-sun;
+                    line-height:4em; 
+                }
+            }
+        }
+    }	
 }
-.tag {
-    display: inline-block;
-    border: 1px solid $color-gray-ghost;
-    color: $color-gray-ghost;
-    margin: .25em;
-    padding: .25em;
-    width: auto;
-    font-weight: normal;
-    &:hover {
-        background: $color-blue-curious;
-        color: $color-white-pure;
-        cursor: pointer;
-        border: 1px solid $color-blue-curious;
+.tag-list-container {
+    display:inline-block;
+
+    .tag {
+        display: inline-block;
+        border: 1px solid $color-gray-ghost;
+        color: $color-gray-ghost;
+        margin: .25em;
+        padding: .25em;
+        width: auto;
+        font-weight: normal;
+        text-decoration: none;
+
+        &:hover {
+            background: $color-blue-curious;
+            color: $color-white-pure;
+            cursor: pointer;
+            border: 1px solid $color-blue-curious;
+            text-decoration: none;
+        }
+    }
+    a {
+        text-decoration: none;
     }
 }
 .popular-searches {
@@ -368,9 +422,6 @@ section {
         display: inline-block;
         line-height: 2em;
         color: $color-gray-ghost;
-    }
-    .tag-list-container {
-        display:inline-block;
     }
 }
 .datepicker {
@@ -470,7 +521,7 @@ section {
             }
         }
     }
-    .active {
+    .is-active {
         a {
             background: $color-white-smoke;
         }
@@ -512,7 +563,7 @@ section {
                 }
             }
         } 
-        .active {
+        .is-active {
             padding: 0 .5em;
             width:2em;
 
@@ -525,5 +576,87 @@ section {
     }
 }
 
+.blog-post {
+    padding-top: 1em;
+    border-right: 1px solid $color-white-smoke;
+    font-size: 18px;
+    h1 {
+        font-size: 2.4em;
+    }
+    .social {
+        text-align: right;
+    }
+    .byline {
+        border-top: 1px solid $color-green-cruise;
+        border-bottom: 1px solid $color-green-cruise;
+        padding: .5em 0;
+        margin: 2em 0;
+        font-size: .8em;
+        a {
+            color: $color-gray-chateau;
+        }
+        .tags {
+            text-align:right;
+        }
+        figure {
+
+        }
+    }
+    .spotlight-text {
+        font-size: 1.2em;
+        padding: .5em 0;
+    }
+    blockquote {
+        border-left: none;
+        font-size: 1.6em;
+        margin: 0;
+        padding: 2em 0;
+    }
+    figure {
+        margin:2em 0 1em;
+
+        &.full {
+            clear:both;
+            img {
+                width:100%;
+            }
+        }
+        &.half {
+            float:left;
+            width:50%;
+            margin: .5em 1.5em .5em 0;
+            img {
+                width:100%;
+            }
+        }
+        figcaption {
+            padding:.5em 2em;
+            text-align: center;
+            font-style: italic;
+            font-size: .8em;
+        }
+    }
+    .comments-form {
+        textarea {
+            width: 100%;
+            height: 10em;
+            margin-top: 1em;
+        }
+        input {
+            width: 100%;
+            margin-top: 1em;
+        }
+        label {
+            margin-top: 2em;
+            color: $color-gray-chateau;
+            font-weight: normal;
+        }
+        button {
+            margin-top: 2em;
+            float:right;
+        }
+    }
+
+}
 // Ends temp namespace
 }
