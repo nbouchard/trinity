@@ -19,7 +19,7 @@ section {
 .no-pad {
     padding: 0;
 }
-.content-editorial {
+.hero-carousel {
     height:41.5em;
     min-height: initial;
     &.heroImage {
@@ -70,6 +70,16 @@ section {
             right:1em;
         }
     }
+}
+.hero-image-container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 30em;
+    width:100%;
+    img {
+
+    }
     .hero-title {
         position: absolute;
         z-index: 10;
@@ -79,9 +89,16 @@ section {
         max-width: 40em;
         height:100%;
         h1 {
-            height: 300px; /* image's height */
+            height: 7.5em; /* image's height */
             display: table-cell;
             vertical-align: middle;
+            color: $color-white-pure;
+            font-size: 4em;
+            small {
+                display: block;
+                color: $color-white-pure;
+                font-weight: 200;
+            }
         }
     }
 }
