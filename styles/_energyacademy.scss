@@ -71,6 +71,65 @@ section {
         }
     }
 }
+.related-article {
+    article {
+        margin-top:0;
+    }
+    h4 {
+        display: inline-block;
+        margin-right:.5em;
+    }
+    img {
+        width:100%;
+    }
+    .caption {
+        position: relative;
+        background: $color-green-shamrock;
+        color: $color-white-pure;
+        font-weight: 1em;
+        bottom: 0;
+        height:2em;
+        z-index: 10;
+        .hearts {
+            @include box-sizing(border-box);
+            position: absolute;
+            top: 0;
+            right: 0.5em;
+            bottom: 0;
+            padding: 0.5em;
+            padding-left: 40%;
+            text-align: right;
+            font-size: $font-size-smaller;
+        }
+        time {
+            @include box-sizing(border-box);
+            position: absolute;
+            top: 0.5em;
+            left: 0.5em;
+            width: 50%;
+            font-size: $font-size-smaller;
+        }
+    }
+    .article-info {
+        margin-top: 1em;
+        .article-description {
+            font-size: 1.2em;
+        }
+    }
+    .u-url {
+        color: $color-white-lilac;
+        text-decoration: none;
+        font-weight: $font-weight-body;
+
+        &:hover {
+            color: $color-white-pure;
+            text-decoration: none;
+        }
+        .article-info {
+            color: $color-gray-charcoal;
+        }
+    }
+}
 .hero-image-container {
     position: relative;
     display: block;
@@ -114,73 +173,14 @@ section {
         font-size: $font-size-huge;
         display: inline-block;
     }
-    img {
-        width:100%;
-    }
     article {
         margin: 1em auto 3em;
     }
-    .grid-item-caption {
-        position: relative;
-        background: $color-green-shamrock;
-        color: $color-white-pure;
-        font-weight: 1em;
-        bottom: 0;
-        height:2em;
-        z-index: 10;
-
-        .u-url {
-            @include box-sizing(border-box);
-            display: block;
-        }
-        .u-photo {
-            float: left;
-            max-width: 100%;
-            width: 100%;
-        }
-        .p-hearts {
-            @include box-sizing(border-box);
-            position: absolute;
-            top: 0;
-            right: 0.5em;
-            bottom: 0;
-            padding: 0.5em;
-            padding-left: 40%;
-            text-align: right;
-            font-size: $font-size-smaller;
-        }
-        .dt-published {
-            @include box-sizing(border-box);
-            position: absolute;
-            top: 0.5em;
-            left: 0.5em;
-            width: 50%;
-            font-size: $font-size-smaller;
-        }
-    }
-    .grid-item-article-description {
-        font-size: 1.2em;
-    }
-    .grid-item-article {
-        margin-top: 1em;
-    }
-    .h-entry {
-        .u-url {
-            color: $color-white-lilac;
-            text-decoration: none;
-            font-weight: $font-weight-body;
-
-            &:hover {
-                color: $color-white-pure;
-                text-decoration: none;
-            }
-            .grid-item-article {
-                color: $color-gray-charcoal;
-            }
-        }
-    }
     &.overlaid {
         margin-top: -4em;
+    }
+    .article-info {
+        padding: 0;
     }
 }
 
@@ -673,7 +673,27 @@ section {
             float:right;
         }
     }
+    .content-footer {
+        font-size: .8em;
+    }
+}
 
+.graphs {
+    h4 {
+        min-height:2em;
+    }
+    .graph {
+        width:100%;
+        border:1px solid $color-gray-chateau;
+        background: $color-white-smoke;
+        margin-top: .2em;
+
+        &.placeholder {  /** TODO: This should be removed when it's not just a placeholder anymore **/
+        min-height: 15em; 
+        line-height: 15em;
+        text-align: center;
+        }
+    }
 }
 // Ends temp namespace
 }
