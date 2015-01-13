@@ -695,5 +695,14 @@ section {
         }
     }
 }
+.glossary {
+    .glossary-item {
+        border-top:1px solid $color-gray-ghost;
+        padding-bottom: 2em;
+        h3 {
+            margin:1em 0;
+        }
+    }
+}
 // Ends temp namespace
 }
