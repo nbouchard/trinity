@@ -676,6 +676,20 @@ section {
     .content-footer {
         font-size: .8em;
     }
+    .alternative-section {
+        text-align: center;
+        margin-top: 4em;
+
+        h3 {
+            padding:2em;
+        }
+        p {
+            padding-bottom: 1em;
+        }
+        div {
+            border-top: 1px solid $color-white-smoke;
+        }
+    }
 }
 
 .graphs {
