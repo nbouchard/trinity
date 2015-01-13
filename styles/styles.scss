@@ -4,9 +4,7 @@
 @import "base/globals/normalize";
 @import "compass/css3";
 @import "breakpoint";
-// bower:scss
-@import "../lib/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "bootstrap";
 
 // CE Website Base Variables
 @import "base/globals/base";
