@@ -1,0 +1,28 @@
+.breadcrumbs {
+    .nav-list{
+        padding-left: 0;
+
+        .nav-item {
+            &:after {
+                content: "/";
+                padding: 0 0.5em;
+                color: $color-gray-ghost;
+            }
+            .nav-link {
+                color: $color-gray-chateau;
+                font-weight: $font-weight-body;
+            }
+            &:last-child {
+                .nav-link {
+                    font-weight: $font-weight-headline;
+                }
+                &:after {
+                    content: "";
+                }
+            }
+        }
+        > .nav-item {
+            display: inline-block;
+        }
+    }
+}
