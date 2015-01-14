@@ -348,3 +348,26 @@
         }
     }
 }
+
+
+
+.panes {
+    @include display-flex;
+    @include flex-direction(row);
+    margin: 0;
+    padding: 0;
+
+    .pane {
+        @include box-sizing(border-box);
+        @include flex(1 1 10em);
+        padding: 0 1em;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
