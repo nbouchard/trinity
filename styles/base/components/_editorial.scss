@@ -10,6 +10,11 @@
         padding: 5em 0;
         max-width: $site-max-width;
         width: 100%;
+
+        @include breakpoint($mq-under-sitemaxwidth) {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
     }
     .content-editorial-headline {
         color: $color-white-pure;
