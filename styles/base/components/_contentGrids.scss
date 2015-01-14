@@ -11,13 +11,17 @@
         padding: 0;
         list-style: none;
 
-        .u-photo {
+        .img-wrapper {
             @include box-sizing(border-box);
             float: left;
             margin: 0;
-            padding: 0 0.5em 0 0;
-            max-width: 25%;
+            padding: 0;
             width: 100%;
+            max-width: 25%;
+
+            .u-photo {
+                max-width: 100%;
+            }
         }
         .p-name {
             @include box-sizing(border-box);
@@ -46,80 +50,14 @@
             width: 100%;
             font-size: $font-size-smaller;
         }
-    }
-
-    &.slats-compact {
-        .h-entry {
-            .u-url {
-                @include box-sizing(border-box);
-                display: inline-block;
-                clear: both;
+        .u-url {
+            &:hover,
+            &:active,
+            &:focus {
+                .img-overlay {
+                    display: block;
+                }
             }
-
-            .u-photo {
-                max-width: 40%;
-                width: 100%;
-            }
-            .p-name {
-                max-width: 59%;
-                font-size: $font-size-normal;
-            }
-            .p-summary {
-                display: none;
-            }
-            .dt-published {
-                max-width: 59%;
-            }
-        }
-    }
-}
-// Structural
-.slats {
-    clear: both;
-    margin: 0;
-    padding: 0;
-
-    .h-entry {
-        float: left;
-        clear: both;
-        margin: 0 0 1em 0;
-        padding: 0;
-        list-style: none;
-
-        .u-photo {
-            @include box-sizing(border-box);
-            float: left;
-            margin: 0;
-            padding: 0 0.5em 0 0;
-            max-width: 25%;
-            width: 100%;
-        }
-        .p-name {
-            @include box-sizing(border-box);
-            float: right;
-            margin: 0.25em 0 0 0;
-            padding: 0;
-            max-width: 74%;
-            width: 100%;
-            font-size: $font-size-larger;
-        }
-        .p-summary {
-            @include box-sizing(border-box);
-            float: right;
-            margin: 0;
-            padding: 0;
-            max-width: 74%;
-            width: 100%;
-            font-size: $font-size-normal;
-        }
-        .dt-published {
-            @include box-sizing(border-box);
-            float: right;
-            margin: 0;
-            padding: 0;
-            max-width: 74%;
-            width: 100%;
-            font-size: $font-size-smaller;
         }
     }
 
@@ -131,9 +69,13 @@
                 clear: both;
             }
 
-            .u-photo {
-                max-width: 40%;
+            .img-wrapper {
                 width: 100%;
+                max-width: 40%;
+
+                .u-photo {
+                    max-width: 100%;
+                }
             }
             .p-name {
                 max-width: 59%;
@@ -265,6 +207,18 @@
     @include flex-wrap(wrap);
     margin: 0;
     padding: 0;
+
+    .h-entry {
+        .u-url {
+            &:hover,
+            &:active,
+            &:focus {
+                .img-overlay {
+                    display: block;
+                }
+            }
+        }
+    }
 
     .grid-item {
         @include box-sizing(border-box);
