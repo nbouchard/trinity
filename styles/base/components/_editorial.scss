@@ -246,6 +246,77 @@
         }
     }
 }
+
+.content-editorial-tabs {
+    .tab-header {
+        font-size: $font-size-huge;
+
+        .nav-list {
+            @include box-sizing(border-box);
+            @include display-flex;
+            @include flex-direction(row);
+            margin: 0.5em 0;
+
+            @include breakpoint($mq-under-sitemaxwidth) {
+                @include flex-wrap(wrap);
+            }
+
+            .nav-item {
+                @include box-sizing(border-box);
+                @include flex(1 1 10em);
+                text-align: center;
+
+                .nav-link {
+                    font-weight: normal;
+                    color: $color-gray-chateau;
+
+                    &:hover,
+                    &:focus,
+                    &:active,
+                    &.is-active {
+                        text-decoration: none;
+
+                        .nav-text {
+                            padding-bottom: 0.1em;
+                            border-bottom: 0.1em solid $color-orange-sun;
+                        }
+                    }
+                    .icon {
+                        padding-right: 0.25em;
+                    }
+                }
+            }
+        }
+    }
+    .tab-body {
+        padding: 1em 0;
+
+        .u-url {
+            .p-name {
+                color: $color-gray-charcoal;
+            }
+            .p-summary {
+                color: $color-gray-chateau;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                .img-overlay {
+                    display: block;
+                }
+                .p-name {
+                    color: $color-gray-charcoal;
+                }
+                .p-summary {
+                    color: $color-gray-chateau;
+                }
+            }
+        }
+    }
+
+}
+
 .img-wrapper {
     @include box-sizing(border-box);
     width: 100%;
