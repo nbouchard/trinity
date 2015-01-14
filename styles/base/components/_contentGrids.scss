@@ -269,43 +269,20 @@
     .grid-item {
         @include box-sizing(border-box);
         @include flex(1 1 10em);
-        margin: 0;
+        margin: 0 0.5em 0 0.5em;
         padding: 0;
         list-style: none;
 
         img {
+            width: 100%;
             max-width: 100%;
         }
 
-        .u-url {
-            @include box-sizing(border-box);
-            position: relative;
-            display: block;
-        }
-        .u-photo {
-            float: left;
-            max-width: 100%;
-            width: 100%;
-        }
         .p-name {
-            @include box-sizing(border-box);
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            padding: 0.5em;
-            padding-right: 40%;
-            font-size: $font-size-smaller;
+            padding: 0.5em 0;
         }
-        .dt-published {
-            @include box-sizing(border-box);
-            position: absolute;
-            top: 0.5em;
-            right: 0.5em;
-            width: 35%;
-            text-align: right;
-            font-size: $font-size-smaller;
+        .p-summary {
+            padding: 0 0 0.5em 0;
         }
     }
 
@@ -374,21 +351,18 @@
         }
     }
 }
+
 .grid {
     .h-entry {
         .u-url {
-            color: $color-white-lilac;
             text-decoration: none;
-            font-weight: $font-weight-body;
 
             &:hover {
-                color: $color-white-pure;
                 text-decoration: none;
             }
         }
     }
 }
-
 .grid-article {
     .h-entry {
         .u-url {
