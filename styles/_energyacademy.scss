@@ -15,6 +15,17 @@ section {
     padding-left: 15px;
     padding-right: 15px;
     float: left;
+    @media screen and (max-width: $screen-sm-max) {
+        width:50%;
+        margin-top: 1em;
+        &.full {
+            width:100%;
+        }
+    }
+    @media screen and (max-width: $screen-xs-max) {
+        width:100%;
+        margin-top: 2em;
+    }
 }
 .no-pad {
     padding: 0;
@@ -22,6 +33,12 @@ section {
 .hero-carousel {
     height:41.5em;
     min-height: initial;
+    @media screen and (max-width: $screen-sm-max) {
+        margin-bottom: 4em;
+    }
+    h1 {
+        font-size:4em;
+    }
     &.heroImage {
         height:auto;
     }
@@ -60,6 +77,11 @@ section {
                 border:.05em solid $color-white-pure;
                 background: rgba(255,255,255,.4);
             }
+            @media screen and (max-width: $screen-sm-max) {
+                bottom:70px;
+                top:auto;
+            }
+
         }
         .left {
             left:1em;
@@ -145,6 +167,8 @@ section {
     overflow: hidden;
     height: 30em;
     width:100%;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+
     img {
 
     }
@@ -168,19 +192,45 @@ section {
                 font-weight: 200;
             }
         }
+        .numberation {            
+            li {
+                padding: 0;
+                width: auto;
+            
+                a {
+                    width:auto;
+                    font-weight: 200;
+                    font-size: .6em;
+                    color: $color-white-pure;
+                    &:hover {
+                        color: $color-green-shamrock;
+                    }
+
+                }
+            }            
+            .is-active {
+                a {
+                    color: $color-green-shamrock;
+                    font-size: .7em;
+                }
+            }
+        }
     }
 }
 .popular-articles, .blog-posts {
     margin: 0 auto;
     display: block;
-    h1 {
+    h2 {
         font-size: 3em;
         display: inline-block;
         margin-right:.5em;
-    }
-    h6 {
-        font-size: $font-size-huge;
-        display: inline-block;
+        small {
+            a {
+                display: inline-block;
+                font-weight: 200;
+                color: $color-gray-chateau;
+            }
+        }
     }
     article {
         margin: 1em auto 3em;
@@ -195,13 +245,18 @@ section {
 
 .featured-article {
     background-color: $color-blue-curious;
-    margin:4em 0;
     height:35em;
     text-align: left;
-    color:$color-white-pure;
     padding: 2em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    h1 {
+        font-size: 4em;
+    }
     article {
         margin-top:10em;
+    }
+    a {
+        color:$color-white-pure;
     }
 }
 .guides {
@@ -268,6 +323,8 @@ section {
     }
 }
 .stats {
+    margin-top: 5em;
+    margin-bottom: 5em;
     max-width: 80em;
     font-size: 1.2em;
     dl {
@@ -280,21 +337,27 @@ section {
             }
         }
     }
-    input {
-        width:80%;
-        margin: 10%;
-    }
     button {
-        width: 80%;
-        margin:1em 10% 10% 10%;
+        margin-top: 1em;
+    }
+    @media screen and (max-width: $screen-sm-max) {
+        input {
+            width: 80%;
+            margin: 0 10%;
+        }
+        button {
+            width: 80%;
+            margin: 1em 10% 10% 10%;
+        }
     }
 }
 .academy-search {
-    h1 {
-        margin:1.5em 0 1em;
+
+    h2 {
+        margin: 1.5em 0;
     }
-    input {
-        width:100%;
+    .popular-searches {
+        margin-bottom: 4em;
     }
     ul {
         list-style: none;
@@ -303,6 +366,11 @@ section {
             color: $color-gray-chateau;
             font-weight: $font-weight-body;
             font-size: $font-size-larger;
+        }
+    }
+    button {
+        a {
+            color: $color-white-pure;
         }
     }
 }
@@ -358,8 +426,11 @@ section {
         }
     }
     .search {
+        a {
+
+        }
         input {
-            width:85%;
+            width:83%;
         }
         button {
             width:15%;
