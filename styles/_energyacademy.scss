@@ -167,6 +167,8 @@ section {
     overflow: hidden;
     height: 30em;
     width:100%;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+
     img {
 
     }
@@ -190,19 +192,45 @@ section {
                 font-weight: 200;
             }
         }
+        .numberation {            
+            li {
+                padding: 0;
+                width: auto;
+            
+                a {
+                    width:auto;
+                    font-weight: 200;
+                    font-size: .6em;
+                    color: $color-white-pure;
+                    &:hover {
+                        color: $color-green-shamrock;
+                    }
+
+                }
+            }            
+            .is-active {
+                a {
+                    color: $color-green-shamrock;
+                    font-size: .7em;
+                }
+            }
+        }
     }
 }
 .popular-articles, .blog-posts {
     margin: 0 auto;
     display: block;
-    h1 {
+    h2 {
         font-size: 3em;
         display: inline-block;
         margin-right:.5em;
-    }
-    h6 {
-        font-size: $font-size-huge;
-        display: inline-block;
+        small {
+            a {
+                display: inline-block;
+                font-weight: 200;
+                color: $color-gray-chateau;
+            }
+        }
     }
     article {
         margin: 1em auto 3em;
