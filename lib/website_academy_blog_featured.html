@@ -18,10 +18,10 @@
     <nav class="nav">
         <ul class="nav-list">
             <li class="nav-item nav-hybrid">
-                <a class="nav-link" href="/website_homepage_residential.html">For Home</a>
+                <a class="nav-link is-active" href="website_homepage_residential.html">For Home</a>
             </li>
             <li class="nav-item nav-hybrid">
-                <a class="nav-link is-active" href="/website_homepage_business.html">For Business</a>
+                <a class="nav-link" href="website_homepage_business.html">For Business</a>
             </li>
             <li class="nav-item">
                 <ce-sidenav-opener></ce-sidenav-opener>
@@ -43,14 +43,17 @@
         <div class="row no-pad">
             <div class="col-md-9">
                 <section class="row popular-articles">
-                    <h1>Popular Articles</h1>
-                    <h6 class="alt-header">View by Topic</h6>    
+                    <h2>
+                        Recent Posts
+                        <small class="alt-header"><a href="website_academy_blog_by_topic.html">Filter by Topic</a></small>
+                    </h2>    
                     <popular-articles></popular-articles>
                     <wide-popular-articles></wide-popular-articles>
-                    <blog-posts></blog-posts>
+                    <popular-articles></popular-articles>
+                    <wide-popular-articles></wide-popular-articles>                    
                 </section>
             </div>
-            <side-bar>
+            <side-bar class="col-md-3">
                 <side-search></side-search>
                 <side-calendar></side-calendar>
                 <side-comments></side-comments>

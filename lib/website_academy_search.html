@@ -18,10 +18,10 @@
     <nav class="nav">
         <ul class="nav-list">
             <li class="nav-item nav-hybrid">
-                <a class="nav-link" href="/website_homepage_residential.html">For Home</a>
+                <a class="nav-link is-active" href="website_homepage_residential.html">For Home</a>
             </li>
             <li class="nav-item nav-hybrid">
-                <a class="nav-link is-active" href="/website_homepage_business.html">For Business</a>
+                <a class="nav-link" href="website_homepage_business.html">For Business</a>
             </li>
             <li class="nav-item">
                 <ce-sidenav-opener></ce-sidenav-opener>
@@ -31,7 +31,29 @@
 </ce-header>
 <main class="site-main energy-academy">
 <!-- Start Page Template Contents -->
-
+    <search></search>
+    <hr class="margin">
+    <div class="container">
+        <div class="row no-pad">
+                <div class="col-md-9">
+                    <section class="row popular-articles">
+                        <h2>Popular Articles
+                        <small class="alt-header">View by Topic</small>
+                        </h2>    
+                        <popular-articles></popular-articles>
+                        <wide-popular-articles></wide-popular-articles>
+                        <popular-articles></popular-articles>
+                        <wide-popular-articles></wide-popular-articles>
+                    </section>
+                </div>
+            <side-bar class="col-md-3"> 
+                <side-calendar></side-calendar>
+                <side-comments></side-comments>
+                <side-archive></side-archive>
+                <side-tag-cloud></side-tag-cloud>
+            </side-bar>
+        </div>
+    </div> 
 
 
 <!-- End Page Template Contents -->
