@@ -4,9 +4,7 @@
 @import "base/globals/normalize";
 @import "compass/css3";
 @import "breakpoint";
-// bower:scss
-@import "../lib/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "bootstrap";
 
 // CE Website Base Variables
 @import "base/globals/base";
@@ -47,8 +45,9 @@
 // CE Sidenav
 @import "base/components/sidenav";
 
-// CE Paginator
+// CE Navigational Components
 @import "base/components/paginator";
+@import "base/components/breadcrumbs";
 
 // CE Content Grids
 @import "base/components/contentGrids";
@@ -61,6 +60,7 @@
 
 // CE Content Experience Elements
 @import "base/components/editorial";
+@import "base/components/testimonials";
 
 // CE Footer
 @import "base/components/footer";

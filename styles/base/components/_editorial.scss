@@ -10,6 +10,11 @@
         padding: 5em 0;
         max-width: $site-max-width;
         width: 100%;
+
+        @include breakpoint($mq-under-sitemaxwidth) {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
     }
     .content-editorial-headline {
         color: $color-white-pure;
@@ -132,8 +137,42 @@
             max-width: ($site-max-width / 1.4);
         }
     }
+    &.content-editorial-noheight {
+        min-height: 1em;
+    }
     &.content-editorial-short {
         min-height: 20em;
+    }
+    &.content-editorial-translucent {
+        padding: 5em 0;
+        color: $color-gray-charcoal;
+
+        .u-url {
+            color: $color-gray-charcoal;
+
+            .p-summary {
+                font-weight: $font-weight-body;
+            }
+        }
+
+        .content-editorial-container {
+            background: rgba(255,255,255,0.7);
+            color: $color-gray-charcoal;
+            padding: 1em;
+            max-width: ($site-max-width + 2em);
+        }
+        .content-editorial-headline {
+            color: $color-gray-charcoal;
+        }
+        .content-editorial-subhead {
+            color: $color-gray-charcoal;
+        }
+        .content-editorial-cta {
+            color: $color-gray-charcoal;
+        }
+        .content-editorial-note {
+            color: $color-gray-chateau;
+        }
     }
     &.content-editorial-bg-primary {
         background: $color-green-shamrock;
@@ -204,6 +243,107 @@
         .content-editorial-headline {
             margin-top: 1em;
             font-size: 6.0em;
+        }
+    }
+}
+
+.content-editorial-tabs {
+    .tab-header {
+        font-size: $font-size-huge;
+
+        .nav-list {
+            @include box-sizing(border-box);
+            @include display-flex;
+            @include flex-direction(row);
+            margin: 0.5em 0;
+
+            @include breakpoint($mq-under-sitemaxwidth) {
+                @include flex-wrap(wrap);
+            }
+
+            .nav-item {
+                @include box-sizing(border-box);
+                @include flex(1 1 10em);
+                text-align: center;
+
+                .nav-link {
+                    font-weight: normal;
+                    color: $color-gray-chateau;
+
+                    &:hover,
+                    &:focus,
+                    &:active,
+                    &.is-active {
+                        text-decoration: none;
+
+                        .nav-text {
+                            padding-bottom: 0.1em;
+                            border-bottom: 0.1em solid $color-orange-sun;
+                        }
+                    }
+                    .icon {
+                        padding-right: 0.25em;
+                    }
+                }
+            }
+        }
+    }
+    .tab-body {
+        padding: 1em 0;
+
+        .u-url {
+            .p-name {
+                color: $color-gray-charcoal;
+            }
+            .p-summary {
+                color: $color-gray-chateau;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                .img-overlay {
+                    display: block;
+                }
+                .p-name {
+                    color: $color-gray-charcoal;
+                }
+                .p-summary {
+                    color: $color-gray-chateau;
+                }
+            }
+        }
+    }
+
+}
+
+.img-wrapper {
+    @include box-sizing(border-box);
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    .img-overlay {
+        @include box-sizing(border-box);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.6);
+        color: $color-white-pure;
+        display: none;
+        text-align: center;
+
+        .img-overlay-text {
+            @include translateY(-50%);
+            position: relative;
+            top: 50%;
+            font-size: $font-size-larger;
         }
     }
 }

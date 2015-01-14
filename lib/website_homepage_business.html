@@ -18,10 +18,10 @@
     <nav class="nav">
         <ul class="nav-list">
             <li class="nav-item nav-hybrid">
-                <a class="nav-link" href="/website_homepage_residential.html">For Home</a>
+                <a class="nav-link is-active" href="website_homepage_residential.html">For Home</a>
             </li>
             <li class="nav-item nav-hybrid">
-                <a class="nav-link is-active" href="/website_homepage_business.html">For Business</a>
+                <a class="nav-link" href="website_homepage_business.html">For Business</a>
             </li>
             <li class="nav-item">
                 <ce-sidenav-opener></ce-sidenav-opener>
@@ -35,9 +35,12 @@
     <div class="content-editorial content-editorial-bigtalk content-editorial-bg-light">
         <div class="content-editorial-container">
             <h1 class="content-editorial-headline">Small Business</h1>
-            <h2 class="content-editorial-subhead">Big Energy Savings</h2>
+            <h2 class="content-editorial-subhead">Big energy savings</h2>
             <div class="content-editorial-cta">
-                <input class="input-extrawide" type="text" placeholder="Type your address (i.e. 'Plano, TX 77070')"> <button class="btn-primary" type="button">Find Your Energy</button>
+                <p>
+                    <input class="input-superwide" type="text" placeholder="Type your zipcode (i.e. 77070, 60622, 94107)"> <button class="btn-primary" type="button">Find Your Energy</button>
+                </p>
+                <small class="content-editorial-note">Large commercial business with an energy bill over $2,000 monthly? <a href="#">Request a Quote</a></small>
             </div>
         </div>
     </div>
@@ -48,11 +51,17 @@
     </div>
     <div class="content-editorial content-editorial-bg-dark">
         <div class="content-editorial-container">
-            <h2 class="content-editorial-headline">We help you find the best energy plan at the best price</h2>
+            <h2 class="content-editorial-headline">Find the best energy plan for your business at the best price</h2>
             <div class="content-editorial-cta">
-                <div class="icon-row">Electricity Natural Gas Solar Furnace Oil</div>
                 <p>Choose Energy has been helping customers save on energy since 2005. And we have one of the largest selections of providers in North America. Review the top offers from our preferred providers and compare them with what you're currently spending. Then pick the best deal and start saving!</p>
-                <button type="button" class="btn-primary">Learn More</button>
+                <div class="icon-row">
+                    <ul>
+                        <li>Electricity</li>
+                        <li>Natural Gas</li>
+                        <li>Solar</li>
+                        <li>Furnace Oil</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -99,19 +108,95 @@
             <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
         </div>
     </div>
-    <div class="content-editorial content-editorial-bg-dark">
+    <div class="content-editorial content-editorial-translucent content-editorial-bg-bright">
         <div class="content-editorial-container">
             <h2 class="content-editorial-headline">Energy Academy</h2>
-            <div class="content-editorial-cta">
-                <p>Energy academy carousel goes here.</p>
+            <div class="content-editorial-tabs">
+                <div class="tab-header">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a class="nav-link is-active" href="#"><i class="icon fa fa-lightbulb-o"></i><span class="nav-text">Deregulation</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="icon fa fa-truck"></i><span class="nav-text">Switching Guide</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="icon fa fa-plug"></i><span class="nav-text">Energy Efficiency</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="icon fa fa-leaf"></i><span class="nav-text">Renewable Energy</span></a></li>
+                    </ul>
+                </div>
+                <div class="tab-body">
+                    <ul class="grid grid-basic h-feed">
+                        <li class="grid-item h-entry">
+                            <a class="u-url" href="#">
+                                <div class="img-wrapper">
+                                    <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
+                                    <div class="img-overlay">
+                                        <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
+                                    </div>
+                                </div>
+                                <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
+                                <p class="p-summary">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                            </a>
+                        </li>
+                        <li class="grid-item h-entry">
+                            <a class="u-url" href="#">
+                                <div class="img-wrapper">
+                                    <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
+                                    <div class="img-overlay">
+                                        <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
+                                    </div>
+                                </div>
+                                <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
+                                <p class="p-summary">Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                            </a>
+                        </li>
+                        <li class="grid-item h-entry">
+                            <a class="u-url" href="#">
+                                <div class="img-wrapper">
+                                    <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
+                                    <div class="img-overlay">
+                                        <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
+                                    </div>
+                                </div>
+                                <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                                <p class="p-summary">Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div class="content-editorial content-editorial-bg-light">
-        <div class="content-editorial-container">
+    <div class="content-editorial content-editorial-noheight content-editorial-bg-light">
+        <div class="content-editorial-container testimonials-container">
             <h4 class="content-editorial-headline">We chose our own energy and it made all the difference</h4>
-            <div class="content-editorial-cta">
-                <p>Testimonials go here.</p>
+            <div class="testimonials">
+                <figure class="testimonial">
+                    <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                    <figcaption class="testimonial-person">Person McPerson</figcaption>
+                    <img class="testimonial-photo" src="images/testimonials/person01.png" alt="Person McPerson">
+                </figure>
+                <figure class="testimonial">
+                    <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                    <figcaption class="testimonial-person">Person McPerson</figcaption>
+                    <img class="testimonial-photo" src="images/testimonials/person02.png" alt="Person McPerson">
+                </figure>
+                <figure class="testimonial">
+                    <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                    <figcaption class="testimonial-person">Person McPerson</figcaption>
+                    <img class="testimonial-photo" src="images/testimonials/person03.png" alt="Person McPerson">
+                </figure>
+                <figure class="testimonial">
+                    <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                    <figcaption class="testimonial-person">Person McPerson</figcaption>
+                    <img class="testimonial-photo" src="images/testimonials/person04.png" alt="Person McPerson">
+                </figure>
+                <figure class="testimonial">
+                    <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                    <figcaption class="testimonial-person">Person McPerson</figcaption>
+                    <img class="testimonial-photo" src="images/testimonials/person05.png" alt="Person McPerson">
+                </figure>
+                <figure class="testimonial">
+                    <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                    <figcaption class="testimonial-person">Person McPerson</figcaption>
+                    <img class="testimonial-photo" src="images/testimonials/person06.png" alt="Person McPerson">
+                </figure>
             </div>
         </div>
     </div>
