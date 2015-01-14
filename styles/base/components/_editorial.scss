@@ -132,6 +132,9 @@
             max-width: ($site-max-width / 1.4);
         }
     }
+    &.content-editorial-noheight {
+        min-height: 1em;
+    }
     &.content-editorial-short {
         min-height: 20em;
     }
