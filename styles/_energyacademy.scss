@@ -112,8 +112,17 @@ section {
     }
     .article-info {
         margin-top: 1em;
+        .article-title {
+            font-size: 1.8em;
+        }
         .article-description {
             font-size: 1.2em;
+        }
+        .read-more {
+            margin-top: 3em;
+            color: $color-green-shamrock;
+            font-size: 1.2em;
+            font-weight: bold;
         }
     }
     .u-url {
