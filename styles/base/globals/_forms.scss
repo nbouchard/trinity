@@ -89,6 +89,10 @@ hr {
     }
 }
 input {
+    &.input-superwide {
+        width: 100%;
+        max-width: 24em;
+    }
     &.input-extrawide {
         width: 100%;
         max-width: 16em;
