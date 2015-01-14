@@ -138,6 +138,37 @@
     &.content-editorial-short {
         min-height: 20em;
     }
+    &.content-editorial-translucent {
+        padding-top: 5em;
+        color: $color-gray-charcoal;
+
+        .u-url {
+            color: $color-gray-charcoal;
+
+            .p-summary {
+                font-weight: $font-weight-body;
+            }
+        }
+
+        .content-editorial-container {
+            background: rgba(255,255,255,0.7);
+            color: $color-gray-charcoal;
+            padding: 1em;
+            max-width: ($site-max-width + 2em);
+        }
+        .content-editorial-headline {
+            color: $color-gray-charcoal;
+        }
+        .content-editorial-subhead {
+            color: $color-gray-charcoal;
+        }
+        .content-editorial-cta {
+            color: $color-gray-charcoal;
+        }
+        .content-editorial-note {
+            color: $color-gray-chateau;
+        }
+    }
     &.content-editorial-bg-primary {
         background: $color-green-shamrock;
     }
