@@ -15,6 +15,17 @@ section {
     padding-left: 15px;
     padding-right: 15px;
     float: left;
+    @media screen and (max-width: $screen-sm-max) {
+        width:50%;
+        margin-top: 1em;
+        &.full {
+            width:100%;
+        }
+    }
+    @media screen and (max-width: $screen-xs-max) {
+        width:100%;
+        margin-top: 2em;
+    }
 }
 .no-pad {
     padding: 0;
