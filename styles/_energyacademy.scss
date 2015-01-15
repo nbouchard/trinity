@@ -78,8 +78,7 @@ section {
                 background: rgba(255,255,255,.4);
             }
             @media screen and (max-width: $screen-sm-max) {
-                bottom:70px;
-                top:auto;
+                display: none;
             }
 
         }
@@ -93,9 +92,29 @@ section {
         }
     }
 }
+.colorful {
+    article {
+        &:nth-child(3n+0) {
+            .caption {
+                background: $color-blue-curious;
+            }
+        }
+        &:nth-child(3n+1) {
+            .caption {
+                background: $color-orange-sun;
+            }
+        }
+        &:nth-child(3n+2) {
+            .caption {
+                background: $color-green-shamrock;
+            }
+        }
+    }
+}
 .related-article {
     article {
         margin-top:0;
+
     }
     h4 {
         display: inline-block;
@@ -106,12 +125,14 @@ section {
     }
     .caption {
         position: relative;
-        background: $color-green-shamrock;
+        background: $color-gray-chateau;
         color: $color-white-pure;
         font-weight: 1em;
         bottom: 0;
         height:2em;
         z-index: 10;
+       
+
         .hearts {
             @include box-sizing(border-box);
             position: absolute;
