@@ -828,5 +828,57 @@ section {
         }
     }
 }
+.social {
+    float:right;
+    span {
+        display: inline-block;
+        color: #fff;
+        width:30px;
+        height:30px;
+        line-height: 30px;
+        text-align: center;
+        overflow: hidden;
+    }
+    .hearts {
+        color: $color-gray-chateau;
+        width: auto;
+        font-size: .9em;
+    }
+    .email {
+        background: $color-green-shamrock;
+        font-size: .9em;
+        line-height: 30px;
+        &:hover {
+            color: $color-green-shamrock;
+            background: $color-white-pure;
+        }
+    }
+    .twitter {
+        background: #55acee;
+        font-size: 1.2em;
+        line-height: 30px;
+        &:hover {
+            color: #55acee;
+            background: $color-white-pure;
+        }
+    }
+    .facebook {
+        background: #3A5778;
+        font-size: 1.1em;
+        line-height: 30px;
+        &:hover {
+            color: #3A5778;
+            background: $color-white-pure;
+        }
+    }
+}
 // Ends temp namespace
 }
+
+
+
+
+
+
+
+
