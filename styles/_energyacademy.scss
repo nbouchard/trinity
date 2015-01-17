@@ -460,17 +460,6 @@ section {
             margin-top:2em;
         }
     }	
-    .comments {
-		a {
-			font-weight: normal;
-			color: inherit;
-		}
-		dl { 
-			img {
-				border-radius:66px;
-			}
-		}
-	}
     .navigation {
         ul {
             list-style: none;
@@ -847,7 +836,6 @@ section {
     .email {
         background: $color-green-shamrock;
         font-size: .9em;
-        line-height: 30px;
         &:hover {
             color: $color-green-shamrock;
             background: $color-white-pure;
@@ -856,7 +844,6 @@ section {
     .twitter {
         background: #55acee;
         font-size: 1.2em;
-        line-height: 30px;
         &:hover {
             color: #55acee;
             background: $color-white-pure;
@@ -865,10 +852,74 @@ section {
     .facebook {
         background: #3A5778;
         font-size: 1.1em;
-        line-height: 30px;
         &:hover {
             color: #3A5778;
             background: $color-white-pure;
+        }
+    }
+}
+.comments {
+    a {
+        font-weight: normal;
+        color: inherit;
+    }
+    article { 
+        float: left;
+        margin: 1em 0;
+
+        img {
+            float:left;
+            border-radius: 66px;
+            margin: 0 1em .5em 0;
+        }
+        header {
+            float: left;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .date {
+            display: block;
+            float: left;
+            color: $color-gray-ghost;
+        }
+        time {
+            display: block;
+            float: left;
+            color: $color-gray-ghost;
+        }
+        .title {
+            display: block;
+            float: left;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        p {
+            display: block;
+            float: left;
+            border: 1px solid $color-white-lilac;
+            padding: .5em;
+        }
+    }
+    &.full {
+        article {
+            border-top: 1px solid $color-white-lilac;
+            padding-top: 2em;
+            img {
+                margin: 0;
+                border-radius: 50%;
+            }
+            .details {
+                display: block;
+                float: left;
+            }
+            p {
+                border: none;
+                padding: 0;
+            }
+            time {
+                margin-left: 1em;
+            }
         }
     }
 }
