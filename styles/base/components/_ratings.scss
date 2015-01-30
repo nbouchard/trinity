@@ -1,8 +1,11 @@
 // Structure
 .rating-widget {
     width: 100%;
-    text-align: center;
-    font-size: 2.0em;
+
+    &.rating-inline {
+        width: auto;
+        display: inline-block;
+    }
 
     .rating-value {
         @include box-sizing(border-box);
@@ -55,6 +58,8 @@
 // Presentation
 .rating-widget {
     text-decoration: none;
+    text-align: center;
+    font-size: $font-size-huger;
 
     &:hover, &:focus {
         text-decoration: none;
