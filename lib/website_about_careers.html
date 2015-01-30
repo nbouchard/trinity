@@ -56,9 +56,56 @@
             </nav>
         </div>
     </div>
-    <div>
-        Careers content goes here.
+
+    <div class="content-editorial content-editorial-short content-editorial-bg-white">
+        <div class="content-editorial-container">
+            <ul id="jobs-container"></ul>
+        </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            url = 'https://api.lever.co/v0/postings/chooseenergy?mode=json'
+
+            function createJobs(_data) {
+                for(i = 0; i < _data.length; i++) {
+                    var posting = _data[i];
+                    var title = posting.text;
+                    var description = posting.description;
+                    var shortDescription = description.trim().substring(0, 250).replace('\n', ' ') + "...";
+                    var location = posting.categories.location;
+                    var commitment = posting.categories.commitment;
+                    var team = posting.categories.team;
+                    var link = posting.hostedUrl;
+                    var jobPost = document.createElement('li');
+                        jobPost.innerHTML = '<a href="'+link+'" class="job '+team+' '+location+' '+commitment+'">' +
+                                '<h2 class="job-title" href="'+link+'"">'+title+'</h2>' +
+                                '<p class="tags"><span>'+team+'</span><span>'+location+'</span><span>'+commitment+'</span></p>' +
+                                '<p class="description">'+shortDescription+'</p>' +
+                            '</a>';
+                    var jobs = document.getElementById('jobs-container');
+                        jobs.appendChild(jobPost);
+                }
+            }
+
+            var request = new XMLHttpRequest();
+            request.open('GET', url, true);
+            request.onload = function() {
+                if (request.status >= 200 && request.status < 400) {
+                    var data = JSON.parse(request.responseText);
+                    createJobs(data);
+                } else {
+                    console.log('Error from Lever.');
+                }
+            };
+            request.onerror = function() {
+                console.log('Connection Error.');
+            };
+            request.send();
+
+        });
+    </script>
+
 
 <!-- End Page Template Contents -->
 </main>
