@@ -1,0 +1,77 @@
+.supplier-slat {
+    @include box-sizing(border-box);
+
+    &:nth-child(2n+1) {
+        background: $color-white-smoke;
+    }
+    .supplier-content {
+        @include box-sizing(border-box);
+        @include display-flex;
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        width: 100%;
+        max-width: $site-max-width;
+        margin: 0 auto;
+
+        .supplier-services {
+            @include flex(1 1 10em);
+        }
+        .supplier-detail {
+            @include flex(1 1 20em);
+        }
+    }
+}
+.supplier-services {
+    @include box-sizing(border-box);
+    text-align: center;
+    padding: 1em;
+
+    .supplier-customers {
+        padding: 0.75em 0;
+    }
+}
+.service-icons {
+    list-style: none;
+    padding: 0;
+
+    .service-icon {
+        display: inline-block;
+        margin: 0 0.5em;
+
+        .icon {
+            font-size: $font-size-huge;
+        }
+    }
+}
+.supplier-detail {
+    @include box-sizing(border-box);
+    padding: 1em;
+
+    .supplier-name-card {
+        .supplier-name {
+            font-size: $font-size-larger;
+            padding-right: 1em;
+        }
+        .supplier-rating {
+            font-size: $font-size-smaller;
+
+            .rating-value {
+                font-size: $font-size-smaller;
+            }
+        }
+    }
+    .supplier-tagline {
+        font-style: italic;
+    }
+    .supplier-infolist {
+        list-style: square;
+        margin: 0.5em;
+        padding: 0 0 0 1em;
+    }
+}
+
+.locations-info {
+    .supplier-services {
+        text-align: left;
+    }
+}
