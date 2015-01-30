@@ -78,8 +78,8 @@
                     var team = posting.categories.team;
                     var link = posting.hostedUrl;
                     var jobPost = document.createElement('li');
-                        jobPost.innerHTML = '<a href="'+link+'" class="job '+team+' '+location+' '+commitment+'">' +
-                                '<h2 class="job-title" href="'+link+'"">'+title+'</h2>' +
+                        jobPost.innerHTML = '<a href="'+link+'" class="job">' +
+                                '<h2 class="job-title" href="'+link+'">'+title+'</h2>' +
                                 '<p class="tags"><span>'+team+'</span><span>'+location+'</span><span>'+commitment+'</span></p>' +
                                 '<p class="description">'+shortDescription+'</p>' +
                             '</a>';
