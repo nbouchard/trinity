@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ChooseUX">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Choose Energy UX</title>
+    <meta name="viewport" content="width=device-width">
+    <link href="css/styles.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'thu5pgb',
+          scriptTimeout: 3000
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/bwf-loadingb/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/tomorrow-night.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+<body class="admin-bar" data-ng-class="{'has-sidenav': hasSidenav, 'sidenav-active':sidenavState}" ce-site-body>
+<div id="site" class="site-root">
+<ce-header>
+    <h1 class="logo-container"><ce-logo variant="dark" type="hybrid" target="/"></ce-logo></h1>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item nav-hybrid">
+                <a class="nav-link is-active" href="website_homepage_residential.html">For Home</a>
+            </li>
+            <li class="nav-item nav-hybrid">
+                <a class="nav-link" href="website_homepage_business.html">For Business</a>
+            </li>
+            <li class="nav-item">
+                <ce-sidenav-opener></ce-sidenav-opener>
+            </li>
+        </ul>
+    </nav>
+</ce-header>
+<main class="site-main">
+<!-- Start Page Template Contents -->
+
+
+    <div class="content-editorial content-editorial-centerhero" style="background: url('images/photography/Bay_Bridge_Night.jpg') no-repeat; background-size: cover;">
+        <div class="content-editorial-container">
+            <h1 class="content-editorial-headline">Admin Bar Example</h1>
+        </div>
+    </div>
+    <div class="content-editorial content-editorial-short content-editorial-bg-white">
+        <div class="content-editorial-container">
+            <div class="content-editorial-cta">
+                <p class="is-centered">This is an example page that shows how the site would look when a user is logged into WordPress and has the WordPress Admin bar displayed.</p>
+            </div>
+        </div>
+    </div>
+
+<!-- End Page Template Contents -->
+</main>
+<ce-footer variant="light">
+    <ce-footer-nav type="primary">
+        <ceux-footer-primary-about></ceux-footer-primary-about>
+        <ceux-footer-primary-locations></ceux-footer-primary-locations>
+        <ceux-footer-primary-academy></ceux-footer-primary-academy>
+        <ceux-footer-primary-choices></ceux-footer-primary-choices>
+        <ceux-footer-primary-searches></ceux-footer-primary-searches>
+    </ce-footer-nav>
+    <ce-footer-nav type="secondary">
+        <ceux-footer-secondary-social></ceux-footer-secondary-social>
+        <ceux-footer-secondary-address></ceux-footer-secondary-address>
+        <ceux-footer-secondary-legal></ceux-footer-secondary-legal>
+    </ce-footer-nav>
+</ce-footer>
+</div>
+<ce-sidenav-mask></ce-sidenav-mask>
+<ce-sidenav>
+    <ce-sidenav-closer></ce-sidenav-closer>
+    <ce-logo variant="light" type="full" target="/"></ce-logo>
+    <ceux-sidenav-primary></ceux-sidenav-primary>
+    <ceux-sidenav-secondary></ceux-sidenav-secondary>
+</ce-sidenav>
+<div class="admin-bar-placeholder">WordPress Admin Bar Placeholder</div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/ce-components/dist/ce-components-v0.0.1.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="js/ceux.js"></script>
+<script src="js/controllers/heroCarouselCtrl.js"></script>
+<script src="js/controllers/paginationCtrl.js"></script>
+<script src="js/controllers/calendarCtrl.js"></script>
+
+</body>
+</html>
