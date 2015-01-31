@@ -1,3 +1,7 @@
+$wp-tablet-width: max-width 782px;
+$wp-tablet-only: 601px 782px;
+$wp-mobile-width: max-width 600px;
+
 .admin-bar-placeholder {
     direction: ltr;
     color: #ccc;
@@ -7,19 +11,35 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-width: 600px;
     z-index: 99999;
     background: #222;
     text-align: center;
+
+    @include breakpoint($wp-tablet-width) {
+        height: 46px;
+    }
+    @include breakpoint($wp-mobile-width) {
+        position: absolute;
+    }
 }
 .admin-bar {
     .site-root {
-        margin-top: 32px;
+        @include breakpoint($wp-mobile-width) {
+            padding-top: 46px;
+            margin-top: 10px;
+        }
     }
 }
 .admin-bar {
     .site-header {
         top: 32px;
+
+        @include breakpoint($wp-tablet-only) {
+            top: 46px;
+        }
+        @include breakpoint($wp-mobile-width) {
+            top: 0;
+        }
     }
 }
 
