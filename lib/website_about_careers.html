@@ -72,7 +72,6 @@
                     var posting = _data[i];
                     var title = posting.text;
                     var description = posting.description;
-                    var shortDescription = description.trim().substring(0, 250).replace('\n', ' ') + "...";
                     var location = posting.categories.location;
                     var commitment = posting.categories.commitment;
                     var team = posting.categories.team;
@@ -80,8 +79,7 @@
                     var jobPost = document.createElement('li');
                         jobPost.innerHTML = '<a href="'+link+'" class="job">' +
                                 '<h2 class="job-title" href="'+link+'">'+title+'</h2>' +
-                                '<p class="tags"><span>'+team+'</span><span>'+location+'</span><span>'+commitment+'</span></p>' +
-                                '<p class="description">'+shortDescription+'</p>' +
+                                '<ul class="job-tags"><li class="job-tag">'+team+'</li><li class="job-tag">'+location+'</li><li class="job-tag">'+commitment+'</li></ul>' +
                             '</a>';
                     var jobs = document.getElementById('jobs-container');
                         jobs.appendChild(jobPost);
@@ -96,10 +94,18 @@
                     createJobs(data);
                 } else {
                     console.log('Error from Lever.');
+                    var jobsError = document.createElement('li');
+                        jobsError.innerHTML = '<a href="https://jobs.lever.co/chooseenergy" class="jobs-error">See all job postings</a>';
+                    var jobs = document.getElementById('jobs-container');
+                        jobs.appendChild(jobsError);
                 }
             };
             request.onerror = function() {
                 console.log('Connection Error.');
+                var jobsError = document.createElement('li');
+                    jobsError.innerHTML = '<a href="https://jobs.lever.co/chooseenergy" class="jobs-error">See all job postings</a>';
+                var jobs = document.getElementById('jobs-container');
+                    jobs.appendChild(jobsError);
             };
             request.send();
 
