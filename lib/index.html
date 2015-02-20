@@ -40,11 +40,15 @@
 </ce-header>
 <main class="ceux-body">
 
-            <div class="content-editorial content-editorial content-editorial-short content-editorial-bg-primary">
-                <div class="content-editorial-container">
+            <div class="content-editorial content-editorial-bigtalk" style="position:relative; overflow: hidden;">
+                <div class="video-underlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding:0; margin: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -101; background-color: rgba(0,0,0,1); background-size: cover;"></div>
+                <video class="content-editorial-container" autoplay loop style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding:0; margin: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; background-size: cover; -webkit-filter: blur(2px) brightness(90%); filter: blur(2px) brightness(90%);">
+                    <source src="videos/sf-at-night.mp4" type="video/mp4">
+                </video>
+                <div class="content-editorial-container" autoplay>
                     <h1 class="content-editorial-headline">Choose UX</h1>
                     <h2 class="content-editorial-subhead">Our unified front enables our success.</h2>
-                    <small class="content-editorial-note">v0.0.7</small>
+                    <small class="content-editorial-note">v0.0.8</small>
                 </div>
             </div>
 

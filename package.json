@@ -1,6 +1,6 @@
 {
     "name": "ChooseUX",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "Choose UX Style Guide",
     "main": "static.js",
     "scripts": {
