@@ -1,10 +1,13 @@
 @charset "utf-8";
 
 // Full Reset + Mixins
-@import "base/globals/normalize";
 @import "compass/css3";
 @import "breakpoint";
-@import "bootstrap";
+@import "base/plugins/bs";
+@import "base/globals/normalize";
+
+// Create Sprites for the Supplier/Utility Logos
+@import "base/globals/sprites";
 
 // CE Website Base Variables
 @import "base/globals/base";
@@ -12,28 +15,37 @@
 // CE Website Global Media Queries
 @import "base/globals/mq";
 
-// CE Site Structure
-@import "base/globals/structure";
+// Animations
+@import "base/globals/animate";
 
-// CE Colors
+// Grid System
+@import "base/globals/grid";
+
+// Color Pallete
 @import "base/globals/colors";
 
-// CE Typography Variables and Styles
+// Typography Variables and Styles
 @import "base/globals/typography";
 
-// CE Logos
+// Core Site Structure
+@import "base/globals/structure";
+
+// Logos
 @import "base/globals/logos";
 
-// CE Buttons
+// Buttons
 @import "base/globals/buttons";
 
-// CE Form Variables and Styles
+// Forms
 @import "base/globals/forms";
 
-// CE Nav List Reset
+// Nav List Pattern
 @import "base/globals/navlist";
 
-// CE Utility Components
+// Card System
+@import "base/components/cards";
+
+// Color Fade Filter
 @import "base/components/colorfade";
 
 // CE Countable Component
@@ -41,31 +53,43 @@
 
 // CE Header
 @import "base/components/header";
+@import "base/components/adminbar";
 
 // CE Sidenav
 @import "base/components/sidenav";
 
 // CE Navigational Components
+// TODO: Replace Bootstrap component version where applicable
 @import "base/components/paginator";
 @import "base/components/breadcrumbs";
 
 // CE Content Grids
+// TODO: Update with grid system
 @import "base/components/contentGrids";
 @import "base/components/tips";
 @import "base/components/partnerGrids";
+@import "base/components/suppliers";
 
 // CE Shopping Elements
 @import "base/components/plans";
+@import "base/components/filters";
 @import "base/components/ratings";
 
 // CE Content Experience Elements
 @import "base/components/editorial";
 @import "base/components/testimonials";
+@import "base/components/maps";
 
 // CE Footer
 @import "base/components/footer";
 
 // Project-Specific Styles
+// TODO: Deprecate and remove
 @import "ceux";
+
 // Project-Specific Styles
+// TODO: Update with grid system
 @import "energyacademy";
+
+// Project-Specific Styles
+@import "supplier";

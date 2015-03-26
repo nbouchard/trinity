@@ -11,7 +11,7 @@
         max-width: $site-max-width;
         width: 100%;
 
-        @include breakpoint($mq-under-sitemaxwidth) {
+        @include breakpoint($mq-md-max) {
             padding-left: 1em;
             padding-right: 1em;
         }
@@ -82,9 +82,33 @@
             color: $color-white-pure;
         }
 
-        &.content-editorial-marker-topper {
-            top: 0;
-            left: 4em;
+        &.is-attached {
+            position: absolute;
+
+            &.attach-top {
+                top: 0;
+            }
+            &.attach-topish {
+                top: 4em;
+            }
+            &.attach-bottom {
+                bottom: 0;
+            }
+            &.attach-bottomish {
+                bottom: 4em;
+            }
+            &.attach-right {
+                right: 0;
+            }
+            &.attach-rightish {
+                right: 4em;
+            }
+            &.attach-left {
+                left: 0;
+            }
+            &.attach-leftish {
+                left: 4em;
+            }
         }
     }
     .content-editorial-infobox {
@@ -137,11 +161,11 @@
             max-width: ($site-max-width / 1.4);
         }
     }
-    &.content-editorial-noheight {
-        min-height: 1em;
-    }
     &.content-editorial-short {
         min-height: 20em;
+    }
+    &.content-editorial-noheight {
+        min-height: 1em;
     }
     &.content-editorial-translucent {
         padding: 5em 0;
@@ -257,7 +281,7 @@
             @include flex-direction(row);
             margin: 0.5em 0;
 
-            @include breakpoint($mq-under-sitemaxwidth) {
+            @include breakpoint($mq-md-max) {
                 @include flex-wrap(wrap);
             }
 

@@ -1,6 +1,6 @@
 {
     "name": "ChooseUX",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "dependencies": {
         "angular": "1.2.27",
         "ce-components": "https://github.com/chooseenergy/ChooseComponents.git",

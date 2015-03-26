@@ -1,6 +1,8 @@
 .energy-academy {
 // No-conflict Temp Namespace
-
+small {
+    font-size: 65%;
+}
 section {
     margin-top:2em;
     padding-bottom: 2em;
@@ -131,7 +133,7 @@ section {
         bottom: 0;
         height:2em;
         z-index: 10;
-       
+
 
         .hearts {
             @include box-sizing(border-box);
@@ -229,11 +231,11 @@ section {
                 font-weight: 200;
             }
         }
-        .numberation {            
+        .numberation {
             li {
                 padding: 0;
                 width: auto;
-            
+
                 a {
                     width:auto;
                     font-weight: 200;
@@ -244,7 +246,7 @@ section {
                     }
 
                 }
-            }            
+            }
             .is-active {
                 a {
                     color: $color-green-shamrock;
@@ -475,7 +477,7 @@ section {
         .popular-searches {
             margin-top:2em;
         }
-    }	
+    }
     .navigation {
         ul {
             list-style: none;
@@ -508,11 +510,11 @@ section {
                     font-size:.5em;
                     padding-right:1em;
                     color: $color-orange-sun;
-                    line-height:4em; 
+                    line-height:4em;
                 }
             }
         }
-    }	
+    }
 }
 .tag-list-container {
     display:inline-block;
@@ -560,12 +562,12 @@ section {
         -ms-user-select: none;
          -o-user-select: none;
             user-select: none;
-    * { 
+    * {
       outline:none;
     }
     table {
         margin: 0;
-    
+
     tr {
       height:auto;
       border:none;
@@ -587,7 +589,7 @@ section {
     }
     td {
         padding: 0;
-        margin: 0; 
+        margin: 0;
         width: auto;
         height: auto;
         border: 1px solid $color-gray-ghost;
@@ -599,7 +601,7 @@ section {
       }
       &:hover {
         background: $color-white-smoke;
-      }      
+      }
       span {
         padding: 0 9px;
         line-height: 2.4em;
@@ -613,11 +615,11 @@ section {
   }
   .is-active {
     background: $color-green-cruise;
-  }  
+  }
   .text-muted {
     color: $color-gray-ghost;
   }
-  .text-info { 
+  .text-info {
     color: $color-green-shamrock;
   }
 
@@ -669,12 +671,12 @@ section {
 }
 .numberation {
     ul  {
-        list-style: none; 
+        list-style: none;
         padding: 0;
 
         li {
             display: inline-block;
-            width: 1.25em; 
+            width: 1.25em;
             text-align: center;
 
             a {
@@ -682,11 +684,11 @@ section {
                 &:hover {
                     font-size: 1.5em;
                     color: $color-green-shamrock;
-                    font-weight: $font-weight-headline; 
+                    font-weight: $font-weight-headline;
                     text-decoration: none;
                 }
             }
-        } 
+        }
         .is-active {
             padding: 0 .5em;
             width:2em;
@@ -810,7 +812,7 @@ section {
         margin-top: .2em;
 
         &.placeholder {  /** TODO: This should be removed when it's not just a placeholder anymore **/
-        min-height: 15em; 
+        min-height: 15em;
         line-height: 15em;
         text-align: center;
         }
@@ -880,7 +882,7 @@ section {
         font-weight: normal;
         color: inherit;
     }
-    article { 
+    article {
         float: left;
         margin: 1em 0;
 

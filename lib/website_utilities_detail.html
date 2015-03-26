@@ -8,6 +8,8 @@
     <title>Choose Energy UX</title>
     <meta name="viewport" content="width=device-width">
     <link href="css/styles.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/topojson.v1.min.js"></script>
     <script>
       (function(d) {
         var config = {
@@ -25,6 +27,15 @@
 <div id="site" class="site-root">
 <ce-header>
     <h1 class="logo-container"><ce-logo variant="dark" type="hybrid" target="/"></ce-logo></h1>
+    <div class="mq-example">
+        <div class="mq-xxs">Extra Extra Small (320px and smaller)</div>
+        <div class="mq-xs">Extra Small (320-480px)</div>
+        <div class="mq-sm">Small (480-768px)</div>
+        <div class="mq-md">Medium (768-960px)</div>
+        <div class="mq-lg">Large (960-1280px)</div>
+        <div class="mq-xl">Extra Large (1280-1920px)</div>
+        <div class="mq-xxl">Extra Extra Large (1920px and larger)</div>
+    </div>
     <nav class="nav">
         <ul class="nav-list">
             <li class="nav-item nav-hybrid">
@@ -39,8 +50,44 @@
         </ul>
     </nav>
 </ce-header>
-<main class="site-main energy-academy">
+<main class="site-main">
 <!-- Start Page Template Contents -->
+
+    <div class="content-editorial content-editorial-short" style="background: url('images/photography/Power_lines.jpg') no-repeat; background-size: cover;">
+        <div class="content-editorial-container">
+            <h1 class="content-editorial-headline">AEP Energy</h1>
+            <nav class="breadcrumbs">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="website_homepage_residential.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="website_utilities_overview.html" class="nav-link">Utilities</a></li>
+                    <li class="nav-item"><a href="website_utilities_detail.html" class="nav-link">AEP Energy</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h5>Utility Info Card:</h5>
+            <ul>
+                <li>Logo</li>
+                <li>Types of Customers Serviced</li>
+                <li>Types of Energy Provided</li>
+                <li>Sample Rate</li>
+                <li>Contact Information</li>
+                <li>Map of Service Areas</li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <h4>What The Supplier Says About Themselves</h4>
+            <p>Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue.</p>
+        </div>
+        <hr>
+        <div>
+        List of plans for the utility
+        </div>
+    </div>
 
 
 
@@ -72,6 +119,7 @@
 <script src="bower_components/ce-components/dist/ce-components-v0.0.1.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="js/ceux.js"></script>
+<div id="gridder"></div>
 <script src="js/controllers/heroCarouselCtrl.js"></script>
 <script src="js/controllers/paginationCtrl.js"></script>
 <script src="js/controllers/calendarCtrl.js"></script>

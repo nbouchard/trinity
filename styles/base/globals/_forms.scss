@@ -2,7 +2,15 @@
 
 // Structure
 input {
-    height: $button-base;
+    height: auto;
+
+    &[type="text"],
+    &[type="password"],
+    &[type="submit"],
+    &[type="color"],
+    &[type="search"] {
+        height: $button-base;
+    }
 }
 input, select {
     vertical-align: middle;

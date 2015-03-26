@@ -7,23 +7,13 @@
      ========================================================================== */
 /* This section of code styles the sprites, but the css to actually make an object a sprite is created by glue during the buildstatic command */
 
-
 .supplier-logos { width:100%; text-align:center; max-width: 1024px; overflow: auto;}
 .supplier-logos li {display:inline-block; *display:inline; /*IE7*/ *zoom:1; /*IE7*/ color:white; margin-bottom: 10px; }
 
 @media screen and (min-width: 700px) {
-
     .supplier-logos.logos-2up li { width: 50%; }
     .supplier-logos.logos-3up li { width: 33%; }
     .supplier-logos.logos-4up li { width: 25%; }
-
-
-}
-
-@media screen and (max-width: 650px) {
-    #header_logo a, #header_logo a svg    {
-        width: 135px;
-    }
 }
 
 .sprite { border: 0;    display: inline-block; margin: 0 10px 10px 10px;    width: 135px; height: 65px; }

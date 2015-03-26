@@ -1,0 +1,817 @@
+@mixin center {
+  margin: 0 auto;
+  width: $site-max-width;
+}
+@mixin no-select {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+
+
+.supplier-admin {
+
+.container {
+  @include center;
+}
+
+.error {
+  margin-top: 1em;
+  color: $color-orange-sun;
+
+  &.resolved {
+    color: $color-green-shamrock;
+  }
+}
+
+//*****SUPPLIER CONTENT COMPONENT*******
+.filter-box {
+  @include box-sizing(border-box);
+  display: inline-block;
+  height: 6em;
+  border-right: 1px solid $color-gray-ghost;
+  border-left: 1px solid $color-gray-ghost;
+  color: $color-gray-charcoal;
+  vertical-align: middle;
+
+  @include breakpoint($mq-md-max) {
+    height: 4em;
+  }
+
+  .filter-nav {
+    @include box-sizing(border-box);
+    @include display-flex;
+    @include flex-direction(row);
+    max-width: 100%;
+    height: 6em;
+
+    @include breakpoint($mq-md-max) {
+      height: 4em;
+    }
+
+    .filter-select {
+      @include box-sizing(border-box);
+      @include no-select;
+      @include flex(1 1 auto);
+      border-right: 1px solid $color-gray-ghost;
+      cursor: pointer;
+      text-align: center;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      .filter-selected {
+        @include box-sizing(border-box);
+        padding: 0 0.5em;
+        height: 6em;
+        line-height: 6em;
+
+        @include breakpoint($mq-md-max) {
+          height: 4em;
+          line-height: 4em;
+        }
+
+        .filter-select-image {
+          max-height: 6em;
+          vertical-align: middle;
+
+          @include breakpoint($mq-md-max) {
+            max-height: 4em;
+          }
+        }
+        .icon {
+          float: right;
+          line-height: 6em;
+          margin-right: 0.25em;
+
+          @include breakpoint($mq-md-max) {
+            line-height: 4em;
+          }
+        }
+      }
+      .filter-option-list {
+        @include no-select;
+        @include box-sizing(border-box);
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        max-width: 24em;
+        display: none;
+
+        .filter-option-item {
+          @include box-sizing(border-box);
+          @include flex(1 1 12em);
+          text-align: left;
+          cursor: pointer;
+          list-style: none;
+          border-left: 1px solid $color-gray-ghost;
+          border-bottom: 1px solid $color-gray-ghost;
+          background: $color-white-pure;
+
+          &:nth-child(even),
+          &:last-child {
+            border-right: 1px solid $color-gray-ghost;
+          }
+
+          &:hover, &:focus {
+            background: $color-green-shamrock;
+            color: $color-white-pure;
+          }
+
+          .filter-option {
+            padding: 0;
+            min-width: 10em;
+            line-height: 2em;
+            position: relative;
+
+            .fa-check {
+              position: absolute;
+              top: 0.25em;
+              left: 0.25em;
+              display: none;
+            }
+            i {
+                font-size: 2em;
+                line-height: 2em;
+                vertical-align: sub;
+                text-align: center;
+                padding-left:.5em;
+
+                &.fa-check {
+                    font-size: 1em;
+                    vertical-align: baseline;
+                }
+                &:before {
+                    margin-right: 0.25em;
+                }
+            }
+          }
+          .filter-option-image {
+            height: 4em;
+            max-width: 8em;
+            margin:.5em 2em;
+          }
+
+          &.is-selected {
+            background: $color-green-cruise;
+            color: $color-green-jewel;
+
+            .filter-option {
+              .fa-check {
+                display: block;
+              }
+            }
+          }
+          &.filter-option-clear {
+            &:hover, &:focus {
+              background: $color-orange-sun;
+            }
+          }
+        }
+      }
+
+      &.filter-select-supplier {
+        width: 12em;
+
+        .filter-option-list {
+          .filter-option {
+            line-height: normal;
+          }
+          .filter-select-image,
+          .filter-option-image {
+            background: $color-white-pure;
+            @include border-radius(0.25em);
+          }
+        }
+      }
+      &.filter-select-state {
+        width: 10em;
+        .stateface {
+            font-size: 2em;
+            line-height: 3em;
+            padding-left: .5em;
+
+
+          &:before {
+            margin-right: 0.5em;
+          }
+        }
+        .filter-option-list {
+          max-width: 36em;
+            .stateface {
+                line-height: 2em;
+            }
+          .filter-option-item {
+            &:nth-child(even) {
+              border-right: none;
+            }
+            &:nth-child(3n),
+            &:last-child {
+              border-right: 1px solid $color-gray-ghost;
+            }
+          }
+        }
+      }
+      &.filter-select-service {
+        width: 10em;
+      }
+      &.filter-select-product {
+        width: 10em;
+      }
+      &.filter-select-status {
+        width: 10em;
+      }
+
+
+      &.is-active {
+        background: $color-white-smoke;
+        border-bottom: 1px solid $color-gray-ghost;
+
+        .filter-option-list {
+          @include display-flex;
+        }
+      }
+    }
+  }
+}
+
+
+//*****SUPPLIER DASHBOARD COMPONENT*******
+
+
+.dashboard {
+  @include center;
+  border: 1px solid $color-white-lilac;
+  background: $color-white-pure;
+  color: $color-gray-charcoal;
+  h3, h4 {
+    display: inline-block;
+    line-height: 2em;
+  }
+  table {
+    width: 100%;
+    border-top: 1px solid $color-white-lilac;
+  }
+  tr {
+    height: 3em;
+    border-bottom: 1px solid $color-white-lilac;
+      &:last-child {
+        border-bottom: none;
+      }
+  }
+  th,
+  td {
+    padding: 0 0.25em;
+    min-width: 5em;
+    border-left: 1px solid $color-white-lilac;
+    text-align: center;
+
+    &:first-child {
+      min-width: 1em;
+      border: none;
+      font-weight: $font-weight-body-strong;
+    }
+  }
+  th {
+    font-weight: $font-weight-body-strong;
+    text-align: center;
+  }
+  .static-column {
+    width: 7em;
+    text-align: center;
+  }
+  .left-align {
+    padding-left: 0.5em;
+    text-align: left;
+  }
+  .supplier-active {
+    border-bottom: 1px solid $color-white-lilac;
+    background: #fafafa;
+  }
+
+}
+
+//*****SUPPLIER TAB COMPONENT*******
+
+.tabs {
+  @include center;
+  background: $color-white-pure;
+  color: $color-gray-charcoal;
+  h3 {
+    margin: 0.5em;
+  }
+  button {
+    margin-right: 1em;
+  }
+  .tab-section {
+    margin-top: 0.5em;
+    border-bottom: 1px solid $color-white-lilac;
+
+    button {
+      float: right;
+    }
+  }
+  .tab {
+    display: inline-block;
+    margin: 0 0.25em 0 0;
+    padding: 0.25em 1em;
+    width: auto;
+    border: 1px solid $color-white-lilac;
+    border-bottom: none;
+    background: $color-white-pure;
+    color: $color-green-shamrock;
+    line-height: 3em;
+    cursor: pointer;
+
+    &:hover,
+    &.is-active {
+      background: $color-white-smoke;
+      color: $color-gray-charcoal;
+    }
+  }
+}
+
+//******TAB FILTER COMPONENT*******
+.customer-filter {
+  padding: 1em;
+  background: $color-white-smoke;
+
+  h4,a{
+    display: inline-block;
+  }
+  a {
+    margin-left: 0.5em;
+  }
+  .filter-input {
+      display: inline-block;
+      margin: 0 1em 0 0;
+      input {
+        display: block;
+        padding: 0.25em 0.5em;
+        &.short {
+            width:7.5em;
+        }
+        &.medium {
+            width:10em;
+        }
+        &.long {
+            width:20em;
+        }
+      }
+      label {
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+      }
+  }
+    .filter-link {
+        margin-left:1.5em;
+    }
+  .plan-dropdown {
+    background: $color-white-pure;
+    border: 1px solid $color-gray-ghost;
+    width:10em;
+    height:3em;
+    line-height: 3em;
+    padding:0 .5em;
+    i {
+      margin-left:1em;
+    }
+  }
+  .plan {
+    ul {
+      position:absolute;
+      background: $color-white-pure;
+      border: 1px solid $color-gray-ghost;
+      margin:0;
+      margin-top:-1px;
+      list-style: none;
+      padding-left:0;
+      li {
+        padding:0 2em 0 1em;
+        border-bottom:1px solid $color-gray-ghost;
+        &:last-child {
+          border-bottom:none;
+        }
+        &:hover {
+          background: $color-white-smoke;
+        }
+      }
+      input {
+        display: inline-block;
+        padding: 0;
+        width: 100%;
+        border: none;
+        &[type=checkbox] {
+          width: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+//******TAB TABLES COMPONENT*******
+.customers {
+    position: relative;
+    border: 1px solid $color-white-lilac;
+    h4 {
+        display: inline-block;
+        margin: 10px;
+        width: 50%;
+    }
+    .table-container {
+      width: $site-max-width;
+      overflow-x: scroll;
+      overflow-y: visible;
+      table {
+          border-top: 1px solid $color-white-lilac;
+          margin-left: 7em;
+      }
+      tr {
+          height: 3em;
+          border-bottom: 1px solid $color-white-lilac;
+          &:nth-child(even) {
+              background: $color-white-smoke;
+          }
+      }
+      th,
+      td {
+          min-width: 5em;
+          border-right: 1px solid $color-white-lilac;
+          text-align: center;
+          white-space: nowrap;
+          padding:0 1em;
+          &:first-child {
+              position:absolute;
+              width: 7em;
+              left:0;
+              top:auto;
+              margin-top: -1px;
+              padding:0;
+              border-top: 1px solid $color-white-smoke;
+              background: $color-white-pure;
+              line-height: 3em;
+              font-weight: $font-weight-body-strong;
+              &:nth-child(even) {
+                  background: $color-white-smoke;
+              }
+          }
+      }
+      th {
+          font-weight: $font-weight-headline;
+          &.sticky-header {
+              border-top:none;
+          }
+      }
+    }
+  .download-csv {
+    float: right;
+    display: inline-block;
+    margin-right: 0.5em;
+    line-height: 3em;
+    a {
+      color: $color-orange-sun;
+    }
+  }
+}
+.plans {
+  border: 1px solid $color-white-lilac;
+  .plan-view {
+    h4 {
+        display: inline-block;
+        margin: 10px;
+        width: 50%;
+    }
+    table {
+        width: 100%;
+        border-top: 1px solid $color-white-lilac;
+    }
+    tr {
+        height: 3em;
+        border-bottom: 1px solid $color-white-lilac;
+        &:nth-child(even) {
+            background: $color-white-smoke;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    th,
+    td {
+        min-width: 5em;
+        border-left: 1px solid $color-white-lilac;
+        text-align: center;
+        &:first-child {
+            padding: 0 0.5em;
+            min-width: 1em;
+            border: none;
+            font-weight: $font-weight-body-strong;
+        }
+    }
+    th {
+        font-weight: $font-weight-headline;
+    }
+  }
+}
+
+//******PLAN PROFILE COMPONENT*******
+.plan-profile {
+  @include center;
+  border: 1px solid $color-white-lilac;
+  .plan-alert {
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+    width: 100%;
+    background: $color-blue-curious;
+    color: $color-white-pure;
+    a {
+      color: $color-white-pure;
+    }
+  }
+  table {
+    width: 100%;
+    tr {
+      height: 3em;
+      border-bottom: 1px solid $color-white-lilac;
+    }
+    th {
+      padding: 1em;
+      text-align: left;
+      font-weight: $font-weight-body-strong;
+    }
+    td {
+      padding: 1em;
+      width: 70%;
+      border-left: 1px solid $color-white-lilac;
+      text-align: left;
+      font-weight: $font-weight-body;
+
+      &:first-child {
+        width: 30%;
+        border-left: none;
+        text-align: right;
+        font-weight: $font-weight-body-strong;
+      }
+      &.no-padding {
+        padding:0;
+      }
+      &.schedule-plan {
+        text-align: left;
+      }
+    }
+    input {
+      padding: 0;
+      width: 100%;
+      border: none;
+      &.short {
+        width: 5em;
+      }
+      &[type=checkbox] {
+        width: 20px;
+        margin-right: 10px;
+      }
+      &[type=radio] {
+        width:20px;
+      }
+    }
+    textarea {
+        padding:0;
+        width:100%;
+        border:none;
+        height:6em;
+    }
+    .doc-upload {
+        margin-top: 0.5em;
+        display:block;
+        float: left;
+    }
+    a.doc-upload {
+          display:inline-block;
+          line-height: 3em;
+    }
+    .utility-prices {
+        background: #fafafa;
+        input {
+            background:none;
+        }
+    }
+    .ny-utility-prices {
+        background: $color-white-smoke;
+        input {
+            background:none;
+        }
+    }
+  }
+}
+
+
+.alternative-plans {
+  @include center;
+  border: 1px solid $color-white-lilac;
+  table {
+    width: 100%;
+    tr {
+      height: 3em;
+      border-bottom: 1px solid $color-white-lilac;
+    }
+    th {
+      padding: 1em;
+      text-align: left;
+      font-weight: $font-weight-headline;
+    }
+    td {
+      padding: 1em;
+      width: 25%;
+      border-left: 1px solid $color-white-lilac;
+      vertical-align: top;
+      text-align: left;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+}
+
+//******PASSWORD COMPONENT*******
+
+
+.password {
+    @include center;
+    border: 1px solid $color-white-lilac;
+    background: $color-white-pure;
+    color: $color-gray-charcoal;
+    h3, h4 {
+        display: inline-block;
+        margin-left: 0.5em;
+        line-height: 2em;
+    }
+    table {
+        width: 100%;
+        tr {
+            height: 3em;
+            border-bottom: 1px solid $color-white-lilac;
+        }
+        th {
+            padding: 1em;
+            text-align: left;
+            font-weight: $font-weight-body-strong;
+            &:first-child {
+                text-align: right;
+                font-weight: $font-weight-body-strong;
+            }
+        }
+        td {
+            padding: 1em;
+            width: 70%;
+            border-left: 1px solid $color-white-lilac;
+            text-align: left;
+            font-weight: $font-weight-body-strong;
+
+            &:first-child {
+                width: 30%;
+                border-left: none;
+                text-align: right;
+                font-weight: $font-weight-body-strong;
+            }
+            &.no-padding {
+                padding:0;
+            }
+        }
+        input {
+            padding: 0;
+            width: 100%;
+            border: none;
+            &.short {
+                width: 20em;
+            }
+        }
+    }
+}
+
+//******MODEL COMPONENTS*******
+
+.header-mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #000;
+    opacity: .3;
+    z-index: $z-body-high;
+}
+.site-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #000;
+    opacity: .3;
+    z-index:$z-overlay-low;
+}
+.modal {
+    @include box-sizing(border-box);
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    height: auto;
+    width: 700px;
+    margin-left: -350px;
+    padding: 2em 1em;
+    background:$color-white-pure;
+    z-index: $z-overlay-high;
+    text-align: center;
+    button {
+        margin: 2em .5em 0 .5em;
+    }
+    h5 {
+      display:inline-block;
+    }
+}
+
+.datepicker {
+    background: $color-white-pure;
+    z-index: 9999;
+    position: absolute;
+    border:1px solid $color-gray-ghost;
+    padding: 4px;
+    margin-top:-1px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+    * {
+      outline:none;
+    }
+  table {
+    margin: 0;
+
+    tr {
+      height:auto;
+      border:none;
+    }
+    thead {
+      th {
+        padding:0;
+        margin:0;
+        text-align: center;
+        &.left-pull {
+          text-align: left;
+          padding-left:.33em;
+        }
+        &.right-pull {
+          text-align: right;
+          padding-right:.33em;
+        }
+      }
+    }
+    td {
+        padding: 0;
+        margin: 0;
+        width:auto;
+        height:auto;
+        border: 1px solid #efefef;
+        text-align: center;
+      &:first-child {
+        width:auto;
+        text-align: center;
+        font-weight: normal;
+      }
+      &:hover {
+        background: $color-white-smoke;
+      }
+      span {
+        padding:0 10px;
+        line-height: 2.5em;
+      }
+    }
+    th {
+      font-weight: normal;
+      line-height: 2em;
+      border:none;
+    }
+  }
+  .is-active {
+    background:$color-green-cruise;
+  }
+  .text-muted {
+    color: $color-gray-ghost;
+  }
+  .text-info {
+    color: $color-green-shamrock;
+  }
+
+}
+
+}

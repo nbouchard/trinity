@@ -8,6 +8,8 @@
     <title>Choose Energy UX</title>
     <meta name="viewport" content="width=device-width">
     <link href="css/styles.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/topojson.v1.min.js"></script>
     <script>
       (function(d) {
         var config = {
@@ -25,6 +27,15 @@
 <div id="site" class="site-root">
 <ce-header>
     <h1 class="logo-container"><ce-logo variant="dark" type="hybrid" target="/"></ce-logo></h1>
+    <div class="mq-example">
+        <div class="mq-xxs">Extra Extra Small (320px and smaller)</div>
+        <div class="mq-xs">Extra Small (320-480px)</div>
+        <div class="mq-sm">Small (480-768px)</div>
+        <div class="mq-md">Medium (768-960px)</div>
+        <div class="mq-lg">Large (960-1280px)</div>
+        <div class="mq-xl">Extra Large (1280-1920px)</div>
+        <div class="mq-xxl">Extra Extra Large (1920px and larger)</div>
+    </div>
     <nav class="nav">
         <ul class="nav-list">
             <li class="nav-item nav-hybrid">
@@ -92,6 +103,7 @@
 <script src="bower_components/ce-components/dist/ce-components-v0.0.1.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="js/ceux.js"></script>
+<div id="gridder"></div>
 <script src="js/controllers/heroCarouselCtrl.js"></script>
 <script src="js/controllers/paginationCtrl.js"></script>
 <script src="js/controllers/calendarCtrl.js"></script>
