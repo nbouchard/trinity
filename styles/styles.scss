@@ -1,10 +1,10 @@
 @charset "utf-8";
 
 // Full Reset + Mixins
-@import "base/globals/normalize";
 @import "compass/css3";
 @import "breakpoint";
 @import "base/plugins/bs";
+@import "base/globals/normalize";
 
 // CE Website Base Variables
 @import "base/globals/base";
