@@ -8,6 +8,11 @@
   -webkit-user-select: none;
   -o-user-select: none;
 }
+
+
+
+.supplier-admin {
+
 .container {
   @include center;
 }
@@ -20,10 +25,6 @@
     color: $color-green-shamrock;
   }
 }
-main {
-    margin-top: 1em;
-    margin-bottom:1em;
-}
 
 //*****SUPPLIER CONTENT COMPONENT*******
 .filter-box {
@@ -35,7 +36,7 @@ main {
   color: $color-gray-charcoal;
   vertical-align: middle;
 
-  @include breakpoint($mq-under-sitemaxwidth) {
+  @include breakpoint($mq-md-max) {
     height: 4em;
   }
 
@@ -46,7 +47,7 @@ main {
     max-width: 100%;
     height: 6em;
 
-    @include breakpoint($mq-under-sitemaxwidth) {
+    @include breakpoint($mq-md-max) {
       height: 4em;
     }
 
@@ -68,7 +69,7 @@ main {
         height: 6em;
         line-height: 6em;
 
-        @include breakpoint($mq-under-sitemaxwidth) {
+        @include breakpoint($mq-md-max) {
           height: 4em;
           line-height: 4em;
         }
@@ -77,7 +78,7 @@ main {
           max-height: 6em;
           vertical-align: middle;
 
-          @include breakpoint($mq-under-sitemaxwidth) {
+          @include breakpoint($mq-md-max) {
             max-height: 4em;
           }
         }
@@ -86,7 +87,7 @@ main {
           line-height: 6em;
           margin-right: 0.25em;
 
-          @include breakpoint($mq-under-sitemaxwidth) {
+          @include breakpoint($mq-md-max) {
             line-height: 4em;
           }
         }
@@ -427,7 +428,7 @@ main {
     .table-container {
       width: $site-max-width;
       overflow-x: scroll;
-      overflow-y: visible; 
+      overflow-y: visible;
       table {
           border-top: 1px solid $color-white-lilac;
           margin-left: 7em;
@@ -477,7 +478,7 @@ main {
     a {
       color: $color-orange-sun;
     }
-  }  
+  }
 }
 .plans {
   border: 1px solid $color-white-lilac;
@@ -750,12 +751,12 @@ main {
         -ms-user-select: none;
          -o-user-select: none;
             user-select: none;
-    * { 
+    * {
       outline:none;
     }
   table {
     margin: 0;
-    
+
     tr {
       height:auto;
       border:none;
@@ -777,7 +778,7 @@ main {
     }
     td {
         padding: 0;
-        margin: 0; 
+        margin: 0;
         width:auto;
         height:auto;
         border: 1px solid #efefef;
@@ -789,7 +790,7 @@ main {
       }
       &:hover {
         background: $color-white-smoke;
-      }      
+      }
       span {
         padding:0 10px;
         line-height: 2.5em;
@@ -803,12 +804,14 @@ main {
   }
   .is-active {
     background:$color-green-cruise;
-  }  
+  }
   .text-muted {
     color: $color-gray-ghost;
   }
-  .text-info { 
+  .text-info {
     color: $color-green-shamrock;
   }
+
+}
 
 }

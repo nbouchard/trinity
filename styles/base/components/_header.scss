@@ -14,7 +14,7 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
 
-    @include breakpoint($mq-under-sitemaxwidth) {
+    @include breakpoint($mq-md-max) {
         height: 4em;
     }
 
@@ -32,10 +32,10 @@
         -o-transition: all 0.3s;
         transition: all 0.3s;
 
-        @include breakpoint($mq-under-sitemaxwidth) {
+        @include breakpoint($mq-md-max) {
             margin: 0;
         }
-        @include breakpoint($mq-under-sitemaxwidth) {
+        @include breakpoint($mq-md-max) {
             width: 4em;
         }
 
@@ -46,7 +46,7 @@
             height: 4em;
             vertical-align: middle;
 
-            @include breakpoint($mq-under-sitemaxwidth) {
+            @include breakpoint($mq-md-max) {
                 padding: 1em 0.5em;
                 width: 4em;
             }
@@ -61,7 +61,7 @@
         height: 4em;
         vertical-align: middle;
 
-        @include breakpoint($mq-under-sitemaxwidth) {
+        @include breakpoint($mq-md-max) {
             margin: 0;
         }
 
@@ -82,7 +82,7 @@
                 &.nav-hybrid {
                     display: inline-block;
 
-                    @include breakpoint($mq-under-tablet) {
+                    @include breakpoint($mq-sm-max) {
                         display: none;
                     }
                 }
