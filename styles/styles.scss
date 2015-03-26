@@ -12,27 +12,31 @@
 // CE Website Global Media Queries
 @import "base/globals/mq";
 
-// CE Site Structure
-@import "base/globals/structure";
 // Animations
 @import "base/globals/animate";
 
-// CE Colors
+// Grid System
+@import "base/globals/grid";
+
+// Color Pallete
 @import "base/globals/colors";
 
-// CE Typography Variables and Styles
+// Typography Variables and Styles
 @import "base/globals/typography";
 
-// CE Logos
+// Core Site Structure
+@import "base/globals/structure";
+
+// Logos
 @import "base/globals/logos";
 
-// CE Buttons
+// Buttons
 @import "base/globals/buttons";
 
-// CE Form Variables and Styles
+// Forms
 @import "base/globals/forms";
 
-// CE Nav List Reset
+// Nav List Pattern
 @import "base/globals/navlist";
 
 // CE Utility Components
@@ -49,10 +53,12 @@
 @import "base/components/sidenav";
 
 // CE Navigational Components
+// TODO: Replace Bootstrap component version where applicable
 @import "base/components/paginator";
 @import "base/components/breadcrumbs";
 
 // CE Content Grids
+// TODO: Update with grid system
 @import "base/components/contentGrids";
 @import "base/components/tips";
 @import "base/components/partnerGrids";
@@ -71,9 +77,12 @@
 @import "base/components/footer";
 
 // Project-Specific Styles
+// TODO: Deprecate and remove
 @import "ceux";
+
 // Project-Specific Styles
+// TODO: Update with grid system
 @import "energyacademy";
+
 // Project-Specific Styles
 @import "supplier";
-
