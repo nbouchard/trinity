@@ -31,28 +31,6 @@
     }
 }
 
-.ceux-philosophies {
-    @include box-sizing(border-box);
-    @include display-flex;
-    @include flex-direction(row);
-    @include flex-wrap(wrap);
-    margin: 0;
-    padding: 0;
-
-    .ceux-philosophy {
-        @include box-sizing(border-box);
-        @include flex(1 1 20em);
-        padding: 1em;
-        list-style: none;
-
-        ul, li {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-    }
-}
-
 .ceux-color-grid {
     @include display-flex;
     @include flex-direction(row);
