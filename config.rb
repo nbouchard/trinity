@@ -7,7 +7,7 @@ require 'bootstrap-sass'
 http_path = "/"
 css_dir = "lib/css"
 sass_dir = "styles"
-images_dir = "lib/images"
+images_dir = "wp-content/themes/ChooseEnergyTheme/images"
 javascripts_dir = "lib/js"
 
 # You can select your preferred output style here (can be overridden via the command line):

@@ -1,5 +1,6 @@
 body {
     position: relative;
+    width: 100%;
 }
 .site-root {
     @include transition-property(all);
@@ -8,7 +9,12 @@ body {
     z-index: $z-body-mid;
     padding-top: 6em;
 
-    @include breakpoint($mq-under-sitemaxwidth) {
+    @include breakpoint($mq-md-max) {
         padding-top: 4em;
     }
+}
+
+// Used to stop visible background scrolling when a modal is open.
+.modal-open {
+    overflow: hidden;
 }

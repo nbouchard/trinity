@@ -96,14 +96,14 @@
     &.logo-full {
         display: block;
 
-        @include breakpoint($mq-under-sitemaxwidth) {
+        @include breakpoint($mq-md-max) {
             display: none;
         }
     }
     &.logo-mini {
         display: none;
 
-        @include breakpoint($mq-under-sitemaxwidth) {
+        @include breakpoint($mq-md-max) {
             display: block;
         }
     }

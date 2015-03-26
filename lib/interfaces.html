@@ -30,6 +30,15 @@
 <div id="site" class="site-root">
 <ce-header>
     <h1 class="logo-container"><ce-logo variant="dark" type="hybrid" target="/"></ce-logo></h1>
+    <div class="mq-example">
+        <div class="mq-xxs">Extra Extra Small (320px and smaller)</div>
+        <div class="mq-xs">Extra Small (320-480px)</div>
+        <div class="mq-sm">Small (480-768px)</div>
+        <div class="mq-md">Medium (768-960px)</div>
+        <div class="mq-lg">Large (960-1280px)</div>
+        <div class="mq-xl">Extra Large (1280-1920px)</div>
+        <div class="mq-xxl">Extra Extra Large (1920px and larger)</div>
+    </div>
     <nav class="nav">
         <ul class="nav-list">
             <li class="nav-item">
@@ -209,6 +218,12 @@
                 </ul>
             </div>
             <div class="fnav-box">
+                <h5><a href="foundations.html">Foundations</a></h5>
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="foundations.html">Foundations</a></li>
+                </ul>
+            </div>
+            <div class="fnav-box">
                 <h5><a href="elements.html">Elements</a></h5>
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link" href="elements.html#ceux-elements-typographical">Typographical</a></li>
@@ -236,7 +251,7 @@
                     <li class="nav-item"><a class="nav-link" href="https://chooseenergy.com">ChooseEnergy.com</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://demo.chooseenergy.com">New ChooseEnergy.com</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://demo.chooseenergy.com/shop/">New Shopping &amp; Checkout</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://demo.chooseenergy.com:8443/admin">Internal &amp; Supplier Admin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://admin.chooseenergy.com">Internal &amp; Supplier Admin</a></li>
                 </ul>
             </div>
     </ce-footer-nav>
@@ -250,7 +265,7 @@
                 </ul>
             </div>
             <div class="footer-address">
-                <address class="h-adr"><span class="p-label">Choose Energy, Inc.</span> <span class="p-street-address">330 Townsend St., Suite 212</span>, <span class="p-locality">San Francisco</span>, <span class="p-region"><abbr title="California">CA</abbr></span> <span class="p-postal-code">94107</span></address>
+                <address class="h-adr"><span class="p-label">Choose Energy, Inc.</span> <span class="p-street-address">465 California St., Suite 1250</span>, <span class="p-locality">San Francisco</span>, <span class="p-region"><abbr title="California">CA</abbr></span> <span class="p-postal-code">94104</span></address>
             </div>
             <div class="footer-legal">
                 <ul class="legal-links">
@@ -301,6 +316,7 @@
                     <li class="nav-item"><a class="nav-link" href="#ceux-brand-writing">Writing</a></li>
                 </ul>
             </li>
+            <li class="nav-item"><a class="nav-link" href="foundations.html">Foundations</a></li>
             <li class="nav-item">
                 <a class="nav-link" href="elements.html">Elements</a>
                 <ul class="nav-list nav-nested">
@@ -318,7 +334,8 @@
     </nav>
     <nav class="nav nav-secondary">
         <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="#">Secondary Nav Item</a></li>
+            <li class="nav-item"><a class="nav-link" href="changelog.html">Changelog</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://michaelowens.typeform.com/to/BhRWnU">Submit a Request</a></li>
         </ul>
     </nav>
 </ce-sidenav>
@@ -329,6 +346,7 @@
 <script src="bower_components/ce-components/dist/ce-components-v0.0.1.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="js/ceux.js"></script>
+<div id="gridder"></div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
 <script>

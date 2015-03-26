@@ -30,6 +30,15 @@
 <div id="site" class="site-root">
 <ce-header>
     <h1 class="logo-container"><ce-logo variant="dark" type="hybrid" target="/"></ce-logo></h1>
+    <div class="mq-example">
+        <div class="mq-xxs">Extra Extra Small (320px and smaller)</div>
+        <div class="mq-xs">Extra Small (320-480px)</div>
+        <div class="mq-sm">Small (480-768px)</div>
+        <div class="mq-md">Medium (768-960px)</div>
+        <div class="mq-lg">Large (960-1280px)</div>
+        <div class="mq-xl">Extra Large (1280-1920px)</div>
+        <div class="mq-xxl">Extra Extra Large (1920px and larger)</div>
+    </div>
     <nav class="nav">
         <ul class="nav-list">
             <li class="nav-item">
@@ -39,10 +48,10 @@
     </nav>
 </ce-header>
 <main class="ceux-body">
-            <div class="content-editorial content-editorial content-editorial-short content-editorial-bg-bright">
+            <div class="content-editorial content-editorial-short content-editorial-bg-bright">
                 <div class="content-editorial-container">
                     <h1 class="content-editorial-headline">Elements</h1>
-                    <h2 class="content-editorial-subhead">Our foundation enables us to be consistent.</h2>
+                    <h2 class="content-editorial-subhead">Our matter enables us to be adaptive.</h2>
                 </div>
             </div>
             <div class="content-tip">
@@ -50,10 +59,100 @@
                     <p class="content-tip-smaller"><strong>element</strong> (n.) &mdash; a small atomic unit of interface that is used to build larger components</p>
                 </div>
             </div>
-            <section class="ceux-elements ceux-section">
-                <p>The ChooseUX framework builds upon itself.</p>
-            </section>
+            <div class="content-editorial content-editorial-noheight content-editorial-bg-info">
+                <div class="content-editorial-container">
+                    <h3 class="content-editorial-subhead">What are <em>Elements</em>?</h3>
+                    <div class="content-editorial-cta content-editorial-infogrid">
+                        <div class="content-editorial-infogrid-cell">
+                            <h3 class="content-editorial-accent">atomic</h3>
+                            <ul>
+                                <li>Smallest unit of user interface in our pattern library</li>
+                                <li>Cannot be broken down more without losing its meaning</li>
+                            </ul>
+                        </div>
+                        <div class="content-editorial-infogrid-cell">
+                            <h3 class="content-editorial-accent">reference</h3>
+                            <ul>
+                                <li>Useful for seeing our global styles in use at once.</li>
+                                <li>Quick at-a-glance reference for a given element's base styles.</li>
+                            </ul>
+                        </div>
+                        <div class="content-editorial-infogrid-cell">
+                            <h3 class="content-editorial-accent">lightweight</h3>
+                            <ul>
+                                <li>Styles of elements should be minimal to create a clean slate</li>
+                                <li>Typically requires combining with other elements and styles to build a component</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+    <div class="cg-row cg-vpad">
+
+    <ul>
+        <li>Typographical
+
+            <ul>
+                <li>Typefaces in Use
+
+                    <ul>
+                        <li>Font Specimens</li>
+                        <li>Typeface Usages</li>
+                    </ul>
+                </li>
+                <li>Headings</li>
+                <li>Pre-formatted Text</li>
+                <li>Inline Text</li>
+            </ul>
+        </li>
+        <li>Structural
+            <ul>
+                <li>Lists</li>
+                <li>Fieldsets</li>
+                <li>Tables</li>
+            </ul>
+        </li>
+        <li>Interactive
+            <ul>
+                <li>Buttons
+                    <ul>
+                        <li>Basics</li>
+                        <li>Icon Buttons</li>
+                        <li>Button Groups</li>
+                        <li>Button Interactions</li>
+                    </ul>
+                </li>
+                <li>Forms
+                    <ul>
+                        <li>Text Input</li>
+                        <li>Textarea</li>
+                        <li>Select Input</li>
+                        <li>Radio &amp; Checkboxes</li>
+                        <li>Toggle Switches</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Navigational
+            <ul>
+                <li>Alphabetical</li>
+                <li>Breadcrumb</li>
+                <li>Nav List</li>
+                <li>Pagination</li>
+            </ul>
+        </li>
+        <li>Content Grids
+            <ul>
+                <li>Cards</li>
+                <li>Slats</li>
+                <li>Stacks</li>
+                <li>Tiles</li>
+            </ul>
+        </li>
+    </ul>
+
+    </div>
 
 
             <div class="ceux-all-typographical">
@@ -1568,640 +1667,6 @@ p q r s t u v w x y z { | } ~
             </section>
             </div>
 
-            <div class="ceux-all-content">
-            <a id="ceux-elements-content"></a>
-            <section class="ceux-content ceux-section">
-                <h1 class="ceux-heading">Content Structures</h1>
-
-                <div class="ceux-content-editorial ceux-subsection">
-                    <h2 class="ceux-heading">Editorial Block</h2>
-                    <p>The editorial block is a bit unique in its construction. There is a standard <code>.content-editorial</code> component, but it generally will require a context to be useful. Each of the editorial blocks below has a different context, listed beforehand. Typically, these will be art-directed and delivered as completed HTML and CSS for implementation.</p>
-                    <p>It should also be noted that every editorial block has content set to the <code>$site-max-width</code> but expands well beyond that at 100% width for its background image.</p>
-                </div>
-            </section>
-            <h2 class="ceux-editorial-heading">Generic Content Editorial <i class="icon fa fa-arrow-circle-down"></i></h2>
-            <div class="content-editorial editorial_cooking_with_gas">
-                <div class="content-editorial-container">
-                    <h1 class="content-editorial-headline">Now We're Cooking With Gas</h1>
-                    <h2 class="content-editorial-subhead">Let's kick the tires and light the fires.</h2>
-                    <div class="content-editorial-cta">
-                        <p>Good morning. In less than an hour, aircraft from here will join others from around the world. And you will be launching the largest aerial battle in the history of mankind. "Mankind." That word should have new meaning for all of us today. We can't be consumed by our petty differences anymore. We will be united in our common interests. Perhaps it's fate that today is the Fourth of July, and you will once again be fighting for our freedom... Not from tyranny, oppression, or persecution... but from annihilation. We are fighting for our right to live. To exist. And should we win the day, the Fourth of July will no longer be known as an American holiday, but as the day the world declared in one voice: "We will not go quietly into the night!" We will not vanish without a fight! We're going to live on! We're going to survive! Today we celebrate our Independence Day!</p>
-                        <button class="btn-primary btn-larger" type="button">Hack Alien Mothership</button>
-                    </div>
-                </div>
-            </div>
-            <h2 class="ceux-editorial-heading">Generic Content Editorial - "Big Talk" Variant <i class="icon fa fa-arrow-circle-down"></i></h2>
-            <div class="content-editorial content-editorial-bigtalk editorial_energy_at_dusk">
-                <div class="content-editorial-container">
-                    <h1 class="content-editorial-headline">Lower Your Energy Bills</h1>
-                    <h2 class="content-editorial-subhead">The Choice is in Your Hands</h2>
-                    <div class="content-editorial-cta">
-                        <input class="input-extrawide" type="text" placeholder="Type your address (i.e. 'Plano, TX 77070')"> <button class="btn-primary" type="button">Find Your Energy</button>
-                    </div>
-                </div>
-            </div>
-            <section class="ceux-content ceux-section">
-                <div class="ceux-content-data ceux-subsection">
-                    <h2 class="ceux-heading">Data Tables</h2>
-                    <div class="ceux-example">
-                        <div class="ceux-result">
-                            <table>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Date</th>
-                                    <th>Rating</th>
-                                </tr>
-                                <tr>
-                                    <td>Enterprise Energy</td>
-                                    <td><time datetime="2014-01-01T00:00:00-700">Jan 1, 2014</time></td>
-                                    <td>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star-o"></i>
-                                        <i class="icon fa fa-star-o"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Voyager Energy</td>
-                                    <td><time datetime="2014-02-05T00:00:00-700">Feb 5, 2014</time></td>
-                                    <td>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star-half-o"></i>
-                                        <i class="icon fa fa-star-o"></i>
-                                        <i class="icon fa fa-star-o"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Next Generation Energy</td>
-                                    <td><time datetime="2014-03-07T00:00:00-700">Mar 7, 2014</time></td>
-                                    <td>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Deep Solar Nine</td>
-                                    <td><time datetime="2014-04-11T00:00:00-700">Apr 11, 2014</time></td>
-                                    <td>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star-o"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Star Energy</td>
-                                    <td><time datetime="2014-05-15T00:00:00-700">May 15, 2014</time></td>
-                                    <td>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star-half-o"></i>
-                                        <i class="icon fa fa-star-o"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Star Electrical</td>
-                                    <td><time datetime="2014-06-21T00:00:00-700">Jun 21, 2014</time></td>
-                                    <td>
-                                        <i class="icon fa fa-star"></i>
-                                        <i class="icon fa fa-star-half-o"></i>
-                                        <i class="icon fa fa-star-o"></i>
-                                        <i class="icon fa fa-star-o"></i>
-                                        <i class="icon fa fa-star-o"></i>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="ceux-code"><pre><code class="html">TBD</code></pre></div>
-                    </div>
-                </div>
-
-                <div class="ceux-content-grids ceux-subsection">
-                    <h2 class="ceux-heading">Content Grids</h2>
-                    <div class="ceux-example ceux-vertical">
-                        <div class="ceux-result">
-                            <ol class="slats h-feed">
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <p class="p-summary">For the first time in two years, Pennsylvania Electricity Prices have dropped for two consecutive months.</p>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
-                                        <p class="p-summary">AT&amp;T Stadium, nicknamed JerryWorld, is the largest energy consuming sports stadium in the country.</p>
-                                        <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <p class="p-summary">Choose Energy, the nation's leading energy marketplace, announced today a small-business offering in New York, Illinois, and Pennsylvania.</p>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="ceux-code"><pre><code>TBD.</code></pre></div>
-                    </div>
-
-                    <div class="ceux-example">
-                        <div class="ceux-result">
-                            <ol class="slats slats-compact h-feed">
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
-                                        <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="ceux-code"><pre><code>TBD.</code></pre></div>
-                    </div>
-
-                    <div class="ceux-example ceux-vertical">
-                        <div class="ceux-result">
-                            <ol class="grid h-feed">
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
-                                        <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                            </ol>
-
-                        </div>
-                        <div class="ceux-code"><pre><code>TBD.</code></pre></div>
-                    </div>
-
-
-                    <div class="ceux-example ceux-vertical">
-                        <div class="ceux-result">
-                            <ol class="grid grid-compact h-feed">
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
-                                        <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small cityes</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small cityes</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small cityes</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small cityes</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small cityes</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small cityes</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                            </ol>
-
-                        </div>
-                        <div class="ceux-code"><pre><code>TBD.</code></pre></div>
-                    </div>
-
-                    <div class="ceux-example ceux-vertical">
-                        <div class="ceux-result">
-                            <ol class="grid grid-large h-feed">
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
-                                        <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                            </ol>
-
-                        </div>
-                        <div class="ceux-code"><pre><code>TBD.</code></pre></div>
-                    </div>
-
-                    <div class="ceux-example ceux-vertical">
-                        <div class="ceux-result">
-                            <ol class="grid grid-jumbo h-feed">
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
-                                        <time datetime="2014-09-03T13:00-700" class="dt-published">September 3<sup>rd</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                                <li class="grid-item h-entry">
-                                    <a class="u-url" href="#">
-                                        <div class="img-wrapper">
-                                            <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
-                                            <div class="img-overlay">
-                                                <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
-                                            </div>
-                                        </div>
-                                        <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
-                                        <time datetime="2014-08-12T13:00-700" class="dt-published">August 12<sup>th</sup>, 2014</time>
-                                    </a>
-                                </li>
-                            </ol>
-
-                        </div>
-                        <div class="ceux-code"><pre><code>TBD.</code></pre></div>
-                    </div>
-                </div>
-            </section>
-            </div>
-
-
-
 
 </main>
 <ce-footer variant="light">
@@ -2240,6 +1705,12 @@ p q r s t u v w x y z { | } ~
                 </ul>
             </div>
             <div class="fnav-box">
+                <h5><a href="foundations.html">Foundations</a></h5>
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="foundations.html">Foundations</a></li>
+                </ul>
+            </div>
+            <div class="fnav-box">
                 <h5><a href="elements.html">Elements</a></h5>
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link" href="elements.html#ceux-elements-typographical">Typographical</a></li>
@@ -2267,7 +1738,7 @@ p q r s t u v w x y z { | } ~
                     <li class="nav-item"><a class="nav-link" href="https://chooseenergy.com">ChooseEnergy.com</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://demo.chooseenergy.com">New ChooseEnergy.com</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://demo.chooseenergy.com/shop/">New Shopping &amp; Checkout</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://demo.chooseenergy.com:8443/admin">Internal &amp; Supplier Admin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://admin.chooseenergy.com">Internal &amp; Supplier Admin</a></li>
                 </ul>
             </div>
     </ce-footer-nav>
@@ -2281,7 +1752,7 @@ p q r s t u v w x y z { | } ~
                 </ul>
             </div>
             <div class="footer-address">
-                <address class="h-adr"><span class="p-label">Choose Energy, Inc.</span> <span class="p-street-address">330 Townsend St., Suite 212</span>, <span class="p-locality">San Francisco</span>, <span class="p-region"><abbr title="California">CA</abbr></span> <span class="p-postal-code">94107</span></address>
+                <address class="h-adr"><span class="p-label">Choose Energy, Inc.</span> <span class="p-street-address">465 California St., Suite 1250</span>, <span class="p-locality">San Francisco</span>, <span class="p-region"><abbr title="California">CA</abbr></span> <span class="p-postal-code">94104</span></address>
             </div>
             <div class="footer-legal">
                 <ul class="legal-links">
@@ -2332,6 +1803,7 @@ p q r s t u v w x y z { | } ~
                     <li class="nav-item"><a class="nav-link" href="#ceux-brand-writing">Writing</a></li>
                 </ul>
             </li>
+            <li class="nav-item"><a class="nav-link" href="foundations.html">Foundations</a></li>
             <li class="nav-item">
                 <a class="nav-link" href="elements.html">Elements</a>
                 <ul class="nav-list nav-nested">
@@ -2349,7 +1821,8 @@ p q r s t u v w x y z { | } ~
     </nav>
     <nav class="nav nav-secondary">
         <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="#">Secondary Nav Item</a></li>
+            <li class="nav-item"><a class="nav-link" href="changelog.html">Changelog</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://michaelowens.typeform.com/to/BhRWnU">Submit a Request</a></li>
         </ul>
     </nav>
 </ce-sidenav>
@@ -2360,6 +1833,7 @@ p q r s t u v w x y z { | } ~
 <script src="bower_components/ce-components/dist/ce-components-v0.0.1.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="js/ceux.js"></script>
+<div id="gridder"></div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
 <script>
