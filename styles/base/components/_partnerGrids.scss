@@ -6,7 +6,7 @@
         margin-bottom: 2em;
     }
     &.grid.gridpage {
-        @include breakpoint($mq-under-tablet) {
+        @include breakpoint($mq-sm-max) {
             @include flex-wrap(wrap);
         }
     }
