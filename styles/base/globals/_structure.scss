@@ -13,3 +13,8 @@ body {
         padding-top: 4em;
     }
 }
+
+// Used to stop visible background scrolling when a modal is open.
+.modal-open {
+    overflow: hidden;
+}
