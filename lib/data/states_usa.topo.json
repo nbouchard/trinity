@@ -7,7 +7,12 @@
             "geometries": [{
                 "type": "Polygon",
                 "properties": {
-                    "name": "Massachusetts"
+                    "name": "Massachusetts",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 1,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-MA",
                 "arcs": [
@@ -16,7 +21,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Minnesota"
+                    "name": "Minnesota",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-MN",
                 "arcs": [
@@ -25,7 +35,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Montana"
+                    "name": "Montana",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-MT",
                 "arcs": [
@@ -34,7 +49,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "North Dakota"
+                    "name": "North Dakota",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-ND",
                 "arcs": [
@@ -43,7 +63,12 @@
             }, {
                 "type": "MultiPolygon",
                 "properties": {
-                    "name": "Hawaii"
+                    "name": "Hawaii",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-HI",
                 "arcs": [
@@ -66,7 +91,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Idaho"
+                    "name": "Idaho",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-ID",
                 "arcs": [
@@ -75,7 +105,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Washington"
+                    "name": "Washington",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-WA",
                 "arcs": [
@@ -84,7 +119,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Arizona"
+                    "name": "Arizona",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-AZ",
                 "arcs": [
@@ -93,7 +133,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "California"
+                    "name": "California",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 1,
+                        "residential_gas": 1
+                    }
                 },
                 "id": "USA-CA",
                 "arcs": [
@@ -102,7 +147,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Colorado"
+                    "name": "Colorado",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-CO",
                 "arcs": [
@@ -111,7 +161,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Nevada"
+                    "name": "Nevada",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-NV",
                 "arcs": [
@@ -120,7 +175,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "New Mexico"
+                    "name": "New Mexico",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-NM",
                 "arcs": [
@@ -129,7 +189,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Oregon"
+                    "name": "Oregon",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-OR",
                 "arcs": [
@@ -138,7 +203,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Utah"
+                    "name": "Utah",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-UT",
                 "arcs": [
@@ -147,7 +217,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Wyoming"
+                    "name": "Wyoming",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-WY",
                 "arcs": [
@@ -156,7 +231,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Arkansas"
+                    "name": "Arkansas",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-AR",
                 "arcs": [
@@ -165,7 +245,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Iowa"
+                    "name": "Iowa",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-IA",
                 "arcs": [
@@ -174,7 +259,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Kansas"
+                    "name": "Kansas",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-KS",
                 "arcs": [
@@ -183,7 +273,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Missouri"
+                    "name": "Missouri",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-MO",
                 "arcs": [
@@ -192,7 +287,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Nebraska"
+                    "name": "Nebraska",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-NE",
                 "arcs": [
@@ -201,7 +301,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Oklahoma"
+                    "name": "Oklahoma",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-OK",
                 "arcs": [
@@ -210,7 +315,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "South Dakota"
+                    "name": "South Dakota",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-SD",
                 "arcs": [
@@ -219,7 +329,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Louisiana"
+                    "name": "Louisiana",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-LA",
                 "arcs": [
@@ -228,7 +343,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Texas"
+                    "name": "Texas",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 1,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-TX",
                 "arcs": [
@@ -237,7 +357,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Connecticut"
+                    "name": "Connecticut",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 1,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-CT",
                 "arcs": [
@@ -246,7 +371,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "New Hampshire"
+                    "name": "New Hampshire",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-NH",
                 "arcs": [
@@ -255,7 +385,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Rhode Island"
+                    "name": "Rhode Island",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-RI",
                 "arcs": [
@@ -264,7 +399,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Vermont"
+                    "name": "Vermont",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-VT",
                 "arcs": [
@@ -273,7 +413,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Alabama"
+                    "name": "Alabama",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-AL",
                 "arcs": [
@@ -282,7 +427,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Florida"
+                    "name": "Florida",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-FL",
                 "arcs": [
@@ -291,7 +441,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Georgia"
+                    "name": "Georgia",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 1,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-GA",
                 "arcs": [
@@ -300,7 +455,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Mississippi"
+                    "name": "Mississippi",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-MS",
                 "arcs": [
@@ -309,7 +469,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "South Carolina"
+                    "name": "South Carolina",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-SC",
                 "arcs": [
@@ -318,7 +483,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Illinois"
+                    "name": "Illinois",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 1,
+                        "residential_gas": 1
+                    }
                 },
                 "id": "USA-IL",
                 "arcs": [
@@ -327,7 +497,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Indiana"
+                    "name": "Indiana",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-IN",
                 "arcs": [
@@ -336,7 +511,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Kentucky"
+                    "name": "Kentucky",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-KY",
                 "arcs": [
@@ -345,7 +525,12 @@
             }, {
                 "type": "MultiPolygon",
                 "properties": {
-                    "name": "North Carolina"
+                    "name": "North Carolina",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-NC",
                 "arcs": [
@@ -359,7 +544,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Ohio"
+                    "name": "Ohio",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 1,
+                        "residential_gas": 1
+                    }
                 },
                 "id": "USA-OH",
                 "arcs": [
@@ -368,7 +558,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Tennessee"
+                    "name": "Tennessee",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-TN",
                 "arcs": [
@@ -377,7 +572,12 @@
             }, {
                 "type": "MultiPolygon",
                 "properties": {
-                    "name": "Virginia"
+                    "name": "Virginia",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-VA",
                 "arcs": [
@@ -391,7 +591,12 @@
             }, {
                 "type": "MultiPolygon",
                 "properties": {
-                    "name": "Wisconsin"
+                    "name": "Wisconsin",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-WI",
                 "arcs": [
@@ -405,7 +610,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "West Virginia"
+                    "name": "West Virginia",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-WV",
                 "arcs": [
@@ -414,7 +624,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Delaware"
+                    "name": "Delaware",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 1,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-DE",
                 "arcs": [
@@ -423,7 +638,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "District of Columbia"
+                    "name": "District of Columbia",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 0,
+                        "residential_gas": 1
+                    }
                 },
                 "id": "USA-DC",
                 "arcs": [
@@ -432,7 +652,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Maryland"
+                    "name": "Maryland",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 1,
+                        "residential_gas": 1
+                    }
                 },
                 "id": "USA-MD",
                 "arcs": [
@@ -441,7 +666,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "New Jersey"
+                    "name": "New Jersey",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 1,
+                        "residential_gas": 1
+                    }
                 },
                 "id": "USA-NJ",
                 "arcs": [
@@ -450,7 +680,12 @@
             }, {
                 "type": "MultiPolygon",
                 "properties": {
-                    "name": "New York"
+                    "name": "New York",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 1,
+                        "residential_gas": 1
+                    }
                 },
                 "id": "USA-NY",
                 "arcs": [
@@ -464,7 +699,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Pennsylvania"
+                    "name": "Pennsylvania",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 1,
+                        "residential_gas": 1
+                    }
                 },
                 "id": "USA-PA",
                 "arcs": [
@@ -473,7 +713,12 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Maine"
+                    "name": "Maine",
+                    "energy": {
+                        "residential_electricity": 1,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-ME",
                 "arcs": [
@@ -482,7 +727,12 @@
             }, {
                 "type": "MultiPolygon",
                 "properties": {
-                    "name": "Michigan"
+                    "name": "Michigan",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 1,
+                        "residential_gas": 1
+                    }
                 },
                 "id": "USA-MI",
                 "arcs": [
@@ -502,7 +752,12 @@
             }, {
                 "type": "MultiPolygon",
                 "properties": {
-                    "name": "Alaska"
+                    "name": "Alaska",
+                    "energy": {
+                        "residential_electricity": 0,
+                        "commercial_electricity": 0,
+                        "residential_gas": 0
+                    }
                 },
                 "id": "USA-AK",
                 "arcs": [
