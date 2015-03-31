@@ -403,9 +403,16 @@
             position: absolute;
             top: $grid-gutter-width;
             right: $grid-gutter-width;
-        }
-        .plan-page-actions {
+            color: $color-white-pure;
+            text-decoration: none;
 
+            &:hover,
+            &:focus {
+                color: $color-orange-apricot-light;
+            }
+        }
+        .plan-body {
+            padding-top: $grid-gutter-width;
         }
         .plan-info {
             @include cg-row();
@@ -415,7 +422,6 @@
 
             .plan-data {
                 @include cg-1of3(true, true, true);
-                text-align: left;
             }
         }
         .plan-extras-row {
@@ -424,10 +430,6 @@
             .plan-extra {
                 @include cg-1of3(true, true, true);
             }
-        }
-
-        .x-schemaProp {
-            display: block;
         }
     }
 }
