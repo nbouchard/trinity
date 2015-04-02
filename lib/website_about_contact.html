@@ -10,6 +10,13 @@
     <link href="css/styles.css" media="screen, projection" rel="stylesheet" type="text/css">
     <script src="js/d3.v3.min.js"></script>
     <script src="js/topojson.v1.min.js"></script>
+
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+    <script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoiY2hvb3NlZW5lcmd5IiwiYSI6IlJoUGRZSTQifQ.xXzW69lynBRMYL-Qsb8Zmw';
+    </script>
+
     <script>
       (function(d) {
         var config = {
@@ -50,27 +57,17 @@
         </ul>
     </nav>
 </ce-header>
-<main class="site-main">
+<main class="site-main about_pages">
 <!-- Start Page Template Contents -->
 
-    <div class="content-editorial content-editorial-translucent content-editorial-noheight" style="background: url('images/photography/Golden_Gate_Night.jpg') no-repeat; background-size: cover;">
+    <div class="content-editorial content-editorial-translucent content-editorial-noheight" style="background: url('images/photography/SanFrancisco.jpg') no-repeat; background-size: cover; background-position: center;">
         <div class="content-editorial-container">
             <h2 class="content-editorial-headline">Contact Us</h2>
-            <nav class="breadcrumbs">
-                <ol class="nav-list">
-                    <li class="nav-item"><a href="website_homepage_residential.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="website_about_overview.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="website_about_contact.html" class="nav-link">Contact Us</a></li>
-                </ol>
-            </nav>
             <div class="content-editorial-panes panes">
-                <div class="pane">
+                <div class="cg-1of3 panes">
                     <p>At Choose Energy, we connect you with the best energy available. We are not your Utility or Energy Supplier. If you have questions about your current service, please contact your energy supplier from the numbers on your energy bill.</p>
-                    <p>Can't find the number on your bill?</p>
-                    <p><a href="#">Find Your Supplier's Information &raquo;</a></p>
-                    <p><a href="#">Find Your Utility's Information &raquo;</a></p>
                 </div>
-                <div class="pane">
+                <div class="cg-2of3">
                     <form>
                         <div class="form-row">
                             <label class="label-wide">Name</label>
@@ -97,35 +94,63 @@
             </div>
         </div>
     </div>
-    <div class="content-editorial content-editorial-noheight content-editorial-bg-light">
+    <div class="content-editorial content-editorial-noheight content-editorial-bg-white">
         <div class="content-editorial-cta content-editorial-infogrid">
-            <div class="content-editorial-infogrid-cell is-centered">
-                <p><i class="icon fa fa-map-marker"></i></p>
-                <h5>San Francisco, California</h5>
-                <p>330 Townsend St., Suite 212<br>
+            <div class="content-editorial-infogrid-cell is-centered" onclick="change_map('sf');">
+                <p><i class="icon contact-icon fa fa-map-marker"></i></p>
+                <h3>San Francisco, California</h3>
+                <p>465 California Street, Suite 1250<br>
                 Support@ChooseEnergy.com<br>
                 855-419-3586</p>
             </div>
-            <div class="content-editorial-infogrid-cell is-centered">
-                <p><i class="icon fa fa-map-marker"></i></p>
-                <h5>Plano, Texas</h5>
+            <div class="content-editorial-infogrid-cell is-centered" onclick="change_map('pl');">
+                <p><i class="icon contact-icon fa fa-map-marker"></i></p>
+                <h3>Plano, Texas</h3>
                 <p>6217 Chapel Hill Rd Suite 300<br>
                 Support@ChooseEnergy.com<br>
                 855-419-3586</p>
             </div>
-            <div class="content-editorial-infogrid-cell is-centered">
-                <p><i class="icon fa fa-map-marker"></i></p>
-                <h5>Chicago, Illinois</h5>
-                <p>1234 Placeholder St Suite 123<br>
+            <div class="content-editorial-infogrid-cell is-centered" onclick="change_map('ch');">
+                <p><i class="icon contact-icon fa fa-map-marker"></i></p>
+                <h3>Chicago, Illinois</h3>
+                <p>222 W. Merchandise Mart Plaza, 12th Floor<br>
                 Support@ChooseEnergy.com<br>
                 855-419-3586</p>
             </div>
         </div>
     </div>
-    <div class="content-editorial content-editorial-bg-info">
-        Map goes here
+    <div id="map_container" class="content-editorial content-editorial-bg-info">
+        <div id="sf-map" class="contact-map"></div>
     </div>
+    <script>
+        var latitude = "37.792860";
+        var longitude = "-122.402215";
+        var office_map = L.mapbox.map('sf-map', 'chooseenergy.lkga2cfj', {
+            zoomControl: false,
+            scrollWheelZoom: false,
+            touchZoom: false,
 
+        })
+        .setView([latitude, longitude], 14);
+
+        function change_map(map) {
+            if (map == 'sf') {
+                var latitude = 37.792860;
+                var longitude = -122.402215;
+            } else if (map == 'pl') {
+                var latitude = 33.033172;
+                var longitude = -96.835545;
+            } else if (map == "ch") {
+                var latitude = 41.888085;
+                var longitude = -87.634929;
+            } else {
+                var latitude = 37.792860;
+                var longitude = -122.402215;
+            }
+            office_map.setView([latitude, longitude], 14);
+
+        }
+    </script>
 <!-- End Page Template Contents -->
 </main>
 <ce-footer variant="light">

@@ -961,6 +961,31 @@ section {
 // Ends temp namespace
 }
 
+.about_pages {
+    .content-editorial-infogrid-cell {
+        cursor: pointer;
+        &:hover {
+            background: #fafafa;
+        }
+    }
+    .contact-map {
+        width:100%; 
+        height:800px; 
+    }
+    .contact-icon {
+        font-size: 32px;
+        color: $color-green-shamrock;
+    }
+    .panes {
+        font-size: 18px;
+        .form-row {
+            label {
+                display:inline-block; 
+                width:100px;
+            }
+        }
+    }
+}
 
 
 
