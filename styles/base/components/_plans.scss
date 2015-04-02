@@ -431,6 +431,44 @@
                 @include cg-1of3(true, true, true);
             }
         }
+        .plan-page-label {
+
+        }
+
+        // Plan Info Sections
+        .plan-info {
+            @include cg-row();
+        }
+        .plan-big-section {
+            @include cg-1of2();
+        }
+        .plan-section-header {
+            font-size: $font-size-huge;
+            padding: $grid-gutter-width;
+            text-align: center;
+        }
+
+        // Plan Supplier Info
+        .supplier-details {
+            @include cg-row();
+        }
+        .supplier-logo {
+            @include cg-1of2();
+        }
+        .supplier-rating {
+            @include cg-1of2();
+        }
+        .supplier-description {
+            padding: $grid-gutter-width;
+            text-align: left;
+        }
+
+        // Plan FAQs
+        .plan-faq-list {
+            list-style: none;
+            margin: 0;
+            padding: $grid-gutter-width;
+        }
     }
 }
 
