@@ -1001,12 +1001,36 @@ section {
         color: $color-green-shamrock;
     }
     .panes {
-        font-size: 18px;
+        font-size: 1.2em;
         .form-row {
             label {
                 display:inline-block; 
                 width:100px;
             }
+        }
+        .pane {
+            img {
+                width:100%;
+            }
+        }
+    }
+    .ten-based-grid {
+        width:20%;
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+        float: left;
+        @media screen and (max-width: $screen-sm-max) {
+            width:50%;
+            margin-top: 1em;
+            &.full {
+                width:100%;
+            }
+        }
+        @media screen and (max-width: $screen-xs-max) {
+            width:100%;
+            margin-top: 2em;
         }
     }
     .media-articles {
@@ -1051,6 +1075,44 @@ section {
                         }
                     }
                 }
+        }
+    }
+    .stats {
+        max-width: $site-max-width;
+
+        margin: 7em auto;
+        height: 13em;
+        font-size: 1.2em;
+        dl {
+            text-align: center;
+            dt {
+                font-size: 3.5em;
+                color: $color-blue-curious;
+                span {
+                    font-size: .4em;
+                }
+            }
+            dd {
+                margin-left: 0;
+            }
+        }
+        button {
+            margin-top: 1em;
+        }
+        @media screen and (max-width: $screen-sm-max) {
+            input {
+                width: 80%;
+                margin: 0 10%;
+            }
+            button {
+                width: 80%;
+                margin: 1em 10% 10% 10%;
+            }
+        }
+    }
+    .white-text-link {
+        a {
+            color: $color-white-pure;
         }
     }
 }
