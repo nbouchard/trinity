@@ -960,6 +960,30 @@ section {
 }
 // Ends temp namespace
 }
+.colorful {
+    article {
+        border-color: $color-green-shamrock;
+        &:nth-child(3n+0) {
+            border-color: $color-blue-curious;
+            .caption {
+                background: $color-blue-curious;
+            }
+        }
+        &:nth-child(3n+1) {
+            border-color: $color-orange-sun;
+            .caption {
+                background: $color-orange-sun;
+            }
+        }
+        &:nth-child(3n+2) {
+            border-color: $color-green-shamrock;
+            .caption {
+                background: $color-green-shamrock;
+            }
+        }
+    }
+}
+
 
 .about_pages {
     .content-editorial-infogrid-cell {
@@ -985,6 +1009,50 @@ section {
             }
         }
     }
+    .media-articles {
+        width: 100%;
+        article {
+            width: 31.32%;
+            margin: 0 1% 2em;
+            position: relative;
+            float: left;
+            border-style: solid;
+            border-width: 1px;
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    color: $color-gray-charcoal;
+                    .caption {
+                        width: 100%;
+                        position: absolute;
+                        padding: 1em;
+                        color: $color-white-pure;
+                        bottom: 0;
+                    }
+                    h3 {
+                        height: 4em;
+                        padding: 1em;
+                    }
+                    p {
+                        height: 12em;
+                        padding: 1em;
+                        font-weight: $font-weight-body;
+                    }
+                }
+                &:hover {
+                    border: 1px solid $color-gray-charcoal;
+                    a {
+                        h3 {
+                            color: $color-gray-charcoal;
+                        }
+                        .caption {
+                            background: $color-gray-charcoal;
+                        }
+                    }
+                }
+        }
+    }
 }
 
 .in-the-media {
@@ -998,6 +1066,10 @@ section {
         font-size: 3.5em;
         padding-top: .75em;
         padding-bottom: .25em;
+        @include breakpoint($mq-md-max) {
+            padding-left: .5em;
+            padding-right: .5em;
+        }
     }
     .block { 
         display: table;
