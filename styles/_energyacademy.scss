@@ -1080,14 +1080,14 @@ section {
     .stats {
         max-width: $site-max-width;
 
-        margin: 7em auto;
-        height: 13em;
+        margin: 0 auto;
+        height: 19em;
         font-size: 1.2em;
+        color: $color-white-pure;
         dl {
             text-align: center;
             dt {
                 font-size: 3.5em;
-                color: $color-blue-curious;
                 span {
                     font-size: .4em;
                 }
@@ -1187,6 +1187,7 @@ section {
         text-align: center;
     }
 }
+
 
 
 
