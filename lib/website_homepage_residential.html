@@ -10,6 +10,14 @@
     <link href="css/styles.css" media="screen, projection" rel="stylesheet" type="text/css">
     <script src="js/d3.v3.min.js"></script>
     <script src="js/topojson.v1.min.js"></script>
+
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+    
+    <script>
+    L.mapbox.accessToken = 'pk.eyJ1Ijoic3RsbHdsbCIsImEiOiJZcE5xQ3dJIn0.wMyd2judQMqFP7XzQ90AGg';
+    </script>
+
     <script>
       (function(d) {
         var config = {
@@ -94,10 +102,12 @@
             <div class="locations-mapbox">
                 <div id="choose-mapinfo" class="locations-info"><p>Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in their area. The power of choice has ushered in major advantages for customers, including: better customer service, more competitive rates as well as special offers and rewards.
                 </p>
-                    <h2 id="choose-mapinfo-state"></h2>
-                    <button id="choose-mapinfo-residential-electricity" class="btn-primary" onclick="show_energy_type('residential-electricity')"><i class="fa fa-bolt">  Residential Electricity</i></button>
-                    <button id="choose-mapinfo-residential-gas" class="btn-info btn-default" onclick="show_energy_type('residential-gas')"><i class="fa fa-car"></i> Residential Natural Gas</button>
-                    <button id="choose-mapinfo-commercial-electricity" class="btn-bright" onclick="show_energy_type('commercial-electricity')"><i class="fa fa-bank"></i> Commercial Electricity</button>
+                    <h2 id="choose-mapinfo-state">National</h2>
+                    <h4>Products:</h4>
+                    <div id="choose-mapinfo-residential-electricity" class="locations-product green active"><a href="#">Residential Electricity</a></div>
+                    <div id="choose-mapinfo-residential-gas" class="locations-product blue active"><a href="#">Residential Natural Gas </a></div>
+                    <div id="choose-mapinfo-commercial-electricity" class="locations-product orange active"><a href="#">Commercial Electricity </a></div>
+                    <div id="choose-mapinfo-none" class="locations-product green">We currently do not offer any products in this State.</div>
                 </div>
                 <div id="choose-map" class="locations-map map"><h3 class="locations-map-state">States We Serve</h3></div>
                 <script>
@@ -132,7 +142,7 @@
                         .attr("d", path)
                         .attr("class", function(d) {
                             if (d.properties.energy.residential_electricity || d.properties.energy.residential_gas || d.properties.energy.commercial_electricity === 1) {
-                                return "map-states map-green";
+                                return "map-blue";
                             } else {
                                 //console.log("map-states only");
                                 return "map-states";
@@ -161,25 +171,30 @@
                         k = 3;
                         centered = d;
                         d3.select('#choose-mapinfo-state').text(d.properties.name);
-                        d3.select('#choose-mapinfo-residential-electricity').attr('disabled', function() {
+                        d3.select('#choose-mapinfo-residential-electricity').classed('active', function() {
                             if (d.properties.energy.residential_electricity === 1) {
-                                return null;
-                            } else {
                                 return true;
+                            } else {
+                                return false;
                             }
                         });
-                        d3.select('#choose-mapinfo-residential-gas').attr('disabled', function() {
+                        d3.select('#choose-mapinfo-residential-gas').classed('active', function() {
                             if (d.properties.energy.residential_gas === 1) {
-                                return null;
-                            } else {
                                 return true;
+                            } else {
+                                return false;
                             }
                         });
-                        d3.select('#choose-mapinfo-commercial-electricity').attr('disabled', function() {
+                        d3.select('#choose-mapinfo-commercial-electricity').classed('active', function() {
                             if (d.properties.energy.commercial_electricity === 1) {
-                                return null;
-                            } else {
                                 return true;
+                            } else {
+                                return false;
+                            }
+                        });
+                        d3.select('#choose-mapinfo-none').classed('active', function() {
+                            if (d.properties.energy.residential_electricity !== 1 &&  d.properties.energy.residential_gas !== 1 && d.properties.energy.commercial_electricity !== 1) {
+                                return true
                             }
                         });
                         d3.selectAll("path").classed("map-selected", false);
@@ -189,15 +204,18 @@
                         y = height / 2;
                         k = 1;
                         centered = null;
-                        d3.select('#choose-mapinfo-state').text("");
-                        d3.select('#choose-mapinfo-residential-electricity').attr('disabled', function() {
-                            return null;
+                        d3.select('#choose-mapinfo-state').text("National");
+                        d3.select('#choose-mapinfo-residential-electricity').classed('active', function() {
+                            return true;
                         });
-                        d3.select('#choose-mapinfo-residential-gas').attr('disabled', function() {
-                            return null;
+                        d3.select('#choose-mapinfo-residential-gas').classed('active', function() {
+                            return true;
                         });
-                        d3.select('#choose-mapinfo-commercial-electricity').attr('disabled', function() {
-                            return null;
+                        d3.select('#choose-mapinfo-commercial-electricity').classed('active', function() {
+                            return true;
+                        });                        
+                        d3.select('#choose-mapinfo-none').classed('active', function() {
+                            return false;
                         });
 
                         d3.select(this).classed("map-selected", false);
@@ -214,47 +232,6 @@
                     .style("stroke-width", 1.5 / k + "px");
                   // d3.select(this).remove();
 
-                }
-                function show_energy_type(type, d) {
-                    if (type == 'commercial-electricity') {
-                        console.log("CE selected");
-
-                        usa.selectAll("path").attr("class", function(d) {
-
-                            if (d.properties.energy.commercial_electricity === 1) {
-                                return "map-states map-orange";
-                            } else {
-                                return "map-states";
-                            }
-                        });
-
-                    } else if (type == 'residential-electricity') {
-                        console.log("RE selected");
-                        
-                        usa.selectAll("path").attr("class", function(d) {
-
-                            if (d.properties.energy.residential_electricity === 1) {
-                                return "map-states map-green";
-                            } else {
-                                return "map-states";
-                            }
-                        });
-
-                    } else if (type == 'residential-gas') {
-                        console.log("RG selected");
-
-                        usa.selectAll("path").attr("class", function(d) {
-
-                            if (d.properties.energy.residential_gas === 1) {
-                                return "map-states map-blue";
-                            } else {
-                                return "map-states";
-                            }
-                        });
-
-                    } else {
-                        console.log("We have a problem.");
-                    }
                 }
                 </script>
             </div>
