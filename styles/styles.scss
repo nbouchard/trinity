@@ -1,49 +1,7 @@
 @charset "utf-8";
 
-// Full Reset + Mixins
-@import "compass/css3";
-@import "breakpoint";
-@import "base/plugins/bs";
-@import "base/globals/normalize";
-
-// Create Sprites for the Supplier/Utility Logos
-@import "base/globals/sprites";
-
-// CE Website Base Variables
-@import "base/globals/base";
-
-// CE Website Global Media Queries
-@import "base/globals/mq";
-
-// Animations
-@import "base/globals/animate";
-
-// Grid System
-@import "base/globals/grid";
-
-// Color Pallete
-@import "base/globals/colors";
-
-// Typography Variables and Styles
-@import "base/globals/typography";
-
-// Core Site Structure
-@import "base/globals/structure";
-
-// Logos
-@import "base/globals/logos";
-
-// Buttons
-@import "base/globals/buttons";
-
-// Forms
-@import "base/globals/forms";
-
-// Nav List Pattern
-@import "base/globals/navlist";
-
-// Card System
-@import "base/components/cards";
+// Import all Globals
+@import "base/choose";
 
 // Color Fade Filter
 @import "base/components/colorfade";
@@ -51,12 +9,11 @@
 // CE Countable Component
 @import "base/components/countable";
 
-// CE Header
-@import "base/components/header";
-@import "base/components/adminbar";
-
-// CE Sidenav
-@import "base/components/sidenav";
+// CE Decorators
+@import "base/components/header"; // Site Header Styles
+@import "base/components/adminbar"; // WordPress-related Admin Bar Styles
+@import "base/components/sidenav"; // Site Sidenav Styles
+@import "base/components/footer"; // Site Footer Styles
 
 // CE Navigational Components
 // TODO: Replace Bootstrap component version where applicable
@@ -79,9 +36,6 @@
 @import "base/components/editorial";
 @import "base/components/testimonials";
 @import "base/components/maps";
-
-// CE Footer
-@import "base/components/footer";
 
 // Project-Specific Styles
 // TODO: Deprecate and remove
