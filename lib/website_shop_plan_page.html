@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/tomorrow-night.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
-<body data-ng-class="{'has-sidenav': hasSidenav, 'sidenav-active':sidenavState}" ce-site-body>
+<body class="modal-open" data-ng-class="{'has-sidenav': hasSidenav, 'sidenav-active':sidenavState}" ce-site-body>
 <div id="site" class="site-root">
 <ce-header>
     <h1 class="logo-container"><ce-logo variant="dark" type="hybrid" target="/"></ce-logo></h1>
@@ -56,25 +56,25 @@
     <div class="plan-as-page">
         <section class="plan-card h-product" itemscope itemtype="http://schema.org/Product">
             <div class="plan-page-header">
-                <div class="plan-page-name cg-row">
-                        <h2><a class="plan-name u-url" rel="bookmark" itemprop="url" href="#"><span class="p-name" itemprop="name">12 Month Fixed Rate Plan</span></a> <small class="plan-utility">Commonwealth Edison</small></h2>
+                <div class="plan-page-name">
+                        <h2 class="plan-page-name-container"><a class="plan-name u-url" rel="bookmark" itemprop="url" href="#"><span class="p-name" itemprop="name">12 Month Fixed Rate Plan</span></a> <small class="plan-utility">Commonwealth Edison</small></h2>
                 </div>
-                <a href="#" class="plan-page-closer">Close <i class="icon fa fa-times"></i></a>
+                <a href="website_shop_zipcode.html" class="plan-page-closer">Close <i class="icon fa fa-times"></i></a>
             </div>
-            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="plan-body cg-row">
-                <div class="cg-row">
-                    <div class="plan-callout cg-1of3 x-huge">
+            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="plan-body">
+                <div class="plan-page-section">
+                    <div class="plan-callout">
                         <data class="plan-price plan-data p-price" value="0.126" itemprop="price">
                             <strong class="plan-page-label">Plan Price</strong>
                             <span class="plan-data-value">12.6<span itemprop="priceCurrency" content="USD">¢</span></span>
                             <abbr class="p-unit plan-data-label" title="Cents per kilowatt-hour">per kWh</abbr>
                         </data>
                     </div>
-                    <div class="plan-page-details cg-1of3">
+                    <div class="plan-page-details">
                         <p class="plan-rank"><i class="icon fa fa-star" title="Best Plan"></i> Best Plan for <strong>Houston, TX 77070</strong></p>
                         <p class="plan-description e-description" itemprop="description">Monthly service fee of $4.95 applies. Lock in electricity savings today! Now’s the time to fix your electricity costs. Sign on to our fixed price plan, and lock in your electricity price for 12 months. Enjoy peace of mind with a fixed rate and more money in your pocket.</p>
                     </div>
-                    <div class="plan-page-actions cg-1of3">
+                    <div class="plan-page-actions">
                         <div class="plan-page-popularity is-centered">
                             <data class="p-popularity is-centered" value="10">
                                 <span class="plan-popularity-value">Chosen <strong class="plan-popularity-count">10</strong> Times</span>
@@ -89,41 +89,41 @@
                         </div>
                     </div>
                 </div>
-                <div class="plan-info cg-row">
+                <div class="plan-page-section">
                     <div class="plan-data-row">
-                        <div class="plan-data plan-cost is-centered">
+                        <div class="plan-data plan-cost">
                             <strong class="plan-page-label">Estimated Cost</strong>
                             <data class="plan-data-value p-cost-monthly" value="81.20">$81.20</data>
                             <abbr class="plan-data-label" title="estimated cost of supply in dollars per month">Estimated per Month</abbr>
                         </div>
-                        <div class="plan-data plan-contract is-centered">
+                        <div class="plan-data plan-contract">
                             <strong class="plan-page-label">Plan Term</strong>
                             <data class="plan-data-value p-term" value="12">12 months</data>
                             <data class="plan-data-label p-category" itemprop="category" value="Fixed Term"><i class="icon fa fa-lock"></i> Fixed</data>
                         </div>
-                        <div class="plan-data plan-renewable is-centered">
+                        <div class="plan-data plan-renewable">
                             <strong class="plan-page-label">Renewable</strong>
                             <data class="plan-data-value p-renewable" value="0.09"><i class="icon fa fa-leaf"></i> 9%</data>
                             <span class="plan-data-label">Green Energy</span>
                         </div>
                     </div>
-                    <div class="plan-extras-row">
-                        <div class="plan-extra plan-offers is-centered">
-                            <strong class="plan-page-label">Offers &amp; Incentives</strong>
-                            <ul class="plan-extra-list is-lefted">
+                    <div class="plan-data-row plan-extras">
+                        <div class="plan-data plan-offers">
+                            <strong class="plan-page-label">Offers</strong>
+                            <ul class="plan-data-list">
                                 <li><strong>$50</strong> - Name of the Offer. Offer description that tells a little more about the offer.</li>
                             </ul>
                         </div>
-                        <div class="plan-extra plan-fees is-centered">
-                            <strong class="plan-page-label">Other Fees</strong>
-                            <ul class="plan-extra-list is-lefted">
+                        <div class="plan-data plan-fees">
+                            <strong class="plan-page-label">Fees</strong>
+                            <ul class="plan-data-list">
                                 <li><strong>$50</strong> - Early Termination Fee. Description of the fee.</li>
                                 <li><strong>$4.95</strong> - Name of the Fee. Description of the fee starts. Monthly service fee of $4.95 applies. Description of the fee ends.</li>
                             </ul>
                         </div>
-                        <div class="plan-extra plan-documents is-centered">
+                        <div class="plan-data plan-documents">
                             <strong class="plan-page-label">Documents</strong>
-                            <ul class="plan-extra-list is-lefted">
+                            <ul class="plan-data-list">
                                 <li><a href="#">Environmental Disclosure</a></li>
                                 <li><a href="#">Terms of Service</a></li>
                             </ul>
@@ -162,6 +162,9 @@
                             <li>
                                 <h5>How will changing suppliers impact my bill?</h5>
                                 <p>The plan you choose will only impact the charges on the supply portion of your bill. You will continue to be billed by your utility for the distribution and delivery of your energy.</p>
+                            </li>
+                            <li>
+                                <p class="learn-more"><a href="#">Learn More about Switching Suppliers &rarr;</a></p>
                             </li>
                         </ul>
                     </div>
