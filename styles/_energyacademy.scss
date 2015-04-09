@@ -206,9 +206,11 @@ section {
     height: 26em;
     width:100%;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+
     @include breakpoint($mq-md-max) {
         height: 4em;
     }
+
     img {
         width:100%;
         min-width: 600px;
@@ -908,7 +910,7 @@ section {
             display: block;
             float: left;
             color: $color-gray-ghost;
-        }        
+        }
         time {
             display: block;
             float: left;
@@ -952,7 +954,7 @@ section {
             .edit {
                 margin-left: 1em;
                 a {
-                    color: $color-gray-ghost;                    
+                    color: $color-gray-ghost;
                 }
             }
         }
@@ -993,8 +995,8 @@ section {
         }
     }
     .contact-map {
-        width:100%; 
-        height:800px; 
+        width:100%;
+        height:800px;
     }
     .contact-icon {
         font-size: 32px;
@@ -1004,7 +1006,7 @@ section {
         font-size: 1.2em;
         .form-row {
             label {
-                display:inline-block; 
+                display:inline-block;
                 width:100px;
             }
         }
@@ -1133,7 +1135,7 @@ section {
             padding-right: .5em;
         }
     }
-    .block { 
+    .block {
         display: table;
         height: 300px;
         @include breakpoint($mq-md-max) {
@@ -1183,7 +1185,7 @@ section {
         }
     }
     .paginator-dots {
-        margin-top: 1em; 
+        margin-top: 1em;
         text-align: center;
     }
 }
