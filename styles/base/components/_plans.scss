@@ -29,7 +29,7 @@
     @include breakpoint($mq-sm-max) {
         @include cg-row(false, false);
     }
-    @include breakpoint($mq-sm-max) {
+    @include breakpoint($mq-md-min) {
         @include cg-row(true, true);
     }
 }
@@ -110,10 +110,12 @@
 
         &:hover,
         &:focus {
-            background: $color-gray-charcoal;
+            background: $color-blue-bahama;
         }
 
         &.is-active {
+            background: $color-blue-boston;
+
             .fa-sort,
             .fa-sort-asc,
             .fa-sort-desc {
@@ -153,7 +155,7 @@
         @include cg-row();
         padding-right: $card-padding;
         padding-left: (3 * $card-padding);
-        background: $color-gray-chateau;
+        background: $color-blue-curious-light;
         text-align: center;
 
         .sorter-price,
@@ -173,7 +175,7 @@
             left: 0;
             padding: $grid-gutter-width 0;
             width: 3em;
-            background: $color-gray-chateau;
+            background: $color-blue-curious-light;
             color: $color-white-pure;
             text-align: center;
 
@@ -186,7 +188,7 @@
 
             &:hover,
             &:focus {
-                background: $color-gray-charcoal;
+                background: $color-blue-bahama;
             }
         }
         .sorter-title {
@@ -254,7 +256,15 @@
         font-size: $font-size-smaller;
     }
     .plan-supplier {
-        @include cg-1of2(true, true, true);
+        @include breakpoint($mq-md-max) {
+            @include cg-1of2(true, true, true);
+        }
+        @include breakpoint($mq-lg) {
+            @include cg-item(true, true);
+        }
+        @include breakpoint($mq-xl-min) {
+            @include cg-1of2(true, true, true);
+        }
     }
 
     // Plan Details
@@ -355,6 +365,198 @@
     }
 }
 
+// .plan-as-expanded
+//
+// Plan as Expanded styles force the plan-card object to display as an "Expanded Card" at all sizes.
+//
+// This variant of plan-item has no content breakpoints.
+//
+// Note: This style is a standalone card.
+//
+// Exposes a Mixin for defining all of the plan-card specific styles for the Expanded variant.
+//
+// No styleguide reference
+@mixin planAsExpanded() {
+    @include ce-card(false, false, false);
+
+    .plan-page-header {
+        background: $color-blue-curious;
+        position: relative;
+        width: 100%;
+        height: (4em + (2 * $grid-gutter-width));
+
+        .plan-page-name {
+            @include cg-row();
+            height: 4em;
+            line-height: 2em;
+            padding: $grid-gutter-width;
+
+            .plan-page-name-container {
+                display: inline-block;
+                font-size: $font-size-huge;
+                line-height: inherit;
+            }
+
+            .plan-name {
+                display: block;
+                color: $color-white-pure;
+            }
+            .plan-utility {
+                display: block;
+                font-weight: $font-weight-body;
+                font-style: italic;
+                color: $color-blue-bahama;
+            }
+        }
+    }
+    .plan-page-closer {
+        position: absolute;
+        top: (2 * $grid-gutter-width);
+        right: (2 * $grid-gutter-width);
+        color: $color-white-pure;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $color-orange-apricot-light;
+        }
+    }
+    .plan-body {
+        @include cg-row(true, false);
+    }
+    .plan-page-section {
+        @include cg-row();
+        text-align: center;
+
+        @include breakpoint($mq-md-max) {
+            border-bottom: 1px solid $color-white-lilac;
+        }
+    }
+    .plan-callout {
+        .plan-page-label {
+            background: none;
+            font-size: $font-size-normal;
+            padding: 0;
+        }
+        .plan-data,
+        .plan-data-value,
+        .plan-data-label,
+        .plan-data-list {
+            padding: 0;
+        }
+    }
+    .plan-data-row {
+        @include cg-row();
+
+        .plan-data {
+            @include cg-1of3(false, false, true);
+            padding-bottom: $grid-gutter-width;
+
+            // Overwrite the standard plan-data font-size reduction.
+            @include breakpoint($mq-lg) {
+                font-size: $font-size-normal;
+            }
+        }
+
+        &.plan-extras {
+            .plan-data {
+                @include cg-item(false, false);
+                padding-bottom: $grid-gutter-width;
+            }
+        }
+    }
+    .plan-data-value {
+        padding: $grid-gutter-width;
+        padding-bottom: 0;
+    }
+    .plan-data-label {
+        padding: (1.75 * $grid-gutter-width);
+        padding-top: 0;
+    }
+    .plan-data-list {
+        text-align: left;
+        line-height: 1.6em;
+        padding-bottom: $grid-gutter-width;
+        padding-top: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+    }
+    .plan-page-label {
+        font-size: $font-size-large;
+        display: block;
+        width: 100%;
+        background: $color-white-lilac;
+        padding: $grid-gutter-width;
+    }
+
+    .plan-callout {
+        @include cg-1of2(true, true, true);
+        font-size: $font-size-huge;
+    }
+    .plan-page-details {
+        @include cg-1of2(true, true, true);
+    }
+    .plan-page-actions {
+        display: none;
+    }
+
+    // Plan Info Sections
+    .plan-big-section {
+        @include cg-item(false, false);
+
+        &.plan-faqs {
+            display: none;
+        }
+    }
+    .plan-section-header {
+        padding: $grid-gutter-width;
+        text-align: center;
+        font-size: $font-size-large;
+        background: $color-white-lilac;
+        font-family: $font-family-body;
+    }
+
+    // Plan Supplier Info
+    .supplier-details {
+        @include cg-row();
+    }
+    .supplier-logo {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+        @include breakpoint($mq-md-min) {
+            @include cg-1of2(true, true, true);
+        }
+    }
+    .supplier-rating {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+        @include breakpoint($mq-md-min) {
+            @include cg-1of2(true, true, true);
+        }
+    }
+    .supplier-description {
+        padding: $grid-gutter-width;
+        text-align: left;
+    }
+
+    // Plan FAQs
+    .plan-faq-list {
+        list-style: none;
+        margin: 0;
+        padding: $grid-gutter-width;
+        line-height: 1.6em;
+
+        .learn-more {
+            text-align: right;
+        }
+    }
+}
+.plan-as-expanded {
+    .plan-card {
+        @include planAsExpanded();
+    }
+}
 // .plan-as-page
 //
 // Plan as Page styles force the plan-card object to display as a standalone "Page".
@@ -374,19 +576,27 @@
     overflow: scroll;
 
     .plan-card {
+        padding-top: (6em + $grid-gutter-width);
+
         .plan-page-header {
             background: $color-blue-curious;
-            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: (4em + (2 * $grid-gutter-width));
             padding-right: 6em;
 
             .plan-page-name {
-                @include box-sizing(border-box);
-                min-height: 4em;
+                @include cg-row();
+                height: 4em;
                 line-height: 4em;
                 padding: $grid-gutter-width;
 
-                h2 {
+                .plan-page-name-container {
                     display: inline-block;
+                    font-size: $font-size-huge;
+                    line-height: inherit;
                 }
 
                 .plan-name {
@@ -397,12 +607,23 @@
                     font-style: italic;
                     color: $color-blue-bahama;
                 }
+
+                @include breakpoint($mq-sm-max) {
+                    line-height: 2em;
+
+                    .plan-name {
+                        display: block;
+                    }
+                    .plan-utility {
+                        display: block;
+                    }
+                }
             }
         }
         .plan-page-closer {
             position: absolute;
-            top: $grid-gutter-width;
-            right: $grid-gutter-width;
+            top: (2 * $grid-gutter-width);
+            right: (2 * $grid-gutter-width);
             color: $color-white-pure;
             text-decoration: none;
 
@@ -412,40 +633,123 @@
             }
         }
         .plan-body {
-            padding-top: $grid-gutter-width;
+            @include cg-row(true, false);
         }
-        .plan-info {
+        .plan-page-section {
             @include cg-row();
+            text-align: center;
+
+            @include breakpoint($mq-md-max) {
+                border-bottom: 1px solid $color-white-lilac;
+            }
+        }
+        .plan-callout {
+            .plan-page-label {
+                background: none;
+                font-size: $font-size-normal;
+                padding: 0;
+            }
+            .plan-data,
+            .plan-data-value,
+            .plan-data-label,
+            .plan-data-list {
+                padding: 0;
+            }
         }
         .plan-data-row {
             @include cg-row();
 
             .plan-data {
-                @include cg-1of3(true, true, true);
+
+                @include breakpoint($mq-md-max) {
+                    @include cg-1of3(false, false, true);
+                    padding-bottom: $grid-gutter-width;
+                }
+                @include breakpoint($mq-lg-min) {
+                    @include cg-1of3(true, true, true);
+                }
+
+                // Overwrite the standard plan-data font-size reduction.
+                @include breakpoint($mq-lg) {
+                    font-size: $font-size-normal;
+                }
+            }
+
+            &.plan-extras {
+                @include breakpoint($mq-xs-max) {
+                    .plan-data {
+                        @include cg-item(false, false);
+                        padding-bottom: $grid-gutter-width;
+                    }
+                }
             }
         }
-        .plan-extras-row {
-            @include cg-row();
-
-            .plan-extra {
-                @include cg-1of3(true, true, true);
-            }
+        .plan-data-value {
+            padding: $grid-gutter-width;
+            padding-bottom: 0;
+        }
+        .plan-data-label {
+            padding: (1.75 * $grid-gutter-width);
+            padding-top: 0;
+        }
+        .plan-data-list {
+            line-height: 1.6em;
+            text-align: left;
         }
         .plan-page-label {
+            font-size: $font-size-large;
+            display: block;
+            width: 100%;
+            background: $color-white-lilac;
+            padding: $grid-gutter-width;
+        }
 
+        .plan-callout {
+            font-size: $font-size-huge;
+
+            @include breakpoint($mq-sm-max) {
+                @include cg-item(true, true);
+            }
+            @include breakpoint($mq-md-min) {
+                @include cg-1of3(true, true, true);
+            }
+        }
+        .plan-page-details {
+            @include breakpoint($mq-sm-max) {
+                @include cg-item(true, true);
+            }
+            @include breakpoint($mq-md-min) {
+                @include cg-1of3(true, true, true);
+            }
+        }
+        .plan-page-actions {
+            @include breakpoint($mq-sm-max) {
+                @include cg-item(true, true);
+            }
+            @include breakpoint($mq-md-min) {
+                @include cg-1of3(true, true, true);
+            }
         }
 
         // Plan Info Sections
-        .plan-info {
-            @include cg-row();
-        }
         .plan-big-section {
-            @include cg-1of2();
+            @include breakpoint($mq-xs-max) {
+                @include cg-item(false, false);
+            }
+            @include breakpoint($mq-sm-min) {
+                @include cg-1of2(true, true, true);
+            }
         }
         .plan-section-header {
             font-size: $font-size-huge;
             padding: $grid-gutter-width;
             text-align: center;
+
+            @include breakpoint($mq-xs-max) {
+                font-size: $font-size-large;
+                background: $color-white-lilac;
+                font-family: $font-family-body;
+            }
         }
 
         // Plan Supplier Info
@@ -453,10 +757,20 @@
             @include cg-row();
         }
         .supplier-logo {
-            @include cg-1of2();
+            @include breakpoint($mq-sm-max) {
+                @include cg-item(true, true);
+            }
+            @include breakpoint($mq-md-min) {
+                @include cg-1of2(true, true, true);
+            }
         }
         .supplier-rating {
-            @include cg-1of2();
+            @include breakpoint($mq-sm-max) {
+                @include cg-item(true, true);
+            }
+            @include breakpoint($mq-md-min) {
+                @include cg-1of2(true, true, true);
+            }
         }
         .supplier-description {
             padding: $grid-gutter-width;
@@ -466,8 +780,13 @@
         // Plan FAQs
         .plan-faq-list {
             list-style: none;
+            line-height: 1.6em;
             margin: 0;
             padding: $grid-gutter-width;
+
+            .learn-more {
+                text-align: right;
+            }
         }
     }
 }
