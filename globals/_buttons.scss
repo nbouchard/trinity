@@ -1,38 +1,39 @@
-// Structure
-button, input[type="submit"] {
+// Button Mixins
+@mixin ce-button($bType: 'basic', $bSize: 'normal', $bWidth: 'auto') {
     @include box-sizing(border-box);
     padding: 0.5em 1em;
     height: $button-base;
     vertical-align: middle;
-}
 
-// Presentation
-button, input[type="submit"] {
-    border: none;
-    border-bottom: $button-border-width solid $color-gray-chateau;
-    background: $color-gray-ghost;
-    color: $color-white-pure;
-
-    &:hover,
-    &:focus {
-        outline: none;
-        border-bottom: $button-border-width solid $color-gray-ghost;
-        background: $color-gray-chateau;
-    }
-    &:disabled {
-        border-bottom: $button-border-width solid $color-white-smoke;
-        background: $color-white-smoke;
-        color: $color-gray-chateau;
+    // Basic Button Type
+    @if $bType == 'basic' {
+        border: none;
+        border-bottom: $button-border-width solid $color-gray-chateau;
+        background: $color-gray-ghost;
+        color: $color-white-pure;
 
         &:hover,
         &:focus {
+            outline: none;
+            border-bottom: $button-border-width solid $color-gray-ghost;
+            background: $color-gray-chateau;
+        }
+        &:disabled {
             border-bottom: $button-border-width solid $color-white-smoke;
             background: $color-white-smoke;
-            cursor: not-allowed;
+            color: $color-gray-chateau;
+
+            &:hover,
+            &:focus {
+                border-bottom: $button-border-width solid $color-white-smoke;
+                background: $color-white-smoke;
+                cursor: not-allowed;
+            }
         }
     }
 
-    &.btn-primary {
+    // Primary Action Button Type
+    @if $bType == 'primary' {
         border-bottom: $button-border-width solid $color-green-jewel;
         background: $color-green-shamrock;
         color: $color-white-pure;
@@ -55,7 +56,9 @@ button, input[type="submit"] {
             }
         }
     }
-    &.btn-bright {
+
+    // Bright Call-to-Action Button Type
+    @if $bType == 'bright' {
         border-bottom: $button-border-width solid $color-orange-fiery;
         background: $color-orange-sun;
         color: $color-white-pure;
@@ -78,7 +81,9 @@ button, input[type="submit"] {
             }
         }
     }
-    &.btn-info {
+
+    // Informational Button Type
+    @if $bType == 'info' {
         border-bottom: $button-border-width solid $color-blue-bahama;
         background: $color-blue-curious;
         color: $color-white-pure;
@@ -101,7 +106,9 @@ button, input[type="submit"] {
             }
         }
     }
-    &.btn-dark {
+
+    // Dark Contrast Button Type
+    @if $bType == 'dark' {
         border-bottom: $button-border-width solid $color-gray-charcoal;
         background: $color-gray-chateau;
         color: $color-white-pure;
@@ -125,10 +132,65 @@ button, input[type="submit"] {
         }
     }
 
+    // Modify Button Size
+    @if $bSize == 'extrahuger' {
+        font-size: $font-size-extrahuger;
+    }
+    @if $bSize == 'extrahuge' {
+        font-size: $font-size-extrahuge;
+    }
+    @if $bSize == 'huger' {
+        font-size: $font-size-huger;
+    }
+    @if $bSize == 'huge' {
+        font-size: $font-size-huge;
+    }
+    @if $bSize == 'larger' {
+        font-size: $font-size-larger;
+    }
+    @if $bSize == 'large' {
+        font-size: $font-size-large;
+    }
+    @if $bSize == 'normal' {
+        font-size: $font-size-normal;
+    }
+    @if $bSize == 'smaller' {
+        font-size: $font-size-smaller;
+    }
+    @if $bSize == 'tinier' {
+        font-size: $font-size-tinier;
+    }
+
+    // Modify Button Width
+    @if $bWidth == 'full' {
+        width: 100%;
+    }
+}
+
+button, input[type="submit"] {
+    @include ce-button('basic');
+
+    &.btn-primary {
+        @include ce-button('primary');
+    }
+    &.btn-bright {
+        @include ce-button('bright');
+    }
+    &.btn-info {
+        @include ce-button('info');
+    }
+    &.btn-dark {
+        @include ce-button('dark');
+    }
+
     &.btn-icon {
         width: $button-icon-base;
         height: $button-icon-base;
         line-height: $button-icon-lineheight;
+    }
+
+    &.btn-fullwidth {
+        width: 100%;
     }
 
     &.btn-extrahuger {

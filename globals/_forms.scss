@@ -2,7 +2,15 @@
 
 // Structure
 input {
-    height: $button-base;
+    height: auto;
+
+    &[type="text"],
+    &[type="password"],
+    &[type="submit"],
+    &[type="color"],
+    &[type="search"] {
+        height: $button-base;
+    }
 }
 input, select {
     vertical-align: middle;
@@ -88,7 +96,12 @@ hr {
         background: $color-gray-charcoal;
     }
 }
-input {
+input,
+textarea {
+    &.input-superwide {
+        width: 100%;
+        max-width: 24em;
+    }
     &.input-extrawide {
         width: 100%;
         max-width: 16em;
@@ -104,5 +117,37 @@ input {
     &.input-short {
         width: 100%;
         max-width: 6em;
+    }
+}
+label {
+    &.label-superwide {
+        width: 100%;
+        max-width: 24em;
+    }
+    &.label-extrawide {
+        width: 100%;
+        max-width: 16em;
+    }
+    &.label-wide {
+        width: 100%;
+        max-width: 12em;
+    }
+    &.label-normal {
+        width: 100%;
+        max-width: 8em;
+    }
+    &.label-short {
+        width: 100%;
+        max-width: 6em;
+    }
+}
+.form-row {
+    padding: 0.5em 0;
+
+    &:first-child {
+        padding-top: 0;
+    }
+    &:last-child {
+        padding-bottom: 0;
     }
 }

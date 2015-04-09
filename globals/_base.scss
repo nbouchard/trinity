@@ -22,3 +22,27 @@ $z-underlay-high: 5;
 $z-underlay-mid: 3;
 $z-underlay-low: 1;
 
+// Card System Variables
+$card-corner-radius: 2px;
+$card-padding: 1em;
+$card-header-height: 2em;
+
+// Grid System Variables
+$grid-gutter-width: 0.5em;
+
+// Bootstrap legacy variables
+$screen-xs-max: 767px;
+$screen-sm-max: 991px;
+
+@mixin clearfix() {
+    *zoom:1;
+
+    &:before,
+    &:after {
+        content:"";
+        display:table;
+    }
+    &:after {
+        clear:both;
+    }
+}

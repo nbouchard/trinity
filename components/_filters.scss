@@ -1,65 +1,97 @@
-ul.filters {
-    position: absolute;
-    left: 0;
-    margin: 0;
-    padding: 0 5px;
-    width: 25%;
-    list-style: none;
+// Plan Filters
+//
+// These define the plan filters components used in the Comparison Shopping App.
+//
+// No styleguide reference.
+.plan-filters {
+    @include cg-row();
+    display: none;
 
-    li {
-        margin: 0 0 10px 0;
-        border: 1px solid rgba(0, 0, 0, 0.5);
+    &.is-active {
+        display: block;
+    }
+}
+.plan-filter {
+    @include cg-1of8();
+}
 
-        h5 {
-            margin: 0;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.15);
+// Filter Stacks for Filter Nav
+.filter-stack {
+    @include box-sizing(border-box);
+    position: relative;
+    display: inline-block;
+    margin: 0 0.5em;
+    height: 6em;
+    vertical-align: middle;
+    text-align: center;
+
+    .filter-preview {
+        display: block;
+        padding-top: 0.5em;
+        font-size: $font-size-smaller;
+    }
+    .filter-units {
+        display: block;
+        padding-top: 0.5em;
+        font-size: $font-size-smaller;
+    }
+    .filter-selector {
+        @include box-sizing(border-box);
+        display: block;
+        padding: 0 1em;
+        min-height: 4.5em;
+        border: 1px solid $color-gray-ghost;
+        line-height: 4.5em;
+        cursor: pointer;
+
+        .filter-select-image {
+            display: inline-block;
+            text-indent: -9999px;
+            vertical-align: middle;
         }
+
+        .filter-select-option {
+            vertical-align: middle;
+        }
+    }
+    .filter-input {
+        input {
+            width: 8em;
+            text-align: center;
+        }
+    }
+    .filter-label {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        color: $color-gray-chateau;
+        text-align: center;
+        font-size: $font-size-smaller;
     }
 }
 
-ul.filterValues {
+// Shopping Header Filter Nav
+.shop-header {
+    @include cg-row();
+    text-align: center;
+
+    .filter-nav {
+        display: inline-block;
+        padding: 2em 0;
+    }
+}
+
+// Shopping Filters
+.filter-list {
     margin: 0;
     padding: 0;
     list-style: none;
+    font-size: $font-size-smaller;
+    line-height: 1.2em;
 
-    li {
+    .filter-list-item {
         margin: 0;
         padding: 0;
-        border: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-
-        label {
-            display: block;
-            padding: 5px 10px 2px 10px;
-        }
-
-        &:first-child {
-            border-top: 1px solid rgba(0, 0, 0, 0.5);
-        }
-        &:last-child {
-            border-bottom: none;
-        }
-    }
-}
-
-ul.sorts {
-    overflow: hidden;
-    margin: 0;
-    padding: 5px;
-    list-style: none;
-
-    li {
-        float: left;
-
-        button {
-            display: block;
-            margin: 1px;
-            border: 1px solid;
-            background: none;
-        }
-        button.active {
-            background: rgba(0, 0, 0, 0.25);
-        }
     }
 }
