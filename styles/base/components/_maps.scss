@@ -8,6 +8,7 @@
       stroke: $color-white-pure;
       stroke-linejoin: round;
       stroke-linecap: round;
+
       &.map-highlight {
         fill: $color-white-smoke;
       }
@@ -17,6 +18,7 @@
       stroke: $color-white-pure;
       stroke-linejoin: round;
       stroke-linecap: round;
+
       &.map-highlight {
         fill:  $color-gray-chateau;
       }
@@ -26,43 +28,52 @@
       stroke: $color-white-pure;
       stroke-linejoin: round;
       stroke-linecap: round;
-      &.map-highlight, &.map-selected {
+
+      &.map-highlight,
+      &.map-selected {
         fill: $color-blue-bahama;
       }
     }
     .map-green {
       fill: $color-green-shamrock;
-      &.map-highlight, &.map-selected  {
+
+      &.map-highlight,
+      &.map-selected  {
         fill: $color-green-jewel;
       }
     }
     .map-orange {
       fill: $color-orange-sun;
-      &.map-highlight, &.map-selected  {
+
+      &.map-highlight,
+      &.map-selected  {
         fill: $color-orange-fiery;
       }
     }
     .map-clear {
       fill: rgba(255, 255, 255, 0.01);
     }
-
 }
 
 .locations-mapbox {
     position: relative;
+
     .locations-info {
         @include cg-1of4();
         position: relative;
         height: 500px;
         padding: 0 10px 0 0;
+
         p {
           padding: 10px 0;
         }
+
         button {
           @include box-sizing(border-box);
           width: 100%;
           margin-bottom: 10px;
         }
+
         h2 {
           position: relative;
           height: 40px;
@@ -70,9 +81,11 @@
           width:100%;
           font-size: 2.5em;
         }
+
         h4 {
           margin: 10px 0;
-        } 
+        }
+
         .locations-product {
           height: 40px;
           line-height: 40px;
@@ -101,9 +114,6 @@
           &.active {
             display: inline-block;
           }
-          i {
-            //text-align: right;
-          }
         }
         #choose-mapinfo-none {
           line-height: 1.2;
@@ -116,6 +126,7 @@
         padding: 0;
         top:0;
         left: 0;
+
         h3 {
           position: absolute;
           top: 0;
@@ -125,7 +136,7 @@
           height: 50px;
           line-height: 50px;
           text-align: center;
-          background-color: rgba(255, 255, 255, 0.4); 
+          background-color: rgba(255, 255, 255, 0.4);
         }
     }
 }
