@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/tomorrow-night.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
-<body data-ng-class="{'has-sidenav': hasSidenav, 'sidenav-active':sidenavState}" ce-site-body>
+<body class="modal-open" data-ng-class="{'has-sidenav': hasSidenav, 'sidenav-active':sidenavState}" ce-site-body>
 <div id="site" class="site-root">
 <ce-header>
     <h1 class="logo-container"><ce-logo variant="dark" type="hybrid" target="/"></ce-logo></h1>
@@ -53,52 +53,125 @@
 <main class="site-main">
 <!-- Start Page Template Contents -->
 
-<dl>
-    <dt>Plan Name</dt>
-        <dd>AEP Energy Traditional Plan - 36 Months</dd>
-    <dt>Supplier</dt>
-        <dd>AEP Energy</dd>
-    <dt>Utility</dt>
-        <dd>Commonwealth Edison</dd>
-    <dt>Social Proof</dt>
-        <dd>Plan Chosen 53 times in the last 30 days</dd>
-    <dt>Description</dt>
-        <dd>36 Month Fixed Rate</dd>
-    <dt>Plan Term</dt>
-        <dd>36 months</dd>
-    <dt>Plan Type</dt>
-        <dd>Fixed</dd>
-    <dt>Green %</dt>
-        <dd>0%</dd>
-    <dt>Plan Price</dt>
-        <dd>7.69¢/kWh</dd>
-    <dt>Other Fees</dt>
-        <dd>$10.00 Early Termination Fee</dd>
-        <dd>Early termination fee is equal to the number of months remaining in the term of the Contract multiplied by $10</dd>
-    <dt>Documents</dt>
-        <dd>Terms & Conditions, etc.</dd>
-    <dt>Cost Analysis Widget</dt>
-        <dd>Cost Per Month (Calculated)</dd>
-        <dd>Savings Per Month (Calculated if price to compare is more than plan price)</dd>
-        <dd>While your exact cost may be different based upon numerous factors, Choose Energy uses IL historical usage rates for each month in this plan's term and this plan's price to generate an approximate monthly cost over the life of the plan to help you compare and choose. If your usage is different, update your usage above to get updated cost calculations.</dd>
-        <dd>Monthly Cost Over Time</dd>
-        <dd>Price to Compare value</dd>
-    <dt>Supplier Overview Widget</dt>
-        <dd>About AEP Energy</dd>
-        <dd>Logo</dd>
-        <dd>Aggregate Review Widget</dd>
-        <dd>Prose description</dd>
-    <dt>Frequently Asked Questions</dt>
-        <dd>
-            <dl>
-                <dt>When will this plan start?</dt>
-                    <dd>After selecting your plan and accepted by your selected supplier after completing the enrollment form, your new plan will typically begin on the next applicable meter read date after your utility processes your enrollment and continue for the number of billing cycles (months) listed in the plan contract. The account migration process can take 30 - 60 days depending on your utility's and selected supplier's enrollment process and meter read date schedule.</dd>
-                <dt>What happens when this plan ends?</dt>
-                    <dd>One of two things: Either the contract converts to a month-to-month plan at the default fixed/variable market rate, or the plan will be renewed for a second term at the default fixed/variable market rate. Consult your plan's documents for details. Choose Energy and your new supplier will notify you 30-60 days before your plan ends.</dd>
-            </dl>
-            <a href="website_academy_faq.html">Learn More »</a>
-        </dd>
-</dl>
+    <div class="plan-as-page">
+        <section class="plan-card h-product" itemscope itemtype="http://schema.org/Product">
+            <div class="plan-page-header">
+                <div class="plan-page-name">
+                        <h2 class="plan-page-name-container"><a class="plan-name u-url" rel="bookmark" itemprop="url" href="#"><span class="p-name" itemprop="name">12 Month Fixed Rate Plan</span></a> <small class="plan-utility">Commonwealth Edison</small></h2>
+                </div>
+                <a href="website_shop_zipcode.html" class="plan-page-closer">Close <i class="icon fa fa-times"></i></a>
+            </div>
+            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="plan-body">
+                <div class="plan-page-section">
+                    <div class="plan-callout">
+                        <data class="plan-price plan-data p-price" value="0.126" itemprop="price">
+                            <strong class="plan-page-label">Plan Price</strong>
+                            <span class="plan-data-value">12.6<span itemprop="priceCurrency" content="USD">¢</span></span>
+                            <abbr class="p-unit plan-data-label" title="Cents per kilowatt-hour">per kWh</abbr>
+                        </data>
+                    </div>
+                    <div class="plan-page-details">
+                        <p class="plan-rank"><i class="icon fa fa-star" title="Best Plan"></i> Best Plan for <strong>Houston, TX 77070</strong></p>
+                        <p class="plan-description e-description" itemprop="description">Monthly service fee of $4.95 applies. Lock in electricity savings today! Now’s the time to fix your electricity costs. Sign on to our fixed price plan, and lock in your electricity price for 12 months. Enjoy peace of mind with a fixed rate and more money in your pocket.</p>
+                    </div>
+                    <div class="plan-page-actions">
+                        <div class="plan-page-popularity is-centered">
+                            <data class="p-popularity is-centered" value="10">
+                                <span class="plan-popularity-value">Chosen <strong class="plan-popularity-count">10</strong> Times</span>
+                                <span class="plan-popularity-label">In Last 30 Days</span>
+                            </data>
+                        </div>
+                        <div class="plan-page-signup">
+                            <button class="plan-signup-btn btn-primary btn-huge btn-fullwidth" type="button">Sign Up</button>
+                            <div class="plan-savings">
+                                <data class="plan-savings-data p-savings-monthly" value="64.22">Save about $64 per month!</data>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-page-section">
+                    <div class="plan-data-row">
+                        <div class="plan-data plan-cost">
+                            <strong class="plan-page-label">Estimated Cost</strong>
+                            <data class="plan-data-value p-cost-monthly" value="81.20">$81.20</data>
+                            <abbr class="plan-data-label" title="estimated cost of supply in dollars per month">Estimated per Month</abbr>
+                        </div>
+                        <div class="plan-data plan-contract">
+                            <strong class="plan-page-label">Plan Term</strong>
+                            <data class="plan-data-value p-term" value="12">12 months</data>
+                            <data class="plan-data-label p-category" itemprop="category" value="Fixed Term"><i class="icon fa fa-lock"></i> Fixed</data>
+                        </div>
+                        <div class="plan-data plan-renewable">
+                            <strong class="plan-page-label">Renewable</strong>
+                            <data class="plan-data-value p-renewable" value="0.09"><i class="icon fa fa-leaf"></i> 9%</data>
+                            <span class="plan-data-label">Green Energy</span>
+                        </div>
+                    </div>
+                    <div class="plan-data-row plan-extras">
+                        <div class="plan-data plan-offers">
+                            <strong class="plan-page-label">Offers</strong>
+                            <ul class="plan-data-list">
+                                <li><strong>$50</strong> - Name of the Offer. Offer description that tells a little more about the offer.</li>
+                            </ul>
+                        </div>
+                        <div class="plan-data plan-fees">
+                            <strong class="plan-page-label">Fees</strong>
+                            <ul class="plan-data-list">
+                                <li><strong>$50</strong> - Early Termination Fee. Description of the fee.</li>
+                                <li><strong>$4.95</strong> - Name of the Fee. Description of the fee starts. Monthly service fee of $4.95 applies. Description of the fee ends.</li>
+                            </ul>
+                        </div>
+                        <div class="plan-data plan-documents">
+                            <strong class="plan-page-label">Documents</strong>
+                            <ul class="plan-data-list">
+                                <li><a href="#">Environmental Disclosure</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-info">
+                    <div class="plan-supplier plan-big-section">
+                        <h4 class="plan-section-header">About Spark Energy</h4>
+                        <div class="supplier-details">
+                            <div class="supplier-logo">
+                                <a class="supplier-brand supplier_logos-spark-energy" href="#"><span class="p-brand" itemprop="seller">Spark Energy</span></a>
+                            </div>
+                            <div class="supplier-rating">
+                                <div class="rating-widget" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                    <data class="rating-value p-rating" itemprop="ratingValue" value="2.4" content="2.4"><i class="icon rate-5 fa fa-star-o"></i><i class="icon rate-4 fa fa-star-o"></i><i class="icon rate-3 fa fa-star-half-o"></i><i class="icon rate-2 fa fa-star"></i><i class="icon rate-1 fa fa-star"></i></data>
+                                    <a href="#" class="rating-count"><span class="rating-count-text">Based on </span><data class="p-rating-count" itemprop="reviewCount" value="13">13</data><span class="rating-count-text"> Reviews</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="supplier-description">
+                            <p><a href="#">Spark Energy</a> is a full service supplier offering low-cost electricity and natural gas solutions to homes and businesses across the country in over 15 states, from New York to California. Founded in 1999, Spark Energy has tremendous experience in the retail energy business and uses their experience in energy markets and buying power to deliver a wide variety of cost-saving solutions with the highest levels of customer service.</p>
+                        </div>
+                    </div>
+                    <div class="plan-faqs plan-big-section">
+                        <h4 class="plan-section-header">Frequently Asked Questions</h4>
+                        <ul class="plan-faq-list">
+                            <li>
+                                <h5>When will this plan start?</h5>
+                                <p>After selecting your plan and accepted by your selected supplier after completing the enrollment form, your new plan will typically begin on the next applicable meter read date after your utility processes your enrollment and continue for the number of billing cycles (months) listed in the plan contract. The account migration process can take 30 - 60 days depending on your utility's and selected supplier's enrollment process and meter read date schedule.</p>
+                            </li>
+                            <li>
+                                <h5>What happens when this plan ends?</h5>
+                                <p>One of two things: Either the contract converts to a month-to-month plan at the default fixed/variable market rate, or the plan will be renewed for a second term at the default fixed/variable market rate. Consult your plan's documents for details. Choose Energy and your new supplier will notify you 30-60 days before your plan ends.</p>
+                            </li>
+                            <li>
+                                <h5>How will changing suppliers impact my bill?</h5>
+                                <p>The plan you choose will only impact the charges on the supply portion of your bill. You will continue to be billed by your utility for the distribution and delivery of your energy.</p>
+                            </li>
+                            <li>
+                                <p class="learn-more"><a href="#">Learn More about Switching Suppliers &rarr;</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
 <!-- End Page Template Contents -->
 </main>

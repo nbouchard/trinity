@@ -56,6 +56,50 @@ $font-size-tinier: 0.5em;
     }
 }
 
+// Prototyping Font-Size Classes
+.x-extrahugest {
+    font-size: $font-size-extrahugest;
+}
+.x-extrahuger {
+    font-size: $font-size-extrahuger;
+}
+.x-extrahuge {
+    font-size: $font-size-extrahuge;
+}
+.x-huger {
+    font-size: $font-size-huger;
+}
+.x-huge {
+    font-size: $font-size-huge;
+}
+.x-larger {
+    font-size: $font-size-larger;
+}
+.x-large {
+    font-size: $font-size-large;
+}
+.x-normal {
+    font-size: $font-size-normal;
+}
+.x-smaller {
+    font-size: $font-size-smaller;
+}
+.x-tinier {
+    font-size: $font-size-tinier;
+}
+
+// Prototyping Alignment Classes
+.is-centered {
+    text-align: center;
+}
+.is-lefted {
+    text-align: left;
+}
+.is-righted {
+    text-align: right;
+}
+
+// General Typography Rules
 html, body {
     color: $color-gray-charcoal;
     font-weight: $font-weight-body;
