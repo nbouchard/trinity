@@ -25,7 +25,7 @@
     @include box-shadow(rgba(0,0,0,0.2) 0px 0px 2px);
     position: relative;
     margin: 0;
-    border: 1px solid $color-gray-ghost;
+    border: 1px solid $color-blue-curious-light;
 
     @if $vPadding == true {
         padding-top: $card-padding;
@@ -104,9 +104,9 @@
     @include clearfix();
     position: relative;
     margin: 0;
-    border-right: 1px solid $color-gray-ghost;
-    border-bottom: 1px solid $color-gray-ghost;
-    border-left: 1px solid $color-gray-ghost;
+    border-right: 1px solid $color-blue-curious-light;
+    border-bottom: 1px solid $color-blue-curious-light;
+    border-left: 1px solid $color-blue-curious-light;
 
     @if $vPadding == true {
         padding-top: $card-padding;
