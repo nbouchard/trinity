@@ -57,10 +57,10 @@
     <div class="checkout-forms">
         <form>
             <ol class="checkout-steps">
-                <li class="checkout-step"><button type="button" class="step-button is-completed"><i class="icon fa fa-user"></i> Personal Information</button></li>
-                <li class="checkout-step"><button type="button" class="step-button is-completed"><i class="icon fa fa-plug"></i> Service Address</button></li>
-                <li class="checkout-step"><button type="button" class="step-button is-active"><i class="icon fa fa-credit-card"></i> Billing Address</button></li>
-                <li class="checkout-step"><button type="button" class="step-button"><i class="icon fa fa-check-circle"></i> Authorizations</button></li>
+                <li class="checkout-step"><button onclick="window.location.href = '/website_checkout_form_1_personal_info.html';" type="button" class="step-button is-completed"><i class="icon fa fa-user"></i> Personal Information</button></li>
+                <li class="checkout-step"><button onclick="window.location.href = '/website_checkout_form_2_service_address.html';" type="button" class="step-button is-completed"><i class="icon fa fa-plug"></i> Service Address</button></li>
+                <li class="checkout-step"><button onclick="window.location.href = '/website_checkout_form_3_billing_address.html';" type="button" class="step-button is-active"><i class="icon fa fa-credit-card"></i> Billing Address</button></li>
+                <li class="checkout-step"><button onclick="window.location.href = '/website_checkout_form_4_authorizations.html';" type="button" class="step-button"><i class="icon fa fa-check-circle"></i> Authorizations</button></li>
             </ol>
             <div class="checkout-section">
                 <h3 class="checkout-header">Current Form Header</h3>
@@ -115,10 +115,10 @@
             </div>
             <div class="checkout-actions">
                 <div class="checkout-previous">
-                    <button type="button" class="checkout-action">Previous: <strong>Service Address</strong></button>
+                    <button onclick="window.location.href = '/website_checkout_form_2_service_address.html';" type="button" class="checkout-action">Previous: <strong>Service Address</strong></button>
                 </div>
                 <div class="checkout-next">
-                    <button type="button" class="checkout-action">Next: <strong>Authorizations</strong></button>
+                    <button onclick="window.location.href = '/website_checkout_form_4_authorizations.html';" type="button" class="checkout-action">Next: <strong>Authorizations</strong></button>
                 </div>
             </div>
         </form>

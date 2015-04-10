@@ -57,8 +57,8 @@
     <div class="checkout-forms">
         <form>
             <ol class="checkout-steps">
-                <li class="checkout-step"><button type="button" class="step-button is-active"><i class="icon fa fa-user"></i> Personal Information</button></li>
-                <li class="checkout-step"><button type="button" class="step-button"><i class="icon fa fa-plug"></i> Service Address</button></li>
+                <li class="checkout-step"><button onclick="window.location.href = '/website_checkout_form_1_personal_info.html';" type="button" class="step-button is-active"><i class="icon fa fa-user"></i> Personal Information</button></li>
+                <li class="checkout-step"><button onclick="window.location.href = '/website_checkout_form_2_service_address.html';" type="button" class="step-button"><i class="icon fa fa-plug"></i> Service Address</button></li>
                 <li class="checkout-step"><button disabled="disabled" type="button" class="step-button"><i class="icon fa fa-credit-card"></i> Billing Address</button></li>
                 <li class="checkout-step"><button disabled="disabled" type="button" class="step-button"><i class="icon fa fa-check-circle"></i> Authorizations</button></li>
             </ol>
@@ -115,10 +115,10 @@
             </div>
             <div class="checkout-actions">
                 <div class="checkout-previous">
-                    <button type="button" class="checkout-action">Previous: <strong>Choose Plans</strong></button>
+                    <button type="button" onclick="window.location.href = '/website_shop_zipcode.html';" class="checkout-action">Previous: <strong>Choose Plans</strong></button>
                 </div>
                 <div class="checkout-next">
-                    <button type="button" class="checkout-action">Next: <strong>Service Address</strong></button>
+                    <button type="button" onclick="window.location.href = '/website_checkout_form_2_service_address.html';" class="checkout-action">Next: <strong>Service Address</strong></button>
                 </div>
             </div>
         </form>
@@ -242,7 +242,7 @@
                             </div>
                         </div>
                         <div class="is-centered">
-                            <button type="button"><i class="icon fa fa-trash"></i> Remove Plan from Cart</button>
+                            <button type="button" onclick="window.location.href = '/website_shop_zipcode.html';"><i class="icon fa fa-trash"></i> Remove Plan from Cart</button>
                         </div>
                     </div>
                 </section>
