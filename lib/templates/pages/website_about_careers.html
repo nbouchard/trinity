@@ -1,0 +1,79 @@
+---
+layout: website
+site:
+  name: ChooseUX
+  version: 0.1.0
+tpl:
+  desc: Page Desc
+  title: Website Page
+---
+<div class="content-editorial content-editorial-short" style="background: url('images/photography/Bay_Bridge_Night.jpg') no-repeat; background-size: cover;">
+    <div class="content-editorial-container">
+        <h1 class="content-editorial-headline">Careers</h1>
+        <nav class="breadcrumbs">
+            <ol class="nav-list">
+                <li class="nav-item"><a href="website_homepage_residential.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="website_about_overview.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="website_about_careers.html" class="nav-link">Careers</a></li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="content-editorial content-editorial-short content-editorial-bg-white">
+    <div class="content-editorial-container">
+        <ul id="jobs-container"></ul>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        var url = 'https://api.lever.co/v0/postings/chooseenergy?mode=json';
+
+        function createJobs(_data) {
+            for(i = 0; i < _data.length; i++) {
+                var posting = _data[i];
+                var title = posting.text;
+                var description = posting.description;
+                var location = posting.categories.location;
+                var commitment = posting.categories.commitment;
+                var team = posting.categories.team;
+                var link = posting.hostedUrl;
+                var jobPost = document.createElement('li');
+                    jobPost.innerHTML = '<a href="'+link+'" class="job">' +
+                            '<h2 class="job-title" href="'+link+'">'+title+'</h2>' +
+                            '<ul class="job-tags"><li class="job-tag">'+team+'</li><li class="job-tag">'+location+'</li><li class="job-tag">'+commitment+'</li></ul>' +
+                        '</a>';
+                var jobs = document.getElementById('jobs-container');
+                    jobs.appendChild(jobPost);
+            }
+        }
+
+        var request = new XMLHttpRequest();
+        request.open('GET', url, true);
+        request.onload = function() {
+            if (request.status >= 200 && request.status < 400) {
+                var data = JSON.parse(request.responseText);
+                createJobs(data);
+            } else {
+                console.log('Error from Lever.');
+                var jobsError = document.createElement('li');
+                    jobsError.innerHTML = '<a href="https://jobs.lever.co/chooseenergy" class="jobs-error">See all job postings</a>';
+                var jobs = document.getElementById('jobs-container');
+                    jobs.appendChild(jobsError);
+            }
+        };
+        request.onerror = function() {
+            console.log('Connection Error.');
+            var jobsError = document.createElement('li');
+                jobsError.innerHTML = '<a href="https://jobs.lever.co/chooseenergy" class="jobs-error">See all job postings</a>';
+            var jobs = document.getElementById('jobs-container');
+                jobs.appendChild(jobsError);
+        };
+        request.send();
+
+    });
+</script>
+
+
+

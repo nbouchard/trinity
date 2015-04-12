@@ -1,0 +1,349 @@
+---
+layout: website
+site:
+  name: ChooseUX
+  version: 0.1.0
+tpl:
+  desc: Page Desc
+  title: Website Page
+---
+<div class="content-editorial content-editorial-bigtalk content-editorial-noheight" style="background: url('images/photography/Bay_Bridge_Night.jpg') no-repeat; background-size: cover;">
+    <div class="content-editorial-container">
+        <h1 class="content-editorial-headline">We Work Where You Live</h1>
+        <h2 class="content-editorial-subhead">Compare Energy Rates Now</h2>
+        <div class="content-editorial-cta">
+            <p><input class="input-superwide" type="text" placeholder="Type your zipcode (i.e. 77070, 60622, 94107)"> <button class="btn-primary" type="button">Find Your Energy</button></p>
+        </div>
+    </div>
+</div>
+<div class="content-tip">
+    <div class="content-tip-container">
+        <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
+    </div>
+</div>
+<div class="content-editorial content-editorial-bg-white">
+    <div class="content-editorial-container">
+        <h2 class="content-editorial-headline">Locations</h2>
+        <div class="locations-mapbox">
+            <div id="choose-mapinfo" class="locations-info"></div>
+            <div id="choose-map" class="locations-map map"></div>
+            <script>
+            var width = 675;
+            var height = 375;
+            var projection = d3.geo.albersUsa()
+                .scale(800)
+                .translate([width / 2, height / 2]);
+            var path = d3.geo.path()
+                .projection(projection);
+            var svg = d3.select("#choose-map").append("svg")
+                .attr("class", "map-svg")
+                .attr("viewBox", "0 0 " + width + " " + height)
+                .attr("width", width)
+                .attr("height", height);
+            svg.append("rect")
+                .attr("class", "map-base")
+                .attr("width", width)
+                .attr("height", height);
+            var usa = svg.append("g");
+            d3.json("/data/states_usa.topo.json", function(error, us) {
+                usa.append("g")
+                    .attr("class", "map-states")
+                    .selectAll("path")
+                    .data(topojson.feature(us, us.objects.states).features)
+                    .enter()
+                    .append("path")
+                    .attr("d", path)
+                    .on('click', function(d,i) {
+                        var stateId = d.id;
+                            stateAbbr = stateId.substr(4);
+                        console.log(stateAbbr);
+                        console.log(d.properties.name);
+                    })
+                    .on('mouseover', function(d,i) {
+                        d3.select(this)
+                            .attr("class", "map-highlight");
+                        d3.select('#choose-mapinfo')
+                            .text(d.properties.name);
+                    })
+                    .on('mouseout', function(d,i) {
+                        d3.select(this)
+                            .attr("class", "");
+                        d3.select('#choose-mapinfo')
+                            .text("");
+                    });
+            });
+            </script>
+        </div>
+    </div>
+</div>
+<div class="content-editorial content-editorial-noheight content-editorial-bg-white">
+    <div class="content-editorial-container">
+        <h4 class="content-editorial-headline">Our Suppliers by State</h4>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">California</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Connecticut</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Georgia</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Illinois</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Maine</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Maryland</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Massachusetts</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Michigan</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">New Jersey</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">New York</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Ohio</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Pennsylvania</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Texas</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="partner-container">
+            <h5 class="partner-region"><a href="website_location_state.html">Washington, D.C.</a></h5>
+            <ul class="partner-grid grid gridpage">
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+                <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+            </ul>
+            <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+                <ol class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
