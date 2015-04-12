@@ -1,0 +1,103 @@
+---
+layout: website
+site:
+  name: ChooseUX
+  version: 0.1.0
+tpl:
+  desc: Page Desc
+  title: Website Page
+  classes: about-pages
+---
+
+<div class="content-editorial content-editorial-translucent content-editorial-noheight" style="background: url('images/photography/SanFrancisco.jpg') no-repeat; background-size: cover; background-position: center;">
+    <div class="content-editorial-container">
+        <h2 class="content-editorial-headline">Contact Us</h2>
+        <div class="content-editorial-panes panes">
+            <div class="cg-1of3 panes">
+                <p>At Choose Energy, we connect you with the best energy available. We are not your Utility or Energy Supplier. If you have questions about your current service, please contact your energy supplier from the numbers on your energy bill.</p>
+            </div>
+            <div class="cg-2of3">
+                <form>
+                    <div class="form-row">
+                        <label class="label-wide">Name</label>
+                        <input type="text" class="input-superwide" placeholder="Type your name">
+                    </div>
+                    <div class="form-row">
+                        <label class="label-wide">Email</label>
+                        <input type="text" class="input-superwide" placeholder="Type your email (i.e. example@gmail.com)">
+                    </div>
+                    <div class="form-row">
+                        <label class="label-wide">Phone</label>
+                        <input type="text" class="input-superwide" placeholder="Type your phone (i.e. 555-555-5555)">
+                    </div>
+                    <div class="form-row">
+                        <label class="label-wide">Message</label>
+                        <textarea class="input-superwide"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label class="label-wide"></label>
+                        <button class="btn-primary" type="button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-editorial content-editorial-noheight content-editorial-bg-white">
+    <div class="content-editorial-cta content-editorial-infogrid">
+        <div class="content-editorial-infogrid-cell is-centered" onclick="change_map('sf');">
+            <p><i class="icon contact-icon fa fa-map-marker"></i></p>
+            <h3>San Francisco, California</h3>
+            <p>465 California Street, Suite 1250<br>
+            Support@ChooseEnergy.com<br>
+            855-419-3586</p>
+        </div>
+        <div class="content-editorial-infogrid-cell is-centered" onclick="change_map('pl');">
+            <p><i class="icon contact-icon fa fa-map-marker"></i></p>
+            <h3>Plano, Texas</h3>
+            <p>6217 Chapel Hill Blvd, Suite 300<br>
+            Support@ChooseEnergy.com<br>
+            855-419-3586</p>
+        </div>
+        <div class="content-editorial-infogrid-cell is-centered" onclick="change_map('ch');">
+            <p><i class="icon contact-icon fa fa-map-marker"></i></p>
+            <h3>Chicago, Illinois</h3>
+            <p>222 W. Merchandise Mart Plaza, 12th Floor<br>
+            Support@ChooseEnergy.com<br>
+            855-419-3586</p>
+        </div>
+    </div>
+</div>
+<div id="map_container" class="content-editorial content-editorial-bg-info">
+    <div id="sf-map" class="contact-map"></div>
+</div>
+<script>
+    var latitude = "37.792860";
+    var longitude = "-122.402215";
+    var office_map = L.mapbox.map('sf-map', 'chooseenergy.lkga2cfj', {
+        zoomControl: false,
+        scrollWheelZoom: false,
+        touchZoom: false,
+
+    })
+    .setView([latitude, longitude], 14);
+
+    function change_map(map) {
+        if (map == 'sf') {
+            var latitude = 37.792860;
+            var longitude = -122.402215;
+        } else if (map == 'pl') {
+            var latitude = 33.033172;
+            var longitude = -96.835545;
+        } else if (map == "ch") {
+            var latitude = 41.888085;
+            var longitude = -87.634929;
+        } else {
+            var latitude = 37.792860;
+            var longitude = -122.402215;
+        }
+        office_map.setView([latitude, longitude], 14);
+
+    }
+</script>
+

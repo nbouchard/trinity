@@ -1,0 +1,248 @@
+// Button Mixins
+@mixin ce-button($btn-type: 'basic', $btn-size: 'normal', $btn-width: 'auto') {
+    @include box-sizing(border-box);
+    padding: 0.5em 1em;
+    height: $button-base;
+    vertical-align: middle;
+
+    // Basic Button Type
+    @if $btn-type == 'basic' {
+        border: 0;
+        border-bottom: $button-border-width solid $color-gray-chateau;
+        background: $color-gray-ghost;
+        color: $color-white-pure;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            border-bottom: $button-border-width solid $color-gray-ghost;
+            background: $color-gray-chateau;
+        }
+
+        &:disabled {
+            border-bottom: $button-border-width solid $color-white-smoke;
+            background: $color-white-smoke;
+            color: $color-gray-chateau;
+
+            &:hover,
+            &:focus {
+                border-bottom: $button-border-width solid $color-white-smoke;
+                background: $color-white-smoke;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    // Primary Action Button Type
+    @if $btn-type == 'primary' {
+        border-bottom: $button-border-width solid $color-green-jewel;
+        background: $color-green-shamrock;
+        color: $color-white-pure;
+
+        &:hover,
+        &:focus {
+            border-bottom: $button-border-width solid $color-green-shamrock;
+            background: $color-green-jewel;
+        }
+
+        &:disabled {
+            border-bottom: $button-border-width solid $color-green-cruise;
+            background: $color-green-cruise;
+            color: $color-white-pure;
+
+            &:hover,
+            &:focus {
+                border-bottom: $button-border-width solid $color-green-cruise;
+                background: $color-green-cruise;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    // Bright Call-to-Action Button Type
+    @if $btn-type == 'bright' {
+        border-bottom: $button-border-width solid $color-orange-fiery;
+        background: $color-orange-sun;
+        color: $color-white-pure;
+
+        &:hover,
+        &:focus {
+            border-bottom: $button-border-width solid $color-orange-sun;
+            background: $color-orange-fiery;
+        }
+
+        &:disabled {
+            border-bottom: $button-border-width solid $color-orange-apricot;
+            background: $color-orange-apricot;
+            color: $color-white-pure;
+
+            &:hover,
+            &:focus {
+                border-bottom: $button-border-width solid $color-orange-apricot;
+                background: $color-orange-apricot;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    // Informational Button Type
+    @if $btn-type == 'info' {
+        border-bottom: $button-border-width solid $color-blue-bahama;
+        background: $color-blue-curious;
+        color: $color-white-pure;
+
+        &:hover,
+        &:focus {
+            border-bottom: $button-border-width solid $color-blue-curious;
+            background: $color-blue-bahama;
+        }
+
+        &:disabled {
+            border-bottom: $button-border-width solid $color-blue-perano;
+            background: $color-blue-perano;
+            color: $color-white-pure;
+
+            &:hover,
+            &:focus {
+                border-bottom: $button-border-width solid $color-blue-perano;
+                background: $color-blue-perano;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    // Dark Contrast Button Type
+    @if $btn-type == 'dark' {
+        border-bottom: $button-border-width solid $color-gray-charcoal;
+        background: $color-gray-chateau;
+        color: $color-white-pure;
+
+        &:hover,
+        &:focus {
+            border-bottom: $button-border-width solid $color-gray-chateau;
+            background: $color-gray-charcoal;
+        }
+
+        &:disabled {
+            border-bottom: $button-border-width solid $color-white-smoke;
+            background: $color-white-smoke;
+            color: $color-gray-chateau;
+
+            &:hover,
+            &:focus {
+                border-bottom: $button-border-width solid $color-white-smoke;
+                background: $color-white-smoke;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    // Modify Button Size
+    @if $btn-size == 'extrahuger' {
+        font-size: $font-size-extrahuger;
+    }
+
+    @if $btn-size == 'extrahuge' {
+        font-size: $font-size-extrahuge;
+    }
+
+    @if $btn-size == 'huger' {
+        font-size: $font-size-huger;
+    }
+
+    @if $btn-size == 'huge' {
+        font-size: $font-size-huge;
+    }
+
+    @if $btn-size == 'larger' {
+        font-size: $font-size-larger;
+    }
+
+    @if $btn-size == 'large' {
+        font-size: $font-size-large;
+    }
+
+    @if $btn-size == 'normal' {
+        font-size: $font-size-normal;
+    }
+
+    @if $btn-size == 'smaller' {
+        font-size: $font-size-smaller;
+    }
+
+    @if $btn-size == 'tinier' {
+        font-size: $font-size-tinier;
+    }
+
+    // Modify Button Width
+    @if $btn-width == 'full' {
+        width: 100%;
+    }
+}
+
+button,
+input[type='submit'] {
+    @include ce-button('basic');
+
+    &.btn-primary {
+        @include ce-button('primary');
+    }
+
+    &.btn-bright {
+        @include ce-button('bright');
+    }
+
+    &.btn-info {
+        @include ce-button('info');
+    }
+
+    &.btn-dark {
+        @include ce-button('dark');
+    }
+
+    &.btn-icon {
+        width: $button-icon-base;
+        height: $button-icon-base;
+        line-height: $button-icon-lineheight;
+    }
+
+    &.btn-fullwidth {
+        width: 100%;
+    }
+
+    &.btn-extrahuger {
+        font-size: $font-size-extrahuger;
+    }
+
+    &.btn-extrahuge {
+        font-size: $font-size-extrahuge;
+    }
+
+    &.btn-huger {
+        font-size: $font-size-huger;
+    }
+
+    &.btn-huge {
+        font-size: $font-size-huge;
+    }
+
+    &.btn-larger {
+        font-size: $font-size-larger;
+    }
+
+    &.btn-large {
+        font-size: $font-size-large;
+    }
+
+    &.btn-normal {
+        font-size: $font-size-normal;
+    }
+
+    &.btn-smaller {
+        font-size: $font-size-smaller;
+    }
+
+    &.btn-tinier {
+        font-size: $font-size-tinier;
+    }
+}

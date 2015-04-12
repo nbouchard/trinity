@@ -1,0 +1,312 @@
+---
+layout: website
+site:
+  name: ChooseUX
+  version: 0.1.0
+tpl:
+  desc: Page Desc
+  title: Website Page
+---
+<div class="content-editorial content-editorial-bigtalk" style="position:relative;">
+    <video class="content-editorial-container" autoplay loop style="position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; background-size: cover;  -webkit-filter: blur(5px) brightness(80%); filter: blur(5px) brightness(80%);">
+        <source src="https://www.tumblr.com/video_file/109434732342/tumblr_niwvxqZnfd1r5whwu" type="video/mp4">
+    </video>
+    <div class="content-editorial-container" autoplay>
+        <h1 class="content-editorial-headline">Lower Your Energy Bills</h1>
+        <h2 class="content-editorial-subhead">The Choice is in Your Hands</h2>
+        <div class="content-editorial-cta">
+            <p><input class="input-superwide" type="text" placeholder="Type your zipcode (i.e. 77070, 60622, 94107)"> <button class="btn-primary" type="button">Find Your Energy</button></p>
+        </div>
+    </div>
+</div>
+<div class="content-tip">
+    <div class="content-tip-container">
+        <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
+    </div>
+</div>
+<div class="content-editorial content-editorial-bg-dark" style="background: url('images/photography/Family_Dinner_Under_Lights.jpg') no-repeat; background-size: cover;">
+    <div class="content-editorial-container">
+        <h2 class="content-editorial-headline">We help you find the best energy plan at the best price</h2>
+        <div class="content-editorial-cta">
+            <p>Choose Energy has been helping customers save on energy since 2005. And we have one of the largest selections of providers in North America. Review the top offers from our preferred providers and compare them with what you're currently spending. Then pick the best deal and start saving!</p>
+            <div class="icon-row">
+                <ul>
+                    <li>Electricity</li>
+                    <li>Natural Gas</li>
+                    <li>Solar</li>
+                    <li>Furnace Oil</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-editorial content-editorial-bg-white">
+    <div class="content-editorial-container">
+        <h2 class="content-editorial-headline">Locations</h2>
+        <div class="locations-mapbox">
+            <div id="choose-mapinfo" class="locations-info"><p>Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in their area. The power of choice has ushered in major advantages for customers, including: better customer service, more competitive rates as well as special offers and rewards.
+            </p>
+                <h2 id="choose-mapinfo-state">National</h2>
+                <h4>Products:</h4>
+                <div id="choose-mapinfo-residential-electricity" class="locations-product green active"><a href="#">Residential Electricity</a></div>
+                <div id="choose-mapinfo-residential-gas" class="locations-product blue active"><a href="#">Residential Natural Gas </a></div>
+                <div id="choose-mapinfo-commercial-electricity" class="locations-product orange active"><a href="#">Commercial Electricity </a></div>
+                <div id="choose-mapinfo-none" class="locations-product green">We currently do not offer any products in this State.</div>
+            </div>
+            <div id="choose-map" class="locations-map map"><h3 class="locations-map-state">States We Serve</h3></div>
+            <script>
+            var width = document.getElementById('choose-map').offsetWidth;
+            var height = document.getElementById('choose-map').offsetHeight;
+            // var width = 675;
+            // var height = 500;
+            var centered;
+
+            var projection = d3.geo.albersUsa()
+                .scale(800)
+                .translate([width / 2, height / 2]);
+            var path = d3.geo.path()
+                .projection(projection);
+            var svg = d3.select("#choose-map").append("svg")
+                .attr("class", "map-svg")
+                .attr("viewBox", "0 0 " + width + " " + height)
+                .attr("width", width)
+                .attr("height", height);
+            svg.append("rect")
+                .attr("class", "map-base")
+                .attr("width", width)
+                .attr("height", height);
+
+            var usa = svg.append("g");
+            d3.json("/data/states_usa.topo.json", function(error, us) {
+                usa.append("g")
+                    .selectAll("path")
+                    .data(topojson.feature(us, us.objects.states).features)
+                    .enter()
+                    .append("path")
+                    .attr("d", path)
+                    .attr("class", function(d) {
+                        if (d.properties.energy.residential_electricity || d.properties.energy.residential_gas || d.properties.energy.commercial_electricity === 1) {
+                            return "map-blue";
+                        } else {
+                            //console.log("map-states only");
+                            return "map-states";
+                        }
+                    })
+                    .on('click', clicked)
+                    .on('mouseover', function(d,i) {
+                        d3.select(this)
+                            .classed("map-highlight", true);
+                        d3.select(".locations-map-state").text(d.properties.name);
+                    })
+                    .on('mouseout', function(d,i) {
+                        d3.select(this)
+                            .classed("map-highlight", false);
+                        d3.select(".locations-map-state").text("States We Serve");
+
+
+                    });
+            });
+            function clicked(d) {
+                var x, y, k;
+                if (d && centered !== d) {
+                    var centroid = path.centroid(d);
+                    x = centroid[0];
+                    y = centroid[1];
+                    k = 3;
+                    centered = d;
+                    d3.select('#choose-mapinfo-state').text(d.properties.name);
+                    d3.select('#choose-mapinfo-residential-electricity').classed('active', function() {
+                        if (d.properties.energy.residential_electricity === 1) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                    d3.select('#choose-mapinfo-residential-gas').classed('active', function() {
+                        if (d.properties.energy.residential_gas === 1) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                    d3.select('#choose-mapinfo-commercial-electricity').classed('active', function() {
+                        if (d.properties.energy.commercial_electricity === 1) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                    d3.select('#choose-mapinfo-none').classed('active', function() {
+                        if (d.properties.energy.residential_electricity !== 1 &&  d.properties.energy.residential_gas !== 1 && d.properties.energy.commercial_electricity !== 1) {
+                            return true
+                        }
+                    });
+                    d3.selectAll("path").classed("map-selected", false);
+                    d3.select(this).classed("map-selected", true);
+                } else {
+                    x = width / 2;
+                    y = height / 2;
+                    k = 1;
+                    centered = null;
+                    d3.select('#choose-mapinfo-state').text("National");
+                    d3.select('#choose-mapinfo-residential-electricity').classed('active', function() {
+                        return true;
+                    });
+                    d3.select('#choose-mapinfo-residential-gas').classed('active', function() {
+                        return true;
+                    });
+                    d3.select('#choose-mapinfo-commercial-electricity').classed('active', function() {
+                        return true;
+                    });
+                    d3.select('#choose-mapinfo-none').classed('active', function() {
+                        return false;
+                    });
+
+                    d3.select(this).classed("map-selected", false);
+                }
+
+                usa.selectAll("path")
+                    .classed("map-highlight", centered && function(d) {
+                        return d === centered;
+                    });
+
+            usa.transition()
+                .duration(750)
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+                .style("stroke-width", 1.5 / k + "px");
+              // d3.select(this).remove();
+
+            }
+            </script>
+        </div>
+    </div>
+</div>
+<div class="content-tip">
+    <div class="content-tip-container">
+        <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
+    </div>
+</div>
+<div class="content-editorial" style="background: url('images/photography/Lowlight_Lamp.jpg') no-repeat; background-size: cover;">
+    <div class="content-editorial-container">
+        <h2 class="content-editorial-headline">How It Works</h2>
+        <p class="content-editorial-cta">How it works goes here.</p>
+    </div>
+</div>
+<div class="content-editorial content-editorial-short content-editorial-bg-white">
+    <div class="content-editorial-container">
+        <h4 class="content-editorial-headline">Our Suppliers</h4>
+        <ul class="partner-grid grid gridpage">
+            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
+            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
+            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
+            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
+            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
+            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
+        </ul>
+        <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+            <ol class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="content-tip">
+    <div class="content-tip-container">
+        <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
+    </div>
+</div>
+<div class="content-editorial content-editorial-translucent" style="background: url('images/photography/Kites_and_Windmills.jpg') no-repeat; background-size: cover;">
+    <div class="content-editorial-container">
+        <h2 class="content-editorial-headline">Energy Academy</h2>
+        <div class="content-editorial-tabs">
+            <div class="tab-header">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link is-active" href="#"><i class="icon fa fa-lightbulb-o"></i><span class="nav-text">Deregulation</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="icon fa fa-truck"></i><span class="nav-text">Switching Guide</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="icon fa fa-plug"></i><span class="nav-text">Energy Efficiency</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="icon fa fa-leaf"></i><span class="nav-text">Renewable Energy</span></a></li>
+                </ul>
+            </div>
+            <div class="tab-body">
+                <ul class="grid grid-basic h-feed">
+                    <li class="grid-item h-entry">
+                        <a class="u-url" href="#">
+                            <div class="img-wrapper">
+                                <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
+                                <div class="img-overlay">
+                                    <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
+                                </div>
+                            </div>
+                            <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
+                            <p class="p-summary">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                        </a>
+                    </li>
+                    <li class="grid-item h-entry">
+                        <a class="u-url" href="#">
+                            <div class="img-wrapper">
+                                <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
+                                <div class="img-overlay">
+                                    <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
+                                </div>
+                            </div>
+                            <h3 class="p-name">The Energy Powering the Dallas Cowboys</h3>
+                            <p class="p-summary">Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                        </a>
+                    </li>
+                    <li class="grid-item h-entry">
+                        <a class="u-url" href="#">
+                            <div class="img-wrapper">
+                                <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
+                                <div class="img-overlay">
+                                    <span class="img-overlay-text">Read More <i class="icon fa fa-arrow-circle-right"></i></span>
+                                </div>
+                            </div>
+                            <h3 class="p-name">Choose Energy Simplifies Electricity Shopping for Small Businesses</h3>
+                            <p class="p-summary">Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-editorial content-editorial-noheight content-editorial-bg-light">
+    <div class="content-editorial-container testimonials-container">
+        <h4 class="content-editorial-headline">We chose our own energy and it made all the difference</h4>
+        <div class="testimonials">
+            <figure class="testimonial">
+                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                <figcaption class="testimonial-person">Person McPerson</figcaption>
+                <img class="testimonial-photo" src="images/testimonials/person01.png" alt="Person McPerson">
+            </figure>
+            <figure class="testimonial">
+                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                <figcaption class="testimonial-person">Person McPerson</figcaption>
+                <img class="testimonial-photo" src="images/testimonials/person02.png" alt="Person McPerson">
+            </figure>
+            <figure class="testimonial">
+                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                <figcaption class="testimonial-person">Person McPerson</figcaption>
+                <img class="testimonial-photo" src="images/testimonials/person03.png" alt="Person McPerson">
+            </figure>
+            <figure class="testimonial">
+                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                <figcaption class="testimonial-person">Person McPerson</figcaption>
+                <img class="testimonial-photo" src="images/testimonials/person04.png" alt="Person McPerson">
+            </figure>
+            <figure class="testimonial">
+                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                <figcaption class="testimonial-person">Person McPerson</figcaption>
+                <img class="testimonial-photo" src="images/testimonials/person05.png" alt="Person McPerson">
+            </figure>
+            <figure class="testimonial">
+                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
+                <figcaption class="testimonial-person">Person McPerson</figcaption>
+                <img class="testimonial-photo" src="images/testimonials/person06.png" alt="Person McPerson">
+            </figure>
+        </div>
+    </div>
+</div>
