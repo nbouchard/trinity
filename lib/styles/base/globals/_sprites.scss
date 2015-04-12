@@ -1,0 +1,22 @@
+// TODO: Replace this Compass Sprites implementation with Sprite Glue
+//
+//@import 'supplier_logos/*.png';
+//@import 'utility_logos/*.png';
+//@include all-supplier-logos-sprites(true);
+//@include all-utility-logos-sprites(true);
+//// ==========================================================================
+////   Supplier Logo Sprite
+////   ==========================================================================
+//// This section of code styles the sprites, but the css to actually make an object a sprite is created by glue during the buildstatic command
+//
+//.supplier-logos { width:100%; text-align:center; max-width: 1024px; overflow: auto;}
+//.supplier-logos li {display:inline-block; *display:inline; /*IE7*/ *zoom:1; /*IE7*/ color:white; margin-bottom: 10px; }
+//
+//@media screen and (min-width: 700px) {
+//    .supplier-logos.logos-2up li { width: 50%; }
+//    .supplier-logos.logos-3up li { width: 33%; }
+//    .supplier-logos.logos-4up li { width: 25%; }
+//}
+//
+//.sprite { border: 0;    display: inline-block; margin: 0 10px 10px 10px;    width: 135px; height: 65px; }
+//.sprite, .sprite:hover { text-decoration: none; }
