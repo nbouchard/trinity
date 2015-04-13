@@ -57,7 +57,21 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css',
         'Process and compile our CSS for distribution.',
         [
-            //'spglue',
+            'spglue:dist',
+            'sass',
+            'autoprefixer',
+        ]
+    );
+
+    // CSS Compile Task
+    //
+    // 1. spglue:               Compiles sprite files into SCSS source folder
+    // 2. sass:                 Compiles all our distributable SCSS source into CSS
+    // 3. autoprefixer          Runs compiled CSS through autoprefixer
+    grunt.registerTask('compile-css-wp',
+        'Process and compile our CSS for distribution.',
+        [
+            'spglue:devwp',
             'sass',
             'autoprefixer',
         ]
