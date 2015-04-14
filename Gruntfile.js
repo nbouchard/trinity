@@ -12,6 +12,9 @@ module.exports = function(grunt) {
     // Load task configs from `tasks/`
     grunt.loadTasks('./tasks/');
 
+    // Load Grunt Newer for selective task running
+    grunt.loadNpmTasks('grunt-newer');
+
     // Build Task
     //
     // 1. Clean `dist/` folder
@@ -57,7 +60,8 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css',
         'Process and compile our CSS for distribution.',
         [
-            'spglue:dist',
+            'newer:sprite:suppliers',
+            'newer:sprite:utilities',
             'sass',
             'autoprefixer',
         ]
@@ -71,7 +75,8 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css-wp',
         'Process and compile our CSS for distribution.',
         [
-            'spglue:devwp',
+            'newer:sprite:supplierswp',
+            'newer:sprite:utilitieswp',
             'sass',
             'autoprefixer',
         ]

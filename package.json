@@ -41,9 +41,10 @@
     "grunt-gh-pages": "^0.10.0",
     "grunt-html-inspector": "^0.1.6",
     "grunt-lib-phantomjs": "^0.3.1",
+    "grunt-newer": "^1.1.0",
     "grunt-sass": "^0.18.1",
     "grunt-scss-lint": "^0.3.6",
-    "grunt-sprite-glue": "^0.1.0",
+    "grunt-spritesmith": "^4.5.1",
     "time-grunt": "^1.1.0"
   },
   "private": true,
