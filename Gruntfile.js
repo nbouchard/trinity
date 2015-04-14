@@ -16,33 +16,43 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-newer');
 
     // Build Task
-    //
-    // 1. Clean `dist/` folder
-    //      - contrib-clean:    Deletes files from given folder
-    // 2. Compile updated SCSS
-    //      - spglue:           Compiles image sprites
-    //      - sass:             Compiles our distributable CSS files
-    //      - autoprefixer:     Ensures all files are properly prefixed
-    // 3. Compile HTML templates into `dist/`
-    //      - assemble:         Builds distributable HTML files
-    // 4. Move asset files from `lib/` into `dist/`
-    //      - contrib-copy:     Copies files from one folder to another
-    grunt.registerTask('build',
-        'Build site files.',
+    grunt.registerTask('build:dev',
+        'Build site files for local dev.',
         [
             'clean:dist',
-            'compile-css',
+            'clean:sprites',
+            'compile-css:dev',
+            'compile-html',
+            'copy:dist',
+        ]
+    );
+
+    // Build Task
+    grunt.registerTask('build:devwp',
+        'Build site files for DevWP.',
+        [
+            'clean:dist',
+            'clean:sprites',
+            'compile-css:devwp',
+            'compile-html',
+            'copy:dist',
+        ]
+    );
+
+    // Build Task
+    grunt.registerTask('build:dist',
+        'Build site files for GH Pages.',
+        [
+            'clean:dist',
+            'clean:sprites',
+            'compile-css:dist',
             'compile-html',
             'copy:dist',
         ]
     );
 
     // Code Verification Task
-    //
-    // 1. Verify code quality:
-    //      - jshint:           Verifies JS Coding Standards
-    //      - scss-lint:        Verifies SCSS Coding Standards
-    //      - html-inspector:   Verifies HTML Coding Standards
+    // Note: This is a slow task.
     grunt.registerTask('verify',
         'Verify code quality.',
         [
@@ -53,12 +63,8 @@ module.exports = function(grunt) {
     );
 
     // CSS Compile Task
-    //
-    // 1. spglue:               Compiles sprite files into SCSS source folder
-    // 2. sass:                 Compiles all our distributable SCSS source into CSS
-    // 3. autoprefixer          Runs compiled CSS through autoprefixer
-    grunt.registerTask('compile-css',
-        'Process and compile our CSS for distribution.',
+    grunt.registerTask('compile-css:dev',
+        'Process and compile our CSS for local development.',
         [
             'newer:sprite:suppliers',
             'newer:sprite:utilities',
@@ -68,12 +74,8 @@ module.exports = function(grunt) {
     );
 
     // CSS Compile Task
-    //
-    // 1. spglue:               Compiles sprite files into SCSS source folder
-    // 2. sass:                 Compiles all our distributable SCSS source into CSS
-    // 3. autoprefixer          Runs compiled CSS through autoprefixer
-    grunt.registerTask('compile-css-wp',
-        'Process and compile our CSS for distribution.',
+    grunt.registerTask('compile-css:devwp',
+        'Process and compile our CSS for distribution to DevWP.',
         [
             'newer:sprite:supplierswp',
             'newer:sprite:utilitieswp',
@@ -82,10 +84,19 @@ module.exports = function(grunt) {
         ]
     );
 
+    // CSS Compile Task
+    grunt.registerTask('compile-css:dist',
+        'Process and compile our CSS for distribution to GH Pages.',
+        [
+            'newer:sprite:suppliers',
+            'newer:sprite:utilities',
+            'sass',
+            'autoprefixer',
+            'cssmin:dist',
+        ]
+    );
+
     // HTML Compile Task
-    //
-    // 1. assemble
-    //
     // TODO: Move Angular.JS partials into a HTML->JS compilation task.
     grunt.registerTask('compile-html',
         'Process and compile our HTML for distribution.',
@@ -95,14 +106,10 @@ module.exports = function(grunt) {
     );
 
     // Development Server
-    //
-    // 1. build:                Our standard build task
-    // 2. contrib-connect:      Launches a server
-    // 3. watch:                Watches for file changes
     grunt.registerTask('serve',
         'Preprocess then serve the static site.',
         [
-            'build',
+            'build:dev',
             'connect',
             'watch'
         ]
