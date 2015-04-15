@@ -1,0 +1,139 @@
+// Checkout User Interface
+//
+// .checkout            - Encapsulates complete Checkout experience
+// .checkout-forms      - Encapsulates the Checkout forms.
+// .checkout-cart       - Encapsulates the Checkout Shopping Cart (plan cards)
+//
+// No styleguide reference
+.checkout {
+    @include cg-row(true, true);
+}
+
+.checkout-forms {
+    @include breakpoint($mq-sm-max) {
+        @include cg-item(true, true);
+    }
+
+    @include breakpoint($mq-md-min) {
+        @include cg-1of2(true, true, true);
+    }
+}
+
+// Checkout Steps
+//
+// .checkout-steps      - Encapsulates the Checkout step buttons
+//     .checkout-step   - Contains an individual Checkout step
+//     .step-button     - Defines the various types of Checkout steps
+//
+// No styleguide reference
+.checkout-steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: $font-size-smaller;
+
+    .checkout-step {
+        display: inline-block;
+        float: left;
+        padding: $grid-gutter-width;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .step-button {
+        @include link-as-button();
+        @include ce-button('primary');
+
+        &.is-active {
+            @include ce-button('bright');
+        }
+
+        &.is-completed {
+            @include ce-button('dark');
+        }
+    }
+}
+
+// Checkout Section
+//
+// .checkout-section    - Used to provide padding between sections of checkout forms.
+//
+// No styleguide reference
+.checkout-section {
+    @include cg-row(false, false);
+    clear: both;
+    padding-top: (4 * $grid-gutter-width);
+    padding-bottom: (4 * $grid-gutter-width);
+}
+
+// Checkout Group
+//
+// .checkout-group       - Sets up a standard design pattern for individual form field groups.
+//
+// No styleguide reference
+.checkout-group {
+    @include cg-row(true, false);
+
+    .checkout-label-text {
+        @include cg-1of4();
+    }
+
+    .checkout-input {
+        @include cg-3of4();
+    }
+}
+
+// Checkout Actions
+//
+// .checkout-actions      - Sets up the previous/next/finish buttons.
+//
+// No styleguide reference
+.checkout-actions {
+    position: relative;
+
+    .checkout-previous {
+        display: inline-block;
+
+        .checkout-action {
+            @include ce-button('dark');
+        }
+    }
+
+    .checkout-next {
+        display: inline-block;
+        float: right;
+
+        .checkout-action {
+            @include ce-button('primary');
+        }
+    }
+
+    .checkout-finish {
+        display: inline-block;
+        float: right;
+
+        .checkout-action {
+            @include ce-button('bright');
+        }
+    }
+}
+
+// Checkout Cart Styles
+//
+// .checkout-cart       - Encapsulates the Checkout Shopping Cart (plan cards)
+//      .cart-header    - Provides structure for the Shopping Cart header
+//
+// No styleguide reference
+.checkout-cart {
+    @include breakpoint($mq-sm-max) {
+        @include cg-item(true, true);
+    }
+
+    @include breakpoint($mq-md-min) {
+        @include cg-1of2(true, true, true);
+    }
+
+    .cart-header {
+        @include cg-row(true, false);
+    }
+}

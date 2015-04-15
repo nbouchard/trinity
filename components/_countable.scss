@@ -1,0 +1,22 @@
+.countable {
+    @include box-sizing(border-box);
+
+    .countable-label {
+        @include box-sizing(border-box);
+
+        .countable-data {
+            @include box-sizing(border-box);
+            display: inline-block;
+            padding: 0.5em;
+            min-width: 2em;
+            height: 2em;
+            border-radius: 2em;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 1.33em;
+            background: $color-gray-ghost;
+            color: $color-white-pure;
+            font-size: $font-size-smaller;
+        }
+    }
+}
