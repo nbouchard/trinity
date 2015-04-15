@@ -41,6 +41,7 @@
     }
 
     .step-button {
+        @include link-as-button();
         @include ce-button('primary');
 
         &.is-active {
