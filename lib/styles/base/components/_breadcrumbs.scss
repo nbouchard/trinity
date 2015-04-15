@@ -1,0 +1,91 @@
+// Breadcrumbs
+//
+// .breadcrumbs         - Provides a standard design pattern for breadcrumbs
+//
+// No styleguide reference
+.breadcrumbs {
+    .nav-list {
+        padding-left: 0;
+
+        .nav-item {
+            &:after {
+                padding: 0 0.5em;
+                color: $color-gray-ghost;
+                content: '/';
+            }
+
+            .nav-link {
+                color: $color-gray-chateau;
+                font-weight: $font-weight-body;
+            }
+
+            &:last-child {
+                .nav-link {
+                    font-weight: $font-weight-headline;
+                }
+
+                &:after {
+                    content: '';
+                }
+            }
+        }
+
+        > .nav-item {
+            display: inline-block;
+        }
+    }
+}
+
+// Content Editorial Breadcrumbs
+//
+// Provides an alternative set of styles that enables the breadcrumbs to
+// overlay photographic / dark content like the backgrounds of content editorials.
+//
+// No styleguide reference
+.content-editorial {
+    .breadcrumbs {
+        .nav-list {
+            .nav-item {
+                &:after {
+                    color: $color-white-smoke;
+                }
+
+                .nav-link {
+                    color: $color-white-smoke;
+                }
+            }
+        }
+    }
+
+    &.content-editorial-translucent {
+        .breadcrumbs {
+            .nav-list {
+                .nav-item {
+                    &:after {
+                        color: $color-gray-charcoal;
+                    }
+
+                    .nav-link {
+                        color: $color-gray-charcoal;
+                    }
+                }
+            }
+        }
+    }
+
+    &.content-editorial-bg-grid {
+        .breadcrumbs {
+            .nav-list {
+                .nav-item {
+                    &:after {
+                        color: $color-blue-bahama;
+                    }
+
+                    .nav-link {
+                        color: $color-blue-bahama;
+                    }
+                }
+            }
+        }
+    }
+}
