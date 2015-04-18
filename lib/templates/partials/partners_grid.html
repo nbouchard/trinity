@@ -1,12 +1,18 @@
+---
+suppliers:
+- aep-energy
+- txu-energy
+- bounce-energy
+- direct-energy
+- champion-energy
+- cirro-energy
+- amigo-energy
+- trieagle
+---
 <ul class="partner-grid">
-    <li class="partner"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-aep-energy">AEP Energy</a></li>
-    <li class="partner"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-txu-energy">TXU Energy</a></li>
-    <li class="partner"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-bounce-energy">Bounce Energy</a></li>
-    <li class="partner"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-direct-energy">Direct Energy</a></li>
-    <li class="partner"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-champion-energy">Champion Energy</a></li>
-    <li class="partner"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-cirro-energy">Cirro Energy</a></li>
-    <li class="partner"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-amigo-energy">Amigo Energy</a></li>
-    <li class="partner"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-trieagle">Trieagle Energy</a></li>
+    {{#each partners_grid.suppliers}}
+    <li class="partner"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-{{.}}">{{.}}</a></li>
+    {{/each}}
 </ul>
 <nav class="partner-grid-nav grid-nav paginator paginator-dots">
     <ol class="nav-list">
