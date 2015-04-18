@@ -1,0 +1,455 @@
+---
+site:
+  name: ChooseUX
+  version: 0.1.0
+tpl:
+  desc: Page Desc
+  title: Components
+---
+<div class="content-editorial content-editorial content-editorial-short content-editorial-bg-info">
+    <div class="content-editorial-container">
+        <h1 class="content-editorial-headline">Components</h1>
+        <h2 class="content-editorial-subhead">Our building blocks enable us to run fast.</h2>
+    </div>
+</div>
+<div class="content-tip">
+    <div class="content-tip-container">
+        <p class="content-tip-smaller"><strong>component</strong> (n.) &mdash; a piece of encapsulated functionality used to build part of our experience</p>
+    </div>
+</div>
+
+<div class="content-container">
+    <div class="content-nav">
+        <ul>
+            <li>Content Editorial
+                <ul>
+                    <li>Basic</li>
+                    <li>Height Customization</li>
+                    <li>Structural Components
+                        <ul>
+                            <li>Headline</li>
+                            <li>Subhead</li>
+                            <li>Call-to-Action Block</li>
+                            <li>Infogrid</li>
+                            <li>Note Copy</li>
+                            <li>Translucent Container</li>
+                            <li>Infobox</li>
+                            <li>Marker</li>
+                            <li>Tabbed Region</li>
+                            <li>Accent Copy</li>
+                        </ul>
+                    </li>
+                    <li>Variants
+                        <ul>
+                            <li>Big Talk Variant</li>
+                            <li>Centered Hero Variant</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Content Tip</li>
+            <li>Guide Block</li>
+            <li>Testimonial</li>
+            <li>Supplier Card
+                <ul>
+                    <li>Glance</li>
+                    <li>Standard</li>
+                    <li>Expanded</li>
+                    <li>Detailed</li>
+                    <li>Complete</li>
+                </ul>
+            </li>
+            <li>Utility Card
+                <ul>
+                    <li>Glance</li>
+                    <li>Standard</li>
+                    <li>Expanded</li>
+                    <li>Detailed</li>
+                    <li>Complete</li>
+                </ul>
+            </li>
+            <li>Plan Card
+                <ul>
+                    <li>Glance</li>
+                    <li>Standard</li>
+                    <li>Expanded</li>
+                    <li>Detailed</li>
+                    <li>Complete</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-body">
+        <h1>Content Blocks</h1>
+        <p>Content Blocks are a variety of templates that can be reused throughout the system in a lot of different ways. Preferably, they help us centralize the editing of reusable content, but additionally, they allow content editors to reuse existing design patterns and component concepts to build landing pages and unique post types quickly with limited design and engineering resources.</p>
+
+        <h3>Content Editorials</h3>
+        <p>The Content Editorials design pattern is used throughout the Choose Energy site in a variety of different ways. Each of these variations represents an option that may be presented to change a Content Editorial both visually and structurally.</p>
+        <p>We can either create separate individual Content Editorial templates or we can have the customizations be options in the Content Block template editor.</p>
+
+        <h3>Content Tip</h3>
+        <p>The Content Tip content block is a single HTML block with only one option: font-size. There's specific sizes:</p>
+
+        <ol>
+            <li>Small (1.25em)</li>
+            <li>Normal (1.5em)</li>
+            <li>Large (3.0em)</li>
+        </ol>
+
+        <h3>Guide Block</h3>
+        <p>The Guide Block content block is a standard design pattern used primarily in our Energy Academy. It is a colored block that has four components:</p>
+
+        <ul>
+            <li>Headline</li>
+            <li>Optional Icon</li>
+            <li>Summary Copy</li>
+            <li>Link (Two Customizable Pieces: Link Text and Link URL)</li>
+        </ul>
+
+        <p>The background color of each Guide Block should be customizable independently.</p>
+
+        <p>The Guide Block can be used standalone or in a group to create a Guide Row. It might be useful for the interface for this Content Block to allow for the inclusion of multiple Guide Blocks in a given Content Block, but it is also perfectly fine to create a few different versions of this same pattern with multiple blocks in a row ("Single Guide Block", "Double Guide Block Row", "Triple Guide Block Row", etc).</p>
+
+        <h3>Testimonials</h3>
+
+        <p>The Testimonials Content Block comes in two flavors:</p>
+
+        <ol>
+            <li>Residential</li>
+            <li>Commercial</li>
+        </ol>
+
+        <p>The concept for both is effectively the same. The template for both is an interactive design pattern comprised of a headline and an array of quotes, cited sources, and cited images. The exact implementation for each is slightly different.</p>
+
+        <h3>Supplier Card</h3>
+
+        <p>The Supplier Card is a NEXUS-specific Content Block. The Supplier Card is defined as the summary of information required to display a Supplier to a user.</p>
+
+        <p>There are three variants to the Supplier Card:</p>
+
+        <ul>
+            <li>Mini Card: Used primarily to display a Supplierâ€™s logo to users.  Typically used with multiple mini cards at once in a paginated Grid format.</li>
+            <li>Basic Card: Used primarily to display a Supplier Card in the context of an Article or Blog Post, the Basic Card gives a small amount of information about a Supplier and encourages the user to read more about the supplier.</li>
+            <li>Expanded Card: Used primarily on pages like the Suppliers Overview, the Expanded card displays a large dataset for a given supplier.</li>
+        </ul>
+
+        <p>There are no customizations for a CMS Admin to make on a Supplier Card. These are purely dynamic and the entire contents of the Content Block should be pulled from the API.</p>
+
+        <h3>Utility Card</h3>
+
+        <p>The Utility Card is a NEXUS-specific Content Block. The Utility Card is defined as the summary of information required to display a Utility to a user.</p>
+
+        <p>Like the Supplier Card, there are three variants to the Utility Card:</p>
+
+        <ul>
+            <li>Mini Card: Used primarily to display a Utilityâ€™s logo to users.  Typically used with multiple mini cards at once in a paginated Grid format.</li>
+            <li>Basic Card: Used primarily to display a Utility Card in the context of an Article or Blog Post, the Basic Card gives a small amount of information about a Utility and encourages the user to read more about the utility.</li>
+            <li>Expanded Card: Used primarily on pages like the Utilities Overview, the Expanded card displays a large dataset for a given utility.</li>
+        </ul>
+
+        <p>There are no customizations for a CMS Admin to make on a Supplier Card. These are purely dynamic and the entire contents of the Content Block should be pulled from the API.</p>
+
+        <h3>Plan Card</h3>
+
+        <p>The Plan Card Content Block is a NEXUS-specific Content Block. A Plan card is defined as the summary information required to display an Electricity, Natural Gas, or other Energy Rate Plan to a user.</p>
+
+        <p>There will be more definition around the Plan Card Content Block when we get more design definition around it.</p>
+
+        <p>There are no customizations for a CMS Admin to make on a Plan Card. These are purely dynamic and the entire contents of the Content Block should be pulled from the API.</p>
+    </div>
+</div>
+
+
+<div class="cg-row cg-vpad">
+    <h2 class="cg-1of1">Content Editorial</h2>
+    <div class="cg-1of1">
+        <ul>
+            <li>Basic</li>
+            <li>Height Customization</li>
+            <li>Structural Components</li>
+            <li>Variants</li>
+        </ul>
+    </div>
+
+    <div class="cg-1of1">
+        <h3>Basic</h3>
+    </div>
+
+    <div class="cg-1of1">
+        <h3>Height Customization</h3>
+
+        <p>The first variation of the Content Editorial that is most evident is the minimum height customization.</p>
+
+        <p>All content editorials have a default `min-height` equivalent to about one screen tall on a small laptop or landscape tablet (50em, or 800px).</p>
+
+        <p>There are two alternatives to this default height:</p>
+
+        <ul>
+            <li><b>Short</b>: This variant sets the `min-height` to 20em, which is about equivalent to a third of a single screen (i.e. roughly 320 screen pixels). This is used for many of the content-editorials that are meant to break up the page but are not meant to be full sections. Page headers, for example, often use the short variant. It is created by combining the `content-editorial` class with the `content-editorial-short` class (i.e. `.content-editorial.content-editorial-short`). This variant takes precedence over the Default variant but yields to the No Height variant.</li>
+            <li><b>No Height</b>: This variant sets the `min-height` to 1em, which is about equivalent to a single gutter. This effectively sets the height to grow with the content. It is created by combining the `content-editorial` class with the `content-editorial-noheight` class (i.e. `.content-editorial.content-editorial-noheight`). When combining variants, this takes priority over the Default and Short variants.</li>
+        </ul>
+    </div>
+
+    <div class="cg-1of1">
+        <h3>Structural Components</h3>
+        <ul>
+            <li>Headline</li>
+            <li>Subhead</li>
+            <li>Call-to-Action Block</li>
+            <li>Infogrid</li>
+            <li>Note Copy</li>
+            <li>Translucent Container</li>
+            <li>Infobox</li>
+            <li>Marker</li>
+            <li>Tabbed Region</li>
+            <li>Accent Copy</li>
+        </ul>
+
+        <h3>Structural Components</h3>
+
+        <p>There are a set number of distinct structural components offered within the Content Editorial that inherit specific properties. All components of the content editorial block are "optional" but in order to make the best templates, some are best combined in a specific fashion.</p>
+
+        #### Headline
+
+The Headline is a pretty basic component of the Content Editorial. Itâ€™s a short text blurb that typically spans 1-2 lines. It should be a semantically important element of the Content Editorial, typically a `h1`, `h2`, or `h3` element. Being able to customize what type of element this is would be useful but is not a requirement.
+
+This is designated by the class `content-editorial-headline` and must be a descendent of the main `content-editorial` class.
+
+#### Subhead
+
+The Subhead is a basically a less visually impactful version of the Headline. Typically, it is one degree lower in semantic importance than the Headline of the same block, i.e. `h2` if the Headline is `h1` or `h3` if the Headline is `h2`.
+
+This is designated by the class `content-editorial-subhead` and must be a descendent of the main `content-editorial` class.
+
+#### Call-to-Action Block
+
+The CTA is a basic block of text that receives some basic styling. It is used in the case where one or more paragraph elements, lists, inputs, and/or buttons need to be combined into a call-to-action without specific styling requirements other than matching the current Content Editorial.
+
+This is designated by the class `content-editorial-cta` and must be a descendent of the main `content-editorial` class. Typically, it is attached to a `div` element wrapping a variety of flow content, but could be attached directly to a `p` element or similar if preferred.
+
+#### Infogrid
+
+The Infogrid is an extension of the Call-to-Action block used to create a table-like display of content that is not explicitly (or semantically) a table. The expectation is that you would use the Infogrid when you want to display a horizontal row of discrete chunks of content.
+
+An Infogrid can have any any number of cells within it, and these cells can be complex or simple elements. Cells will shrink down to 10em wide, and once there are too many cells to fit on a single row, they will automatically wrap to the next line.
+
+The Infogrid is designated by the `content-editorial-infogrid` class added to the `content-editorial-cta` class. The Infogrid must always be a descendent of the `content-editorial` class and be also designated as `content-editorial-cta`.
+
+In order to utilize the automatic sizing and display properties, individual cells designated as `content-editorial-infogrid-cell` must be created as children of the `content-editorial-infogrid` element. These cells can be any element, but tend to be either a `div` or `p` element, depending on the complexity of the content within. For simplicityâ€™s sake, we can require all of these cells to be `div` elements for now.
+
+#### Note Copy
+
+Similar to the CTA Block, Note Copy is a basic block of text that receives special styling. It is used in the case where some text needs to be de-emphasized in a Content Editorial.
+
+This is designated by the class `content-editorial-note` and must be a descendent of the main `content-editorial` class. Typically, it is attached to a `small` element wrapping a text node for optimal semantics.
+
+#### Translucent Container
+
+Some sections of Content Editorials need to have enhanced readability over their editorial imagery. To do this, we make a white translucent box visible over the Content Editorial imagery. We modify the main `content-editorial` element as well as make some customizations to the `content-editorial-container` and other structural elements by combining the `content-editorial` class with the `content-editorial-translucent` class (i.e. `.content-editorial.content-editorial-translucent`).
+
+Typically, it would be advisable to use a Translucent Container when more than 2 or more paragraphs of copy are going to be visible in a given Content Editorial or the copy needs to stand out against a background upon which it might be otherwise difficult to read white text.
+
+#### Infobox
+
+Similar to the Translucent Container, the Infobox is a translucent content container that takes up a smaller region of the Content Editorial and has the ability to be attached to different parts of the Content Editorial using the `is-attached` and `attach-*` modifier classes.
+
+The Infobox is designated by the class `content-editorial-infobox` and must be a descendent of the main `content-editorial` class.
+
+To utilize the `is-attached` and `attach-X` modifier classes, the `is-attached` class must be applied to the `content-editorial-infobox` along with one or more of the `attach-X` classes, where X is one of the following values:
+
+- top
+- topish
+- bottom
+- bottomish
+- right
+- rightish
+- left
+- leftish
+
+As an example, if the Content Editorial should have the content positioned to the top left edge of the Content Editorial, the total class designation of the `content-editorial-infobox` would be the following: `.content-editorial-infobox.is-attached.attach-top.attach-left`. A Content Editorial with the Infobox attached to the bottom but kept in the standard page flow for horizontal alignment, the class designation would be the following: `.content-editorial-infobox.is-attached.attach-bottom`.
+
+Adding `ish` to the end of the direction provides a 4em offset from the edge of the Content Editorial.
+
+#### Marker
+
+The Content Editorial Marker is a specialty element used to provide the look of a â€œtabâ€ or â€œlabelâ€ to a given Content Editorial. Typical usage includes providing photography attribution on a licensed image or labeling a map/visualization.
+
+The Marker will by default be a small, accent-styled block on a translucent white background. Its background and position can both be customized with a handful of options.
+
+For background, the color of the background can be designated using one of three alternative classes. If the `content-editorial-marker` also has one of the following three classes, it will change to the relevant thematic color:
+
+- `content-editorial-marker-primary`: Primary Accent Color (â€œShamrock Greenâ€)
+- `content-editorial-marker-info`: Informational Color (â€œCurious Blueâ€)
+- `content-editiroial-marker-bright`: Bright/Highlighting Color (â€œOrange Sunâ€)
+
+For positioning, the same `is-attached` and `attach-X` pattern that helps position the Infobox component also works on the Marker. The only difference is that by default, the marker is already absolutely positioned as if it has the classes `.is-attached.attach-topish.attach-left` (Absolutely positioned to the left edge and 4em from the top edge).
+
+#### Tabbed Region
+
+The Content Editorial Tabbed Region is technically independent of the Content Editorial definition, as they could theoretically exist outside of the Content Editorial. Realistically, though, we donâ€™t have any use-case for this structure outside of Content Editorials yet, so it makes sense to address it here until it needs to be abstracted out of the Content Editorials itself.
+
+Effectively, the Tabbed Region combines two sections: `tab-header` and `tab-body`. The big thing to note here is that switch the content inside of `tab-body` based on which tab is in the `tab-header` section is active. There are currently no restrictions on the type of content in either section. The first usage of this combines a standard `nav-list` design pattern with a `grid-basic` design pattern to create a tabbed region for the Energy Academy. As we come up with more uses for the Tabbed Region, we will need to expound upon this interaction and structural component in more detail.
+
+#### Accent Copy
+
+Accent copy is a simple class that is used to designate copy that is to be highlighted with our accent typeface (Merriweather). This is really just a utility class that is non-structural, but this seemed like the best place to explain it.
+    </div>
+
+    <div class="cg-1of1">
+        <h3>Variants</h3>
+        <ul>
+            <li>Big Talk Variant</li>
+            <li>Centered Hero Variant</li>
+        </ul>
+
+        <h3>Variants</h3>
+
+        <p>There are a set number of distinct structural components offered within the Content Editorial that inherit specific properties. All components of the content editorial block are "optional" but in order to make the best templates, some are best combined in a specific fashion.</p>
+
+        ### Big Talk Variant
+
+The â€œBig Talkâ€ variant is a special case version of the Content Editorial. This would most likely need to be its own special content block template, as it comes with some very specific design requirements, and it shouldnâ€™t be combined with really any structural components beyond Headline, Subhead, and basic CTA usage.
+
+The â€œBig Talkâ€ variant is an amplifier on a regular Content Editorial block. It scales everything to 140% of normal. This is really only used on the homepage and a few other splashy landing pages, but it could come in handy when developing new landing pages.
+
+Each â€œBig Talkâ€ Content Editorial should contain a Headline, an optional Subhead, and an HTML block CTA. Typically, it will have an input and button in it.
+
+### Centered Hero Variant
+
+The â€œCentered Heroâ€ Variant is another special case version, so it should likely be its own special content block template. It presents a large Headline in the middle of the Content Editorial, and provides no other structural components, making the only configurable values the Headline and the Background Image.
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+### Testimonials - Residential
+
+Components of the `Testimonials - Residential` content block:
+
+- Headline
+- Array of Testimonials
+    - Each Testimonial is comprised of the following:
+        - Short Text Quote
+        - Cited Source (Typically a personâ€™s name)
+        - Photo of person either cut out against a transparent background or against a white background.
+            - The photo should be of the person facing straight on to the camera from roughly their elbows up.
+
+### Testimonials - Business
+
+Components of the `Testimonials - Business` content block:
+
+- Headline
+- Array of Testimonials
+    - Each Testimonial is comprised of the following:
+        - Short Text Quote
+        - Cited Source (Typically a company name)
+        - Company logo either cut out against a transparent background or against a white background.
+            - Prefer square logos over odd shapes.
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="cg-row cg-vpad">
+    <h2 class="cg-1of1">Content Editorial</h2>
+    <div class="cg-1of1">
+        <p>The Content Editorials design pattern is used throughout the Choose Energy site in a variety of different ways. Each of these variations represents an option that may be presented to change a Content Editorial both visually and structurally.</p>
+        <p>We can either create separate individual Content Editorial templates or we can have the customizations be options in the Content Block template editor.</p>
+
+        <h3>Basic</h3>
+        <p></p>
+
+        <h3>Core Customization</h3>
+        <p></p>
+
+        <h3>Variants</h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="cg-row cg-vpad">
+    <h2 class="cg-1of1">Example: Content Editorial Short</h2>
+    <div class="cg-1of1">
+        <div class="content-editorial content-editorial-short" style="background: url('images/photography/Bay_Bridge_Night.jpg') no-repeat; background-size: cover;">
+            <div class="content-editorial-container">
+                <h1 class="content-editorial-headline">Careers</h1>
+                <nav class="breadcrumbs">
+                    <ol class="nav-list">
+                        <li class="nav-item"><a href="website_homepage_residential.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="website_about_overview.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="website_about_careers.html" class="nav-link">Careers</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cg-row cg-vpad">
+    <h2 class="cg-1of1">Example: Content Editorial Big Talk</h2>
+    <div class="cg-1of1">
+        <div class="content-editorial content-editorial-bigtalk content-editorial-noheight" style="background: url('images/photography/Orange_Pot.jpg') no-repeat; background-size: cover;">
+            <div class="content-editorial-container">
+                <h1 class="content-editorial-headline">Lower Your Natural Gas Bill</h1>
+                <h2 class="content-editorial-subhead">Compare rates and save!</h2>
+                <div class="content-editorial-cta">
+                    <p><input class="input-superwide" type="text" placeholder="Type your zipcode (i.e. 77070, 60622, 94107)"> <button class="btn-primary" type="button">Find Your Energy</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cg-row cg-vpad">
+    <h2 class="cg-1of1">Example: Content Editorial Translucent</h2>
+    <div class="cg-1of1">
+        <div class="content-editorial content-editorial-translucent content-editorial-noheight" style="background: url('images/photography/SanFrancisco.jpg') no-repeat; background-size: cover; background-position: center;">
+            <div class="content-editorial-container">
+                <h2 class="content-editorial-headline">Contact Us</h2>
+                <div class="content-editorial-panes panes">
+                    <div class="cg-1of3 panes">
+                        <p>At Choose Energy, we connect you with the best energy available. We are not your Utility or Energy Supplier. If you have questions about your current service, please contact your energy supplier from the numbers on your energy bill.</p>
+                    </div>
+                    <div class="cg-2of3">
+                        <form>
+                            <div class="form-row">
+                                <label class="label-wide">Name</label>
+                                <input type="text" class="input-superwide" placeholder="Type your name">
+                            </div>
+                            <div class="form-row">
+                                <label class="label-wide">Email</label>
+                                <input type="text" class="input-superwide" placeholder="Type your email (i.e. example@gmail.com)">
+                            </div>
+                            <div class="form-row">
+                                <label class="label-wide">Phone</label>
+                                <input type="text" class="input-superwide" placeholder="Type your phone (i.e. 555-555-5555)">
+                            </div>
+                            <div class="form-row">
+                                <label class="label-wide">Message</label>
+                                <textarea class="input-superwide"></textarea>
+                            </div>
+                            <div class="form-row">
+                                <label class="label-wide"></label>
+                                <button class="btn-primary" type="button">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
