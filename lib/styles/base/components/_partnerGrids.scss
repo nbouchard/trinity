@@ -1,14 +1,25 @@
 .partner-grid {
-    margin: 2em 0 0;
+    @include cg-row(true, false);
 
-    .grid-item {
+    .partner {
+        list-style: none;
         text-align: center;
-        margin-bottom: 2em;
-    }
+        height: 8em;
 
-    &.grid.gridpage {
         @include breakpoint($mq-sm-max) {
-            @include flex-wrap(wrap);
+            @include cg-1of2(true, true, true);
+        }
+
+        @include breakpoint($mq-md) {
+            @include cg-1of4(true, true, true);
+        }
+
+        @include breakpoint($mq-lg-min) {
+            @include cg-1of8(true, true, true);
+        }
+
+        .supplier-logo {
+            vertical-align: middle;
         }
     }
 }
@@ -19,4 +30,10 @@
     .nav-list {
         display: inline-block;
     }
+}
+
+.supplier-logo {
+    @include ce-colorfade();
+    display: inline-block;
+    text-indent: -9999px;
 }
