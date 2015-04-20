@@ -69,6 +69,30 @@
     }
 }
 
+@mixin cg-1of6 ($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 16.66%;
+    } @else {
+        @include breakpoint($mq-sm) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-md) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 16.66%;
+        }
+
+        &.is-strict {
+            width: 16.66%;
+        }
+    }
+}
+
 @mixin cg-1of5 ($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -282,6 +306,27 @@
 
     &.cg-nopad {
         @include cg-1of8(false, false);
+    }
+}
+
+.cg-1of6 {
+    @include cg-1of6();
+
+
+    &.cg-padded {
+        @include cg-1of6(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-1of6(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-1of6(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-1of6(false, false);
     }
 }
 

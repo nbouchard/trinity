@@ -4,8 +4,8 @@ site:
   name: ChooseUX
   version: 0.1.0
 tpl:
-  desc: Page Desc
-  title: Website Page
+  desc: The homepage for residential customers of Choose Energy
+  title: Choose Energy Homepage for Residential
 ---
 <div class="content-editorial content-editorial-bigtalk" style="position:relative;">
     <video class="content-editorial-container" autoplay loop style="position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; background-size: cover;  -webkit-filter: blur(5px) brightness(80%); filter: blur(5px) brightness(80%);">
@@ -19,11 +19,7 @@ tpl:
         </div>
     </div>
 </div>
-<div class="content-tip">
-    <div class="content-tip-container">
-        <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
-    </div>
-</div>
+{{> cb_tip_natgas}}
 <div class="content-editorial content-editorial-bg-dark" style="background: url('images/photography/Family_Dinner_Under_Lights.jpg') no-repeat; background-size: cover;">
     <div class="content-editorial-container">
         <h2 class="content-editorial-headline">We help you find the best energy plan at the best price</h2>
@@ -43,181 +39,26 @@ tpl:
 <div class="content-editorial content-editorial-bg-white">
     <div class="content-editorial-container">
         <h2 class="content-editorial-headline">Locations</h2>
-        <div class="locations-mapbox">
-            <div id="choose-mapinfo" class="locations-info"><p>Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in their area. The power of choice has ushered in major advantages for customers, including: better customer service, more competitive rates as well as special offers and rewards.
-            </p>
-                <h2 id="choose-mapinfo-state">National</h2>
-                <h4>Products:</h4>
-                <div id="choose-mapinfo-residential-electricity" class="locations-product green active"><a href="#">Residential Electricity</a></div>
-                <div id="choose-mapinfo-residential-gas" class="locations-product blue active"><a href="#">Residential Natural Gas </a></div>
-                <div id="choose-mapinfo-commercial-electricity" class="locations-product orange active"><a href="#">Commercial Electricity </a></div>
-                <div id="choose-mapinfo-none" class="locations-product green">We currently do not offer any products in this State.</div>
-            </div>
-            <div id="choose-map" class="locations-map map"><h3 class="locations-map-state">States We Serve</h3></div>
-            <script>
-            var width = document.getElementById('choose-map').offsetWidth;
-            var height = document.getElementById('choose-map').offsetHeight;
-            // var width = 675;
-            // var height = 500;
-            var centered;
-
-            var projection = d3.geo.albersUsa()
-                .scale(800)
-                .translate([width / 2, height / 2]);
-            var path = d3.geo.path()
-                .projection(projection);
-            var svg = d3.select("#choose-map").append("svg")
-                .attr("class", "map-svg")
-                .attr("viewBox", "0 0 " + width + " " + height)
-                .attr("width", width)
-                .attr("height", height);
-            svg.append("rect")
-                .attr("class", "map-base")
-                .attr("width", width)
-                .attr("height", height);
-
-            var usa = svg.append("g");
-            d3.json("/data/states_usa.topo.json", function(error, us) {
-                usa.append("g")
-                    .selectAll("path")
-                    .data(topojson.feature(us, us.objects.states).features)
-                    .enter()
-                    .append("path")
-                    .attr("d", path)
-                    .attr("class", function(d) {
-                        if (d.properties.energy.residential_electricity || d.properties.energy.residential_gas || d.properties.energy.commercial_electricity === 1) {
-                            return "map-blue";
-                        } else {
-                            //console.log("map-states only");
-                            return "map-states";
-                        }
-                    })
-                    .on('click', clicked)
-                    .on('mouseover', function(d,i) {
-                        d3.select(this)
-                            .classed("map-highlight", true);
-                        d3.select(".locations-map-state").text(d.properties.name);
-                    })
-                    .on('mouseout', function(d,i) {
-                        d3.select(this)
-                            .classed("map-highlight", false);
-                        d3.select(".locations-map-state").text("States We Serve");
-
-
-                    });
-            });
-            function clicked(d) {
-                var x, y, k;
-                if (d && centered !== d) {
-                    var centroid = path.centroid(d);
-                    x = centroid[0];
-                    y = centroid[1];
-                    k = 3;
-                    centered = d;
-                    d3.select('#choose-mapinfo-state').text(d.properties.name);
-                    d3.select('#choose-mapinfo-residential-electricity').classed('active', function() {
-                        if (d.properties.energy.residential_electricity === 1) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    });
-                    d3.select('#choose-mapinfo-residential-gas').classed('active', function() {
-                        if (d.properties.energy.residential_gas === 1) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    });
-                    d3.select('#choose-mapinfo-commercial-electricity').classed('active', function() {
-                        if (d.properties.energy.commercial_electricity === 1) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    });
-                    d3.select('#choose-mapinfo-none').classed('active', function() {
-                        if (d.properties.energy.residential_electricity !== 1 &&  d.properties.energy.residential_gas !== 1 && d.properties.energy.commercial_electricity !== 1) {
-                            return true
-                        }
-                    });
-                    d3.selectAll("path").classed("map-selected", false);
-                    d3.select(this).classed("map-selected", true);
-                } else {
-                    x = width / 2;
-                    y = height / 2;
-                    k = 1;
-                    centered = null;
-                    d3.select('#choose-mapinfo-state').text("National");
-                    d3.select('#choose-mapinfo-residential-electricity').classed('active', function() {
-                        return true;
-                    });
-                    d3.select('#choose-mapinfo-residential-gas').classed('active', function() {
-                        return true;
-                    });
-                    d3.select('#choose-mapinfo-commercial-electricity').classed('active', function() {
-                        return true;
-                    });
-                    d3.select('#choose-mapinfo-none').classed('active', function() {
-                        return false;
-                    });
-
-                    d3.select(this).classed("map-selected", false);
-                }
-
-                usa.selectAll("path")
-                    .classed("map-highlight", centered && function(d) {
-                        return d === centered;
-                    });
-
-            usa.transition()
-                .duration(750)
-                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-                .style("stroke-width", 1.5 / k + "px");
-              // d3.select(this).remove();
-
-            }
-            </script>
-        </div>
+        {{> cmp_locations_map}}
     </div>
 </div>
-<div class="content-tip">
-    <div class="content-tip-container">
-        <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
-    </div>
-</div>
+{{#withHash
+    tip_text="Natural gas is the cleanest burning conventional fuel, producing 45 percent less carbon dioxide than coal."
+}}
+    {{> cmp_tip}}
+{{/withHash}}
 <div class="content-editorial" style="background: url('images/photography/Lowlight_Lamp.jpg') no-repeat; background-size: cover;">
     <div class="content-editorial-container">
         <h2 class="content-editorial-headline">How It Works</h2>
         <p class="content-editorial-cta">How it works goes here.</p>
     </div>
 </div>
-<div class="content-editorial content-editorial-short content-editorial-bg-white">
-    <div class="content-editorial-container">
-        <h4 class="content-editorial-headline">Our Suppliers</h4>
-        <ul class="partner-grid grid gridpage">
-            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/aep-energy.png" alt="AEP Energy Logo" title="AEP Energy"></a></li>
-            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/txu-energy.png" alt="TXU Energy Logo" title="TXU Energy"></a></li>
-            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/bounce-energy.png" alt="Bounce Energy Logo" title="Bounce Energy"></a></li>
-            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/reliant.png" alt="Reliant Logo" title="Reliant"></a></li>
-            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/champion-energy.png" alt="Champion Energy Logo" title="Champion Energy"></a></li>
-            <li class="grid-item is-centered"><a href="#" class="ce-colorfade"><img src="images/supplier-logos/cirro-energy.png" alt="Cirro Energy Logo" title="Cirro Energy"></a></li>
-        </ul>
-        <nav class="partner-grid-nav grid-nav paginator paginator-dots">
-            <ol class="nav-list">
-                <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
-            </ol>
-        </nav>
-    </div>
-</div>
-<div class="content-tip">
-    <div class="content-tip-container">
-        <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
-    </div>
-</div>
+{{> cb_our_suppliers}}
+{{#withHash
+    tip_text="Natural gas is the cleanest burning conventional fuel, producing 45 percent less carbon dioxide than coal."
+}}
+    {{> cmp_tip}}
+{{/withHash}}
 <div class="content-editorial content-editorial-translucent" style="background: url('images/photography/Kites_and_Windmills.jpg') no-repeat; background-size: cover;">
     <div class="content-editorial-container">
         <h2 class="content-editorial-headline">Energy Academy</h2>
@@ -273,39 +114,51 @@ tpl:
         </div>
     </div>
 </div>
-<div class="content-editorial content-editorial-noheight content-editorial-bg-light">
+<div class="content-editorial content-editorial-noheight content-editorial-bg-white">
     <div class="content-editorial-container testimonials-container">
         <h4 class="content-editorial-headline">We chose our own energy and it made all the difference</h4>
         <div class="testimonials">
             <figure class="testimonial">
-                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
-                <figcaption class="testimonial-person">Person McPerson</figcaption>
-                <img class="testimonial-photo" src="images/testimonials/person01.png" alt="Person McPerson">
+                <div class="testimonial-text">
+                    <q class="testimonial-quote">I switched to 100 percent renewable energy sources. Thanks for helping me find these options and make this choice!</q>
+                    <figcaption class="testimonial-person">Catherine, Camden, NJ</figcaption>
+                </div>
+                <img class="testimonial-photo" src="images/testimonials/person01.png" alt="Catherine, Camden, NJ">
             </figure>
             <figure class="testimonial">
-                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
-                <figcaption class="testimonial-person">Person McPerson</figcaption>
-                <img class="testimonial-photo" src="images/testimonials/person02.png" alt="Person McPerson">
+                <div class="testimonial-text">
+                    <q class="testimonial-quote">Choose Energy was so easy - all the information was clearly spelled out for each offer and signing up was quick and simple. This will be a bookmarked site for me now!</q>
+                    <figcaption class="testimonial-person">Annette, Hershey, PA</figcaption>
+                </div>
+                <img class="testimonial-photo" src="images/testimonials/person02.png" alt="Annette, Hershey, PA">
+            </figure>
+            <figure class="testimonial is-active">
+                <div class="testimonial-text">
+                    <q class="testimonial-quote">By changing my supplier, I cut my rate in half! I will definitely be telling my friends about this.</q>
+                    <figcaption class="testimonial-person">Susan, West Hartford, CT</figcaption>
+                </div>
+                <img class="testimonial-photo" src="images/testimonials/person03.png" alt="Susan, West Hartford, CT">
             </figure>
             <figure class="testimonial">
-                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
-                <figcaption class="testimonial-person">Person McPerson</figcaption>
-                <img class="testimonial-photo" src="images/testimonials/person03.png" alt="Person McPerson">
+                <div class="testimonial-text">
+                    <q class="testimonial-quote">I said enough is enough with my high energy bills and switched both natural gas and electricity suppliers. I'm sorry I didn't switch sooner! Thanks Choose Energy!</q>
+                    <figcaption class="testimonial-person">Janette, Reynoldsburg, OH</figcaption>
+                </div>
+                <img class="testimonial-photo" src="images/testimonials/person04.png" alt="Janette, Reynoldsburg, OH">
             </figure>
             <figure class="testimonial">
-                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
-                <figcaption class="testimonial-person">Person McPerson</figcaption>
-                <img class="testimonial-photo" src="images/testimonials/person04.png" alt="Person McPerson">
+                <div class="testimonial-text">
+                    <q class="testimonial-quote">I'm excited to go green, but even more excited that it's cheaper than my old rate! Plus, I locked in a fixed rate for six months.</q>
+                    <figcaption class="testimonial-person">Francis, Somers Point, NJ</figcaption>
+                </div>
+                <img class="testimonial-photo" src="images/testimonials/person05.png" alt="Francis, Somers Point, NJ">
             </figure>
             <figure class="testimonial">
-                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
-                <figcaption class="testimonial-person">Person McPerson</figcaption>
-                <img class="testimonial-photo" src="images/testimonials/person05.png" alt="Person McPerson">
-            </figure>
-            <figure class="testimonial">
-                <q class="testimonial-quote">I can't believe I didn't switch sooner</q>
-                <figcaption class="testimonial-person">Person McPerson</figcaption>
-                <img class="testimonial-photo" src="images/testimonials/person06.png" alt="Person McPerson">
+                <div class="testimonial-text">
+                    <q class="testimonial-quote">Choose Energy is without a doubt is the easiest and most straight forward site I've found for switching suppliers.</q>
+                    <figcaption class="testimonial-person">Philip, League City, TX</figcaption>
+                </div>
+                <img class="testimonial-photo" src="images/testimonials/person06.png" alt="Philip, League City, TX">
             </figure>
         </div>
     </div>

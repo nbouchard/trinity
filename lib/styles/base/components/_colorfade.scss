@@ -5,7 +5,7 @@
 // Requires the Bourbon.io Filter and Transition mixins.
 //
 // No styleguide reference
-.ce-colorfade {
+@mixin ce-colorfade() {
     @include filter(grayscale(100%));
     @include transition(all 0.3s);
     opacity: 0.6;
@@ -16,4 +16,8 @@
         @include filter(grayscale(0%));
         opacity: 1;
     }
+}
+
+.ce-colorfade {
+    @include ce-colorfade();
 }
