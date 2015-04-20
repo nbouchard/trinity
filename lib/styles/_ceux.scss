@@ -213,3 +213,16 @@
 .editorial-choose-ux {
     background: $color-blue-curious;
 }
+
+.ceux-table-of-contents {
+    list-style: none;
+    padding: 0px;
+
+    a {
+        font-weight: 300;
+    }
+
+    ul {
+        padding: 5px 0px 10px 25px;
+    }
+}
