@@ -76,50 +76,51 @@
             <li class="nav-item is-active">
                 <a class="nav-link" href="index.html">Overview</a>
                 <ul class="nav-list nav-nested">
-                    <li class="nav-item"><a class="nav-link" href="#">Introduction</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Philosophy</a></li>
+                    {{> default_menu_overview}}
                 </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="company.html">Company</a>
                 <ul class="nav-list nav-nested">
-                    <li class="nav-item"><a class="nav-link" href="#">Vision</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Mission</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Promise</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Values</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Elevator Pitch</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Culture</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+                    {{> default_menu_company}}
                 </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="brand.html">Brand</a>
                 <ul class="nav-list nav-nested">
-                    <li class="nav-item"><a class="nav-link" href="#">Positioning</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Attributes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Logo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Logo Variants</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Logo Usage</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Colors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Color Usage</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Typography</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Writing</a></li>
+                    {{> default_menu_brand}}
                 </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="foundations.html">Foundations</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="foundations.html">Foundations</a>
+                <ul class="nav-list nav-nested">
+                    {{> default_menu_foundations}}
+                </ul>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="elements.html">Elements</a>
                 <ul class="nav-list nav-nested">
-                    <li class="nav-item"><a class="nav-link" href="#">Typographical</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Navigational</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Interactive</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Structural</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Content</a></li>
+                    {{> default_menu_elements}}
                 </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
-            <li class="nav-item"><a class="nav-link" href="interfaces.html">Interfaces</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="components.html">Components</a>
+                <ul class="nav-list nav-nested">
+                    {{> default_menu_components}}
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="interfaces.html">Interfaces</a>
+                <ul class="nav-list nav-nested">
+                    {{> default_menu_interfaces}}
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+                <ul class="nav-list nav-nested">
+                    {{> default_menu_projects}}
+                </ul>
+            </li>
         </ul>
     </nav>
     <nav class="nav nav-secondary">
