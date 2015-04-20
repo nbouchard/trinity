@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     grunt.config('assemble', {
         options: {
             flatten: true,
-            partials: ['lib/templates/partials/*.html'],
+            partials: ['lib/templates/partials/*.html','lib/templates/partials/**/*.html'],
             layoutext: '.html',
             layoutdir: 'lib/templates/layouts',
             layout: 'default'
