@@ -74,15 +74,17 @@
                 max-width: 100%;
             }
         }
+
         .p-name {
             @include box-sizing(border-box);
             float: right;
-            margin: 0.25em 0 0 0;
+            margin: 0.25em 0 0;
             padding: 0;
             max-width: 74%;
             width: 100%;
             font-size: $font-size-larger;
         }
+
         .p-summary {
             @include box-sizing(border-box);
             float: right;
@@ -92,6 +94,7 @@
             width: 100%;
             font-size: $font-size-normal;
         }
+
         .dt-published {
             @include box-sizing(border-box);
             float: right;
@@ -101,6 +104,7 @@
             width: 100%;
             font-size: $font-size-smaller;
         }
+
         .u-url {
             &:hover,
             &:active,
@@ -128,13 +132,16 @@
                     max-width: 100%;
                 }
             }
+
             .p-name {
                 max-width: 59%;
                 font-size: $font-size-normal;
             }
+
             .p-summary {
                 display: none;
             }
+
             .dt-published {
                 max-width: 59%;
             }
