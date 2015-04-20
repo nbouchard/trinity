@@ -19,11 +19,11 @@ tpl:
         </div>
     </div>
 </div>
-<div class="content-tip">
-    <div class="content-tip-container">
-        <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
-    </div>
-</div>
+{{#withHash
+    tip_text="Natural gas is the cleanest burning conventional fuel, producing 45 percent less carbon dioxide than coal."
+}}
+    {{> cmp_tip}}
+{{/withHash}}
 <div class="content-editorial content-editorial-bg-dark" style="background: url('images/photography/Family_Dinner_Under_Lights.jpg') no-repeat; background-size: cover;">
     <div class="content-editorial-container">
         <h2 class="content-editorial-headline">We help you find the best energy plan at the best price</h2>
@@ -186,6 +186,11 @@ tpl:
         <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
     </div>
 </div>
+{{#withHash
+    tip_text="Natural gas is the cleanest burning conventional fuel, producing 45 percent less carbon dioxide than coal."
+}}
+    {{> cmp_tip}}
+{{/withHash}}
 <div class="content-editorial" style="background: url('images/photography/Lowlight_Lamp.jpg') no-repeat; background-size: cover;">
     <div class="content-editorial-container">
         <h2 class="content-editorial-headline">How It Works</h2>
@@ -213,11 +218,11 @@ tpl:
         </nav>
     </div>
 </div>
-<div class="content-tip">
-    <div class="content-tip-container">
-        <p>People who installed solar panels last year saved up to 60% off their energy bills each month</p>
-    </div>
-</div>
+{{#withHash
+    tip_text="Natural gas is the cleanest burning conventional fuel, producing 45 percent less carbon dioxide than coal."
+}}
+    {{> cmp_tip}}
+{{/withHash}}
 <div class="content-editorial content-editorial-translucent" style="background: url('images/photography/Kites_and_Windmills.jpg') no-repeat; background-size: cover;">
     <div class="content-editorial-container">
         <h2 class="content-editorial-headline">Energy Academy</h2>
