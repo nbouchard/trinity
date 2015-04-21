@@ -6,7 +6,8 @@ module.exports = function(grunt) {
             partials: ['lib/templates/partials/*.html','lib/templates/partials/**/*.html'],
             layoutext: '.html',
             layoutdir: 'lib/templates/layouts',
-            layout: 'default'
+            layout: 'default',
+            data: ['lib/templates/data/*.json', 'lib/templates/data/**/*.json'],
         },
         pages: {
             src: ['lib/templates/pages/*.html'],
