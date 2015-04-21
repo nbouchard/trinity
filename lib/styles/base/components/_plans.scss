@@ -662,17 +662,6 @@
                     font-weight: $font-weight-body;
                     font-style: italic;
                 }
-
-                @include breakpoint($mq-sm-max) {
-                    line-height: 2em;
-
-                    .plan-name {
-                        display: block;
-                    }
-                    .plan-utility {
-                        display: block;
-                    }
-                }
             }
         }
 
