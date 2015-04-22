@@ -110,9 +110,11 @@
 .ceux-section {
     @include box-sizing(border-box);
     margin: 2em auto;
-    padding: 6em 0.5em 0;
-    max-width: $site-max-width;
-    border-bottom: 1px solid $color-white-lilac;
+    padding: 3em 2em 0;
+
+    .cg-row {
+        border-bottom: 1px solid $color-white-lilac;
+    }
 
     .ceux-subsection {
         margin-bottom: 1em;
@@ -158,6 +160,16 @@
     text-decoration: underline;
     font-weight: 600;
     font-style: italic;
+}
+
+.ceux-result div {
+    display: block;
+    padding: 10px 0px;
+}
+
+.ceux-example {
+    padding: 1em 0;
+    @include clearfix;
 }
 
 .supplier-startex {
@@ -224,5 +236,15 @@
 
     ul {
         padding: 5px 0px 10px 25px;
+    }
+}
+
+.ceux-content-block-example {
+    @include cg-row(true, false);
+    margin: 0px;
+    max-width: none;
+
+    .cg-1of1 {
+        padding: .5em 2em;
     }
 }
