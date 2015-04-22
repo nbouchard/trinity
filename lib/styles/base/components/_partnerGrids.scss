@@ -19,6 +19,7 @@
         }
 
         .supplier-logo {
+            @include ce-colorfade();
             vertical-align: middle;
         }
     }
@@ -30,10 +31,4 @@
     .nav-list {
         display: inline-block;
     }
-}
-
-.supplier-logo {
-    @include ce-colorfade();
-    display: inline-block;
-    text-indent: -9999px;
 }

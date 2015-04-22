@@ -21,7 +21,12 @@ module.exports = function(grunt) {
                 }
             },
             templates: {
-                files: ['lib/templates/*.html','lib/templates/**/*.html'],
+                files: [
+                    'lib/templates/*.html',
+                    'lib/templates/**/*.html',
+                    'lib/templates/data/*.json',
+                    'lib/templates/data/**/*.json'
+                ],
                 tasks: ['assemble:pages']
             },
             sass: {

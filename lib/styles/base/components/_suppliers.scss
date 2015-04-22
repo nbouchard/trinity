@@ -1,25 +1,23 @@
-.supplier-slat {
-    @include box-sizing(border-box);
+.supplier-slats {
+    @include cg-row(true, true);
+}
 
-    &:nth-child(2n+1) {
-        background: $color-white-smoke;
+.supplier-slat {
+    @include ce-slat();
+
+    &:first-child {
+        border-top: 1px solid $color-blue-curious;
     }
 
     .supplier-content {
-        @include box-sizing(border-box);
-        @include display(flex);
-        @include flex-direction(row);
-        @include flex-wrap(wrap);
-        width: 100%;
-        max-width: $site-max-width;
-        margin: 0 auto;
+        @include cg-row();
 
         .supplier-services {
-            @include flex(1 1 10em);
+            @include cg-1of3(true, true, true);
         }
 
         .supplier-detail {
-            @include flex(1 1 20em);
+            @include cg-2of3(true, true, true);
         }
     }
 }

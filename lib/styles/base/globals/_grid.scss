@@ -93,7 +93,7 @@
     }
 }
 
-@mixin cg-1of5 ($v-padding: true, $h-padding: true, $strict: false) {
+@mixin cg-1of5($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
     @if $strict == true {
@@ -169,6 +169,26 @@
     }
 }
 
+@mixin cg-2of5($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 40%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 40%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 40%;
+        }
+
+        &.is-strict {
+            width: 40%;
+        }
+    }
+}
+
 @mixin cg-1of2($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -209,6 +229,26 @@
     }
 }
 
+@mixin cg-3of5 ($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 60%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 60%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 60%;
+        }
+
+        &.is-strict {
+            width: 60%;
+        }
+    }
+}
+
 @mixin cg-2of3($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -241,6 +281,26 @@
 
         &.is-strict {
             width: 75%;
+        }
+    }
+}
+
+@mixin cg-4of5($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 80%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 80%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 80%;
+        }
+
+        &.is-strict {
+            width: 80%;
         }
     }
 }
@@ -412,6 +472,27 @@
     }
 }
 
+.cg-2of5 {
+    @include cg-2of5();
+
+
+    &.cg-padded {
+        @include cg-2of5(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-2of5(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-2of5(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-2of5(false, false);
+    }
+}
+
 .cg-1of2,
 .cg-2of4,
 .cg-4of8 {
@@ -454,6 +535,26 @@
     }
 }
 
+.cg-3of5 {
+    @include cg-3of5();
+
+    &.cg-padded {
+        @include cg-3of5(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-3of5(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-3of5(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-3of5(false, false);
+    }
+}
+
 .cg-2of3 {
     @include cg-2of3();
 
@@ -492,6 +593,26 @@
 
     &.cg-nopad {
         @include cg-3of4(false, false);
+    }
+}
+
+.cg-4of5 {
+    @include cg-4of5();
+
+    &.cg-padded {
+        @include cg-4of5(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-4of5(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-4of5(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-4of5(false, false);
     }
 }
 
