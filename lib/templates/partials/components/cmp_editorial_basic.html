@@ -1,0 +1,18 @@
+<div class="content-editorial" style="background: url('{{editorial_bg}}') no-repeat; background-size: cover;">
+    <div class="content-editorial-container">
+        {{#if editorial_headline}}
+            <h2 class="content-editorial-headline">{{editorial_headline}}</h2>
+        {{/if}}
+        {{#if editorial_subhead}}
+            <h3 class="content-editorial-headline">{{editorial_subhead}}</h3>
+        {{/if}}
+        <div class="content-editorial-cta">
+	        {{#if editorial_cta}}
+                <p>{{editorial_cta}}</p>
+            {{/if}}
+	        {{#if editorial_action_label}}
+                <a href="{{editorial_action_target}}" class="link-as-btn btn-primary">{{editorial_action_label}}</a>
+            {{/if}}
+        </div>
+    </div>
+</div>
