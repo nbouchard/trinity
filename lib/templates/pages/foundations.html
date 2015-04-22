@@ -222,7 +222,55 @@ tpl:
 
     <h4>Element Classes</h4>
 
+    
     <h4>Component Classes</h4>
+        <p>The basic syntax is as follows: <code>cc-&lt;component-name&gt;</code>.</p>
+        <p>Component scope isolating tag. There is only 1 per component and everything else is nested inside.</p>
+        <p>Html:</p>
+<textarea class="code-sample html">&lt;div class="cc-stats"&gt; stats content &lt;/div&gt;</textarea> <br/>
+        <p> CSS:</p>
+<textarea class="code-sample html">
+.cc-stats {
+    width: $site-max-width;
+    background: $color-green-shamrock;
+}
+</textarea>
+    <h4>Component Varient Classes</h4>
+        <p>The basic syntax is as follows: <code>v-&lt;varient-name&gt;</code>.</p>
+        <p>Used hand in hand with component classes to account for variants in the look of a component.</p>
+        <p>Html:</p>
+<textarea class="code-sample html">&lt;div class="cc-stats v-fullwidth"&gt; stats content &lt;/div&gt;</textarea> <br/>
+        <p> CSS:</p>
+<textarea class="code-sample html">
+.cc-stats {
+    width: $site-max-width;
+    background: $color-green-shamrock;
+    &.v-tall {
+        height:60em;
+    }
+}
+</textarea>
+    <h4>Override Classes</h4>
+        <p>The basic syntax is as follows: <code>o-&lt;override-name&gt;</code>.</p>
+        <p>These classes that allows for one off changes to cc- or m-. Should be extremely limited use. This doesn't live inside the related CC- style. Naming convention is o-{related component}-{overriding identifier}</p>
+        <p>Html:</p>
+<textarea class="code-sample html">&lt;div class="cc-stats o-stats-press"&gt; stats content &lt;/div&gt;</textarea> <br/>
+        <p> CSS:</p>
+<textarea class="code-sample html">
+.cc-stats {
+    width: $site-max-width;
+    background: $color-green-shamrock;
+    &.v-tall {
+        height:60em;
+    }
+}
+.o-stats-press {
+    background: $color-blue-curious;
+}
+</textarea>
+    <h4>Interface Classes</h4>
+    <h4>State Classes</h4>
+
     <h4>Interface Classes</h4>
     <h4>State Classes</h4>
 
