@@ -16,6 +16,10 @@
     {
       "name": "Michael Owens",
       "email": "mowens@chooseenergy.com"
+    },
+    {
+      "name": "Nicole Bouchard",
+      "email": "nbouchard@chooseenergy.com"
     }
   ],
   "main": "choose.js",

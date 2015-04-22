@@ -24,3 +24,10 @@ body {
 .code-sample {
     height: auto !important;
 }
+
+// Used to reposition anchor link to account for floating header
+.anchor {
+    position: relative;
+    top: -84px;
+    display: block;
+}

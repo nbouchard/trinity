@@ -110,9 +110,11 @@
 .ceux-section {
     @include box-sizing(border-box);
     margin: 2em auto;
-    padding: 6em 0.5em 0;
-    max-width: $site-max-width;
-    border-bottom: 1px solid $color-white-lilac;
+    padding: 3em 2em 0;
+
+    .cg-row {
+        border-bottom: 1px solid $color-white-lilac;
+    }
 
     .ceux-subsection {
         margin-bottom: 1em;
@@ -160,56 +162,89 @@
     font-style: italic;
 }
 
+.ceux-result div {
+    display: block;
+    padding: 10px 0px;
+}
+
+.ceux-example {
+    padding: 1em 0;
+    @include clearfix;
+}
+
 .supplier-startex {
-    background: url('../images/supplier-logos/startex-power.png') center center no-repeat;
+    background: url('../images/sprites/supplier-logos/startex-power.png') center center no-repeat;
     background-size: contain;
 }
 
 .supplier-txu {
-    background: url('../images/supplier-logos/txu-energy.png') center center no-repeat;
+    background: url('../images/sprites/supplier-logos/txu-energy.png') center center no-repeat;
     background-size: contain;
 }
 
 .supplier-champion {
-    background: url('../images/supplier-logos/champion-energy.png') center center no-repeat;
+    background: url('../images/sprites/supplier-logos/champion-energy.png') center center no-repeat;
     background-size: contain;
 }
 
 .editorial-cooking-with-gas {
-    background: url('../images/placeholders/cooking-with-gas.jpg') center center no-repeat;
+    background: url('../images/placeholders/cooking_with_gas.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-energy-at-dusk {
-    background: url('../images/placeholders/energy-at-dusk.jpg') center center no-repeat;
+    background: url('../images/placeholders/energy_at_dusk.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-brand-positioning {
-    background: url('../images/placeholders/brand-positioning.jpg') center center no-repeat;
+    background: url('../images/placeholders/brand_positioning.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-brand-attributes {
-    background: url('../images/placeholders/brand-attributes.jpg') center center no-repeat;
+    background: url('../images/placeholders/brand_attributes.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-company-vision {
-    background: url('../images/placeholders/company-vision.jpg') center center no-repeat;
+    background: url('../images/placeholders/company_vision.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-company-mission {
-    background: url('../images/placeholders/company-mission.jpg') center center no-repeat;
+    background: url('../images/placeholders/company_mission.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-company-promise {
-    background: url('../images/placeholders/company-promise.jpg') center center no-repeat;
+    background: url('../images/placeholders/company_promise.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-choose-ux {
     background: $color-blue-curious;
+}
+
+.ceux-table-of-contents {
+    list-style: none;
+    padding: 0px;
+
+    a {
+        font-weight: 300;
+    }
+
+    ul {
+        padding: 5px 0px 10px 25px;
+    }
+}
+
+.ceux-content-block-example {
+    @include cg-row(true, false);
+    margin: 0px;
+    max-width: none;
+
+    .cg-1of1 {
+        padding: .5em 2em;
+    }
 }

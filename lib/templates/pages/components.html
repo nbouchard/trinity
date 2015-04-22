@@ -18,344 +18,51 @@ tpl:
     </div>
 </div>
 <div class="cg-row cg-vpad">
-    <h1 class="cg-1of1">Global Navigation</h1>
+    <h1 class="cg-1of1">Components</h1>
 </div>
+
 <div class="cg-row cg-vpad">
-    <ul>
-        <li>Header
-            <ul>
-                <li>How to Use</li>
-                <li>Components
-                    <ul>
-                        <li>Logotype</li>
-                        <li>Menu</li>
-                        <li>Dynamic Section</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>Sidebar
-            <ul>
-                <li>How to Use</li>
-                <li>Components
-                    <ul>
-                        <li><code>body</code> Modifiers</li>
-                        <li>Sidebar</li>
-                        <li>Opener</li>
-                        <li>Closer</li>
-                        <li>Mask</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
-<div class="cg-row cg-vpad">
-    <h2 class="cg-1of1">Footer</h2>
-    <div class="cg-1of1">
-        <p>The Footer should be included in all projects either as an Angular.JS Component or a standard HTML block. By default, all projects should be the light footer style. Each footer is comprised of a Primary and Secondary Footer component with multiple Footer Nav Boxes in the Primary Footer and three distinct components in the Secondary Footer.</p>
-        <h3>Primary Footer</h3>
-        <p>The Primary Footer is a lighter section of the footer designed to be the section of the footer with which the user typically interacts. It should contain all of the links to other sections of the product as well as any SEO-relevant content (i.e. recent blog posts, popular searches, links to crawl-ready landing pages).</p>
-        <h4>Footer Nav Boxes</h4>
-        <p>A footer nav box (<code>fnav-box</code>) is a component used to encapsulate a header and <code>nav-list</code> containing an arbitrary number of <code>nav-link</code> elements. There are two variants: standard and wider. The <code>fnav-wider</code> modifier can be added to a given <code>fnav-box</code> to produce a double-width column.</p>
-        <h3>Secondary Footer</h3>
-        <p>The Secondary Footer is a darker section of the footer designed to be populated with social and legal content that is less important for a user to interact with from this location but is often useful to access on any page of the site.</p>
-    </div>
-</div>
-<div class="cg-row cg-vpad">
-    <h2 class="cg-1of1">Example: Light Footer (Default Footer Style)</h2>
-    <div class="cg-1of1">
-        <footer class="site-footer">
-            <div class="footer-primary">
-                <nav class="footer-nav nav">
-                    <div class="fnav-box">
-                        <h5>Locations</h5>
-                        <ul class="nav-list">
-                            <li class="nav-item"><a class="nav-link" href="#">Texas</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Pennsylvania</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Ohio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Connecticut</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">New York</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Masschusetts</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">California</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Arkansas</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Georgia</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Oregon</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Indiana</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Alabama</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Florida</a></li>
-                        </ul>
-                        <a href="#" class="fnav-toggle">Show More</a>
-                    </div>
-                    <div class="fnav-box">
-                        <h5>About</h5>
-                        <ul class="nav-list">
-                            <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Press</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Ambassadors</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-                        </ul>
-                    </div>
-                    <div class="fnav-box">
-                        <h5>Energy Academy</h5>
-                        <ul class="nav-list">
-                            <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Why Switch?</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Deregulation</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Our Suppliers</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Energy Glossary</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Energy News</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-                        </ul>
-                    </div>
-                    <div class="fnav-box">
-                        <h5>Energy Products</h5>
-                        <ul class="nav-list">
-                            <li class="nav-item"><a class="nav-link" href="#">Electicity</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Natural Gas</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Solar</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Heating Oil</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Propane</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Residential</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Small Business</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Commercial</a></li>
-                        </ul>
-                    </div>
-                    <div class="fnav-box fnav-wider">
-                        <h5><a href="#">Energy News Blog</a></h5>
-                        <ol class="footer-news h-feed">
-                            <li class="news-item h-entry">
-                                <a class="u-url" href="#">
-                                    <img class="u-photo" src="http://placehold.it/160x90" alt="thumbnail">
-                                    <div class="news-text">
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="news-item h-entry">
-                                <a class="u-url" href="#">
-                                    <img class="u-photo" src="http://placehold.it/160x90" alt="thumbnail">
-                                    <div class="news-text">
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="news-item h-entry">
-                                <a class="u-url" href="#">
-                                    <img class="u-photo" src="http://placehold.it/160x90" alt="thumbnail">
-                                    <div class="news-text">
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </div>
-                                </a>
-                            </li>
-                        </ol>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer-secondary">
-                <nav class="footer-nav nav">
-                    <div class="footer-social">
-                        <ul class="social-links">
-                            <li class="social-item"><a href="#" class="social-link"><i class="icon fa fa-facebook"></i></a></li>
-                            <li class="social-item"><a href="#" class="social-link"><i class="icon fa fa-twitter"></i></a></li>
-                            <li class="social-item"><a href="#" class="social-link"><i class="icon fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-address">
-                        <address class="h-adr"><span class="p-label">Choose Energy, Inc.</span> <span class="p-street-address">465 California St., Suite 1250</span>, <span class="p-locality">San Francisco</span>, <span class="p-region"><abbr title="California">CA</abbr></span> <span class="p-postal-code">94104</span></address>
-                    </div>
-                    <div class="footer-legal">
-                        <ul class="legal-links">
-                            <li class="legal-item"><a href="#" class="legal-link">Privacy Policy</a></li>
-                            <li class="legal-item"><a href="#" class="legal-link">Terms of Use</a></li>
-                            <li class="legal-item"><a href="#" class="legal-link">Sitemap</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </footer>
-    </div>
-</div>
-<div class="cg-row">
-    <h2 class="cg-1of1">Example: Dark Footer (Alternate Style)</h2>
-    <div class="cg-1of1">
-        <footer class="site-footer footer-dark">
-            <div class="footer-primary">
-                <nav class="footer-nav nav">
-                    <div class="fnav-box">
-                        <h5>Locations</h5>
-                        <ul class="nav-list">
-                            <li class="nav-item"><a class="nav-link" href="#">Texas</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Pennsylvania</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Ohio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Connecticut</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">New York</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Masschusetts</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">California</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Arkansas</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Georgia</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Oregon</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Indiana</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Alabama</a></li>
-                            <li class="nav-item inactive"><a class="nav-link" href="#">Florida</a></li>
-                        </ul>
-                        <a href="#" class="fnav-toggle">Show More</a>
-                    </div>
-                    <div class="fnav-box">
-                        <h5>About</h5>
-                        <ul class="nav-list">
-                            <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Press</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Ambassadors</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-                        </ul>
-                    </div>
-                    <div class="fnav-box">
-                        <h5>Energy Academy</h5>
-                        <ul class="nav-list">
-                            <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Why Switch?</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Deregulation</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Our Suppliers</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Energy Glossary</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Energy News</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-                        </ul>
-                    </div>
-                    <div class="fnav-box">
-                        <h5>Energy Products</h5>
-                        <ul class="nav-list">
-                            <li class="nav-item"><a class="nav-link" href="#">Electicity</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Natural Gas</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Solar</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Heating Oil</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Propane</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Residential</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Small Business</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Commercial</a></li>
-                        </ul>
-                    </div>
-                    <div class="fnav-box fnav-wider">
-                        <h5><a href="#">Energy News Blog</a></h5>
-                        <ol class="footer-news h-feed">
-                            <li class="news-item h-entry">
-                                <a class="u-url" href="#">
-                                    <img class="u-photo" src="http://placehold.it/160x90" alt="thumbnail">
-                                    <div class="news-text">
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="news-item h-entry">
-                                <a class="u-url" href="#">
-                                    <img class="u-photo" src="http://placehold.it/160x90" alt="thumbnail">
-                                    <div class="news-text">
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="news-item h-entry">
-                                <a class="u-url" href="#">
-                                    <img class="u-photo" src="http://placehold.it/160x90" alt="thumbnail">
-                                    <div class="news-text">
-                                        <h3 class="p-name">Pennsylvania Electricity Price Drop Biggest in Years</h3>
-                                        <time datetime="2014-10-105T13:00-700" class="dt-published">October 5<sup>th</sup>, 2014</time>
-                                    </div>
-                                </a>
-                            </li>
-                        </ol>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer-secondary">
-                <nav class="footer-nav nav">
-                    <div class="footer-social">
-                        <ul class="social-links">
-                            <li class="social-item"><a href="#" class="social-link"><i class="icon fa fa-facebook"></i></a></li>
-                            <li class="social-item"><a href="#" class="social-link"><i class="icon fa fa-twitter"></i></a></li>
-                            <li class="social-item"><a href="#" class="social-link"><i class="icon fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-address">
-                        <address class="h-adr"><span class="p-label">Choose Energy, Inc.</span> <span class="p-street-address">465 California St., Suite 1250</span>, <span class="p-locality">San Francisco</span>, <span class="p-region"><abbr title="California">CA</abbr></span> <span class="p-postal-code">94104</span></address>
-                    </div>
-                    <div class="footer-legal">
-                        <ul class="legal-links">
-                            <li class="legal-item"><a href="#" class="legal-link">Privacy Policy</a></li>
-                            <li class="legal-item"><a href="#" class="legal-link">Terms of Use</a></li>
-                            <li class="legal-item"><a href="#" class="legal-link">Sitemap</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </footer>
-    </div>
-</div>
-<div class="cg-row">
-    <h2 class="cg-1of1">Content Blocks</h2>
-    <div class="cg-1of1">
-        <ul>
-            <li>Content Editorial
+    <div class="cg-1of3">
+        <h3>Global Navigation</h3>
+        <ul class="ceux-table-of-contents">
+            <li><a href="components_global_navigation.html">Global Navigation</a>
                 <ul>
-                    <li>Basic</li>
-                    <li>Core Customization</li>
-                    <li>Components</li>
-                    <li>Variants
-                        <ul>
-                            <li>Big Talk Variant</li>
-                            <li>Centered Hero Variant</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>Content Tip</li>
-            <li>Guide Block</li>
-            <li>Testimonial</li>
-            <li>Supplier Card
-                <ul>
-                    <li>Glance</li>
-                    <li>Standard</li>
-                    <li>Expanded</li>
-                    <li>Detailed</li>
-                    <li>Complete</li>
-                </ul>
-            </li>
-            <li>Utility Card
-                <ul>
-                    <li>Glance</li>
-                    <li>Standard</li>
-                    <li>Expanded</li>
-                    <li>Detailed</li>
-                    <li>Complete</li>
-                </ul>
-            </li>
-            <li>Plan Card
-                <ul>
-                    <li>Glance</li>
-                    <li>Standard</li>
-                    <li>Expanded</li>
-                    <li>Detailed</li>
-                    <li>Complete</li>
+                    <li><a href="components_global_navigation.html">Header</a></li>
+                    <li><a href="components_global_navigation.html">Sidebar</a></li>
+                    <li><a href="components_global_navigation.html#footer">Footer</a></li>
                 </ul>
             </li>
         </ul>
     </div>
-</div>
-<div class="cg-row">
-    <h2 class="cg-1of1">Interactive Maps</h2>
-    <div class="cg-1of1">
-        <ul>
-            <li>Supplier</li>
-            <li>Utility</li>
-            <li>Energy Type</li>
-            <li>Combo Map</li>
+
+    <div class="cg-1of3">
+        <h3>Content Blocks</h3>
+        <ul class="ceux-table-of-contents">
+            <li><a href="components_content_blocks.html">Content Blocks</a>
+                <ul>
+                    <li><a href="">Content Editorial</a></li>
+                    <li><a href="">Content Tip</a></li>
+                    <li><a href="">Guide Block</a></li>
+                    <li><a href="">Testimonial</a></li>
+                    <li><a href="">Supplier Card</a></li>
+                    <li><a href="">Utility Card</a></li>
+                    <li><a href="">Plan Card</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="cg-1of3">
+        <h3>Interactive Maps</h3>
+        <ul class="ceux-table-of-contents">
+            <li><a href="components_interactive_maps.html">Interactive Maps</a>
+                <ul>
+                    <li><a href="">Supplier</a></li>
+                    <li><a href="">Utility</a></li>
+                    <li><a href="">Energy Type</a></li>
+                    <li><a href="">Combo Map</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
