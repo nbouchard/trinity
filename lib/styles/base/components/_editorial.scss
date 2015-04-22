@@ -31,6 +31,10 @@
         font-size: $font-size-extrahuge;
         font-family: $font-family-subhead;
         line-height: 1.25em;
+
+        &.content-editorial-subhead-smaller {
+            font-size: $font-size-huge;
+        }
     }
 
     .content-editorial-accent {

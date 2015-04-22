@@ -1,0 +1,93 @@
+---
+layout: website
+site:
+  name: ChooseUX
+  version: 0.1.0
+tpl:
+  desc: The landing page for solar
+  title: Solar Landing Page
+---
+<!-- Hero #1 -->
+<div class="content-editorial content-editorial-bg-light content-editorial-bigtalk content-editorial-noheight" style="background: url('images/photography/Roof_with_solar_panels.jpg') no-repeat; background-size: cover;">
+    <div class="content-editorial-container">
+        <div class="cg-2of3">testing</div>
+        <h1 class="content-editorial-headline ">Take charge of your energy bills with solar.</h1>
+        <h2 class="content-editorial-subhead content-editorial-subhead-smaller">Get a free solar quote today.</h2>
+        <div class="content-editorial-cta">
+            <p><input class="input-superwide" type="text" placeholder="Type your zipcode (i.e. 77070, 60622, 94107)"> <button class="btn-primary" type="button">Find Your Energy</button></p>
+        </div>
+    </div>
+</div>
+
+<!-- tip #1 -->
+{{#withHash
+    tip_text="The U.S. installed a record of over 1GW of residential solar in 2014."
+}}
+    {{> cmp_tip}}
+{{/withHash}}
+
+<!-- Circle icons -->
+<div class="content-editorial content-editorial-short content-editorial-bg-white">
+    <div class="content-editorial-container">
+        <div class="content-editorial-cta">
+            <ul>
+                <li class="icon">
+                    <h4>Go solar with No Upfront Costs</h4>
+                    <p>With no money down and flexible payment plans, going solar has never been easier.</p>
+                </li>
+                <li class="icon">
+                    <h4>Love your Energy Bills</h4>
+                    <p>Lock in rates that are guaranteed to be lower than what you pay now.</p>
+                </li>
+                <li class="icon">
+                    <h4>Lighten Your Load on the Planet</h4>
+                    <p>Cleaner air, a smaller carbon footprint. Harvesting sunshine makes a difference.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- blue bg info -->
+<div class="content-editorial content-editorial-short content-editorial-bg-info">
+    <div class="content-editorial-container">
+        <h3 class="content-editorial-headline">See how easy it is to go solar.</h3>
+        <div class="content-editorial-cta">
+            <ul>
+                <li>Enter your zip code to see if solar is available in your area.</li>
+                <li>Choose from a variety of flexible payment plans.</li>
+                <li>Get a free quote from a local provider.</li>
+                <li>Generate solar power in as little as three weeks.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- meet your provider grid -->
+<div class="content-editorial content-editorial-translucent" style="background: url('images/photography/Woman_in_field.jpg') no-repeat; background-size: cover;">
+    <div class="content-editorial-container">
+        <h2 class="content-editorial-headline">Meet Your Provider</h2>
+        <div class="content-editorial-cta">
+        </div>
+    </div>
+</div>
+
+<!-- tip #2 -->
+{{#withHash
+    tip_text="By 2017, over half of the United States could have rooftop solar that’s as cheap as local electricity prices."
+}}
+    {{> cmp_tip}}
+{{/withHash}}
+
+<!-- Solar location map -->
+{{> cb_map_general}}
+
+<!-- Hero #2 -->
+<div class="content-editorial" style="background: url('images/photography/Man_with_solar_panel.jpg') no-repeat; background-size: cover;">
+    <div class="content-editorial-container">
+        <h1 class="content-editorial-headline">Power your home with sunshine.</h1>
+        <div class="content-editorial-cta">
+            <p><input class="input-superwide" type="text" placeholder="Type your zipcode (i.e. 77070, 60622, 94107)"> <button class="btn-primary" type="button">Find Your Energy</button></p>
+        </div>
+    </div>
+</div>
