@@ -184,6 +184,7 @@
     }
 }
 
+.link-as-button,
 button,
 input[type='submit'] {
     @include ce-button('basic');
@@ -250,3 +251,8 @@ input[type='submit'] {
         font-size: $font-size-tinier;
     }
 }
+
+.link-as-button {
+    @include link-as-button();
+}
+
