@@ -5,428 +5,428 @@
         "profileUrl": "http: //www.txu.com/",
         "slug": "txu-energy",
         "blurb": "With roots going back over 100 years, TXU Energy is a market-leading retail electricity provider, powering the lives of more than 2 million Texans. TXU offers commercial and residential customers energy-efficient options, renewable energy programs, and other electricity-related products and services.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "2",
         "name": "StarTex Power",
         "profileUrl": "http://www.startexpower.com/",
         "slug": "startex-power",
         "blurb": "StarTex Power, a Constellation company, is located in Houston, TX and focused on bringing a wide variety of competitively priced electricity products to homes and businesses across Texas, while at the same time providing timely, accurate, and proactive customer service to its 150,000+ customers. See how switching to StarTex Power can help you manage your electricity bills.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "3",
         "name": "First Choice Power",
         "profileUrl": "http://www.firstchoicepower.com/",
         "slug": "first-choice-power",
         "blurb": "First Choice Power is a Direct Energy company located in Mission, Texas. First Choice Power was founded in 2001 and proudly serves the residents of Texas with ties to a 70 year heritage.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "4",
         "name": "Champion Energy",
         "profileUrl": "http://www.championenergyservices.com/",
         "slug": "champion-energy",
         "blurb": "Houston-based Champion Energy Services provides energy to 1 million residential-customer equivalents with a peak load near 2,600 megawatts. Serving both commercial and industrial customers, Champion is the fastest-growing electric provider in the nation. Champion offers its services in Illinois and Texas and other deregulated states as well.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "5",
         "name": "Bounce Energy",
         "profileUrl": "http://www.bounceenergy.com/",
         "slug": "bounce-energy",
         "blurb": "Bounce Energy is a full-service power company dedicated to serving its customers in New York, Pennsylvania and Texas. Offering plans, rewards, and other services, Bounce Energy has a variety of options for you in these markets. Thanks to business partnerships, Bounce also offers great deals in other categories, like cable television and home security services.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "6",
         "name": "Green Mountain Energy",
         "profileUrl": "http://www.greenmountain.com/",
         "slug": "green-mountain-energy",
         "blurb": "Founded in 1997, Green Mountain Energy offers 100% renewable electricity products to residential and business customers in New York, Pennsylvania, Texas and more locations throughout the States. During the last 15 years, Green Mountain has helped its customers avoid more than 23 billion pounds of carbon dioxide emissions.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "7",
         "name": "Just Energy",
         "profileUrl": "http://www.justenergy.com/",
         "slug": "just-energy",
         "blurb": "In operation since 1997, Just Energy and its family of companies currently provides green energy and commodity-supply solutions to millions of residences and businesses in 14 states and 6 provinces throughout North America, including New York, Ohio, Pennsylvania and Texas.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "8",
         "name": "Cirro Energy",
         "profileUrl": "http://www.cirroenergy.com/",
         "slug": "cirro-energy",
         "blurb": "Cirro Energy is a Texas electricity company that delivers exceptional customer service and electricity savings to over 150,000 homes and businesses in Texas. Cirro provides customers with smart money-saving plans, online and mobile account management, convenient payment options, local customer service, plus some of the lowest fixed rates available. Cirro Energy is a subsidiary of NRG (NYSE: NRG), the largest competitive power generator in the U.S. With Cirro Energy and NRG, you’ll enjoy outstanding service and savings plus the peace of mind that comes with a parent company serving more than 1.9 million Texans.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "9",
         "name": "Direct Energy",
         "profileUrl": "http://www.directenergy.com/",
         "slug": "direct-energy",
         "blurb": "Direct Energy is one of North America's largest energy suppliers and provides multiple energy-related services to more than 6 million residential and commercial customers. Direct Energy offers green and renewable energy plans that are 99% pollution-free in many markets across the United States, including Connecticut, Illinois, New York, Ohio, Pennsylvania, and Texas.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "10",
         "name": "Frontier Utilities",
         "profileUrl": "http://www.frontierutilities.com/",
         "slug": "frontier-utilities",
         "blurb": "Focusing on and offering plans and services in Texas, Frontier Utilities strives to provide the highest levels of customer service as well as many solutions to help customers save money on their energy bills. Additionally, with Frontier, customers receive easy-to-understand billing and no disruption in service.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "11",
         "name": "Reliant",
         "profileUrl": "http://www.reliant.com/",
         "slug": "reliant",
         "blurb": "Reliant provides electricity and other energy solutions to more than 1.5 million residential and commercial customers across Texas. Reliant is a leader in offering cleaner, smarter energy solutions.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "12",
         "name": "Tara Energy",
         "profileUrl": "http://www.taraenergy.com/",
         "slug": "tara-energy",
         "blurb": "Founded in 2002, Houston-based Tara Energy is a wholly-owned subsidiary of Fulcrum Power Services and delivers energy solutions to over 1.5 million residential and commercial customers. Fulcrum manages over 4,000 megawatts of power-generation assets across the U.S. — with a renewable rate of approximately 37%.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "13",
         "name": "TriEagle Energy",
         "profileUrl": "http://www.trieagleenergy.com/",
         "slug": "trieagle",
         "blurb": "A privately-held company, TriEagle Energy focuses on its customers, not Wall Street analysts. TriEagle meets this goal in its main service areas - Pennsylvania and Texas - by using its experience and creativity to provide its customers with customized plans and services tailored towards long-term results.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "14",
         "name": "Payless Power",
         "profileUrl": "http://www.paylesspower.com/",
         "slug": "payless-power",
         "blurb": "Payless Power has offered energy services to people in Texas since 2005, regardless of income or credit history. Featuring flexible payment plans (pre-pay or post-pay, monthly, biweekly or weekly), Payless Power’s mission is to help meet customers’ budget needs.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "15",
         "name": "Priority Power",
         "profileUrl": "http://www.prioritypower.net/",
         "slug": "priority-power",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }, {
         "id": "16",
         "name": "Dynowatt",
         "profileUrl": "http://www.dynowatt.com/",
         "slug": "dynowatt",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "17",
         "name": "Brilliant Energy",
         "profileUrl": "http://www.brilliantenergyllc.com/",
         "slug": "brilliant-energy",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }, {
         "id": "18",
         "name": "Amigo Energy",
         "profileUrl": "http://www.amigoenergy.com/",
         "slug": "amigo-energy",
         "blurb": "Founded in 2003, Amigo Energy is one of Texas' oldest electric suppliers and is a full-service retail electricity provider to residential and commercial customers in Texas and New York. Amigo Energy has provided hundreds of thousands of Texans with great electricity rates and top-shelf service. Amigo's philosophy is to treat customers with respect, and offer straight talk and simple advice about your energy choices.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "19",
         "name": "Stream Energy",
         "profileUrl": "http://www.streamenergy.net/",
         "slug": "stream-energy",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }, {
         "id": "20",
         "name": "North American Power",
         "profileUrl": "http://www.napower.com/",
         "slug": "north-american-power",
         "blurb": "North American Power, one of Forbes Top 100 Most Promising Companies, is dedicated to providing its customers with competitive electricity and natural gas rates that are focused on helping the environment through renewable energy sources. North American Power offers its services in many states throughout the country.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "21",
         "name": "Gateway Energy Services",
         "profileUrl": "http://www.gesc.com/",
         "slug": "gateway-energy-services",
         "blurb": "Founded in 1997, Gateway Energy Services became a member of the Direct Energy family of companies in 2011. Gateway Energy Services supplies electricity and natural gas solutions to customers in many markets in the United States, including New York, Ohio, and Pennsylvania among other locations.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "22",
         "name": "Constellation",
         "profileUrl": "http://www.constellation.com/",
         "slug": "constellation",
         "blurb": "Constellation, an Exelon company, is one of the largest energy suppliers in the United States and Canada and serves over a million residential customers and thousands of commercial customers. From electricity and natural gas to solar and other renewable energy products, Constellation provides myriad solutions and services to save money on the use and management of energy.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "23",
         "name": "Commerce Energy",
         "profileUrl": "http://www.commerceenergy.com/",
         "slug": "commerce-energy",
         "blurb": "Commerce Energy, a member of the Just Energy Group, serves ~2 million customers in North America and provides a wide variety of plans sourced from renewable energy to help offset carbon emissions and protect the environment.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "24",
         "name": "Oasis Energy",
         "profileUrl": "http://www.oasisenergy.com/",
         "slug": "oasis-energy",
         "blurb": "Oasis Energy, an energy supplier focusing on the Illinois, Maryland, Pennsylvania, and New York markets, strives to help its customers make smart energy decisions and provide the best support and service to its residential and commercial electricity and natural gas customers.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "25",
         "name": "YEP Energy",
         "profileUrl": "http://www.yepenergy.com/",
         "slug": "yep-energy",
         "blurb": "YEP Energy is an energy supplier that provides electricity and natural gas services to its customers across the United States, from California to New York. YEP Energy uses its experience in energy deregulation and energy industries to offer a wide variety of plans, including many from renewable sources, to meet its varying customers needs.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "26",
         "name": "Just Ventures",
         "profileUrl": "http://www.redventures.com/",
         "slug": "just-ventures",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }, {
         "id": "27",
         "name": "ConEdison Solutions",
         "profileUrl": "http://www.conedsolutions.com/",
         "slug": "conedison-solutions",
         "blurb": "ConEdison Solutions, a subsidiary of Consolidated Edison, Inc. (NYSE: ED), is a national energy services leader committed to providing its residential and commercial customers with customized energy solutions and services - competitive power supply, renewable energy, sustainability services - that maximize the value of energy and reduce cost.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "28",
         "name": "New Leaf Energy",
         "profileUrl": "http://www.newleafgreenenergy.com/",
         "slug": "new-leaf-energy",
         "blurb": "New Leaf Energy, a member of the Direct Energy family of companies, is focused on green energy and providing its customers with a wide ranging suite of renewable energy services and solutions. New Leaf Energy is committed to its customers and to the environment.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "29",
         "name": "CPL Retail Energy",
         "profileUrl": "http://www.cplretailenergy.com/",
         "slug": "cpl-retail-energy",
         "blurb": "CPL Retail Energy is part of the Direct Energy family of companies, which serves over six million customers throughout the US and Canada, and is the third largest competitive electricity provider in Texas. Focusing on South Texas, CPL Retail Energy serves customers from Harlingen to McAllen, Victoria to Corpus Christi.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "30",
         "name": "WTU Retail Energy",
         "profileUrl": "http://www.wturetailenergy.com/",
         "slug": "wtu-retail-energy",
         "blurb": "WTU Retail Energy is part of the Direct Energy family of companies, which serves over six million customers throughout the US and Canada, and is the third largest competitive electricity provider in Texas. Focusing on West Texas, WTU Retail Energy serves customers from Abilene to San Angelo to Alpine.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "31",
         "name": "Spark Energy",
         "profileUrl": "http://www.sparkenergy.com/",
         "slug": "spark-energy",
         "blurb": "Spark Energy is a full service supplier offering low-cost electricity and natural gas solutions to homes and businesses across the country in over 15 states, from New York to California. Founded in 1999, Spark Energy has tremendous experience in the retail energy business and uses their experience in energy markets and buying power to deliver a wide variety of cost-saving solutions with the highest levels of customer service.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "32",
         "name": "AEP Energy",
         "profileUrl": "http://www.aepenergy.com/",
         "slug": "aep-energy",
         "blurb": "Founded in 2002, AEP Energy provides its residential and commercial customers with low-cost energy products and services tailored for each customer's needs. Headquartered in Columbus, OH and offering its services in many states including Illinois, New Jersey, Ohio, and Pennsylvania, AEP Energy helps customers improve their energy efficiency, provides green energy solutions, and offers incentives for customers for smart energy usage.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "33",
         "name": "AP Gas & Electric",
         "profileUrl": "http://www.apge.com/",
         "slug": "apge",
         "blurb": "AP Gas & Electric, headquartered in Houston, TX, is a full service energy supplier loyally serving its residential and commercial customers in many states throughout the United States including Maryland, New York, Ohio, Pennsylvania, and Texas. AP Gas & Electric provides its cost-efficient electricity and natural gas solutions to its customers through its emerging technologies and seasoned energy market experience.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "34",
         "name": "Public Power",
         "profileUrl": "http://www.ppandu.com/",
         "slug": "public-power",
         "blurb": "Public Power, headquartered in Stamford, CT, is a member of the Crius Energy family of companies and one of the largest electricity and natural gas suppliers in the United States. Offering a wide variety of deregulated energy products and services to over 200,000 residential and commercial customers in Connecticut, Illinois, Maryland, New York, New Jersey, Ohio, Pennsylvania, and Washington, DC, Public Power also strives to provide the best customer service in the energy industry.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "35",
         "name": "XOOM Energy",
         "profileUrl": "http://www.xoomenergy.com/",
         "slug": "xoom-energy",
         "blurb": "XOOM Energy is one of the largest independent electricity and natural gas suppliers in the country, serving customers in 15 states across the country including California, Texas, Illinois, New York and many more. Headquartered in North Carolina, XOOM Energy provides a combination of deregulated energy solutions and reliable customer service. With competitively-priced fixed and variable rate options sourced from standard and environmentally-friendly renewable sources, XOOM Energy has options for every customer.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "36",
         "name": "Think Energy",
         "profileUrl": "http://www.mythinkenergy.com/",
         "slug": "think-energy",
         "blurb": "Think Energy is part of GDF SUEZ, one of the largest and most financially secure commercial energy companies in the world. Think Energy provides retail electric services to small businesses in Illinois, Maryland, Massachusetts, New York, Pennsylvania and Texas. With Think Energy on your side, you'll have zero surprises on your bill, a competitive price and the confidence that comes with knowing you've made a good energy decision.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "37",
         "name": "FirstEnergy Solutions",
         "profileUrl": "http://www.fes.com/",
         "slug": "first-energy-solutions",
         "blurb": "Founded in 1997, FirstEnergy Solutions is a leading energy supplier, serving millions of residential, commercial and industrial customers in the Northeast, Midwest and Mid-Atlantic regions of the US. First Energy is based in Ohio and a publicly traded company on the NYSE under symbol “FE”.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "38",
         "name": "Direct Energy Prepaid",
         "profileUrl": "http://www.directenergy.com/",
         "slug": "direct-energy-prepaid",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "39",
         "name": "Clearview Energy",
         "profileUrl": "http://www.clearviewenergy.com/",
         "slug": "clearview-energy",
         "blurb": "Clearview Energy was founded in 2006 as an electricity provider. They are headquartered in Dallas and have operations in 11 states in the US. In total, Clearview has enrolled over 100,000 customers. Additionally, Clearview Energy currently provides natural gas in New York and New Jersey and was named the fastest growing, privately held company in Dallas.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "40",
         "name": "Sunwave Gas and Power",
         "profileUrl": "http://gosunwave.com/",
         "slug": "sunwave-gas-and-power",
         "blurb": "",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "41",
         "name": "Inspire Energy",
         "profileUrl": "http://www.inspireenergy.com/",
         "slug": "inspire-energy",
         "blurb": "Inspire Energy believes in 3 simple ideas Make it clean, make it affordable, make it rewarding. Inspire Energy, which serves Pennsylvania and Maryland, provides environmentally responsible plans to protect the environment, and they are committed to social causes that benefit you and your family. Get rewarded when you enroll with Inspire Energy and get cash back and other incentives. Inspire Energy also strives for industry-leading customer service.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "42",
         "name": "NRG Solar",
         "profileUrl": "http://www.nrgenergy.com/",
         "slug": "nrg-solar",
         "blurb": "",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "43",
         "name": "PG&E",
         "profileUrl": "http://pge.com/",
         "slug": "pge",
         "blurb": "",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "44",
         "name": "Pure Energies",
         "profileUrl": "http://www.chooseenergy.com/",
         "slug": "pure-energies",
         "blurb": "",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "45",
         "name": "Lakeshore Energy",
         "profileUrl": "http://www.lakeshoreenergy.com/Home.aspx",
         "slug": "lakeshore-energy",
         "blurb": "Lakeshore Energy operates from its home base in Troy, Michigan. They have been supplying natural gas throughout the Midwest of America for over a decade. You’ll find Lakeshore Energy currently servicing over 55,000 satisfied Small Business and Residential customers. To help create a secure backing Lakeshore is now affiliated with Seminole Energy Services, which is based in Tulsa, OK. Lakeshore Energy has built its business on their experience with utility and pipelines and they are excited to bring that experience to your door with Choose Energy.",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "46",
         "name": "New York Gas and Electric",
         "profileUrl": "http://www.usgande.com/markets/newyork/",
         "slug": "nyge",
         "blurb": "",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }, {
         "id": "47",
         "name": "Continuum Energy",
         "profileUrl": "http://www.continuumenergyservices.com/",
         "slug": "continuum-energy",
         "blurb": "Continuum Energy meets a wide range of customer needs. They produce, distribute, and sell oil and natural gas energy products. You’ll find Continuum Energy operating in Residential, Commercial, and Industrial markets with nearly to nearly 100,000 customers throughout 23 states. Continuum was formed in 2014 due to the merge of Seminole Energy and Lakeshore Energy which explains why they are currently headquartered in both Tulsa, OK and Houston, TX. Continuum Energy offers both fixed rate and variable rate plans to commercial and residential customers. Fixed Plans: Residents will pay a fixed amount, every month, for the entirety of the plan length. Variable Rates: Residents or businesses will pay a rate that changes, month over month, which fluctuates depending on market conditions. Continuum Energy enables you to switch the energy service for your home or business. Enter your ZIP Code and see if your home or business is eligible to select a Continuum Energy plan today!",
-        "dereg": "true",
-        "active": "true"
+        "dereg": true,
+        "active": true
     }, {
         "id": "48",
         "name": "FTR Energy Services",
         "profileUrl": "https://www.ftrenergyservices.com/",
         "slug": "ftr-energy-services",
         "blurb": "FTR Energy Services launched in November of 2012 as the fifth company under the Crius Energy umbrella FTR focuses on green energy offering plans that are 100% clean-burning natural gas and 100% green electricity. They are currently expanding beyond their current markets and hope to continue to grow.",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }, {
         "id": "49",
         "name": "Cincinnati Bell Energy",
         "profileUrl": "http://www.cincinnatibell.com/energy/",
         "slug": "cincinnati-bell-energy",
         "blurb": "It makes sense that Cincinnati Bell would be headquartered in Cincinnati! They keep their focus on the greater Cincinnati area providing electricity and natural gas to current Duke Energy customers. Cincinnati Bell energy also keeps their focus on clean electricity. Their products are sourced from 100% regional wind. If you choose Cincinnati Bell you are choosing to support renewable energy.",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }, {
         "id": "50",
         "name": "Ethical Electric",
         "profileUrl": "https://ethicalelectric.com/",
         "slug": "ethical-electric",
         "blurb": "",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }, {
         "id": "51",
         "name": "4Change Energy",
         "profileUrl": "http://www.4changeenergy.com/",
         "slug": "4change-energy",
         "blurb": "Headquartered in Texas, 4Change Energy is built on decades of industry experience and is founded on the idea that electricity service should be affordable and support those in great need in our communities. 4Change Energy offers low-price plans, simplified customer service and a commitment to support local charities.",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }, {
         "id": "52",
         "name": "Source Power and Gas",
         "profileUrl": "http://www.spgenergy.com/",
         "slug": "source-power-and-gas",
         "blurb": "Source Power & Gas is a Texas based retail energy provider with offices in the Houston and DFW area. We pride ourselves in providing competitive rates and exceptional customer service. Source is uniquely positioned to provide energy to all types of consumers throughout Texas, from residential consumers to the largest commercial and industrial consumers. We have the experienced team, unique positioning and the financial backing to perfectly meet your energy needs.",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }, {
         "id": "53",
         "name": "Marin Clean Energy",
         "profileUrl": "http://marincleanenergy.org/",
         "slug": "marin-clean-energy",
         "blurb": "",
-        "dereg": "true",
-        "active": "true",
-        "hide": "true"
+        "dereg": true,
+        "active": true,
+        "hide": true
     }]
 }
