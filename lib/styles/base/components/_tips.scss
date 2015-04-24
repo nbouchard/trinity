@@ -1,4 +1,4 @@
-.content-tip {
+.content-tip, .ce-content-tip {
     @include box-sizing(border-box);
     min-height: 6em;
     width: 100%;
@@ -8,7 +8,7 @@
     font-weight: $font-weight-accent;
     font-family: $font-family-accent;
 
-    .content-tip-container {
+    .content-tip-container, .tip-container {
         @include box-sizing(border-box);
         display: table;
         margin: 0 auto;
@@ -23,15 +23,33 @@
             vertical-align: middle;
         }
 
-        .content-tip-larger {
+        .content-tip-larger, .v-tip-larger {
             font-size: 3em;
         }
 
-        .content-tip-normal {
+        .content-tip-normal, .v-tip-normal {
             font-size: 1.5em;
         }
 
-        .content-tip-smaller {
+        .content-tip-smaller, .v-tip-smaller {
+            font-size: 1.25em;
+        }
+    }
+
+    &.v-tip-larger {
+        .tip-container p {
+            font-size: 2em;
+        }
+    }
+
+    &.v-tip-normal {
+        .tip-container p {
+            font-size: 1.5em;
+        }
+    }
+
+    &.v-tip-smaller {
+        .tip-container p {
             font-size: 1.25em;
         }
     }

@@ -1,10 +1,128 @@
-.content-editorial {
+@mixin editorial-height($height: 'standard') {
+    @if $height == 'noheight' {
+        min-height: 1em;
+    }
+    @if $height == 'short' {
+        min-height: 20em;
+    }
+    @if $height == 'tall' {
+        min-height: 50em;
+    }
+    @if $height =='bigtalk' {
+        min-height: (50em / 1.4);
+        font-size: 1.4em;
+
+        .editorial-container {
+            max-width: ($site-max-width / 1.4);
+        }
+    }
+    @else {
+        min-height: 30em;
+    }
+}
+
+@mixin editorial-text-color($color: 'white'){
+    @if $color == 'dark' {
+        color: $color-gray-charcoal;
+
+        .content-editorial-headline, .editorial-headline {
+            color: $color-gray-charcoal;
+        }
+
+        .content-editorial-subhead, .editorial-subhead {
+            color: $color-gray-charcoal;
+        }
+
+        .content-editorial-cta, .editorial-cta {
+            color: $color-gray-charcoal;
+        }
+
+        .content-editorial-note, .editorial-note {
+            color: $color-gray-chateau;
+        }
+    }
+    @if $color == 'grid' {
+        color: $color-blue-bahama;
+
+        .content-editorial-headline, .editorial-headline {
+            color: $color-blue-bahama;
+        }
+
+        .content-editorial-subhead, .editorial-subhead {
+            color: $color-blue-bahama;
+        }
+
+        .content-editorial-cta, .editorial-cta {
+            color: $color-blue-bahama;
+        }
+
+        .content-editorial-note, .editorial-note {
+            color: $color-blue-bahama;
+        }
+    }
+    @if $color == 'white' {
+        color: $color-white-pure;
+
+        .content-editorial-headline, .editorial-headline {
+            color: $color-white-pure;
+        }
+
+        .content-editorial-subhead, .editorial-subhead {
+            color: $color-white-pure;
+        }
+
+        .content-editorial-cta, .editorial-cta {
+            color: $color-white-pure;
+        }
+
+        .content-editorial-note, .editorial-note {
+            color: $color-white-lilac;
+        }
+    }
+}
+
+@mixin editorial-bg-color($color: 'primary') {
+    @if $color == 'primary' {
+        background: $color-green-shamrock;
+    }
+
+    @if $color == 'info' {
+        background: $color-blue-curious;
+    }
+
+    @if $color == 'bright' {
+        background: $color-orange-sun;
+    }
+
+    @if $color == 'white' {
+        background: $color-white-pure;
+        @include editorial-text-color('dark');
+    }
+
+    @if $color == 'light' {
+        background: $color-white-smoke;
+        @include editorial-text-color('dark');
+    }
+
+    @if $color == 'dark' {
+        background: $color-gray-charcoal;
+        @include editorial-text-color();
+    }
+
+    @if $color == 'grid' {
+        background: url('../images/patterns/grid-trans-blue.png') repeat;
+        @include editorial-text-color('grid');
+    }
+}
+
+.content-editorial, .ce-content-editorial {
     @include box-sizing(border-box);
+    @include editorial-height('standard');
+    @include editorial-text-color('white');
     position: relative;
-    min-height: 50em;
     width: 100%;
 
-    .content-editorial-container {
+    .content-editorial-container, .editorial-container {
         @include box-sizing(border-box);
         margin: 0 auto;
         padding: 5em 0;
@@ -17,33 +135,26 @@
         }
     }
 
-    .content-editorial-headline {
-        color: $color-white-pure;
+    .content-editorial-headline, .editorial-headline {
         font-weight: $font-weight-headline;
         font-size: $font-size-extrahuger;
         font-family: $font-family-headline;
         line-height: 1.25em;
     }
 
-    .content-editorial-subhead {
-        color: $color-white-pure;
+    .content-editorial-subhead, .editorial-subhead {
         font-weight: $font-weight-subhead;
         font-size: $font-size-extrahuge;
         font-family: $font-family-subhead;
         line-height: 1.25em;
-
-        &.content-editorial-subhead-smaller {
-            font-size: $font-size-huge;
-        }
     }
 
-    .content-editorial-accent {
+    .content-editorial-accent, .editorial-accent {
         @include typeface(accent);
     }
 
-    .content-editorial-cta {
+    .content-editorial-cta, .editorial-cta {
         padding: 1em 0;
-        color: $color-white-pure;
 
         p {
             padding: 0 0 0.9em;
@@ -175,25 +286,19 @@
     }
 
     .content-editorial-note {
-        color: $color-white-lilac;
         font-size: $font-size-smaller;
     }
 
     &.content-editorial-bigtalk {
-        min-height: (50em / 1.4);
-        font-size: 1.4em;
-
-        .content-editorial-container {
-            max-width: ($site-max-width / 1.4);
-        }
+        @include editorial-height('bigtalk');
     }
 
     &.content-editorial-short {
-        min-height: 20em;
+        @include editorial-height('short');
     }
 
     &.content-editorial-noheight {
-        min-height: 1em;
+        @include editorial-height('noheight');
     }
 
     &.content-editorial-translucent {
@@ -233,82 +338,31 @@
     }
 
     &.content-editorial-bg-primary {
-        background: $color-green-shamrock;
+        @include editorial-bg-color($color: 'primary');
     }
 
     &.content-editorial-bg-info {
-        background: $color-blue-curious;
+        @include editorial-bg-color($color: 'info');
     }
 
     &.content-editorial-bg-bright {
-        background: $color-orange-sun;
+        @include editorial-bg-color($color: 'bright');
     }
 
     &.content-editorial-bg-white {
-        background: $color-white-pure;
-        color: $color-gray-charcoal;
-
-        .content-editorial-headline {
-            color: $color-gray-charcoal;
-        }
-
-        .content-editorial-subhead {
-            color: $color-gray-charcoal;
-        }
-
-        .content-editorial-cta {
-            color: $color-gray-charcoal;
-        }
-
-        .content-editorial-note {
-            color: $color-gray-chateau;
-        }
+        @include editorial-bg-color($color: 'white');
     }
 
     &.content-editorial-bg-light {
-        background: $color-white-smoke;
-        color: $color-gray-charcoal;
-
-        .content-editorial-headline {
-            color: $color-gray-charcoal;
-        }
-
-        .content-editorial-subhead {
-            color: $color-gray-charcoal;
-        }
-
-        .content-editorial-cta {
-            color: $color-gray-charcoal;
-        }
-
-        .content-editorial-note {
-            color: $color-gray-chateau;
-        }
+        @include editorial-bg-color($color: 'light');
     }
 
     &.content-editorial-bg-dark {
-        background: $color-gray-charcoal;
+        @include editorial-bg-color($color: 'dark');
     }
 
     &.content-editorial-bg-grid {
-        background: url('../images/patterns/grid-trans-blue.png') repeat;
-        color: $color-blue-bahama;
-
-        .content-editorial-headline {
-            color: $color-blue-bahama;
-        }
-
-        .content-editorial-subhead {
-            color: $color-blue-bahama;
-        }
-
-        .content-editorial-cta {
-            color: $color-blue-bahama;
-        }
-
-        .content-editorial-note {
-            color: $color-blue-bahama;
-        }
+        @include editorial-bg-color($color: 'grid');
     }
 
     &.content-editorial-centerhero {
@@ -317,6 +371,31 @@
         .content-editorial-headline {
             margin-top: 1em;
             font-size: 6em;
+        }
+    }
+
+    &.v-zip-search {
+        &.o-bg-light {
+            @include editorial-text-color('dark');
+        }
+
+        .editorial-headline {
+            @include cg-2of3(false,false);
+            font-size: $font-size-extrahuger*1.4;
+
+            &.v-sun-icon {
+                font-size: $font-size-extrahuger;
+
+                svg {
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+        }
+
+        .editorial-subhead {
+            @include cg-2of3(false, false);
+            font-size: $font-size-huge*1.4;
         }
     }
 }
@@ -425,4 +504,11 @@
             font-size: $font-size-larger;
         }
     }
+}
+
+.ce-zip-search {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.1em;
+    padding: 2em 0;
 }
