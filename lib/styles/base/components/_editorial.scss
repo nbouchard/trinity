@@ -118,6 +118,7 @@
     }
 }
 
+.ce-editorial,
 .content-editorial, .ce-content-editorial {
     @include box-sizing(border-box);
     @include editorial-height('standard');
