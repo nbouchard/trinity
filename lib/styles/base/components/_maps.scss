@@ -40,6 +40,9 @@
 
     .map-green {
         fill: $color-green-shamrock;
+        stroke: $color-white-pure;
+        stroke-linejoin: round;
+        stroke-linecap: round;
 
         &.map-highlight,
         &.map-selected {

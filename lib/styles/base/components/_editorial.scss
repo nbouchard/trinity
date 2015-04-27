@@ -25,57 +25,69 @@
     @if $color == 'dark' {
         color: $color-gray-charcoal;
 
-        .content-editorial-headline, .editorial-headline {
+        .content-editorial-headline,
+        .editorial-headline {
             color: $color-gray-charcoal;
         }
 
-        .content-editorial-subhead, .editorial-subhead {
+        .content-editorial-subhead,
+        .editorial-subhead {
             color: $color-gray-charcoal;
         }
 
-        .content-editorial-cta, .editorial-cta {
+        .content-editorial-cta,
+        .editorial-cta {
             color: $color-gray-charcoal;
         }
 
-        .content-editorial-note, .editorial-note {
+        .content-editorial-note,
+        .editorial-note {
             color: $color-gray-chateau;
         }
     }
     @if $color == 'grid' {
         color: $color-blue-bahama;
 
-        .content-editorial-headline, .editorial-headline {
+        .content-editorial-headline,
+        .editorial-headline {
             color: $color-blue-bahama;
         }
 
-        .content-editorial-subhead, .editorial-subhead {
+        .content-editorial-subhead,
+        .editorial-subhead {
             color: $color-blue-bahama;
         }
 
-        .content-editorial-cta, .editorial-cta {
+        .content-editorial-cta,
+        .editorial-cta {
             color: $color-blue-bahama;
         }
 
-        .content-editorial-note, .editorial-note {
+        .content-editorial-note,
+        .editorial-note {
             color: $color-blue-bahama;
         }
     }
     @if $color == 'white' {
         color: $color-white-pure;
 
-        .content-editorial-headline, .editorial-headline {
+        .content-editorial-headline,
+        .editorial-headline {
             color: $color-white-pure;
         }
 
-        .content-editorial-subhead, .editorial-subhead {
+        .content-editorial-subhead,
+        .editorial-subhead {
             color: $color-white-pure;
         }
 
-        .content-editorial-cta, .editorial-cta {
+        .content-editorial-cta,
+        .editorial-cta {
             color: $color-white-pure;
         }
 
-        .content-editorial-note, .editorial-note {
+        .content-editorial-note,
+        .editorial-note {
             color: $color-white-lilac;
         }
     }
@@ -128,6 +140,7 @@
     .content-editorial-container,
     .editorial-container {
         @include box-sizing(border-box);
+        @include clearfix;
         margin: 0 auto;
         padding: 5em 0;
         max-width: $site-max-width;
@@ -299,19 +312,23 @@
         font-size: $font-size-smaller;
     }
 
-    &.content-editorial-bigtalk {
+    &.content-editorial-bigtalk,
+    &.v-bigtalk {
         @include editorial-height('bigtalk');
     }
 
-    &.content-editorial-short {
+    &.content-editorial-short,
+    &.v-short {
         @include editorial-height('short');
     }
 
-    &.content-editorial-noheight {
+    &.content-editorial-noheight,
+    &.v-noheight {
         @include editorial-height('noheight');
     }
 
-    &.content-editorial-translucent {
+    &.content-editorial-translucent,
+    &.v-translucent {
         padding: 5em 0;
         color: $color-gray-charcoal;
 
@@ -323,55 +340,67 @@
             }
         }
 
-        .content-editorial-container {
+        .content-editorial-container,
+        .editorial-container {
             background: rgba(255, 255, 255, 0.7);
             color: $color-gray-charcoal;
             padding: 1em;
             max-width: ($site-max-width + 2em);
         }
 
-        .content-editorial-headline {
+        .content-editorial-headline,
+        .editorial-headline {
             color: $color-gray-charcoal;
         }
 
-        .content-editorial-subhead {
+        .content-editorial-subhead,
+        .editorial-subhead {
             color: $color-gray-charcoal;
         }
 
-        .content-editorial-cta {
+        .content-editorial-cta,
+        .editorial-cta {
             color: $color-gray-charcoal;
         }
 
-        .content-editorial-note {
+        .content-editorial-note,
+        .editorial-note {
             color: $color-gray-chateau;
         }
     }
 
-    &.content-editorial-bg-primary {
+    &.content-editorial-bg-primary,
+    &.v-bg-primary {
         @include editorial-bg-color($color: 'primary');
     }
 
-    &.content-editorial-bg-info {
+    &.content-editorial-bg-info,
+    &.v-bg-info {
         @include editorial-bg-color($color: 'info');
     }
 
-    &.content-editorial-bg-bright {
+    &.content-editorial-bg-bright,
+    &.v-bg-bright {
         @include editorial-bg-color($color: 'bright');
     }
 
-    &.content-editorial-bg-white {
+    &.content-editorial-bg-white,
+    &.v-bg-white {
         @include editorial-bg-color($color: 'white');
     }
 
-    &.content-editorial-bg-light {
+    &.content-editorial-bg-light,
+    &.v-bg-light {
         @include editorial-bg-color($color: 'light');
     }
 
-    &.content-editorial-bg-dark {
+    &.content-editorial-bg-dark,
+    &.v-bg-dark {
         @include editorial-bg-color($color: 'dark');
     }
 
-    &.content-editorial-bg-grid {
+    &.content-editorial-bg-grid,
+    &.v-bg-grid {
         @include editorial-bg-color($color: 'grid');
     }
 
@@ -422,6 +451,7 @@
         @include editorial-bg-color($color: 'info');
 
         .editorial-step {
+            @include clearfix;
             list-style: none;
             padding: 0;
             font-size: $font-size-huger;
@@ -451,7 +481,41 @@
 
             .circle-icon-large {
                 padding: 20px;
+                width: 250px;
             }
+        }
+    }
+
+    &.v-solar-location-map {
+        .locations-info {
+            @include cg-1of3();
+            font-size: $font-size-huge;
+
+            h2 {
+                height: auto;
+                line-height: auto;
+                font-size: $font-size-huge;
+            }
+        }
+
+        .locations-map {
+            @include cg-2of3();
+        }
+    }
+
+    &.v-solar-providers {
+        .editorial-container {
+            padding: 40px;
+        }
+
+        .supplier,
+        .grid-nav {
+            display: none;
+        }
+
+        .supplier.type-solar {
+            display: block;
+            @include cg-1of4();
         }
     }
 }
