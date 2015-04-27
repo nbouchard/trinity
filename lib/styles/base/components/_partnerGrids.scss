@@ -1,7 +1,13 @@
-.partner-grid {
+.partner-grid,
+.ce-partner-grid {
     @include cg-row(true, false);
 
-    .partner {
+    .grid {
+        @include cg-row(false, false);
+    }
+
+    .partner,
+    .supplier {
         list-style: none;
         text-align: center;
         height: 8em;
@@ -25,7 +31,8 @@
     }
 }
 
-.partner-grid-nav {
+.partner-grid-nav,
+.grid-nav {
     text-align: center;
 
     .nav-list {

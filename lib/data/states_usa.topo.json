@@ -11,7 +11,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 1,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-MA",
@@ -25,7 +26,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-MN",
@@ -39,7 +41,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-MT",
@@ -53,7 +56,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-ND",
@@ -67,7 +71,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-HI",
@@ -95,7 +100,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-ID",
@@ -109,7 +115,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-WA",
@@ -123,7 +130,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-AZ",
@@ -137,7 +145,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 1,
-                        "residential_gas": 1
+                        "residential_gas": 1,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-CA",
@@ -151,7 +160,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-CO",
@@ -165,7 +175,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-NV",
@@ -179,7 +190,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-NM",
@@ -193,7 +205,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-OR",
@@ -207,7 +220,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-UT",
@@ -221,7 +235,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-WY",
@@ -235,7 +250,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-AR",
@@ -249,7 +265,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-IA",
@@ -263,7 +280,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-KS",
@@ -277,7 +295,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-MO",
@@ -291,7 +310,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-NE",
@@ -305,7 +325,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-OK",
@@ -319,7 +340,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-SD",
@@ -333,7 +355,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-LA",
@@ -347,7 +370,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 1,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-TX",
@@ -361,7 +385,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 1,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-CT",
@@ -375,7 +400,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-NH",
@@ -389,7 +415,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-RI",
@@ -403,7 +430,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-VT",
@@ -417,7 +445,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-AL",
@@ -431,7 +460,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-FL",
@@ -445,7 +475,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 1,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-GA",
@@ -459,7 +490,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-MS",
@@ -473,7 +505,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-SC",
@@ -487,7 +520,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 1,
-                        "residential_gas": 1
+                        "residential_gas": 1,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-IL",
@@ -501,7 +535,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-IN",
@@ -515,7 +550,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-KY",
@@ -529,7 +565,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-NC",
@@ -548,7 +585,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 1,
-                        "residential_gas": 1
+                        "residential_gas": 1,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-OH",
@@ -562,7 +600,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-TN",
@@ -576,7 +615,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-VA",
@@ -595,7 +635,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-WI",
@@ -614,7 +655,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-WV",
@@ -628,7 +670,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 1,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-DE",
@@ -642,7 +685,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 0,
-                        "residential_gas": 1
+                        "residential_gas": 1,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-DC",
@@ -656,7 +700,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 1,
-                        "residential_gas": 1
+                        "residential_gas": 1,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-MD",
@@ -670,7 +715,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 1,
-                        "residential_gas": 1
+                        "residential_gas": 1,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-NJ",
@@ -684,7 +730,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 1,
-                        "residential_gas": 1
+                        "residential_gas": 1,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-NY",
@@ -703,7 +750,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 1,
-                        "residential_gas": 1
+                        "residential_gas": 1,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-PA",
@@ -717,7 +765,8 @@
                     "energy": {
                         "residential_electricity": 1,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 1
                     }
                 },
                 "id": "USA-ME",
@@ -731,7 +780,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 1,
-                        "residential_gas": 1
+                        "residential_gas": 1,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-MI",
@@ -756,7 +806,8 @@
                     "energy": {
                         "residential_electricity": 0,
                         "commercial_electricity": 0,
-                        "residential_gas": 0
+                        "residential_gas": 0,
+                        "residential_solar": 0
                     }
                 },
                 "id": "USA-AK",

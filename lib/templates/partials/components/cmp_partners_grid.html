@@ -1,24 +1,17 @@
----
-suppliers:
-- aep-energy
-- txu-energy
-- bounce-energy
-- direct-energy
-- champion-energy
-- cirro-energy
-- amigo-energy
-- trieagle
----
-<ul class="partner-grid">
-    {{#each cmp_partners_grid.suppliers}}
-    <li class="partner"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-{{.}}">{{.}}</a></li>
-    {{/each}}
-</ul>
-<nav class="partner-grid-nav grid-nav paginator paginator-dots">
-    <ol class="nav-list">
-        <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
-        <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
-        <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
-        <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
-    </ol>
-</nav>
+<div class="ce-partner-grid">
+    <ul class="grid">
+        {{#each suppliers}}
+            {{#unless hide}}
+                <li class="supplier type-{{type}}"><a href="/website_suppliers_detail.html" class="supplier-logo supplier-{{slug}}">{{slug}}</a></li>
+            {{/unless}}
+        {{/each}}
+    </ul>
+    <nav class="partner-grid-nav grid-nav paginator paginator-dots">
+        <ol class="nav-list">
+            <li class="nav-item"><a href="#" class="nav-link is-active"><i class="icon fa fa-circle"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="icon fa fa-circle"></i></a></li>
+        </ol>
+    </nav>
+</div>

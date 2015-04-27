@@ -1,0 +1,124 @@
+<div id="choose-map" class="locations-map map">
+    <h3 class="locations-map-state">States We Serve</h3>
+</div>
+
+<script>
+var width = document.getElementById('choose-map').offsetWidth;
+var height = document.getElementById('choose-map').offsetHeight;
+var centered;
+
+var projection = d3.geo.albersUsa()
+    .scale(800)
+    .translate([width / 2, height / 2]);
+var path = d3.geo.path()
+    .projection(projection);
+var svg = d3.select("#choose-map").append("svg")
+    .attr("class", "map-svg")
+    .attr("viewBox", "0 0 " + width + " " + height)
+    .attr("width", width)
+    .attr("height", height);
+svg.append("rect")
+    .attr("class", "map-base")
+    .attr("width", width)
+    .attr("height", height);
+
+var usa = svg.append("g");
+d3.json("/data/states_usa.topo.json", function(error, us) {
+    usa.append("g")
+        .selectAll("path")
+        .data(topojson.feature(us, us.objects.states).features)
+        .enter()
+        .append("path")
+        .attr("d", path)
+        .attr("class", function(d) {
+            if (d.properties.energy.residential_solar === 1) {
+                return "map-green";
+            } else {
+                return "map-states";
+            }
+        })
+        .on('click', clicked)
+        .on('mouseover', function(d,i) {
+            d3.select(this)
+                .classed("map-highlight", true);
+            d3.select(".locations-map-state").text(d.properties.name);
+        })
+        .on('mouseout', function(d,i) {
+            d3.select(this)
+                .classed("map-highlight", false);
+            d3.select(".locations-map-state").text("States We Serve");
+
+
+        });
+});
+function clicked(d) {
+    var x, y, k;
+    if (d && centered !== d) {
+        var centroid = path.centroid(d);
+        x = centroid[0];
+        y = centroid[1];
+        k = 3;
+        centered = d;
+        d3.select('#choose-mapinfo-state').text(d.properties.name);
+        d3.select('#choose-mapinfo-residential-electricity').classed('active', function() {
+            if (d.properties.energy.residential_electricity === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        d3.select('#choose-mapinfo-residential-gas').classed('active', function() {
+            if (d.properties.energy.residential_gas === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        d3.select('#choose-mapinfo-commercial-electricity').classed('active', function() {
+            if (d.properties.energy.commercial_electricity === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        d3.select('#choose-mapinfo-none').classed('active', function() {
+            if (d.properties.energy.residential_electricity !== 1 &&  d.properties.energy.residential_gas !== 1 && d.properties.energy.commercial_electricity !== 1) {
+                return true
+            }
+        });
+        d3.selectAll("path").classed("map-selected", false);
+        d3.select(this).classed("map-selected", true);
+    } else {
+        x = width / 2;
+        y = height / 2;
+        k = 1;
+        centered = null;
+        d3.select('#choose-mapinfo-state').text("National");
+        d3.select('#choose-mapinfo-residential-electricity').classed('active', function() {
+            return true;
+        });
+        d3.select('#choose-mapinfo-residential-gas').classed('active', function() {
+            return true;
+        });
+        d3.select('#choose-mapinfo-commercial-electricity').classed('active', function() {
+            return true;
+        });
+        d3.select('#choose-mapinfo-none').classed('active', function() {
+            return false;
+        });
+
+        d3.select(this).classed("map-selected", false);
+    }
+
+    usa.selectAll("path")
+        .classed("map-highlight", centered && function(d) {
+            return d === centered;
+        });
+
+usa.transition()
+    .duration(750)
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+    .style("stroke-width", 1.5 / k + "px");
+
+}
+</script>

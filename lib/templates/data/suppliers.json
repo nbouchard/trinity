@@ -6,7 +6,8 @@
         "slug": "txu-energy",
         "blurb": "With roots going back over 100 years, TXU Energy is a market-leading retail electricity provider, powering the lives of more than 2 million Texans. TXU offers commercial and residential customers energy-efficient options, renewable energy programs, and other electricity-related products and services.",
         "dereg": true,
-        "active": true
+        "active": true,
+        "type": "solar"
     }, {
         "id": "2",
         "name": "StarTex Power",
@@ -157,7 +158,8 @@
         "slug": "north-american-power",
         "blurb": "North American Power, one of Forbes Top 100 Most Promising Companies, is dedicated to providing its customers with competitive electricity and natural gas rates that are focused on helping the environment through renewable energy sources. North American Power offers its services in many states throughout the country.",
         "dereg": true,
-        "active": true
+        "active": true,
+        "type": "solar"
     }, {
         "id": "21",
         "name": "Gateway Energy Services",
@@ -189,7 +191,8 @@
         "slug": "oasis-energy",
         "blurb": "Oasis Energy, an energy supplier focusing on the Illinois, Maryland, Pennsylvania, and New York markets, strives to help its customers make smart energy decisions and provide the best support and service to its residential and commercial electricity and natural gas customers.",
         "dereg": true,
-        "active": true
+        "active": true,
+        "type": "solar"
     }, {
         "id": "25",
         "name": "YEP Energy",
@@ -316,7 +319,8 @@
         "slug": "sunwave-gas-and-power",
         "blurb": "",
         "dereg": true,
-        "active": true
+        "active": true,
+        "type": "solar"
     }, {
         "id": "41",
         "name": "Inspire Energy",
@@ -348,7 +352,8 @@
         "slug": "pure-energies",
         "blurb": "",
         "dereg": true,
-        "active": true
+        "active": true,
+        "type": "solar"
     }, {
         "id": "45",
         "name": "Lakeshore Energy",
@@ -428,5 +433,68 @@
         "dereg": true,
         "active": true,
         "hide": true
+    }, {
+        "id": "54",
+        "name": "Canadian Solar",
+        "profileUrl": "#",
+        "slug": "canadian-solar",
+        "blurb": "blurb",
+        "dereg": true,
+        "active": true,
+        "type": "solar"
+    }, {
+        "id": "55",
+        "name": "First Solar",
+        "profileUrl": "#",
+        "slug": "first-solar",
+        "blurb": "blurb",
+        "dereg": true,
+        "active": true,
+        "type": "solar"
+    }, {
+        "id": "56",
+        "name": "NRG Solar",
+        "profileUrl": "#",
+        "slug": "nrg-solar",
+        "blurb": "blurb",
+        "dereg": true,
+        "active": true,
+        "type": "solar"
+    }, {
+        "id": "57",
+        "name": "Yingu Solar",
+        "profileUrl": "#",
+        "slug": "yingu-solar",
+        "blurb": "blurb",
+        "dereg": true,
+        "active": true,
+        "type": "solar"
+    }, {
+        "id": "58",
+        "name": "Sunpower",
+        "profileUrl": "#",
+        "slug": "sunpower",
+        "blurb": "blurb",
+        "dereg": true,
+        "active": true,
+        "type": "solar"
+    }, {
+        "id": "59",
+        "name": "Suntech",
+        "profileUrl": "#",
+        "slug": "suntech",
+        "blurb": "blurb",
+        "dereg": true,
+        "active": true,
+        "type": "solar"
+    }, {
+        "id": "60",
+        "name": "Trina Solar",
+        "profileUrl": "#",
+        "slug": "trina-solar",
+        "blurb": "blurb",
+        "dereg": true,
+        "active": true,
+        "type": "solar"
     }]
 }
