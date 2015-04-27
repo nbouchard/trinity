@@ -1,12 +1,12 @@
-<div class="content-editorial" style="background: url('{{editorial_bg}}') no-repeat; background-size: cover;">
-    <div class="content-editorial-container">
+<div class="ce-editorial {{override_class}}" style="background: url('{{editorial_bg}}') no-repeat; background-size: cover;">
+    <div class="editorial-container">
         {{#if editorial_headline}}
-            <h2 class="content-editorial-headline">{{editorial_headline}}</h2>
+            <h1 class="editorial-headline">{{editorial_headline}}</h1>
         {{/if}}
         {{#if editorial_subhead}}
-            <h3 class="content-editorial-headline">{{editorial_subhead}}</h3>
+            <h2 class="editorial-subhead">{{editorial_subhead}}</h2>
         {{/if}}
-        <div class="content-editorial-cta">
+        <div class="editorial-cta">
 	        {{#if editorial_cta}}
                 <p>{{editorial_cta}}</p>
             {{/if}}
