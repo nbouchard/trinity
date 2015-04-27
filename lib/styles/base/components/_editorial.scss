@@ -119,13 +119,14 @@
 }
 
 .ce-editorial,
-.content-editorial, .ce-content-editorial {
+.content-editorial {
     @include box-sizing(border-box);
     @include editorial-height('standard');
     position: relative;
     width: 100%;
 
-    .content-editorial-container, .editorial-container {
+    .content-editorial-container,
+    .editorial-container {
         @include box-sizing(border-box);
         margin: 0 auto;
         padding: 5em 0;
@@ -138,25 +139,29 @@
         }
     }
 
-    .content-editorial-headline, .editorial-headline {
+    .content-editorial-headline,
+    .editorial-headline {
         font-weight: $font-weight-headline;
         font-size: $font-size-extrahuger;
         font-family: $font-family-headline;
         line-height: 1.25em;
     }
 
-    .content-editorial-subhead, .editorial-subhead {
+    .content-editorial-subhead,
+    .editorial-subhead {
         font-weight: $font-weight-subhead;
         font-size: $font-size-extrahuge;
         font-family: $font-family-subhead;
         line-height: 1.25em;
     }
 
-    .content-editorial-accent, .editorial-accent {
+    .content-editorial-accent,
+    .editorial-accent {
         @include typeface(accent);
     }
 
-    .content-editorial-cta, .editorial-cta {
+    .content-editorial-cta,
+    .editorial-cta {
         padding: 1em 0;
 
         p {
@@ -165,12 +170,14 @@
         }
     }
 
-    .content-editorial-infogrid, .editorial-infogrid {
+    .content-editorial-infogrid,
+    .editorial-infogrid {
         @include cg-row();
         margin: 0;
         padding: 0;
 
-        .content-editorial-infogrid-cell, .editorial-infogrid-cell {
+        .content-editorial-infogrid-cell,
+        .editorial-infogrid-cell {
             @include box-sizing(border-box);
             @include cg-1of4();
             display: table-cell;
@@ -416,7 +423,7 @@
 
         .editorial-step {
             list-style: none;
-            padding: 0px;
+            padding: 0;
             font-size: $font-size-huger;
 
             li {
@@ -425,7 +432,7 @@
 
             [class^="c-icon-"]:before {
                 font-size: $font-size-huge;
-                margin: 8px 20px 0px 0px;
+                margin: 8px 20px 0;
                 float: left;
             }
         }
@@ -439,7 +446,7 @@
 
             h4 {
                 width: 10em;
-                margin: 0px auto;
+                margin: 0 auto;
             }
 
             .circle-icon-large {
