@@ -1,0 +1,38 @@
+<div class="ce-editorial v-team-members">
+    <div class="editorial-container">
+        <h2 class="editorial-headline">Our Team</h2>
+        <div class="editorial-content">
+                <!-- <div class="team-card large-card">
+                    <div class="team-card-content">
+                        <img class="team-photo" src="images/team/kerry_c.jpg" alt="Photo of Test">
+                        <div class="team-basic-info">
+                            <span class="team-name">Test</span>
+                            <span class="team-title">Test</span>
+                        </div>
+                        <div class="team-expanded-info">
+                        </div>
+                    </div>
+                </div>
+ -->
+            {{#each team}}
+                <div class="team-card">
+                    <div class="team-card-content">
+                        <img class="team-photo" src="images/team/{{img}}" alt="Photo of {{fistName}}">
+                        <div class="team-basic-info">
+                            <span class="team-name">{{firstName}}</span>
+                            <span class="team-title">{{title}}</span>
+                        </div>
+                        <div class="team-expanded-info">
+                            {{twitter}}
+                            {{superpower}}
+                            {{slogan}}
+                            {{weekend}}
+                            {{guiltyPleasure}}
+                            {{dream}}
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
