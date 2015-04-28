@@ -312,23 +312,19 @@
         font-size: $font-size-smaller;
     }
 
-    &.content-editorial-bigtalk,
-    &.v-bigtalk {
+    &.content-editorial-bigtalk, &.v-bigtalk {
         @include editorial-height('bigtalk');
     }
 
-    &.content-editorial-short,
-    &.v-short {
+    &.content-editorial-short, &.v-short {
         @include editorial-height('short');
     }
 
-    &.content-editorial-noheight,
-    &.v-noheight {
+    &.content-editorial-noheight, &.v-noheight {
         @include editorial-height('noheight');
     }
 
-    &.content-editorial-translucent,
-    &.v-translucent {
+    &.content-editorial-translucent, &.v-translucent {
         padding: 5em 0;
         color: $color-gray-charcoal;
 
@@ -369,38 +365,31 @@
         }
     }
 
-    &.content-editorial-bg-primary,
-    &.v-bg-primary {
+    &.content-editorial-bg-primary, &.v-bg-primary {
         @include editorial-bg-color($color: 'primary');
     }
 
-    &.content-editorial-bg-info,
-    &.v-bg-info {
+    &.content-editorial-bg-info, &.v-bg-info {
         @include editorial-bg-color($color: 'info');
     }
 
-    &.content-editorial-bg-bright,
-    &.v-bg-bright {
+    &.content-editorial-bg-bright, &.v-bg-bright {
         @include editorial-bg-color($color: 'bright');
     }
 
-    &.content-editorial-bg-white,
-    &.v-bg-white {
+    &.content-editorial-bg-white, &.v-bg-white {
         @include editorial-bg-color($color: 'white');
     }
 
-    &.content-editorial-bg-light,
-    &.v-bg-light {
+    &.content-editorial-bg-light, &.v-bg-light {
         @include editorial-bg-color($color: 'light');
     }
 
-    &.content-editorial-bg-dark,
-    &.v-bg-dark {
+    &.content-editorial-bg-dark, &.v-bg-dark {
         @include editorial-bg-color($color: 'dark');
     }
 
-    &.content-editorial-bg-grid,
-    &.v-bg-grid {
+    &.content-editorial-bg-grid, &.v-bg-grid {
         @include editorial-bg-color($color: 'grid');
     }
 
