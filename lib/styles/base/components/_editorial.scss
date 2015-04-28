@@ -16,6 +16,14 @@
             max-width: ($site-max-width / 1.4);
         }
     }
+    @if $height =='bigtalkshort' {
+        min-height: (30em / 1.4);
+        font-size: 1.4em;
+
+        .editorial-container {
+            max-width: ($site-max-width / 1.4);
+        }
+    }
     @if $height == 'standard' {
         min-height: 30em;
     }
@@ -199,7 +207,8 @@
         }
     }
 
-    .content-editorial-marker {
+    .content-editorial-marker,
+    .editorial-marker {
         position: absolute;
         top: 4em;
         left: 0;
@@ -262,7 +271,8 @@
         }
     }
 
-    .content-editorial-infobox {
+    .content-editorial-infobox,
+    .editorial-infobox {
         padding: 1em;
         max-width: 60%;
         background: rgba($color-white-pure, 0.6);
@@ -308,12 +318,96 @@
         }
     }
 
-    .content-editorial-note {
+    .content-editorial-note,
+    .editorial-note {
         font-size: $font-size-smaller;
+    }
+
+    .content-editorial-tabs,
+    .editorial-tabs {
+        .tab-header {
+            font-size: $font-size-huge;
+
+            .nav-list {
+                @include box-sizing(border-box);
+                @include display(flex);
+                @include flex-direction(row);
+                margin: 0.5em 0;
+
+                @include breakpoint($mq-md-max) {
+                    @include flex-wrap(wrap);
+                }
+
+                .nav-item {
+                    @include box-sizing(border-box);
+                    @include flex(1 1 10em);
+                    text-align: center;
+
+                    .nav-link {
+                        font-weight: normal;
+                        color: $color-gray-chateau;
+
+                        &:hover,
+                        &:focus,
+                        &:active,
+                        &.is-active {
+                            text-decoration: none;
+
+                            .nav-text {
+                                padding-bottom: 0.1em;
+                                border-bottom: 0.1em solid $color-orange-sun;
+                            }
+                        }
+
+                        .icon {
+                            padding-right: 0.25em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tab-body {
+            padding: 1em 0;
+
+            .u-url {
+                .p-name {
+                    color: $color-gray-charcoal;
+                }
+
+                .p-summary {
+                    color: $color-gray-chateau;
+                }
+
+                &:hover,
+                &:active,
+                &:focus {
+                    .img-overlay {
+                        display: block;
+                    }
+
+                    .p-name {
+                        color: $color-gray-charcoal;
+                    }
+
+                    .p-summary {
+                        color: $color-gray-chateau;
+                    }
+                }
+            }
+        }
+    }
+
+    .editorial-content {
+        padding: 5px;
     }
 
     &.content-editorial-bigtalk, &.v-bigtalk {
         @include editorial-height('bigtalk');
+    }
+
+    &.v-bigtalkshort {
+        @include editorial-height('bigtalkshort');
     }
 
     &.content-editorial-short, &.v-short {
@@ -393,7 +487,7 @@
         @include editorial-bg-color($color: 'grid');
     }
 
-    &.content-editorial-centerhero {
+    &.content-editorial-centerhero, &.v-centerhero {
         text-align: center;
 
         .content-editorial-headline {
@@ -401,189 +495,9 @@
             font-size: 6em;
         }
     }
-
-    &.v-zip-search {
-        .editorial-headline {
-            @include cg-2of3(false,false);
-            font-size: $font-size-extrahuger*1.4;
-        }
-
-        .editorial-subhead {
-            @include cg-2of3(false, false);
-            font-size: $font-size-huge*1.4;
-        }
-
-        &.o-solar-landing1 {
-            @include editorial-text-color('dark');
-        }
-
-        &.o-solar-landing2 {
-            @include editorial-text-color('dark');
-
-            .editorial-headline {
-                font-size: $font-size-extrahuger;
-                @include cg-1of2(false,false);
-
-                &:before{
-                    @include icon;
-                    content: $c-icon-sun;
-                    color: #f3c31b;
-                    font-size: 100px;
-                    float: left;
-                    margin-right: 30px;
-                }
-            }
-        }
-    }
-
-    &.v-solar-how-to {
-        @include editorial-bg-color($color: 'info');
-
-        .editorial-step {
-            @include clearfix;
-            list-style: none;
-            padding: 0;
-            font-size: $font-size-huger;
-
-            li {
-                @include cg-1of2();
-            }
-
-            [class^="c-icon-"]:before {
-                font-size: $font-size-huge;
-                margin: 8px 20px 0;
-                float: left;
-            }
-        }
-    }
-
-    &.v-solar-infogrid {
-        .editorial-infogrid-cell {
-            @include cg-1of3();
-            text-align: center;
-            font-size: $font-size-huge;
-
-            h4 {
-                width: 10em;
-                margin: 0 auto;
-            }
-
-            .circle-icon-large {
-                padding: 20px;
-                width: 250px;
-            }
-        }
-    }
-
-    &.v-solar-location-map {
-        .locations-info {
-            @include cg-1of3();
-            font-size: $font-size-huge;
-
-            h2 {
-                height: auto;
-                line-height: auto;
-                font-size: $font-size-huge;
-            }
-        }
-
-        .locations-map {
-            @include cg-2of3();
-        }
-    }
-
-    &.v-solar-providers {
-        .editorial-container {
-            padding: 40px;
-        }
-
-        .supplier,
-        .grid-nav {
-            display: none;
-        }
-
-        .supplier.type-solar {
-            display: block;
-            @include cg-1of4();
-        }
-    }
 }
 
-.content-editorial-tabs {
-    .tab-header {
-        font-size: $font-size-huge;
-
-        .nav-list {
-            @include box-sizing(border-box);
-            @include display(flex);
-            @include flex-direction(row);
-            margin: 0.5em 0;
-
-            @include breakpoint($mq-md-max) {
-                @include flex-wrap(wrap);
-            }
-
-            .nav-item {
-                @include box-sizing(border-box);
-                @include flex(1 1 10em);
-                text-align: center;
-
-                .nav-link {
-                    font-weight: normal;
-                    color: $color-gray-chateau;
-
-                    &:hover,
-                    &:focus,
-                    &:active,
-                    &.is-active {
-                        text-decoration: none;
-
-                        .nav-text {
-                            padding-bottom: 0.1em;
-                            border-bottom: 0.1em solid $color-orange-sun;
-                        }
-                    }
-
-                    .icon {
-                        padding-right: 0.25em;
-                    }
-                }
-            }
-        }
-    }
-
-    .tab-body {
-        padding: 1em 0;
-
-        .u-url {
-            .p-name {
-                color: $color-gray-charcoal;
-            }
-
-            .p-summary {
-                color: $color-gray-chateau;
-            }
-
-            &:hover,
-            &:active,
-            &:focus {
-                .img-overlay {
-                    display: block;
-                }
-
-                .p-name {
-                    color: $color-gray-charcoal;
-                }
-
-                .p-summary {
-                    color: $color-gray-chateau;
-                }
-            }
-        }
-    }
-
-}
-
+//TO DO: not necessarily editorial related - move to different location
 .img-wrapper {
     @include box-sizing(border-box);
     width: 100%;
@@ -620,4 +534,207 @@
     width: 100%;
     font-size: 1.1em;
     padding: 2em 0;
+}
+
+//Block specific variants of content editorial compontent
+.v-zip-search {
+    .editorial-headline {
+        @include cg-2of3(false,false);
+        font-size: $font-size-extrahuger*1.4;
+    }
+
+    .editorial-subhead {
+        @include cg-2of3(false, false);
+        font-size: $font-size-huge*1.4;
+    }
+
+    &.o-solar-landing1 {
+        @include editorial-text-color('dark');
+    }
+
+    &.o-solar-landing2 {
+        @include editorial-text-color('dark');
+
+        .editorial-headline {
+            font-size: $font-size-extrahuger;
+            @include cg-1of2(false,false);
+
+            &:before{
+                @include icon;
+                content: $c-icon-sun;
+                color: #f3c31b;
+                font-size: 100px;
+                float: left;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+.v-solar-how-to {
+    @include editorial-bg-color($color: 'info');
+
+    .editorial-step {
+        @include clearfix;
+        @include unstyled-list;
+        font-size: $font-size-huger;
+
+        li {
+            @include cg-1of2();
+        }
+
+        [class^="c-icon-"]:before {
+            font-size: $font-size-huge;
+            margin: 8px 20px 0;
+            float: left;
+        }
+    }
+}
+
+.v-solar-infogrid {
+    .editorial-infogrid-cell {
+        @include cg-1of3();
+        text-align: center;
+        font-size: $font-size-huge;
+
+        h4 {
+            width: 10em;
+            margin: 0 auto;
+        }
+
+        .circle-icon-large {
+            padding: 20px;
+            width: 250px;
+        }
+    }
+}
+
+.v-solar-location-map {
+    .locations-info {
+        @include cg-1of3();
+        font-size: $font-size-huge;
+
+        h2 {
+            height: auto;
+            line-height: auto;
+            font-size: $font-size-huge;
+        }
+    }
+
+    .locations-map {
+        @include cg-2of3();
+    }
+}
+
+.v-solar-providers {
+    .editorial-container {
+        padding: 40px;
+    }
+
+    .supplier,
+    .grid-nav {
+        display: none;
+    }
+
+    .supplier.type-solar {
+        display: block;
+        @include cg-1of4();
+    }
+}
+
+.v-team-values {
+    @include editorial-bg-color('light');
+
+    .editorial-content {
+        font-size: $font-size-larger;
+
+        .no-list-style {
+            margin: 0;
+
+            li {
+                margin: 15px 0;
+
+                &:first-of-type,
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.v-team-members {
+    .editorial-content {
+        padding: 0;
+        @include clearfix;
+    }
+
+    .team-card {
+        float: left;
+        width: 16.66%;
+        // css trick to set height = width
+        height: 0;
+        padding-bottom: 16.66%;
+
+        &.large-card {
+            width: 50%;
+            padding-bottom: 33.33%;
+
+            .team-photo {
+                max-width: 200px;
+                max-height: 200px;
+            }
+
+            .team-card-content {
+                background-color: $color-blue-curious;
+            }
+        }
+
+        .team-card-content {
+            margin: 10px;
+            position: relative;
+        }
+
+        .team-photo {
+            width: 100%;
+        }
+
+        .team-basic-info {
+            background: rgba(0, 0, 0, 0.65);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 55px 10px 10px;
+            display: none;
+        }
+
+        .team-name {
+            color: $color-white-pure;
+            display: block;
+            font-size: $font-size-larger;
+            font-weight: $font-weight-body-strong;
+            padding: 10px 0 5px;
+        }
+
+        .team-title {
+            display: block;
+            color: $color-orange-sun;
+        }
+
+        .team-expanded-info {
+            display: none;
+        }
+
+        &:hover {
+            .team-basic-info {
+                display: block;
+            }
+        }
+    }
 }

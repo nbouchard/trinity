@@ -1,6 +1,7 @@
 {
     "team": [{
-        "name": "Alex Stillwell",
+        "firstName": "Alex",
+        "lastName": "Stillwell",
         "title": "UX Designer",
         "twitter": "@stllwll",
         "superpower": "Nap anywhere",
@@ -11,7 +12,8 @@
         "img": "alex_s.jpg"
     },
     {
-        "name": "Kevin Stevens",
+        "firstName": "Kevin",
+        "lastName": "Stevens",
         "title": "Product Market Manager-SMB",
         "twitter": "@kevindstevens",
         "superpower": "Hulk's strength so going to the gym wouldn't be a chore.",
@@ -22,7 +24,8 @@
         "img": "kevin_s.jpg"
     },
     {
-        "name": "Jessica Henderson",
+        "firstName": "Jessica",
+        "lastName": "Henderson",
         "title": "Content Strategist",
         "twitter": "@jmilleroc",
         "superpower": "Tetris. No, not the game. Packing the moving van or the car. Packing a carry-on bag. Packing our apartment. It will fit!",
@@ -33,7 +36,8 @@
         "img": "jessica_h.jpg"
     },
     {
-        "name": "Tyler Bettilyon",
+        "firstName": "Tyler",
+        "lastName": "Bettilyon",
         "title": "Sr. Software Engineer",
         "twitter": "",
         "superpower": " can exit VI in under 4 keystrokes and drink near infinite amounts of coffee.",
@@ -44,7 +48,8 @@
         "img": "tyler_b.jpg"
     },
     {
-        "name": "Kate Horsting",
+        "firstName": "Kate",
+        "lastName": "Horsting",
         "title": "Product Analyst",
         "twitter": "",
         "superpower": "Teleportation",
@@ -55,7 +60,8 @@
         "img": "kate_h.jpg"
     },
     {
-        "name": "Michael Owens",
+        "firstName": "Michael",
+        "lastName": "Owens",
         "title": "Head of User Experience",
         "twitter": "@mko",
         "superpower": "Being Human.",
@@ -66,7 +72,8 @@
         "img": "michael_o.jpg"
     },
     {
-        "name": "Kyla Westphal",
+        "firstName": "Kyla",
+        "lastName": "Westphal",
         "title": "Content Marketing Manager",
         "twitter": "@KWaterphal",
         "superpower": "Time travel",
@@ -77,7 +84,8 @@
         "img": "kyla_w.jpg"
     },
     {
-        "name": "Robin Swanson",
+        "firstName": "Robin",
+        "lastName": "Swanson",
         "title": "Provider Liaison",
         "twitter": "",
         "superpower": "Mind Reading",
@@ -88,7 +96,8 @@
         "img": "robin_s.jpg"
     },
     {
-        "name": "Jonathan Crowder",
+        "firstName": "Jonathan",
+        "lastName": "Crowder",
         "title": "Supplier Account Manager",
         "twitter": "",
         "superpower": "I would love to be able to read people's minds.",
@@ -99,7 +108,8 @@
         "img": "jonathan_c.jpg"
     },
     {
-        "name": "Nils Grimm",
+        "firstName": "Nils",
+        "lastName": "Grimm",
         "title": "Business Operations",
         "twitter": "",
         "superpower": "Thor's hammer.",
@@ -110,7 +120,8 @@
         "img": "nils_g.jpg"
     },
     {
-        "name": "John Tough",
+        "firstName": "John",
+        "lastName": "Tough",
         "title": "VP of Business Development &  Operations",
         "twitter": "@johnjtough",
         "superpower": "Flight, no question",
@@ -121,7 +132,8 @@
         "img": "john_t.jpg"
     },
     {
-        "name": "Nic Chappell",
+        "firstName": "Nic",
+        "lastName": "Chappell",
         "title": "Lifecycle Marketing Manager",
         "twitter": "",
         "superpower": "Super-strength",
@@ -132,7 +144,8 @@
         "img": "nic_c.jpg"
     },
     {
-        "name": "Cameron Drake",
+        "firstName": "Cameron",
+        "lastName": "Drake",
         "title": "Software Engineer",
         "twitter": "@camwes",
         "superpower": "Permanently altering people's music tastes.",
@@ -143,7 +156,8 @@
         "img": "cameron_d.jpg"
     },
     {
-        "name": "Barry Lewis",
+        "firstName": "Barry",
+        "lastName": "Lewis",
         "title": "Customer Support Specialist",
         "twitter": "",
         "superpower": "I'm a pretty good Impersonator.",
@@ -154,7 +168,8 @@
         "img": "barry_l.jpg"
     },
     {
-        "name": "Jasmine Rae Friedrich",
+        "firstName": "Jasmine",
+        "lastName": "Friedrich",
         "title": "Designer",
         "twitter": "@asynchronism",
         "superpower": "Chronomancy + Omniglotism. Think about it.",
@@ -165,7 +180,8 @@
         "img": "jasmine_f.jpg"
     },
     {
-        "name": "Phuong Vu",
+        "firstName": "Phuong",
+        "lastName": "Vu",
         "title": "Recruiting Coordinator",
         "twitter": "",
         "superpower": "Being able to freeze time",
@@ -176,7 +192,8 @@
         "img": "phuong_v.jpg"
     },
     {
-        "name": "Ethan Wais",
+        "firstName": "Ethan",
+        "lastName": "Wais",
         "title": "Sr. Manager, Busines Development",
         "twitter": "@EthanWais",
         "superpower": "Telekinesis (so I never have to touch the compost bin again)",
@@ -187,7 +204,8 @@
         "img": "ethan_w.jpg"
     },
     {
-        "name": "Paul Butler",
+        "firstName": "Paul",
+        "lastName": "Butler",
         "title": "Vice President Engineering",
         "twitter": "@ce_pbutler",
         "superpower": "Mind Reader",
@@ -198,7 +216,8 @@
         "img": "paul_b.jpg"
     },
     {
-        "name": "Scott Denny",
+        "firstName": "Scott",
+        "lastName": "Denny",
         "title": "Software Engineer",
         "twitter": "",
         "superpower": "Karate",
@@ -209,7 +228,8 @@
         "img": "scott_d.jpg"
     },
     {
-        "name": "Karen Ish",
+        "firstName": "Karen",
+        "lastName": "Ish",
         "title": "Controller",
         "twitter": "",
         "superpower": "The ability to add extra hours to my day (and still have time to sleep!)",
@@ -220,7 +240,8 @@
         "img": "karen_i.jpg"
     },
     {
-        "name": "Jerry Dyess",
+        "firstName": "Jerry",
+        "lastName": "Dyess",
         "title": "Chief Commerce Officer",
         "twitter": "@jerrycdyess",
         "superpower": "Seeing around corners.",
@@ -231,7 +252,8 @@
         "img": "jerry_d.jpg"
     },
     {
-        "name": "Nate Silverman",
+        "firstName": "Nate",
+        "lastName": "Silverman",
         "title": "Director of Development Operations",
         "twitter": "",
         "superpower": "Predicting the future.",
@@ -242,7 +264,8 @@
         "img": "nate_s.jpg"
     },
     {
-        "name": "Chris Hanson",
+        "firstName": "Chris",
+        "lastName": "Hanson",
         "title": "Sr. Director of Product Management",
         "twitter": "",
         "superpower": "Jedi mind tricks.",
@@ -253,7 +276,8 @@
         "img": "chris_h.jpg"
     },
     {
-        "name": "Jake Lumetta",
+        "firstName": "Jake",
+        "lastName": "Lumetta",
         "title": "Lead Software Engineer",
         "twitter": "@jakelumetta",
         "superpower": "Supersonic typing.",
@@ -264,7 +288,8 @@
         "img": "jake_l.jpg"
     },
     {
-        "name": "Simona Golebiowska",
+        "firstName": "Simona",
+        "lastName": "Golebiowska",
         "title": "Business Development, New Products",
         "twitter": "",
         "superpower": "Telepathy - a real gift if you don't want to say anything unpleasent in public.",
@@ -275,7 +300,8 @@
         "img": "simona_g.jpg"
     },
     {
-        "name": "Jeremy Post",
+        "firstName": "Jeremy",
+        "lastName": "Post",
         "title": "VP Online Marketing",
         "twitter": "@jeremypost",
         "superpower": "Vlookups & Pivot Tables",
@@ -286,7 +312,8 @@
         "img": "jeremy_p.jpg"
     },
     {
-        "name": "Kerry Cooper",
+        "firstName": "Kerry",
+        "lastName": "Cooper",
         "title": "CEO",
         "twitter": "@kerrywcooper",
         "superpower": "The ability to blink and be anywhere I want to be and to wiggle my nose and have everything be clean. Instantly.",
