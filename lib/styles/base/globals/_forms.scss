@@ -128,6 +128,9 @@ textarea {
 }
 
 label {
+    padding: 5px;
+    display: inline-block;
+
     &.label-superwide {
         width: 100%;
         max-width: 24em;
@@ -164,4 +167,75 @@ label {
     &:last-child {
         padding-bottom: 0;
     }
+}
+
+//Radio buttons
+[type="radio"] {
+    @include visuallyhidden();
+}
+
+[type="radio"] + .ce-label-text {
+    display: block;
+    padding: 0.25em 0.5em;
+}
+
+[type="radio"] + .ce-label-text:before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    border-radius: 1em;
+    border: 0.2em solid $color-white-pure;
+    box-shadow: 0 0 0 0.15em $color-gray-ghost;
+    margin: 0 0.75em 0 0;
+    transition: 0.5s ease all;
+}
+
+[type="radio"]:checked + .ce-label-text:before {
+    background-color: $color-green-shamrock;
+}
+
+[type="radio"]:disabled + .ce-label-text:before {
+    border: none;
+    background-color: $color-gray-ghost;
+}
+
+[type="radio"]:focus + .ce-label-text {
+    outline: 1px dotted $color-green-shamrock;
+}
+
+//Checkboxes
+[type="checkbox"] {
+    @include visuallyhidden();
+}
+
+[type="checkbox"] + .ce-label-text {
+    display: block;
+    padding: 0.25em 0.5em;
+}
+
+[type="checkbox"] + .ce-label-text:before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    border: 0.2em solid $color-white-pure;
+    box-shadow: 0 0 0 0.15em $color-gray-ghost;
+    margin: 0 0.75em 0 0;
+    transition: 0.5s ease all;
+}
+
+[type="checkbox"]:checked + .ce-label-text:before {
+    background-color: $color-green-shamrock;
+}
+
+[type="checkbox"]:disabled + .ce-label-text:before {
+    border: none;
+    background-color: $color-gray-ghost;
+}
+
+[type="checkbox"]:focus + .ce-label-text {
+    outline: 1px dotted $color-green-shamrock;
 }
