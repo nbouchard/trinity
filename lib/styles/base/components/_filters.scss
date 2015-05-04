@@ -79,7 +79,7 @@
 // Shopping Header Filter Nav
 .shop-header {
     @include cg-row();
-    text-align: center;
+    border: 1px solid $color-green-shamrock;
 
     .filter-nav {
         display: inline-block;

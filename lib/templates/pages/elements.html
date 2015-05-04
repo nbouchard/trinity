@@ -309,22 +309,44 @@ p q r s t u v w x y z { | } ~
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;ul&gt;
-&lt;li&gt;List Item 1&lt;/li&gt;
-&lt;li&gt;List Item 2
-&lt;ul&gt;
-&lt;li&gt;List Item 2.1&lt;/li&gt;
-&lt;li&gt;List Item 2.2
-&lt;ul&gt;
-    &lt;li&gt;List Item 2.2.1&lt;/li&gt;
-    &lt;li&gt;List Item 2.2.2&lt;/li&gt;
+    &lt;li&gt;List Item 1&lt;/li&gt;
+    &lt;li&gt;List Item 2
+        &lt;ul&gt;
+            &lt;li&gt;List Item 2.1&lt;/li&gt;
+            &lt;li&gt;List Item 2.2
+                &lt;ul&gt;
+                    &lt;li&gt;List Item 2.2.1&lt;/li&gt;
+                    &lt;li&gt;List Item 2.2.2&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;List Item 2.3&lt;/li&gt;
+            &lt;li&gt;List Item 2.4&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;List Item 3&lt;/li&gt;
+    &lt;li&gt;List Item 4&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;List Item 2.3&lt;/li&gt;
-&lt;li&gt;List Item 2.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;List Item 3&lt;/li&gt;
-&lt;li&gt;List Item 4&lt;/li&gt;
+                    </textarea>
+                </div>
+            </div>
+
+            <h4>Unordered List - no bullets</h4>
+            <div class="ceux-example">
+                <div class="ceux-result cg-1of2">
+                    <ul class="no-list-style">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3</li>
+                        <li>List Item 4</li>
+                    </ul>
+                </div>
+                <div class="ceux-code cg-1of2">
+                    <textarea class="code-sample html">
+&lt;ul class="no-list-style"&gt;
+    &lt;li&gt;List Item 1&lt;/li&gt;
+    &lt;li&gt;List Item 2&lt;/li&gt;
+    &lt;li&gt;List Item 3&lt;/li&gt;
+    &lt;li&gt;List Item 4&lt;/li&gt;
 &lt;/ul&gt;
                     </textarea>
                 </div>
@@ -414,9 +436,11 @@ p q r s t u v w x y z { | } ~
             <h2 class="ceux-heading">Tables</h2>
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
+                    TBD.
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
+TBD.
                     </textarea>
                 </div>
             </div>
@@ -612,46 +636,51 @@ p q r s t u v w x y z { | } ~
         <div class="ceux-interactive-forms-default ceux-subsection">
             <a class="anchor" id="ceux-elements-forms"></a>
             <h2 class="ceux-heading">Forms with Default Styled Fields</h2>
+            <p><strong>Note:</strong> Always wrap form fields with the label to link label to correct field and so that clicking the label will select the field.</p>
 
             <a class="anchor" id="ceux-elements-text-input"></a>
             <h4 class="ceux-heading">Text Inputs</h4>
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Text input</label>
-                        <input type="text">
+                        <label>Text input
+                            <input type="text">
+                        </label>
                     </div>
                     <div>
-                        <label>Text input with datalist</label>
-                        <input type="text" value="" list="fav-color" />
-                        <datalist id="fav-color">
-                            <option value="Red"></option>
-                            <option value="Orange"></option>
-                            <option value="Yellow"></option>
-                            <option value="Green"></option>
-                            <option value="Blue"></option>
-                            <option value="Purple"></option>
-                        </datalist>
+                        <label>Text input with datalist
+                            <input type="text" value="" list="fav-color" />
+                            <datalist id="fav-color">
+                                <option value="Red"></option>
+                                <option value="Orange"></option>
+                                <option value="Yellow"></option>
+                                <option value="Green"></option>
+                                <option value="Blue"></option>
+                                <option value="Purple"></option>
+                            </datalist>
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Text input&lt;/label&gt;
-&lt;input type="text"&gt;
+    &lt;label&gt;Text input
+        &lt;input type="text"&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-&lt;label&gt;Text input with datalist&lt;/label&gt;
-&lt;input type="text" value="" list="fav-color" /&gt;
-&lt;datalist id="fav-color"&gt;
-&lt;option value="Red"&gt;&lt;/option&gt;
-&lt;option value="Orange"&gt;&lt;/option&gt;
-&lt;option value="Yellow"&gt;&lt;/option&gt;
-&lt;option value="Green"&gt;&lt;/option&gt;
-&lt;option value="Blue"&gt;&lt;/option&gt;
-&lt;option value="Purple"&gt;&lt;/option&gt;
-&lt;/datalist&gt;
+    &lt;label&gt;Text input with datalist
+        &lt;input type="text" value="" list="fav-color" /&gt;
+        &lt;datalist id="fav-color"&gt;
+        &lt;option value="Red"&gt;&lt;/option&gt;
+        &lt;option value="Orange"&gt;&lt;/option&gt;
+        &lt;option value="Yellow"&gt;&lt;/option&gt;
+        &lt;option value="Green"&gt;&lt;/option&gt;
+        &lt;option value="Blue"&gt;&lt;/option&gt;
+        &lt;option value="Purple"&gt;&lt;/option&gt;
+        &lt;/datalist&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -659,33 +688,39 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Text input with placeholder</label>
-                        <input type="text" placeholder="I'm placeholder text">
+                        <label>Text input with placeholder
+                            <input type="text" placeholder="I'm placeholder text">
+                        </label>
                     </div>
                     <div>
-                        <label>Disabled text input with placeholder</label>
-                        <input type="text" value="Disabled text input" disabled>
+                        <label>Disabled text input with placeholder
+                            <input type="text" value="Disabled text input" disabled>
+                        </label>
                     </div>
                     <div>
-                        <label>Readonly text input</label>
-                        <input type="text" value="Readonly text input" readonly>
+                        <label>Readonly text input
+                            <input type="text" value="Readonly text input" readonly>
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Text input with placeholder&lt;/label&gt;
-&lt;input type="text" placeholder="I'm placeholder text"&gt;
+    &lt;label&gt;Text input with placeholder
+        &lt;input type="text" placeholder="I'm placeholder text"&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-&lt;label&gt;Disabled text input&lt;/label&gt;
-&lt;input type="text" value="Disabled text input" disabled&gt;
+    &lt;label&gt;Disabled text input
+        &lt;input type="text" value="Disabled text input" disabled&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-&lt;label&gt;Readonly text input&lt;/label&gt;
-&lt;input type="text" value="Readonly text input" readonly&gt;
+    &lt;label&gt;Readonly text input
+        &lt;input type="text" value="Readonly text input" readonly&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -693,15 +728,17 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Required input <span class="required">*</span></label>
-                        <input type="text" required>
+                        <label>Required input <span class="required">*</span>
+                            <input type="text" required>
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Required input &lt;span class="required"&gt;*&lt;/span&gt;&lt;/label&gt;
-&lt;input type="text" required&gt;
+    &lt;label&gt;Required input &lt;span class="required"&gt;*&lt;/span&gt;
+        &lt;input type="text" required&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -709,15 +746,17 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Email input</label>
-                        <input type="email">
+                        <label>Email input
+                            <input type="email">
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Email input&lt;/label&gt;
-&lt;input type="email"&gt;
+    &lt;label&gt;Email input
+        &lt;input type="email"&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -725,15 +764,17 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Search input</label>
-                        <input type="search">
+                        <label>Search input
+                            <input type="search">
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Search input&lt;/label&gt;
-&lt;input type="search"&gt;
+    &lt;label&gt;Search input
+        &lt;input type="search"&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -741,15 +782,17 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Speech recognition input</label>
-                        <input type="text" id="speech" name="speech" x-webkit-speech="">
+                        <label>Speech recognition input
+                            <input type="text" id="speech" name="speech" x-webkit-speech="">
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Speech recognition input&lt;/label&gt;
-&lt;input type="text" id="speech" name="speech" x-webkit-speech=""&gt;
+    &lt;label&gt;Speech recognition input
+        &lt;input type="text" id="speech" name="speech" x-webkit-speech=""&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -757,15 +800,17 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Tel input</label>
-                        <input type="tel">
+                        <label>Tel input
+                            <input type="tel">
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Tel input&lt;/label&gt;
-&lt;input type="tel"&gt;
+    &lt;label&gt;Tel input
+        &lt;input type="tel"&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -773,15 +818,21 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Phone (International)</label>
-                        <input name="field_country_code" maxlength="3"> - <input name="field_city_code" maxlength="4"> - <input name="field_phone_int" maxlength="8">
+                        <label>Phone (International)
+                            <input class="input-supershort" name="field_country_code" maxlength="3"> - 
+                            <input class="input-short" name="field_city_code" maxlength="4"> - 
+                            <input class="input-normal" name="field_phone_int" maxlength="8">
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Phone (International)&lt;/label&gt;
-&lt;input name="field_country_code" maxlength="3"&gt; - &lt;input name="field_city_code" maxlength="4"&gt; - &lt;input name="field_phone_int" maxlength="8"&gt;
+    &lt;label&gt;Phone (International)
+        &lt;input class="input-supershort" name="field_country_code" maxlength="3"&gt; - 
+        &lt;input class="input-short" name="field_city_code" maxlength="4"&gt; - 
+        &lt;input class="input-normal" name="field_phone_int" maxlength="8"&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -789,15 +840,17 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>URL input</label>
-                        <input type="url" placeholder="http://">
+                        <label>URL input
+                            <input type="url" placeholder="http://">
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;URL input&lt;/label&gt;
-&lt;input type="url" placeholder="http://"&gt;
+    &lt;label&gt;URL input
+        &lt;input type="url" placeholder="http://"&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -805,15 +858,17 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Password input</label>
-                        <input type="password" value="password">
+                        <label>Password input
+                            <input type="password" value="password">
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Password input&lt;/label&gt;
-&lt;input type="password" value="password"&gt;
+    &lt;label&gt;Password input
+        &lt;input type="password" value="password"&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -824,15 +879,17 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Textarea</label>
-                        <textarea cols="30" rows="5">Textarea text</textarea>
+                        <label>Textarea
+                            <textarea cols="30" rows="5">Textarea text</textarea>
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html" cols="30" rows="5">
 &lt;div&gt;
-&lt;label&gt;Textarea&lt;/label&gt;
-&lt;textarea cols="30" rows="5" &gt;Textarea text&lt;/textarea&gt;
+    &lt;label&gt;Textarea
+        &lt;textarea cols="30" rows="5" &gt;Textarea text&lt;/textarea&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -840,15 +897,17 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Disabled textarea</label>
-                        <textarea cols="30" rows="5" disabled>Textarea text</textarea>
+                        <label>Disabled textarea
+                            <textarea cols="30" rows="5" disabled>Textarea text</textarea>
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Disabled textarea&lt;/label&gt;
-&lt;textarea cols="30" rows="5" disabled&gt;Textarea text&lt;/textarea&gt;
+    &lt;label&gt;Disabled textarea
+        &lt;textarea cols="30" rows="5" disabled&gt;Textarea text&lt;/textarea&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -856,15 +915,17 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Readonly textarea</label>
-                        <textarea cols="30" rows="5" readonly>Textarea text</textarea>
+                        <label>Readonly textarea
+                            <textarea cols="30" rows="5" readonly>Textarea text</textarea>
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Readonly textarea&lt;/label&gt;
-&lt;textarea cols="30" rows="5" readonly&gt;Textarea text&lt;/textarea&gt;
+    &lt;label&gt;Readonly textarea
+        &lt;textarea cols="30" rows="5" readonly&gt;Textarea text&lt;/textarea&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -875,36 +936,40 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Select field</label>
-                        <select>
-                            <option>Option 01</option>
-                            <option>Option 02</option>
-                        </select>
+                        <label>Select field
+                            <select>
+                                <option>Option 01</option>
+                                <option>Option 02</option>
+                            </select>
+                        </label>
                     </div>
                     <div>
-                        <label>Disabled select field</label>
-                        <select disabled>
-                            <option>Option 01</option>
-                            <option>Option 02</option>
-                        </select>
+                        <label>Disabled select field
+                            <select disabled>
+                                <option>Option 01</option>
+                                <option>Option 02</option>
+                            </select>
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Select field&lt;/label&gt;
-&lt;select&gt;
-&lt;option&gt;Option 01&lt;/option&gt;
-&lt;option&gt;Option 02&lt;/option&gt;
-&lt;/select&gt;
+    &lt;label&gt;Select field
+        &lt;select&gt;
+            &lt;option&gt;Option 01&lt;/option&gt;
+            &lt;option&gt;Option 02&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-&lt;label&gt;Disabled select field&lt;/label&gt;
-&lt;select disabled&gt;
-&lt;option&gt;Option 01&lt;/option&gt;
-&lt;option&gt;Option 02&lt;/option&gt;
-&lt;/select&gt;
+    &lt;label&gt;Disabled select field
+        &lt;select disabled&gt;
+            &lt;option&gt;Option 01&lt;/option&gt;
+            &lt;option&gt;Option 02&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -912,37 +977,39 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Multiple select field</label>
-                        <select multiple size="5">
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
-                            <option>Option 6</option>
-                            <option>Option 7</option>
-                            <option>Option 8</option>
-                            <option>Option 9</option>
-                            <option>Option 10</option>
-                        </select>
+                        <label>Multiple select field
+                            <select multiple size="5">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                                <option>Option 6</option>
+                                <option>Option 7</option>
+                                <option>Option 8</option>
+                                <option>Option 9</option>
+                                <option>Option 10</option>
+                            </select>
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Multiple select field&lt;/label&gt;
-&lt;select multiple size="5"&gt;
-&lt;option&gt;Option 1&lt;/option&gt;
-&lt;option&gt;Option 2&lt;/option&gt;
-&lt;option&gt;Option 3&lt;/option&gt;
-&lt;option&gt;Option 4&lt;/option&gt;
-&lt;option&gt;Option 5&lt;/option&gt;
-&lt;option&gt;Option 6&lt;/option&gt;
-&lt;option&gt;Option 7&lt;/option&gt;
-&lt;option&gt;Option 8&lt;/option&gt;
-&lt;option&gt;Option 9&lt;/option&gt;
-&lt;option&gt;Option 10&lt;/option&gt;
-&lt;/select&gt;
+    &lt;label&gt;Multiple select field
+        &lt;select multiple size="5"&gt;
+            &lt;option&gt;Option 1&lt;/option&gt;
+            &lt;option&gt;Option 2&lt;/option&gt;
+            &lt;option&gt;Option 3&lt;/option&gt;
+            &lt;option&gt;Option 4&lt;/option&gt;
+            &lt;option&gt;Option 5&lt;/option&gt;
+            &lt;option&gt;Option 6&lt;/option&gt;
+            &lt;option&gt;Option 7&lt;/option&gt;
+            &lt;option&gt;Option 8&lt;/option&gt;
+            &lt;option&gt;Option 9&lt;/option&gt;
+            &lt;option&gt;Option 10&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
@@ -1211,9 +1278,10 @@ p q r s t u v w x y z { | } ~
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
-                        <label>Range input</label>
-                        <input type="range" id="range" value="0" min="0" max="100">
-                        <output for="range">0</output>
+                        <label>Range input
+                            <input type="range" id="range" value="0" min="0" max="100">
+                            <output for="range">0</output>
+                        </label>
                         <script>
                             if (document.querySelector) {
                                 document.querySelector('#range').onchange = function(e) {
@@ -1223,72 +1291,31 @@ p q r s t u v w x y z { | } ~
                         </script>
                     </div>
                     <div>
-                        <label>Disabled range input</label>
-                        <input type="range" disabled>
-                    </div>
-                    <div>
-                        <label>Readonly range input</label>
-                        <input type="range" readonly>
-                    </div>
-                    <div>
-                        <label>Range input with datalist</label>
-                        <input id="number_input" type="range" value="0" min="0" max="100" list="number" />
-                        <output for="number_input">0</output>
-                        <datalist id="number">
-                            <option>25</option>
-                            <option>50</option>
-                            <option>75</option>
-                        </datalist>
-                        <script>
-                        if (document.querySelector) {
-                            document.querySelector('#number_input').onchange = function(e) {
-                                e.target.nextElementSibling.innerText = e.target.value;
-                            }
-                        }
-                        </script>
+                        <label>Disabled range input
+                            <input type="range" disabled>
+                        </label>
                     </div>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
 &lt;div&gt;
-&lt;label&gt;Range input&lt;/label&gt;
-&lt;input type="range" id="range" value="0" min="0" max="100"&gt;
-&lt;output for="range"&gt;0&lt;/output&gt;
-&lt;script&gt;
-    if (document.querySelector) {
-        document.querySelector('#range').onchange = function(e) {
-            e.target.nextElementSibling.innerText = e.target.value;
+    &lt;label&gt;Range input
+        &lt;input type="range" id="range" value="0" min="0" max="100"&gt;
+        &lt;output for="range"&gt;0&lt;/output&gt;
+    &lt;/label&gt;
+    &lt;script&gt;
+        if (document.querySelector) {
+            document.querySelector('#range').onchange = function(e) {
+                e.target.nextElementSibling.innerText = e.target.value;
+            }
         }
-    }
-&lt;/script&gt;
+    &lt;/script&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-&lt;label&gt;Disabled range input&lt;/label&gt;
-&lt;input type="range" disabled&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;label&gt;Readonly range input&lt;/label&gt;
-&lt;input type="range" readonly&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;label&gt;Range input with datalist&lt;/label&gt;
-&lt;input id="number_input" type="range" value="0" min="0" max="100" list="number" /&gt;
-&lt;output for="number_input"&gt;0&lt;/output&gt;
-&lt;datalist id="number"&gt;
-&lt;option&gt;25&lt;/option&gt;
-&lt;option&gt;50&lt;/option&gt;
-&lt;option&gt;75&lt;/option&gt;
-&lt;/datalist&gt;
-&lt;script&gt;
-    if (document.querySelector) {
-    document.querySelector('#number_input').onchange = function(e) {
-    e.target.nextElementSibling.innerText = e.target.value;
-    }
-    }
-&lt;/script&gt;
+    &lt;label&gt;Disabled range input
+        &lt;input type="range" disabled&gt;
+    &lt;/label&gt;
 &lt;/div&gt;
                     </textarea>
                 </div>
