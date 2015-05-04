@@ -410,6 +410,10 @@
         @include editorial-height('bigtalkshort');
     }
 
+    &.content-editorial-short, &.v-tall {
+        @include editorial-height('tall');
+    }
+
     &.content-editorial-short, &.v-short {
         @include editorial-height('short');
     }
@@ -538,25 +542,27 @@
 
 //Block specific variants of content editorial compontent
 .v-zip-search {
-    .editorial-headline {
-        @include cg-2of3(false,false);
-        font-size: $font-size-extrahuger*1.4;
-    }
-
-    .editorial-subhead {
-        @include cg-2of3(false, false);
-        font-size: $font-size-huge*1.4;
-    }
+    padding: 3em 0;
+    @include editorial-height('bigtalk');
 
     &.o-solar-landing1 {
         @include editorial-text-color('dark');
+
+        .editorial-headline {
+            @include cg-2of3(false,false);
+        }
+
+        .editorial-subhead {
+            font-size: $font-size-huge*1.4;
+            @include cg-2of3(false, false);
+        }
     }
 
     &.o-solar-landing2 {
         @include editorial-text-color('dark');
 
         .editorial-headline {
-            font-size: $font-size-extrahuger;
+            font-size: $font-size-huger*1.4;
             @include cg-1of2(false,false);
 
             &:before{

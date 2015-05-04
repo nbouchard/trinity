@@ -7,59 +7,8 @@ tpl:
   desc: Page Desc
   title: Website Page
 ---
+{{> cb_shopping_header}}
 
-<div class="shop-header">
-    <nav class="filter-nav">
-        Compare <div class="filter-stack filter-customer-type">
-                    <div class="filter-selector">
-                        <span class="filter-select-option"><i class="icon fa fa-home"></i> Residential</span>
-                        <i class="icon fa fa-caret-down"></i>
-                    </div>
-                    <label class="filter-label">Building Type</label>
-                </div>
-                <div class="filter-stack filter-energy-type">
-                    <div class="filter-selector">
-                        <span class="filter-select-option"><i class="icon fa fa-lightbulb-o"></i> Electricity</span>
-                        <i class="icon fa fa-caret-down"></i>
-                    </div>
-                    <label class="filter-label">Energy Type</label>
-                </div>
-                Rates in
-                <div class="filter-stack filter-location">
-                    <div class="filter-input">
-                        <input name="filter-location" placeholder="Your Zip Code" value="94117">
-                        <span class="filter-preview">San Francisco, CA</span>
-                    </div>
-                    <label class="filter-label" for="filter-location">Your Location</label>
-                </div>
-                for
-                <div class="filter-stack filter-utility">
-                    <div class="filter-selector">
-                        <span class="filter-select-option">
-                            <span class="filter-select-image utility-centerpoint-energy-tx"></span>
-                        </span>
-                        <i class="icon fa fa-caret-down"></i>
-                    </div>
-                    <label class="filter-label" for="filter-utility">Your Utility</label>
-                </div>
-    </nav>
-    <nav class="filter-nav">
-        Rates and Cost based on
-                <div class="filter-stack filter-location">
-                    <div class="filter-input">
-                        <input name="filter-location" placeholder="Your Monthly Usage" value="1000">
-                        <span class="filter-units">kWh/month</span>
-                    </div>
-                    <label class="filter-label" for="filter-location">Your Monthly Usage</label>
-                </div> at the Price to Compare rate of <div class="filter-stack filter-location">
-                    <div class="filter-input">
-                        <input name="filter-location" placeholder="Your Rate" value="7.521">
-                        <span class="filter-units">¢/kWh</span>
-                    </div>
-                    <label class="filter-label" for="filter-location">Price to Compare</label>
-                </div>
-    </nav>
-</div>
 <div class="shop-body">
     <div class="top-picks">
         <ul class="plan-list">
