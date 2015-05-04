@@ -1,130 +1,81 @@
-<div class="ceux-all-colors">
-<a class="anchor" id="colors"></a>
-<section class="ceux-colors ceux-section">
-    <h1 class="ceux-heading">Colors</h1>
-    <div class="ceux-subsection">
-        <p>Our color library is made up of eight vibrant hues and one cool neutral. Three core brand colors (based on Green, Blue, and Orange) comprise our brand identity, while the remaining five colors (Red, Yellow, Purple, Olive, and Magenta) support the palette in certain unique cases, as well as charting or other similarly complex applications.</p>
-    </div>
-    <div class="ceux-subsection">
-        <h2 class="ceux-heading">Color Swatches</h2>
-        <div class="ceux-color-grid">
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-green-shamrock">
-                    <dt class="ceux-color-name">Shamrock</dt>
-                    <dd class="ceux-color-value">#34ba8c</dd>
-                    <dd class="ceux-color-variable">$color-green-shamrock</dd>
-                </dl>
-            </div>
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-green-jewel">
-                    <dt class="ceux-color-name">Jewel</dt>
-                    <dd class="ceux-color-value">#146e50</dd>
-                    <dd class="ceux-color-variable">$color-green-jewel</dd>
-                </dl>
-            </div>
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-green-cruise">
-                    <dt class="ceux-color-name">Cruise</dt>
-                    <dd class="ceux-color-value">#b7dfcc</dd>
-                    <dd class="ceux-color-variable">$color-green-cruise</dd>
-                </dl>
-            </div>
+<div class="content-editorial">
+    <a class="anchor" id="colors"></a>
+    <div class="content-editorial-container">
+        <h1 class="ceux-heading">Colors</h1>
+        <div class="ceux-subsection">
+            <p>Our color library is made up of eight vibrant hues and one cool neutral. Three core brand colors (based on Green, Blue, and Orange) comprise our brand identity, while the remaining five colors (Red, Yellow, Purple, Olive, and Magenta) support the palette in certain unique cases, as well as charting or other similarly complex applications.</p>
         </div>
-        <div class="ceux-color-grid">
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-blue-curious">
-                    <dt class="ceux-color-name">Curious Blue</dt>
-                    <dd class="ceux-color-value">#328fc9</dd>
-                    <dd class="ceux-color-variable">$color-blue-curious</dd>
-                </dl>
+        <div class="ceux-subsection">
+            <h2 class="ceux-heading">Color Swatches</h2>
+
+            <h3 class="ceux-heading">Primary Colors</h3>
+            <div class="ceux-color-grid">
+                <h4 class="ceux-heading">Greens</h4>
+                {{#each color.green}}
+                    {{> cmp_color_swatch}}
+                {{/each}}
             </div>
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-blue-bahama">
-                    <dt class="ceux-color-name">Bahama Blue</dt>
-                    <dd class="ceux-color-value">#246289</dd>
-                    <dd class="ceux-color-variable">$color-blue-bahama</dd>
-                </dl>
+
+            <h4 class="ceux-heading">Blues</h4>
+            <div class="ceux-color-grid">
+                {{#each color.blue}}
+                    {{> cmp_color_swatch}}
+                {{/each}}
             </div>
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-blue-perano">
-                    <dt class="ceux-color-name">Perano</dt>
-                    <dd class="ceux-color-value">#adc7e6</dd>
-                    <dd class="ceux-color-variable">$color-blue-perano</dd>
-                </dl>
+
+            <h4 class="ceux-heading">Oranges</h4>
+            <div class="ceux-color-grid">
+                {{#each color.orange}}
+                    {{> cmp_color_swatch}}
+                {{/each}}
             </div>
-        </div>
-        <div class="ceux-color-grid">
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-orange-sun">
-                    <dt class="ceux-color-name">Sun</dt>
-                    <dd class="ceux-color-value">#ee8733</dd>
-                    <dd class="ceux-color-variable">$color-orange-sun</dd>
-                </dl>
+
+            <h4 class="ceux-heading">Grays</h4>
+            <div class="ceux-color-grid">
+                {{#each color.gray}}
+                    {{> cmp_color_swatch}}
+                {{/each}}
             </div>
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-orange-fiery">
-                    <dt class="ceux-color-name">Fiery Orange</dt>
-                    <dd class="ceux-color-value">#ae6328</dd>
-                    <dd class="ceux-color-variable">$color-orange-fiery</dd>
-                </dl>
+
+            <h3 class="ceux-heading">Supplementary Colors</h3>
+            <h4 class="ceux-heading">Reds</h4>
+            <div class="ceux-color-grid">
+                {{#each color.red}}
+                    {{> cmp_color_swatch}}
+                {{/each}}
             </div>
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-orange-apricot">
-                    <dt class="ceux-color-name">Apricot</dt>
-                    <dd class="ceux-color-value">#f9caa3</dd>
-                    <dd class="ceux-color-variable">$color-orange-apricot</dd>
-                </dl>
+
+            <h4 class="ceux-heading">Yellows</h4>
+            <div class="ceux-color-grid">
+                {{#each color.yellow}}
+                    {{> cmp_color_swatch}}
+                {{/each}}
             </div>
-        </div>
-        <div class="ceux-color-grid">
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-gray-ghost">
-                    <dt class="ceux-color-name">Ghost</dt>
-                    <dd class="ceux-color-value">#bcbdc0</dd>
-                    <dd class="ceux-color-variable">$color-gray-ghost</dd>
-                </dl>
+
+            <h4 class="ceux-heading">Purples</h4>
+            <div class="ceux-color-grid">
+                {{#each color.purple}}
+                    {{> cmp_color_swatch}}
+                {{/each}}
             </div>
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-gray-charcoal">
-                    <dt class="ceux-color-name">Charcoal</dt>
-                    <dd class="ceux-color-value">#444444</dd>
-                    <dd class="ceux-color-variable">$color-gray-charcoal</dd>
-                </dl>
+
+            <h4 class="ceux-heading">Olive</h4>
+            <div class="ceux-color-grid">
+                {{#each color.olive}}
+                    {{> cmp_color_swatch}}
+                {{/each}}
             </div>
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-gray-chateau">
-                    <dt class="ceux-color-name">Gray Chateau</dt>
-                    <dd class="ceux-color-value">#939598</dd>
-                    <dd class="ceux-color-variable">$color-gray-chateau</dd>
-                </dl>
-            </div>
-        </div>
-        <div class="ceux-color-grid">
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-white-pure">
-                    <dt class="ceux-color-name">Pure White</dt>
-                    <dd class="ceux-color-value">#ffffff</dd>
-                    <dd class="ceux-color-variable">$color-white-pure</dd>
-                </dl>
-            </div>
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-white-lilac">
-                    <dt class="ceux-color-name">White Lilac</dt>
-                    <dd class="ceux-color-value">#e7e7e8</dd>
-                    <dd class="ceux-color-variable">$color-white-lilac</dd>
-                </dl>
-            </div>
-            <div class="ceux-color">
-                <dl class="ceux-color-swatch swatch-white-smoke">
-                    <dt class="ceux-color-name">White Smoke</dt>
-                    <dd class="ceux-color-value">#efefef</dd>
-                    <dd class="ceux-color-variable">$color-white-smoke</dd>
-                </dl>
+
+            <h4 class="ceux-heading">Magenta</h4>
+            <div class="ceux-color-grid">
+                {{#each color.magenta}}
+                    {{> cmp_color_swatch}}
+                {{/each}}
             </div>
         </div>
     </div>
-</section>
 </div>
+
 <div class="content-editorial content-editorial-bg-light">
 <a class="anchor" id="color-usage"></a>
     <div class="content-editorial-container">

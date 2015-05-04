@@ -187,7 +187,7 @@ label {
     vertical-align: -0.15em;
     border-radius: 1em;
     border: 0.2em solid $color-white-pure;
-    box-shadow: 0 0 0 0.15em $color-gray-ghost;
+    box-shadow: 0 0 0 0.15em $color-gray-geyser;
     margin: 0 0.75em 0 0;
     transition: 0.5s ease all;
 }
@@ -198,11 +198,20 @@ label {
 
 [type="radio"]:disabled + .ce-label-text:before {
     border: none;
-    background-color: $color-gray-ghost;
+    background-color: $color-gray-geyser;
 }
 
 [type="radio"]:focus + .ce-label-text {
     outline: 1px dotted $color-green-shamrock;
+}
+
+//color variations
+[type="radio"].dark + .ce-label-text:before {
+    box-shadow: 0 0 0 0.15em $color-gray-oslo;
+}
+
+[type="radio"].dark:disabled + .ce-label-text:before {
+    background-color: $color-gray-oslo;
 }
 
 //Checkboxes
@@ -222,7 +231,7 @@ label {
     height: 1em;
     vertical-align: -0.15em;
     border: 0.2em solid $color-white-pure;
-    box-shadow: 0 0 0 0.15em $color-gray-ghost;
+    box-shadow: 0 0 0 0.15em $color-gray-geyser;
     margin: 0 0.75em 0 0;
     transition: 0.5s ease all;
 }
@@ -233,9 +242,18 @@ label {
 
 [type="checkbox"]:disabled + .ce-label-text:before {
     border: none;
-    background-color: $color-gray-ghost;
+    background-color: $color-gray-geyser;
 }
 
 [type="checkbox"]:focus + .ce-label-text {
     outline: 1px dotted $color-green-shamrock;
+}
+
+//color variations
+[type="checkbox"].dark + .ce-label-text:before {
+    box-shadow: 0 0 0 0.15em $color-gray-oslo;
+}
+
+[type="checkbox"].dark:disabled + .ce-label-text:before {
+    background-color: $color-gray-oslo;
 }
