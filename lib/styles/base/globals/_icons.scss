@@ -175,11 +175,11 @@ $c-icon-sun: '\e02d';
     content: '\e022';
 }
 
-.c-icon-house:before {
+.c-icon-residential:before {
     content: '\e023';
 }
 
-.c-icon-leaf:before {
+.c-icon-green:before {
     content: '\e024';
 }
 
@@ -187,7 +187,7 @@ $c-icon-sun: '\e02d';
     content: '\e025';
 }
 
-.c-icon-office:before {
+.c-icon-commercial:before {
     content: '\e026';
 }
 
@@ -215,7 +215,7 @@ $c-icon-sun: '\e02d';
     content: '\e02c';
 }
 
-.c-icon-sun:before {
+.c-icon-solar:before {
     content: $c-icon-sun;
 }
 
@@ -225,4 +225,8 @@ $c-icon-sun: '\e02d';
 
 .c-icon-wind-power:before {
     content: '\e02f';
+}
+
+.c-icon-heating-oil:before {
+  content: '\e030';
 }

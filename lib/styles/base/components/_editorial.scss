@@ -748,3 +748,13 @@
         }
     }
 }
+
+.v-shopping-filters {
+    padding: 40px 0px;
+    margin-bottom: 40px;
+    @include editorial-height('short');
+
+    .editorial-container {
+        padding: 0px;
+    }
+}

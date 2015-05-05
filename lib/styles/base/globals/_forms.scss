@@ -255,6 +255,7 @@ label {
     box-shadow: 0 0 0 0.15em $color-gray-geyser;
     margin: 0 0.75em 0 0;
     transition: 0.5s ease all;
+    background-color: $color-white-pure;
 }
 
 [type="checkbox"]:checked + .ce-label-text:before {
@@ -298,10 +299,7 @@ label {
 input[type=range] {
     -webkit-appearance: none; // needed to remove default webkit styles
     border: none;
-
-    &:disabled {
-        background: none;
-    }
+    background: none;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
