@@ -6,6 +6,10 @@
 .list-unstyled {
     list-style: none;
     padding: 0;
+
+    .icon:before {
+        margin-right: 0.625em;
+    }
 }
 
 // Structure
