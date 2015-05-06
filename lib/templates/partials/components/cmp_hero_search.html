@@ -7,5 +7,8 @@
             <h2 class="editorial-subhead">{{editorial_subhead}}</h2>
         {{/if}}
         {{> cmp_zip_search}}
+        {{#if editorial_note}}
+            <small class="content-editorial-note">{{editorial_note}}</a></small>
+        {{/if}}
     </div>
 </div>

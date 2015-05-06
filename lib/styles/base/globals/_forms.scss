@@ -24,10 +24,11 @@ input,
 textarea,
 select {
     @include box-sizing(border-box);
+    margin: 0 0.5em;
     padding: 0.625em;
-    border: 1px solid $color-gray-ghost;
+    border: 0.1em solid $color-gray-ghost;
     background: $color-white-pure;
-    color: $color-gray-chateau;
+    color: $color-gray-charcoal;
 
     @include placeholder {
         color: $color-white-lilac;
@@ -36,13 +37,27 @@ select {
 
     &:focus {
         outline: none;
-        border: 1px solid $color-green-shamrock;
+        border: 0.1em solid $color-green-shamrock;
         color: $color-gray-charcoal;
 
         @include placeholder {
             color: $color-gray-ghost;
             font-style: italic;
         }
+    }
+
+    &:disabled {
+        color: $color-gray-chateau;
+        background-color: $color-gray-geyser;
+    }
+
+    &:read-only {
+        color: $color-gray-chateau;
+        background-color: $color-white-lily;
+    }
+
+    &:required {
+        border: 0.1em solid $color-green-shamrock;
     }
 }
 
@@ -125,11 +140,17 @@ textarea {
         width: 100%;
         max-width: 6em;
     }
+
+    &.input-supershort {
+        width: 100%;
+        max-width: 4em;
+    }
 }
 
 label {
     padding: 5px;
     display: inline-block;
+    vertical-align: middle;
 
     &.label-superwide {
         width: 100%;
@@ -234,6 +255,7 @@ label {
     box-shadow: 0 0 0 0.15em $color-gray-geyser;
     margin: 0 0.75em 0 0;
     transition: 0.5s ease all;
+    background-color: $color-white-pure;
 }
 
 [type="checkbox"]:checked + .ce-label-text:before {
@@ -256,4 +278,81 @@ label {
 
 [type="checkbox"].dark:disabled + .ce-label-text:before {
     background-color: $color-gray-oslo;
+}
+
+// Range slider
+@mixin range-slider-track($color: $color-gray-geyser, $height: 3px, $radius: 2px) {
+    background: $color-gray-geyser;
+    height: $height;
+    border-radius: $radius;
+    cursor: pointer;
+}
+
+@mixin range-slider-thumb($color: $color-green-shamrock, $diameter: 11px) {
+    height: $diameter;
+    width: $diameter;
+    border-radius: 50%;
+    background: $color;
+    cursor: pointer;
+}
+
+input[type=range] {
+    -webkit-appearance: none; // needed to remove default webkit styles
+    border: none;
+    background: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    @include range-slider-track();
+}
+
+input[type=range]::-webkit-slider-thumb {
+    @include range-slider-thumb(); // needed to remove default webkit styles
+    -webkit-appearance: none;
+    margin-top: -4px;
+}
+
+input[type=range]:disabled::-webkit-slider-thumb {
+    background: $color-gray-chateau;
+}
+
+input[type=range]::-moz-range-track {
+    @include range-slider-track();
+}
+
+input[type=range]::-moz-range-thumb {
+    @include range-slider-thumb();
+    border: none;
+    box-sizing: border-box;
+}
+
+input[type=range]:disabled::-moz-range-thumb {
+    background: $color-gray-chateau;
+}
+
+input[type=range]::-ms-track {
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-width: 6px 0; // leaves room for the larger thumb to overflow with a transparent border
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    @include range-slider-track();
+    height: auto;
+}
+
+input[type=range]::-ms-fill-upper {
+    @include range-slider-track();
+    height: auto;
+}
+
+input[type=range]::-ms-thumb {
+    @include range-slider-thumb();
+}
+
+input[type=range]:disabled::-ms-thumb {
+    background: $color-gray-chateau;
 }

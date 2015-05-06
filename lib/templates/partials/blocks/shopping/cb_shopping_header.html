@@ -1,0 +1,160 @@
+<div class="ce-editorial v-shopping-filters" style="background: url('images/photography/City_Highway.jpg') no-repeat; background-size: cover;   background-position-y: -250px;">
+    <div class="editorial-container ce-shopping-filters">
+        <section class="filter-section filter-section-main">
+            <div class="cg-row">
+                <div class="filter-location cg-1of6">
+                    <h4>Location</h4>
+                    <input class="filter-input" name="filter-location" placeholder="Zip" value="94117">
+                    <span class="filter-preview">San Francisco, CA</span>
+                </div>
+                <div class="filter-utility cg-1of6">
+                    <h4>Utility</h4>
+                    <span class="filter-selected-utility supplier-logo supplier-txu-energy">TXU Energy</span>
+                    <button class="btn-dark change-utility" type="button">Change Utility</button>
+                </div>
+
+                <div class="filter-energy-type cg-1of3">
+                    <h4>Energy Type</h4>
+                    <label class="ce-label">
+                        <i class="icon c-icon-electricity">Electricity</i>
+                        <input class="radio" type="radio" name="energy-type" value="electricity" checked>
+                        <span class="ce-label-text"></span>
+                    </label>
+                    <label class="ce-label">
+                        <i class="icon c-icon-nat-gas">Natural Gas</i>
+                        <input class="radio" type="radio" name="energy-type" value="natural-gas">
+                        <span class="ce-label-text"></span>
+                    </label>
+                    <label class="ce-label disabled">
+                        <i class="icon c-icon-heating-oil">Heating Oil</i>
+                        <input class="radio" type="radio" name="energy-type" value="heating-oil" disabled>
+                        <span class="ce-label-text"></span>
+                    </label>
+                    <label class="ce-label">
+                        <i class="icon c-icon-solar">Solar</i>
+                        <input class="radio" type="radio" name="energy-type" value="solar">
+                        <span class="ce-label-text"></span>
+                    </label>
+                </div>
+
+                <div class="filter-building-type cg-1of3">
+                    <h4>Business Type</h4>
+                    <label class="ce-label">
+                        <i class="icon c-icon-residential">Residential</i>
+                        <input class="radio" type="radio" name="building-type" value="residential" checked>
+                        <span class="ce-label-text"></span>
+                    </label>
+                    <label class="ce-label">
+                        <i class="icon c-icon-smb">Small Business</i>
+                        <input class="radio" type="radio" name="building-type" value="small-business">
+                        <span class="ce-label-text"></span>
+                    </label>
+                    <label class="ce-label disabled">
+                        <i class="icon c-icon-commercial">Commercial</i>
+                        <input class="radio" type="radio" name="building-type" value="commercial" disabled>
+                        <span class="ce-label-text"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cg-row">
+                <div class="filter-compare-rate cg-1of3">
+                    <label class="ce-label">
+                        <span>Compare to a rate of <input class="textbox" type="text" value="0"> &cent; per month</span>
+                        <input class="range" type="range" id="range" value="0" min="0" max="100">
+                    </label>
+                </div>
+
+                <div class="filter-usage cg-1of3">
+                    <label class="ce-label">
+                        <span>I use about <input class="textbox" type="text" value="0"> kWh per month</span>
+                        <input class="range" type="range" id="range" value="0" min="0" max="100">
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-section filter-section-refine open">
+            <div class="filter-toggle-bar">
+                <div class="show-more">
+                    Refine my search <i class="icon fa fa-caret-down"></i>
+                </div>
+                <div class="show-less">
+                    Hide these options <i class="icon fa fa-caret-up"></i>
+                </div>
+            </div>
+
+            <div class="filter-toggle-content cg-row">
+                <div class="filter-plan-type cg-1of6">
+                    <h4>Plan Type</h4>
+                    <label class="ce-label">
+                        <input type="checkbox" name="plan-type" value="fixed-rate" checked>
+                        <span class="ce-label-text">Fixed Rate</span>
+                    </label>
+                    <label class="ce-label">
+                        <input type="checkbox" name="plan-type" value="variable-rate">
+                        <span class="ce-label-text">Variable Rate</span>
+                    </label>
+                </div>
+
+                <div class="filter-contract-term cg-1of3">
+                    <h4>Contract Term</h4>
+                    <div class="term-lengths">
+                        <label class="ce-label">
+                            <input type="checkbox" name="plan-type" value="1-month" checked>
+                            <span class="ce-label-text">1 Month</span>
+                        </label>
+                        <label class="ce-label">
+                            <input type="checkbox" name="plan-type" value="6-month">
+                            <span class="ce-label-text">6 Month</span>
+                        </label>
+                        <label class="ce-label">
+                            <input type="checkbox" name="plan-type" value="12-month">
+                            <span class="ce-label-text">12 Month</span>
+                        </label>
+                        <label class="ce-label">
+                            <input type="checkbox" name="plan-type" value="18-month">
+                            <span class="ce-label-text">18 Month</span>
+                        </label>
+                        <label class="ce-label">
+                            <input type="checkbox" name="plan-type" value="24-month" >
+                            <span class="ce-label-text">24 Month</span>
+                        </label>
+                        <label class="ce-label">
+                            <input type="checkbox" name="plan-type" value="36-month">
+                            <span class="ce-label-text">36 Month</span>
+                        </label>
+                        <label class="ce-label">
+                            <input type="checkbox" name="plan-type" value="ends-1129">
+                            <span class="ce-label-text">Ends 11/29</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-cost-green cg-1of4">
+                    <label class="ce-label">
+                        <h4 class="ce-label-text">Cost per month</h4>
+                        <input class="range" type="range" id="range" value="0" min="0" max="100">
+                    </label>
+
+                    <label class="ce-label">
+                        <h4 class="ce-label-text">Percent Green</h4>
+                        <input class="range" type="range" id="range" value="0" min="0" max="100">
+                    </label>
+                </div>
+
+                <div class="filter-rating cg-1of4">
+                    <label class="ce-label">
+                        <h4 class="ce-label-text">Rating</h4>
+                        {{> cmp_rating_widget}}
+                    </label>
+
+                    <label class="ce-label">
+                        <h4 class="ce-label-text">Suppliers</h4>
+                        <button class="filter-supplier btn-dark" type="button">Filter by Supplier</button>
+                    </label>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
