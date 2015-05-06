@@ -1,13 +1,12 @@
-@mixin unstyled-list(){
+// List styles
+.list-no-liststyle {
     list-style:  none;
+}
+
+.list-unstyled {
+    list-style: none;
     padding: 0;
 }
-
-// List styles
-.no-list-style {
-    @include unstyled-list;
-}
-
 
 // Structure
 .nav-list {

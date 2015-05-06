@@ -582,7 +582,8 @@
 
     .editorial-step {
         @include clearfix;
-        @include unstyled-list;
+        list-style: none;
+        padding: 0;
         font-size: $font-size-huger;
 
         li {
@@ -658,7 +659,7 @@
     .editorial-content {
         font-size: $font-size-larger;
 
-        .no-list-style {
+        .list-unstyled {
             margin: 0;
 
             li {
