@@ -108,12 +108,6 @@
         .filter-selected-utility {
             margin: 10px 0;
         }
-
-        .change-utility {
-            width: 135px;
-            font-size: $font-size-smaller;
-            height: auto;
-        }
     }
 
     .filter-energy-type,
@@ -274,8 +268,13 @@
         }
 
         .filter-supplier {
-            font-size: $font-size-smaller;
-            height: auto;
+            .ce-label {
+                margin: 0px;
+            }
+
+            .ce-label-text {
+                width: auto;
+            }
         }
     }
 }

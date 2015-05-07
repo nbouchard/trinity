@@ -10,7 +10,20 @@
                 <div class="filter-utility cg-1of6">
                     <h4>Utility</h4>
                     <span class="filter-selected-utility supplier-logo supplier-txu-energy">TXU Energy</span>
-                    <button class="btn-dark change-utility" type="button">Change Utility</button>
+                    <div ng-controller="DropdownCtrl">
+                        <div class="ce-dropdown">
+                            <div class="dropdown-value">Change Utility</div>
+                            <button class="dropdown-toggle icon c-icon-chevron-down" type="button"></button>
+                            <div class="dropdown-menu" role="menu">
+                                <ul class="dropdown-menu-list">
+                                    <li><a href="#" class="dropdown-menu-item">Utility 1</a></li>
+                                    <li><a href="#" class="dropdown-menu-item">Utility 2</a></li>
+                                    <li><a href="#" class="dropdown-menu-item">Utility 3</a></li>
+                                    <li><a href="#" class="dropdown-menu-item">Utility 4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="filter-energy-type cg-1of3">
@@ -151,7 +164,64 @@
 
                     <label class="ce-label">
                         <h4 class="ce-label-text">Suppliers</h4>
-                        <button class="filter-supplier btn-dark" type="button">Filter by Supplier</button>
+                        <!-- <button class=" btn-dark" type="button">Filter by Supplier</button> -->
+                        <div ng-controller="DropdownCtrl">
+                        <div class="ce-dropdown filter-supplier">
+                            <div class="dropdown-value">9 Selected</div>
+                            <button class="dropdown-toggle icon c-icon-chevron-down" type="button"></button>
+                            <div class="dropdown-menu checkbox-menu" role="menu">
+                                <div class="menu-list">
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier1">
+                                        <span class="ce-label-text">Supplier 1</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier2">
+                                        <span class="ce-label-text">Supplier 2 long name here just for a test</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier3">
+                                        <span class="ce-label-text">Supplier 3</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier4">
+                                        <span class="ce-label-text">Supplier 4</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier5">
+                                        <span class="ce-label-text">Supplier 5</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier6">
+                                        <span class="ce-label-text">Supplier 6</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier7">
+                                        <span class="ce-label-text">Supplier 7</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier8">
+                                        <span class="ce-label-text">Supplier 8</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier9">
+                                        <span class="ce-label-text">Supplier 9</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier10">
+                                        <span class="ce-label-text">Supplier 10</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier11">
+                                        <span class="ce-label-text">Supplier 11</span>
+                                    </label>
+                                    <label class="ce-label">
+                                        <input class="dark" type="checkbox" name="suppliers" value="supplier12">
+                                        <span class="ce-label-text">Supplier 12</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </label>
                 </div>
             </div>
