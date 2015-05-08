@@ -356,3 +356,93 @@ input[type=range]::-ms-thumb {
 input[type=range]:disabled::-ms-thumb {
     background: $color-gray-chateau;
 }
+
+// Custom dropdown menu -- use with Angular UI
+.ce-dropdown {
+    @include box-sizing(border-box);
+    border: 1px solid $color-gray-ghost;
+    background: $color-white-pure;
+    color: $color-gray-charcoal;
+    position: relative;
+    height: 2.5em;
+
+    .dropdown-value {
+        box-sizing: border-box;
+        padding: 0.5em 3em 0.5em 0.5em;
+        height: 100%;
+    }
+
+    .dropdown-toggle {
+        @include ce-button('dark');
+        height: 2.5em;
+        width: 2.5em;
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        padding: 0.5em;
+
+        &:before {
+            font-size: $font-size-smaller;
+        }
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: -1px;
+        z-index: 1000;
+        border: 1px solid $color-gray-ghost;
+        background-color: $color-white-pure;
+        box-sizing: content-box;
+        min-width: 100%;
+
+        .dropdown-menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-menu-item {
+            padding: 0.5em 0.625em;
+            display: block;
+            text-decoration: none;
+            font-weight: $font-weight-body;
+
+            &:hover {
+                background-color: $color-white-lily;
+            }
+        }
+
+        &.checkbox-menu {
+            background-color: $color-gray-charcoal;
+            border: 1px solid $color-gray-charcoal;
+            top: 3.5em;
+            right: -1em;
+            width: 400%;
+            padding: 0.5em 1.5em;
+
+            &:before {
+                position: absolute;
+                top: -2em;
+                right: 1em;
+                border: solid transparent;
+                content: '';
+                height: 0;
+                width: 0;
+                border-color: rgba(0, 0, 0, 0);
+                border-bottom-color: $color-gray-charcoal;
+                border-width: 1em;
+            }
+
+            .menu-list {
+                @include prefixer(column-count, 3, webkit moz);
+                @include prefixer(column-gap, 1.5em, webkit moz);
+            }
+
+            .ce-label {
+                color: $color-white-pure;
+            }
+        }
+    }
+}
