@@ -442,6 +442,10 @@ input[type=range]:disabled::-ms-thumb {
 
             .ce-label {
                 color: $color-white-pure;
+
+                .ce-label-text {
+                    text-align: left;
+                }
             }
         }
     }
