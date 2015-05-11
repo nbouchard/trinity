@@ -325,22 +325,65 @@ p q r s t u v w x y z { | } ~
                 </div>
             </div>
 
-            <h4>Unordered List - no bullets</h4>
+            <h4>Style variants</h4>
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
-                    <ul class="no-list-style">
+                    <h5>List with no list style</h5>
+                    <ul class="list-no-liststyle">
                         <li>List Item 1</li>
                         <li>List Item 2</li>
-                        <li>List Item 3</li>
+                        <li>List Item 3
+                            <ul class="list-no-liststyle">
+                                <li>List Item 1</li>
+                                <li>List Item 2</li>
+                            </ul>
+                        </li>
                         <li>List Item 4</li>
                     </ul>
                 </div>
                 <div class="ceux-code cg-1of2">
                     <textarea class="code-sample html">
-&lt;ul class="no-list-style"&gt;
+&lt;ul class="list-no-liststyle"&gt;
     &lt;li&gt;List Item 1&lt;/li&gt;
     &lt;li&gt;List Item 2&lt;/li&gt;
-    &lt;li&gt;List Item 3&lt;/li&gt;
+    &lt;li&gt;List Item 3
+        &lt;ul class="list-no-liststyle"&gt;
+            &lt;li&gt;List Item 1&lt;/li&gt;
+            &lt;li&gt;List Item 2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;List Item 4&lt;/li&gt;
+&lt;/ul&gt;
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="ceux-example">
+                <div class="ceux-result cg-1of2">
+                    <h5>No list style and no padding/indentation</h5>
+                    <ul class="list-unstyled">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3
+                            <ul class="list-unstyled">
+                                <li>List Item 1</li>
+                                <li>List Item 2</li>
+                            </ul>
+                        </li>
+                        <li>List Item 4</li>
+                    </ul>
+                </div>
+                <div class="ceux-code cg-1of2">
+                    <textarea class="code-sample html">
+&lt;ul class="list-unstyled"&gt;
+    &lt;li&gt;List Item 1&lt;/li&gt;
+    &lt;li&gt;List Item 2&lt;/li&gt;
+    &lt;li&gt;List Item 3
+        &lt;ul class="list-unstyled"&gt;
+            &lt;li&gt;List Item 1&lt;/li&gt;
+            &lt;li&gt;List Item 2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
     &lt;li&gt;List Item 4&lt;/li&gt;
 &lt;/ul&gt;
                     </textarea>
@@ -1012,6 +1055,12 @@ TBD.
 
             <a class="anchor" id="ceux-elements-radio-checkboxes"></a>
             <h4 class="ceux-heading">Radio &amp; Checkboxes</h4>
+            <p>To use our custom styled radio and checkboxes, it is important to follow the correct formmating to ensure that the input elements are visible.</p>
+            <p>The standard usage pattern should be to have each input element and label text wrapped in a <code>label</code> tag. This removes the need to explicitly link the input with the label and ensures a large hit area. The label text itself should be wrapped with a tag with the class <code>ce-label-text</code> and directly follow the input element (it must be an ajacent sibling).</p>
+            <p><strong class="warning">Warning:</strong> A tag with the <code>ce-label-text</code> class is the key to the custom input element styling, and it <u>must</u> have the correct class and immediately follow the input element in order to work correctly. If there is no text label for the element or it needs to be placed somewhere else, the tag can be left empty, but it must be there and have the class for the custom input to appear.</p>
+            <p>It is possible to put the label text elsewhere (for instance if you need to put the radio elements and text in different table cells), but if the input is not within the label tag, you must make sure to add and id to the input and a matching <code>for</code> tag to the label to link the two.</p>
+            <p>If you want the label text to appear before the input element, you must still have the empty tag with the <code>ce-label-text</code> class after the input, but you can add another tag with the text before the input and style as necessary.</p>
+
             <div class="ceux-example">
                 <div class="ceux-result cg-1of2">
                     <div>
