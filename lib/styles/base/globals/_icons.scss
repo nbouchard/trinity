@@ -12,11 +12,11 @@
 
 @font-face {
     font-family: 'CE Icons';
-    src: url('/fonts/ce-icons.eot');
-    src: url('/fonts/ce-icons.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/ce-icons.woff') format('woff'),
-        url('/fonts/ce-icons.ttf') format('truetype'),
-        url('/fonts/ce-icons.svg#ce-icons') format('svg');
+    src: url('#{$ce-font-path}ce-icons.eot');
+    src: url('#{$ce-font-path}ce-icons.eot?#iefix') format('embedded-opentype'),
+        url('#{$ce-font-path}ce-icons.woff') format('woff'),
+        url('#{$ce-font-path}ce-icons.ttf') format('truetype'),
+        url('#{$ce-font-path}ce-icons.svg#ce-icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
