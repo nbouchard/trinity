@@ -92,7 +92,7 @@ module.exports = function(grunt) {
             'newer:sprite:utilities',
             'sass',
             'autoprefixer',
-            'cssmin:dist',
+            'cssmin',
         ]
     );
 
