@@ -1,5 +1,103 @@
 // Checkout User Interface
-//
+
+
+//.ce-editorial variant class for Checkout page. 
+// TODO (astillwell): Move this to ChooseUX and respective styles.
+// TODO (astillwell): Update .content-editorial to .ce-editorial with updated styles
+.content-editorial {
+    &.v-checkout {
+        min-height: 14em;
+        z-index: -1;
+        .content-editorial-container {
+            padding: 9em 0 0;
+        }
+        .content-editorial-headline {
+            @include cg-7of8(false, false);
+            padding: 0 0 0 1em;
+        }
+    }
+}
+.ce-form-group {
+    //this is a self contained form element and it's label.
+    input[type='number'] {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    @include cg-row(true, true);
+    font-size: 1.4em;
+    .a-label {
+        @include cg-1of4(true, false);
+        text-align: right;
+        padding:0 .75em 0 0;
+        line-height: 2em;
+    }
+    .a-space {
+        @include cg-1of4(true, false);
+        padding:0 .75em 0 0;
+    }
+    .a-content  {
+        @include cg-3of4(true, false);
+        padding: 0;
+        .input {
+            width: 100%;
+            height:2em;
+            border-left:.3em solid;
+
+            &.ng-dirty.ng-invalid {
+                border-color: #d9534f;
+            }
+            &.ng-valid {
+                border-color: $color-green-shamrock;
+            }
+
+        }
+        &.with-button {
+            .input {
+                @include cg-7of8(false, true);
+            }
+            .btn {
+                @include cg-1of8(false, false);
+                height: 2em;
+            }
+        }
+        .a-text {
+            width:100%;
+        }
+    } 
+    .a-help {
+        font-size: $font-size-smaller;
+        color: #d9534f;
+    }
+    &.v-auth-forms {
+        @include cg-row(false, false);
+        .a-label {
+            @include cg-1of4(false, false);
+        }
+        .a-content {
+            @include cg-3of4(false, false);
+            font-size: 1.1em;
+            font-weight: $font-weight-headline;
+        }        
+    }
+    &.v-birthday {
+        .a-content {
+            .input {
+                margin-bottom: 1em;
+            }
+        }
+    }
+    &.v-radio {
+        .a-label {
+            line-height: 1.3em;
+        }
+    }   
+    &.v-checkbox {
+        .a-label {
+            line-height: 1.3em;
+        }
+    }    
+}
+
 // .checkout            - Encapsulates complete Checkout experience
 // .checkout-forms      - Encapsulates the Checkout forms.
 // .checkout-cart       - Encapsulates the Checkout Shopping Cart (plan cards)
@@ -15,7 +113,7 @@
     }
 
     @include breakpoint($mq-md-min) {
-        @include cg-1of2(true, true, true);
+        @include cg-5of8(true, true, true);
     }
 }
 
@@ -26,30 +124,49 @@
 //     .step-button     - Defines the various types of Checkout steps
 //
 // No styleguide reference
-.checkout-steps {
+.ce-checkout-steps {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: $font-size-smaller;
+    font-size: $font-size-huge;
+    display: inline-block;
+    width: 100%;
 
     .checkout-step {
+        @include cg-row(false, true);        
         display: inline-block;
         float: left;
-        padding: $grid-gutter-width;
-        padding-left: 0;
+        padding: 0;
         list-style: none;
     }
 
-    .step-button {
-        @include link-as-button();
-        @include ce-button('primary');
+    .step-group {
+        @include cg-row(false, true);
+        display: none;
+        
+        .label {
+            @include cg-1of4(false, true);
+            text-align: right;
+            line-height: 1.7em;
+        }
+        .step-title {
+            @include cg-1of2(false, false);
+            line-height: 1.7em;
+        }
+        .step-progress {
+            @include cg-1of4(false, true);
+            text-align: right;
+            font-size: $font-size-smaller;
+            line-height: 2;
+            font-weight: $font-weight-body;
+        }
 
         &.is-active {
-            @include ce-button('bright');
+            display: inline-block;
+            color: $color-gray-charcoal;
         }
 
         &.is-completed {
-            @include ce-button('dark');
         }
     }
 }
@@ -60,10 +177,8 @@
 //
 // No styleguide reference
 .checkout-section {
-    @include cg-row(false, false);
+    @include cg-row(false, true);
     clear: both;
-    padding-top: (4 * $grid-gutter-width);
-    padding-bottom: (4 * $grid-gutter-width);
 }
 
 // Checkout Group
@@ -72,27 +187,58 @@
 //
 // No styleguide reference
 .checkout-group {
-    @include cg-row(true, false);
-
-    .checkout-label-text {
-        @include cg-1of4();
+    @include cg-row(true, true);
+    font-size: 1.4em;
+    .checkout-label {
+        display: block;
     }
+    .checkout-label-text {
+        @include cg-1of4(true, false);
+        text-align: right;
+        padding:0 .75em 0 0;
+        line-height: 2em;
+        &.checkout-checkbox {
+            line-height: 1.5em;
+        }
+    }
+    .checkout-input-container {
+        @include cg-3of4(true, false);
+        padding: 0;
+        .checkout-input {
+            width: 100%;
+            height:2em;
+            border-left:.3em solid;
+            &.ng-dirty.ng-invalid {
+                border-color: #d9534f;
+            }
+            &.ng-valid {
+                border-color: $color-green-shamrock;
+            }
 
-    .checkout-input {
-        @include cg-3of4();
+        }
+        .checkout-text {
+            width:100%;
+        }
+    }
+    .checkout-help {
+        font-size: $font-size-smaller;
+        color: #d9534f;
     }
 }
-
 // Checkout Actions
 //
 // .checkout-actions      - Sets up the previous/next/finish buttons.
 //
 // No styleguide reference
 .checkout-actions {
-    position: relative;
+    @include cg-item(false, true);
+    margin-top:1em;
 
+    .checkout-space {
+        @include cg-1of4(false, true);
+    }
     .checkout-previous {
-        display: inline-block;
+        @include cg-1of4(false, true);
 
         .checkout-action {
             @include ce-button('dark');
@@ -100,11 +246,11 @@
     }
 
     .checkout-next {
-        display: inline-block;
-        float: right;
+        @include cg-1of2(false, true);
 
         .checkout-action {
             @include ce-button('primary');
+            float: right;
         }
     }
 
@@ -130,10 +276,18 @@
     }
 
     @include breakpoint($mq-md-min) {
-        @include cg-1of2(true, true, true);
+        @include cg-3of8(true, true, true);
+        margin-top: -6em;
     }
 
     .cart-header {
         @include cg-row(true, false);
+        background-color: $color-green-shamrock;
+        color: $color-white-pure;
+        font-size: 1.85em;
+        padding: .75em;
+        i {
+            margin-right: .35em;
+        }
     }
 }
