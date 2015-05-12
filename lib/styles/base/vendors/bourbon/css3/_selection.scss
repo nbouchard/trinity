@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /// Outputs the spec and prefixed versions of the `::selection` pseudo-element.
 ///
 /// @param {Bool} $current-selector [false]
@@ -20,7 +21,6 @@
 ///   .element::selection {
 ///     background-color: #ffbb52;
 ///   }
-
 @mixin selection($current-selector: false) {
   @if $current-selector {
     &::-moz-selection {
@@ -30,6 +30,7 @@
     &::selection {
       @content;
     }
+
   } @else {
     ::-moz-selection {
       @content;
