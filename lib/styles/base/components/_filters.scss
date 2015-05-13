@@ -40,39 +40,33 @@
 
         .filter-toggle-bar {
             background: $color-green-cruise-light;
-
-            .show-more,
-            .show-less {
-                text-align: center;
-                margin: 0px auto;
-                max-width: 12em;
-                background: $color-white-pure;
-                color: $color-green-shamrock;
-                font-size: $font-size-smaller;
-                font-weight: $font-weight-body-strong;
-                cursor: pointer;
-            }
         }
 
         .filter-toggle-content {
             padding: 20px;
+            display: none;
         }
 
-        &.closed {
-            .filter-toggle-content {
-                display: none;
-            }
-
-            .show-more {
-                display: block;
-            }
-
-            .show-less {
-                display: none;
-            }
+        .show-more, .show-less {
+            text-align: center;
+            margin: 0px auto;
+            max-width: 12em;
+            background: $color-white-pure;
+            color: $color-green-shamrock;
+            font-size: $font-size-smaller;
+            font-weight: $font-weight-body-strong;
+            cursor: pointer;
         }
 
-        &.open {
+        .show-more {
+            display: block;
+        }
+
+        .show-less {
+            display: none;
+        }
+
+        &.is-open {
             .filter-toggle-content {
                 display: block;
             }

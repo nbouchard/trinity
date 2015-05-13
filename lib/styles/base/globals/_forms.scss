@@ -357,44 +357,58 @@ input[type=range]:disabled::-ms-thumb {
     background: $color-gray-chateau;
 }
 
-// Custom dropdown menu -- use with Angular UI
+// Custom dropdown menu
 .ce-dropdown {
-    @include box-sizing(border-box);
-    border: 1px solid $color-gray-ghost;
-    background: $color-white-pure;
-    color: $color-gray-charcoal;
     position: relative;
     height: 2.5em;
 
-    .dropdown-value {
-        box-sizing: border-box;
-        padding: 0.5em 3em 0.5em 0.5em;
-        height: 100%;
+    &.is-open {
+        .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-value:after {
+            content: $c-icon-chevron-up;
+        }
     }
 
-    .dropdown-toggle {
-        @include ce-button('dark');
+    .dropdown-value {
+        @include box-sizing(border-box);
+        padding: 0.5em 3em 0.5em 0.5em;
+        border: 1px solid $color-gray-ghost;
+        background: $color-white-pure;
+        color: $color-gray-charcoal;
+        position: relative;
         height: 2.5em;
-        width: 2.5em;
-        position: absolute;
-        top: -1px;
-        right: -1px;
-        padding: 0.5em;
+        cursor: pointer;
 
-        &:before {
+        &:after {
+            @include ce-button('dark');
+            @include icon;
             font-size: $font-size-smaller;
+            height: 3.125em;
+            width: 3.125em;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            padding: 0.5em;
+            content: $c-icon-chevron-down;
+            text-align: center;
+            line-height: 2;
+            z-index: 5;
         }
     }
 
     .dropdown-menu {
+        @include box-sizing(border-box);
         display: none;
         position: absolute;
         top: 100%;
-        right: -1px;
+        right: 0px;
         z-index: 1000;
         border: 1px solid $color-gray-ghost;
+        border-top: 1px solid transparent;
         background-color: $color-white-pure;
-        box-sizing: content-box;
         min-width: 100%;
 
         .dropdown-menu-list {
