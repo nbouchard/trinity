@@ -8,10 +8,6 @@
     section {
         margin-top: 2em;
         padding-bottom: 2em;
-
-        &.no-top {
-            margin-top: 0;
-        }
     }
 
     .ten-based-grid {
@@ -39,6 +35,9 @@
 
     .no-pad {
         padding: 0;
+    }
+    .no-top {
+        margin-top: 0;
     }
 
     .hero-carousel {
@@ -866,6 +865,11 @@
                 float: right;
                 margin-top: 2em;
             }
+        }
+        .featured-image {
+            width:100%;  
+            margin: 0;
+            padding: 0;
         }
     }
 
