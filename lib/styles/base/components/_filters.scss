@@ -166,14 +166,17 @@
             @include cg-1of3(true, false);
         }
 
+        .c-icon-res:before,
         .c-icon-residential:before {
             color: $color-orange-sun;
         }
 
+        .c-icon-smallbusiness:before,
         .c-icon-smb:before {
             color: $color-green-shamrock;
         }
 
+        .c-icon-com:before,
         .c-icon-commercial:before {
             color: $color-blue-curious;
         }

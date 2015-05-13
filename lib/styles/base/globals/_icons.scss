@@ -177,6 +177,7 @@ $c-icon-chevron-up: '\e01c';
     content: '\e022';
 }
 
+.c-icon-res:before,
 .c-icon-residential:before {
     content: '\e023';
 }
@@ -185,10 +186,12 @@ $c-icon-chevron-up: '\e01c';
     content: '\e024';
 }
 
+.c-icon-naturalgas:before,
 .c-icon-nat-gas:before {
     content: '\e025';
 }
 
+.c-icon-com:before,
 .c-icon-commercial:before {
     content: '\e026';
 }
@@ -197,6 +200,7 @@ $c-icon-chevron-up: '\e01c';
     content: '\e027';
 }
 
+.c-icon-smallbusiness:before,
 .c-icon-smb:before {
     content: '\e028';
 }

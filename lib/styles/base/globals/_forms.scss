@@ -222,10 +222,6 @@ label {
     background-color: $color-gray-geyser;
 }
 
-[type="radio"]:focus + .ce-label-text {
-    outline: 1px dotted $color-green-shamrock;
-}
-
 //color variations
 [type="radio"].dark + .ce-label-text:before {
     box-shadow: 0 0 0 0.15em $color-gray-oslo;
@@ -265,10 +261,6 @@ label {
 [type="checkbox"]:disabled + .ce-label-text:before {
     border: 0;
     background-color: $color-gray-geyser;
-}
-
-[type="checkbox"]:focus + .ce-label-text {
-    outline: 1px dotted $color-green-shamrock;
 }
 
 //color variations
