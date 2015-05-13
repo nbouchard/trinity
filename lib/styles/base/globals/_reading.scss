@@ -17,6 +17,11 @@
         font-size: $font-size-huge;
     }
 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     figure {
         margin: 2em 0 1em;
 
@@ -37,10 +42,11 @@
                 width: 100%;
             }
         }
+
         &.featured {
             margin: 0;
             padding: 0;
-            
+
             img {
                 width: 100%;
                 margin: 0;
