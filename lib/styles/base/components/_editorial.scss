@@ -29,7 +29,7 @@
     }
 }
 
-@mixin editorial-text-color($color: 'white'){
+@mixin editorial-text-color($color: 'white') {
     @if $color == 'dark' {
         color: $color-gray-charcoal;
 
@@ -103,38 +103,38 @@
 
 @mixin editorial-bg-color($color: 'primary') {
     @if $color == 'primary' {
-        background: $color-green-shamrock;
         @include editorial-text-color();
+        background: $color-green-shamrock;
     }
 
     @if $color == 'info' {
-        background: $color-blue-curious;
         @include editorial-text-color();
+        background: $color-blue-curious;
     }
 
     @if $color == 'bright' {
-        background: $color-orange-sun;
         @include editorial-text-color();
+        background: $color-orange-sun;
     }
 
     @if $color == 'white' {
-        background: $color-white-pure;
         @include editorial-text-color('dark');
+        background: $color-white-pure;
     }
 
     @if $color == 'light' {
-        background: $color-white-smoke;
         @include editorial-text-color('dark');
+        background: $color-white-smoke;
     }
 
     @if $color == 'dark' {
-        background: $color-gray-charcoal;
         @include editorial-text-color();
+        background: $color-gray-charcoal;
     }
 
     @if $color == 'grid' {
-        background: url('../images/patterns/grid-trans-blue.png') repeat;
         @include editorial-text-color('grid');
+        background: url('../images/patterns/grid-trans-blue.png') repeat;
     }
 }
 
@@ -402,7 +402,8 @@
         padding: 5px;
     }
 
-    &.content-editorial-bigtalk, &.v-bigtalk {
+    &.content-editorial-bigtalk,
+    &.v-bigtalk {
         @include editorial-height('bigtalk');
     }
 
@@ -410,19 +411,23 @@
         @include editorial-height('bigtalkshort');
     }
 
-    &.content-editorial-short, &.v-tall {
+    &.content-editorial-short,
+    &.v-tall {
         @include editorial-height('tall');
     }
 
-    &.content-editorial-short, &.v-short {
+    &.content-editorial-short,
+    &.v-short {
         @include editorial-height('short');
     }
 
-    &.content-editorial-noheight, &.v-noheight {
+    &.content-editorial-noheight,
+    &.v-noheight {
         @include editorial-height('noheight');
     }
 
-    &.content-editorial-translucent, &.v-translucent {
+    &.content-editorial-translucent,
+    &.v-translucent {
         padding: 5em 0;
         color: $color-gray-charcoal;
 
@@ -463,35 +468,43 @@
         }
     }
 
-    &.content-editorial-bg-primary, &.v-bg-primary {
+    &.content-editorial-bg-primary,
+    &.v-bg-primary {
         @include editorial-bg-color($color: 'primary');
     }
 
-    &.content-editorial-bg-info, &.v-bg-info {
+    &.content-editorial-bg-info,
+    &.v-bg-info {
         @include editorial-bg-color($color: 'info');
     }
 
-    &.content-editorial-bg-bright, &.v-bg-bright {
+    &.content-editorial-bg-bright,
+    &.v-bg-bright {
         @include editorial-bg-color($color: 'bright');
     }
 
-    &.content-editorial-bg-white, &.v-bg-white {
+    &.content-editorial-bg-white,
+    &.v-bg-white {
         @include editorial-bg-color($color: 'white');
     }
 
-    &.content-editorial-bg-light, &.v-bg-light {
+    &.content-editorial-bg-light,
+    &.v-bg-light {
         @include editorial-bg-color($color: 'light');
     }
 
-    &.content-editorial-bg-dark, &.v-bg-dark {
+    &.content-editorial-bg-dark,
+    &.v-bg-dark {
         @include editorial-bg-color($color: 'dark');
     }
 
-    &.content-editorial-bg-grid, &.v-bg-grid {
+    &.content-editorial-bg-grid,
+    &.v-bg-grid {
         @include editorial-bg-color($color: 'grid');
     }
 
-    &.content-editorial-centerhero, &.v-centerhero {
+    &.content-editorial-centerhero,
+    &.v-centerhero {
         text-align: center;
 
         .content-editorial-headline {
@@ -542,18 +555,18 @@
 
 //Block specific variants of content editorial compontent
 .v-zip-search {
-    padding: 3em 0;
     @include editorial-height('bigtalk');
+    padding: 3em 0;
 
     &.o-solar-landing1 {
         @include editorial-text-color('dark');
 
         .editorial-headline {
-            @include cg-2of3(false,false);
+            @include cg-2of3(false, false);
         }
 
         .editorial-subhead {
-            font-size: $font-size-huge*1.4;
+            font-size: $font-size-huge * 1.4;
             @include cg-2of3(false, false);
         }
     }
@@ -562,8 +575,8 @@
         @include editorial-text-color('dark');
 
         .editorial-headline {
-            font-size: $font-size-huger*1.4;
-            @include cg-1of2(false,false);
+            @include cg-1of2(false, false);
+            font-size: $font-size-huger * 1.4;
 
             &:before{
                 @include icon;
@@ -648,8 +661,8 @@
     }
 
     .supplier.type-solar {
-        display: block;
         @include cg-1of4();
+        display: block;
     }
 }
 
@@ -751,11 +764,11 @@
 }
 
 .v-shopping-filters {
-    padding: 40px 0px;
-    margin-bottom: 40px;
     @include editorial-height('short');
+    padding: 40px 0;
+    margin-bottom: 40px;
 
     .editorial-container {
-        padding: 0px;
+        padding: 0;
     }
 }

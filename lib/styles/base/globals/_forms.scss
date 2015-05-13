@@ -218,7 +218,7 @@ label {
 }
 
 [type="radio"]:disabled + .ce-label-text:before {
-    border: none;
+    border: 0;
     background-color: $color-gray-geyser;
 }
 
@@ -263,7 +263,7 @@ label {
 }
 
 [type="checkbox"]:disabled + .ce-label-text:before {
-    border: none;
+    border: 0;
     background-color: $color-gray-geyser;
 }
 
@@ -298,7 +298,7 @@ label {
 
 input[type=range] {
     -webkit-appearance: none; // needed to remove default webkit styles
-    border: none;
+    border: 0;
     background: none;
 }
 
@@ -322,7 +322,7 @@ input[type=range]::-moz-range-track {
 
 input[type=range]::-moz-range-thumb {
     @include range-slider-thumb();
-    border: none;
+    border: 0;
     box-sizing: border-box;
 }
 

@@ -3,6 +3,7 @@
     display: inline-block;
     text-decoration: none;
 }
+
 @mixin ce-button($btn-type: 'basic', $btn-size: 'normal', $btn-width: 'auto') {
     @include box-sizing(border-box);
     padding: 0.5em 1em;

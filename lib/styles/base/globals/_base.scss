@@ -51,10 +51,7 @@ $screen-sm-max: 991px;
     }
 }
 
-/* ==========================================================================
-   Helper classes from HTML5 Boilerplate
-   ========================================================================== */
-
+// Helper classes from HTML5 Boilerplate
 // Hide visually and from screen readers: h5bp.com/u
 .hidden {
     display: none !important;
@@ -62,7 +59,7 @@ $screen-sm-max: 991px;
 }
 
 // Hide only visually, but have it available for screen readers: h5bp.com/v
-@mixin visuallyhidden(){
+@mixin visuallyhidden() {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;

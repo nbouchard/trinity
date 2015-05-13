@@ -36,12 +36,13 @@
 
     .filter-section-refine {
         background: $color-white-pure;
-        background: rgba(255, 255, 255, .9);
+        background: rgba(255, 255, 255, 0.9);
 
         .filter-toggle-bar {
             background: $color-green-cruise-light;
 
-            .show-more, .show-less {
+            .show-more,
+            .show-less {
                 text-align: center;
                 margin: 0px auto;
                 max-width: 12em;
@@ -58,7 +59,7 @@
         }
 
         &.closed {
-            .filter-toggle-content{
+            .filter-toggle-content {
                 display: none;
             }
 
@@ -148,11 +149,11 @@
         }
 
         .c-icon-electricity:before {
-            color: $color-yellow-butter-light
+            color: $color-yellow-butter-light;
         }
 
         .c-icon-nat-gas:before {
-            color: $color-red-cinnabar
+            color: $color-red-cinnabar;
         }
 
         .c-icon-heating-oil:before {
@@ -160,7 +161,7 @@
         }
 
         .c-icon-solar:before {
-            color: $color-orange-sun
+            color: $color-orange-sun;
         }
     }
 
@@ -172,15 +173,15 @@
         }
 
         .c-icon-residential:before {
-            color: $color-orange-sun
+            color: $color-orange-sun;
         }
 
         .c-icon-smb:before {
-            color: $color-green-shamrock
+            color: $color-green-shamrock;
         }
 
         .c-icon-commercial:before {
-            color: $color-blue-curious
+            color: $color-blue-curious;
         }
     }
 
@@ -218,6 +219,7 @@
         .ce-label {
             padding: 0;
         }
+
         .ce-label-text {
             padding: 0.5em 2px;
             box-sizing: border-box;
@@ -269,7 +271,7 @@
 
         .filter-supplier {
             .ce-label {
-                margin: 0px;
+                margin: 0;
             }
 
             .ce-label-text {
