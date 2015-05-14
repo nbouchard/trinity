@@ -340,7 +340,9 @@
         &.overlaid {
             margin-top: -4em;
         }
-
+        &.margin-top {
+            margin-top: 2em;
+        }
         .article-info {
             padding: 0;
         }
