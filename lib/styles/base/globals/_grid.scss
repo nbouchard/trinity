@@ -26,6 +26,7 @@
     }
 }
 
+// item = 1of1 = 2of2 = 3of3 = 4of4 = 5of5 = 6of6 = 8of8
 @mixin cg-item($v-padding: true, $h-padding: true) {
     @include box-sizing(border-box);
     width: 100%;
@@ -191,7 +192,7 @@
     }
 }
 
-// 1of2 = 2of4 = 4of8
+// 1of2 = 2of4 = 3of6 = 4of8
 @mixin cg-1of2($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -208,6 +209,26 @@
 
         &.is-strict {
             width: 50%;
+        }
+    }
+}
+
+@mixin cg-3of5($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 60%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 60%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 60%;
+        }
+
+        &.is-strict {
+            width: 60%;
         }
     }
 }
@@ -232,26 +253,6 @@
     }
 }
 
-@mixin cg-3of5 ($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 60%;
-    } @else {
-        @include breakpoint($mq-md) {
-            width: 60%;
-        }
-
-        @include breakpoint($mq-lg-min) {
-            width: 60%;
-        }
-
-        &.is-strict {
-            width: 60%;
-        }
-    }
-}
-
 // 2of3 = 4of6
 @mixin cg-2of3($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
@@ -269,6 +270,7 @@
     }
 }
 
+// 3of4 = 6of8
 @mixin cg-3of4($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -305,6 +307,30 @@
 
         &.is-strict {
             width: 80%;
+        }
+    }
+}
+
+@mixin cg-5of6 ($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 83.33%;
+    } @else {
+        @include breakpoint($mq-sm) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-md) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 83.33%;
+        }
+
+        &.is-strict {
+            width: 83.33%;
         }
     }
 }
@@ -376,7 +402,6 @@
 .cg-1of6 {
     @include cg-1of6();
 
-
     &.cg-padded {
         @include cg-1of6(true, true);
     }
@@ -396,7 +421,6 @@
 
 .cg-1of5 {
     @include cg-1of5();
-
 
     &.cg-padded {
         @include cg-1of5(true, true);
@@ -436,7 +460,8 @@
     }
 }
 
-.cg-1of3 {
+.cg-1of3,
+.cg-2of6 {
     @include cg-1of3();
 
     &.cg-padded {
@@ -499,6 +524,7 @@
 
 .cg-1of2,
 .cg-2of4,
+.cg-3of6,
 .cg-4of8 {
     @include cg-1of2();
 
@@ -516,6 +542,27 @@
 
     &.cg-nopad {
         @include cg-1of2(false, false);
+    }
+}
+
+.cg-3of5 {
+    @include cg-3of5();
+
+
+    &.cg-padded {
+        @include cg-3of5(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-3of5(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-3of5(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-3of5(false, false);
     }
 }
 
@@ -539,27 +586,8 @@
     }
 }
 
-.cg-3of5 {
-    @include cg-3of5();
-
-    &.cg-padded {
-        @include cg-3of5(true, true);
-    }
-
-    &.cg-vpad {
-        @include cg-3of5(true, false);
-    }
-
-    &.cg-hpad {
-        @include cg-3of5(false, true);
-    }
-
-    &.cg-nopad {
-        @include cg-3of5(false, false);
-    }
-}
-
-.cg-2of3 {
+.cg-2of3,
+.cg-4of6 {
     @include cg-2of3();
 
     &.cg-padded {
@@ -620,6 +648,26 @@
     }
 }
 
+.cg-5of6 {
+    @include cg-5of6();
+
+    &.cg-padded {
+        @include cg-5of6(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-5of6(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-5of6(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-5of6(false, false);
+    }
+}
+
 .cg-7of8 {
     @include cg-7of8();
 
@@ -644,6 +692,7 @@
 .cg-2of2,
 .cg-3of3,
 .cg-4of4,
+.cg-6of6,
 .cg-8of8 {
     @include cg-item();
 
