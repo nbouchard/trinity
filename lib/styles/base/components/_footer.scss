@@ -186,6 +186,37 @@
             text-align: center;
             line-height: 1em;
 
+            &:hover,
+            &:active,
+            &:focus {
+                background: $color-gray-stone;
+                color: $color-white-pure;
+            }
+
+            &.social-twitter {
+                &:hover,
+                &:active,
+                &:focus {
+                    background: $color-brand-twitter;
+                }
+            }
+
+            &.social-facebook {
+                &:hover,
+                &:active,
+                &:focus {
+                    background: $color-brand-facebook;
+                }
+            }
+
+            &.social-linkedin {
+                &:hover,
+                &:active,
+                &:focus {
+                    background: $color-brand-linkedin;
+                }
+            }
+
             .icon {
                 vertical-align: middle;
             }
