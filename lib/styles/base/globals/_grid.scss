@@ -113,6 +113,7 @@
     }
 }
 
+// 1of4 = 2of8
 @mixin cg-1of4($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -133,6 +134,7 @@
     }
 }
 
+// 1of3 = 2of6
 @mixin cg-1of3($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -189,6 +191,7 @@
     }
 }
 
+// 1of2 = 2of4 = 4of8
 @mixin cg-1of2($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -249,6 +252,7 @@
     }
 }
 
+// 2of3 = 4of6
 @mixin cg-2of3($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -658,20 +662,4 @@
     &.cg-nopad {
         @include cg-item(false, false);
     }
-}
-
-// A vertical rhythm grid overlay that allows you to test your vertical rhythm.
-//
-// Styleguide Foundations.VerticalRhythm
-#gridder {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('/images/ceux/gridder.png') repeat;
-    height: 100%;
-    width: 100%;
-    z-index: 999999;
 }
