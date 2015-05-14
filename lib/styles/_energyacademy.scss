@@ -43,7 +43,10 @@
     .no-top {
         margin-top: 0;
     }
-
+    .pseudo-link {
+        color: $color-green-shamrock;
+        font-weight: $font-weight-headline;
+    }
     .hero-carousel {
         min-height: initial;
         height: 41.5em;
@@ -627,6 +630,7 @@
             color: $color-gray-ghost;
             text-decoration: none;
             font-weight: normal;
+            border-radius: 2px;
 
             &:hover {
                 border: 1px solid $color-blue-curious;
@@ -926,6 +930,7 @@
             color: $color-white-pure;
             text-align: center;
             line-height: 30px;
+            cursor: pointer;
         }
 
         .hearts {
