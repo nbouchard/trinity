@@ -2,6 +2,12 @@
 @mixin link-as-button() {
     display: inline-block;
     text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 @mixin ce-button($btn-type: 'basic', $btn-size: 'normal', $btn-width: 'auto') {
