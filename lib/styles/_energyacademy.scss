@@ -1093,41 +1093,6 @@
 
 
 .about-pages {
-    .content-editorial-infogrid-cell {
-        cursor: pointer;
-
-        &:hover {
-            background: $color-white-lily;
-        }
-    }
-
-    .contact-map {
-        width: 100%;
-        height: 800px;
-    }
-
-    .contact-icon {
-        color: $color-green-shamrock;
-        font-size: 32px;
-    }
-
-    .panes {
-        font-size: 1.2em;
-
-        .form-row {
-            label {
-                display: inline-block;
-                width: 100px;
-            }
-        }
-
-        .pane {
-            img {
-                width: 100%;
-            }
-        }
-    }
-
     .ten-based-grid {
         position: relative;
         float: left;
