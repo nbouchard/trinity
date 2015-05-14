@@ -7,22 +7,18 @@ tpl:
   desc: Careers page, powered by Lever
   title: Careers at Choose Energy
 ---
-<div class="content-editorial content-editorial-short" style="background: url('images/photography/Bay_Bridge_Night.jpg') no-repeat; background-size: cover;">
-    <div class="content-editorial-container">
-        <h1 class="content-editorial-headline">Careers</h1>
-        <nav class="breadcrumbs">
-            <ol class="nav-list">
-                <li class="nav-item"><a href="website_homepage_residential.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="website_about_overview.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="website_about_careers.html" class="nav-link">Careers</a></li>
-            </ol>
-        </nav>
-    </div>
-</div>
+{{#withHash
+    editorial_headline="Careers"
+    editorial_bg="images/photography/Bay_Bridge_Night.jpg"
+    variant_classes="v-short v-bg-dark"
+}}
+    {{> cmp_editorial_basic}}
+{{/withHash}}
 
-<div class="content-editorial content-editorial-short content-editorial-bg-white">
-    <div class="content-editorial-container">
-        <ul id="jobs-container"></ul>
+<div class="ce-editorial v-noheight v-bg-white">
+    <div class="editorial-container careers">
+        <h1>Open Positions</h1>
+        <div id="jobs-container"></div>
     </div>
 </div>
 <script>
@@ -31,6 +27,7 @@ tpl:
         var url = 'https://api.lever.co/v0/postings/chooseenergy?mode=json';
 
         function createJobs(_data) {
+            console.log(_data);
             for(i = 0; i < _data.length; i++) {
                 var posting = _data[i];
                 var title = posting.text;
@@ -39,11 +36,15 @@ tpl:
                 var commitment = posting.categories.commitment;
                 var team = posting.categories.team;
                 var link = posting.hostedUrl;
-                var jobPost = document.createElement('li');
-                    jobPost.innerHTML = '<a href="'+link+'" class="job">' +
-                            '<h2 class="job-title" href="'+link+'">'+title+'</h2>' +
-                            '<ul class="job-tags"><li class="job-tag">'+team+'</li><li class="job-tag">'+location+'</li><li class="job-tag">'+commitment+'</li></ul>' +
-                        '</a>';
+                var teamHeader = document.createElement('div');
+                var jobPost = document.createElement('div');
+                    jobPost.classList.add('job-listing');
+                    jobPost.innerHTML = '<div class="job-info">' +
+                            '<a href="' + link + '" class="job-title">' + title + '</a>' +
+                            '<div class="job-tags"><span class="job-tag">' + team + '</span><span class="job-tag">' + location + '</span><span class="job-tag">' +commitment + '</span></div>' +
+                            '</div>' +
+                            '<a href="' + link + '" class="job-apply"><button type="button" class="btn btn-primary">Apply</button></a>'
+                        ;
                 var jobs = document.getElementById('jobs-container');
                     jobs.appendChild(jobPost);
             }

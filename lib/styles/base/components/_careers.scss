@@ -1,0 +1,32 @@
+.careers {
+    .job-listing {
+        margin: 4em 0;
+        position: relative;
+    }
+
+    .job-info {
+        padding-right: 15em;
+
+        .job-title {
+            font-size: $font-size-huge;
+            display: inline-block;
+        }
+
+        .job-tag {
+            margin-right: 1em;
+            font-size: $font-size-large;
+            color: $color-gray-chateau;
+        }
+    }
+
+    .job-apply {
+        position: absolute;
+        top: 0.6em;
+        right: 0;
+
+        .btn {
+            width: 8em;
+            font-size: $font-size-larger;
+        }
+    }
+}

@@ -36,7 +36,8 @@ $ce-font-path: '../fonts/';
 @import 'base/components/partnerGrids';
 @import 'base/components/suppliers';
 
-
+// CE Component Specific Styles
+@import 'base/components/careers';
 @import 'base/components/reviews';
 
 // CE Shopping Elements
