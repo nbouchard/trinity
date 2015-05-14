@@ -5,7 +5,7 @@
 
 .location {
     .location-cell {
-        @include cg-1of3(false, true);
+        @include cg-1of3(false, false, strict);
         text-align: center;
         cursor: pointer;
         border-right: 1px solid $color-gray-geyser;
