@@ -55,10 +55,6 @@
             margin-bottom: 4em;
         }
 
-        h1 {
-            font-size: 4em;
-        }
-
         &.hero-image {
             height: auto;
         }
@@ -272,7 +268,6 @@
                 height: 7.5em; // image's height
                 color: $color-white-pure;
                 vertical-align: middle;
-                font-size: 4em;
 
                 small {
                     display: block;
@@ -317,7 +312,6 @@
         h2 {
             display: inline-block;
             margin-right: 0.5em;
-            font-size: 3em;
 
             small {
                 a {
@@ -348,9 +342,6 @@
         text-align: left;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 
-        h1 {
-            font-size: 4em;
-        }
 
         article {
             margin-top: 10em;
@@ -369,7 +360,6 @@
         h2 {
             margin: 0.5em 0 0;
             padding-bottom: 0.25em;
-            font-size: 2em;
         }
 
         img {
@@ -477,7 +467,9 @@
         h2 {
             margin: 1.5em 0;
         }
-
+        input {
+            margin: 0;
+        }
         .popular-searches {
             margin-bottom: 4em;
         }
@@ -562,7 +554,9 @@
 
         .search {
             input {
-                width: 83%;
+                width: 82%;
+                margin: 0;
+                padding: .8em;
             }
 
             button {
@@ -1099,41 +1093,6 @@
 
 
 .about-pages {
-    .content-editorial-infogrid-cell {
-        cursor: pointer;
-
-        &:hover {
-            background: $color-white-lily;
-        }
-    }
-
-    .contact-map {
-        width: 100%;
-        height: 800px;
-    }
-
-    .contact-icon {
-        color: $color-green-shamrock;
-        font-size: 32px;
-    }
-
-    .panes {
-        font-size: 1.2em;
-
-        .form-row {
-            label {
-                display: inline-block;
-                width: 100px;
-            }
-        }
-
-        .pane {
-            img {
-                width: 100%;
-            }
-        }
-    }
-
     .ten-based-grid {
         position: relative;
         float: left;
@@ -1270,7 +1229,6 @@
     h1 {
         padding-top: 0.75em;
         padding-bottom: 0.25em;
-        font-size: 3.5em;
 
         @include breakpoint($mq-md-max) {
             padding-right: 0.5em;

@@ -9,10 +9,10 @@ tpl:
   classes: about-pages
 ---
 
-<div class="content-editorial content-editorial-translucent content-editorial-noheight" style="background: url('images/photography/SanFrancisco.jpg') no-repeat; background-size: cover; background-position: center;">
-    <div class="content-editorial-container">
-        <h2 class="content-editorial-headline">Contact Us</h2>
-        <div class="content-editorial-panes panes">
+<div class="ce-editorial v-translucent v-noheight" style="background: url('images/photography/SanFrancisco.jpg') no-repeat; background-size: cover; background-position: center;">
+    <div class="editorial-container">
+        <h2 class="editorial-headline">Contact Us</h2>
+        <div class="editorial-panes panes">
             <div class="cg-1of3 panes">
                 <p>At Choose Energy, we connect you with the best energy available. We are not your Utility or Energy Supplier. If you have questions about your current service, please contact your energy supplier from the numbers on your energy bill.</p>
             </div>
@@ -43,23 +43,23 @@ tpl:
         </div>
     </div>
 </div>
-<div class="content-editorial content-editorial-noheight content-editorial-bg-white">
-    <div class="content-editorial-cta content-editorial-infogrid">
-        <div class="content-editorial-infogrid-cell is-centered" onclick="change_map('sf');">
+<div class="ce-editorial v-noheight">
+    <div class="editorial-container location">
+        <div class="location-cell" onclick="change_map('sf');">
             <p><i class="icon contact-icon fa fa-map-marker"></i></p>
             <h3>San Francisco, California</h3>
             <p>465 California Street, Suite 1250<br>
             Support@ChooseEnergy.com<br>
             855-419-3586</p>
         </div>
-        <div class="content-editorial-infogrid-cell is-centered" onclick="change_map('pl');">
+        <div class="location-cell" onclick="change_map('pl');">
             <p><i class="icon contact-icon fa fa-map-marker"></i></p>
             <h3>Plano, Texas</h3>
             <p>6217 Chapel Hill Blvd, Suite 300<br>
             Support@ChooseEnergy.com<br>
             855-419-3586</p>
         </div>
-        <div class="content-editorial-infogrid-cell is-centered" onclick="change_map('ch');">
+        <div class="location-cell" onclick="change_map('ch');">
             <p><i class="icon contact-icon fa fa-map-marker"></i></p>
             <h3>Chicago, Illinois</h3>
             <p>222 W. Merchandise Mart Plaza, 12th Floor<br>
@@ -68,10 +68,12 @@ tpl:
         </div>
     </div>
 </div>
-<div id="map_container" class="content-editorial content-editorial-bg-info">
+<div id="map_container" class="ce-editorial">
     <div id="sf-map" class="contact-map"></div>
 </div>
 <script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoiY2hvb3NlZW5lcmd5IiwiYSI6IlRrZEZ4V1UifQ.BMoCqfXy3HKdySKpJRJy3Q';
+
     var latitude = "37.792860";
     var longitude = "-122.402215";
     var office_map = L.mapbox.map('sf-map', 'chooseenergy.lkga2cfj', {

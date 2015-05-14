@@ -339,17 +339,11 @@
 
             .nav-list {
                 @include box-sizing(border-box);
-                @include display(flex);
-                @include flex-direction(row);
+                @include cg-row();
                 margin: 0.5em 0;
 
-                @include breakpoint($mq-md-max) {
-                    @include flex-wrap(wrap);
-                }
-
                 .nav-item {
-                    @include box-sizing(border-box);
-                    @include flex(1 1 10em);
+                    @include cg-1of4(false, false, true);
                     text-align: center;
 
                     .nav-link {
@@ -380,6 +374,8 @@
             padding: 1em 0;
 
             .u-url {
+                text-decoration: none;
+
                 .p-name {
                     color: $color-gray-charcoal;
                 }
@@ -391,6 +387,8 @@
                 &:hover,
                 &:active,
                 &:focus {
+                    text-decoration: none;
+
                     .img-overlay {
                         display: block;
                     }
@@ -403,6 +401,10 @@
                         color: $color-gray-chateau;
                     }
                 }
+            }
+
+            .h-entry {
+                list-style: none;
             }
         }
     }
