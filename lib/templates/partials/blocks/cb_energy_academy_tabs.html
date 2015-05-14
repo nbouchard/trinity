@@ -1,29 +1,7 @@
----
-layout: website
-site:
-  name: ChooseUX
-  version: 0.1.0
-tpl:
-  desc: The homepage for residential customers of Choose Energy
-  title: Choose Energy Homepage for Residential
----
-{{> cb_residential_search_hero}}
-{{> cb_tip_general_savings}}
-{{> cb_our_energy_types}}
-{{> cb_map_general}}
-{{> cb_tip_general_green}}
-<div class="content-editorial" style="background: url('images/photography/Lowlight_Lamp.jpg') no-repeat; background-size: cover;">
-    <div class="content-editorial-container">
-        <h2 class="content-editorial-headline">How It Works</h2>
-        <p class="content-editorial-cta">How it works goes here.</p>
-    </div>
-</div>
-{{> cb_our_suppliers}}
-{{> cb_tip_general_dereg}}
-<div class="content-editorial content-editorial-translucent" style="background: url('images/photography/Kites_and_Windmills.jpg') no-repeat; background-size: cover;">
-    <div class="content-editorial-container">
-        <h2 class="content-editorial-headline">Energy Academy</h2>
-        <div class="content-editorial-tabs">
+<div class="ce-editorial v-translucent" style="background: url('images/photography/Kites_and_Windmills.jpg') no-repeat; background-size: cover;">
+    <div class="editorial-container">
+        <h2 class="editorial-headline">Energy Academy</h2>
+        <div class="editorial-tabs">
             <div class="tab-header">
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link is-active" href="#"><i class="icon fa fa-lightbulb-o"></i><span class="nav-text">Deregulation</span></a></li>
@@ -33,8 +11,8 @@ tpl:
                 </ul>
             </div>
             <div class="tab-body">
-                <ul class="grid grid-basic h-feed">
-                    <li class="grid-item h-entry">
+                <ul class="cg-row h-feed">
+                    <li class="cg-1of3 is-strict h-entry">
                         <a class="u-url" href="#">
                             <div class="img-wrapper">
                                 <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
@@ -46,7 +24,7 @@ tpl:
                             <p class="p-summary">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                         </a>
                     </li>
-                    <li class="grid-item h-entry">
+                    <li class="cg-1of3 is-strict h-entry">
                         <a class="u-url" href="#">
                             <div class="img-wrapper">
                                 <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
@@ -58,7 +36,7 @@ tpl:
                             <p class="p-summary">Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
                         </a>
                     </li>
-                    <li class="grid-item h-entry">
+                    <li class="cg-1of3 is-strict h-entry">
                         <a class="u-url" href="#">
                             <div class="img-wrapper">
                                 <img class="u-photo" src="http://placehold.it/320x180" alt="thumbnail" />
@@ -75,5 +53,3 @@ tpl:
         </div>
     </div>
 </div>
-
-{{> cmp_testimonial}}
