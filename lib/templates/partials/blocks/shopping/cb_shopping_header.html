@@ -10,18 +10,15 @@
                 <div class="filter-utility cg-1of6">
                     <h4>Utility</h4>
                     <span class="filter-selected-utility supplier-logo supplier-txu-energy">TXU Energy</span>
-                    <div ng-controller="DropdownCtrl">
-                        <div class="ce-dropdown">
-                            <div class="dropdown-value">Change Utility</div>
-                            <button class="dropdown-toggle icon c-icon-chevron-down" type="button"></button>
-                            <div class="dropdown-menu" role="menu">
-                                <ul class="dropdown-menu-list">
-                                    <li><a href="#" class="dropdown-menu-item">Utility 1</a></li>
-                                    <li><a href="#" class="dropdown-menu-item">Utility 2</a></li>
-                                    <li><a href="#" class="dropdown-menu-item">Utility 3</a></li>
-                                    <li><a href="#" class="dropdown-menu-item">Utility 4</a></li>
-                                </ul>
-                            </div>
+                    <div class="ce-dropdown">
+                        <div class="dropdown-value">Change Utility</div>
+                        <div class="dropdown-menu" role="menu">
+                            <ul class="dropdown-menu-list">
+                                <li><a href="#" class="dropdown-menu-item">Utility 1</a></li>
+                                <li><a href="#" class="dropdown-menu-item">Utility 2</a></li>
+                                <li><a href="#" class="dropdown-menu-item">Utility 3</a></li>
+                                <li><a href="#" class="dropdown-menu-item">Utility 4</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -87,7 +84,7 @@
             </div>
         </section>
 
-        <section class="filter-section filter-section-refine open">
+        <section class="filter-section filter-section-refine">
             <div class="filter-toggle-bar">
                 <div class="show-more">
                     Refine my search <i class="icon fa fa-caret-down"></i>
@@ -164,12 +161,9 @@
 
                     <label class="ce-label">
                         <h4 class="ce-label-text">Suppliers</h4>
-                        <!-- <button class=" btn-dark" type="button">Filter by Supplier</button> -->
-                        <div ng-controller="DropdownCtrl">
-                        <div class="ce-dropdown filter-supplier">
+                        <div class="ce-dropdown filter-supplier js-multi">
                             <div class="dropdown-value">9 Selected</div>
-                            <button class="dropdown-toggle icon c-icon-chevron-down" type="button"></button>
-                            <div class="dropdown-menu checkbox-menu" role="menu">
+                            <div class="dropdown-menu checkbox-menu">
                                 <div class="menu-list">
                                     <label class="ce-label">
                                         <input class="dark" type="checkbox" name="suppliers" value="supplier1">

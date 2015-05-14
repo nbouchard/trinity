@@ -33,6 +33,8 @@
 
 //Variables
 $c-icon-sun: '\e02d';
+$c-icon-chevron-down: '\e019';
+$c-icon-chevron-up: '\e01c';
 
 //Icons
 .c-icon-dollar:before {
@@ -175,6 +177,7 @@ $c-icon-sun: '\e02d';
     content: '\e022';
 }
 
+.c-icon-res:before,
 .c-icon-residential:before {
     content: '\e023';
 }
@@ -183,10 +186,12 @@ $c-icon-sun: '\e02d';
     content: '\e024';
 }
 
+.c-icon-naturalgas:before,
 .c-icon-nat-gas:before {
     content: '\e025';
 }
 
+.c-icon-com:before,
 .c-icon-commercial:before {
     content: '\e026';
 }
@@ -195,6 +200,7 @@ $c-icon-sun: '\e02d';
     content: '\e027';
 }
 
+.c-icon-smallbusiness:before,
 .c-icon-smb:before {
     content: '\e028';
 }
