@@ -22,18 +22,6 @@ module.exports = function(grunt) {
                 filter: 'isFile'
             }]
         },
-        sprites: {
-            files: [{
-                expand: true,
-                dot: true,
-                cwd: 'lib/',
-                dest: 'dist/images',
-                src: [
-                    'styles/generated/*.png'
-                ],
-                filter: 'isFile'
-            }]
-        },
         dist: {
             files: [{
                 expand: true,

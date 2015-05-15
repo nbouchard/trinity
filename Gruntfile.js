@@ -20,8 +20,7 @@ module.exports = function(grunt) {
         'Build site files for local dev.',
         [
             'clean:dist',
-            'clean:sprites',
-            'copy:paths',
+            'process-images:all',
             'compile-css:dev',
             'compile-html',
             'copy:dist',
@@ -33,8 +32,7 @@ module.exports = function(grunt) {
         'Build site files for DevWP.',
         [
             'clean:dist',
-            'clean:sprites',
-            'copy:pathswp',
+            'process-images:devwp',
             'compile-css:devwp',
             'compile-html',
             'copy:dist',
@@ -46,8 +44,7 @@ module.exports = function(grunt) {
         'Build site files for GH Pages.',
         [
             'clean:dist',
-            'clean:sprites',
-            'copy:paths',
+            'process-images:all',
             'compile-css:dist',
             'compile-html',
             'copy:dist',
@@ -65,12 +62,30 @@ module.exports = function(grunt) {
         ]
     );
 
+    // Image Processing
+    grunt.registerTask('process-images:all',
+        'Process and resize all of our images.',
+        [
+            'clean:sprites',
+            'copy:paths',
+            'resize:all',
+            'sprite:all',
+        ]
+    );
+    grunt.registerTask('process-images:devwp',
+        'Process and resize all of our images for DevWP.',
+        [
+            'clean:sprites',
+            'copy:pathswp',
+            'resize:all',
+            'sprite:all:wp',
+        ]
+    );
+
     // CSS Compile Task
     grunt.registerTask('compile-css:dev',
         'Process and compile our CSS for local development.',
         [
-            'resize:all',
-            'sprite:all',
             'sass',
             'autoprefixer',
         ]
@@ -80,8 +95,6 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css:devwp',
         'Process and compile our CSS for distribution to DevWP.',
         [
-            'resize:all',
-            'sprite:all:wp',
             'sass',
             'autoprefixer',
         ]
@@ -91,8 +104,6 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css:dist',
         'Process and compile our CSS for distribution to GH Pages.',
         [
-            'resize:all',
-            'sprite:all',
             'sass',
             'autoprefixer',
             'cssmin',
@@ -103,7 +114,12 @@ module.exports = function(grunt) {
     grunt.registerTask('resize:all',
         'Process and resize all of our images.',
         [
-            'image_resize',
+            'image_resize:suppliers',
+            'image_resize:suppliers_lg',
+            'image_resize:suppliers_sm',
+            'image_resize:utilities',
+            'image_resize:utilities_lg',
+            'image_resize:utilities_sm',
         ]
     );
     grunt.registerTask('resize:std',
