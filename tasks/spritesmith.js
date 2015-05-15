@@ -120,7 +120,7 @@ module.exports = function(grunt) {
                     return '.utility-' + sprite.name;
                 }
             }
-        }
+        },
         utilitieswp_sm: {
             src: 'lib/images/sprites/size-small/utility-logos/*.png',
             dest: 'lib/images/utility-logos-sm.png',
