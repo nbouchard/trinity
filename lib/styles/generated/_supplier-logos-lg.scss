@@ -1,0 +1,497 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.supplier-4change-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px -960px;
+  width: 200px;
+  height: 95px;
+}
+.supplier-WGES-Vertical-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px 0px;
+  width: 192px;
+  height: 120px;
+}
+.supplier-aep-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -792px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-amigo-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -969px -192px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-apge-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -216px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-apollo-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -369px 0px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-bounce-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -369px -96px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-canadian-solar-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -369px -192px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-champion-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -312px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-cincinnati-bell-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -1234px;
+  width: 200px;
+  height: 27px;
+}
+.supplier-cirro-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -192px 0px;
+  width: 177px;
+  height: 120px;
+}
+.supplier-clearview-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -600px -1080px;
+  width: 200px;
+  height: 79px;
+}
+.supplier-commerce-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -569px 0px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-conedison-solutions-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -569px -96px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-constellation-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -569px -192px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-continuum-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -1234px;
+  width: 200px;
+  height: 30px;
+}
+.supplier-cpl-retail-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -569px -384px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-dcgandg-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -504px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-direct-energy-prepaid-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -504px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-direct-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -400px -504px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-dynowatt-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -600px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-ethical-electric-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -1172px;
+  width: 200px;
+  height: 62px;
+}
+.supplier-first-choice-power-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -400px -600px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-first-energy-solutions-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -769px 0px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-first-solar-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -769px -96px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-frontier-utilities-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -769px -192px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-ftr-energy-services-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -400px -1172px;
+  width: 200px;
+  height: 54px;
+}
+.supplier-fulcrum-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -769px -384px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-gateway-energy-services-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -769px -480px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-gexa-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -600px -1172px;
+  width: 200px;
+  height: 52px;
+}
+.supplier-gexa-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -696px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-green-mountain-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -696px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-hudson-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -400px -696px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-ileandg-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -600px -696px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-ineandg-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -120px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-infinite-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1000px -1080px;
+  width: 200px;
+  height: 63px;
+}
+.supplier-infinite-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -400px -792px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-inspire-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -600px -792px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-just-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -969px 0px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-kyeandg-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -969px -96px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-lakeshore-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -1172px;
+  width: 200px;
+  height: 58px;
+}
+.supplier-maeandg-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -969px -288px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-marin-clean-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -1080px;
+  width: 200px;
+  height: 88px;
+}
+.supplier-mdeandg-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -969px -480px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-mieandg-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -969px -576px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-new-leaf-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -969px -672px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-new-york-gas-and-electric-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -400px -1080px;
+  width: 200px;
+  height: 83px;
+}
+.supplier-next-era-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -888px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-nextEra-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -888px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-njeandg-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -400px -888px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-north-american-power-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -600px -888px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-nrg-solar-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -800px -888px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-nygande-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -984px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-oasis-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -984px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-ohgande-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -400px -984px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-pagande-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -600px -984px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-payless-power-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -800px -984px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-pge-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px 0px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-public-power-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px -96px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-pure-energies-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px -192px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-reliant-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px -288px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-smart-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px -384px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-source-power-and-gas-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -800px -1172px;
+  width: 200px;
+  height: 51px;
+}
+.supplier-spark-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px -576px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-startex-power-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px -672px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-sunpower-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px -768px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-suntech-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px -864px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-sunwave-gas-and-power-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -408px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-switch-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1169px -480px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-tara-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -969px -768px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-think-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -969px -384px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-trieagle-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -792px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-trina-solar-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -769px -576px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-txu-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -769px -288px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-usgande-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -600px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-washington-gas-energy-services-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -1000px -1172px;
+  width: 200px;
+  height: 44px;
+}
+.supplier-wtu-retail-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -569px -288px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-xoom-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -408px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-yep-energy-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -800px -1080px;
+  width: 200px;
+  height: 67px;
+}
+.supplier-yingu-solar-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: -200px -312px;
+  width: 200px;
+  height: 96px;
+}
+.supplier-zero-cost-solar-lg {
+  background-image: url(../images/supplier-logos-lg.png);
+  background-position: 0px -1080px;
+  width: 200px;
+  height: 92px;
+}
