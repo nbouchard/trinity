@@ -66,6 +66,7 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css:dev',
         'Process and compile our CSS for local development.',
         [
+            'resize-std',
             'newer:sprite:suppliers',
             'newer:sprite:utilities',
             'sass',
@@ -77,6 +78,7 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css:devwp',
         'Process and compile our CSS for distribution to DevWP.',
         [
+            'resize-std',
             'newer:sprite:supplierswp',
             'newer:sprite:utilitieswp',
             'sass',
@@ -88,11 +90,27 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css:dist',
         'Process and compile our CSS for distribution to GH Pages.',
         [
+            'resize-std',
             'newer:sprite:suppliers',
             'newer:sprite:utilities',
             'sass',
             'autoprefixer',
             'cssmin',
+        ]
+    );
+
+    // Supplier/Utility Image Resizing Tasks
+    grunt.registerTask('resize-all',
+        'Process and resize all of our images.',
+        [
+            'image_resize',
+        ]
+    );
+    grunt.registerTask('resize-std',
+        'Process and resize all of our images.',
+        [
+            'image_resize:suppliers',
+            'image_resize:utilities',
         ]
     );
 

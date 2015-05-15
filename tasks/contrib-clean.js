@@ -14,6 +14,12 @@ module.exports = function(grunt) {
                 'lib/images/utility-logos.png',
                 'dist/images/supplier-logos.png',
                 'dist/images/utility-logos.png',
+                'lib/images/sprites/size-standard/supplier-logos/*',
+                'lib/images/sprites/size-standard/utility-logos/*',
+                'lib/images/sprites/size-small/supplier-logos/*',
+                'lib/images/sprites/size-small/utility-logos/*',
+                'lib/images/sprites/size-large/supplier-logos/*',
+                'lib/images/sprites/size-large/utility-logos/*',
             ]
         },
         dist: {

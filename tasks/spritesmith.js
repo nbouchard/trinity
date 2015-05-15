@@ -1,9 +1,8 @@
-
 module.exports = function(grunt) {
 
     grunt.config('sprite', {
         suppliers: {
-            src: 'lib/images/sprites/supplier-logos/*.png',
+            src: 'lib/images/sprites/size-standard/supplier-logos/*.png',
             dest: 'lib/images/supplier-logos.png',
             destCss: 'lib/styles/generated/_supplier-logos.scss',
             imgPath: '../images/supplier-logos.png',
@@ -15,7 +14,7 @@ module.exports = function(grunt) {
             }
         },
         utilities: {
-            src: 'lib/images/sprites/utility-logos/*.png',
+            src: 'lib/images/sprites/size-standard/utility-logos/*.png',
             dest: 'lib/images/utility-logos.png',
             destCss: 'lib/styles/generated/_utility-logos.scss',
             imgPath: '../images/utility-logos.png',
@@ -27,7 +26,7 @@ module.exports = function(grunt) {
             }
         },
         supplierswp: {
-            src: 'lib/images/sprites/supplier-logos/*.png',
+            src: 'lib/images/sprites/size-standard/supplier-logos/*.png',
             dest: 'lib/images/supplier-logos.png',
             destCss: 'lib/styles/generated/_supplier-logos.scss',
             imgPath: '/wp-content/themes/ChooseEnergyTheme/images/supplier-logos.png',
@@ -39,7 +38,7 @@ module.exports = function(grunt) {
             }
         },
         utilitieswp: {
-            src: 'lib/images/sprites/utility-logos/*.png',
+            src: 'lib/images/sprites/size-standard/utility-logos/*.png',
             dest: 'lib/images/utility-logos.png',
             destCss: 'lib/styles/generated/_utility-logos.scss',
             imgPath: '/wp-content/themes/ChooseEnergyTheme/images/utility-logos.png',
