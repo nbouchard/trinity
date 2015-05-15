@@ -66,9 +66,8 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css:dev',
         'Process and compile our CSS for local development.',
         [
-            'resize-std',
-            'newer:sprite:suppliers',
-            'newer:sprite:utilities',
+            'resize:all',
+            'sprite:all',
             'sass',
             'autoprefixer',
         ]
@@ -78,9 +77,8 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css:devwp',
         'Process and compile our CSS for distribution to DevWP.',
         [
-            'resize-std',
-            'newer:sprite:supplierswp',
-            'newer:sprite:utilitieswp',
+            'resize:all',
+            'sprite:all:wp',
             'sass',
             'autoprefixer',
         ]
@@ -90,9 +88,8 @@ module.exports = function(grunt) {
     grunt.registerTask('compile-css:dist',
         'Process and compile our CSS for distribution to GH Pages.',
         [
-            'resize-std',
-            'newer:sprite:suppliers',
-            'newer:sprite:utilities',
+            'resize:all',
+            'sprite:all',
             'sass',
             'autoprefixer',
             'cssmin',
@@ -100,17 +97,53 @@ module.exports = function(grunt) {
     );
 
     // Supplier/Utility Image Resizing Tasks
-    grunt.registerTask('resize-all',
+    grunt.registerTask('resize:all',
         'Process and resize all of our images.',
         [
             'image_resize',
         ]
     );
-    grunt.registerTask('resize-std',
-        'Process and resize all of our images.',
+    grunt.registerTask('resize:std',
+        'Process and resize standard size images.',
         [
             'image_resize:suppliers',
             'image_resize:utilities',
+        ]
+    );
+    grunt.registerTask('sprite:all',
+        'Sprite all images (non-WordPress).',
+        [
+            'newer:sprite:suppliers',
+            'newer:sprite:utilities',
+            'newer:sprite:suppliers_sm',
+            'newer:sprite:utilities_sm',
+            'newer:sprite:suppliers_lg',
+            'newer:sprite:utilities_lg',
+        ]
+    );
+    grunt.registerTask('sprite:all:wp',
+        'Sprite all images (WordPress).',
+        [
+            'newer:sprite:supplierswp',
+            'newer:sprite:utilitieswp',
+            'newer:sprite:supplierswp_sm',
+            'newer:sprite:utilitieswp_sm',
+            'newer:sprite:supplierswp_lg',
+            'newer:sprite:utilitieswp_lg',
+        ]
+    );
+    grunt.registerTask('sprite:std',
+        'Sprite standard size images (non-WordPress).',
+        [
+            'newer:sprite:suppliers',
+            'newer:sprite:utilities',
+        ]
+    );
+    grunt.registerTask('sprite:std:wp',
+        'Sprite standard size images (WordPress).',
+        [
+            'newer:sprite:supplierswp',
+            'newer:sprite:utilitieswp',
         ]
     );
 
