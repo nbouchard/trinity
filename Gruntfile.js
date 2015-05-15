@@ -21,6 +21,7 @@ module.exports = function(grunt) {
         [
             'clean:dist',
             'clean:sprites',
+            'copy:paths',
             'compile-css:dev',
             'compile-html',
             'copy:dist',
@@ -33,6 +34,7 @@ module.exports = function(grunt) {
         [
             'clean:dist',
             'clean:sprites',
+            'copy:pathswp',
             'compile-css:devwp',
             'compile-html',
             'copy:dist',
@@ -45,6 +47,7 @@ module.exports = function(grunt) {
         [
             'clean:dist',
             'clean:sprites',
+            'copy:paths',
             'compile-css:dist',
             'compile-html',
             'copy:dist',

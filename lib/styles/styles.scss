@@ -1,14 +1,5 @@
 @charset 'utf-8';
 
-// Set up File Paths
-$icon-font-path: '../fonts/';
-$fa-font-path: '../fonts';
-$ce-font-path: '../fonts/';
-// WordPress File Paths
-//$icon-font-path: '/wp-content/themes/ChooseEnergyTheme/fonts/';
-//$fa-font-path: '/wp-content/themes/ChooseEnergyTheme/fonts';
-//$ce-font-path: '/wp-content/themes/ChooseEnergyTheme/fonts/';
-
 // Import all Globals
 @import 'base/choose';
 

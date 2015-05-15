@@ -1,5 +1,9 @@
 @charset 'utf-8';
 
+// Import File Path Variables
+// Grunt moves the proper SCSS paths file into place prior to SCSS compilation
+@import '../generated/paths';
+
 // Full Reset + Mixins
 @import 'vendors/bourbon';         // Bourbon.io Mixin Library
 @import 'vendors/breakpoint';      // Breakpoint Media Queries Framework
