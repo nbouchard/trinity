@@ -527,52 +527,52 @@ h4.ceux-heading {
 }
 
 .supplier-startex {
-    background: url('../images/sprites/supplier-logos/startex-power.png') center center no-repeat;
+    background: url('#{$image-path}sprites/size-standard/supplier-logos/startex-power.png') center center no-repeat;
     background-size: contain;
 }
 
 .supplier-txu {
-    background: url('../images/sprites/supplier-logos/txu-energy.png') center center no-repeat;
+    background: url('#{$image-path}sprites/size-standard/supplier-logos/txu-energy.png') center center no-repeat;
     background-size: contain;
 }
 
 .supplier-champion {
-    background: url('../images/sprites/supplier-logos/champion-energy.png') center center no-repeat;
+    background: url('#{$image-path}sprites/size-standard/supplier-logos/champion-energy.png') center center no-repeat;
     background-size: contain;
 }
 
 .editorial-cooking-with-gas {
-    background: url('../images/placeholders/cooking_with_gas.jpg') center center no-repeat;
+    background: url('#{$image-path}placeholders/cooking_with_gas.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-energy-at-dusk {
-    background: url('../images/placeholders/energy_at_dusk.jpg') center center no-repeat;
+    background: url('#{$image-path}placeholders/energy_at_dusk.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-brand-positioning {
-    background: url('../images/placeholders/brand_positioning.jpg') center center no-repeat;
+    background: url('#{$image-path}placeholders/brand_positioning.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-brand-attributes {
-    background: url('../images/placeholders/brand_attributes.jpg') center center no-repeat;
+    background: url('#{$image-path}placeholders/brand_attributes.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-company-vision {
-    background: url('../images/placeholders/company_vision.jpg') center center no-repeat;
+    background: url('#{$image-path}placeholders/company_vision.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-company-mission {
-    background: url('../images/placeholders/company_mission.jpg') center center no-repeat;
+    background: url('#{$image-path}placeholders/company_mission.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .editorial-company-promise {
-    background: url('../images/placeholders/company_promise.jpg') center center no-repeat;
+    background: url('#{$image-path}placeholders/company_promise.jpg') center center no-repeat;
     background-size: cover;
 }
 

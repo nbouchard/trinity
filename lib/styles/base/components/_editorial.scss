@@ -134,7 +134,7 @@
 
     @if $color == 'grid' {
         @include editorial-text-color('grid');
-        background: url('../images/patterns/grid-trans-blue.png') repeat;
+        background: url('#{$image-path}patterns/grid-trans-blue.png') repeat;
     }
 }
 
