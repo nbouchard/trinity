@@ -114,6 +114,7 @@ hr {
     }
 }
 
+select,
 input,
 textarea {
     &.input-superwide {
@@ -392,16 +393,19 @@ input[type=range]:disabled::-ms-thumb {
     }
 
     .dropdown-menu {
-        @include box-sizing(border-box);
         display: none;
         position: absolute;
         top: 100%;
-        right: 0px;
+        right: -1px;
         z-index: 1000;
         border: 1px solid $color-gray-ghost;
-        border-top: 1px solid transparent;
         background-color: $color-white-pure;
+        box-sizing: content-box;
         min-width: 100%;
+
+        &.is-open {
+            display: block;
+        }
 
         .dropdown-menu-list {
             list-style: none;
@@ -454,5 +458,91 @@ input[type=range]:disabled::-ms-thumb {
                 }
             }
         }
+    }
+}
+
+// Custom dropdown style for use with angular-ui-select
+.ce-dropdown-ui-select {
+    margin-bottom: 1em;
+    position: relative;
+
+    .selectize-input {
+        @include box-sizing(border-box);
+        border: 1px solid $color-gray-ghost;
+        background: $color-white-pure;
+        color: $color-gray-charcoal;
+        position: relative;
+        height: 2.5em;
+
+        &:after {
+            @include ce-button('dark');
+            @include icon;
+            font-size: $font-size-smaller;
+            height: 3.125em;
+            width: 3.125em;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            padding: 0.5em;
+            content: $c-icon-chevron-down;
+            text-align: center;
+            line-height: 2;
+            z-index: 5;
+        }
+    }
+
+    .ui-select-search,
+    .ui-select-match {
+        box-sizing: border-box;
+        border: none;
+        margin: 0;
+        padding: 0.5em 3em 0.5em 0.5em;
+        height: 100%;
+
+        span {
+            white-space:nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            max-width: 100%;
+        }
+    }
+
+    .ui-select-choices-content {
+        position: absolute;
+        top: 100%;
+        right: 0px;
+        z-index: 1000;
+        border: 1px solid $color-gray-ghost;
+        border-top:1px solid transparent;
+        background-color: $color-white-pure;
+        box-sizing: border-box;
+        min-width: 100%;
+
+        .menu-item {
+            padding: 0.5em 0.625em;
+            display: block;
+            text-decoration: none;
+            font-weight: $font-weight-body;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-white-lily;
+            }
+        }
+    }
+
+    .ui-select-offscreen {
+      clip: rect(0 0 0 0) !important;
+      width: 1px !important;
+      height: 1px !important;
+      border: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      outline: 0 !important;
+      left: 0px !important;
+      top: 0px !important;
     }
 }

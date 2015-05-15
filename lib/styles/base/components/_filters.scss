@@ -100,6 +100,8 @@
     }
 
     .filter-utility {
+        padding-right: 1.3em;
+
         .filter-selected-utility {
             margin: 10px 0;
         }
@@ -139,13 +141,14 @@
         padding: 0.5em 1.3em;
 
         .ce-label {
-            @include cg-1of4(true, false);
+            @include cg-1of3(true, false);
         }
 
         .c-icon-electricity:before {
             color: $color-yellow-butter-light;
         }
 
+        .c-icon-naturalgas:before,
         .c-icon-nat-gas:before {
             color: $color-red-cinnabar;
         }
@@ -267,6 +270,12 @@
         }
 
         .filter-supplier {
+            &.is-open {
+                .checkbox-menu {
+                    display: block;
+                }
+            }
+
             .ce-label {
                 margin: 0;
             }
