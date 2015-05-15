@@ -1052,6 +1052,10 @@
                 padding-top: 2em;
                 width: 100%;
                 border-top: 1px solid $color-white-lilac;
+                
+                a {
+                    cursor: pointer;
+                }
 
                 img {
                     margin: 0;
