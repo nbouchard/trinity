@@ -1,16 +1,18 @@
 // Checkout User Interface
 
 
-//.ce-editorial variant class for Checkout page. 
-// TODO (astillwell): Move this to ChooseUX and respective styles.
-// TODO (astillwell): Update .content-editorial to .ce-editorial with updated styles
+//.ce-editorial variant class for Checkout page.
+.ce-editorial,
 .content-editorial {
     &.v-checkout {
         min-height: 14em;
-        z-index: -1;
+        z-index: $z-underlay-negative;
+        .editorial-container,
         .content-editorial-container {
             padding: 9em 0 0;
         }
+
+        .editorial-headline,
         .content-editorial-headline {
             @include cg-7of8(false, false);
             padding: 0 0 0 1em;
@@ -23,62 +25,80 @@
         padding-top: 0;
         padding-bottom: 0;
     }
+
     @include cg-row(true, true);
     font-size: 1.4em;
+
     .a-label {
         @include cg-1of4(true, false);
         text-align: right;
         padding:0 .75em 0 0;
         line-height: 2em;
+        min-height: 1em;
     }
+
     .a-space {
         @include cg-1of4(true, false);
         padding:0 .75em 0 0;
     }
+
     .a-content  {
         @include cg-3of4(true, false);
         padding: 0;
+
         .input {
             width: 100%;
             height:2em;
             border-left:.3em solid;
+            border-color: $color-green-shamrock;
+            margin: 0;
 
             &.ng-dirty.ng-invalid {
                 border-color: #d9534f;
             }
-            &.ng-valid {
-                border-color: $color-green-shamrock;
-            }
-
         }
+
         &.with-button {
             .input {
                 @include cg-7of8(false, true);
             }
+
             .btn {
                 @include cg-1of8(false, false);
                 height: 2em;
             }
         }
+
         .a-text {
             width:100%;
         }
-    } 
+
+        .ce-label-text {
+            padding: 0.25em;
+        }
+    }
+
     .a-help {
         font-size: $font-size-smaller;
         color: #d9534f;
+        margin: 0.5em 1em;
+        display: block;
     }
+
     &.v-auth-forms {
         @include cg-row(false, false);
+
         .a-label {
             @include cg-1of4(false, false);
         }
+
         .a-content {
             @include cg-3of4(false, false);
             font-size: 1.1em;
             font-weight: $font-weight-headline;
-        }        
+        }
     }
+
     &.v-birthday {
         .a-content {
             .input {
@@ -86,16 +106,18 @@
             }
         }
     }
+
     &.v-radio {
         .a-label {
             line-height: 1.3em;
         }
-    }   
+    }
+
     &.v-checkbox {
         .a-label {
             line-height: 1.3em;
         }
-    }    
+    }
 }
 
 // .checkout            - Encapsulates complete Checkout experience
@@ -133,7 +155,7 @@
     width: 100%;
 
     .checkout-step {
-        @include cg-row(false, true);        
+        @include cg-row(false, true);
         display: inline-block;
         float: left;
         padding: 0;
@@ -143,16 +165,18 @@
     .step-group {
         @include cg-row(false, true);
         display: none;
-        
+
         .label {
             @include cg-1of4(false, true);
             text-align: right;
             line-height: 1.7em;
         }
+
         .step-title {
             @include cg-1of2(false, false);
             line-height: 1.7em;
         }
+
         .step-progress {
             @include cg-1of4(false, true);
             text-align: right;
@@ -192,34 +216,38 @@
     .checkout-label {
         display: block;
     }
+
     .checkout-label-text {
         @include cg-1of4(true, false);
         text-align: right;
         padding:0 .75em 0 0;
         line-height: 2em;
+
         &.checkout-checkbox {
             line-height: 1.5em;
         }
     }
+
     .checkout-input-container {
         @include cg-3of4(true, false);
         padding: 0;
+
         .checkout-input {
             width: 100%;
             height:2em;
             border-left:.3em solid;
+            border-color: $color-green-shamrock;
+
             &.ng-dirty.ng-invalid {
                 border-color: #d9534f;
             }
-            &.ng-valid {
-                border-color: $color-green-shamrock;
-            }
-
         }
+
         .checkout-text {
             width:100%;
         }
     }
+
     .checkout-help {
         font-size: $font-size-smaller;
         color: #d9534f;
@@ -236,9 +264,12 @@
 
     .checkout-space {
         @include cg-1of4(false, true);
+        min-height: 1em;
     }
+
     .checkout-previous {
         @include cg-1of4(false, true);
+        min-height: 1em;
 
         .checkout-action {
             @include ce-button('dark');
@@ -247,6 +278,7 @@
 
     .checkout-next {
         @include cg-1of2(false, true);
+        min-height: 1em;
 
         .checkout-action {
             @include ce-button('primary');
@@ -257,6 +289,7 @@
     .checkout-finish {
         display: inline-block;
         float: right;
+        min-height: 1em;
 
         .checkout-action {
             @include ce-button('bright');
@@ -286,6 +319,7 @@
         color: $color-white-pure;
         font-size: 1.85em;
         padding: .75em;
+
         i {
             margin-right: .35em;
         }
