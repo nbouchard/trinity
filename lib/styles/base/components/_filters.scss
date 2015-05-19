@@ -40,6 +40,7 @@
 
         .filter-toggle-bar {
             background: $color-green-cruise-light;
+            padding: 0.5em 0;
         }
 
         .filter-toggle-content {
@@ -51,9 +52,8 @@
             text-align: center;
             margin: 0px auto;
             max-width: 12em;
-            background: $color-white-pure;
-            color: $color-green-shamrock;
-            font-size: $font-size-smaller;
+            color: $color-green-jewel;
+            font-size: $font-size-large;
             font-weight: $font-weight-body-strong;
             cursor: pointer;
         }
