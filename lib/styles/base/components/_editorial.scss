@@ -144,6 +144,8 @@
     @include editorial-height('standard');
     position: relative;
     width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     .content-editorial-container,
     .editorial-container {
@@ -781,5 +783,22 @@
 
     .editorial-container {
         padding: 0;
+    }
+}
+
+.v-ambassador {
+    @include editorial-bg-color('light');
+
+    .ambassador-icon {
+        text-align: center;
+
+        svg {
+            fill: $color-orange-sun;
+            width: 20em;
+        }
+    }
+
+    .cta-buttons {
+        text-align: center;
     }
 }

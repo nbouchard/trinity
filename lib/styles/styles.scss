@@ -32,17 +32,17 @@
 @import 'base/components/reviews';
 @import 'base/components/location';
 
+// CE Content Experience Elements
+@import 'base/components/editorial';
+@import 'base/components/testimonials';
+@import 'base/components/maps';
+
 // CE Shopping Elements
 @import 'base/components/plans';
 @import 'base/components/filters';
 @import 'base/components/ratings';
 @import 'base/components/upsell';
 @import 'base/components/checkout';
-
-// CE Content Experience Elements
-@import 'base/components/editorial';
-@import 'base/components/testimonials';
-@import 'base/components/maps';
 
 // Project-Specific Styles
 // TODO: Deprecate and remove

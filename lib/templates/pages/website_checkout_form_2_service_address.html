@@ -7,7 +7,21 @@ tpl:
   desc: Page Desc
   title: Website Page
 ---
+
+{{> cb_checkout_header}}
+
 <div class="checkout">
+    <div class="checkout-forms">
+        <div class="checkout-section">
+            {{> cb_checkout_form_part2}}
+        </div>
+    </div>
+
+    {{> cb_checkout_cart}}
+
+</div>
+
+<!-- <div class="checkout">
     <div class="checkout-forms">
         <form>
             <ol class="checkout-steps">
@@ -203,4 +217,4 @@ tpl:
             </li>
         </ul>
     </div>
-</div>
+</div> -->

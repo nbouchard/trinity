@@ -33,6 +33,13 @@ node_modules
 # Ignore distributable files
 dist
 
-# Ignore generated logo sprites
+# Ignore generated logo sprites & processed logos
+lib/images/supplier-logos-lg.png
+lib/images/supplier-logos-sm.png
 lib/images/supplier-logos.png
+lib/images/utility-logos-lg.png
+lib/images/utility-logos-sm.png
 lib/images/utility-logos.png
+lib/images/sprites/size-large/*.png
+lib/images/sprites/size-small/*.png
+lib/images/sprites/size-standard/*.png
