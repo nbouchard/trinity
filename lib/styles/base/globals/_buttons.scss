@@ -148,6 +148,30 @@
         }
     }
 
+    // Social Media Button Type
+    @if $btn-type == 'social' {
+        background: $color-gray-chateau;
+        color: $color-white-pure;
+        border: 0px;
+        border-radius: 5px;
+        text-align: right;
+        padding-left: 3em;
+        min-width: 10em;
+        height: 2.5em;
+        position: relative;
+        line-height: $font-size-largest;
+        margin: 0 0.5em;
+
+        &:before {
+            @include icon;
+            position: absolute;
+            font-size: $font-size-large;
+            left: .75em;
+            top: 50%; // this + next line vertically centers the icon in the box
+            @include prefixer(transform, translateY(-0.5em), webkit ms);
+        }
+    }
+
     // Modify Button Size
     @if $btn-size == 'extrahuger' {
         font-size: $font-size-extrahuger;
@@ -256,6 +280,33 @@ input[type='submit'] {
 
     &.btn-tinier {
         font-size: $font-size-tinier;
+    }
+
+    &.btn-facebook {
+        @include ce-button('social', 'large');
+        background: $color-brand-facebook;
+
+        &:before {
+            content: $c-icon-facebook;
+        }
+    }
+
+    &.btn-twitter {
+        @include ce-button('social', 'large');
+        background: $color-brand-twitter;
+
+        &:before {
+            content: $c-icon-twitter;
+        }
+    }
+
+    &.btn-email {
+        @include ce-button('social', 'large');
+        background: $color-orange-sun;
+
+        &:before {
+            content: $c-icon-email;
+        }
     }
 }
 

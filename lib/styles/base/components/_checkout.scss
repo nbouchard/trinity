@@ -18,7 +18,14 @@
             padding: 0 0 0 1em;
         }
     }
+
+    &.v-checkout-confirmation {
+        z-index: $z-underlay-negative;
+        @include editorial-bg-color($color: 'dark');
+        background-position-y: 50%;
+    }
 }
+
 .ce-form-group {
     //this is a self contained form element and it's label.
     input[type='number'] {
@@ -322,6 +329,133 @@
 
         i {
             margin-right: .35em;
+        }
+    }
+}
+
+// Checkout Confirmation Styles
+//
+// .confirmation                - Encapsulates the whole confirmation page
+// .confirmation-content        - Encapsulates the main confirmation page content
+// .confirmation-receipt        - Encapsulates the receipt sidebar
+//
+// No styleguide reference
+
+.confirmation {
+    @include cg-row(true, true);
+}
+
+.confirmation-content {
+    @include breakpoint($mq-sm-max) {
+        @include cg-item(true, true);
+    }
+
+    @include breakpoint($mq-md-min) {
+        @include cg-5of8(true, true, true);
+        padding: 2em;
+    }
+
+    .content-section {
+        margin-bottom: 4em;
+    }
+
+    .btn-cta {
+        text-align: center;
+        padding: 2em 0;
+        font-size: $font-size-larger;
+    }
+}
+
+.confirmation-receipt {
+    @include breakpoint($mq-sm-max) {
+        @include cg-item(true, true);
+    }
+
+    @include breakpoint($mq-md-min) {
+        @include cg-3of8(true, true, true);
+        float: right;
+        margin-top: -6em;
+    }
+
+    .receipt-header {
+        @include cg-row(true, false);
+        background-color: $color-green-shamrock;
+        color: $color-white-pure;
+        line-height: 1.2em;
+        font-size: 1.85em;
+        padding: .75em;
+
+        i {
+            margin-right: .75em;
+            vertical-align: middle;
+
+            &:before {
+                float: left;
+            }
+        }
+    }
+
+    .receipt-details {
+        background-color: $color-white-lily;
+        border: 1px solid $color-gray-ghost;
+        padding: 1em;
+        margin-bottom: 2em;
+    }
+
+    .plan-item {
+        background-color: $color-white-pure;
+        border: 1px solid $color-gray-ghost;
+        padding: 0.5em;
+        margin-bottom: 1em;
+
+        .plan-card {
+            position: relative;
+            padding-left: 4em;
+            padding-right: 0.5em;
+            color: $color-blue-curious;
+            text-align: right;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 50%; // this + next line vertically centers the icon in the box
+                @include prefixer(transform, translateY(-0.5em), webkit ms);
+                font-size: $font-size-huger;
+                padding: 0 0.45em;
+                color: $color-green-shamrock;
+            }
+
+            .plan-name {
+                font-size: $font-size-largest;
+                font-weight: $font-weight-headline;
+            }
+
+            .plan-utility {
+                font-size: $font-size-large;
+            }
+        }
+    }
+
+    .personal-details {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+
+        .detail-item {
+            margin-top: 1em;
+        }
+
+        .detail-value {
+            display: block;
+            font-size: $font-size-largest;
+            padding: 0 0.4em;
+        }
+
+        .detail-label {
+            display: block;
+            font-size: $font-size-smaller;
+            border-top: 1px solid $color-gray-ghost;
+            padding: 0.5em 1em;
         }
     }
 }

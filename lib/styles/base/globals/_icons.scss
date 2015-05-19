@@ -35,6 +35,9 @@
 $c-icon-sun: '\e02d';
 $c-icon-chevron-down: '\e019';
 $c-icon-chevron-up: '\e01c';
+$c-icon-facebook: '\e031';
+$c-icon-twitter: '\e032';
+$c-icon-email: '\e033';
 
 //Icons
 .c-icon-dollar:before {
@@ -235,4 +238,16 @@ $c-icon-chevron-up: '\e01c';
 
 .c-icon-heating-oil:before {
   content: '\e030';
+}
+
+.c-icon-facebook:before {
+  content: '\e031';
+}
+
+.c-icon-twitter:before {
+  content: '\e032';
+}
+
+.c-icon-email-envelope:before {
+  content: '\e033';
 }

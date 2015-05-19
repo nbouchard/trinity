@@ -7,4 +7,13 @@ tpl:
   desc: Page Desc
   title: Website Page
 ---
-<div class="cg-row">Receipt</div>
+
+{{> cb_confirmation_header}}
+
+<div class="confirmation">
+    {{> cb_confirmation_body}}
+
+    {{> cb_confirmation_receipt}}
+</div>
+
+{{> cb_ambassador_cta}}
