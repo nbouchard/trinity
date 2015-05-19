@@ -7,6 +7,7 @@
     &.v-checkout {
         min-height: 14em;
         z-index: $z-underlay-negative;
+
         .editorial-container,
         .content-editorial-container {
             padding: 9em 0 0;
@@ -22,7 +23,8 @@
     &.v-checkout-confirmation {
         z-index: $z-underlay-negative;
         @include editorial-bg-color($color: 'dark');
-        background-position-y: 50%;
+        background: url('#{$image-path}photography/City_beach_at_night.jpg') center center no-repeat;
+        background-size: cover;
     }
 }
 
@@ -384,6 +386,7 @@
         line-height: 1.2em;
         font-size: 1.85em;
         padding: .75em;
+        height: 2.7em;              // 6em height / (1.85em font size * 1.2em line height)
 
         i {
             margin-right: .75em;
@@ -398,6 +401,7 @@
     .receipt-details {
         background-color: $color-white-lily;
         border: 1px solid $color-gray-ghost;
+        border-top: 0px;
         padding: 1em;
         margin-bottom: 2em;
     }
@@ -433,6 +437,14 @@
             .plan-utility {
                 font-size: $font-size-large;
             }
+        }
+
+        .c-icon-electricity:before {
+            color: $color-yellow-butter-light;
+        }
+
+        .c-icon-naturalgas:before {
+            color: $color-red-cinnabar;
         }
     }
 
