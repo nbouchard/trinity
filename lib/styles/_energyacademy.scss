@@ -716,6 +716,7 @@
                 height: auto;
                 border: 1px solid $color-gray-ghost;
                 text-align: center;
+                cursor: pointer;
 
                 &:first-child {
                     width: auto;
@@ -730,6 +731,10 @@
                 span {
                     padding: 0 9px;
                     line-height: 2.4em;
+                }
+                a {
+                    font-weight: $font-weight-headline;
+                    color: $color-green-shamrock;
                 }
             }
 
@@ -1047,6 +1052,10 @@
                 padding-top: 2em;
                 width: 100%;
                 border-top: 1px solid $color-white-lilac;
+                
+                a {
+                    cursor: pointer;
+                }
 
                 img {
                     margin: 0;
