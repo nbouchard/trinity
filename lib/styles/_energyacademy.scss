@@ -867,6 +867,8 @@
 
             .tags {
                 text-align: right;
+                max-height: 1.4em;
+                overflow: hidden;
             }
         }
 
