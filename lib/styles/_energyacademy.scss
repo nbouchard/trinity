@@ -556,12 +556,16 @@
                     display: block;
                     float: left;
                     line-height: normal;
+                    font-weight: $font-weight-headline;
+                    font-size: 1.2em;
+                    margin-bottom: .5em;
                 }
 
                 dd {
                     display: block;
                     float: left;
                     line-height: normal;
+                    -webkit-margin-start: 0;
                 }
 
                 .article {
