@@ -1,0 +1,61 @@
+.upsell-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $z-overlay-high;
+    overflow: scroll;
+    background: rgba(255, 255, 255, 0.5);
+
+    .upsell-header {
+        background: $color-blue-curious;
+        height: (4em + (2 * $grid-gutter-width));
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-right: 6em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .upsell-header-name {
+        @include cg-row();
+        padding: $grid-gutter-width;
+        height: 4em;
+        line-height: 4em;
+
+        .upsell-name-container {
+            display: inline-block;
+            font-size: $font-size-huge;
+            line-height: inherit;
+        }
+    }
+
+    .upsell-closer {
+        position: absolute;
+        top: (2 * $grid-gutter-width);
+        right: (2 * $grid-gutter-width);
+        color: $color-white-pure;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $color-orange-apricot-light;
+        }
+    }
+
+    .upsell-message {
+        margin: 6em auto;
+        background: #fff;
+        padding: 1em;
+        max-width: 400px;
+        border-radius: 1em;
+        border: 2px solid $color-orange-apricot-light;
+        text-align: center;
+
+        button {
+            margin: auto;
+        }
+    }
+}

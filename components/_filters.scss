@@ -3,89 +3,7 @@
 // These define the plan filters components used in the Comparison Shopping App.
 //
 // No styleguide reference.
-.plan-filters {
-    @include cg-row();
-    display: none;
 
-    &.is-active {
-        display: block;
-    }
-}
-
-.plan-filter {
-    @include cg-1of8();
-}
-
-// Filter Stacks for Filter Nav
-.filter-stack {
-    @include box-sizing(border-box);
-    position: relative;
-    display: inline-block;
-    margin: 0 0.5em;
-    height: 6em;
-    vertical-align: middle;
-    text-align: center;
-
-    .filter-preview {
-        display: block;
-        padding-top: 0.5em;
-        font-size: $font-size-smaller;
-    }
-
-    .filter-units {
-        display: block;
-        padding-top: 0.5em;
-        font-size: $font-size-smaller;
-    }
-
-    .filter-selector {
-        @include box-sizing(border-box);
-        display: block;
-        padding: 0 1em;
-        min-height: 4.5em;
-        border: 1px solid $color-gray-ghost;
-        line-height: 4.5em;
-        cursor: pointer;
-
-        .filter-select-image {
-            display: inline-block;
-            text-indent: -9999px;
-            vertical-align: middle;
-        }
-
-        .filter-select-option {
-            vertical-align: middle;
-        }
-    }
-
-    .filter-input {
-        input {
-            width: 8em;
-            text-align: center;
-        }
-    }
-
-    .filter-label {
-        position: absolute;
-        bottom: 0;
-        display: block;
-        width: 100%;
-        color: $color-gray-chateau;
-        text-align: center;
-        font-size: $font-size-smaller;
-    }
-}
-
-// Shopping Header Filter Nav
-.shop-header {
-    @include cg-row();
-    text-align: center;
-
-    .filter-nav {
-        display: inline-block;
-        padding: 2em 0;
-    }
-}
 
 // Shopping Filters
 .filter-list {
@@ -98,5 +16,393 @@
     .filter-list-item {
         margin: 0;
         padding: 0;
+    }
+}
+
+// Shopping Header Filter
+.ce-shopping-filters {
+    @include cg-row();
+
+    .filter-section {
+        h4 {
+            font-size: $font-size-normal;
+        }
+    }
+
+    .filter-section-main {
+        padding: 20px;
+        background: $color-white-pure;
+    }
+
+    .filter-section-refine {
+        background: $color-white-pure;
+        background: rgba(255, 255, 255, 0.9);
+
+        .filter-toggle-bar {
+            background: $color-green-cruise-light;
+            padding: 0.5em 0;
+        }
+
+        .filter-toggle-content {
+            padding: 20px;
+            display: none;
+        }
+
+        .show-more, .show-less {
+            text-align: center;
+            margin: 0px auto;
+            max-width: 12em;
+            color: $color-green-jewel;
+            font-size: $font-size-large;
+            font-weight: $font-weight-body-strong;
+            cursor: pointer;
+        }
+
+        .show-more {
+            display: block;
+        }
+
+        .show-less {
+            display: none;
+        }
+
+        &.is-open {
+            .filter-toggle-content {
+                display: block;
+            }
+
+            .show-more {
+                display: none;
+            }
+
+            .show-less {
+                display: block;
+            }
+        }
+    }
+
+    .filter-row-spacer {
+        padding-bottom: 2em;
+        border-bottom: 1px solid $color-white-lilac;
+        margin-bottom: 1em;
+    }
+
+    .filter-preset-selections {
+        @include breakpoint($mq-md-max) {
+            @include clearfix();
+            margin-bottom: 1em;
+        }
+    }
+
+    .filter-location {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of2(true, true, true);
+        }
+
+         @include breakpoint($mq-lg-min) {
+            @include cg-1of6(true, true, true);
+            padding-left: 1.2em;
+        }
+
+        .filter-input {
+            margin: 10px 0;
+            font-size: $font-size-huge;
+            max-width: 4em;
+            padding: 5px 10px;
+            border-width: 1px;
+        }
+
+        .filter-preview {
+            display: block;
+        }
+    }
+
+    .filter-utility {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+
+        @include breakpoint($mq-md-max) {
+            .filter-selected-utility {
+                float: left;
+            }
+
+            .ce-dropdown {
+                float: left;
+                padding: 1.1em 2.5em;
+            }
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of2(true, true, true);
+        }
+
+         @include breakpoint($mq-lg-min) {
+            @include cg-1of6(true, true, true);
+            padding-right: 1.3em;
+        }
+
+        .filter-selected-utility {
+            margin: 10px 0;
+        }
+    }
+
+    .filter-energy-type,
+    .filter-building-type {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of2(true, true, true);
+        }
+
+        @include breakpoint($mq-md-max) {
+            padding-right: 3em;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            @include cg-1of3(true, true, true);
+        }
+
+        .ce-label {
+            @include cg-1of3(true, true, true);
+            font-size: 0.9em;
+            text-align: center;
+            padding: 0.5em;
+
+            &.disabled {
+                .icon:before {
+                    color: $color-gray-geyser;
+                }
+            }
+        }
+
+        .icon {
+            font-style: normal;
+            margin-bottom: 5px;
+            display: block;
+
+            &:before {
+                display: block;
+                font-size: $font-size-extrahuge;
+                padding-bottom: 10px;
+            }
+        }
+
+        .ce-label-text:before {
+            margin: 0;
+        }
+    }
+
+    .filter-energy-type {
+        @include breakpoint($mq-lg-min) {
+            padding: 0.5em 1.3em;
+        }
+
+        .c-icon-electricity:before {
+            color: $color-yellow-butter-light;
+        }
+
+        .c-icon-naturalgas:before,
+        .c-icon-nat-gas:before {
+            color: $color-red-cinnabar;
+        }
+
+        .c-icon-heating-oil:before {
+            color: $color-purple-royal;
+        }
+
+        .c-icon-solar:before {
+            color: $color-orange-sun;
+        }
+    }
+
+    .filter-building-type {
+        @include breakpoint($mq-lg-min) {
+            padding-left: 1.6em ;
+        }
+
+        .c-icon-res:before,
+        .c-icon-residential:before {
+            color: $color-orange-sun;
+        }
+
+        .c-icon-smallbusiness:before,
+        .c-icon-smb:before {
+            color: $color-green-shamrock;
+        }
+
+        .c-icon-com:before,
+        .c-icon-commercial:before {
+            color: $color-blue-curious;
+        }
+    }
+
+    .filter-compare-rate,
+    .filter-usage {
+        @include breakpoint($mq-md-min) {
+            @include cg-1of3(true, true, true);
+        }
+
+        text-align: center;
+
+        .ce-label {
+            width: 100%;
+            padding: 20px 0 0;
+        }
+
+        .textbox {
+            width: 4em;
+            height: auto;
+            padding: 0.25em 0.5em;
+            margin: 0 0.2em;
+            vertical-align: baseline;
+            font-size: $font-size-larger;
+        }
+
+        .range {
+            width: 100%;
+            display: block;
+            margin: 15px 0 0;
+        }
+    }
+
+    .filter-usage {
+        @include breakpoint($mq-md-min) {
+            float: right;
+        }
+    }
+
+    .filter-cta {
+        text-align: center;
+        padding-top: 1.5em;
+    }
+
+    .filter-plan-type,
+    .filter-contract-term {
+        .ce-label {
+            padding: 0;
+
+            @include breakpoint($mq-md-max) {
+                padding-right: 2em;
+            }
+        }
+
+        .ce-label-text {
+            padding: 0.5em 2px;
+            box-sizing: border-box;
+        }
+    }
+
+    .filter-plan-type {
+        @include breakpoint($mq-md-max) {
+            @include cg-item(true, true);
+        }
+
+         @include breakpoint($mq-lg-min) {
+            @include cg-1of6(true, true, true);
+        }
+    }
+
+    .filter-contract-term {
+        @include breakpoint($mq-md-max) {
+            @include cg-item(true, true);
+        }
+
+         @include breakpoint($mq-lg-min) {
+            @include cg-1of3(true, true, true);
+
+            .term-lengths {
+                @include prefixer(column-count, 3, webkit moz);
+                @include prefixer(column-gap, 5px, webkit moz);
+            }
+        }
+    }
+
+    .filter-cost-green,
+    .filter-rating {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+            .ce-label .ce-label-text {
+                width: 30%;
+            }
+
+            .range,
+            .filter-supplier,
+            .rating-widget {
+                width: 70%;
+            }
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of2(true, true, true);
+
+            .ce-label .ce-label-text {
+                width: 45%;
+            }
+
+            .range,
+            .filter-supplier,
+            .rating-widget {
+                width: 55%;
+            }
+        }
+
+        @include breakpoint($mq-lg-min) {
+            @include cg-1of4(true, true, true);
+        }
+
+        .ce-label {
+            width: 100%;
+            padding: 0;
+            margin: 18px 0;
+
+            .ce-label-text {
+                float: left;
+                padding: 0.625em 0.25em;
+                text-align: center;
+            }
+        }
+
+        .range,
+        .filter-supplier,
+        .rating-widget {
+            float: left;
+            margin: 0;
+        }
+
+        .range {
+            margin: 0.25em 0;
+        }
+
+        .rating-widget {
+            font-size: 1.5em;
+
+            .rating-value {
+                width: 100%;
+                color: $color-green-shamrock;
+            }
+        }
+
+        .filter-supplier {
+            &.is-open {
+                .checkbox-menu {
+                    display: block;
+                }
+            }
+
+            .ce-label {
+                margin: 0;
+            }
+
+            .ce-label-text {
+                width: auto;
+            }
+        }
     }
 }

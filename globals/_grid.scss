@@ -26,6 +26,7 @@
     }
 }
 
+// item = 1of1 = 2of2 = 3of3 = 4of4 = 5of5 = 6of6 = 8of8
 @mixin cg-item($v-padding: true, $h-padding: true) {
     @include box-sizing(border-box);
     width: 100%;
@@ -69,7 +70,31 @@
     }
 }
 
-@mixin cg-1of5 ($v-padding: true, $h-padding: true, $strict: false) {
+@mixin cg-1of6 ($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 16.66%;
+    } @else {
+        @include breakpoint($mq-sm) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-md) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 16.66%;
+        }
+
+        &.is-strict {
+            width: 16.66%;
+        }
+    }
+}
+
+@mixin cg-1of5($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
     @if $strict == true {
@@ -89,6 +114,7 @@
     }
 }
 
+// 1of4 = 2of8
 @mixin cg-1of4($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -109,6 +135,7 @@
     }
 }
 
+// 1of3 = 2of6
 @mixin cg-1of3($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -145,6 +172,27 @@
     }
 }
 
+@mixin cg-2of5($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 40%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 40%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 40%;
+        }
+
+        &.is-strict {
+            width: 40%;
+        }
+    }
+}
+
+// 1of2 = 2of4 = 3of6 = 4of8
 @mixin cg-1of2($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -161,6 +209,26 @@
 
         &.is-strict {
             width: 50%;
+        }
+    }
+}
+
+@mixin cg-3of5($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 60%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 60%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 60%;
+        }
+
+        &.is-strict {
+            width: 60%;
         }
     }
 }
@@ -185,6 +253,7 @@
     }
 }
 
+// 2of3 = 4of6
 @mixin cg-2of3($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -201,6 +270,7 @@
     }
 }
 
+// 3of4 = 6of8
 @mixin cg-3of4($v-padding: true, $h-padding: true, $strict: false) {
     @include cg-item($v-padding, $h-padding);
 
@@ -217,6 +287,50 @@
 
         &.is-strict {
             width: 75%;
+        }
+    }
+}
+
+@mixin cg-4of5($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 80%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 80%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 80%;
+        }
+
+        &.is-strict {
+            width: 80%;
+        }
+    }
+}
+
+@mixin cg-5of6 ($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 83.33%;
+    } @else {
+        @include breakpoint($mq-sm) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-md) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 83.33%;
+        }
+
+        &.is-strict {
+            width: 83.33%;
         }
     }
 }
@@ -285,9 +399,28 @@
     }
 }
 
+.cg-1of6 {
+    @include cg-1of6();
+
+    &.cg-padded {
+        @include cg-1of6(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-1of6(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-1of6(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-1of6(false, false);
+    }
+}
+
 .cg-1of5 {
     @include cg-1of5();
-
 
     &.cg-padded {
         @include cg-1of5(true, true);
@@ -327,7 +460,8 @@
     }
 }
 
-.cg-1of3 {
+.cg-1of3,
+.cg-2of6 {
     @include cg-1of3();
 
     &.cg-padded {
@@ -367,8 +501,30 @@
     }
 }
 
+.cg-2of5 {
+    @include cg-2of5();
+
+
+    &.cg-padded {
+        @include cg-2of5(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-2of5(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-2of5(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-2of5(false, false);
+    }
+}
+
 .cg-1of2,
 .cg-2of4,
+.cg-3of6,
 .cg-4of8 {
     @include cg-1of2();
 
@@ -386,6 +542,27 @@
 
     &.cg-nopad {
         @include cg-1of2(false, false);
+    }
+}
+
+.cg-3of5 {
+    @include cg-3of5();
+
+
+    &.cg-padded {
+        @include cg-3of5(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-3of5(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-3of5(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-3of5(false, false);
     }
 }
 
@@ -409,7 +586,8 @@
     }
 }
 
-.cg-2of3 {
+.cg-2of3,
+.cg-4of6 {
     @include cg-2of3();
 
     &.cg-padded {
@@ -450,6 +628,46 @@
     }
 }
 
+.cg-4of5 {
+    @include cg-4of5();
+
+    &.cg-padded {
+        @include cg-4of5(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-4of5(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-4of5(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-4of5(false, false);
+    }
+}
+
+.cg-5of6 {
+    @include cg-5of6();
+
+    &.cg-padded {
+        @include cg-5of6(true, true);
+    }
+
+    &.cg-vpad {
+        @include cg-5of6(true, false);
+    }
+
+    &.cg-hpad {
+        @include cg-5of6(false, true);
+    }
+
+    &.cg-nopad {
+        @include cg-5of6(false, false);
+    }
+}
+
 .cg-7of8 {
     @include cg-7of8();
 
@@ -474,6 +692,7 @@
 .cg-2of2,
 .cg-3of3,
 .cg-4of4,
+.cg-6of6,
 .cg-8of8 {
     @include cg-item();
 
@@ -492,20 +711,4 @@
     &.cg-nopad {
         @include cg-item(false, false);
     }
-}
-
-// A vertical rhythm grid overlay that allows you to test your vertical rhythm.
-//
-// Styleguide Foundations.VerticalRhythm
-#gridder {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('/images/ceux/gridder.png') repeat;
-    height: 100%;
-    width: 100%;
-    z-index: 999999;
 }

@@ -20,7 +20,6 @@
 ///   .element::selection {
 ///     background-color: #ffbb52;
 ///   }
-
 @mixin selection($current-selector: false) {
   @if $current-selector {
     &::-moz-selection {
@@ -30,6 +29,7 @@
     &::selection {
       @content;
     }
+
   } @else {
     ::-moz-selection {
       @content;

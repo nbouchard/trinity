@@ -24,10 +24,11 @@ input,
 textarea,
 select {
     @include box-sizing(border-box);
+    margin: 0 0.5em;
     padding: 0.625em;
-    border: 1px solid $color-gray-ghost;
+    border: 0.1em solid $color-gray-ghost;
     background: $color-white-pure;
-    color: $color-gray-chateau;
+    color: $color-gray-charcoal;
 
     @include placeholder {
         color: $color-white-lilac;
@@ -36,13 +37,27 @@ select {
 
     &:focus {
         outline: none;
-        border: 1px solid $color-green-shamrock;
+        border: 0.1em solid $color-green-shamrock;
         color: $color-gray-charcoal;
 
         @include placeholder {
             color: $color-gray-ghost;
             font-style: italic;
         }
+    }
+
+    &:disabled {
+        color: $color-gray-chateau;
+        background-color: $color-gray-geyser;
+    }
+
+    &:read-only {
+        color: $color-gray-chateau;
+        background-color: $color-white-lily;
+    }
+
+    &:required {
+        border: 0.1em solid $color-green-shamrock;
     }
 }
 
@@ -99,6 +114,7 @@ hr {
     }
 }
 
+select,
 input,
 textarea {
     &.input-superwide {
@@ -125,9 +141,18 @@ textarea {
         width: 100%;
         max-width: 6em;
     }
+
+    &.input-supershort {
+        width: 100%;
+        max-width: 4em;
+    }
 }
 
 label {
+    padding: 5px;
+    display: inline-block;
+    vertical-align: middle;
+
     &.label-superwide {
         width: 100%;
         max-width: 24em;
@@ -163,5 +188,371 @@ label {
 
     &:last-child {
         padding-bottom: 0;
+    }
+}
+
+//Radio buttons
+[type="radio"] {
+    @include visuallyhidden();
+}
+
+[type="radio"] + .ce-label-text {
+    display: block;
+    padding: 0.25em 0.5em;
+}
+
+[type="radio"] + .ce-label-text:before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    border-radius: 1em;
+    border: 0.2em solid $color-white-pure;
+    box-shadow: 0 0 0 0.15em $color-gray-geyser;
+    margin: 0 0.75em 0 0;
+    transition: 0.5s ease all;
+}
+
+[type="radio"]:checked + .ce-label-text:before {
+    background-color: $color-green-shamrock;
+}
+
+[type="radio"]:disabled + .ce-label-text:before {
+    border: 0;
+    background-color: $color-gray-geyser;
+}
+
+//color variations
+[type="radio"].dark + .ce-label-text:before {
+    box-shadow: 0 0 0 0.15em $color-gray-oslo;
+}
+
+[type="radio"].dark:disabled + .ce-label-text:before {
+    background-color: $color-gray-oslo;
+}
+
+//Checkboxes
+[type="checkbox"] {
+    @include visuallyhidden();
+}
+
+[type="checkbox"] + .ce-label-text {
+    display: block;
+    padding: 0.25em 0.5em;
+}
+
+[type="checkbox"] + .ce-label-text:before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    border: 0.2em solid $color-white-pure;
+    box-shadow: 0 0 0 0.15em $color-gray-geyser;
+    margin: 0 0.75em 0 0;
+    transition: 0.5s ease all;
+    background-color: $color-white-pure;
+}
+
+[type="checkbox"]:checked + .ce-label-text:before {
+    background-color: $color-green-shamrock;
+}
+
+[type="checkbox"]:disabled + .ce-label-text:before {
+    border: 0;
+    background-color: $color-gray-geyser;
+}
+
+//color variations
+[type="checkbox"].dark + .ce-label-text:before {
+    box-shadow: 0 0 0 0.15em $color-gray-oslo;
+}
+
+[type="checkbox"].dark:disabled + .ce-label-text:before {
+    background-color: $color-gray-oslo;
+}
+
+// Range slider
+@mixin range-slider-track($color: $color-gray-geyser, $height: 3px, $radius: 2px) {
+    background: $color-gray-geyser;
+    height: $height;
+    border-radius: $radius;
+    cursor: pointer;
+}
+
+@mixin range-slider-thumb($color: $color-green-shamrock, $diameter: 11px) {
+    height: $diameter;
+    width: $diameter;
+    border-radius: 50%;
+    background: $color;
+    cursor: pointer;
+}
+
+input[type=range] {
+    -webkit-appearance: none; // needed to remove default webkit styles
+    border: 0;
+    background: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    @include range-slider-track();
+}
+
+input[type=range]::-webkit-slider-thumb {
+    @include range-slider-thumb(); // needed to remove default webkit styles
+    -webkit-appearance: none;
+    margin-top: -4px;
+}
+
+input[type=range]:disabled::-webkit-slider-thumb {
+    background: $color-gray-chateau;
+}
+
+input[type=range]::-moz-range-track {
+    @include range-slider-track();
+}
+
+input[type=range]::-moz-range-thumb {
+    @include range-slider-thumb();
+    border: 0;
+    box-sizing: border-box;
+}
+
+input[type=range]:disabled::-moz-range-thumb {
+    background: $color-gray-chateau;
+}
+
+input[type=range]::-ms-track {
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-width: 6px 0; // leaves room for the larger thumb to overflow with a transparent border
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    @include range-slider-track();
+    height: auto;
+}
+
+input[type=range]::-ms-fill-upper {
+    @include range-slider-track();
+    height: auto;
+}
+
+input[type=range]::-ms-thumb {
+    @include range-slider-thumb();
+}
+
+input[type=range]:disabled::-ms-thumb {
+    background: $color-gray-chateau;
+}
+
+// Custom dropdown menu
+.ce-dropdown {
+    position: relative;
+    height: 2.5em;
+
+    &.is-open {
+        .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-value:after {
+            content: $c-icon-chevron-up;
+        }
+    }
+
+    .dropdown-value {
+        @include box-sizing(border-box);
+        padding: 0.5em 3em 0.5em 0.5em;
+        border: 1px solid $color-gray-ghost;
+        background: $color-white-pure;
+        color: $color-gray-charcoal;
+        position: relative;
+        height: 2.5em;
+        cursor: pointer;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:after {
+            @include ce-button('dark');
+            @include icon;
+            font-size: $font-size-smaller;
+            height: 3.125em;
+            width: 3.125em;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            padding: 0.5em;
+            content: $c-icon-chevron-down;
+            text-align: center;
+            line-height: 2;
+            z-index: 5;
+        }
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: -1px;
+        z-index: 1000;
+        border: 1px solid $color-gray-ghost;
+        background-color: $color-white-pure;
+        box-sizing: content-box;
+        min-width: 100%;
+
+        &.is-open {
+            display: block;
+        }
+
+        .dropdown-menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-menu-item {
+            padding: 0.5em 0.625em;
+            display: block;
+            text-decoration: none;
+            font-weight: $font-weight-body;
+
+            &:hover {
+                background-color: $color-white-lily;
+            }
+        }
+
+        &.checkbox-menu {
+            background-color: $color-gray-charcoal;
+            border: 1px solid $color-gray-charcoal;
+            top: 3.5em;
+            right: -1em;
+            padding: 0.5em 1.5em;
+
+            @include breakpoint($mq-sm-max) {
+                width: 125%;
+            }
+
+            @include breakpoint($mq-md-min) {
+                width: 40em;
+            }
+
+            &:before {
+                position: absolute;
+                top: -2em;
+                right: 1em;
+                border: solid transparent;
+                content: '';
+                height: 0;
+                width: 0;
+                border-color: rgba(0, 0, 0, 0);
+                border-bottom-color: $color-gray-charcoal;
+                border-width: 1em;
+            }
+
+            .menu-list {
+                @include prefixer(column-count, 3, webkit moz);
+                @include prefixer(column-gap, 1.5em, webkit moz);
+            }
+
+            .ce-label {
+                color: $color-white-pure;
+
+                .ce-label-text {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+// Custom dropdown style for use with angular-ui-select
+.ce-dropdown-ui-select {
+    margin-bottom: 1em;
+    position: relative;
+
+    .selectize-input {
+        @include box-sizing(border-box);
+        border: 1px solid $color-gray-ghost;
+        background: $color-white-pure;
+        color: $color-gray-charcoal;
+        position: relative;
+        height: 2.5em;
+
+        &:after {
+            @include ce-button('dark');
+            @include icon;
+            font-size: $font-size-smaller;
+            height: 3.125em;
+            width: 3.125em;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            padding: 0.5em;
+            content: $c-icon-chevron-down;
+            text-align: center;
+            line-height: 2;
+            z-index: 5;
+        }
+    }
+
+    .ui-select-search,
+    .ui-select-match {
+        box-sizing: border-box;
+        border: none;
+        margin: 0;
+        padding: 0.5em 3em 0.5em 0.5em;
+        height: 100%;
+
+        span {
+            white-space:nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            max-width: 100%;
+        }
+    }
+
+    .ui-select-choices-content {
+        position: absolute;
+        top: 100%;
+        right: 0px;
+        z-index: 1000;
+        border: 1px solid $color-gray-ghost;
+        border-top:1px solid transparent;
+        background-color: $color-white-pure;
+        box-sizing: border-box;
+        min-width: 100%;
+
+        .menu-item {
+            padding: 0.5em 0.625em;
+            display: block;
+            text-decoration: none;
+            font-weight: $font-weight-body;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-white-lily;
+            }
+        }
+    }
+
+    .ui-select-offscreen {
+      clip: rect(0 0 0 0) !important;
+      width: 1px !important;
+      height: 1px !important;
+      border: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      outline: 0 !important;
+      left: 0px !important;
+      top: 0px !important;
     }
 }

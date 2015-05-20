@@ -15,6 +15,18 @@
         }
     }
 
+    .map-zips {
+        fill: $color-white-lilac;
+        stroke: $color-white-pure;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        stroke-width: 1px;
+
+        &.map-highlight {
+            fill: $color-white-smoke;
+        }
+    }
+
     .map-neutral {
         fill: $color-gray-ghost;
         stroke: $color-white-pure;
@@ -40,6 +52,9 @@
 
     .map-green {
         fill: $color-green-shamrock;
+        stroke: $color-white-pure;
+        stroke-linejoin: round;
+        stroke-linecap: round;
 
         &.map-highlight,
         &.map-selected {

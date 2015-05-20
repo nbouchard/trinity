@@ -1,5 +1,16 @@
-// Import Generated Supplier Logos Spritesheet
-@import '../../generated/supplier-logos';
+// Standardized supplier logo sprite accompaniment
+.utility-logo,
+.supplier-logo {
+    display: inline-block;
+    text-indent: -9999px;
+}
 
-// Import Generated Utility Logos Spritesheet
+// Import Generated Supplier Logos Spritesheets
+@import '../../generated/supplier-logos';
+@import '../../generated/supplier-logos-sm';
+@import '../../generated/supplier-logos-lg';
+
+// Import Generated Utility Logos Spritesheets
 @import '../../generated/utility-logos';
+@import '../../generated/utility-logos-sm';
+@import '../../generated/utility-logos-lg';

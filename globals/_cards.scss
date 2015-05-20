@@ -66,7 +66,6 @@
 //
 @mixin ce-card-header() {
     @include box-sizing(border-box);
-    @include border-top-radius($card-corner-radius);
     position: absolute;
     top: 0;
     right: 0;
@@ -187,4 +186,21 @@
             line-height: $cap-width;
         }
     }
+}
+
+// Prototyping classes for card system
+.x-card {
+    @include ce-card();
+}
+
+.x-card-header {
+    @include ce-card-header();
+}
+
+.x-slat {
+    @include ce-slat();
+}
+
+.x-slat-cap {
+    @include ce-slat-cap();
 }

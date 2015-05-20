@@ -2,7 +2,14 @@
 @mixin link-as-button() {
     display: inline-block;
     text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
 }
+
 @mixin ce-button($btn-type: 'basic', $btn-size: 'normal', $btn-width: 'auto') {
     @include box-sizing(border-box);
     padding: 0.5em 1em;
@@ -141,6 +148,30 @@
         }
     }
 
+    // Social Media Button Type
+    @if $btn-type == 'social' {
+        background: $color-gray-chateau;
+        color: $color-white-pure;
+        border: 0px;
+        border-radius: 5px;
+        text-align: right;
+        padding-left: 3em;
+        min-width: 10em;
+        height: 2.5em;
+        position: relative;
+        line-height: $font-size-largest;
+        margin: 0 0.5em;
+
+        &:before {
+            @include icon;
+            position: absolute;
+            font-size: $font-size-large;
+            left: .75em;
+            top: 50%; // this + next line vertically centers the icon in the box
+            @include prefixer(transform, translateY(-0.5em), webkit ms);
+        }
+    }
+
     // Modify Button Size
     @if $btn-size == 'extrahuger' {
         font-size: $font-size-extrahuger;
@@ -184,6 +215,7 @@
     }
 }
 
+.link-as-button,
 button,
 input[type='submit'] {
     @include ce-button('basic');
@@ -249,4 +281,36 @@ input[type='submit'] {
     &.btn-tinier {
         font-size: $font-size-tinier;
     }
+
+    &.btn-facebook {
+        @include ce-button('social', 'large');
+        background: $color-brand-facebook;
+
+        &:before {
+            content: $c-icon-facebook;
+        }
+    }
+
+    &.btn-twitter {
+        @include ce-button('social', 'large');
+        background: $color-brand-twitter;
+
+        &:before {
+            content: $c-icon-twitter;
+        }
+    }
+
+    &.btn-email {
+        @include ce-button('social', 'large');
+        background: $color-orange-sun;
+
+        &:before {
+            content: $c-icon-email;
+        }
+    }
 }
+
+.link-as-button {
+    @include link-as-button();
+}
+

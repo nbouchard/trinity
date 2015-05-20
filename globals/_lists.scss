@@ -1,0 +1,72 @@
+// List styles
+.list-no-liststyle {
+    list-style: none;
+}
+
+.list-no-padding {
+    padding-left: 15px;
+}
+
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+
+    .icon:before {
+        margin-right: 0.625em;
+    }
+}
+
+// Basic Nav List
+.nav-list {
+    margin: 0;
+    padding: 0;
+
+    .nav-item {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+// Basic Icon List
+.icon-list {
+    margin: 0;
+    padding: 1em 0;
+
+    .icon-item {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .icon {
+        font-size: $font-size-extrahugest;
+    }
+
+    .icon-title {
+        display: inline-block;
+        width: 100%;
+        font-size: $font-size-larger;
+    }
+
+    .icon-link {
+        text-decoration: none;
+
+        .icon {
+            color: $color-orange-sun;
+        }
+
+        .icon-title {
+            color: $color-white-pure;
+            font-weight: normal;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}

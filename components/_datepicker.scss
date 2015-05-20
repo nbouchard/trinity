@@ -1,0 +1,82 @@
+.datepicker {
+    position: absolute;
+    margin-top: 50px;
+    padding: 3px;
+    border: 0;
+    background: $color-white-pure;
+    box-shadow: none;
+    user-select: none;
+
+    * {
+        outline: none;
+    }
+
+    table {
+        margin: 0;
+
+        tr {
+            height: auto;
+            border: 0;
+        }
+
+        thead {
+            th {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+
+                &.left-pull {
+                    padding-left: 0.33em;
+                    text-align: left;
+                }
+
+                &.right-pull {
+                    padding-right: 0.33em;
+                    text-align: right;
+                }
+            }
+        }
+
+        td {
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: auto;
+            border: 1px solid $color-gray-ghost;
+            text-align: center;
+
+            &:first-child {
+                width: auto;
+                text-align: center;
+                font-weight: normal;
+            }
+
+            &:hover {
+                background: $color-white-smoke;
+            }
+
+            span {
+                padding: 0 9px;
+                line-height: 2.4em;
+            }
+        }
+
+        th {
+            border: 0;
+            font-weight: normal;
+            line-height: 2em;
+        }
+    }
+
+    .is-active {
+        background: $color-green-cruise;
+    }
+
+    .text-muted {
+        color: $color-gray-ghost;
+    }
+
+    .text-info {
+        color: $color-green-shamrock;
+    }
+}

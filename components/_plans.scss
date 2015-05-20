@@ -27,10 +27,7 @@
     @include breakpoint($mq-sm-max) {
         @include cg-row(false, false);
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     @include breakpoint($mq-md-min) {
         @include cg-row(true, true);
     }
@@ -99,42 +96,6 @@
 .plans-sorter {
     position: relative;
 
-<<<<<<< HEAD
-=======
-    .sorter-link {
-
-        @include breakpoint($mq-lg) {
-            font-size: $font-size-smaller;
-        }
-        color: $color-white-pure;
-        text-decoration: none;
-
-        .fa-sort,
-        .fa-sort-asc,
-        .fa-sort-desc {
-            margin-left: 0.25em;
-            color: $color-white-lilac;
-            font-size: $font-size-smaller;
-        }
-
-        &:hover,
-        &:focus {
-            background: $color-blue-bahama;
-        }
-
-        &.is-active {
-            background: $color-blue-boston;
-
-            .fa-sort,
-            .fa-sort-asc,
-            .fa-sort-desc {
-                color: $color-white-pure;
-                font-size: $font-size-normal;
-            }
-        }
-    }
-
->>>>>>> origin/master
     @include breakpoint($mq-md-max) {
         @include cg-row(true, true);
 
@@ -312,17 +273,11 @@
         @include breakpoint($mq-md-max) {
             @include cg-1of2(true, true, true);
         }
-<<<<<<< HEAD
 
         @include breakpoint($mq-lg) {
             @include cg-item(true, true);
         }
 
-=======
-        @include breakpoint($mq-lg) {
-            @include cg-item(true, true);
-        }
->>>>>>> origin/master
         @include breakpoint($mq-xl-min) {
             @include cg-1of2(true, true, true);
         }
@@ -377,7 +332,6 @@
             }
         }
     }
-
 
     // Plan Card Footer
     .plan-actions {
@@ -444,7 +398,6 @@
 // Exposes a Mixin for defining all of the plan-card specific styles for the Expanded variant.
 //
 // No styleguide reference
-<<<<<<< HEAD
 @mixin plan-as-expanded() {
     @include ce-card(false, false, false);
 
@@ -459,22 +412,6 @@
             padding: $grid-gutter-width;
             height: 4em;
             line-height: 2em;
-=======
-@mixin planAsExpanded() {
-    @include ce-card(false, false, false);
-
-    .plan-page-header {
-        background: $color-blue-curious;
-        position: relative;
-        width: 100%;
-        height: (4em + (2 * $grid-gutter-width));
-
-        .plan-page-name {
-            @include cg-row();
-            height: 4em;
-            line-height: 2em;
-            padding: $grid-gutter-width;
->>>>>>> origin/master
 
             .plan-page-name-container {
                 display: inline-block;
@@ -486,7 +423,6 @@
                 display: block;
                 color: $color-white-pure;
             }
-<<<<<<< HEAD
 
             .plan-utility {
                 display: block;
@@ -497,16 +433,6 @@
         }
     }
 
-=======
-            .plan-utility {
-                display: block;
-                font-weight: $font-weight-body;
-                font-style: italic;
-                color: $color-blue-bahama;
-            }
-        }
-    }
->>>>>>> origin/master
     .plan-page-closer {
         position: absolute;
         top: (2 * $grid-gutter-width);
@@ -519,17 +445,11 @@
             color: $color-orange-apricot-light;
         }
     }
-<<<<<<< HEAD
 
     .plan-body {
         @include cg-row(true, false);
     }
 
-=======
-    .plan-body {
-        @include cg-row(true, false);
-    }
->>>>>>> origin/master
     .plan-page-section {
         @include cg-row();
         text-align: center;
@@ -538,7 +458,6 @@
             border-bottom: 1px solid $color-white-lilac;
         }
     }
-<<<<<<< HEAD
 
     .plan-callout {
         .plan-page-label {
@@ -547,14 +466,6 @@
             font-size: $font-size-normal;
         }
 
-=======
-    .plan-callout {
-        .plan-page-label {
-            background: none;
-            font-size: $font-size-normal;
-            padding: 0;
-        }
->>>>>>> origin/master
         .plan-data,
         .plan-data-value,
         .plan-data-label,
@@ -562,10 +473,7 @@
             padding: 0;
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     .plan-data-row {
         @include cg-row();
 
@@ -586,23 +494,16 @@
             }
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     .plan-data-value {
         padding: $grid-gutter-width;
         padding-bottom: 0;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     .plan-data-label {
         padding: (1.75 * $grid-gutter-width);
         padding-top: 0;
     }
-<<<<<<< HEAD
 
     .plan-data-list {
         padding-top: $grid-gutter-width;
@@ -618,38 +519,17 @@
         width: 100%;
         background: $color-white-lilac;
         font-size: $font-size-large;
-=======
-    .plan-data-list {
-        text-align: left;
-        line-height: 1.6em;
-        padding-bottom: $grid-gutter-width;
-        padding-top: $grid-gutter-width;
-        padding-right: $grid-gutter-width;
-    }
-    .plan-page-label {
-        font-size: $font-size-large;
-        display: block;
-        width: 100%;
-        background: $color-white-lilac;
-        padding: $grid-gutter-width;
->>>>>>> origin/master
     }
 
     .plan-callout {
         @include cg-1of2(true, true, true);
         font-size: $font-size-huge;
     }
-<<<<<<< HEAD
 
     .plan-page-details {
         @include cg-1of2(true, true, true);
     }
 
-=======
-    .plan-page-details {
-        @include cg-1of2(true, true, true);
-    }
->>>>>>> origin/master
     .plan-page-actions {
         display: none;
     }
@@ -662,20 +542,12 @@
             display: none;
         }
     }
-<<<<<<< HEAD
 
     .plan-section-header {
         padding: $grid-gutter-width;
         background: $color-white-lilac;
         text-align: center;
         font-size: $font-size-large;
-=======
-    .plan-section-header {
-        padding: $grid-gutter-width;
-        text-align: center;
-        font-size: $font-size-large;
-        background: $color-white-lilac;
->>>>>>> origin/master
         font-family: $font-family-body;
     }
 
@@ -683,42 +555,27 @@
     .supplier-details {
         @include cg-row();
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     .supplier-logo {
         @include breakpoint($mq-sm-max) {
             @include cg-item(true, true);
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         @include breakpoint($mq-md-min) {
             @include cg-1of2(true, true, true);
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     .supplier-rating {
         @include breakpoint($mq-sm-max) {
             @include cg-item(true, true);
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         @include breakpoint($mq-md-min) {
             @include cg-1of2(true, true, true);
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     .supplier-description {
         padding: $grid-gutter-width;
         text-align: left;
@@ -726,15 +583,9 @@
 
     // Plan FAQs
     .plan-faq-list {
-<<<<<<< HEAD
         margin: 0;
         padding: $grid-gutter-width;
         list-style: none;
-=======
-        list-style: none;
-        margin: 0;
-        padding: $grid-gutter-width;
->>>>>>> origin/master
         line-height: 1.6em;
 
         .learn-more {
@@ -742,16 +593,10 @@
         }
     }
 }
-<<<<<<< HEAD
 
 .plan-as-expanded {
     .plan-card {
         @include plan-as-expanded();
-=======
-.plan-as-expanded {
-    .plan-card {
-        @include planAsExpanded();
->>>>>>> origin/master
     }
 }
 // .plan-as-page
@@ -776,18 +621,9 @@
         padding-top: (6em + $grid-gutter-width);
 
         .plan-page-header {
-<<<<<<< HEAD
             position: fixed;
             top: 0;
             left: 0;
-=======
-            background: $color-blue-curious;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: (4em + (2 * $grid-gutter-width));
->>>>>>> origin/master
             padding-right: 6em;
             width: 100%;
             height: (4em + (2 * $grid-gutter-width));
@@ -795,11 +631,6 @@
 
             .plan-page-name {
                 @include cg-row();
-<<<<<<< HEAD
-=======
-                height: 4em;
-                line-height: 4em;
->>>>>>> origin/master
                 padding: $grid-gutter-width;
                 height: 4em;
                 line-height: 4em;
@@ -831,17 +662,6 @@
                     font-weight: $font-weight-body;
                     font-style: italic;
                 }
-
-                @include breakpoint($mq-sm-max) {
-                    line-height: 2em;
-
-                    .plan-name {
-                        display: block;
-                    }
-                    .plan-utility {
-                        display: block;
-                    }
-                }
             }
         }
 
@@ -851,7 +671,6 @@
             right: (2 * $grid-gutter-width);
             color: $color-white-pure;
             text-decoration: none;
-<<<<<<< HEAD
 
             &:hover,
             &:focus {
@@ -863,17 +682,6 @@
             @include cg-row(true, false);
         }
 
-=======
-
-            &:hover,
-            &:focus {
-                color: $color-orange-apricot-light;
-            }
-        }
-        .plan-body {
-            @include cg-row(true, false);
-        }
->>>>>>> origin/master
         .plan-page-section {
             @include cg-row();
             text-align: center;
@@ -881,22 +689,6 @@
             @include breakpoint($mq-md-max) {
                 border-bottom: 1px solid $color-white-lilac;
             }
-<<<<<<< HEAD
-=======
-        }
-        .plan-callout {
-            .plan-page-label {
-                background: none;
-                font-size: $font-size-normal;
-                padding: 0;
-            }
-            .plan-data,
-            .plan-data-value,
-            .plan-data-label,
-            .plan-data-list {
-                padding: 0;
-            }
->>>>>>> origin/master
         }
 
         .plan-callout {
@@ -928,18 +720,11 @@
             @include cg-row();
 
             .plan-data {
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
                 @include breakpoint($mq-md-max) {
                     @include cg-1of3(false, false, true);
                     padding-bottom: $grid-gutter-width;
                 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
                 @include breakpoint($mq-lg-min) {
                     @include cg-1of3(true, true, true);
                 }
@@ -957,7 +742,6 @@
                         padding-bottom: $grid-gutter-width;
                     }
                 }
-<<<<<<< HEAD
             }
         }
 
@@ -994,56 +778,11 @@
             }
         }
 
-=======
-            }
-        }
-        .plan-data-value {
-            padding: $grid-gutter-width;
-            padding-bottom: 0;
-        }
-        .plan-data-label {
-            padding: (1.75 * $grid-gutter-width);
-            padding-top: 0;
-        }
-        .plan-data-list {
-            line-height: 1.6em;
-            text-align: left;
-        }
-        .plan-page-label {
-            font-size: $font-size-large;
-            display: block;
-            width: 100%;
-            background: $color-white-lilac;
-            padding: $grid-gutter-width;
-        }
-
-        .plan-callout {
-            font-size: $font-size-huge;
-
-            @include breakpoint($mq-sm-max) {
-                @include cg-item(true, true);
-            }
-            @include breakpoint($mq-md-min) {
-                @include cg-1of3(true, true, true);
-            }
-        }
-        .plan-page-details {
-            @include breakpoint($mq-sm-max) {
-                @include cg-item(true, true);
-            }
-            @include breakpoint($mq-md-min) {
-                @include cg-1of3(true, true, true);
-            }
-        }
->>>>>>> origin/master
         .plan-page-actions {
             @include breakpoint($mq-sm-max) {
                 @include cg-item(true, true);
             }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
             @include breakpoint($mq-md-min) {
                 @include cg-1of3(true, true, true);
             }
@@ -1054,15 +793,11 @@
             @include breakpoint($mq-xs-max) {
                 @include cg-item(false, false);
             }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
             @include breakpoint($mq-sm-min) {
                 @include cg-1of2(true, true, true);
             }
         }
-<<<<<<< HEAD
 
         .plan-section-header {
             padding: $grid-gutter-width;
@@ -1072,16 +807,6 @@
             @include breakpoint($mq-xs-max) {
                 background: $color-white-lilac;
                 font-size: $font-size-large;
-=======
-        .plan-section-header {
-            font-size: $font-size-huge;
-            padding: $grid-gutter-width;
-            text-align: center;
-
-            @include breakpoint($mq-xs-max) {
-                font-size: $font-size-large;
-                background: $color-white-lilac;
->>>>>>> origin/master
                 font-family: $font-family-body;
             }
         }
@@ -1090,42 +815,27 @@
         .supplier-details {
             @include cg-row();
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         .supplier-logo {
             @include breakpoint($mq-sm-max) {
                 @include cg-item(true, true);
             }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
             @include breakpoint($mq-md-min) {
                 @include cg-1of2(true, true, true);
             }
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         .supplier-rating {
             @include breakpoint($mq-sm-max) {
                 @include cg-item(true, true);
             }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
             @include breakpoint($mq-md-min) {
                 @include cg-1of2(true, true, true);
             }
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         .supplier-description {
             padding: $grid-gutter-width;
             text-align: left;
@@ -1133,17 +843,10 @@
 
         // Plan FAQs
         .plan-faq-list {
-<<<<<<< HEAD
             margin: 0;
             padding: $grid-gutter-width;
             list-style: none;
             line-height: 1.6em;
-=======
-            list-style: none;
-            line-height: 1.6em;
-            margin: 0;
-            padding: $grid-gutter-width;
->>>>>>> origin/master
 
             .learn-more {
                 text-align: right;
@@ -1356,7 +1059,6 @@
     text-align: center;
     text-indent: -9999px;
 }
-
 
 // Plan Savings
 //

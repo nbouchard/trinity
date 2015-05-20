@@ -29,6 +29,16 @@ $mq-xxs: screen (max-width 19.99em);
     display: none;
     color: $color-gray-ghost;
 
+    .mq-xxl,
+    .mq-xl,
+    .mq-lg,
+    .mq-md,
+    .mq-sm,
+    .mq-xs,
+    .mq-xxs {
+        display: none;
+    }
+
     @include breakpoint($mq-xxl) {
         .mq-xxl {
             display: block;
@@ -69,16 +79,6 @@ $mq-xxs: screen (max-width 19.99em);
         .mq-xxs {
             display: block;
         }
-    }
-
-    .mq-xxl,
-    .mq-xl,
-    .mq-lg,
-    .mq-md,
-    .mq-sm,
-    .mq-xs,
-    .mq-xxs {
-        display: none;
     }
 
     &.is-active {
