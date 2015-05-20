@@ -591,17 +591,18 @@
         .navigation {
             ul {
                 padding: 0;
+                margin: 0;
                 list-style: none;
                 font-family: $font-family-headline;
 
                 li {
                     padding-top: 0.5em;
                     border-bottom: 1px solid $color-gray-ghost;
-                    font-size: 1.4em;
+                    font-size: 1.2em;
 
                     a {
                         color: $color-gray-chateau;
-                        line-height: 2.5em;
+                        line-height: 2.2em;
 
                         &:hover {
                             color: $color-orange-sun;
