@@ -37,7 +37,7 @@
                         <input class="radio" type="radio" name="energy-type" value="natural-gas">
                         <span class="ce-label-text"></span>
                     </label>
-                   <!--  <label class="ce-label disabled">
+                    <!--  <label class="ce-label disabled">
                         <i class="icon c-icon-heating-oil">Heating Oil</i>
                         <input class="radio" type="radio" name="energy-type" value="heating-oil" disabled>
                         <span class="ce-label-text"></span>
@@ -100,128 +100,156 @@
             </div>
 
             <div class="filter-toggle-content cg-row">
-                <div class="filter-plan-type">
-                    <h4>Plan Type</h4>
-                    <label class="ce-label">
-                        <input type="checkbox" name="plan-type" value="fixed-rate" checked>
-                        <span class="ce-label-text">Fixed Rate</span>
-                    </label>
-                    <label class="ce-label">
-                        <input type="checkbox" name="plan-type" value="variable-rate">
-                        <span class="ce-label-text">Variable Rate</span>
-                    </label>
+                <div class="filter-group">
+                    <div class="filter-plan-type">
+                        <h4>Plan Type</h4>
+                        <div class="plan-types">
+                            <label class="ce-label">
+                                <input type="checkbox" name="plan-type" value="fixed-rate" checked>
+                                <span class="ce-label-text">Fixed Rate</span>
+                            </label>
+                            <label class="ce-label">
+                                <input type="checkbox" name="plan-type" value="variable-rate">
+                                <span class="ce-label-text">Variable Rate</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-contract-term">
+                        <h4>Contract Term</h4>
+                        <div class="term-lengths">
+                            <label class="ce-label">
+                                <input type="checkbox" name="plan-type" value="1-month" checked>
+                                <span class="ce-label-text">1 Month</span>
+                            </label>
+                            <label class="ce-label">
+                                <input type="checkbox" name="plan-type" value="6-month">
+                                <span class="ce-label-text">6 Month</span>
+                            </label>
+                            <label class="ce-label">
+                                <input type="checkbox" name="plan-type" value="12-month">
+                                <span class="ce-label-text">12 Month</span>
+                            </label>
+                            <label class="ce-label">
+                                <input type="checkbox" name="plan-type" value="18-month">
+                                <span class="ce-label-text">18 Month</span>
+                            </label>
+                            <label class="ce-label">
+                                <input type="checkbox" name="plan-type" value="24-month" >
+                                <span class="ce-label-text">24 Month</span>
+                            </label>
+                            <label class="ce-label">
+                                <input type="checkbox" name="plan-type" value="36-month">
+                                <span class="ce-label-text">36 Month</span>
+                            </label>
+                            <label class="ce-label">
+                                <input type="checkbox" name="plan-type" value="ends-1129">
+                                <span class="ce-label-text">Ends 11/29</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="filter-contract-term">
-                    <h4>Contract Term</h4>
-                    <div class="term-lengths">
-                        <label class="ce-label">
-                            <input type="checkbox" name="plan-type" value="1-month" checked>
-                            <span class="ce-label-text">1 Month</span>
+                <div class="filter-group">
+                    <div class="filter-cost-kwh">
+                        <label class="ce-label" id="priceValue">
+                            <h4 class="ce-label-text">Price per kWh</h4>
+                            <input type="number" class="input-number" min="9.5" max="16.9" value="9.5"> &ndash; 
+                            <input type="number" class="input-number" min="9.5" max="16.9" value="16.9">&cent;
                         </label>
+                    </div>
+
+                    <div class="filter-cost-month">
                         <label class="ce-label">
-                            <input type="checkbox" name="plan-type" value="6-month">
-                            <span class="ce-label-text">6 Month</span>
+                            <h4 class="ce-label-text">Cost per month</h4>
+                            <input type="number" class="input-number" min="61.21" max="134.63" value="61.21"> - 
+                            <input type="number" class="input-number" min="61.21" max="134.63" value="134.63">$
+                            <!-- <input class="range" type="range" id="range" value="0" min="0" max="100"> -->
                         </label>
+                    </div>
+
+                    <div class="filter-percent-green">
                         <label class="ce-label">
-                            <input type="checkbox" name="plan-type" value="12-month">
-                            <span class="ce-label-text">12 Month</span>
-                        </label>
-                        <label class="ce-label">
-                            <input type="checkbox" name="plan-type" value="18-month">
-                            <span class="ce-label-text">18 Month</span>
-                        </label>
-                        <label class="ce-label">
-                            <input type="checkbox" name="plan-type" value="24-month" >
-                            <span class="ce-label-text">24 Month</span>
-                        </label>
-                        <label class="ce-label">
-                            <input type="checkbox" name="plan-type" value="36-month">
-                            <span class="ce-label-text">36 Month</span>
-                        </label>
-                        <label class="ce-label">
-                            <input type="checkbox" name="plan-type" value="ends-1129">
-                            <span class="ce-label-text">Ends 11/29</span>
+                            <h4 class="ce-label-text">Percent Green</h4>
+                            <input type="number" class="input-number" min="0" max="100" value="0"> - 
+                            <input type="number" class="input-number" min="0" max="100" value="100">%
+                            <!-- <input class="range" type="range" id="range" value="0" min="0" max="100"> -->
                         </label>
                     </div>
                 </div>
 
-                <div class="filter-cost-green">
-                    <label class="ce-label">
-                        <h4 class="ce-label-text">Cost per month</h4>
-                        <input class="range" type="range" id="range" value="0" min="0" max="100">
-                    </label>
+                <div class="filter-group">
+                    <div class="filter-rating">
+                        <label class="ce-label">
+                            <h4 class="ce-label-text">Rating</h4>
+                            <div class="rating-slider">
+                                <input type="range" class="input-range" min="0" max="5" step="1" value="3">
+                                <span class="range-label">0 / 5 or better</span>
+                            </div>
+                            <!-- {{> cmp_rating_widget}} -->
+                        </label>
+                    </div>
 
-                    <label class="ce-label">
-                        <h4 class="ce-label-text">Percent Green</h4>
-                        <input class="range" type="range" id="range" value="0" min="0" max="100">
-                    </label>
-                </div>
-
-                <div class="filter-rating">
-                    <label class="ce-label">
-                        <h4 class="ce-label-text">Rating</h4>
-                        {{> cmp_rating_widget}}
-                    </label>
-
-                    <label class="ce-label">
-                        <h4 class="ce-label-text">Suppliers</h4>
-                        <div class="ce-dropdown filter-supplier js-multi">
-                            <div class="dropdown-value">9 Selected</div>
-                            <div class="dropdown-menu checkbox-menu">
-                                <div class="menu-list">
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier1">
-                                        <span class="ce-label-text">Supplier 1</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier2">
-                                        <span class="ce-label-text">Supplier 2 long name here just for a test</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier3">
-                                        <span class="ce-label-text">Supplier 3</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier4">
-                                        <span class="ce-label-text">Supplier 4</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier5">
-                                        <span class="ce-label-text">Supplier 5</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier6">
-                                        <span class="ce-label-text">Supplier 6</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier7">
-                                        <span class="ce-label-text">Supplier 7</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier8">
-                                        <span class="ce-label-text">Supplier 8</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier9">
-                                        <span class="ce-label-text">Supplier 9</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier10">
-                                        <span class="ce-label-text">Supplier 10</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier11">
-                                        <span class="ce-label-text">Supplier 11</span>
-                                    </label>
-                                    <label class="ce-label">
-                                        <input class="dark" type="checkbox" name="suppliers" value="supplier12">
-                                        <span class="ce-label-text">Supplier 12</span>
-                                    </label>
+                    <div class="filter-suppliers">
+                        <label class="ce-label">
+                            <h4 class="ce-label-text">Suppliers</h4>
+                            <div class="ce-dropdown filter-supplier js-multi">
+                                <div class="dropdown-value">9 Selected</div>
+                                <div class="dropdown-menu checkbox-menu">
+                                    <div class="menu-list">
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier1">
+                                            <span class="ce-label-text">Supplier 1</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier2">
+                                            <span class="ce-label-text">Supplier 2 long name here just for a test</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier3">
+                                            <span class="ce-label-text">Supplier 3</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier4">
+                                            <span class="ce-label-text">Supplier 4</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier5">
+                                            <span class="ce-label-text">Supplier 5</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier6">
+                                            <span class="ce-label-text">Supplier 6</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier7">
+                                            <span class="ce-label-text">Supplier 7</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier8">
+                                            <span class="ce-label-text">Supplier 8</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier9">
+                                            <span class="ce-label-text">Supplier 9</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier10">
+                                            <span class="ce-label-text">Supplier 10</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier11">
+                                            <span class="ce-label-text">Supplier 11</span>
+                                        </label>
+                                        <label class="ce-label">
+                                            <input class="dark" type="checkbox" name="suppliers" value="supplier12">
+                                            <span class="ce-label-text">Supplier 12</span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </label>
+                        </label>
+                    </div>
                 </div>
             </div>
         </section>
