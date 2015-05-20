@@ -179,6 +179,10 @@ label {
     }
 }
 
+.ce-label {
+    cursor: pointer;
+}
+
 .form-row {
     padding: 0.5em 0;
 
@@ -293,6 +297,7 @@ input[type=range] {
     -webkit-appearance: none; // needed to remove default webkit styles
     border: 0;
     background: none;
+    cursor: pointer;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
