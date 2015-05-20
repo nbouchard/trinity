@@ -1099,6 +1099,9 @@
 
         &:nth-child(3n+0) {
             border-color: $color-blue-curious;
+            img {
+                border: 2px solid $color-blue-curious;
+            }
 
             .caption {
                 background: $color-blue-curious;
@@ -1107,7 +1110,9 @@
 
         &:nth-child(3n+1) {
             border-color: $color-orange-sun;
-
+            img {
+                border: 2px solid $color-orange-sun;
+            }
             .caption {
                 background: $color-orange-sun;
             }
@@ -1115,7 +1120,9 @@
 
         &:nth-child(3n+2) {
             border-color: $color-green-shamrock;
-
+            img {
+                border: 2px solid $color-green-shamrock;
+            }
             .caption {
                 background: $color-green-shamrock;
             }
