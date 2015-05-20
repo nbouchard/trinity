@@ -22,7 +22,7 @@
     @include box-shadow(rgba(0, 0, 0, 0.2) 0 0 2px);
     position: relative;
     margin: 0;
-    border: 1px solid $color-blue-curious-light;
+    border: 1px solid $color-gray-ghost;
     border-radius: $card-corner-radius;
 
     @if $v-padding == true {
@@ -67,11 +67,12 @@
 @mixin ce-card-header() {
     @include box-sizing(border-box);
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+    top: -1px;
+    right: -1px;
+    left: -1px;
     height: $card-header-height;
     line-height: $card-header-height;
+    border-radius: $card-corner-radius $card-corner-radius 0 0;
 }
 
 //
@@ -104,9 +105,9 @@
     @include clearfix();
     position: relative;
     margin: 0;
-    border-right: 1px solid $color-blue-curious-light;
-    border-bottom: 1px solid $color-blue-curious-light;
-    border-left: 1px solid $color-blue-curious-light;
+    border-right: 1px solid $color-gray-ghost;
+    border-bottom: 1px solid $color-gray-ghost;
+    border-left: 1px solid $color-gray-ghost;
 
     @if $v-padding == true {
         padding-top: $card-padding;
