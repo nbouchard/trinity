@@ -179,6 +179,10 @@ label {
     }
 }
 
+.ce-label {
+    cursor: pointer;
+}
+
 .form-row {
     padding: 0.5em 0;
 
@@ -293,6 +297,7 @@ input[type=range] {
     -webkit-appearance: none; // needed to remove default webkit styles
     border: 0;
     background: none;
+    cursor: pointer;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -374,6 +379,9 @@ input[type=range]:disabled::-ms-thumb {
         position: relative;
         height: 2.5em;
         cursor: pointer;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         &:after {
             @include ce-button('dark');
@@ -429,8 +437,25 @@ input[type=range]:disabled::-ms-thumb {
             border: 1px solid $color-gray-charcoal;
             top: 3.5em;
             right: -1em;
-            width: 400%;
             padding: 0.5em 1.5em;
+
+            @include breakpoint($mq-sm-max) {
+                width: 125%;
+
+                .menu-list {
+                    @include prefixer(column-count, 2, webkit moz);
+                    @include prefixer(column-gap, 1.5em, webkit moz);
+                }
+            }
+
+            @include breakpoint($mq-md-min) {
+                width: 40em;
+
+                .menu-list {
+                    @include prefixer(column-count, 3, webkit moz);
+                    @include prefixer(column-gap, 1.5em, webkit moz);
+                }
+            }
 
             &:before {
                 position: absolute;
@@ -443,11 +468,6 @@ input[type=range]:disabled::-ms-thumb {
                 border-color: rgba(0, 0, 0, 0);
                 border-bottom-color: $color-gray-charcoal;
                 border-width: 1em;
-            }
-
-            .menu-list {
-                @include prefixer(column-count, 3, webkit moz);
-                @include prefixer(column-gap, 1.5em, webkit moz);
             }
 
             .ce-label {

@@ -40,6 +40,7 @@
 
         .filter-toggle-bar {
             background: $color-green-cruise-light;
+            padding: 0.5em 0;
         }
 
         .filter-toggle-content {
@@ -51,9 +52,8 @@
             text-align: center;
             margin: 0px auto;
             max-width: 12em;
-            background: $color-white-pure;
-            color: $color-green-shamrock;
-            font-size: $font-size-smaller;
+            color: $color-green-jewel;
+            font-size: $font-size-large;
             font-weight: $font-weight-body-strong;
             cursor: pointer;
         }
@@ -81,10 +81,32 @@
         }
     }
 
+    .filter-row-spacer {
+        padding-bottom: 2em;
+        border-bottom: 1px solid $color-white-lilac;
+        margin-bottom: 1em;
+    }
 
+    .filter-preset-selections {
+        @include breakpoint($mq-md-max) {
+            @include clearfix();
+            margin-bottom: 1em;
+        }
+    }
 
     .filter-location {
-        padding-left: 1.2em;
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of2(true, true, true);
+        }
+
+         @include breakpoint($mq-lg-min) {
+            @include cg-1of6(true, true, true);
+            padding-left: 1.2em;
+        }
 
         .filter-input {
             margin: 10px 0;
@@ -100,7 +122,29 @@
     }
 
     .filter-utility {
-        padding-right: 1.3em;
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+
+        @include breakpoint($mq-md-max) {
+            .filter-selected-utility {
+                float: left;
+            }
+
+            .ce-dropdown {
+                float: left;
+                padding: 1.1em 2.5em;
+            }
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of2(true, true, true);
+        }
+
+         @include breakpoint($mq-lg-min) {
+            @include cg-1of6(true, true, true);
+            padding-right: 1.3em;
+        }
 
         .filter-selected-utility {
             margin: 10px 0;
@@ -109,9 +153,27 @@
 
     .filter-energy-type,
     .filter-building-type {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of2(true, true, true);
+        }
+
+        @include breakpoint($mq-md-max) {
+            padding-right: 3em;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            @include cg-1of3(true, true, true);
+        }
+
         .ce-label {
+            @include cg-1of3(true, true, true);
             font-size: 0.9em;
             text-align: center;
+            padding: 0.5em;
 
             &.disabled {
                 .icon:before {
@@ -138,10 +200,8 @@
     }
 
     .filter-energy-type {
-        padding: 0.5em 1.3em;
-
-        .ce-label {
-            @include cg-1of3(true, false);
+        @include breakpoint($mq-lg-min) {
+            padding: 0.5em 1.3em;
         }
 
         .c-icon-electricity:before {
@@ -163,10 +223,8 @@
     }
 
     .filter-building-type {
-        padding-left: 1.6em ;
-
-        .ce-label {
-            @include cg-1of3(true, false);
+        @include breakpoint($mq-lg-min) {
+            padding-left: 1.6em ;
         }
 
         .c-icon-res:before,
@@ -187,6 +245,10 @@
 
     .filter-compare-rate,
     .filter-usage {
+        @include breakpoint($mq-md-min) {
+            @include cg-1of3(true, true, true);
+        }
+
         text-align: center;
 
         .ce-label {
@@ -211,65 +273,109 @@
     }
 
     .filter-usage {
-        float: right;
+        @include breakpoint($mq-md-min) {
+            float: right;
+        }
+    }
+
+    .filter-cta {
+        text-align: center;
+        padding-top: 1.5em;
+    }
+
+    .filter-group {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of3(true, true, true);
+        }
     }
 
     .filter-plan-type,
     .filter-contract-term {
+
+        &:first-of-type {
+            margin-bottom: 1.5em;
+        }
+
+        .plan-types,
+        .term-lengths {
+            @include clearfix;
+        }
+
         .ce-label {
-            padding: 0;
+            @include cg-1of2(true, true, true);
         }
 
         .ce-label-text {
-            padding: 0.5em 2px;
+            padding: 0em 2px;
             box-sizing: border-box;
         }
     }
 
-    .filter-contract-term {
-        .term-lengths {
-            @include prefixer(column-count, 3, webkit moz);
-            @include prefixer(column-gap, 5px, webkit moz);
-        }
-    }
-
-    .filter-cost-green,
-    .filter-rating {
+    .filter-cost-kwh,
+    .filter-cost-month,
+    .filter-percent-green{
         .ce-label {
             width: 100%;
             padding: 0;
-            margin: 18px 0;
+            font-weight: $font-weight-headline;
+            margin-bottom: 2em;
+            text-align: center;
+        }
 
-            .ce-label-text {
-                width: 45%;
-                float: left;
-                padding: 0.625em 0.25em;
-                text-align: center;
+        .ce-label-text {
+            padding-bottom: 0.5em;
+        }
+
+        .input-number {
+            width: 6em;
+            font-weight: $font-weight-body;
+
+            &:first-of-type {
+                margin-left: 0;
             }
         }
+    }
 
-        .range,
-        .filter-supplier,
-        .rating-widget {
-            width: 55%;
-            float: left;
-            margin: 0;
+    .filter-rating,
+    .filter-suppliers {
+        @include breakpoint($mq-md-min) {
+            padding-left: 3em;
         }
 
-        .range {
-            margin: 0.25em 0;
+        .ce-label {
+            padding: 0;
+            width: 100%;
         }
+    }
 
-        .rating-widget {
-            font-size: 1.5em;
+    .filter-rating {
+        margin-bottom: 2.5em;
 
-            .rating-value {
+        .rating-slider {
+            padding-top: 1em;
+
+            .input-range {
                 width: 100%;
-                color: $color-green-shamrock;
+                margin: 0;
+            }
+
+            .range-label {
+                display: block;
+                margin-top: 0.5em;
+                text-align: center;
+                font-weight: $font-weight-headline;
             }
         }
+    }
 
+    .filter-suppliers {
         .filter-supplier {
+            margin: 1em 0.625em;
+
             &.is-open {
                 .checkbox-menu {
                     display: block;

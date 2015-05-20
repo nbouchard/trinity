@@ -778,6 +778,8 @@
 
 .v-shopping-filters {
     @include editorial-height('short');
+    background: url('#{$image-path}photography/City_Highway.jpg') center center no-repeat;
+    background-size: cover;
     padding: 40px 0;
     margin-bottom: 40px;
 
