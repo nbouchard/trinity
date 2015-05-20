@@ -52,7 +52,13 @@
                             <div class="plan-data plan-contract">
                                 <strong class="plan-page-label">Plan Term</strong>
                                 <data class="plan-data-value p-term">6 months</data>
-                                <data class="plan-data-label p-category"><i class="icon fa fa-lock"></i> Fixed</data>
+                                <data class="plan-data-label p-category"><i class="icon c-icon-locked"></i> Fixed</data>
+                                <!-- <data class="plan-data-label p-category"><i class="icon c-icon-unlocked"></i> Variable</data>
+                                <data class="plan-data-label p-category"><i class="icon c-icon-calendar"></i> End Date</data>
+                                <data class="plan-data-label p-category"><i class="icon c-icon-clock-graph"></i> Time of Use</data>
+                                <data class="plan-data-label p-category"><i class="icon c-icon-graph"></i> Indexed</data>
+                                <data class="plan-data-label p-category"><i class="icon c-icon-credit-card"></i> Prepaid</data>
+                                <data class="plan-data-label p-category"><i class="icon c-icon-price-tag"></i> Introductory</data> -->
                             </div>
                             <div class="plan-data plan-renewable">
                                 <strong class="plan-page-label">Renewable</strong>
@@ -71,7 +77,7 @@
                             <div class="plan-data plan-fees">
                                 <strong class="plan-page-label">1 Fees</strong>
                                 <ul class="plan-data-list">
-                                    <li><strong>$1000</strong> - ETF - </li>
+                                    <li><strong>$1000</strong> - ETF</li>
                                 </ul>
                             </div>
                             <div class="plan-data plan-documents">
@@ -87,11 +93,11 @@
                         <div class="plan-supplier plan-big-section">
                             <h4 class="plan-section-header ng-binding">About North American Power</h4>
                             <div class="supplier-details">
-                                <div class="supplier-logo">
-                                    <a class="supplier-brand supplier-north-american-power" href="/suppliers/north-american-power"><span class="p-brand ng-binding" itemprop="seller">North American Power</span></a>
+                                <div class="supplier-logos">
+                                    <a class="supplier-brand supplier-north-american-power" href="/suppliers/north-american-power"><span>North American Power</span></a>
                                 </div>
                                 <div class="supplier-rating">
-                                    <div ng-if="plan.supplier.review.count" class="rating-widget ng-scope" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                                    <div class="rating-widget" >
                                         <data class="rating-value p-rating">
                                             <i class="icon rate-5 fa fa-star-o"></i>
                                             <i class="icon rate-4 fa fa-star-o"></i>
@@ -107,7 +113,7 @@
                                 </div>
                             </div>
                             <div class="supplier-description">
-                                <p ng-bind-html="plan.supplier.blurb" class="ng-binding"><a href="https://www.chooseenergy.com/suppliers/north-american-power/">North American Power</a>, one of Forbes Top 100 Most Promising Companies, is dedicated to providing its customers with competitive electricity and natural gas rates that are focused on helping the environment through renewable energy sources. North American Power offers its services in many states throughout the country.</p>
+                                <p><a href="https://www.chooseenergy.com/suppliers/north-american-power/">North American Power</a>, one of Forbes Top 100 Most Promising Companies, is dedicated to providing its customers with competitive electricity and natural gas rates that are focused on helping the environment through renewable energy sources. North American Power offers its services in many states throughout the country.</p>
                             </div>
                         </div>
                         <div class="plan-faqs plan-big-section">
