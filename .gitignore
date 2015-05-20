@@ -40,6 +40,7 @@ lib/images/supplier-logos.png
 lib/images/utility-logos-lg.png
 lib/images/utility-logos-sm.png
 lib/images/utility-logos.png
-lib/images/sprites/size-large/*.png
-lib/images/sprites/size-small/*.png
-lib/images/sprites/size-standard/*.png
+lib/images/sprites/size-large/*
+lib/images/sprites/size-small/*
+lib/images/sprites/size-standard/*
+lib/styles/generated/*
