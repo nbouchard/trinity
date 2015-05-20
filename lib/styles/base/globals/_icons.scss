@@ -8,6 +8,7 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    vertical-align: text-top;
 }
 
 @font-face {
@@ -32,222 +33,234 @@
 }
 
 //Variables
-$c-icon-sun: '\e02d';
-$c-icon-chevron-down: '\e019';
-$c-icon-chevron-up: '\e01c';
-$c-icon-facebook: '\e031';
-$c-icon-twitter: '\e032';
-$c-icon-email: '\e033';
+$c-icon-sun: '\e02e';
+$c-icon-chevron-down: '\e00b';
+$c-icon-chevron-up: '\e00e';
+$c-icon-facebook: '\e018';
+$c-icon-twitter: '\e019';
+$c-icon-email: '\e01a';
 
 //Icons
+.c-icon-menu:before {
+  content: '\e000';
+}
+
 .c-icon-dollar:before {
-    content: '\e000';
+  content: '\e001';
 }
 
 .c-icon-address:before {
-    content: '\e001';
+  content: '\e002';
 }
 
 .c-icon-thumbs-up:before {
-    content: '\e002';
+  content: '\e003';
 }
 
-.c-icon-price-tag:before {
-    content: '\e003';
+.c-icon-thumbs-down:before {
+  content: '\e004';
 }
 
-.c-icon-shopping-cart:before {
-    content: '\e004';
-}
-
-.c-icon-credit-card:before {
-    content: '\e005';
+.c-icon-shopping:before {
+  content: '\e005';
 }
 
 .c-icon-check-mark:before {
-    content: '\e006';
-}
-
-.c-icon-remove:before {
-    content: '\e007';
-}
-
-.c-icon-lock:before {
-    content: '\e008';
-}
-
-.c-icon-unlock:before {
-    content: '\e009';
-}
-
-.c-icon-search:before {
-    content: '\e00a';
-}
-
-.c-icon-location:before {
-    content: '\e00b';
-}
-
-.c-icon-cog:before {
-    content: '\e00c';
-}
-
-.c-icon-calendar:before {
-    content: '\e00d';
-}
-
-.c-icon-clock:before {
-    content: '\e00e';
-}
-
-.c-icon-print:before {
-    content: '\e00f';
-}
-
-.c-icon-heart:before {
-    content: '\e010';
-}
-
-.c-icon-menu:before {
-    content: '\e011';
-}
-
-.c-icon-plus:before {
-    content: '\e012';
-}
-
-.c-icon-minus:before {
-    content: '\e013';
-}
-
-.c-icon-help:before {
-    content: '\e014';
-}
-
-.c-icon-arrow-right:before {
-    content: '\e015';
-}
-
-.c-icon-arrow-left:before {
-    content: '\e016';
-}
-
-.c-icon-arrow-up:before {
-    content: '\e017';
+  content: '\e006';
 }
 
 .c-icon-arrow-down:before {
-    content: '\e018';
+  content: '\e007';
+}
+
+.c-icon-arrow-left:before {
+  content: '\e008';
+}
+
+.c-icon-arrow-right:before {
+  content: '\e009';
+}
+
+.c-icon-arrow-up:before {
+  content: '\e00a';
 }
 
 .c-icon-chevron-down:before {
-    content: '\e019';
+  content: '\e00b';
 }
 
 .c-icon-chevron-left:before {
-    content: '\e01a';
+  content: '\e00c';
 }
 
 .c-icon-chevron-right:before {
-    content: '\e01b';
+  content: '\e00d';
 }
 
 .c-icon-chevron-up:before {
-    content: '\e01c';
+  content: '\e00e';
+}
+
+.c-icon-remove:before {
+  content: '\e00f';
+}
+
+.c-icon-search:before {
+  content: '\e010';
+}
+
+.c-icon-location:before {
+  content: '\e011';
+}
+
+.c-icon-cog:before {
+  content: '\e012';
+}
+
+.c-icon-clock:before {
+  content: '\e013';
+}
+
+.c-icon-print:before {
+  content: '\e014';
+}
+
+.c-icon-heart:before {
+  content: '\e015';
+}
+
+.c-icon-plus:before {
+  content: '\e016';
+}
+
+.c-icon-minus:before {
+  content: '\e017';
+}
+
+.c-icon-facebook:before {
+  content: '\e018';
+}
+
+.c-icon-twitter:before {
+  content: '\e019';
+}
+
+.c-icon-mail:before {
+  content: '\e01a';
 }
 
 .c-icon-car:before {
-    content: '\e01d';
-}
-
-.c-icon-electricity:before {
-    content: '\e01e';
-}
-
-.c-icon-factory:before {
-    content: '\e01f';
-}
-
-.c-icon-garbage-truck:before {
-    content: '\e020';
-}
-
-.c-icon-green-energy:before {
-    content: '\e021';
-}
-
-.c-icon-heart-cord:before {
-    content: '\e022';
-}
-
-.c-icon-res:before,
-.c-icon-residential:before {
-    content: '\e023';
-}
-
-.c-icon-green:before {
-    content: '\e024';
-}
-
-.c-icon-naturalgas:before,
-.c-icon-nat-gas:before {
-    content: '\e025';
+  content: '\e01b';
 }
 
 .c-icon-com:before,
 .c-icon-commercial:before {
-    content: '\e026';
+  content: '\e01c';
+}
+
+.c-icon-electricity:before {
+  content: '\e01d';
+}
+
+.c-icon-calendar:before {
+  content: '\e01e';
+}
+
+.c-icon-factory:before {
+  content: '\e01f';
+}
+
+.c-icon-garbage-truck:before {
+  content: '\e021';
+}
+
+.c-icon-green:before {
+  content: '\e022';
+}
+
+.c-icon-green-energy:before {
+  content: '\e023';
+}
+
+.c-icon-heart-cord:before {
+  content: '\e024';
+}
+
+.c-icon-heating-oil:before {
+  content: '\e025';
+}
+
+.c-icon-house-plug:before {
+  content: '\e026';
+}
+
+.c-icon-graph:before {
+  content: '\e027';
+}
+
+.c-icon-price-tag:before {
+  content: '\e028';
+}
+
+.c-icon-naturalgas:before,
+.c-icon-nat-gas:before {
+  content: '\e029';
+}
+
+.c-icon-credit-card:before {
+  content: '\e02a';
+}
+
+.c-icon-res:before,
+.c-icon-residential:before {
+  content: '\e02b';
 }
 
 .c-icon-save-money:before {
-    content: '\e027';
+  content: '\e02c';
 }
 
 .c-icon-smallbusiness:before,
 .c-icon-smb:before {
-    content: '\e028';
-}
-
-.c-icon-solar-panels:before {
-    content: '\e029';
-}
-
-.c-icon-star-filled:before {
-    content: '\e02a';
-}
-
-.c-icon-star-half:before {
-    content: '\e02b';
-}
-
-.c-icon-star-open:before {
-    content: '\e02c';
+  content: '\e02d';
 }
 
 .c-icon-solar:before {
-    content: '\e02d';
+  content: '\e02e';
 }
 
-.c-icon-wind:before {
-    content: '\e02e';
+.c-icon-solar-panels:before {
+  content: '\e02f';
 }
 
-.c-icon-wind-power:before {
-    content: '\e02f';
-}
-
-.c-icon-heating-oil:before {
+.c-icon-star-filled:before {
   content: '\e030';
 }
 
-.c-icon-facebook:before {
+.c-icon-star-half:before {
   content: '\e031';
 }
 
-.c-icon-twitter:before {
+.c-icon-star-open:before {
   content: '\e032';
 }
 
-.c-icon-email-envelope:before {
+.c-icon-clock-graph:before {
   content: '\e033';
+}
+
+.c-icon-unlocked:before {
+  content: '\e034';
+}
+
+.c-icon-wind:before {
+  content: '\e035';
+}
+
+.c-icon-wind-power:before {
+  content: '\e036';
+}
+
+.c-icon-locked:before {
+  content: '\e020';
 }

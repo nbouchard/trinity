@@ -116,9 +116,14 @@
         }
 
         .sorter-link {
-            @include ce-button('basic');
+            @include ce-button('info');
             display: inline-block;
             margin-bottom: $grid-gutter-width;
+
+            &.is-active {
+                border-bottom: $button-border-width solid $color-blue-curious;
+                background: $color-blue-bahama;
+            }
         }
 
         .sorter-details {
@@ -130,8 +135,9 @@
         @include cg-row();
         padding-right: $card-padding;
         padding-left: (3 * $card-padding);
-        background: $color-blue-curious-light;
+        background: $color-blue-curious;
         text-align: center;
+        border-radius: $card-corner-radius $card-corner-radius 0 0;
 
         .sorter-price,
         .sorter-popularity {
@@ -155,6 +161,7 @@
             background: $color-blue-curious-light;
             color: $color-white-pure;
             text-align: center;
+            border-radius: $card-corner-radius 0 0 0;
 
             .fa-trophy {
                 display: inline-block;
@@ -201,7 +208,7 @@
         }
 
         &.is-active {
-            background: $color-blue-boston;
+            background: $color-blue-bahama;
 
             .fa-sort,
             .fa-sort-asc,
@@ -234,7 +241,7 @@
     // Plan Card Header
     .plan-badge {
         @include ce-card-header();
-        background: $color-blue-curious;
+        background: $color-blue-bahama-light;
         color: $color-white-pure;
         text-align: center;
     }
@@ -400,18 +407,20 @@
 // No styleguide reference
 @mixin plan-as-expanded() {
     @include ce-card(false, false, false);
+    border-top: 0px;
 
     .plan-page-header {
         position: relative;
         width: 100%;
-        height: (4em + (2 * $grid-gutter-width));
+        height: (4em + (2 * 1.75 * $grid-gutter-width));
         background: $color-blue-curious;
 
         .plan-page-name {
             @include cg-row();
-            padding: $grid-gutter-width;
-            height: 4em;
+            padding: (1.75 * $grid-gutter-width);
+            height: 100%;
             line-height: 2em;
+            color: $color-white-pure;
 
             .plan-page-name-container {
                 display: inline-block;
@@ -426,7 +435,6 @@
 
             .plan-utility {
                 display: block;
-                color: $color-blue-bahama;
                 font-weight: $font-weight-body;
                 font-style: italic;
             }
@@ -503,12 +511,19 @@
     .plan-data-label {
         padding: (1.75 * $grid-gutter-width);
         padding-top: 0;
+
+        .icon {
+            color: $color-blue-curious;
+            margin-right: 0.25em;
+        }
     }
 
     .plan-data-list {
+        list-style-type: disc;
         padding-top: $grid-gutter-width;
         padding-right: $grid-gutter-width;
         padding-bottom: $grid-gutter-width;
+        padding-left: 4 * $grid-gutter-width;
         text-align: left;
         line-height: 1.6em;
     }
@@ -556,7 +571,7 @@
         @include cg-row();
     }
 
-    .supplier-logo {
+    .supplier-logos {
         @include breakpoint($mq-sm-max) {
             @include cg-item(true, true);
         }
@@ -626,13 +641,12 @@
             left: 0;
             padding-right: 6em;
             width: 100%;
-            height: (4em + (2 * $grid-gutter-width));
+            min-height: (4em + (2 * $grid-gutter-width));
             background: $color-blue-curious;
 
             .plan-page-name {
                 @include cg-row();
                 padding: $grid-gutter-width;
-                height: 4em;
                 line-height: 4em;
 
                 @include breakpoint($mq-sm-max) {
@@ -753,6 +767,11 @@
         .plan-data-label {
             padding: (1.75 * $grid-gutter-width);
             padding-top: 0;
+
+            .icon {
+                color: $color-blue-curious;
+                margin-right: 0.25em;
+            }
         }
 
         .plan-data-list {
@@ -816,7 +835,7 @@
             @include cg-row();
         }
 
-        .supplier-logo {
+        .supplier-logos {
             @include breakpoint($mq-sm-max) {
                 @include cg-item(true, true);
             }
@@ -900,7 +919,7 @@
             // Plan Badge Slat Cap
             .plan-badge {
                 @include ce-slat-cap('left');
-                background: $color-blue-curious;
+                background: $color-blue-bahama-light;
                 color: $color-white-pure;
                 text-align: center;
             }
