@@ -26,10 +26,12 @@
 .all-plans {
     @include breakpoint($mq-sm-max) {
         @include cg-row(false, false);
+        margin-top: 2em;
     }
 
     @include breakpoint($mq-md-min) {
         @include cg-row(true, true);
+        margin-top: 2em;
     }
 }
 
@@ -47,10 +49,11 @@
 
 .plans-header {
     @include cg-row();
+    padding: 0.5em 0;
 
     @include breakpoint($mq-sm-max) {
         .plans-title {
-            @include cg-item(true, true);
+            @include cg-item(false, true);
         }
 
         .plans-filter-trigger {
@@ -259,6 +262,10 @@
         .plan-data {
             @include cg-item();
         }
+
+        .plan-data-value {
+            font-weight: $font-weight-subhead;
+        }
     }
 
     // Plan Info
@@ -295,6 +302,14 @@
     // Card-specific Customizations for the Plan Details block
     .plan-details {
         text-align: center;
+
+        .plan-name .p-name{
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
 
         .plan-more-details {
             display: none;
@@ -446,6 +461,8 @@
         top: (2 * $grid-gutter-width);
         right: (2 * $grid-gutter-width);
         color: $color-white-pure;
+        font-weight: $font-weight-body-strong;
+        cursor: pointer;
         text-decoration: none;
 
         &:hover,
@@ -637,6 +654,9 @@
 
         .plan-page-header {
             position: fixed;
+            -webkit-backface-visibility: hidden;  // These two lines fix a bug in Chrome that
+            -webkit-transform: translateZ(0);     // prevent position:fixed from working correctly
+            z-index: $z-overlay-low;
             top: 0;
             left: 0;
             padding-right: 6em;
@@ -669,10 +689,11 @@
 
                 .plan-name {
                     color: $color-white-pure;
+                    margin-right: 1em;
                 }
 
                 .plan-utility {
-                    color: $color-blue-bahama;
+                    color: $color-gray-woodsmoke;
                     font-weight: $font-weight-body;
                     font-style: italic;
                 }
@@ -684,6 +705,8 @@
             top: (2 * $grid-gutter-width);
             right: (2 * $grid-gutter-width);
             color: $color-white-pure;
+            font-weight: $font-weight-body-strong;
+            cursor: pointer;
             text-decoration: none;
 
             &:hover,
@@ -935,8 +958,12 @@
                 padding: ($grid-gutter-width / 2);
                 padding-top: $grid-gutter-width;
                 text-align: center;
-                font-size: $font-size-huger;
+                font-size: $font-size-largest;
                 line-height: 1.5em;
+
+                .plan-data-value {
+                    font-weight: $font-weight-subhead;
+                }
             }
 
             // Plan Info

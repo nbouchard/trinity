@@ -277,6 +277,21 @@ label {
     background-color: $color-gray-oslo;
 }
 
+// For use with radio & checkboxes that have multi-line label text that should be left aligned;
+[type="radio"] + .ce-label-text.multi-line,
+[type="checkbox"] + .ce-label-text.multi-line {
+    position: relative;
+    padding-left: 2.5em;
+}
+
+[type="radio"] + .ce-label-text.multi-line:before,
+[type="checkbox"] + .ce-label-text.multi-line:before {
+    position: absolute;
+    margin: 0;
+    top: 0.5em;
+    left: 0.5em;
+}
+
 // Range slider
 @mixin range-slider-track($color: $color-gray-geyser, $height: 3px, $radius: 2px) {
     background: $color-gray-geyser;
@@ -440,7 +455,8 @@ input[type=range]:disabled::-ms-thumb {
             padding: 0.5em 1.5em;
 
             @include breakpoint($mq-sm-max) {
-                width: 125%;
+                width: 100%;
+                padding: 0.5em 1.5em;
 
                 .menu-list {
                     @include prefixer(column-count, 2, webkit moz);
