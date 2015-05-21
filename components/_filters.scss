@@ -283,113 +283,99 @@
         padding-top: 1.5em;
     }
 
+    .filter-group {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of3(true, true, true);
+        }
+    }
+
     .filter-plan-type,
     .filter-contract-term {
-        .ce-label {
-            padding: 0;
 
-            @include breakpoint($mq-md-max) {
-                padding-right: 2em;
-            }
+        &:first-of-type {
+            margin-bottom: 1.5em;
+        }
+
+        .plan-types,
+        .term-lengths {
+            @include clearfix;
+        }
+
+        .ce-label {
+            @include cg-1of2(true, true, true);
         }
 
         .ce-label-text {
-            padding: 0.5em 2px;
+            padding: 0em 2px;
             box-sizing: border-box;
         }
     }
 
-    .filter-plan-type {
-        @include breakpoint($mq-md-max) {
-            @include cg-item(true, true);
-        }
-
-         @include breakpoint($mq-lg-min) {
-            @include cg-1of6(true, true, true);
-        }
-    }
-
-    .filter-contract-term {
-        @include breakpoint($mq-md-max) {
-            @include cg-item(true, true);
-        }
-
-         @include breakpoint($mq-lg-min) {
-            @include cg-1of3(true, true, true);
-
-            .term-lengths {
-                @include prefixer(column-count, 3, webkit moz);
-                @include prefixer(column-gap, 5px, webkit moz);
-            }
-        }
-    }
-
-    .filter-cost-green,
-    .filter-rating {
-        @include breakpoint($mq-sm-max) {
-            @include cg-item(true, true);
-            .ce-label .ce-label-text {
-                width: 30%;
-            }
-
-            .range,
-            .filter-supplier,
-            .rating-widget {
-                width: 70%;
-            }
-        }
-
-        @include breakpoint($mq-md-min) {
-            @include cg-1of2(true, true, true);
-
-            .ce-label .ce-label-text {
-                width: 45%;
-            }
-
-            .range,
-            .filter-supplier,
-            .rating-widget {
-                width: 55%;
-            }
-        }
-
-        @include breakpoint($mq-lg-min) {
-            @include cg-1of4(true, true, true);
-        }
-
+    .filter-cost-kwh,
+    .filter-cost-month,
+    .filter-percent-green{
         .ce-label {
             width: 100%;
             padding: 0;
-            margin: 18px 0;
+            font-weight: $font-weight-headline;
+            margin-bottom: 2em;
+            text-align: center;
+        }
 
-            .ce-label-text {
-                float: left;
-                padding: 0.625em 0.25em;
-                text-align: center;
+        .ce-label-text {
+            padding-bottom: 0.5em;
+        }
+
+        .input-number {
+            width: 6em;
+            font-weight: $font-weight-body;
+
+            &:first-of-type {
+                margin-left: 0;
             }
         }
+    }
 
-        .range,
-        .filter-supplier,
-        .rating-widget {
-            float: left;
-            margin: 0;
+    .filter-rating,
+    .filter-suppliers {
+        @include breakpoint($mq-md-min) {
+            padding-left: 3em;
         }
 
-        .range {
-            margin: 0.25em 0;
+        .ce-label {
+            padding: 0;
+            width: 100%;
         }
+    }
 
-        .rating-widget {
-            font-size: 1.5em;
+    .filter-rating {
+        margin-bottom: 2.5em;
 
-            .rating-value {
+        .rating-slider {
+            padding-top: 1em;
+
+            .input-range {
                 width: 100%;
-                color: $color-green-shamrock;
+                margin: 0;
+            }
+
+            .range-label {
+                display: block;
+                margin-top: 0.5em;
+                text-align: center;
+                font-weight: $font-weight-headline;
             }
         }
+    }
 
+    .filter-suppliers {
         .filter-supplier {
+            margin: 1em 0.625em;
+
             &.is-open {
                 .checkbox-menu {
                     display: block;

@@ -26,10 +26,12 @@
 .all-plans {
     @include breakpoint($mq-sm-max) {
         @include cg-row(false, false);
+        margin-top: 2em;
     }
 
     @include breakpoint($mq-md-min) {
         @include cg-row(true, true);
+        margin-top: 2em;
     }
 }
 
@@ -47,10 +49,11 @@
 
 .plans-header {
     @include cg-row();
+    padding: 0.5em 0;
 
     @include breakpoint($mq-sm-max) {
         .plans-title {
-            @include cg-item(true, true);
+            @include cg-item(false, true);
         }
 
         .plans-filter-trigger {
@@ -116,9 +119,14 @@
         }
 
         .sorter-link {
-            @include ce-button('basic');
+            @include ce-button('info');
             display: inline-block;
             margin-bottom: $grid-gutter-width;
+
+            &.is-active {
+                border-bottom: $button-border-width solid $color-blue-curious;
+                background: $color-blue-bahama;
+            }
         }
 
         .sorter-details {
@@ -130,8 +138,9 @@
         @include cg-row();
         padding-right: $card-padding;
         padding-left: (3 * $card-padding);
-        background: $color-blue-curious-light;
+        background: $color-blue-curious;
         text-align: center;
+        border-radius: $card-corner-radius $card-corner-radius 0 0;
 
         .sorter-price,
         .sorter-popularity {
@@ -155,6 +164,7 @@
             background: $color-blue-curious-light;
             color: $color-white-pure;
             text-align: center;
+            border-radius: $card-corner-radius 0 0 0;
 
             .fa-trophy {
                 display: inline-block;
@@ -201,7 +211,7 @@
         }
 
         &.is-active {
-            background: $color-blue-boston;
+            background: $color-blue-bahama;
 
             .fa-sort,
             .fa-sort-asc,
@@ -234,7 +244,7 @@
     // Plan Card Header
     .plan-badge {
         @include ce-card-header();
-        background: $color-blue-curious;
+        background: $color-blue-bahama-light;
         color: $color-white-pure;
         text-align: center;
     }
@@ -251,6 +261,10 @@
 
         .plan-data {
             @include cg-item();
+        }
+
+        .plan-data-value {
+            font-weight: $font-weight-subhead;
         }
     }
 
@@ -288,6 +302,14 @@
     // Card-specific Customizations for the Plan Details block
     .plan-details {
         text-align: center;
+
+        .plan-name .p-name{
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
 
         .plan-more-details {
             display: none;
@@ -400,18 +422,20 @@
 // No styleguide reference
 @mixin plan-as-expanded() {
     @include ce-card(false, false, false);
+    border-top: 0px;
 
     .plan-page-header {
         position: relative;
         width: 100%;
-        height: (4em + (2 * $grid-gutter-width));
+        height: (4em + (2 * 1.75 * $grid-gutter-width));
         background: $color-blue-curious;
 
         .plan-page-name {
             @include cg-row();
-            padding: $grid-gutter-width;
-            height: 4em;
+            padding: (1.75 * $grid-gutter-width);
+            height: 100%;
             line-height: 2em;
+            color: $color-white-pure;
 
             .plan-page-name-container {
                 display: inline-block;
@@ -426,7 +450,6 @@
 
             .plan-utility {
                 display: block;
-                color: $color-blue-bahama;
                 font-weight: $font-weight-body;
                 font-style: italic;
             }
@@ -438,6 +461,8 @@
         top: (2 * $grid-gutter-width);
         right: (2 * $grid-gutter-width);
         color: $color-white-pure;
+        font-weight: $font-weight-body-strong;
+        cursor: pointer;
         text-decoration: none;
 
         &:hover,
@@ -503,12 +528,19 @@
     .plan-data-label {
         padding: (1.75 * $grid-gutter-width);
         padding-top: 0;
+
+        .icon {
+            color: $color-blue-curious;
+            margin-right: 0.25em;
+        }
     }
 
     .plan-data-list {
+        list-style-type: disc;
         padding-top: $grid-gutter-width;
         padding-right: $grid-gutter-width;
         padding-bottom: $grid-gutter-width;
+        padding-left: 4 * $grid-gutter-width;
         text-align: left;
         line-height: 1.6em;
     }
@@ -556,7 +588,7 @@
         @include cg-row();
     }
 
-    .supplier-logo {
+    .supplier-logos {
         @include breakpoint($mq-sm-max) {
             @include cg-item(true, true);
         }
@@ -622,17 +654,19 @@
 
         .plan-page-header {
             position: fixed;
+            -webkit-backface-visibility: hidden;  // These two lines fix a bug in Chrome that
+            -webkit-transform: translateZ(0);     // prevent position:fixed from working correctly
+            z-index: $z-overlay-low;
             top: 0;
             left: 0;
             padding-right: 6em;
             width: 100%;
-            height: (4em + (2 * $grid-gutter-width));
+            min-height: (4em + (2 * $grid-gutter-width));
             background: $color-blue-curious;
 
             .plan-page-name {
                 @include cg-row();
                 padding: $grid-gutter-width;
-                height: 4em;
                 line-height: 4em;
 
                 @include breakpoint($mq-sm-max) {
@@ -655,10 +689,11 @@
 
                 .plan-name {
                     color: $color-white-pure;
+                    margin-right: 1em;
                 }
 
                 .plan-utility {
-                    color: $color-blue-bahama;
+                    color: $color-gray-woodsmoke;
                     font-weight: $font-weight-body;
                     font-style: italic;
                 }
@@ -670,6 +705,8 @@
             top: (2 * $grid-gutter-width);
             right: (2 * $grid-gutter-width);
             color: $color-white-pure;
+            font-weight: $font-weight-body-strong;
+            cursor: pointer;
             text-decoration: none;
 
             &:hover,
@@ -753,6 +790,11 @@
         .plan-data-label {
             padding: (1.75 * $grid-gutter-width);
             padding-top: 0;
+
+            .icon {
+                color: $color-blue-curious;
+                margin-right: 0.25em;
+            }
         }
 
         .plan-data-list {
@@ -816,7 +858,7 @@
             @include cg-row();
         }
 
-        .supplier-logo {
+        .supplier-logos {
             @include breakpoint($mq-sm-max) {
                 @include cg-item(true, true);
             }
@@ -900,7 +942,7 @@
             // Plan Badge Slat Cap
             .plan-badge {
                 @include ce-slat-cap('left');
-                background: $color-blue-curious;
+                background: $color-blue-bahama-light;
                 color: $color-white-pure;
                 text-align: center;
             }
@@ -916,8 +958,12 @@
                 padding: ($grid-gutter-width / 2);
                 padding-top: $grid-gutter-width;
                 text-align: center;
-                font-size: $font-size-huger;
+                font-size: $font-size-largest;
                 line-height: 1.5em;
+
+                .plan-data-value {
+                    font-weight: $font-weight-subhead;
+                }
             }
 
             // Plan Info
