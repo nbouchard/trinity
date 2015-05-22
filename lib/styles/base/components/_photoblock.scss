@@ -1,7 +1,409 @@
 .ce-photoblock {
-    height: 50em;
-    color: $color-white-pure;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    color: $color-white-lily;
+    position: relative;
+    min-height: 100vh;
+
+    .photoblock-photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        min-height: 100vh;
+        z-index: $z-body-low;
+        //@include filter(grayscale(100%));
+
+        // Photo BG
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .photoblock-overlay {
+
+        // Parallax Layer
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: $z-body-mid;
+
+    }
+
+    .photoblock-foreground {
+        z-index: $z-body-high;
+        position: relative;
+
+        .photoblock-container {
+            @include box-sizing(border-box);
+            @include clearfix;
+            position: relative;
+            margin: 0 auto;
+            padding: 5em 0;
+            max-width: $site-max-width;
+            width: 100%;
+
+            @include breakpoint($mq-md-max) {
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+        }
+    }
+
+    .photoblock-headline {
+        @include typeface('headline');
+        font-size: $font-size-extrahuger;
+        line-height: 1.25em;
+        //display: inline-block;
+        padding: 0.25em;
+        padding-bottom: 0;
+    }
+
+    .photoblock-subhead {
+        @include typeface('subhead');
+        font-size: $font-size-extrahuge;
+        line-height: 1.25em;
+        //display: inline-block;
+        padding: 0.25em;
+        padding-bottom: 0;
+    }
+
+    .photoblock-cta {
+        p {
+            //display: inline-block;
+            padding: 0.25em;
+            padding-bottom: 0;
+        }
+    }
+
 }
+
+
+
+
+
+
+
+
+.pb-color-jewel {
+    background: rgba($color-green-jewel, 0.7);
+}
+
+.pb-color-jungle {
+    background: rgba($color-green-jungle, 0.7);
+}
+
+.pb-color-shamrock {
+    background: rgba($color-green-shamrock, 0.7);
+}
+
+.pb-color-aquamarine {
+    background: rgba($color-green-aquamarine, 0.7);
+}
+
+.pb-color-cruise {
+    background: rgba($color-green-cruise, 0.7);
+}
+
+.pb-color-bahama {
+    background: rgba($color-blue-bahama, 0.7);
+}
+
+.pb-color-boston {
+    background: rgba($color-blue-boston, 0.7);
+}
+
+.pb-color-curious {
+    background: rgba($color-blue-curious, 0.7);
+}
+
+.pb-color-danube {
+    background: rgba($color-blue-danube, 0.7);
+}
+
+.pb-color-perano {
+    background: rgba($color-blue-perano, 0.7);
+}
+
+.pb-color-fiery {
+    background: rgba($color-orange-fiery, 0.7);
+}
+
+.pb-color-tango {
+    background: rgba($color-orange-tango, 0.7);
+}
+
+.pb-color-sun {
+    background: rgba($color-orange-sun, 0.7);
+}
+
+.pb-color-tacao {
+    background: rgba($color-orange-tacao, 0.7);
+}
+
+.pb-color-apricot {
+    background: rgba($color-orange-apricot, 0.7);
+}
+
+.pb-color-tamarillo {
+    background: rgba($color-red-tamarillo, 0.7);
+}
+
+.pb-color-poppy {
+    background: rgba($color-red-poppy, 0.7);
+}
+
+.pb-color-cinnabar {
+    background: rgba($color-red-cinnabar, 0.7);
+}
+
+.pb-color-pink {
+    background: rgba($color-red-pink, 0.7);
+}
+
+.pb-color-azalea {
+    background: rgba($color-red-azalea, 0.7);
+}
+
+.pb-color-black {
+    background: rgba($color-gray-black, 0.7);
+}
+
+.pb-color-nero {
+    background: rgba($color-gray-nero, 0.7);
+}
+
+.pb-color-woodsmoke {
+    background: rgba($color-gray-woodsmoke, 0.7);
+}
+
+.pb-color-charcoal {
+    background: rgba($color-gray-charcoal, 0.7);
+}
+
+.pb-color-cape {
+    background: rgba($color-gray-cape, 0.7);
+}
+
+.pb-color-stone {
+    background: rgba($color-gray-stone, 0.7);
+}
+
+.pb-color-oslo {
+    background: rgba($color-gray-oslo, 0.7);
+}
+
+.pb-color-chateau {
+    background: rgba($color-gray-chateau, 0.7);
+}
+
+.pb-color-edward {
+    background: rgba($color-gray-edward, 0.7);
+}
+
+.pb-color-ghost {
+    background: rgba($color-gray-ghost, 0.7);
+}
+
+.pb-color-geyser {
+    background: rgba($color-gray-geyser, 0.7);
+}
+
+.pb-color-lilac {
+    background: rgba($color-white-lilac, 0.7);
+}
+
+.pb-color-lily {
+    background: rgba($color-white-lily, 0.7);
+}
+
+.pb-color-smoke {
+    background: rgba($color-white-smoke, 0.7);
+}
+
+.pb-color-white {
+    background: rgba($color-white-pure, 0.7);
+}
+
+
+.pb-color-violet {
+    background: rgba($color-purple-violet, 0.7);
+}
+
+.pb-color-butter {
+    background: rgba($color-yellow-butter, 0.7);
+}
+
+.pb-color-mantis {
+    background: rgba($color-olive-mantis, 0.7);
+}
+
+.pb-color-mulberry {
+    background: rgba($color-magenta-mulberry, 0.7);
+}
+
+
+
+
+/*
+
+.pb-highlight-jewel {
+    background: rgba($color-green-jewel, 1.0);
+}
+
+.pb-highlight-jungle {
+    background: rgba($color-green-jungle, 1.0);
+}
+
+.pb-highlight-shamrock {
+    background: rgba($color-green-shamrock, 1.0);
+}
+
+.pb-highlight-aquamarine {
+    background: rgba($color-green-aquamarine, 1.0);
+}
+
+.pb-highlight-cruise {
+    background: rgba($color-green-cruise, 1.0);
+}
+
+.pb-highlight-bahama {
+    background: rgba($color-blue-bahama, 1.0);
+}
+
+.pb-highlight-boston {
+    background: rgba($color-blue-boston, 1.0);
+}
+
+.pb-highlight-curious {
+    background: rgba($color-blue-curious, 1.0);
+}
+
+.pb-highlight-danube {
+    background: rgba($color-blue-danube, 1.0);
+}
+
+.pb-highlight-perano {
+    background: rgba($color-blue-perano, 1.0);
+}
+
+.pb-highlight-fiery {
+    background: rgba($color-orange-fiery, 1.0);
+}
+
+.pb-highlight-tango {
+    background: rgba($color-orange-tango, 1.0);
+}
+
+.pb-highlight-sun {
+    background: rgba($color-orange-sun, 1.0);
+}
+
+.pb-highlight-tacao {
+    background: rgba($color-orange-tacao, 1.0);
+}
+
+.pb-highlight-apricot {
+    background: rgba($color-orange-apricot, 1.0);
+}
+
+.pb-highlight-tamarillo {
+    background: rgba($color-red-tamarillo, 1.0);
+}
+
+.pb-highlight-poppy {
+    background: rgba($color-red-poppy, 1.0);
+}
+
+.pb-highlight-cinnabar {
+    background: rgba($color-red-cinnabar, 1.0);
+}
+
+.pb-highlight-pink {
+    background: rgba($color-red-pink, 1.0);
+}
+
+.pb-highlight-azalea {
+    background: rgba($color-red-azalea, 1.0);
+}
+
+.pb-highlight-black {
+    background: rgba($color-gray-black, 1.0);
+}
+
+.pb-highlight-nero {
+    background: rgba($color-gray-nero, 1.0);
+}
+
+.pb-highlight-woodsmoke {
+    background: rgba($color-gray-woodsmoke, 1.0);
+}
+
+.pb-highlight-charcoal {
+    background: rgba($color-gray-charcoal, 1.0);
+}
+
+.pb-highlight-cape {
+    background: rgba($color-gray-cape, 1.0);
+}
+
+.pb-highlight-stone {
+    background: rgba($color-gray-stone, 1.0);
+}
+
+.pb-highlight-oslo {
+    background: rgba($color-gray-oslo, 1.0);
+}
+
+.pb-highlight-chateau {
+    background: rgba($color-gray-chateau, 1.0);
+}
+
+.pb-highlight-edward {
+    background: rgba($color-gray-edward, 1.0);
+}
+
+.pb-highlight-ghost {
+    background: rgba($color-gray-ghost, 1.0);
+}
+
+.pb-highlight-geyser {
+    background: rgba($color-gray-geyser, 1.0);
+}
+
+.pb-highlight-lilac {
+    background: rgba($color-white-lilac, 1.0);
+}
+
+.pb-highlight-lily {
+    background: rgba($color-white-lily, 1.0);
+}
+
+.pb-highlight-smoke {
+    background: rgba($color-white-smoke, 1.0);
+}
+
+.pb-highlight-white {
+    background: rgba($color-white-pure, 1.0);
+}
+
+
+.pb-highlight-violet {
+    background: rgba($color-purple-violet, 1.0);
+}
+
+.pb-highlight-butter {
+    background: rgba($color-yellow-butter, 1.0);
+}
+
+.pb-highlight-mantis {
+    background: rgba($color-olive-mantis, 1.0);
+}
+
+.pb-highlight-mulberry {
+    background: rgba($color-magenta-mulberry, 1.0);
+}
+*/
