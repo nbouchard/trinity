@@ -1216,7 +1216,8 @@
     .stats {
         margin: 0 auto;
         max-width: $site-max-width;
-        height: 19em;
+        padding-top: 3em;
+        padding-bottom: 3em;
         color: $color-white-pure;
         font-size: 1.2em;
 
