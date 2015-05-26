@@ -194,11 +194,13 @@ $c-icon-email: '\e01a';
   content: '\e026';
 }
 
+// Indexed Rate
 .c-icon-ind:before,
 .c-icon-graph:before {
   content: '\e027';
 }
 
+// Introductory Rate
 .c-icon-intro:before,
 .c-icon-price-tag:before {
   content: '\e028';
@@ -209,6 +211,7 @@ $c-icon-email: '\e01a';
   content: '\e029';
 }
 
+// Prepaid
 .c-icon-pre:before,
 .c-icon-credit-card:before {
   content: '\e02a';
@@ -248,11 +251,13 @@ $c-icon-email: '\e01a';
   content: '\e032';
 }
 
+// Time of Use Rate
 .c-icon-tou:before,
 .c-icon-clock-graph:before {
   content: '\e033';
 }
 
+// Variable Rate
 .c-icon-var:before,
 .c-icon-unlocked:before {
   content: '\e034';
@@ -266,6 +271,7 @@ $c-icon-email: '\e01a';
   content: '\e036';
 }
 
+// Fixed Rate
 .c-icon-fix:before,
 .c-icon-locked:before {
   content: '\e020';
