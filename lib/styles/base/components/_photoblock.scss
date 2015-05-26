@@ -1,0 +1,222 @@
+.ce-photoblock {
+    color: $color-white-lily;
+    position: relative;
+    min-height: 100vh;
+
+    .photoblock-photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        min-height: 100vh;
+        z-index: $z-body-low;
+
+        // Photo BG
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        // BG for blending
+        background-color: $color-gray-chateau;
+        background-blend-mode: multiply;
+    }
+
+    .photoblock-container {
+        position: relative;
+        z-index: $z-body-high;
+        @include box-sizing(border-box);
+        @include clearfix;
+        margin: 0 auto;
+        padding: 5em 0;
+        max-width: $site-max-width;
+        width: 100%;
+
+        @include breakpoint($mq-md-max) {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+
+    .photoblock-headline {
+        @include typeface('headline');
+        font-size: $font-size-extrahuger;
+        line-height: 1.25em;
+        padding: 0.25em;
+        padding-bottom: 0;
+    }
+
+    .photoblock-subhead {
+        @include typeface('subhead');
+        font-size: $font-size-extrahuge;
+        line-height: 1.25em;
+        padding: 0.25em;
+        padding-bottom: 0;
+    }
+
+    .photoblock-cta {
+        p {
+            padding: 0.25em;
+            padding-bottom: 0;
+        }
+    }
+
+    .pb-color-jewel {
+        background-color: $color-green-jewel;
+    }
+
+    .pb-color-jungle {
+        background-color: $color-green-jungle;
+    }
+
+    .pb-color-shamrock {
+        background-color: $color-green-shamrock;
+    }
+
+    .pb-color-aquamarine {
+        background-color: $color-green-aquamarine;
+    }
+
+    .pb-color-cruise {
+        background-color: $color-green-cruise;
+    }
+
+    .pb-color-bahama {
+        background-color: $color-blue-bahama;
+    }
+
+    .pb-color-boston {
+        background-color: $color-blue-boston;
+    }
+
+    .pb-color-curious {
+        background-color: $color-blue-curious;
+    }
+
+    .pb-color-danube {
+        background-color: $color-blue-danube;
+    }
+
+    .pb-color-perano {
+        background-color: $color-blue-perano;
+    }
+
+    .pb-color-fiery {
+        background-color: $color-orange-fiery;
+    }
+
+    .pb-color-tango {
+        background-color: $color-orange-tango;
+    }
+
+    .pb-color-sun {
+        background-color: $color-orange-sun;
+    }
+
+    .pb-color-tacao {
+        background-color: $color-orange-tacao;
+    }
+
+    .pb-color-apricot {
+        background-color: $color-orange-apricot;
+    }
+
+    .pb-color-tamarillo {
+        background-color: $color-red-tamarillo;
+    }
+
+    .pb-color-poppy {
+        background-color: $color-red-poppy;
+    }
+
+    .pb-color-cinnabar {
+        background-color: $color-red-cinnabar;
+    }
+
+    .pb-color-pink {
+        background-color: $color-red-pink;
+    }
+
+    .pb-color-azalea {
+        background-color: $color-red-azalea;
+    }
+
+    .pb-color-black {
+        background-color: $color-gray-black;
+    }
+
+    .pb-color-nero {
+        background-color: $color-gray-nero;
+    }
+
+    .pb-color-woodsmoke {
+        background-color: $color-gray-woodsmoke;
+    }
+
+    .pb-color-charcoal {
+        background-color: $color-gray-charcoal;
+    }
+
+    .pb-color-cape {
+        background-color: $color-gray-cape;
+    }
+
+    .pb-color-stone {
+        background-color: $color-gray-stone;
+    }
+
+    .pb-color-oslo {
+        background-color: $color-gray-oslo;
+    }
+
+    .pb-color-chateau {
+        background-color: $color-gray-chateau;
+    }
+
+    .pb-color-edward {
+        background-color: $color-gray-edward;
+    }
+
+    .pb-color-ghost {
+        background-color: $color-gray-ghost;
+    }
+
+    .pb-color-geyser {
+        background-color: $color-gray-geyser;
+    }
+
+    .pb-color-lilac {
+        background-color: $color-white-lilac;
+    }
+
+    .pb-color-lily {
+        background-color: $color-white-lily;
+    }
+
+    .pb-color-smoke {
+        background-color: $color-white-smoke;
+    }
+
+    .pb-color-white {
+        background-color: $color-white-pure;
+    }
+
+    .pb-color-violet {
+        background-color: $color-purple-violet;
+    }
+
+    .pb-color-butter {
+        background-color: $color-yellow-butter;
+    }
+
+    .pb-color-mantis {
+        background-color: $color-olive-mantis;
+    }
+
+    .pb-color-mulberry {
+        background-color: $color-magenta-mulberry;
+    }
+
+}

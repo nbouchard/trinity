@@ -1,0 +1,22 @@
+<div class="ce-photoblock {{variant_classes}}">
+    <div class="photoblock-photo {{photoblock_blend_color}}" style="background-image: url({{photoblock_bg}});"></div>
+    <div class="photoblock-container">
+        {{#if photoblock_headline}}
+            <h1 class="photoblock-headline {{photoblock_highlight}}">{{photoblock_headline}}</h1>
+        {{/if}}
+        {{#if photoblock_subhead}}
+            <h2 class="photoblock-subhead {{photoblock_highlight}}">{{photoblock_subhead}}</h2>
+        {{/if}}
+        {{#if photoblock_headline2}}
+            <h1 class="photoblock-headline {{photoblock_highlight}}">{{photoblock_headline2}}</h1>
+        {{/if}}
+        {{#if photoblock_cta}}
+            <div class="photoblock-cta">
+                <p class="{{photoblock_highlight}}">{{photoblock_cta}}</p>
+                {{#if photoblock_action_label}}
+                    <a href="{{photoblock_action_target}}" class="link-as-button btn-primary">{{photoblock_action_label}}</a>
+                {{/if}}
+            </div>
+        {{/if}}
+    </div>
+</div>
