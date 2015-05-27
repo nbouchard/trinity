@@ -1,0 +1,42 @@
+---
+layout: website
+site:
+  name: ChooseUX
+  version: 0.1.0
+tpl:
+  desc: Page Desc
+  title: Website Page
+---
+{{> cb_shopping_header}}
+
+<div class="shop-body">
+    <div class="ce-shopping-noplans">
+        <div class="noplans-header">
+            Sorry, plans in your area are regulated by Norwich Department of Public Utilities.
+            <div class="details">While electricity is deregulated in Connecticut, the Norwich Dept. of Public Utilities service area is not eligible for you to choose a new electricity supplier in your area. If Norwich Dept. of Public Utilities is not your utility, select your utility below.</div>
+        </div>
+        <div class="noplans-body">
+            <ul class="utility-grid">
+                <li class="utility">
+                    <div class="logo">
+                        <a href="#" class="utility-logo utility-connecticut-light-power-ct">Eversource Energy</a>
+                    </div>
+                    <a href="" class="link-as-button btn-dark">Eversource Energy</a>
+                </li>
+                <li class="utility">
+                    <div class="logo">
+                        <a href="#" class="utility-logo utility-united-illuminating-ct">United Illuninating</a>
+                    </div>
+                    <a href="" class="link-as-button btn-dark">United Illuninating</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="noplans-follow">
+        <p>Follow us on <a href="#">Facebook</a>, <a href="#">Twitter</a> or <a href="#">Google+</a> and we’ll keep you informed when plans become available in more service areas as well as provide you with cost-saving energy tips and the latest news on energy deregulation.</p>
+        <a class="social-circle-link social-facebook" href="#"><span class="label-text">Facebook</span></a>
+        <a class="social-circle-link social-twitter" href="#"><span class="label-text">Twitter</span></a>
+        <a class="social-circle-link social-gplus" href="#"><span class="label-text">Google+</span></a>
+    </div>
+</div>
