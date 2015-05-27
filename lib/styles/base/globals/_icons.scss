@@ -38,6 +38,8 @@ $c-icon-chevron-down: '\e00b';
 $c-icon-chevron-up: '\e00e';
 $c-icon-facebook: '\e018';
 $c-icon-twitter: '\e019';
+$c-icon-gplus: '\e037';
+$c-icon-linkedin: '\e038';
 $c-icon-email: '\e01a';
 
 //Icons
@@ -275,4 +277,24 @@ $c-icon-email: '\e01a';
 .c-icon-fix:before,
 .c-icon-locked:before {
   content: '\e020';
+}
+
+.c-icon-gplus:before {
+  content: '\e037';
+}
+
+.c-icon-linkedin:before {
+  content: '\e038';
+}
+
+.c-icon-user:before {
+  content: '\e039';
+}
+
+.c-icon-phone:before {
+  content: '\e03a';
+}
+
+.c-icon-home:before {
+  content: '\e03b';
 }
