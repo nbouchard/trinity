@@ -7,6 +7,14 @@
         min-height: 75vh;
     }
 
+    &.photoblock-bigtalk {
+        font-size: 1.4em;
+
+        .photoblock-container {
+            max-width: ($site-max-width / 1.4);
+        }
+    }
+
     .photoblock-photo {
         position: absolute;
         top: 0;
@@ -62,6 +70,8 @@
     }
 
     .photoblock-cta {
+        font-size: $font-size-larger;
+
         p {
             padding: 0.25em;
             padding-bottom: 0;
