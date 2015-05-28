@@ -3,7 +3,7 @@
     width: 100%;
     text-decoration: none;
     text-align: center;
-    font-size: $font-size-huger;
+    font-size: $font-size-large;
 
     &:hover,
     &:focus {
@@ -41,41 +41,60 @@
             height: 1em;
             vertical-align: middle;
             line-height: 1em;
-
-            &:hover,
-            &:focus,
-            &:hover ~ .icon,
-            &:focus ~ .icon {
-                color: transparent;
-            }
-
-            &:hover:before,
-            &:hover ~ .icon:before {
-                @include box-sizing(border-box);
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                margin: 0;
-                padding: 0;
-                width: 1em;
-                height: 1em;
-                font-weight: $font-weight-body;
-                font-size: 1em;
-                line-height: 1em;
-                color: $color-green-shamrock;
-                content: '\f005';
-                font-family: $font-family-fa-icon;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-            }
         }
     }
 
     .rating-count {
         display: inline-block;
         font-weight: $font-weight-body;
-        font-size: $font-size-tinier;
+        font-size: $font-size-smaller;
+    }
+
+    &.is-readonly {
+        .rating-value {
+            > .icon {
+                &:hover,
+                &:focus,
+                &:hover ~ .icon,
+                &:focus ~ .icon {
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    &.is-interactive {
+        .rating-value {
+            > .icon {
+                &:hover,
+                &:focus,
+                &:hover ~ .icon,
+                &:focus ~ .icon {
+                    color: transparent;
+                }
+
+                &:hover:before,
+                &:hover ~ .icon:before {
+                    @include box-sizing(border-box);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    width: 1em;
+                    height: 1em;
+                    font-weight: $font-weight-body;
+                    font-size: 1em;
+                    line-height: 1em;
+                    color: $color-green-shamrock;
+                    content: '\f005';
+                    font-family: $font-family-fa-icon;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+        }
     }
 }
