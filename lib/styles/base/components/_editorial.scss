@@ -162,15 +162,6 @@
         }
     }
 
-    &.v-2of3 {
-        .content-editorial-container,
-        .editorial-container {
-            @include breakpoint($mq-lg-min) {
-                padding-right: $site-max-width / 3;
-            }
-        }
-    }
-
     .content-editorial-headline,
     .editorial-headline {
         font-weight: $font-weight-headline;
@@ -802,5 +793,15 @@
 
     .cta-buttons {
         text-align: center;
+    }
+}
+
+.v-2of3 {
+    .content-editorial-container,
+    .editorial-container,
+    .photoblock-container {
+        @include breakpoint($mq-lg-min) {
+            padding-right: $site-max-width / 3;
+        }
     }
 }

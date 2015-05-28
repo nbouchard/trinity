@@ -10,9 +10,12 @@
         {{#if photoblock_headline2}}
             <h1 class="photoblock-headline {{photoblock_highlight}}">{{photoblock_headline2}}</h1>
         {{/if}}
+        {{#if zip_search}}
+            {{> cmp_zip_search}}
+        {{/if}}
         {{#if photoblock_cta}}
             <div class="photoblock-cta">
-                <p class="{{photoblock_highlight}}">{{photoblock_cta}}</p>
+                <p>{{photoblock_cta}}</p>
                 {{#if photoblock_action_label}}
                     <a href="{{photoblock_action_target}}" class="link-as-button btn-primary">{{photoblock_action_label}}</a>
                 {{/if}}
