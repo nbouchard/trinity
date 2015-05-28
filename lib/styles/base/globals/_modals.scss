@@ -1,0 +1,94 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $z-overlay-mid;
+    overflow: scroll;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $z-overlay-high;
+    outline: 0;
+
+    .modal-dialog {
+        width: 40em;
+        margin: 15em auto;
+
+        .modal-content {
+            position: relative;
+            box-shadow: 0 0 3em rgba( $color-gray-charcoal, 0.5 );
+            background-color: $color-white-pure;
+            border: 1px solid $color-gray-geyser;
+            border-radius: 6px;
+        }
+
+        .modal-header {
+            background-color: $color-white-lilac;
+            padding: 1.5em 1.5em 1em;
+            position: relative;
+
+            .btn-close {
+                position: absolute;
+                top: 1em;
+                right: 1em;
+                color: $color-gray-charcoal;
+            }
+        }
+
+        .modal-headline {
+            font-size: $font-size-huger;
+
+            &:before {
+                @include icon;
+                position: relative;
+                margin-right: 0.5em;
+            }
+        }
+
+        .modal-body {
+            padding: 1.5em;
+
+            p {
+                margin-top: 0;
+            }
+
+            .larger {
+                font-size: $font-size-larger;
+            }
+
+            .modal-cta {
+                text-align: center;
+                margin-top: 1.5em;
+                font-size: $font-size-larger;
+            }
+        }
+    }
+}
+
+
+
+.modal-headline {
+    &.nat-gas:before {
+        content: $c-icon-nat-gas;
+        color: $color-red-cinnabar;
+        top: -2px;
+        font-size: $font-size-smaller;
+    }
+
+    &.electricity:before {
+        content: $c-icon-electricity;
+        color: $color-yellow-butter;
+        top: -4px;
+    }
+}
+
