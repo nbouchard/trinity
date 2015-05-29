@@ -392,3 +392,83 @@
         }
     }
 }
+
+// Shopping no plan layouts
+
+.ce-shopping-noplans {
+    width: 100%;
+    max-width: 80em;
+    margin: 0 auto 2em;
+    border: 1px solid $color-yellow-marzipan;
+    border-radius: 2px;
+
+    .noplans-header {
+        font-size: $font-size-larger;
+        background-color: $color-yellow-marzipan-light;
+        padding: 0.5em 8em;
+        text-align: center;
+
+        .details {
+            font-size: $font-size-smaller;
+            margin-top: 0.5em;
+        }
+    }
+
+    .noplans-body {
+        text-align: center;
+        padding: 2em;
+    }
+
+    .utility-search{
+        font-size: $font-size-larger;
+    }
+
+    .zip-options {
+        font-size: $font-size-larger;
+
+        .link-as-button {
+            margin: 0 0.5em;
+            width: 6em;
+        }
+    }
+
+    .utility-grid {
+        list-style: none;
+        padding: 0;
+        @include clearfix;
+
+        .utility {
+            width: 24%;
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 1em;
+            text-align: center;
+
+            .logo {
+                height: 60px;
+                position: relative;
+            }
+
+            .utility-logo {
+                position: relative;
+                top: 50%; // this + next line vertically centers the logos
+                @include prefixer(transform, translateY(-50%), webkit ms);
+            }
+        }
+
+        .link-as-button {
+            display: inline-block;
+            width: 200px;
+            margin-top: 1em;
+        }
+    }
+
+    .solar-lead-form-wrapper{
+        
+    }
+}
+
+.noplans-follow {
+    text-align: center;
+    margin: 2em 25%;
+}

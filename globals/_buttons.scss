@@ -14,6 +14,7 @@
     @include box-sizing(border-box);
     padding: 0.5em 1em;
     height: $button-base;
+    line-height: 1.8em;
     vertical-align: middle;
 
     // Basic Button Type
@@ -312,5 +313,7 @@ input[type='submit'] {
 
 .link-as-button {
     @include link-as-button();
+    font-weight: $font-weight-body;
+    line-height: 1.8em;
 }
 
