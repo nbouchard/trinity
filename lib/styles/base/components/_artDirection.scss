@@ -1,14 +1,112 @@
 // Background image position adjustments for photoblocks
 // Adjustments are specific to each image and labeled by the image number
 
-.v-img24 .photoblock-photo {
-    background-position-y: 10%;
+.v-img1 .photoblock-photo {
+    background-position-x: 90%;
+    background-position-y: 0%;
+}
+
+.v-img5 .photoblock-photo {
+    background-position-x: 40%;
+    background-position-y: 20%;
+    background-color: $color-gray-edward;
+}
+
+.v-img8 .photoblock-photo {
+    background-position-x: 20%;
+}
+
+.v-img9 .photoblock-photo {
+    background-position-x: 70%;
+    background-color: $color-gray-edward;
+}
+
+.v-img11 .photoblock-photo {
+    background-position-y: 30%;
+    opacity: .95;
+}
+
+.v-img20 .photoblock-photo {
+    opacity: .9;
 }
 
 .v-img25 .photoblock-photo {
+    background-position-x: 70%;
+    background-position-y: 20%;
+}
+
+.v-img26 .photoblock-photo {
+    background-position-y: 45%;
+    background-color: $color-gray-oslo;
+}
+
+.v-img31 .photoblock-photo {
+    background-position-x: 80%;
+    background-position-y: 60%;
+    background-color: $color-gray-edward;
+}
+
+.v-img35 .photoblock-photo {
     background-position-y: 10%;
+    background-color: $color-gray-ghost;
+}
+
+.v-img39 .photoblock-photo {
+    background-position-x: 60%;
+    background-color: $color-gray-edward;
+    opacity: .95;
+}
+
+.v-img47 .photoblock-photo {
+    background-position-x: 60%;
+    background-position-y: 20%;
+}
+
+.v-img56 .photoblock-photo {
+    background-position-y: 10%;
+    background-color: $color-gray-edward;
+}
+
+.v-img63 .photoblock-photo {
+    background-position-y: 70%;
+    background-color: $color-gray-edward;
+    opacity: .95;
+}
+
+.v-img72 .photoblock-photo {
+    background-position-x: 90%;
+    background-color: $color-gray-edward;
+}
+
+.v-img75 .photoblock-photo {
+    background-position-y: 45%;
+}
+
+.v-img76 .photoblock-photo {
+    background-position-y: 10%;
+    background-color: $color-gray-edward;
 }
 
 .v-img79 .photoblock-photo {
+    background-position-y: 80%;
+    opacity: .95;
+}
+
+.v-img91 .photoblock-photo {
     background-position-y: 70%;
+    background-color: $color-gray-stone-light;
+}
+
+.v-img99 .photoblock-photo {
+}
+
+.v-img111 .photoblock-photo {
+    background-position-y: 10%;
+    background-color: $color-gray-edward;
+}
+
+.v-img132 .photoblock-photo {
+    background-position-x: 80%;
+    background-position-y: 80%;
+    background-color: $color-gray-ghost;
 }

@@ -156,9 +156,9 @@
         max-width: $site-max-width;
         width: 100%;
 
-        @include breakpoint($mq-md-max) {
-            padding-left: 1em;
-            padding-right: 1em;
+        @include breakpoint($mq-lg-max) {
+            padding-left: 2em;
+            padding-right: 2em;
         }
     }
 
