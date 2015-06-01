@@ -1,14 +1,26 @@
 .ce-photoblock {
     color: $color-white-lily;
     position: relative;
-    min-height: 100vh;
+    min-height: 50vh;
+
+    &.photoblock-tall {
+        min-height: 75vh;
+    }
+
+    &.photoblock-bigtalk {
+        font-size: 1.4em;
+
+        .photoblock-container {
+            max-width: ($site-max-width / 1.4);
+        }
+    }
 
     .photoblock-photo {
         position: absolute;
         top: 0;
         right: 0;
         left: 0;
-        min-height: 100vh;
+        height: 100%;
         z-index: $z-body-low;
 
         // Photo BG
@@ -16,7 +28,8 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background-position: center center;
+        background-position-x: 50%;
+        background-position-y: 50%;
         background-repeat: no-repeat;
 
         // BG for blending
@@ -57,6 +70,8 @@
     }
 
     .photoblock-cta {
+        font-size: $font-size-larger;
+
         p {
             padding: 0.25em;
             padding-bottom: 0;
