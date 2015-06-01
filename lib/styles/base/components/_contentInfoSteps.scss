@@ -27,13 +27,16 @@
     float: left;
 
     .split-content {
+
         display: table;
         float: left;
         width: 50%;
         height: 30em;
         background: #ffffff;
+        @include breakpoint($mq-md-max) {
+            width: 100%;
+        }
         .split-content-interior {
-            max-width: $site-max-width / 2;
             padding: 5em;
             display: table-cell;
             vertical-align: middle;
@@ -45,7 +48,9 @@
         width: 50%;
         height: 30em;
         background: $color-blue-curious;
-
+        @include breakpoint($mq-md-max) {
+            width: 100%;
+        }
         .split-icon {
             display: table-cell;
             vertical-align: middle;
@@ -101,4 +106,5 @@
             height: 45em;
         }
     }
+
 }
