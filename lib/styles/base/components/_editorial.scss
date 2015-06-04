@@ -767,12 +767,23 @@
     }
 }
 
-.v-shopping-filters {
+.v-shopping-filters-photo {
     @include editorial-height('short');
     background: url('#{$image-path}photography/City_Highway.jpg') center center no-repeat;
     background-size: cover;
     padding: 40px 0;
     margin-bottom: 40px;
+
+    .editorial-container {
+        padding: 0;
+    }
+}
+
+.v-shopping-filters {
+    @include editorial-height('noheight');
+    @include editorial-bg-color('light');
+    padding: (2 * $grid-gutter-width);
+    margin-bottom: (2 * $grid-gutter-width);
 
     .editorial-container {
         padding: 0;
