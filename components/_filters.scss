@@ -41,6 +41,7 @@
         .filter-toggle-bar {
             background: $color-green-cruise-light;
             padding: 0.5em 0;
+            cursor: pointer;
         }
 
         .filter-toggle-content {
@@ -82,7 +83,7 @@
     }
 
     .filter-row-spacer {
-        padding-bottom: 2em;
+        padding-bottom: 0.5em;
         border-bottom: 1px solid $color-white-lilac;
         margin-bottom: 1em;
     }
@@ -253,7 +254,6 @@
 
         .ce-label {
             width: 100%;
-            padding: 20px 0 0;
         }
 
         .textbox {
@@ -280,7 +280,7 @@
 
     .filter-cta {
         text-align: center;
-        padding-top: 1.5em;
+        padding-top: 0.5em;
     }
 
     .filter-group {
@@ -464,7 +464,7 @@
     }
 
     .solar-lead-form-wrapper{
-        
+
     }
 }
 

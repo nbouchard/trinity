@@ -1,5 +1,5 @@
 .ce-photoblock {
-    color: $color-white-lily;
+    color: $color-white-pure;
     position: relative;
     min-height: 50vh;
 
@@ -37,19 +37,43 @@
         background-blend-mode: multiply;
     }
 
+    &.photoblock-screen {
+        color: $color-gray-charcoal;
+
+        .photoblock-photo {
+            background-blend-mode: screen;
+        }
+    }
+
+    &.photoblock-softlight {
+        .photoblock-photo {
+            background-blend-mode: soft-light;
+        }
+    }
+
+    &.photoblock-hardlight {
+        .photoblock-photo {
+            background-blend-mode: hard-light;
+        }
+    }
+
     .photoblock-container {
         position: relative;
         z-index: $z-body-high;
         @include box-sizing(border-box);
         @include clearfix;
         margin: 0 auto;
-        padding: 5em 0;
+        padding: 5em 0em;
         max-width: $site-max-width;
         width: 100%;
 
-        @include breakpoint($mq-md-max) {
-            padding-left: 1em;
-            padding-right: 1em;
+        @include breakpoint($mq-lg-max) {
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+
+        @include breakpoint($mq-sm-max) {
+            padding: 2em 1em;
         }
     }
 
@@ -57,24 +81,48 @@
         @include typeface('headline');
         font-size: $font-size-extrahuger;
         line-height: 1.25em;
-        padding: 0.25em;
-        padding-bottom: 0;
+        padding: 0 0 0.25em ;
     }
 
     .photoblock-subhead {
         @include typeface('subhead');
         font-size: $font-size-extrahuge;
         line-height: 1.25em;
-        padding: 0.25em;
-        padding-bottom: 0;
+        padding: 0 0 0.25em;
     }
 
     .photoblock-cta {
-        font-size: $font-size-larger;
+        @include cg-2of3();
+        font-size: $font-size-largest;
+        padding: 0 0.25em;
 
         p {
-            padding: 0.25em;
-            padding-bottom: 0;
+            margin: 0 0 1em;
+        }
+
+        a {
+            font-size: $font-size-smaller;
+        }
+    }
+
+    // Side by side block layout for extra large screens
+    @include breakpoint($mq-xxl) {
+        background-color: $color-blue-curious;
+        @include clearfix;
+
+        &.photoblock-tall {
+            min-height: 60vh;
+        }
+
+        .photoblock-photo {
+            right: 50%;
+            background-blend-mode: initial;
+        }
+
+        .photoblock-container {
+            float: right;
+            max-width: 50%;
+            padding: 5em;
         }
     }
 
