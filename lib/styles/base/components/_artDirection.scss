@@ -1,117 +1,185 @@
 // Background image position adjustments for photoblocks
 // Adjustments are specific to each image and labeled by the image number
 
+@mixin photoblock( $bg-color: $color-gray-chateau, $blend-mode: multiply, $x-pos: 50%, $y-pos: 50%, $opacity: 1) {
+    background-color: $bg-color;
+    background-blend-mode: $blend-mode;
+    background-position-x: $x-pos;
+    background-position-y: $y-pos;
+    opacity: $opacity;
+}
+
+// Example of all the mixin properties in use
+/*
+@include photoblock(
+    $bg-color: $color-gray-edward,
+    $blend-mode: soft-light,
+    $x-pos: 40%,
+    $y-pos: 20%,
+    $opacity: .95
+);
+*/
+
+
 .v-img1 .photoblock-photo {
-    background-position-x: 90%;
-    background-position-y: 0%;
+    @include photoblock(
+        $x-pos: 90%,
+        $y-pos: 0%
+    );
 }
 
 .v-img5 .photoblock-photo {
-    background-position-x: 40%;
-    background-position-y: 20%;
-    background-color: $color-gray-edward;
+    @include photoblock(
+        $bg-color: $color-gray-edward,
+        $x-pos: 40%,
+        $y-pos: 20%
+    );
 }
 
 .v-img8 .photoblock-photo {
-    background-position-x: 20%;
+    @include photoblock(
+        $x-pos: 20%
+    );
 }
 
 .v-img9 .photoblock-photo {
-    background-position-x: 70%;
-    background-color: $color-gray-edward;
+    @include photoblock(
+        $bg-color: $color-gray-edward,
+        $x-pos: 70%
+    );
 }
 
 .v-img11 .photoblock-photo {
-    background-position-y: 30%;
-    opacity: .95;
+    @include photoblock(
+        $y-pos: 30%,
+        $opacity: .95
+    );
 }
 
 .v-img20 .photoblock-photo {
-    opacity: .9;
+    @include photoblock(
+        $opacity: .9
+    );
 }
 
 .v-img25 .photoblock-photo {
-    background-position-x: 70%;
-    background-position-y: 20%;
+    @include photoblock(
+        $x-pos: 70%,
+        $y-pos: 20%
+    );
 }
 
 .v-img26 .photoblock-photo {
-    background-position-y: 45%;
-    background-color: $color-gray-oslo;
+    @include photoblock(
+        $bg-color: $color-gray-oslo,
+        $blend-mode: soft-light,
+        $y-pos: 45%
+    );
 }
 
 .v-img31 .photoblock-photo {
-    background-position-x: 80%;
-    background-position-y: 60%;
-    background-color: $color-gray-edward;
+    @include photoblock(
+        $bg-color: $color-gray-edward,
+        $x-pos: 80%,
+        $y-pos: 60%
+    );
 }
 
 .v-img35 .photoblock-photo {
-    background-position-y: 10%;
-    background-color: $color-gray-ghost;
+    @include photoblock(
+        $bg-color: $color-gray-ghost,
+        $y-pos: 10%
+    );
 }
 
 .v-img39 .photoblock-photo {
-    background-position-x: 60%;
-    background-color: $color-gray-edward;
-    opacity: .95;
+    @include photoblock(
+        $bg-color: $color-gray-edward,
+        $x-pos: 60%,
+        $opacity: .95
+    );
 }
 
 .v-img47 .photoblock-photo {
-    background-position-x: 60%;
-    background-position-y: 20%;
+    @include photoblock(
+        $blend-mode: soft-light,
+        $x-pos: 60%,
+        $y-pos: 20%
+    );
 }
 
 .v-img56 .photoblock-photo {
-    background-position-y: 10%;
-    background-color: $color-gray-edward;
+    @include photoblock(
+        $bg-color: $color-gray-edward,
+        $y-pos: 10%
+    );
 }
 
 .v-img63 .photoblock-photo {
-    background-position-y: 70%;
-    background-color: $color-gray-edward;
-    opacity: .95;
+    @include photoblock(
+        $bg-color: $color-gray-edward,
+        $y-pos: 70%,
+        $opacity: .95
+    );
 }
 
 .v-img72 .photoblock-photo {
-    background-position-x: 90%;
-    background-color: $color-gray-edward;
+    @include photoblock(
+        $bg-color: $color-gray-edward,
+        $x-pos: 90%
+    );
 }
 
 .v-img75 .photoblock-photo {
-    background-position-y: 45%;
+    @include photoblock(
+        $y-pos: 45%
+    );
 }
 
 .v-img76 .photoblock-photo {
-    background-position-y: 10%;
-    background-color: $color-gray-ghost;
+    @include photoblock(
+        $bg-color: $color-gray-ghost,
+        $y-pos: 10%
+    );
 }
 
 .v-img79 .photoblock-photo {
-    background-position-y: 80%;
-    opacity: .95;
+    @include photoblock(
+        $y-pos: 80%,
+        $opacity: .95
+    );
 }
 
 .v-img91 .photoblock-photo {
-    background-position-y: 70%;
-    background-color: $color-gray-stone-light;
+    @include photoblock(
+        $blend-mode: soft-light,
+        $bg-color: $color-gray-stone-light,
+        $y-pos: 70%
+    );
 }
 
 .v-img99 .photoblock-photo {
 }
 
 .v-img111 .photoblock-photo {
-    background-position-y: 10%;
-    background-color: $color-gray-edward;
+    @include photoblock(
+        $bg-color: $color-gray-edward,
+        $y-pos: 10%
+    );
 }
 
 .v-img132 .photoblock-photo {
-    background-position-x: 80%;
-    background-position-y: 80%;
-    background-color: $color-gray-ghost;
+    @include photoblock(
+        $bg-color: $color-gray-ghost,
+        $x-pos: 80%,
+        $y-pos: 80%
+    );
 }
 
 .v-img135 .photoblock-photo {
-    background-position-x: 10%;
-    background-position-y: 60%;
+    @include photoblock(
+        $blend-mode: soft-light,
+        $x-pos: 10%,
+        $y-pos: 60%
+    );
 }
