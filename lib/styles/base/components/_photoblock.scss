@@ -12,6 +12,11 @@
 
         .photoblock-container {
             max-width: ($site-max-width / 1.4);
+
+            @include breakpoint($mq-xxl) {
+                max-width: 50%;
+                padding: ( 5em / 1.4);
+            }
         }
     }
 
@@ -31,10 +36,6 @@
         background-position-x: 50%;
         background-position-y: 50%;
         background-repeat: no-repeat;
-
-        // BG for blending
-        background-color: $color-gray-chateau;
-        background-blend-mode: multiply;
     }
 
     &.photoblock-screen {
