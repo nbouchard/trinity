@@ -1,7 +1,7 @@
 <div class="checkout-section">
     <div class="ce-form-group">
         <label class="a-label" for="firstName">
-            First Name
+            <span class="center-vertical">First Name</span>
         </label>
         <div class="a-content">
             <input class="input" type="text" name="firstName">
@@ -10,28 +10,29 @@
 
     <div class="ce-form-group">
         <label class="a-label" for="lastName">
-            Last Name
+            <span class="center-vertical">Last Name</span>
         </label>
         <div class="a-content">
-            <input class="input" type="text" name="lastName">
+            <input class="input ng-valid" type="text" name="lastName">
         </div>
     </div>
 
     <div class="ce-form-group">
         <label class="a-label" for="email">
-            Email
+            <span class="center-vertical">Email</span>
         </label>
         <div class="a-content">
-            <input class="input" type="email" name="email">
+            <input class="input ng-invalid" type="email" name="email">
+            <span class="a-help">Please enter a valid email address.</span>
         </div>
     </div>
 
     <div class="ce-form-group">
         <label class="a-label" for="confirmEmail">
-            Confirm Email
+           <span class="center-vertical"> Confirm Email</span>
         </label>
         <div class="a-content">
-            <input class="input ng-dirty ng-invalid" type="email" name="confirmEmail">
+            <input class="input ng-invalid" type="email" name="confirmEmail">
             <span class="a-help">The emails you provided do not match.</span>
         </div>
     </div>

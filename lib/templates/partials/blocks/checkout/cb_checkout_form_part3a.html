@@ -1,0 +1,46 @@
+<div class="checkout-section">
+    <div class="ce-form-group v-radio">
+        <label class="a-label">
+            <input type="radio" name="switch" value="Move" id="move">
+            <span class="ce-label-text"></span>
+        </label>
+        <div class="a-content" for="move">
+            Move / New Service: I am moving and want to provide electricity at my new address.
+        </div>
+    </div>
+    <div class="ce-form-group v-radio">
+        <label class="a-label">
+            <input type="radio" name="switch" value="Switch Next Available" id="undatedSwitch" >
+            <span class="ce-label-text"></span>
+        </label>
+        <div class="a-content" for="undatedSwitch">
+            Switch — Next Available Date: I am switching from another provider to on the next available date (when my enrollment is complete, typically within 7 days).
+        </div>
+    </div>
+    <div class="ce-form-group v-radio">
+        <label class="a-label">
+            <input type="radio" name="switch" value="Switch" id="datedSwitch">
+            <span class="ce-label-text"></span>
+        </label>
+        <div class="a-content" for="datedSwitch">
+            Switch — Specific Date: I am switching to on a specific date.
+        </div>
+    </div>
+
+    <div class="ce-form-group v-datepicker">
+        <label class="a-label"></label>
+        <div class="a-content" >
+            {{> cmp_datepicker}}
+        </div>
+    </div>
+</div>
+
+<div class="checkout-actions">
+    <div class="checkout-space"></div>
+    <div class="checkout-previous"></div>
+    <div class="checkout-next">
+        <button class="checkout-action btn-success">
+            <strong>Continue</strong>
+        </button>
+    </div>
+</div>

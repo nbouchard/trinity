@@ -22,11 +22,13 @@ textarea {
 
 input,
 textarea,
-select {
+select,
+.input {
     @include box-sizing(border-box);
     margin: 0 0.5em;
     padding: 0.625em;
-    border: 0.1em solid $color-gray-ghost;
+    border: 1px solid $color-gray-ghost;
+    border-left-width: 5px;
     background: $color-white-pure;
     color: $color-gray-charcoal;
 
@@ -37,7 +39,7 @@ select {
 
     &:focus {
         outline: none;
-        border: 0.1em solid $color-green-shamrock;
+        border-color: $color-gray-stone;
         color: $color-gray-charcoal;
 
         @include placeholder {
@@ -48,7 +50,7 @@ select {
 
     &:disabled {
         color: $color-gray-chateau;
-        background-color: $color-gray-geyser;
+        background-color: $color-white-lilac;
     }
 
     &:read-only {
@@ -56,8 +58,12 @@ select {
         background-color: $color-white-lily;
     }
 
-    &:required {
-        border: 0.1em solid $color-green-shamrock;
+    &.ng-dirty.ng-valid {
+        border-color: $color-green-shamrock;
+    }
+
+    &.ng-dirty.ng-invalid {
+        border-color: $color-red-cinnabar;
     }
 }
 
