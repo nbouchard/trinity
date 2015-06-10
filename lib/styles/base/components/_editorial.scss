@@ -695,6 +695,16 @@
     }
 }
 
+.v-our-story {
+    @include editorial-bg-color('light');
+
+    .editorial-content {
+        font-size: $font-size-larger;
+        img {
+            max-width: 100%;
+        }
+    }
+}
 .v-team-members {
     .editorial-content {
         padding: 0;
