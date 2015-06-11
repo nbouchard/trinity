@@ -152,6 +152,10 @@
 
             .sorter-link {
                 @include cg-1of4();
+
+                &.v-nocost {
+                    @include cg-1of2();
+                }
             }
         }
 
@@ -973,6 +977,7 @@
 
             .plan-renewable,
             .plan-contract,
+            .plan-contract-type,
             .plan-cost,
             .plan-popularity,
             .plan-supplier {
