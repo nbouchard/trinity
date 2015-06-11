@@ -88,3 +88,8 @@ $screen-sm-max: 991px;
 .invisible {
     visibility: hidden;
 }
+
+// Applies pointer cursor style to link when there is no href property (ex. when routing is done with an ng-onclick event)
+.link-nohref {
+    cursor: pointer;
+}
