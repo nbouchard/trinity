@@ -1,70 +1,157 @@
 // Checkout User Interface
+// .ce-checkout                - Wrapper for the whole checkout & confirmation experience
+//     .ce-editorial           - Wrapper for the checkout & confirmation header
+//     .checkout-content       - Wrapper for the checkout & confirmation content area
+//         .checkout-steps     - Wrapper for the checkout form area & confimation messaging
 
+// No styleguide reference
+.ce-checkout{
+    .ce-editorial {
+        background-color: $color-white-lily;
+        min-height: 1em;
+        height: 5em;
+    }
 
-//.ce-editorial variant class for Checkout page.
-.ce-editorial,
-.content-editorial {
-    &.v-checkout {
-        min-height: 14em;
-        z-index: $z-underlay-negative;
+    .editorial-container,
+    .content-editorial-container {
+        padding: 0em;
+    }
 
-        .editorial-container,
-        .content-editorial-container {
-            padding: 9em 0 0;
+    .editorial-headline,
+    .content-editorial-headline {
+        font-size: $font-size-normal;
+        box-sizing: border-box;
+
+        @include breakpoint($mq-md-max) {
+            @include cg-item(true, true);
+            padding: 1.4em 0.5em  0;
         }
 
-        .editorial-headline,
-        .content-editorial-headline {
-            @include cg-7of8(false, false);
-            padding: 0 0 0 1em;
+        @include breakpoint($mq-lg-min) {
+            @include cg-5of8(true, true, true);
+            padding: 1.4em 0.5em  0;
+        }
+
+        .current-section {
+            display: inline-block;
+            box-sizing: border-box;
+            font-size: 2.5em;
+            padding: 0 0.5em 0 0;
+
+            @include breakpoint($mq-lg-min) {
+                min-width: 24%;
+                text-align: right;
+            }
+        }
+
+        .current-step {
+            display: inline-block;
+            max-width: 60%;
+            box-sizing: border-box;
+            font-size: $font-size-largest;
+            font-weight: $font-weight-body;
         }
     }
 
-    &.v-checkout-confirmation {
-        z-index: $z-underlay-negative;
-        @include editorial-bg-color($color: 'dark');
-        background: url('#{$image-path}photography/City_beach_at_night.jpg') center center no-repeat;
-        background-size: cover;
+    .checkout-content {
+        @include cg-row(false, false);
+
+        .checkout-steps {
+            @include breakpoint($mq-md-max) {
+                @include cg-item(true, true);
+            }
+
+            @include breakpoint($mq-lg-min) {
+                @include cg-5of8(true, true, true);
+                padding-top: 2em;
+                padding-right: 2em;
+            }
+        }
     }
 }
 
+// Checkout Section
+//
+// .checkout-section    - Used to provide padding between sections of checkout forms.
+//
+// No styleguide reference
+.checkout-section {
+    @include cg-row(false, false);
+    clear: both;
+
+    .section-headline {
+        font-weight: $font-weight-headline;
+        font-size: $font-size-largest;
+        padding-bottom: 0.5em;
+    }
+}
+
+// Checkout Form Group
+//
+// .ce-form-group       - A self contained form element and it's label.
+//
+// No styleguide reference
 .ce-form-group {
-    //this is a self contained form element and it's label.
+    //
     input[type='number'] {
         padding-top: 0;
         padding-bottom: 0;
     }
 
-    @include cg-row(true, true);
-    font-size: 1.4em;
+    @include cg-row(false, false);
+    @include breakpoint($mq-lg-min) {
+        margin-bottom: 2em;
+    }
 
     .a-label {
-        @include cg-1of4(true, false);
-        text-align: right;
-        padding:0 .75em 0 0;
-        line-height: 2em;
-        min-height: 1em;
+        display: inline-block;
+        padding: 0.5em 0.75em 0.5em 0;
+        font-size: $font-size-larger;
+        line-height: 1.2em;
+        box-sizing: border-box;
+        vertical-align: top;
+
+        @include breakpoint($mq-md-max) {
+            width: 100%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            height: 2em;
+            text-align: right;
+            width: 24%;
+
+            .center-vertical {
+                position: relative;
+                display: inline-block;
+                top: 50%; // this + next line vertically centers the text with respect to the input field
+                @include prefixer(transform, translateY(-50%), webkit ms);
+            }
+        }
     }
 
     .a-space {
         @include cg-1of4(true, false);
-        padding:0 .75em 0 0;
+        padding: 0.5em 0.75em 0.5 0em;
     }
 
     .a-content  {
-        @include cg-3of4(true, false);
+        font-size: $font-size-larger;
+        position: relative;
+        display: inline-block;
         padding: 0;
+
+        @include breakpoint($mq-md-max) {
+            width: 100%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 75%;
+        }
 
         .input {
             width: 100%;
-            height:2em;
-            border-left:.3em solid;
-            border-color: $color-green-shamrock;
+            height: 2em;
             margin: 0;
-
-            &.ng-dirty.ng-invalid {
-                border-color: #d9534f;
-            }
         }
 
         &.with-button {
@@ -89,9 +176,32 @@
 
     .a-help {
         font-size: $font-size-smaller;
-        color: #d9534f;
-        margin: 0.5em 1em;
+        color: $color-red-cinnabar;
+        margin: 0.25em 1em;
         display: block;
+
+        @include breakpoint($mq-lg-min) {
+            position: absolute;
+        }
+    }
+
+    .a-note {
+        @include breakpoint($mq-lg-min) {
+            width: 75%;
+            margin-left: 25%;
+        }
+    }
+
+    .a-message {
+        @include cg-row(false, false);
+
+        p:first-of-type {
+            margin-top: 0;
+        }
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     &.v-auth-forms {
@@ -116,188 +226,62 @@
         }
     }
 
-    &.v-radio {
-        .a-label {
-            line-height: 1.3em;
-        }
-    }
-
+    &.v-radio,
     &.v-checkbox {
+        margin-bottom: 1em;
+
         .a-label {
+            text-align: right;
             line-height: 1.3em;
-        }
-    }
-}
+            width: 12%;
+            padding: 0;
 
-// .checkout            - Encapsulates complete Checkout experience
-// .checkout-forms      - Encapsulates the Checkout forms.
-// .checkout-cart       - Encapsulates the Checkout Shopping Cart (plan cards)
-//
-// No styleguide reference
-.checkout {
-    @include cg-row(true, true);
+            .ce-label-text {
+                padding: 0.1em 0.5em;
+            }
 
-    input.ng-dirty.ng-valid,
-    input.ng-pristine.ng-valid {
-        border-color: $brand-success;
-    }
 
-    input.ng-valid {
-    }
-
-    input.ng-pristine.ng-invalid.ng-invalid-required {
-        border-color: $color-gray-ghost;
-    }
-
-    input.ng-required.ng-valid.ng-valid-required {
-        border-left: 5px solid $brand-warning;
-    }
-
-    input.ng-dirty.ng-invalid {
-        border-color: $brand-danger;
-    }
-}
-
-.checkout-forms {
-    @include breakpoint($mq-sm-max) {
-        @include cg-item(true, true);
-    }
-
-    @include breakpoint($mq-md-min) {
-        @include cg-5of8(true, true, true);
-    }
-}
-
-// Checkout Steps
-//
-// .checkout-steps      - Encapsulates the Checkout step buttons
-//     .checkout-step   - Contains an individual Checkout step
-//     .step-button     - Defines the various types of Checkout steps
-//
-// No styleguide reference
-.ce-checkout-steps {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: $font-size-huge;
-    display: inline-block;
-    width: 100%;
-
-    .checkout-step {
-        @include cg-row(false, true);
-        display: inline-block;
-        float: left;
-        padding: 0;
-        list-style: none;
-    }
-
-    .step-group {
-        @include cg-row(false, true);
-        display: none;
-
-        .label {
-            @include cg-1of4(false, true);
-            text-align: right;
-            line-height: 1.7em;
         }
 
-        .step-title {
-            @include cg-1of2(false, false);
-            line-height: 1.7em;
+        .a-content {
+            width: 87%;
+            text-align: left;
         }
 
-        .step-progress {
-            @include cg-1of4(false, true);
-            text-align: right;
-            font-size: $font-size-smaller;
-            line-height: 2;
-            font-weight: $font-weight-body;
-        }
-
-        &.is-active {
-            display: inline-block;
-            color: $color-gray-charcoal;
-        }
-
-        &.is-completed {
-        }
-    }
-}
-
-// Checkout Section
-//
-// .checkout-section    - Used to provide padding between sections of checkout forms.
-//
-// No styleguide reference
-.checkout-section {
-    @include cg-row(false, true);
-    clear: both;
-}
-
-// Checkout Group
-//
-// .checkout-group       - Sets up a standard design pattern for individual form field groups.
-//
-// No styleguide reference
-.checkout-group {
-    @include cg-row(true, true);
-    font-size: 1.4em;
-    .checkout-label {
-        display: block;
-    }
-
-    .checkout-label-text {
-        @include cg-1of4(true, false);
-        text-align: right;
-        padding:0 .75em 0 0;
-        line-height: 2em;
-
-        &.checkout-checkbox {
-            line-height: 1.5em;
+        p {
+            margin: 0;
         }
     }
 
-    .checkout-input-container {
-        @include cg-3of4(true, false);
-        padding: 0;
+    &.v-datepicker {
+        @include breakpoint($mq-lg-min) {
+            .a-label {
+                width: 12%;
+            }
 
-        .checkout-input {
-            width: 100%;
-            height:2em;
-            border-left:.3em solid;
-            border-color: $color-green-shamrock;
-
-            &.ng-dirty.ng-invalid {
-                border-color: #d9534f;
+            .a-content {
+                width: 87%;
             }
         }
-
-        .checkout-text {
-            width:100%;
-        }
-    }
-
-    .checkout-help {
-        font-size: $font-size-smaller;
-        color: #d9534f;
     }
 }
+
 // Checkout Actions
 //
-// .checkout-actions      - Sets up the previous/next/finish buttons.
+// .checkout-actions      - A section for the previous/next buttons.
 //
 // No styleguide reference
 .checkout-actions {
-    @include cg-item(false, true);
+    @include cg-item(false, false);
     margin-top:1em;
 
     .checkout-space {
-        @include cg-1of4(false, true);
+        @include cg-1of4(false, false);
         min-height: 1em;
     }
 
     .checkout-previous {
-        @include cg-1of4(false, true);
+        @include cg-1of4(false, false);
         min-height: 1em;
 
         .checkout-action {
@@ -306,7 +290,7 @@
     }
 
     .checkout-next {
-        @include cg-1of2(false, true);
+        @include cg-1of2(false, false);
         min-height: 1em;
 
         .checkout-action {
@@ -333,21 +317,24 @@
 //
 // No styleguide reference
 .checkout-cart {
-    @include breakpoint($mq-sm-max) {
+    @include breakpoint($mq-md-max) {
         @include cg-item(true, true);
     }
 
-    @include breakpoint($mq-md-min) {
-        @include cg-3of8(true, true, true);
-        margin-top: -6em;
+    @include breakpoint($mq-lg-min) {
+        @include cg-3of8(false, true, true);
+        position: relative;
+        top: -5em;
     }
 
     .cart-header {
         @include cg-row(true, false);
         background-color: $color-green-shamrock;
         color: $color-white-pure;
+        line-height: 1.2em;
         font-size: 1.85em;
-        padding: .75em;
+        padding: 0.75em;
+        height: 2.7em;              // 5em height / 1.85em font size
 
         i {
             margin-right: .35em;
@@ -358,136 +345,119 @@
 // Checkout Confirmation Styles
 //
 // .confirmation                - Encapsulates the whole confirmation page
-// .confirmation-content        - Encapsulates the main confirmation page content
-// .confirmation-receipt        - Encapsulates the receipt sidebar
+//     .confirmation-receipt    - Encapsulates the receipt sidebar
 //
 // No styleguide reference
 
 .confirmation {
-    @include cg-row(true, true);
-}
-
-.confirmation-content {
-    @include breakpoint($mq-sm-max) {
-        @include cg-item(true, true);
-    }
-
-    @include breakpoint($mq-md-min) {
-        @include cg-5of8(true, true, true);
-        padding: 2em;
-    }
-
-    .content-section {
-        margin-bottom: 4em;
-    }
-
     .btn-cta {
         text-align: center;
         padding: 2em 0;
         font-size: $font-size-larger;
     }
-}
 
-.confirmation-receipt {
-    @include breakpoint($mq-sm-max) {
-        @include cg-item(true, true);
-    }
-
-    @include breakpoint($mq-md-min) {
-        @include cg-3of8(true, true, true);
-        float: right;
-        margin-top: -6em;
-    }
-
-    .receipt-header {
-        @include cg-row(true, false);
-        background-color: $color-green-shamrock;
-        color: $color-white-pure;
-        line-height: 1.2em;
-        font-size: 1.85em;
-        padding: .75em;
-        height: 2.7em;              // 6em height / (1.85em font size * 1.2em line height)
-
-        i {
-            margin-right: .75em;
-            vertical-align: middle;
-
-            &:before {
-                float: left;
-            }
+    .confirmation-receipt {
+        @include breakpoint($mq-md-max) {
+            @include cg-item(true, true);
         }
-    }
 
-    .receipt-details {
-        background-color: $color-white-lily;
-        border: 1px solid $color-gray-ghost;
-        border-top: 0px;
-        padding: 1em;
-        margin-bottom: 2em;
-    }
-
-    .plan-item {
-        background-color: $color-white-pure;
-        border: 1px solid $color-gray-ghost;
-        padding: 0.5em;
-        margin-bottom: 1em;
-
-        .plan-card {
+        @include breakpoint($mq-lg-min) {
+            @include cg-3of8(false, true, true);
+            float: right;
             position: relative;
-            padding-left: 4em;
-            padding-right: 0.5em;
-            color: $color-blue-curious;
-            text-align: right;
+            top: -5em;
+        }
 
-            &:before {
-                position: absolute;
-                left: 0;
-                top: 50%; // this + next line vertically centers the icon in the box
-                @include prefixer(transform, translateY(-0.5em), webkit ms);
-                font-size: $font-size-huger;
-                padding: 0 0.45em;
-                color: $color-green-shamrock;
+        .receipt-header {
+            @include cg-row(true, false);
+            background-color: $color-green-shamrock;
+            color: $color-white-pure;
+            line-height: 1.2em;
+            font-size: 1.85em;
+            padding: 0.75em;
+            height: 2.7em;              // 5em height / 1.85em font size
+
+            i {
+                margin-right: 0.75em;
+                vertical-align: middle;
+
+                &:before {
+                    float: left;
+                }
+            }
+        }
+
+        .receipt-details {
+            background-color: $color-white-lily;
+            border: 1px solid $color-gray-ghost;
+            border-top: 0px;
+            padding: 1em;
+            margin-bottom: 2em;
+        }
+
+        .plan-item {
+            background-color: $color-white-pure;
+            border: 1px solid $color-gray-ghost;
+            padding: 0.5em;
+            margin-bottom: 1em;
+
+            .plan-card {
+                position: relative;
+                padding-left: 4em;
+                padding-right: 0.5em;
+                color: $color-blue-curious;
+                text-align: right;
+
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    top: 50%; // this + next line vertically centers the icon in the box
+                    @include prefixer(transform, translateY(-0.5em), webkit ms);
+                    font-size: $font-size-huger;
+                    padding: 0 0.45em;
+                    color: $color-green-shamrock;
+                }
+
+                .plan-name {
+                    font-size: $font-size-largest;
+                    font-weight: $font-weight-headline;
+                }
+
+                .plan-utility {
+                    font-size: $font-size-large;
+                }
             }
 
-            .plan-name {
+            .c-icon-electricity:before {
+                color: $color-yellow-butter-light;
+            }
+
+            .c-icon-naturalgas:before {
+                color: $color-red-cinnabar;
+            }
+        }
+
+        .personal-details {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+
+            .detail-item {
+                margin-top: 1em;
+            }
+
+            .detail-value {
+                display: block;
                 font-size: $font-size-largest;
-                font-weight: $font-weight-headline;
+                padding: 0 0.4em;
             }
 
-            .plan-utility {
-                font-size: $font-size-large;
+            .detail-label {
+                display: block;
+                font-size: $font-size-smaller;
+                border-top: 1px solid $color-gray-ghost;
+                padding: 0.5em 1em;
             }
-        }
-
-        .c-icon-electricity:before {
-            color: $color-yellow-butter-light;
-        }
-
-        .c-icon-naturalgas:before {
-            color: $color-red-cinnabar;
-        }
-    }
-
-    .personal-details {
-        padding: 0px;
-        margin: 0px;
-        list-style: none;
-
-        .detail-item {
-            margin-top: 1em;
-        }
-
-        .detail-value {
-            display: block;
-            font-size: $font-size-largest;
-            padding: 0 0.4em;
-        }
-
-        .detail-label {
-            display: block;
-            font-size: $font-size-smaller;
-            border-top: 1px solid $color-gray-ghost;
-            padding: 0.5em 1em;
         }
     }
 }

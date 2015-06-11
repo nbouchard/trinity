@@ -8,12 +8,20 @@ tpl:
   title: Website Page
 ---
 
-{{> cb_confirmation_header}}
+<div class="ce-checkout">
+    {{#withHash
+        currentSection="Confirmation"
+    }}
+        {{> cb_checkout_header}}
+    {{/withHash}}
 
-<div class="confirmation">
-    {{> cb_confirmation_body}}
+    <div class="confirmation checkout-content">
+        <div class="checkout-steps">
+            {{> cb_confirmation_body}}
+        </div>
 
-    {{> cb_confirmation_receipt}}
+        {{> cb_confirmation_receipt}}
+    </div>
 </div>
 
 {{> cb_ambassador_cta}}

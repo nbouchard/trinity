@@ -1,7 +1,4 @@
-.datepicker {
-    position: absolute;
-    margin-top: 50px;
-    padding: 3px;
+.ce-datepicker {
     border: 0;
     background: $color-white-pure;
     box-shadow: none;
@@ -11,8 +8,34 @@
         outline: none;
     }
 
+    // overrides the standard button styling which is being applied to all the clickable elements in the calendar in checkout
+    button {
+        padding: 0;
+        line-height: 1em;
+        height: auto;
+        border: 0 solid transparent;
+        background-color: $color-white-pure;
+        color: $color-gray-charcoal;
+
+        &:hover,
+        &:focus {
+            background-color: $color-green-cruise-light;
+            border: 0 solid transparent;
+        }
+
+        &:disabled {
+            background-color: $color-white-lily;
+            color: $color-gray-ghost;
+            cursor: default;
+        }
+
+        &.active {
+           background-color: $color-green-aquamarine-light;
+        }
+    }
+
     table {
-        margin: 0;
+        margin: 0 auto;
 
         tr {
             height: auto;
@@ -25,14 +48,26 @@
                 padding: 0;
                 text-align: center;
 
-                &.left-pull {
-                    padding-left: 0.33em;
-                    text-align: left;
+                button {
+                    color: $color-gray-cape-light;
+
+                    &:hover,
+                    &:focus {
+                        background-color: transparent;
+                        color: $color-green-jungle;
+                    }
                 }
 
-                &.right-pull {
+                .pull-left {
+                    padding-left: 0.33em;
+                    text-align: left;
+                    color: $color-gray-ghost;
+                }
+
+                .pull-right {
                     padding-right: 0.33em;
                     text-align: right;
+                    color: $color-gray-ghost;
                 }
             }
         }
@@ -44,6 +79,7 @@
             height: auto;
             border: 1px solid $color-gray-ghost;
             text-align: center;
+            cursor: pointer;
 
             &:first-child {
                 width: auto;
@@ -58,6 +94,11 @@
             span {
                 padding: 0 9px;
                 line-height: 2.4em;
+            }
+
+            a {
+                font-weight: $font-weight-headline;
+                color: $color-green-shamrock;
             }
         }
 
@@ -77,6 +118,6 @@
     }
 
     .text-info {
-        color: $color-green-shamrock;
+        color: $color-green-jungle;
     }
 }
