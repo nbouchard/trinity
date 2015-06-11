@@ -427,7 +427,7 @@
     .plan-page-header {
         position: relative;
         width: 100%;
-        height: (4em + (2 * 1.75 * $grid-gutter-width));
+        min-height: (4em + (2 * 1.75 * $grid-gutter-width));
         background: $color-blue-curious;
 
         .plan-page-name {

@@ -1169,6 +1169,10 @@
             width: 31.32%;
             border-width: 1px;
             border-style: solid;
+            
+            @include breakpoint($mq-sm-max) { 
+                width: 100%;
+            }
 
             a {
                 color: $color-gray-charcoal;
@@ -1182,14 +1186,23 @@
                 }
 
                 h3 {
-                    padding: 1em;
+                    padding: 1em 1em 0 1em;
                     height: 4em;
+                    
+                    @include breakpoint($mq-sm-max) { 
+                        height:auto;
+                    }
                 }
 
                 p {
-                    padding: 1em;
+                    padding: 0 1em;
                     height: 12em;
                     font-weight: $font-weight-body;
+                    overflow: hidden;
+                    @include breakpoint($mq-sm-max) { 
+                        height:auto;
+                        padding: 0 1.5em 3em;
+                    }
                 }
 
                 &:hover {
