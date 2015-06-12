@@ -239,8 +239,11 @@
         display: block;
         overflow: hidden;
         width: 100%;
-        height: 26em;
+        height: 36em;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+        @include breakpoint($mq-md-max) {
+            height: 12em;
+        }
     }
 
     .hero-image-container {
@@ -252,34 +255,44 @@
         display: block;
         overflow: hidden;
         width: 100%;
-        height: 26em;
+        height: 36em;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+        background-image: url('/wp-content/themes/ChooseEnergyTheme/images/photography/Bay_Bridge_Night.jpg');
+        background-repeat: none;
+        background-size: cover;
 
         @include breakpoint($mq-md-max) {
-            height: 4em;
+            top:4em;
+            height: 12em;
         }
 
         img {
             min-width: 600;
             width: 100%;
         }
-
+        .hero-image-content {
+            @include container-fixed;
+            width: $site-max-width;
+        }
         .hero-title {
-            position: absolute;
-            top: 0%;
-            left: 20%;
             z-index: 10;
             max-width: 40em;
             width: 50%;
             height: 100%;
-
+            @include breakpoint($mq-md-max) {
+                width: 100%;
+                left: 5%;
+            }
             h1 {
                 display: table-cell;
                 height: 7.5em; // image's height
                 color: $color-white-pure;
                 vertical-align: middle;
                 font-size: 4em;
-
+                @include breakpoint($mq-md-max) {
+                    font-size: 3em;
+                    height:5em;
+                }
                 small {
                     display: block;
                     color: $color-white-pure;
