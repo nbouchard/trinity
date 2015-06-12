@@ -172,6 +172,12 @@
         .ce-label-text {
             padding: 0.25em;
         }
+
+        &.full-width {
+            @include breakpoint($mq-lg-min) {
+                width: 100%;
+            }
+        }
     }
 
     .a-help {
@@ -202,6 +208,12 @@
         p:last-of-type {
             margin-bottom: 0;
         }
+
+    }
+
+    .a-required {
+        font-size: $font-size-smaller;
+        color: $color-red-cinnabar;
     }
 
     &.v-auth-forms {
@@ -255,12 +267,8 @@
 
     &.v-datepicker {
         @include breakpoint($mq-lg-min) {
-            .a-label {
-                width: 12%;
-            }
-
             .a-content {
-                width: 87%;
+                width: 100%;
             }
         }
     }
@@ -281,11 +289,11 @@
     }
 
     .checkout-previous {
-        @include cg-1of4(false, false);
+        @include cg-1of2(false, false);
         min-height: 1em;
 
         .checkout-action {
-            @include ce-button('dark');
+            @include ce-button('primary');
         }
     }
 
