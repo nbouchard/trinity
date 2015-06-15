@@ -1,0 +1,46 @@
+.ce-zip-search {
+    .zip-search {
+        border-left: 1px;
+        margin: 1em 0;
+
+        &:focus {
+            border-color: $color-gray-ghost;
+        }
+    }
+
+    .btn-primary {
+
+    }
+
+    .search-steps {
+        @include clearfix;
+        padding: 0.5em;
+        margin: 0;
+        list-style: none;
+        display: block;
+
+        li {
+            float: left;
+            display: inline-block;
+            margin-right: 1em;
+            font-size: $font-size-larger;
+            font-weight: $font-weight-accent;
+            vertical-align: bottom;
+
+            &:before {
+                margin-right: 0.25em;
+                font-size: $font-size-largest;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    @include breakpoint($mq-sm-max) {
+        font-size: $font-size-smaller;
+    }
+
+    @include breakpoint($mq-xs-max) {
+        text-align: center;
+    }
+
+}

@@ -550,13 +550,6 @@
     }
 }
 
-.ce-zip-search {
-    display: inline-block;
-    width: 100%;
-    font-size: 1.1em;
-    padding: 2em 0;
-}
-
 //Block specific variants of content editorial compontent
 .v-zip-search {
     @include editorial-height('bigtalk');
