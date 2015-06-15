@@ -1,4 +1,18 @@
 <div class="ce-zip-search">
-	<input class="input-superwide" type="text" placeholder="Type your zipcode (i.e. 77070, 60622, 94107)">
-	<button class="btn-primary" type="button">Find Your Energy</button>
+    <ul class="search-steps">
+        <li class="icon c-icon-num-1">Enter your zip.</li>
+        <li class="icon c-icon-num-2">Choose a provider.</li>
+        <li class="icon c-icon-num-3">Make the switch.</li>
+    </ul>
+    {{#if business-dropdown}}
+    <label class="select-label">
+        <select class="size-select">
+            <option>Choose your business size</option>
+            <option value="smb">Small Business (up to 2000 kWh/mo.)</option>
+            <option value="commercial">Commercial (over 2000 kWh/mo.)</option>
+        </select>
+    </label>
+    {{/if}}
+	<input class="zip-search" type="text" placeholder="Enter your zip">
+	<button class="btn-primary" type="button">Get started</button>
 </div>

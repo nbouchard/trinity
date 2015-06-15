@@ -36,19 +36,17 @@
 $c-icon-sun: '\e02e';
 $c-icon-nat-gas: '\e029';
 $c-icon-electricity: '\e01d';
-$c-icon-chevron-down: '\e00b';
-$c-icon-chevron-up: '\e00e';
-$c-icon-facebook: '\e018';
-$c-icon-twitter: '\e019';
+$c-icon-chevron-down: '\e04c';
+$c-icon-chevron-up: '\e04b';
+$c-icon-facebook: '\e049';
+$c-icon-twitter: '\e04a';
 $c-icon-gplus: '\e037';
 $c-icon-linkedin: '\e038';
 $c-icon-email: '\e01a';
+$c-icon-down-dir: '\e045';
+$c-icon-up-dir: '\e048';
 
 //Icons
-.c-icon-menu:before {
-  content: '\e000';
-}
-
 .c-icon-dollar:before {
   content: '\e001';
 }
@@ -69,10 +67,6 @@ $c-icon-email: '\e01a';
   content: '\e005';
 }
 
-.c-icon-check-mark:before {
-  content: '\e006';
-}
-
 .c-icon-arrow-down:before {
   content: '\e007';
 }
@@ -89,36 +83,8 @@ $c-icon-email: '\e01a';
   content: '\e00a';
 }
 
-.c-icon-chevron-down:before {
-  content: '\e00b';
-}
-
-.c-icon-chevron-left:before {
-  content: '\e00c';
-}
-
-.c-icon-chevron-right:before {
-  content: '\e00d';
-}
-
-.c-icon-chevron-up:before {
-  content: '\e00e';
-}
-
-.c-icon-remove:before {
-  content: '\e00f';
-}
-
-.c-icon-search:before {
-  content: '\e010';
-}
-
 .c-icon-location:before {
   content: '\e011';
-}
-
-.c-icon-cog:before {
-  content: '\e012';
 }
 
 .c-icon-clock:before {
@@ -131,22 +97,6 @@ $c-icon-email: '\e01a';
 
 .c-icon-heart:before {
   content: '\e015';
-}
-
-.c-icon-plus:before {
-  content: '\e016';
-}
-
-.c-icon-minus:before {
-  content: '\e017';
-}
-
-.c-icon-facebook:before {
-  content: '\e018';
-}
-
-.c-icon-twitter:before {
-  content: '\e019';
 }
 
 .c-icon-mail:before {
@@ -373,7 +323,7 @@ $c-icon-email: '\e01a';
   content: '\e019';
 }
 
-.c-icon-up-open:before {
+.c-icon-chevron-up:before {
   content: '\e04b';
 }
 
