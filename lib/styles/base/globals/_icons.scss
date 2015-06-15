@@ -199,7 +199,7 @@ $c-icon-email: '\e01a';
 }
 
 // Indexed Rate
-.c-icon-ind:before,
+.c-icon-idx:before,
 .c-icon-graph:before {
   content: '\e027';
 }
@@ -339,4 +339,72 @@ $c-icon-email: '\e01a';
 
 .c-icon-num-9:before {
   content: '9';
+}
+
+.c-icon-down-dir:before {
+  content: '\e045';
+}
+
+.c-icon-left-dir:before {
+  content: '\e046';
+}
+
+.c-icon-right-dir:before {
+  content: '\e047';
+}
+
+.c-icon-up-dir:before {
+  content: '\e048';
+}
+
+.c-icon-facebook:before {
+  content: '\e049';
+}
+
+.c-icon-twitter:before {
+  content: '\e04a';
+}
+
+.c-icon-chevron-right:before {
+  content: '\e018';
+}
+
+.c-icon-chevron-left:before {
+  content: '\e019';
+}
+
+.c-icon-up-open:before {
+  content: '\e04b';
+}
+
+.c-icon-chevron-down:before {
+  content: '\e04c';
+}
+
+.c-icon-check-mark:before {
+  content: '\e04d';
+}
+
+.c-icon-remove:before {
+  content: '\e006';
+}
+
+.c-icon-minus:before {
+  content: '\e00b';
+}
+
+.c-icon-plus:before {
+  content: '\e00c';
+}
+
+.c-icon-search:before {
+  content: '\e00d';
+}
+
+.c-icon-cog:before {
+  content: '\e00e';
+}
+
+.c-icon-menu:before {
+  content: '\e00f';
 }
