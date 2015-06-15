@@ -7,7 +7,13 @@ tpl:
   desc: Page Desc
   title: Website Page
 ---
-{{> cb_shopping_header}}
+{{#withHash
+    hideCompareRate="true"
+    hideFilterUsage="true"
+    hideAdvancedSearch="true"
+}}
+    {{> cb_shopping_header}}
+{{/withHash}}
 
 <div class="shop-body">
     <div class="ce-shopping-noplans">
