@@ -764,25 +764,35 @@
     }
 
     .pagination {
+        -webkit-padding-start: 0;
+        margin-top: 2em; 
+
         li {
+            list-style: none;
+            display: inline-block;
             a {
-                margin: 0 0.2em;
+                margin: 1em 0.2em 0;
                 border: 1px solid $color-gray-ghost;
                 color: $color-gray-chateau;
                 font-weight: normal;
+                padding: .5em 1em;
+                &:hover {
+                    background: $color-gray-chateau;
+                    color: $color-white-pure;
+                    text-decoration: none;
+                }
             }
+
 
             &:first-child {
                 a {
                     margin-left: 0;
-                    padding: 5px 5px 5px 0;
                     border: 0;
                 }
             }
 
             &:last-child {
                 a {
-                    padding: 5px;
                     border: 0;
                 }
             }
