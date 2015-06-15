@@ -134,7 +134,7 @@ body.has-cart {
                 position: absolute;
                 left: 0;
                 top: 50%; // this + next line vertically centers the icon in the box
-                @include prefixer(transform, translateY(-0.5em), webkit ms);
+                @include prefixer(transform, translateY(-0.5em), webkit ms spec);
                 font-size: $font-size-huger;
                 padding: 0 0.45em;
                 color: $color-green-shamrock;
@@ -192,7 +192,7 @@ body.has-cart {
                     position: absolute;
                     left: 0;
                     top: 50%; // this + next line vertically centers the icon in the box
-                    @include prefixer(transform, translateY(-50%), webkit ms);
+                    @include prefixer(transform, translateY(-50%), webkit ms spec);
                 }
             }
 

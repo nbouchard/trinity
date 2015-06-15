@@ -456,7 +456,7 @@
             .utility-logo {
                 position: relative;
                 top: 50%; // this + next line vertically centers the logos
-                @include prefixer(transform, translateY(-50%), webkit ms);
+                @include prefixer(transform, translateY(-50%), webkit ms spec);
             }
         }
 
