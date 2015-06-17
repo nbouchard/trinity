@@ -187,6 +187,7 @@
 }
 
 .v-img99 .photoblock-photo {
+     @include photoblock();
 }
 
 .v-img111 .photoblock-photo {
