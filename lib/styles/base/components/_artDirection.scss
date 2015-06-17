@@ -100,11 +100,26 @@
     );
 }
 
+.v-img43 .photoblock-photo {
+    @include photoblock(
+        $bg-color: $color-gray-edward,
+        $x-pos: 0%,
+        $y-pos: 60%
+    );
+}
+
 .v-img47 .photoblock-photo {
     @include photoblock(
         $blend-mode: soft-light,
         $x-pos: 60%,
         $y-pos: 20%
+    );
+}
+
+.v-img48 .photoblock-photo {
+    @include photoblock(
+        $bg-color: $color-gray-edward,
+        $x-pos: 90%
     );
 }
 
@@ -120,6 +135,19 @@
         $bg-color: $color-gray-edward,
         $y-pos: 70%,
         $opacity: .95
+    );
+}
+
+.v-img65 .photoblock-photo {
+    @include photoblock(
+        $y-pos: 30%,
+        $x-pos: 10%
+    );
+}
+
+.v-img69 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 95%
     );
 }
 
@@ -182,4 +210,20 @@
         $x-pos: 10%,
         $y-pos: 60%
     );
+}
+
+.v-img138 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 20%,
+        $y-pos: 30%
+    );
+}
+
+.v-img139 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 40%,
+        $y-pos: 95%
+    );
+    // flip horizontally
+    transform: scaleX(-1);
 }
