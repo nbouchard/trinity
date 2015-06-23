@@ -1,0 +1,94 @@
+.ce-zip-search {
+    .size-select,
+    .zip-search {
+        border-left: 1px;
+
+        &:focus {
+            border-color: $color-gray-ghost;
+        }
+    }
+
+    .zip-search {
+        margin: 1em 0.5em 0 0;
+        float: left;
+
+        @include breakpoint($mq-md-max) {
+            clear: both;
+            width: 15em;
+        }
+    }
+
+    .select-label {
+        float: left;
+        position:relative;
+        margin: 1em 0.5em 0 0;
+        padding: 0;
+        color: $color-gray-chateau;
+
+        &:after {
+            @include icon;
+            font-size: $font-size-largest;
+            content: $c-icon-down-dir;
+            right:0.25em;
+            top: 0.5em;
+            position:absolute;
+            pointer-events:none;
+        }
+    }
+
+    .btn-primary {
+        font-weight: $font-weight-accent;
+        float: left;
+        margin: 1em 0 0;
+
+        @include breakpoint($mq-md-max) {
+            clear: both;
+            width: 15em;
+        }
+    }
+
+    .size-select {
+        height: 3em;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0.625em;
+        background-color: $color-white-pure;
+        @include prefixer(appearance, none, webkit moz spec);
+        border-radius: 0;
+        max-width: 15em;
+    }
+
+    .search-steps {
+        @include clearfix;
+        padding: 0.5em;
+        margin: 0;
+        list-style: none;
+        display: block;
+
+        li {
+            margin-right: 1em;
+            font-size: $font-size-larger;
+            font-weight: $font-weight-accent;
+            vertical-align: bottom;
+
+            @include breakpoint($mq-md-max) {
+                padding: 0.3em 0;
+            }
+
+            @include breakpoint($mq-lg-min) {
+                float: left;
+                display: inline-block;
+            }
+
+            &:before {
+                margin-right: 0.25em;
+                font-size: $font-size-largest;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    @include breakpoint($mq-sm-max) {
+        font-size: $font-size-smaller;
+    }
+}

@@ -8,15 +8,25 @@
     }
 
     &.photoblock-bigtalk {
-        font-size: 1.4em;
+        font-size: 1.5em;
 
         .photoblock-container {
-            max-width: ($site-max-width / 1.4);
+            max-width: ($site-max-width / 1.5);
 
             @include breakpoint($mq-xxl) {
                 max-width: 50%;
-                padding: ( 5em / 1.4);
+                padding: ( 5em / 1.5);
             }
+        }
+
+        .photoblock-headline {
+            line-height: 1.1em;
+            padding: 0 ;
+        }
+
+        .photoblock-subhead {
+            line-height: 1.1em;
+            padding: 0 ;
         }
     }
 
@@ -36,26 +46,6 @@
         background-position-x: 50%;
         background-position-y: 50%;
         background-repeat: no-repeat;
-    }
-
-    &.photoblock-screen {
-        color: $color-gray-charcoal;
-
-        .photoblock-photo {
-            background-blend-mode: screen;
-        }
-    }
-
-    &.photoblock-softlight {
-        .photoblock-photo {
-            background-blend-mode: soft-light;
-        }
-    }
-
-    &.photoblock-hardlight {
-        .photoblock-photo {
-            background-blend-mode: hard-light;
-        }
     }
 
     .photoblock-container {
@@ -78,18 +68,28 @@
         }
     }
 
-    .photoblock-headline {
-        @include typeface('headline');
+    .photoblock-headline,
+    .photoblock-subhead {
         font-size: $font-size-extrahuger;
         line-height: 1.25em;
         padding: 0 0 0.25em ;
+
+        // Adjust font size for different screen sizes
+        @include breakpoint($mq-lg-max) {
+            font-size: $font-size-extrahuge;
+        }
+
+        @include breakpoint($mq-sm-max) {
+            font-size: $font-size-huger;
+        }
+    }
+
+    .photoblock-headline {
+        @include typeface('headline');
     }
 
     .photoblock-subhead {
         @include typeface('subhead');
-        font-size: $font-size-extrahuge;
-        line-height: 1.25em;
-        padding: 0 0 0.25em;
     }
 
     .photoblock-cta {
@@ -103,6 +103,11 @@
 
         a {
             font-size: $font-size-smaller;
+        }
+
+        @include breakpoint($mq-sm-max) {
+            @include cg-item();
+            font-size: $font-size-large;
         }
     }
 
@@ -126,161 +131,4 @@
             padding: 5em;
         }
     }
-
-    .pb-color-jewel {
-        background-color: $color-green-jewel;
-    }
-
-    .pb-color-jungle {
-        background-color: $color-green-jungle;
-    }
-
-    .pb-color-shamrock {
-        background-color: $color-green-shamrock;
-    }
-
-    .pb-color-aquamarine {
-        background-color: $color-green-aquamarine;
-    }
-
-    .pb-color-cruise {
-        background-color: $color-green-cruise;
-    }
-
-    .pb-color-bahama {
-        background-color: $color-blue-bahama;
-    }
-
-    .pb-color-boston {
-        background-color: $color-blue-boston;
-    }
-
-    .pb-color-curious {
-        background-color: $color-blue-curious;
-    }
-
-    .pb-color-danube {
-        background-color: $color-blue-danube;
-    }
-
-    .pb-color-perano {
-        background-color: $color-blue-perano;
-    }
-
-    .pb-color-fiery {
-        background-color: $color-orange-fiery;
-    }
-
-    .pb-color-tango {
-        background-color: $color-orange-tango;
-    }
-
-    .pb-color-sun {
-        background-color: $color-orange-sun;
-    }
-
-    .pb-color-tacao {
-        background-color: $color-orange-tacao;
-    }
-
-    .pb-color-apricot {
-        background-color: $color-orange-apricot;
-    }
-
-    .pb-color-tamarillo {
-        background-color: $color-red-tamarillo;
-    }
-
-    .pb-color-poppy {
-        background-color: $color-red-poppy;
-    }
-
-    .pb-color-cinnabar {
-        background-color: $color-red-cinnabar;
-    }
-
-    .pb-color-pink {
-        background-color: $color-red-pink;
-    }
-
-    .pb-color-azalea {
-        background-color: $color-red-azalea;
-    }
-
-    .pb-color-black {
-        background-color: $color-gray-black;
-    }
-
-    .pb-color-nero {
-        background-color: $color-gray-nero;
-    }
-
-    .pb-color-woodsmoke {
-        background-color: $color-gray-woodsmoke;
-    }
-
-    .pb-color-charcoal {
-        background-color: $color-gray-charcoal;
-    }
-
-    .pb-color-cape {
-        background-color: $color-gray-cape;
-    }
-
-    .pb-color-stone {
-        background-color: $color-gray-stone;
-    }
-
-    .pb-color-oslo {
-        background-color: $color-gray-oslo;
-    }
-
-    .pb-color-chateau {
-        background-color: $color-gray-chateau;
-    }
-
-    .pb-color-edward {
-        background-color: $color-gray-edward;
-    }
-
-    .pb-color-ghost {
-        background-color: $color-gray-ghost;
-    }
-
-    .pb-color-geyser {
-        background-color: $color-gray-geyser;
-    }
-
-    .pb-color-lilac {
-        background-color: $color-white-lilac;
-    }
-
-    .pb-color-lily {
-        background-color: $color-white-lily;
-    }
-
-    .pb-color-smoke {
-        background-color: $color-white-smoke;
-    }
-
-    .pb-color-white {
-        background-color: $color-white-pure;
-    }
-
-    .pb-color-violet {
-        background-color: $color-purple-violet;
-    }
-
-    .pb-color-butter {
-        background-color: $color-yellow-butter;
-    }
-
-    .pb-color-mantis {
-        background-color: $color-olive-mantis;
-    }
-
-    .pb-color-mulberry {
-        background-color: $color-magenta-mulberry;
-    }
-
 }

@@ -298,6 +298,7 @@
 
         @include breakpoint($mq-xl-min) {
             @include cg-1of2(true, true, true);
+            clear: both;
         }
     }
 
@@ -831,6 +832,7 @@
 
             @include breakpoint($mq-md-min) {
                 @include cg-1of3(true, true, true);
+                float: right;
             }
         }
 
@@ -984,6 +986,23 @@
                 @include cg-1of5();
             }
 
+            .plan-contract .plan-data-label {
+                font-size: $font-size-larger;
+
+                .icon {
+                    font-size: 0.85em;
+                }
+            }
+
+            .plan-contract-type {
+                font-size: 0.9em;
+
+                .icon {
+                    display: block;
+                    font-size: 0.9em;
+                }
+            }
+
             // Plan Details
             .plan-details {
                 margin-top: 0.5em;
@@ -1079,6 +1098,17 @@
 
                 .plan-signup-btn {
                     @include ce-button('primary', 'huge', 'full');
+                    font-size: 1.55em;
+                    padding: 0.25em;
+                    line-height: 1.4em;
+                    font-weight: $font-weight-body;
+
+                    .btn-extended-info {
+                        display: block;
+                        font-size: 0.75em;
+                        line-height: 1.2em;
+                        font-weight: $font-weight-accent;
+                    }
                 }
             }
 
