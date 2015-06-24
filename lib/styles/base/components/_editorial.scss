@@ -819,3 +819,67 @@
         }
     }
 }
+
+.ce-editorial-triptych {
+    .triptych-item {
+        text-align: center;
+
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(true, true);
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of3(true, true, true);
+        }
+
+        .circle-icon-large {
+            padding: 20px;
+
+            @include breakpoint($mq-md-max) {
+                width: 90%;
+                max-width: 225px;
+            }
+
+            @include breakpoint($mq-lg-min) {
+                width: 225px;
+            }
+        }
+
+        .triptych-label {
+            font-size: $font-size-larger;
+            text-align: center;
+            padding: 0.5em 0;
+            max-width: 12em;
+            margin: 0 auto;
+            line-height: 1.2em;
+            font-weight: $font-weight-body-strong;
+            font-family: $font-family-subhead;
+        }
+
+        .triptych-caption {
+            font-size: $font-size-large;
+            text-align: center;
+            padding: 0.5em 0.5em;
+            max-width: 80%;
+            margin: 0 auto;
+            line-height: 1.2em;
+        }
+    }
+
+    .triptych-cta {
+        @include cg-item();
+        display: block;
+        padding-top: 2em;
+        text-align: center;
+        font-size: $font-size-huger;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:after {
+            @include icon;
+            content: $c-icon-right-dir;
+            vertical-align: middle;
+        }
+    }
+}
+
