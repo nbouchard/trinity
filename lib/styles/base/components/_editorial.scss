@@ -415,7 +415,7 @@
         @include editorial-height('bigtalkshort');
     }
 
-    &.content-editorial-short,
+    &.content-editorial-tall,
     &.v-tall {
         @include editorial-height('tall');
     }
