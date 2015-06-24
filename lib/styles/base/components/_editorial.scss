@@ -415,7 +415,7 @@
         @include editorial-height('bigtalkshort');
     }
 
-    &.content-editorial-short,
+    &.content-editorial-tall,
     &.v-tall {
         @include editorial-height('tall');
     }
@@ -548,13 +548,6 @@
             font-size: $font-size-larger;
         }
     }
-}
-
-.ce-zip-search {
-    display: inline-block;
-    width: 100%;
-    font-size: 1.1em;
-    padding: 2em 0;
 }
 
 //Block specific variants of content editorial compontent

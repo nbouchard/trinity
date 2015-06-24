@@ -70,25 +70,31 @@
             </div>
 
             <div class="cg-row">
+                {{#unless hideCompareRate}}
                 <div class="filter-compare-rate">
                     <label class="ce-label">
                         <span>Compare to a rate of <input class="textbox" type="text" value="0"> &cent; per month</span>
                         <input class="range" type="range" id="range" value="0" min="0" max="100">
                     </label>
                 </div>
+                {{/unless}}
 
+                {{#unless hideFilterUsage}}
                 <div class="filter-usage">
                     <label class="ce-label">
                         <span>I use about <input class="textbox" type="text" value="0"> kWh per month</span>
                         <input class="range" type="range" id="range" value="0" min="0" max="100">
                     </label>
                 </div>
-                <div class="filter-cta">
+                {{/unless}}
+
+                <div class="filter-cta {{#if hideCompareRate}}v-nousage{{/if}}">
                     <button class="btn-primary" type="submit">Search for Plans</button>
                 </div>
             </div>
         </section>
 
+        {{#unless hideAdvancedSearch}}
         <section class="filter-section filter-section-refine">
             <div class="filter-toggle-bar">
                 <div class="show-more">
@@ -253,5 +259,6 @@
                 </div>
             </div>
         </section>
+        {{/unless}}
     </div>
 </div>

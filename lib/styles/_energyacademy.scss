@@ -227,6 +227,11 @@
             .article-info {
                 color: $color-gray-charcoal;
             }
+            &:hover {
+                .caption {
+                    background-color: $color-green-shamrock;
+                }
+            }
         }
     }
 

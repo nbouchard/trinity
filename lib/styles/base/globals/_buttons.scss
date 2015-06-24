@@ -169,7 +169,7 @@
             font-size: $font-size-large;
             left: .75em;
             top: 50%; // this + next line vertically centers the icon in the box
-            @include prefixer(transform, translateY(-0.5em), webkit ms);
+            @include prefixer(transform, translateY(-0.5em), webkit ms spec);
         }
     }
 
