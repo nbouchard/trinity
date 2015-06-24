@@ -9,11 +9,23 @@
                 "properties": {
                     "name": "Massachusetts",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 1,
-                        "residential_gas": 0,
-                        "residential_solar": 1
-                    }
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 1,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
+                    } 
                 },
                 "id": "USA-MA",
                 "arcs": [
@@ -24,11 +36,23 @@
                 "properties": {
                     "name": "Minnesota",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
-                    }
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
+                    } 
                 },
                 "id": "USA-MN",
                 "arcs": [
@@ -39,10 +63,22 @@
                 "properties": {
                     "name": "Montana",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-MT",
@@ -54,10 +90,22 @@
                 "properties": {
                     "name": "North Dakota",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-ND",
@@ -69,10 +117,22 @@
                 "properties": {
                     "name": "Hawaii",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-HI",
@@ -98,10 +158,22 @@
                 "properties": {
                     "name": "Idaho",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-ID",
@@ -113,10 +185,22 @@
                 "properties": {
                     "name": "Washington",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-WA",
@@ -128,10 +212,22 @@
                 "properties": {
                     "name": "Arizona",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-AZ",
@@ -143,10 +239,22 @@
                 "properties": {
                     "name": "California",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 1,
-                        "residential_gas": 1,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 1,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 1,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-CA",
@@ -158,10 +266,22 @@
                 "properties": {
                     "name": "Colorado",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-CO",
@@ -173,10 +293,22 @@
                 "properties": {
                     "name": "Nevada",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-NV",
@@ -188,10 +320,22 @@
                 "properties": {
                     "name": "New Mexico",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 1,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-NM",
@@ -203,10 +347,22 @@
                 "properties": {
                     "name": "Oregon",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-OR",
@@ -218,10 +374,22 @@
                 "properties": {
                     "name": "Utah",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-UT",
@@ -233,10 +401,22 @@
                 "properties": {
                     "name": "Wyoming",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-WY",
@@ -248,10 +428,22 @@
                 "properties": {
                     "name": "Arkansas",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-AR",
@@ -263,10 +455,22 @@
                 "properties": {
                     "name": "Iowa",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-IA",
@@ -278,10 +482,22 @@
                 "properties": {
                     "name": "Kansas",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-KS",
@@ -293,10 +509,22 @@
                 "properties": {
                     "name": "Missouri",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-MO",
@@ -308,10 +536,22 @@
                 "properties": {
                     "name": "Nebraska",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-NE",
@@ -323,10 +563,22 @@
                 "properties": {
                     "name": "Oklahoma",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-OK",
@@ -338,10 +590,22 @@
                 "properties": {
                     "name": "South Dakota",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-SD",
@@ -353,10 +617,22 @@
                 "properties": {
                     "name": "Louisiana",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-LA",
@@ -368,10 +644,22 @@
                 "properties": {
                     "name": "Texas",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 1,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-TX",
@@ -383,10 +671,22 @@
                 "properties": {
                     "name": "Connecticut",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 1,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-CT",
@@ -398,10 +698,22 @@
                 "properties": {
                     "name": "New Hampshire",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-NH",
@@ -413,10 +725,22 @@
                 "properties": {
                     "name": "Rhode Island",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-RI",
@@ -428,10 +752,22 @@
                 "properties": {
                     "name": "Vermont",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-VT",
@@ -443,10 +779,22 @@
                 "properties": {
                     "name": "Alabama",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-AL",
@@ -458,10 +806,22 @@
                 "properties": {
                     "name": "Florida",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-FL",
@@ -473,10 +833,22 @@
                 "properties": {
                     "name": "Georgia",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 1,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-GA",
@@ -488,10 +860,22 @@
                 "properties": {
                     "name": "Mississippi",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-MS",
@@ -503,10 +887,22 @@
                 "properties": {
                     "name": "South Carolina",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-SC",
@@ -518,10 +914,22 @@
                 "properties": {
                     "name": "Illinois",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 1,
-                        "residential_gas": 1,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-IL",
@@ -533,10 +941,22 @@
                 "properties": {
                     "name": "Indiana",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-IN",
@@ -548,10 +968,22 @@
                 "properties": {
                     "name": "Kentucky",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-KY",
@@ -563,10 +995,22 @@
                 "properties": {
                     "name": "North Carolina",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-NC",
@@ -583,10 +1027,22 @@
                 "properties": {
                     "name": "Ohio",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 1,
-                        "residential_gas": 1,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-OH",
@@ -598,10 +1054,22 @@
                 "properties": {
                     "name": "Tennessee",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-TN",
@@ -613,10 +1081,22 @@
                 "properties": {
                     "name": "Virginia",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-VA",
@@ -633,10 +1113,22 @@
                 "properties": {
                     "name": "Wisconsin",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-WI",
@@ -653,10 +1145,22 @@
                 "properties": {
                     "name": "West Virginia",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-WV",
@@ -668,10 +1172,22 @@
                 "properties": {
                     "name": "Delaware",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 1,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-DE",
@@ -683,10 +1199,22 @@
                 "properties": {
                     "name": "District of Columbia",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 0,
-                        "residential_gas": 1,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-DC",
@@ -698,10 +1226,22 @@
                 "properties": {
                     "name": "Maryland",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 1,
-                        "residential_gas": 1,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-MD",
@@ -713,10 +1253,22 @@
                 "properties": {
                     "name": "New Jersey",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 1,
-                        "residential_gas": 1,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 1,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-NJ",
@@ -728,10 +1280,22 @@
                 "properties": {
                     "name": "New York",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 1,
-                        "residential_gas": 1,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 1,
+                            "solar": 1
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-NY",
@@ -748,10 +1312,22 @@
                 "properties": {
                     "name": "Pennsylvania",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 1,
-                        "residential_gas": 1,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-PA",
@@ -763,10 +1339,22 @@
                 "properties": {
                     "name": "Maine",
                     "energy": {
-                        "residential_electricity": 1,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 1
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-ME",
@@ -778,10 +1366,22 @@
                 "properties": {
                     "name": "Michigan",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 1,
-                        "residential_gas": 1,
-                        "residential_solar": 0
+                        "active": 1,
+                        "residential" : {
+                            "electricity" : 1,
+                            "nat-gas": 1,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 1,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-MI",
@@ -804,10 +1404,22 @@
                 "properties": {
                     "name": "Alaska",
                     "energy": {
-                        "residential_electricity": 0,
-                        "commercial_electricity": 0,
-                        "residential_gas": 0,
-                        "residential_solar": 0
+                        "active": 0,
+                        "residential" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "smb" : {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        },
+                        "commercial": {
+                            "electricity" : 0,
+                            "nat-gas": 0,
+                            "solar": 0
+                        }
                     }
                 },
                 "id": "USA-AK",
