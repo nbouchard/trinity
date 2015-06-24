@@ -631,7 +631,7 @@
 .v-solar-location-map {
     .locations-mapbox {
         .locations-info {
-            @include cg-1of3();
+            @include cg-1of2();
             font-size: $font-size-huge;
 
             h2 {
@@ -642,7 +642,7 @@
         }
 
         .locations-map {
-            @include cg-2of3();
+            @include cg-1of2();
         }
     }
 }
