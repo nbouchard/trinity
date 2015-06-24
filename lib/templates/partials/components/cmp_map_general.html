@@ -1,22 +1,100 @@
 <div class="locations-mapbox">
-    <div id="choose-mapinfo" class="locations-info"><p>Now that many states have deregulated their services, customers are empowered to choose power from among a list of suppliers in their area. The power of choice has ushered in major advantages for customers, including: better customer service, more competitive rates as well as special offers and rewards.
-    </p>
-        <h2 id="choose-mapinfo-state">National</h2>
-        <h4>Products:</h4>
-        <div id="choose-mapinfo-residential-electricity" class="locations-product green active"><a href="#">Residential Electricity</a></div>
+    <div id="choose-mapinfo" class="locations-info">
+        <h1 class="content-editorial-headline">Your state, your energy</h1>
+        <p>
+            More than half of Americans can shop for energy with a competitive supplier, and millions already have. See what's available in your area!
+        </p>
+        <div class="locations-product-matrix">
+            <div class="product-header">
+                <div class="product-header-item">
+                    <i class="c-icon-residential"></i>
+                    <p>Residential</p>
+                </div>
+                <div class="product-header-item">
+                    <i class="c-icon-smb"></i>
+                    <p>Small Business</p>
+                </div>
+                <div class="product-header-item">            
+                    <i class="c-icon-commercial"></i>
+                    <p>Commercial</p>
+                </div>
+            </div>
+            <div id="product-list-container" class="product-list-container is-active">
+                <div class="product-list">
+                    <a href="website_energy_type.html">
+                        <div id="residential-electricity" class="product-list-item is-active">
+                            <i title="Residential Electricity" class="c-icon-electricity"></i>
+                        </div>
+                    </a>
+                    <a href="website_energy_type.html">                    
+                        <div id="residential-nat-gas" class="product-list-item is-active">
+                            <i title="Residential Natural Gas"class="c-icon-nat-gas"></i>
+                        </div>
+                    </a>
+                    <a href="website_energy_type.html">
+                        <div id="residential-solar" class="product-list-item is-active">
+                            <i title="Residential Solar" class="c-icon-solar"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-list">
+                    <a href="website_energy_type.html">
+                        <div id="smb-electricity" class="product-list-item is-active">
+                            <i title="Small Business Electricity" class="c-icon-electricity"></i>
+                        </div>
+                    </a>
+                    <a href="website_energy_type.html">
+                        <div id="smb-nat-gas" class="product-list-item">
+                            <i title="Small Business Natural Gas" class="c-icon-nat-gas"></i>
+                        </div>
+                    </a>
+                    <a href="website_energy_type.html">
+                        <div id="smb-solar" class="product-list-item">
+                            <i title="Small Business Solar" class="c-icon-solar"></i>
+                        </div>
+                    </a>
+                </div>            
+                <div class="product-list">
+                    <a href="website_energy_type.html">
+                        <div id="commercial-electricity" class="product-list-item is-active">
+                            <i title="Commercial Electricity" class="c-icon-electricity"></i>
+                        </div>
+                    </a>
+                    <a href="website_energy_type.html">
+                        <div id="commercial-nat-gas" class="product-list-item">
+                            <i title="Commercial Natural Gas" class="c-icon-nat-gas"></i>
+                        </div>
+                    </a>
+                    <a href="website_energy_type.html">
+                        <div id="commercial-solar" class="product-list-item">
+                            <i title="Commercial Solar" class="c-icon-solar"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="product-empty" class="product-empty">
+                <h3> We do not currently offer any products in this state. </h3>
+            </div>
+        </div>
+<!--         <div id="choose-mapinfo-residential-electricity" class="locations-product green active"><a href="#">Residential Electricity</a></div>
         <div id="choose-mapinfo-residential-gas" class="locations-product blue active"><a href="#">Residential Natural Gas </a></div>
         <div id="choose-mapinfo-commercial-electricity" class="locations-product orange active"><a href="#">Commercial Electricity </a></div>
-        <div id="choose-mapinfo-none" class="locations-product green">We currently do not offer any products in this State.</div>
+        <div id="choose-mapinfo-none" class="locations-product green">We currently do not offer any products in this State.</div> -->
     </div>
-    <div id="choose-map" class="locations-map map"><h3 class="locations-map-state">States We Serve</h3></div>
+    <div id="choose-map" class="locations-map map"><h3 class="locations-map-state"></h3></div>
     <script>
     var width = document.getElementById('choose-map').offsetWidth;
     var height = document.getElementById('choose-map').offsetHeight;
     var centered;
-
+    
     var projection = d3.geo.albersUsa()
-        .scale(800)
-        .translate([width / 2, height / 2]);
+        .translate([width / 2, height / 2]); 
+    if (width < 400) {
+        projection.scale(450)
+    } else {
+        projection.scale(750)
+    }
+        
     var path = d3.geo.path()
         .projection(projection);
     var svg = d3.select("#choose-map").append("svg")
@@ -38,7 +116,7 @@
             .append("path")
             .attr("d", path)
             .attr("class", function(d) {
-                if (d.properties.energy.residential_electricity || d.properties.energy.residential_gas || d.properties.energy.commercial_electricity === 1) {
+                if (d.properties.energy.active === 1) {
                     return "map-blue";
                 } else {
                     //console.log("map-states only");
@@ -54,7 +132,7 @@
             .on('mouseout', function(d,i) {
                 d3.select(this)
                     .classed("map-highlight", false);
-                d3.select(".locations-map-state").text("States We Serve");
+                d3.select(".locations-map-state").text("");
 
 
             });
@@ -68,54 +146,57 @@
             k = 3;
             centered = d;
             d3.select('#choose-mapinfo-state').text(d.properties.name);
-            d3.select('#choose-mapinfo-residential-electricity').classed('active', function() {
-                if (d.properties.energy.residential_electricity === 1) {
-                    return true;
-                } else {
-                    return false;
+            
+            // the following is the state's energy icon switchboard. 
+            // set the data to a simple variable for cleanliness's sake
+            var energy = d.properties.energy;
+            // loop through the array of energy types
+
+            // check if active is on (1), if so then loop through the state's date else show a fail state. 
+            if (energy.active === 1 ) {
+                d3.select('#product-empty').classed('is-active', false);
+                d3.select('#product-list-container').classed('is-active', true);
+
+                for(var type in energy) {
+                    //active isn't an energy type so ignore that row
+                    if (type !== "active") {
+                        // now we've got a energy type like residential, now go through residental and find a product like electricity
+                        for(var product in energy[type]) {
+                            // now we've got a type (residential) and a product (electricity). Check if this state has residential electricity
+                            if (energy[type][product] === 1) {
+                                // yup! turn on that icon!
+                                d3.select('#'+type+'-'+product).classed('is-active', true);
+                            } else {
+                                // no residential electricity here. turn off the icon!
+                                d3.select('#'+type+'-'+product).classed('is-active', false);
+                            }
+                        }
+                    }
                 }
-            });
-            d3.select('#choose-mapinfo-residential-gas').classed('active', function() {
-                if (d.properties.energy.residential_gas === 1) {
-                    return true;
-                } else {
-                    return false;
-                }
-            });
-            d3.select('#choose-mapinfo-commercial-electricity').classed('active', function() {
-                if (d.properties.energy.commercial_electricity === 1) {
-                    return true;
-                } else {
-                    return false;
-                }
-            });
-            d3.select('#choose-mapinfo-none').classed('active', function() {
-                if (d.properties.energy.residential_electricity !== 1 &&  d.properties.energy.residential_gas !== 1 && d.properties.energy.commercial_electricity !== 1) {
-                    return true
-                }
-            });
-            d3.selectAll("path").classed("map-selected", false);
-            d3.select(this).classed("map-selected", true);
+            }  else {
+                // got to have a explainer for those states that don't have products
+                d3.select('#product-empty').classed('is-active', true);
+                d3.select('#product-list-container').classed('is-active', false);                
+            }                 
         } else {
             x = width / 2;
             y = height / 2;
             k = 1;
             centered = null;
             d3.select('#choose-mapinfo-state').text("National");
-            d3.select('#choose-mapinfo-residential-electricity').classed('active', function() {
-                return true;
-            });
-            d3.select('#choose-mapinfo-residential-gas').classed('active', function() {
-                return true;
-            });
-            d3.select('#choose-mapinfo-commercial-electricity').classed('active', function() {
-                return true;
-            });
-            d3.select('#choose-mapinfo-none').classed('active', function() {
-                return false;
-            });
-
-            d3.select(this).classed("map-selected", false);
+            //turn of the empty explainer
+            d3.select('#product-empty').classed('is-active', false);
+            d3.select('#product-list-container').classed('is-active', true);                
+            // turn all the icons on
+            d3.select('#residential-electricity').classed('is-active', true);
+            d3.select('#residential-nat-gas').classed('is-active', true);
+            d3.select('#residential-solar').classed('is-active', true);
+            d3.select('#smb-electricity').classed('is-active', true);
+            d3.select('#smb-nat-gas').classed('is-active', true);
+            d3.select('#smb-solar').classed('is-active', true);
+            d3.select('#commercial-electricity').classed('is-active', true);
+            d3.select('#commercial-nat-gas').classed('is-active', true);
+            d3.select('#commercial-solar').classed('is-active', true);
         }
 
         usa.selectAll("path")
