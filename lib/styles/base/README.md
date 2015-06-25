@@ -3,6 +3,21 @@ Additional reading can be found [here](https://medium.com/@v/git-subtrees-a-tuto
 > Caveats
 Contributing back and forth between repos is definitely more complicated. To simplify potential merge conflicts, pulling changes from the libraries should be done in separate pull requests. Also, rebasing after subtree pulls don’t work (on rebases, git loses track of the —prefix, so you will have a big mess in your project’s root).
 
+##Quick Reference
+** Always pull from ChooseStyles to your repo and resolve any merge conflicts before pushing anything to prevent problems **
+
+Subtreee merge to and from shopping:
+```sh
+git subtree pull --squash --prefix app/styles/choose git@github.com:chooseenergy/ChooseStyles.git master
+git subtree push --squash --prefix app/styles/choose git@github.com:chooseenergy/ChooseStyles.git master
+```
+
+Subtreee merge to and from ChooseUX:
+```sh
+git subtree pull --squash --prefix lib/styles/base git@github.com:chooseenergy/ChooseStyles.git master
+git subtree push --squash --prefix lib/styles/base git@github.com:chooseenergy/ChooseStyles.git master
+```
+
 ### Adding a Subtree
 ```sh
 git subtree add --squash --prefix <prefix> <repository> <branch>
