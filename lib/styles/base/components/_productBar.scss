@@ -1,0 +1,45 @@
+.ce-product-bar {
+    width: 100%;
+    border-top: 10px solid $color-green-shamrock;
+    border-bottom: 10px solid $color-white-lily;
+
+    .headline {
+        text-align: center;
+    }
+    .product-item-container {
+        width: 100%;
+        max-width: 50em;
+        margin:0 auto;
+
+    }
+    .product-item {
+        display: inline-block;
+        border-top: 10px solid;
+        margin: -10px -2px 1em;
+        padding: 2em 0;
+        width: 33%;
+        text-align: center; 
+        @include breakpoint($mq-sm-max) {
+            width: 100%;
+        }
+
+        i {
+            font-size: 3em;
+        }
+        .description {
+
+        }
+        &.v-electricity {
+            color: $color-yellow-butter;
+            border-color: $color-yellow-butter;
+        }
+        &.v-nat-gas {
+            color: $color-red-cinnabar;
+            border-color: $color-red-cinnabar;
+        }
+        &.v-solar {
+            color: $color-orange-sun;
+            border-color: $color-orange-sun;
+        }
+    }
+}
