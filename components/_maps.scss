@@ -80,12 +80,12 @@
     position: relative;
 
     .locations-info {
-        @include cg-1of4();
+        @include cg-1of2();
         position: relative;
-        height: 500px;
         padding: 0 10px 0 0;
 
         p {
+            font-size: 1.2em;
             padding: 10px 0;
         }
 
@@ -140,14 +140,90 @@
                 display: inline-block;
             }
         }
+        .locations-product-matrix {
+            @include cg-item();
+            padding: 0 3em 0 0;
+            
+            @include breakpoint($mq-md-max) {
+                display: none;
+            }
 
+            .product-header {
+                display: inline-block;
+                @include cg-item();
+                color: $color-gray-oslo;
+                border-bottom: 2px solid $color-gray-ghost;
+                padding: 0;
+
+                .product-header-item {
+                    @include cg-1of3();
+                    @include breakpoint($mq-lg-max) {
+                        width: 33%;
+                    }
+                    text-align: center;
+                    font-size: 3em;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    p {
+                        font-size: .4em;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+            .product-list-container {
+                @include cg-item();
+                display: none;
+                &.is-active {
+                    display: inline-block;
+                }
+            }
+            .product-list {
+                display: inline-block;
+                @include cg-1of3();
+                @include breakpoint($mq-lg-max) {
+                    width: 33%;
+                }
+                .product-list-item {
+                    display: none;
+                    text-align: center;
+                    font-size: 3em;
+                    padding:.2em .2em .1em .2em;
+                    .c-icon-electricity {
+                        color: $color-yellow-butter;
+                    }
+                    .c-icon-nat-gas {
+                        color: $color-red-cinnabar;
+                    }
+                    .c-icon-solar {
+                        color: $color-orange-sun;
+                    }
+                    &.is-active {
+                        display: block;
+                    }
+                }
+            }
+            .product-empty {
+                @include cg-item();
+                display: none;
+                color: $color-gray-oslo;
+                padding: 2em;
+                text-align: center;
+                h3 {
+                    font-weight: 200;
+                }                
+                &.is-active {
+                    display: inline-block;
+                }
+            }
+        }
         #choose-mapinfo-none {
             line-height: 1.2;
         }
     }
 
     .locations-map {
-        @include cg-3of4();
+        @include cg-1of2();
         position: relative;
         height: 500px;
         padding: 0;
