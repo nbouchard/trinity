@@ -285,6 +285,8 @@
     .filter-cta {
         text-align: center;
         padding-top: 0.5em;
+        font-weight: $font-weight-headline-book;
+        font-size: $font-size-large;
 
         &.v-nousage {
             text-align: left;
@@ -398,6 +400,14 @@
                 width: auto;
             }
         }
+    }
+
+    .filter-reset {
+        @include cg-item(false, false);
+        clear: both;
+        text-align: center;
+        font-weight: $font-weight-headline-book;
+        font-size: $font-size-large;
     }
 }
 
