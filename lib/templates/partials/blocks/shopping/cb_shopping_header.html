@@ -11,6 +11,7 @@
                     <div class="filter-utility">
                         <h4>Utility</h4>
                         <span class="filter-selected-utility supplier-logo supplier-txu-energy">TXU Energy</span>
+                        <div class="utility-name">TXU Energy</div>
                         <div class="ce-dropdown">
                             <div class="dropdown-value">Change Utility</div>
                             <div class="dropdown-menu" role="menu">
@@ -74,7 +75,7 @@
                 <div class="filter-compare-rate">
                     <label class="ce-label">
                         <span>Compare to a rate of <input class="textbox" type="text" value="0"> &cent; per month</span>
-                        <input class="range" type="range" id="range" value="0" min="0" max="100">
+                        <!-- <input class="range" type="range" id="range" value="0" min="0" max="100"> -->
                     </label>
                 </div>
                 {{/unless}}
@@ -83,7 +84,7 @@
                 <div class="filter-usage">
                     <label class="ce-label">
                         <span>I use about <input class="textbox" type="text" value="0"> kWh per month</span>
-                        <input class="range" type="range" id="range" value="0" min="0" max="100">
+                        <!-- <input class="range" type="range" id="range" value="0" min="0" max="100"> -->
                     </label>
                 </div>
                 {{/unless}}
@@ -256,6 +257,10 @@
                             </div>
                         </label>
                     </div>
+                </div>
+
+                <div class="filter-group filter-reset">
+                    <button class="btn-primary" type="submit">Reset All Filters</button>
                 </div>
             </div>
         </section>
