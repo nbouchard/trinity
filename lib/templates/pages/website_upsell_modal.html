@@ -8,14 +8,20 @@ tpl:
   title: Website Page
 ---
 
-{{> cb_checkout_header}}
+<div class="ce-checkout">
+    {{#withHash
+        currentSection="Personal Information"
+    }}
+        {{> cb_checkout_header}}
+    {{/withHash}}
 
-<div class="checkout">
-    <div class="checkout-forms">
-        {{> cb_checkout_form_part1}}
+    <div class="checkout-content">
+        <div class="checkout-steps">
+            {{> cb_checkout_form_part1}}
+        </div>
+
+        {{> cb_checkout_cart}}
     </div>
-
-    {{> cb_checkout_cart}}
 </div>
 
 
