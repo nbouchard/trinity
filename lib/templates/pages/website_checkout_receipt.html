@@ -18,10 +18,12 @@ tpl:
     <div class="confirmation checkout-content">
         <div class="checkout-steps">
             {{> cb_confirmation_body}}
+
+            {{> cb_confirmation_receipt}}
         </div>
 
-        {{> cb_confirmation_receipt}}
+        {{> cb_checkout_cart}}
     </div>
 </div>
 
-{{> cb_ambassador_cta}}
+<!-- {{> cb_ambassador_cta}} -->
