@@ -157,8 +157,7 @@
         width: 100%;
 
         @include breakpoint($mq-lg-max) {
-            padding-left: 2em;
-            padding-right: 2em;
+            padding: 2em;
         }
     }
 
@@ -514,6 +513,21 @@
         .content-editorial-headline {
             margin-top: 1em;
             font-size: 6em;
+        }
+    }
+
+    &.v-hero {
+        @include editorial-height('noheight');
+        font-size: 1.4em;
+
+        .editorial-container {
+            max-width: ($site-max-width / 1.4);
+            padding: 2em 0;
+
+            @include breakpoint($mq-lg-max) {
+                padding-left: 1.5em;
+                padding-right: 1.5em;
+            }
         }
     }
 }
