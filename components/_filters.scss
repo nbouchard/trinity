@@ -285,6 +285,8 @@
     .filter-cta {
         text-align: center;
         padding-top: 0.5em;
+        font-weight: $font-weight-headline-book;
+        font-size: $font-size-large;
 
         &.v-nousage {
             text-align: left;
@@ -399,6 +401,14 @@
             }
         }
     }
+
+    .filter-reset {
+        @include cg-item(true, true);
+        padding: 2em 0 2em 3em;
+        text-align: center;
+        font-weight: $font-weight-headline-book;
+        font-size: $font-size-large;
+    }
 }
 
 // Shopping no plan layouts
@@ -479,4 +489,14 @@
 .noplans-follow {
     text-align: center;
     margin: 2em 25%;
+}
+
+.shop-header {
+    @include breakpoint($mq-md-max) {
+        @include cg-item(true, true);
+    }
+
+    @include breakpoint($mq-lg-min) {
+        @include cg-item(true, false);
+    }
 }

@@ -24,7 +24,7 @@
 
         @include breakpoint($mq-md-max) {
             @include cg-item(true, true);
-            padding: 1.4em 0.5em  0;
+            padding: 1.4em 1em  0;
         }
 
         @include breakpoint($mq-lg-min) {
@@ -364,26 +364,32 @@
         font-size: $font-size-larger;
     }
 
+    .checkout-section {
+        padding: 0 1em;
+    }
+
     .confirmation-receipt {
         @include breakpoint($mq-md-max) {
             @include cg-item(true, true);
         }
 
         @include breakpoint($mq-lg-min) {
-            @include cg-3of8(false, true, true);
+            @include cg-3of4(false, false, true);
             float: right;
-            position: relative;
-            top: -5em;
+            // position: relative;
+            // top: -5em;
         }
+
+        // border: 1px solid $color-gray-ghost;
 
         .receipt-header {
             @include cg-row(true, false);
-            background-color: $color-green-shamrock;
-            color: $color-white-pure;
+            background-color: $color-white-lilac;
+            // color: $color-white-pure;
             line-height: 1.2em;
             font-size: 1.85em;
             padding: 0.75em;
-            height: 2.7em;              // 5em height / 1.85em font size
+            height: 2.25em;
 
             i {
                 margin-right: 0.75em;
@@ -396,11 +402,11 @@
         }
 
         .receipt-details {
-            background-color: $color-white-lily;
-            border: 1px solid $color-gray-ghost;
-            border-top: 0px;
-            padding: 1em;
-            margin-bottom: 2em;
+            // background-color: $color-white-lily;
+            // border: 1px solid $color-gray-ghost;
+            // border-top: 0px;
+            // padding: 1em;
+            // margin-bottom: 2em;
         }
 
         .plan-item {
@@ -456,7 +462,7 @@
 
             .detail-value {
                 display: block;
-                font-size: $font-size-largest;
+                font-size: $font-size-larger;
                 padding: 0 0.4em;
             }
 
