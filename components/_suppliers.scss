@@ -1,3 +1,10 @@
+// Supplier & Utility landing pages layout
+//
+// .supplier-slats              - Wraps all supplier/utility slats
+//     .supplier-slat           - An individual slat for a supplier/utility
+//         .supplier-services   - The section of content inside the slat displaying condensed supplier services info
+//         .supplier-detail     - The section of content inside the slat displaying the supplier name & blurb
+
 .supplier-slats {
     @include cg-row(true, true);
 }
@@ -6,78 +13,122 @@
     @include ce-slat();
 
     &:first-child {
-        border-top: 1px solid $color-blue-curious;
+        border-top: 1px solid $color-gray-ghost;
     }
 
-    .supplier-content {
-        @include cg-row();
+    .supplier-services {
+        @include cg-1of3(true, true, true);
 
-        .supplier-services {
-            @include cg-1of3(true, true, true);
-        }
-
-        .supplier-detail {
-            @include cg-2of3(true, true, true);
-        }
+        @include box-sizing(border-box);
+        text-align: center;
+        padding: 1em;
     }
-}
 
-.supplier-services {
-    @include box-sizing(border-box);
-    text-align: center;
-    padding: 1em;
+    .supplier-detail {
+        @include cg-2of3(true, true, true);
+        @include box-sizing(border-box);
+        padding: 1em;
 
-    .supplier-customers {
-        padding: 0.75em 0;
-    }
-}
+        .supplier-name-card {
+            .supplier-name {
+                font-size: $font-size-larger;
+                padding-right: 1em;
+            }
 
-.service-icons {
-    list-style: none;
-    padding: 0;
-
-    .service-icon {
-        display: inline-block;
-        margin: 0 0.5em;
-
-        .icon {
-            font-size: $font-size-huge;
-        }
-    }
-}
-
-.supplier-detail {
-    @include box-sizing(border-box);
-    padding: 1em;
-
-    .supplier-name-card {
-        .supplier-name {
-            font-size: $font-size-larger;
-            padding-right: 1em;
-        }
-
-        .supplier-rating {
-            font-size: $font-size-smaller;
-
-            .rating-value {
+            .supplier-rating {
                 font-size: $font-size-smaller;
+
+                .rating-value {
+                    font-size: $font-size-smaller;
+                }
             }
         }
     }
 
-    .supplier-tagline {
-        font-style: italic;
-    }
+    &.supplier-details {
+        padding: 0;
+        margin-bottom: 2em;
 
-    .supplier-infolist {
-        list-style: square;
-        margin: 0.5em;
-        padding: 0 0 0 1em;
+        .supplier-detail {
+            font-size: $font-size-larger;
+
+            .supplier-url,
+            .supplier-phone,
+            .supplier-locations {
+                padding: 0 0 0.5em;
+            }
+        }
+
+        @include breakpoint($mq-sm-max) {
+            .supplier-services {
+                float: none;
+                width: 100%;
+            }
+
+            .service-icons {
+                max-width: 100%;
+            }
+
+            .service-icon {
+                display: inline-block;
+                padding: 0.25em;
+            }
+
+            .spacer {
+                height: 1.6em;
+                width: auto;
+                padding: 0;
+                border-bottom: none;
+                border-right: 1px solid $color-gray-ghost;
+            }
+        }
     }
 }
 
-.locations-info {
-    .supplier-services {
-        text-align: left;
+// Supplier/Utility services quicklook bar
+//
+// Icons representing the service & energy types a particular supplier/utility supports
+//
+
+.service-icons {
+    @include clearfix;
+    list-style: none;
+    padding: 0.75em 0 0;
+    margin: 0;
+    font-size: $font-size-largest;
+    text-align: center;
+    color: $color-gray-cape;
+    line-height: 1em;
+
+    .service-icon {
+        display: inline-block;
+        padding: 0.25em 0.4em;
+        vertical-align: middle;
+    }
+
+    .spacer {
+        height: 1.6em;
+        padding: 0;
+        border-right: 1px solid $color-gray-ghost;
+    }
+
+    @include breakpoint($mq-sm-max) {
+        .service-icon {
+            display: block;
+            padding: 0.25em;
+        }
+    }
+
+    @include breakpoint($mq-md-max) {
+        max-width: 8em;
+        margin: auto;
+
+        .spacer {
+            height: 1px;
+            width: 100%;
+            padding: 0;
+            margin-top: 0.5em;
+            border-bottom: 1px solid $color-gray-ghost;
+        }
     }
 }
