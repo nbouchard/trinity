@@ -1,0 +1,65 @@
+.ce-product-bar {
+    width: 100%;
+    border-top: 10px solid $color-green-shamrock;
+    border-bottom: 10px solid $color-white-lily;
+
+    .headline {
+        text-align: center;
+        @include breakpoint($mq-sm-max) {
+            margin-top: 1em;
+        }
+    }
+
+    .product-item-container {
+        width: 100%;
+        max-width: 50em;
+        margin:0 auto;
+    }
+
+    .product-item-top {
+        display: inline-block;
+        border-top: 10px solid;
+        margin: -10px -2px 1em;
+        width: 33%;
+        height: 10px;
+
+        &.v-electricity {
+            color: $color-yellow-butter;
+        }
+        &.v-nat-gas {
+            color: $color-red-cinnabar;
+        }
+        &.v-solar {
+            color: $color-orange-sun;
+        }
+        @include breakpoint($mq-sm-max) {
+            display: none;
+        }
+    }
+
+    .product-item {
+        display: inline-block;
+        margin: 0px -2px 1em;
+        padding: 2em 0;
+        width: 33%;
+        text-align: center; 
+        i {
+            font-size: 3em;
+        }
+        &.v-electricity {
+            color: $color-yellow-butter;
+        }
+        &.v-nat-gas {
+            color: $color-red-cinnabar;
+        }
+        &.v-solar {
+            color: $color-orange-sun;
+        }
+        &:hover {
+            color: $color-blue-curious;
+        }
+        @include breakpoint($mq-sm-max) {
+            width: 100%;
+        }
+    }
+}
