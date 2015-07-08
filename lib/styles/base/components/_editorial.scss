@@ -825,6 +825,7 @@
 }
 
 .v-commercial-lead {
+    background-color: $color-white-lily;
     .commercial-form {
         background: $color-white-pure;
         padding: 2em;
@@ -834,6 +835,9 @@
         .a-content .textarea {
             height:4em;
         }
+    }
+    &.ce-partner-grid {
+        background-color: $color-white-pure;
     }
 }
 
