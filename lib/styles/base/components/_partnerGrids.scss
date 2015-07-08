@@ -29,6 +29,22 @@
             vertical-align: middle;
         }
     }
+    &.v-commercial-lead {
+        .partner,
+        .supplier {
+            @include breakpoint($mq-sm-max) {
+                @include cg-item();
+            }
+
+            @include breakpoint($mq-md) {
+                @include cg-item();
+            }
+
+            @include breakpoint($mq-lg-min) {
+                @include cg-item();
+            }
+        }
+    }
 }
 
 .partner-grid-nav,
