@@ -40,6 +40,19 @@
             padding: 5em;
             display: table-cell;
             vertical-align: middle;
+            font-size: 1.2em;
+            .split-inner {
+                max-width: $site-max-width / 2.4;
+            }
+            .split-cta {
+                font-size: 1.3em;
+                color: $color-green-shamrock;
+                font-weight: $font-weight-subhead;
+            }
+            a:hover {
+                text-decoration: none;
+            }
+
         }
     }
     .split-visual {
@@ -79,6 +92,11 @@
         }
         .split-visual {
             float: right; 
+        }
+        .split-content-interior {
+            .split-inner {
+                float: right;
+            }
         }
     }
     &.v-fudge-width {
