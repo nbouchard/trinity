@@ -49,6 +49,10 @@
                 color: $color-green-shamrock;
                 font-weight: $font-weight-subhead;
             }
+            a:hover {
+                text-decoration: none;
+            }
+
         }
     }
     .split-visual {
