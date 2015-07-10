@@ -34,9 +34,9 @@ tpl:
             </div>
         </div>
     </div>  
-    <div class="ce-editorial v-bg-tall v-commercial-lead" >
+    <div class="ce-editorial v-bg-tall v-commercial-lead">
         <div class="editorial-container">
-            <div class="commercial-form cg-5of8">
+            <div class="commercial-form cg-5of8"  id="ce-commercial-form">
                 <h1 class="editorial-subhead">Get a commercial quote</h1>
                 <div class="ce-form-group">
                     <label class="a-label"> Company* </label>
@@ -145,10 +145,21 @@ tpl:
                     <div class="checkout-actions">
                         <label class="a-label"></label>
                         <div class="a-content">
-                            <button class="btn-primary">Get Quote</button> 
+                            <button class="btn-primary" onclick="completedForm()">Get Quote</button> 
                         </div>
                     </div>    
                 </div>
+            </div>
+            <div class="commercial-form cg-5of8 v-commercial-form-complete" id="ce-commercial-form-complete">
+                <div class="headline-container">
+                    <h1 class="editorial-headline">You're done!</h1>
+                    <h3 class="editorial-subhead">Congratulations - you're on your way to saving money on your electricity.</h3>
+                </div>
+                <p>Here's what you can expect next:</p>
+                <p>You'll be hearing from our preffered suppliers within hours. The suppliers may have a few more questions for you to complete your custom proposal.</p>
+                <p>Once you decide on a new path, your new supplier will take care of switching your service.</p>
+                <p>You'll receive your final bill from your current supplier. And as for your new service, you can expect your new bill in 30-45 days.</p>
+                <p>Thank you for using Choose Energy</p>
             </div>
             <div class="cg-1of8"></div>
             <div class="commercial-form cg-1of4">
@@ -196,6 +207,28 @@ tpl:
                     </ul>
                 </div>
             </div>
-        </div>         
+        </div> 
+        <div class="ce-editorial v-short">
+            <div class="editorial-container">
+               <div class="ce-city-list">
+                    Get a commercial electricity quote for ZIP Codes near 10002
+                    <ul class="list-unstyled list-top-cities">
+                        <li><a href="/for-business/shop/commercial/10001/" class="">10001</a></li>
+                        <li><a href="/for-business/shop/commercial/10003" class="">10003</a></li>
+                        <li><a href="/for-business/shop/commercial/10004" class="">10004</a></li>
+                        <li><a href="/for-business/shop/commercial/10005" class="">10005</a></li>
+                        <li><a href="/for-business/shop/commercial/10006" class="">10006</a></li>
+                        <li><a href="/for-business/shop/commercial/10007" class="">10007</a></li>
+                        <li><a href="/for-business/shop/commercial/10008" class="">10008</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
     </div>
 </main>
+<script type="text/javascript">
+    function completedForm(){
+        document.getElementById('ce-commercial-form').classList.add('is-done');
+        document.getElementById('ce-commercial-form-complete').classList.add('is-active');
+    };
+</script>
