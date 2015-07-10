@@ -152,7 +152,7 @@
         @include box-sizing(border-box);
         @include clearfix;
         margin: 0 auto;
-        padding: 5em 0;
+        padding: 3em 0;
         max-width: $site-max-width;
         width: 100%;
 
@@ -924,7 +924,7 @@
         .triptych-label {
             font-size: $font-size-larger;
             text-align: center;
-            padding: 0.5em 0;
+            padding: 0;
             max-width: 12em;
             margin: 0 auto;
             line-height: 1.2em;
@@ -945,7 +945,7 @@
     .triptych-cta {
         @include cg-item();
         display: block;
-        padding-top: 2em;
+        padding-top: 1em;
         text-align: center;
         font-size: $font-size-huger;
         text-decoration: none;

@@ -10,7 +10,6 @@
     .supplier {
         list-style: none;
         text-align: center;
-        height: 8em;
 
         @include breakpoint($mq-sm-max) {
             @include cg-1of2(true, true, true);
