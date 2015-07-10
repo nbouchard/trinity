@@ -846,16 +846,14 @@
             @include cg-1of3(true, true, true);
         }
 
-        .circle-icon-large {
-            padding: 20px;
-
+        .triptych-illustration {
             @include breakpoint($mq-md-max) {
-                width: 90%;
-                max-width: 225px;
+                width: 100%;
+                max-width: 300px;
             }
 
             @include breakpoint($mq-lg-min) {
-                width: 225px;
+                width: 300px;
             }
         }
 

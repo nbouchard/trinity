@@ -285,6 +285,11 @@
     .plan-data {
         @include cg-1of2(true, true, true);
         font-size: $font-size-smaller;
+
+        .plan-data-value .icon:before {
+            font-size: 0.7em;
+            vertical-align: baseline;
+        }
     }
 
     .plan-supplier {
@@ -380,6 +385,17 @@
 
         .plan-signup-btn {
             @include ce-button('primary', 'larger', 'full');
+            font-size: 1.55em;
+            padding: 0.25em;
+            line-height: 1.4em;
+            font-weight: $font-weight-body;
+
+            .btn-extended-info {
+                display: block;
+                font-size: 0.75em;
+                line-height: 1.2em;
+                font-weight: $font-weight-accent;
+            }
         }
     }
 
@@ -528,6 +544,11 @@
     .plan-data-value {
         padding: $grid-gutter-width;
         padding-bottom: 0;
+
+        .icon:before {
+            font-size: 0.7em;
+            vertical-align: baseline;
+        }
     }
 
     .plan-data-label {
@@ -535,7 +556,6 @@
         padding-top: 0;
 
         .icon {
-            color: $color-blue-curious;
             margin-right: 0.25em;
         }
     }
@@ -594,13 +614,7 @@
     }
 
     .supplier-logos {
-        @include breakpoint($mq-sm-max) {
-            @include cg-item(true, true);
-        }
-
-        @include breakpoint($mq-md-min) {
-            @include cg-1of2(true, true, true);
-        }
+        @include cg-item(true, true);
     }
 
     .supplier-rating {
@@ -731,6 +745,11 @@
             @include breakpoint($mq-md-max) {
                 border-bottom: 1px solid $color-white-lilac;
             }
+
+            .plan-contract-type .icon:before {
+                font-size: 0.7em;
+                vertical-align: baseline;
+            }
         }
 
         .plan-callout {
@@ -797,7 +816,6 @@
             padding-top: 0;
 
             .icon {
-                color: $color-blue-curious;
                 margin-right: 0.25em;
             }
         }
@@ -865,13 +883,12 @@
         }
 
         .supplier-logos {
-            @include breakpoint($mq-sm-max) {
-                @include cg-item(true, true);
-            }
+           @include cg-item(true, true);
+        }
 
-            @include breakpoint($mq-md-min) {
-                @include cg-1of2(true, true, true);
-            }
+        .supplier-pucId {
+            display: block;
+            padding: 0.5em;
         }
 
         .supplier-rating {
