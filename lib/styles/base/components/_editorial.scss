@@ -847,6 +847,12 @@
         .a-content .textarea {
             height:4em;
         }
+        &.v-commercial-form-complete {
+            font-size: 1.2em;
+            .headline-container {
+                font-size: .8em;
+            }
+        }
     }
 
     &.ce-partner-grid {
@@ -959,3 +965,15 @@
     }
 }
 
+// For prototype functionality purposes only
+#ce-commercial-form {
+    &.is-done {
+        display:none;
+    }
+}
+#ce-commercial-form-complete {
+    display: none;
+    &.is-active {
+        display: inline-block;
+    }
+}
