@@ -152,7 +152,7 @@
         @include box-sizing(border-box);
         @include clearfix;
         margin: 0 auto;
-        padding: 5em 0;
+        padding: 3em 0;
         max-width: $site-max-width;
         width: 100%;
 
@@ -412,6 +412,15 @@
 
     &.v-bigtalkshort {
         @include editorial-height('bigtalkshort');
+
+        .content-editorial-container,
+        .editorial-container {
+            padding: 3em 0;
+
+            @include breakpoint($mq-lg-max) {
+                padding: 2em;
+            }
+        }
     }
 
     &.content-editorial-tall,
@@ -824,6 +833,61 @@
     }
 }
 
+.v-commercial-lead {
+    background-color: $color-white-lily;
+
+    .commercial-form {
+        background: $color-white-pure;
+        padding: 2em;
+
+        .editorial-subhead {
+            margin-bottom: 1em;
+        }
+
+        .a-content .textarea {
+            height:4em;
+        }
+    }
+
+    &.ce-partner-grid {
+        background-color: $color-white-pure;
+    }
+}
+
+.v-commercial-list {
+    .ce-editorial-triptych {
+        .triptych-item {
+            margin: 0;
+            padding: 0;
+
+            .triptych-label {
+                max-width: 100%;
+                font-size: 1.5em;
+                padding: 0 10%;
+                margin: 1.5em 0 0 0;
+                text-align: left;
+            }
+
+            .triptych-caption {
+                max-width: 100%;
+                padding: 0 10%;
+                margin: 1em 0 0 0;
+                text-align: left;
+            }
+
+            .icon {
+                font-size: 7em;
+                line-height: 0;
+                color: $color-orange-sun;
+            }
+
+            @include breakpoint($mq-sm-max) {
+                padding: 2em 0;
+            }
+        }
+    }
+}
+
 .v-2of3 {
     .content-editorial-container,
     .editorial-container,
@@ -860,7 +924,7 @@
         .triptych-label {
             font-size: $font-size-larger;
             text-align: center;
-            padding: 0.5em 0;
+            padding: 0;
             max-width: 12em;
             margin: 0 auto;
             line-height: 1.2em;
@@ -881,7 +945,7 @@
     .triptych-cta {
         @include cg-item();
         display: block;
-        padding-top: 2em;
+        padding-top: 1em;
         text-align: center;
         font-size: $font-size-huger;
         text-decoration: none;
