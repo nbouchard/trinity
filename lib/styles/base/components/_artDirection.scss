@@ -108,6 +108,13 @@
     );
 }
 
+.v-img45 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 100%,
+        $y-pos: 70%
+    );
+}
+
 .v-img47 .photoblock-photo {
     @include photoblock(
         $blend-mode: soft-light,
@@ -140,8 +147,8 @@
 
 .v-img65 .photoblock-photo {
     @include photoblock(
-        $y-pos: 30%,
-        $x-pos: 10%
+        $x-pos: 10%,
+        $y-pos: 30%
     );
 }
 
@@ -183,6 +190,13 @@
         $blend-mode: soft-light,
         $bg-color: $color-gray-stone-light,
         $y-pos: 70%
+    );
+}
+
+.v-img98 .photoblock-photo {
+     @include photoblock(
+        $x-pos: 30%,
+        $y-pos: 30%
     );
 }
 
