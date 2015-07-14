@@ -1,0 +1,144 @@
+<div class="ce-editorial v-noheight">
+    <div class="editorial-container">
+        <div class="locations-mapbox">
+            <div id="choose-mapinfo" class="locations-info">
+                <h1 class="content-editorial-headline">Your state, your energy</h1>
+                <p>
+                    More than half of Americans can shop for energy with a competitive supplier, and millions already have. See what's available in your area!
+                </p>
+                <p>
+                    <a class="link-as-button btn-primary">Go to Natural Gas</a>
+                </p>
+            </div>
+            <div id="choose-map" class="locations-map map"><h3 class="locations-map-state"></h3></div>
+            <script>
+            var width = document.getElementById('choose-map').offsetWidth;
+            var height = document.getElementById('choose-map').offsetHeight;
+            var centered;
+            var energyType = "natgas";
+
+            var projection = d3.geo.albersUsa()
+                .translate([width / 2, height / 2]);
+            if (width < 400) {
+                projection.scale(450)
+            } else {
+                projection.scale(750)
+            }
+
+            var path = d3.geo.path()
+                .projection(projection);
+            var svg = d3.select("#choose-map").append("svg")
+                .attr("class", "map-svg")
+                .attr("viewBox", "0 0 " + width + " " + height)
+                .attr("width", width)
+                .attr("height", height);
+            svg.append("rect")
+                .attr("class", "map-base")
+                .attr("width", width)
+                .attr("height", height);
+
+            var usa = svg.append("g");
+            d3.json("/data/states_usa.topo.json", function(error, us) {
+                usa.append("g")
+                    .selectAll("path")
+                    .data(topojson.feature(us, us.objects.states).features)
+                    .enter()
+                    .append("path")
+                    .attr("d", path)
+                    .attr("class", function(d) {
+                        if (energyType === "solar" && (d.properties.energy.residential.solar === 1 || d.properties.energy.smb.solar === 1 || d.properties.energy.commercial.solar === 1 )) {
+                            return "map-solar ";
+                        } else if (energyType === "electricity" && (d.properties.energy.residential.electricity === 1 || d.properties.energy.smb.electricity === 1 || d.properties.energy.commercial.electricity === 1 )) {
+                            return "map-electricity ";
+                        } else if (energyType === "natgas" && (d.properties.energy.residential.natgas === 1 || d.properties.energy.smb.natgas === 1 || d.properties.energy.commercial.natgas === 1 )) {
+                            return "map-natgas ";
+                        } else {
+                            return "map-states";
+                        }
+                    })
+                    .on('click', clicked)
+                    .on('mouseover', function(d,i) {
+                        d3.select(this)
+                            .classed("map-highlight", true);
+                        d3.select(".locations-map-state").text(d.properties.name);
+                    })
+                    .on('mouseout', function(d,i) {
+                        d3.select(this)
+                            .classed("map-highlight", false);
+                        d3.select(".locations-map-state").text("");
+
+
+                    });
+            });
+            function clicked(d) {
+                var x, y, k;
+                if (d && centered !== d) {
+                    var centroid = path.centroid(d);
+                    x = centroid[0];
+                    y = centroid[1];
+                    k = 3;
+                    centered = d;
+                    d3.select('#choose-mapinfo-state').text(d.properties.name);
+
+                    // the following is the state's energy icon switchboard.
+                    // set the data to a simple variable for cleanliness's sake
+                    var energy = d.properties.energy;
+                    // loop through the array of energy types
+
+                    // check if active is on (1), if so then loop through the state's date else show a fail state.
+                    if (energy.active === 1 ) {
+                        d3.select('#product-empty').classed('is-active', false);
+                        d3.select('#product-list-container').classed('is-active', true);
+
+                        for(var type in energy) {
+                            //active isn't an energy type so ignore that row
+                            if (type !== "active") {
+                                // now we've got a energy type like residential, now go through residental and find a product like electricity
+                                for(var product in energy[type]) {
+                                    // now we've got a type (residential) and a product (electricity). Check if this state has residential electricity
+                                    console.log(product);
+                                    if ( product === energyType ) {
+                                        console.log("solar: " + product);
+                                        if (energy[type][product] === 1) {
+                                            // yup! turn on that icon!
+                                            d3.select('#'+type+'-'+product).classed('is-active', true);
+                                        } else {
+                                            // no residential electricity here. turn off the icon!
+                                            d3.select('#'+type+'-'+product).classed('is-active', false);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }  else {
+                        // got to have a explainer for those states that don't have products
+                        d3.select('#product-empty').classed('is-active', true);
+                        d3.select('#product-list-container').classed('is-active', false);
+                    }
+                } else {
+                    x = width / 2;
+                    y = height / 2;
+                    k = 1;
+                    centered = null;
+                    d3.select('#choose-mapinfo-state').text("National");
+                    //turn of the empty explainer
+                    d3.select('#product-empty').classed('is-active', false);
+                    d3.select('#product-list-container').classed('is-active', true);
+                    // turn all the icons on
+                }
+
+                usa.selectAll("path")
+                    .classed("map-highlight", centered && function(d) {
+                        return d === centered;
+                    });
+
+            usa.transition()
+                .duration(750)
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+                .style("stroke-width", 1.5 / k + "px");
+
+            }
+            </script>
+        </div>
+    </div>
+</div>
