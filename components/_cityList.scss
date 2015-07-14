@@ -1,9 +1,13 @@
 .ce-city-list {
     text-align: center;
 
-    .list-top-cities>li {
-        display: inline-block;
-        padding: 1em 2em;
+    .list-top-cities {
+        margin-bottom: 0px;
+
+        >li {
+            display: inline-block;
+            padding: 0.75em 2em;
+        }
     }
 
     li.ce-dropdown {
@@ -11,7 +15,7 @@
         padding: 0;
 
         .dropdown-trigger {
-            padding: 1em 2em;
+            padding: 0.75em 2em;
         }
     }
 
@@ -37,15 +41,15 @@
             }
 
             @include breakpoint($mq-lg-min) {
-                @include prefixer(column-count, 4, webkit moz spec);
-                @include prefixer(column-gap, 1.5em, webkit moz spec);
+                @include prefixer(column-count, 5, webkit moz spec);
+                @include prefixer(column-gap, 1em, webkit moz spec);
             }
 
             .list-city {
-                padding: 0.5em 0;
+                padding: 0.25em 0;
                 margin: 0;
                 width: 100%;
-                display: block;
+                display: inline-block;
                 color: $color-white-pure;
                 font-weight: $font-weight-body;
             }
