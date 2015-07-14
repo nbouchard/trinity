@@ -12,17 +12,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 1,
+                            "natgas": 1,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     } 
@@ -39,17 +39,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     } 
@@ -66,17 +66,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -93,17 +93,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -120,17 +120,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -161,17 +161,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -188,17 +188,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -215,17 +215,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -242,17 +242,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 1,
+                            "natgas": 1,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -269,17 +269,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -296,17 +296,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -323,17 +323,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -350,17 +350,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -377,17 +377,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -404,17 +404,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -431,17 +431,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -458,17 +458,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -485,17 +485,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -512,17 +512,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -539,17 +539,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -566,17 +566,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -593,17 +593,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -620,17 +620,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -647,17 +647,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -674,17 +674,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -701,17 +701,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -728,17 +728,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -755,17 +755,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -782,17 +782,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -809,17 +809,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -836,17 +836,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 1,
+                            "natgas": 1,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -863,17 +863,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -890,17 +890,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -917,17 +917,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 1,
+                            "natgas": 1,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -941,20 +941,20 @@
                 "properties": {
                     "name": "Indiana",
                     "energy": {
-                        "active": 1,
+                        "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -971,17 +971,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -998,17 +998,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1030,17 +1030,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 1,
+                            "natgas": 1,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1057,17 +1057,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1084,17 +1084,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1116,17 +1116,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1148,17 +1148,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1175,17 +1175,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1202,17 +1202,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1229,17 +1229,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 1,
+                            "natgas": 1,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1256,17 +1256,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 1,
+                            "natgas": 1,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1283,17 +1283,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 1,
+                            "natgas": 1,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1315,17 +1315,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 1,
+                            "natgas": 1,
                             "solar": 1
                         },
                         "smb" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1342,17 +1342,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1369,17 +1369,17 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 1,
+                            "natgas": 1,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
@@ -1407,17 +1407,17 @@
                         "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 0,
-                            "nat-gas": 0,
+                            "natgas": 0,
                             "solar": 0
                         }
                     }
