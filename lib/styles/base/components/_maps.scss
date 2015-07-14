@@ -61,9 +61,33 @@
             fill: $color-green-jewel;
         }
     }
+    .map-electricity {
+        fill: $color-yellow-butter;
+        stroke: $color-white-pure;
+        stroke-linejoin: round;
+        stroke-linecap: round;
 
-    .map-orange {
+        &.map-highlight,
+        &.map-selected {
+            fill: $color-yellow-galliano;
+        }
+    }
+    .map-natgas {
+        fill: $color-red-cinnabar;
+        stroke: $color-white-pure;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+
+        &.map-highlight,
+        &.map-selected {
+            fill: $color-red-poppy;
+        }
+    }    
+    .map-solar {
         fill: $color-orange-sun;
+        stroke: $color-white-pure;
+        stroke-linejoin: round;
+        stroke-linecap: round;
 
         &.map-highlight,
         &.map-selected {
