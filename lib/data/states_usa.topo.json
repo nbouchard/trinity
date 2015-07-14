@@ -11,7 +11,7 @@
                     "energy": {
                         "active": 1,
                         "residential" : {
-                            "electricity" : 0,
+                            "electricity" : 1,
                             "nat-gas": 1,
                             "solar": 1
                         },
@@ -185,11 +185,11 @@
                 "properties": {
                     "name": "Washington",
                     "energy": {
-                        "active": 0,
+                        "active": 1,
                         "residential" : {
                             "electricity" : 0,
                             "nat-gas": 0,
-                            "solar": 0
+                            "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
@@ -246,13 +246,13 @@
                             "solar": 1
                         },
                         "smb" : {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "nat-gas": 0,
                             "solar": 0
                         },
                         "commercial": {
                             "electricity" : 1,
-                            "nat-gas": 1,
+                            "nat-gas": 0,
                             "solar": 0
                         }
                     }
@@ -266,11 +266,11 @@
                 "properties": {
                     "name": "Colorado",
                     "energy": {
-                        "active": 1,
+                        "active": 0,
                         "residential" : {
                             "electricity" : 0,
                             "nat-gas": 0,
-                            "solar": 1
+                            "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
@@ -293,11 +293,11 @@
                 "properties": {
                     "name": "Nevada",
                     "energy": {
-                        "active": 1,
+                        "active": 0,
                         "residential" : {
                             "electricity" : 0,
                             "nat-gas": 0,
-                            "solar": 1
+                            "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
@@ -320,11 +320,11 @@
                 "properties": {
                     "name": "New Mexico",
                     "energy": {
-                        "active": 1,
+                        "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 1,
-                            "solar": 1
+                            "nat-gas": 0,
+                            "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
@@ -349,9 +349,9 @@
                     "energy": {
                         "active": 1,
                         "residential" : {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "nat-gas": 0,
-                            "solar": 0
+                            "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
@@ -678,12 +678,12 @@
                             "solar": 1
                         },
                         "smb" : {
-                            "electricity" : 0,
+                            "electricity" : 1,
                             "nat-gas": 0,
                             "solar": 0
                         },
                         "commercial": {
-                            "electricity" : 0,
+                            "electricity" : 1,
                             "nat-gas": 0,
                             "solar": 0
                         }
@@ -700,7 +700,7 @@
                     "energy": {
                         "active": 1,
                         "residential" : {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "nat-gas": 0,
                             "solar": 0
                         },
@@ -710,7 +710,7 @@
                             "solar": 0
                         },
                         "commercial": {
-                            "electricity" : 0,
+                            "electricity" : 1,
                             "nat-gas": 0,
                             "solar": 0
                         }
@@ -840,7 +840,7 @@
                             "solar": 0
                         },
                         "smb" : {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "nat-gas": 0,
                             "solar": 0
                         },
@@ -944,7 +944,7 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 1,
+                            "nat-gas": 0,
                             "solar": 0
                         },
                         "smb" : {
@@ -968,10 +968,10 @@
                 "properties": {
                     "name": "Kentucky",
                     "energy": {
-                        "active": 1,
+                        "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 1,
+                            "nat-gas": 0,
                             "solar": 0
                         },
                         "smb" : {
@@ -999,7 +999,7 @@
                         "residential" : {
                             "electricity" : 0,
                             "nat-gas": 0,
-                            "solar": 1
+                            "solar": 0
                         },
                         "smb" : {
                             "electricity" : 0,
@@ -1084,8 +1084,8 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 1,
-                            "solar": 0
+                            "nat-gas": 0,
+                            "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
@@ -1145,10 +1145,10 @@
                 "properties": {
                     "name": "West Virginia",
                     "energy": {
-                        "active": 1,
+                        "active": 0,
                         "residential" : {
                             "electricity" : 0,
-                            "nat-gas": 1,
+                            "nat-gas": 0,
                             "solar": 0
                         },
                         "smb" : {
@@ -1174,12 +1174,12 @@
                     "energy": {
                         "active": 1,
                         "residential" : {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "nat-gas": 0,
                             "solar": 1
                         },
                         "smb" : {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "nat-gas": 0,
                             "solar": 0
                         },
@@ -1202,8 +1202,8 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 1,
-                            "solar": 0
+                            "nat-gas": 0,
+                            "solar": 1
                         },
                         "smb" : {
                             "electricity" : 0,
@@ -1211,7 +1211,7 @@
                             "solar": 0
                         },
                         "commercial": {
-                            "electricity" : 0,
+                            "electricity" : 1,
                             "nat-gas": 0,
                             "solar": 0
                         }
@@ -1230,7 +1230,7 @@
                         "residential" : {
                             "electricity" : 1,
                             "nat-gas": 1,
-                            "solar": 0
+                            "solar": 1
                         },
                         "smb" : {
                             "electricity" : 1,
@@ -1260,7 +1260,7 @@
                             "solar": 1
                         },
                         "smb" : {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "nat-gas": 0,
                             "solar": 0
                         },
@@ -1316,7 +1316,7 @@
                         "residential" : {
                             "electricity" : 1,
                             "nat-gas": 1,
-                            "solar": 0
+                            "solar": 1
                         },
                         "smb" : {
                             "electricity" : 1,
@@ -1342,7 +1342,7 @@
                         "active": 1,
                         "residential" : {
                             "electricity" : 1,
-                            "nat-gas": 1,
+                            "nat-gas": 0,
                             "solar": 0
                         },
                         "smb" : {
@@ -1351,7 +1351,7 @@
                             "solar": 0
                         },
                         "commercial": {
-                            "electricity" : 0,
+                            "electricity" : 1,
                             "nat-gas": 0,
                             "solar": 0
                         }
@@ -1368,12 +1368,12 @@
                     "energy": {
                         "active": 1,
                         "residential" : {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "nat-gas": 1,
                             "solar": 0
                         },
                         "smb" : {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "nat-gas": 0,
                             "solar": 0
                         },
