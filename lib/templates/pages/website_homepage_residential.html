@@ -8,13 +8,29 @@ tpl:
   title: Choose Energy Homepage for Residential
 ---
 {{> cb_residential_search_hero}}
-{{> cb_tip_general_savings}}
-{{> cb_our_energy_types}}
+{{> cmp_product_bar}}
+
+{{#withHash
+    color="light-gray"
+}}
+    {{> cmp_page_spacer}}
+{{/withHash}}
 {{> cb_map_general}}
-{{> cb_tip_general_green}}
-{{> cb_how_it_works}}
+
+{{> cmp_triptych}}
 {{> cb_our_suppliers}}
-{{> cb_tip_general_dereg}}
-{{> cb_energy_academy_tabs}}
+
+{{#withHash
+    color="blue"
+}}
+    {{> cmp_page_spacer}}
+{{/withHash}}
+{{#withHash
+    four_articles="true"
+}}
+    {{> cmp_energy_academy}}
+{{/withHash}}
+
+{{> cmp_pucs}}
 
 {{> cmp_testimonial}}
