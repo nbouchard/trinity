@@ -159,6 +159,14 @@
         @include breakpoint($mq-lg-max) {
             padding: 2em;
         }
+
+        &.ea-headline {
+            padding-bottom: 1em;
+        }
+
+        &.ea-body {
+            padding-top: 1em;
+        }
     }
 
     .content-editorial-headline,
@@ -167,6 +175,10 @@
         font-size: $font-size-extrahuger;
         font-family: $font-family-headline;
         line-height: 1.25em;
+
+        @include breakpoint($mq-sm-max) {
+            font-size: $font-size-huger;
+        }
     }
 
     .content-editorial-subhead,
@@ -175,6 +187,10 @@
         font-size: $font-size-extrahuge;
         font-family: $font-family-subhead;
         line-height: 1.25em;
+
+        @include breakpoint($mq-sm-max) {
+            font-size: $font-size-huge;
+        }
     }
 
     .content-editorial-accent,
@@ -536,6 +552,51 @@
             @include breakpoint($mq-lg-max) {
                 padding-left: 1.5em;
                 padding-right: 1.5em;
+            }
+        }
+    }
+
+    .editorial-menu-container {
+        background-color: $color-white-lilac;
+        width: 100%;
+
+        .editorial-menu {
+            @include box-sizing(border-box);
+            margin: 0 auto;
+            padding: 0.5em 0;
+            max-width: $site-max-width;
+            width: 100%;
+
+            @include breakpoint($mq-md-min) {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            @include breakpoint($mq-lg-max) {
+                padding-left: 2em;
+                padding-right: 2em;
+            }
+
+            @include breakpoint($mq-sm-max) {
+                @include clearfix;
+            }
+        }
+
+        .editorial-menu-item {
+            display: inline-block;
+            list-style: none;
+            padding: 0 0.5em;
+
+            a {
+                color: $color-blue-curious;
+            }
+
+            @include breakpoint($mq-sm-max) {
+                @include cg-1of2(true, true, true);
+
+                &:first-of-type {
+                   @include cg-item(true, true);
+                }
             }
         }
     }
@@ -962,6 +1023,66 @@
             content: $c-icon-right-dir;
             vertical-align: middle;
         }
+    }
+}
+
+.ce-energy-academy {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .ea-item {
+        @include breakpoint($mq-md-max) {
+            &.cg-1of2,
+            &.cg-1of3,
+            &.cg-1of4,
+            &.cg-1of5 {
+                @include cg-1of2(true, true, true);
+            }
+
+            &.cg-1of3,
+            &.cg-1of5 {
+                &.more-from-ea {
+                    @include cg-item(true, true);
+                }
+            }
+        }
+
+        @include breakpoint($mq-xs-max) {
+            &.cg-1of2,
+            &.cg-1of3,
+            &.cg-1of4,
+            &.cg-1of5 {
+                @include cg-item(true, true);
+            }
+        }
+    }
+
+    .ea-article-img {
+        display: table;
+        background-color: $color-blue-curious;
+        @include prefixer(background-size, cover, webkit moz spec);
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-repeat: no-repeat;
+        height: 10em;
+        width: 100%;
+        margin-bottom: 0.5em;
+
+        .icon {
+            display: table-cell;
+            vertical-align: middle;
+            color: #ffffff;
+            text-align: center;
+            font-size: 6em;
+            vertical-align: middle;
+        }
+    }
+
+    .ea-article-link {
+        display: block;
+        color: $color-blue-curious;
+        font-weight: $font-weight-body;
     }
 }
 

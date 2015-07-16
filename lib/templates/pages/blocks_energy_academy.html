@@ -3,19 +3,19 @@ site:
   name: ChooseUX
   version: 0.1.0
 tpl:
-  desc: Block spacer options
+  desc: Page Desc
   title: Interfaces
 ---
-
-<br>
-
 {{#withHash
-    color="green"
+    color="blue"
 }}
     {{> cmp_page_spacer}}
 {{/withHash}}
-
-<p>Green</p>
+{{#withHash
+    four_articles="true"
+}}
+    {{> cmp_energy_academy}}
+{{/withHash}}
 
 <br>
 
@@ -24,57 +24,34 @@ tpl:
 }}
     {{> cmp_page_spacer}}
 {{/withHash}}
-
-<p>Blue</p>
+{{#withHash
+    three_articles="true"
+}}
+    {{> cmp_energy_academy}}
+{{/withHash}}
 
 <br>
 
 {{#withHash
-    color="orange"
+    color="blue"
 }}
     {{> cmp_page_spacer}}
 {{/withHash}}
-
-<p>Orange</p>
+{{#withHash
+    two_articles="true"
+}}
+    {{> cmp_energy_academy}}
+{{/withHash}}
 
 <br>
 
 {{#withHash
-    color="yellow"
+    color="blue"
 }}
     {{> cmp_page_spacer}}
 {{/withHash}}
-
-<p>Yellow</p>
-
-<br>
-
 {{#withHash
-    color="red"
+    one_article="true"
 }}
-    {{> cmp_page_spacer}}
+    {{> cmp_energy_academy}}
 {{/withHash}}
-
-<p>Red</p>
-
-<br>
-
-{{#withHash
-    color="light-gray"
-}}
-    {{> cmp_page_spacer}}
-{{/withHash}}
-
-<p>Light Gray</p>
-
-<br>
-
-{{#withHash
-    color="dark-gray"
-}}
-    {{> cmp_page_spacer}}
-{{/withHash}}
-
-<p>Dark Gray</p>
-
-<br>
