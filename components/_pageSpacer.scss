@@ -1,0 +1,28 @@
+.ce-page-spacer {
+    width: 100%;
+    height: 10px;
+    &.v-green {
+        background: $color-green-shamrock;
+    }
+    &.v-blue {
+        background: $color-blue-curious;
+    }
+    &.v-white {
+        background: $color-white-pure;
+    }
+    &.v-orange {
+        background: $color-orange-sun;
+    }
+    &.v-light-gray {
+        background: $color-white-lilac;
+    }
+    &.v-dark-gray {
+        background: $color-gray-oslo;
+    }
+    &.v-yellow {
+        background: $color-yellow-butter;
+    }
+    &.v-red {
+        background: $color-red-cinnabar;
+    }
+}
