@@ -780,7 +780,7 @@
 
     .pagination {
         -webkit-padding-start: 0;
-        margin-top: 2em; 
+        margin-top: 2em;
 
         li {
             list-style: none;
@@ -897,7 +897,6 @@
 
             .tags {
                 text-align: right;
-                max-height: 1.4em;
                 overflow: hidden;
             }
         }
@@ -1084,7 +1083,7 @@
                 padding-top: 2em;
                 width: 100%;
                 border-top: 1px solid $color-white-lilac;
-                
+
                 a {
                     cursor: pointer;
                 }
@@ -1194,8 +1193,8 @@
             width: 31.32%;
             border-width: 1px;
             border-style: solid;
-            
-            @include breakpoint($mq-sm-max) { 
+
+            @include breakpoint($mq-sm-max) {
                 width: 100%;
             }
 
@@ -1213,8 +1212,8 @@
                 h3 {
                     padding: 1em 1em 0 1em;
                     height: 4em;
-                    
-                    @include breakpoint($mq-sm-max) { 
+
+                    @include breakpoint($mq-sm-max) {
                         height:auto;
                     }
                 }
@@ -1224,7 +1223,7 @@
                     height: 12em;
                     font-weight: $font-weight-body;
                     overflow: hidden;
-                    @include breakpoint($mq-sm-max) { 
+                    @include breakpoint($mq-sm-max) {
                         height:auto;
                         padding: 0 1.5em 3em;
                     }
@@ -1312,7 +1311,7 @@
         padding-top: 0.75em;
         padding-bottom: 0.25em;
         font-size: 3.5em;
-        
+
         @include breakpoint($mq-md-max) {
             padding-right: 0.5em;
             padding-left: 0.5em;
