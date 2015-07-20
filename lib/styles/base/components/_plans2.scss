@@ -1,0 +1,359 @@
+// .plan-as-card2 .plan-card,
+// .plan-as-slat2 .plan-card
+.plan-card {
+    .plan-data-row {
+        display: table;
+        text-align: center;
+        position: relative;
+
+        .plan-data-label,
+        .plan-data-value {
+            display: table-cell;
+            text-align: left;
+            vertical-align: middle;
+            font-weight: 400;
+        }
+
+        .plan-data-label{
+            font-variant: small-caps;
+            font-size: 1.7rem;
+            color: $color-gray-chateau;
+        }
+
+        .plan-data-value {
+            font-size: 1.6rem;
+        }
+
+        .plan-fees,
+        .plan-offers,
+        .plan-view-expanded {
+            display: table-cell;
+            text-transform: uppercase;
+            vertical-align: middle;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: $color-green-shamrock;
+        }
+
+        &.plan-unit-cost .plan-data-value {
+            font-weight: $font-weight-body-strong;
+            font-size: 4rem;
+            line-height: 1em;
+        }
+
+        &.plan-est-cost .plan-data-value {
+            font-weight: $font-weight-body-strong;
+            font-size: 2.4rem;
+        }
+
+        &.plan-est-savings .plan-data-value {
+        }
+
+        &.plan-terms .plan-data-value {
+            .plan-term-length,
+            .plan-term-type {
+                display: block;
+            }
+
+            .icon {
+                font-size: 0.9em;
+            }
+        }
+
+        &.plan-popularity .plan-data-value {
+            .icon {
+                font-size: 0.9em;
+            }
+        }
+
+        &.plan-percent-green .plan-data-value {
+            .icon {
+                font-size: 1.1em;
+            }
+        }
+    }
+
+    .plan-badge {
+        box-sizing: border-box;
+        color: $color-white-pure;
+        background-color: $color-gray-oslo;
+        display: table;
+
+        .plan-badge-label {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            font-weight: $font-weight-body-strong;
+        }
+    }
+
+    .plan-info {
+        box-sizing: border-box;
+
+        .plan-overview {
+            box-sizing: border-box;
+        }
+
+        .plan-supplier-info {
+            box-sizing: border-box;
+
+            .tooltip-text {
+                max-height: 4.8rem;
+                overflow: hidden;
+            }
+
+            .tooltip-content:before {
+                position: absolute;
+                top: -1.5rem;
+                left: 75%;
+                @include transform(translateX(-50%));
+                content: '';
+                height: 0;
+                width: 0;
+                border-left: 2rem solid transparent;
+                border-right: 2rem solid transparent;
+                border-bottom: 1.5rem solid $color-gray-cape;
+            }
+
+            &.inTexas {
+                max-height: 12rem;
+            }
+        }
+
+        .plan-details {
+            box-sizing: border-box;
+        }
+
+    }
+
+    .plan-cta {
+        box-sizing: border-box;
+        font-size: $font-size-largest;
+    }
+}
+
+.plan-as-card2 {
+    // Set up plan-item on cg-grid to contain the card components
+    @include breakpoint($mq-xs) {
+        @include cg-item();
+    }
+
+    @include breakpoint($mq-sm) {
+        @include cg-1of2(true, true, true);
+    }
+
+    @include breakpoint($mq-md-min) {
+        @include cg-1of4(true, true, true);
+    }
+
+    .plan-card {
+        .plan-badge {
+            height: 3rem;
+            width: 100%;
+            border-color: $color-gray-oslo;
+            border-style: solid;
+            border-width: 1px 1px 0;
+        }
+
+        .plan-data-row {
+            width: 100%;
+            padding: 0 1.5rem;
+
+            .plan-data-label,
+            .plan-data-value {
+                width: 50%;
+                padding: 0.5rem 0;
+            }
+
+            .plan-fees,
+            .plan-offers,
+            .plan-view-expanded {
+                padding: 0.5rem 0;
+            }
+
+            .plan-view-expanded a{
+                text-decoration: none;
+            }
+        }
+
+        .plan-info {
+            max-height: 40rem;
+            border-color: $color-gray-geyser;
+            border-style: solid;
+            border-width: 0px 1px;
+
+            .plan-overview {
+                max-height: 27rem;
+                padding: 1rem 0;
+                border-bottom: 1px solid $color-gray-geyser;
+            }
+
+            .plan-supplier-info {
+                max-height: 8rem;
+                padding: 1rem 0;
+                border-bottom: 1px solid $color-gray-geyser;
+
+                &.inTexas {
+                    max-height: 12rem;
+                }
+            }
+
+            .plan-details {
+                max-height: 5rem;
+                padding: 1rem 0;
+            }
+
+        }
+
+        .plan-cta {
+            height: 6rem;
+            background-color: $color-green-shamrock;
+
+            button {
+                width :100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .ce-tooltip {
+        position: inherit;
+    }
+}
+
+.plan-as-slat2 {
+    padding: 0 0.5em;
+
+    .plan-card {
+        display: table;
+        border-color: $color-gray-geyser;
+        border-style: solid;
+        border-width: 0 1px 1px;
+        height: 10rem;
+        width: 100%;
+    }
+
+    .plan-data-row {
+        // float: left;
+
+        .plan-data-label{
+            // display: none;
+        }
+
+        .plan-data-value {
+        }
+
+        .plan-fees,
+        .plan-offers,
+        .plan-view-expanded {
+        }
+
+        &.plan-unit-cost .plan-data-value {
+        }
+
+        &.plan-est-cost .plan-data-value {
+        }
+
+        &.plan-est-savings .plan-data-value {
+        }
+
+        &.plan-terms .plan-data-value {
+            .plan-term-length,
+            .plan-term-type {
+            }
+
+            .icon {
+            }
+        }
+
+        &.plan-popularity .plan-data-value {
+            .icon {
+            }
+        }
+
+        &.plan-percent-green .plan-data-value {
+            .icon {
+            }
+        }
+    }
+
+    .plan-badge {
+        display: table-cell;
+        box-sizing: border-box;
+        width: 2.5rem;
+
+        .plan-badge-label {
+            @include transform(rotate(-90deg));
+            padding: 0;
+            display: none;
+
+            .icon {
+                display: none;
+            }
+        }
+    }
+
+    .plan-info {
+        display: table-cell;
+
+        .plan-table {
+            display: table;
+            width: 100%;
+        }
+
+        .plan-overview {
+            display: table-cell;
+
+            .plan-data-row {
+                float: left;
+                border: 1px solid red;
+            }
+
+            .plan-data-label{
+                display: none;
+            }
+
+            .plan-data-value {
+                float: left;
+            }
+        }
+
+        .plan-supplier-details {
+            display: table-cell;
+            width: 24rem;
+        }
+
+        .plan-supplier-info {
+            display: block;
+            @include clearfix;
+
+            .tooltip-text {
+            }
+
+            .tooltip-content:before {
+            }
+
+            &.inTexas {
+            }
+        }
+
+        .plan-details {
+            display: block;
+            @include clearfix;
+        }
+
+    }
+
+    .plan-cta {
+        display: table-cell;
+        width: 24rem;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0 1.5rem;
+
+        button {
+            width :100%;
+        }
+    }
+}
