@@ -711,12 +711,32 @@ input[type=range]:disabled::-ms-thumb {
     }
     
     &.v-solar {
-        .gfield_label {
-            max-width: 9em;
-            font-weight: 200;
+        .gform_title {
+            font-weight: 400;
+            font-size: 2.5em;
         }
-        .gfield_container {
-            max-width: 28em;
+        .gfield_label {
+            font-weight: 200;
+            min-width: 9em;
+        }
+        .gform_heading {
+            width: 100%;
+        }
+        .ginput_container input[type=checkbox] {
+            width: 1em;
+        }
+        .gform_body {
+            width: 100%;
+        }
+        .gform_button {
+            margin-left: 29%;
+        }
+        .gform_button {
+                float:left;
+        }
+        .gform_body input, 
+        .gform_body textarea {
+            width: 100%;
         }
         .gfield_checkbox {
             padding: 0 1em;
@@ -724,19 +744,12 @@ input[type=range]:disabled::-ms-thumb {
             input[type=checkbox] {
                 position: relative;
                 display: inline;
-                width: 1em;
                 height: 1em;
+                width: 1em;
             }
             label {
                 display: inline;
             }
         }
-        .ginput_container {
-            max-width: 28em;
-            input[type=checkbox] {
-                width: 25em;
-            }
-        }
     }
 }
-
