@@ -33,14 +33,20 @@
         .supplier {
             @include breakpoint($mq-sm-max) {
                 @include cg-item();
+                padding-top: 2em;
+                padding-bottom: 2em;
             }
 
             @include breakpoint($mq-md) {
                 @include cg-item();
+                padding-top: 2em;
+                padding-bottom: 2em;
             }
 
             @include breakpoint($mq-lg-min) {
                 @include cg-item();
+                padding-top: 2em;
+                padding-bottom: 2em;
             }
         }
     }
