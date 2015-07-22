@@ -1,15 +1,14 @@
-.embed-responsive {
+.ce-embedded-video {
     position: relative;
     display: block;
     height: 0;
     padding: 0;
     overflow: hidden;
 }
-.embed-responsive .embed-responsive-item,
-.embed-responsive iframe,
-.embed-responsive embed,
-.embed-responsive object,
-.embed-responsive video {
+.ce-embedded-video iframe,
+.ce-embedded-video embed,
+.ce-embedded-video object,
+.ce-embedded-video video {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -18,9 +17,9 @@
     height: 100%;
     border: 0;
 }
-.embed-responsive-16by9 {
+.v-16by9 {
     padding-bottom: 56.25%;
 }
-.embed-responsive-4by3 {
+.v-4by3 {
     padding-bottom: 75%;
 }
