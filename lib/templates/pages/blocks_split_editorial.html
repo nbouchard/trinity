@@ -6,5 +6,25 @@ tpl:
   desc: Page Desc
   title: Interfaces
 ---
+{{#withHash
+    switch="true"
+    icon="true"
+    bg_color="blue"
+}}
+    {{> cmp_split_editorial}}
+{{/withHash}}
 
-{{> cmp_split_editorial}}
+{{#withHash
+    photo_bg="images/photography/photoblock_imgs/StockPhotography_Final_5.jpg"
+    icon="true"
+}}
+    {{> cmp_split_editorial}}
+{{/withHash}}
+
+{{#withHash
+    switch="true"
+    svg="true"
+    photo_bg="images/illustrations/Piggy-Bank.svg"
+}}
+    {{> cmp_split_editorial}}
+{{/withHash}}

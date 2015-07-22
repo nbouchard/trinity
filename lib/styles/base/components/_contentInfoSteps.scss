@@ -59,12 +59,16 @@
             }
         }
     }
+
     .split-visual {
         display: table;
         float: left;
         width: 50%;
         height: 30em;
-        background: $color-blue-curious;
+        background-color: $color-white-lilac;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
 
         @include breakpoint($mq-md-max) {
             width: 100%;
@@ -76,6 +80,10 @@
             color: #ffffff;
             text-align: center;
             font-size: 8em;
+        }
+
+        &.svg-bg {
+            background-size: contain;
         }
 
         &.split-blue {
@@ -106,6 +114,7 @@
             }
         }
     }
+
     &.v-fudge-width {
         .split-content {
             width: 40%;
@@ -115,6 +124,7 @@
             width: 60%;
         }
     }
+
     &.v-height-short {
         .split-content {
             height: 15em;
