@@ -43,7 +43,7 @@ tpl:
 
         {{#withHash
             cardView="true"
-            showBadge="true"
+            showBadge=""
             badgeIcon="c-icon-clock"
             badgeText="Best Short Term"
             moreSpacing="true"
@@ -76,35 +76,9 @@ tpl:
         {{/withHash}}
     </div>
 
-    <!-- <div class="editorial-container">
-        <div class="plans-sorter">
-            <div class="sorter-title">
-                Sort By:
-            </div>
-            <a class="slat-cap sorter-link is-active" href="#">
-                <i class="icon fa fa-trophy"></i><span class="sorter-link-label">Plan Rank</span> <i class="icon fa fa-sort-desc"></i>
-            </a>
-            <a class="sorter-price sorter-link" href="#">
-                Price <i class="icon fa fa-sort"></i>
-            </a>
-            <div class="sorter-details">
-                <a class="sorter-cost sorter-link" href="#">
-                    Cost per Month <i class="icon fa fa-sort"></i>
-                </a>
-                <a class="sorter-term sorter-link" href="#">
-                    Term <i class="icon fa fa-sort"></i>
-                </a>
-                <a class="sorter-renewable sorter-link" href="#">
-                    Renewable <i class="icon fa fa-sort"></i>
-                </a>
-                <a class="sorter-supplier sorter-link" href="#">
-                    Supplier <i class="icon fa fa-sort"></i>
-                </a>
-            </div>
-            <a class="sorter-popularity sorter-link" href="#">
-                Popularity <i class="icon fa fa-sort"></i>
-            </a>
-        </div>
+    <div class="editorial-container">
+        {{> cmp_plans_sorter}}
+
         {{#withHash
             slatView="true"
             showBadge="true"
@@ -149,5 +123,5 @@ tpl:
         }}
             {{> cmp_plan_card_standard}}
         {{/withHash}}
-    </div> -->
+    </div>
 </div>
