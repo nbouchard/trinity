@@ -1,9 +1,9 @@
 // Structural
-.site-footer {
+.ce-footer {
     @include box-sizing(border-box);
     border-top: 0.5em solid $color-green-shamrock;
 
-    .footer-primary {
+    .ce-footer-primary {
         @include box-sizing(border-box);
         width: 100%;
         background: $color-white-smoke;
@@ -22,35 +22,19 @@
             margin-bottom: 1em;
 
             @include breakpoint($mq-xs) {
-                @include cg-1of2(true, true, true);
-
-                &.fnav-wider {
-                    display: none;
-                }
+                @include cg-item();
             }
 
             @include breakpoint($mq-sm) {
-                @include cg-1of3(true, true, true);
-
-                &.fnav-wider {
-                    display: none;
-                }
+                @include cg-1of2(true, true, true);
             }
 
             @include breakpoint($mq-md) {
-                @include cg-1of5(true, true, true);
-
-                &.fnav-wider {
-                    display: none;
-                }
+                @include cg-1of4(true, true, true);
             }
 
             @include breakpoint($mq-lg-min) {
-                @include cg-1of8();
-
-                &.fnav-wider {
-                    @include cg-3of8();
-                }
+                @include cg-1of4();
             }
 
             h5 {
@@ -60,23 +44,13 @@
                     color: $color-gray-charcoal;
                 }
             }
-
-            .fnav-toggle {
-                font-size: $font-size-smaller;
-                font-weight: $font-weight-body;
-            }
         }
-
-        .footer-social {
-            @include cg-1of4();
-        }
-
         .footer-address {
             @include cg-1of2();
         }
 
         .footer-legal {
-            @include cg-1of4();
+            @include cg-1of2();
         }
     }
 
@@ -84,7 +58,7 @@
         border-top: 0.5em solid $color-orange-sun;
         color: $color-white-lilac;
 
-        .footer-primary {
+        .ce-footer-primary {
             background: $color-gray-charcoal;
 
             .nav-list {
@@ -113,16 +87,6 @@
                 }
             }
         }
-
-        .social-links {
-            .social-item {
-                .social-link {
-                    background: $color-gray-chateau;
-                    color: $color-white-lilac;
-                }
-            }
-        }
-
         .legal-links {
             .legal-item {
                 .legal-link {
@@ -130,102 +94,74 @@
                 }
             }
         }
-
-        .footer-news {
-            .p-name {
-                color: $color-white-pure;
-            }
-
-            .dt-published {
-                color: $color-white-lilac;
-            }
-        }
     }
 }
 
-.footer-primary {
+.ce-footer-primary {
     padding-top: 4em;
     padding-bottom: 2em;
 
     .nav-list {
         .nav-item {
-            line-height: 1.6;
+            line-height: 1.8;
+            @include cg-1of2(false, false);
 
             .nav-link {
                 color: $color-gray-chateau;
                 font-weight: $font-weight-body;
+                .icon {
+                    font-size: 3em;
+                }
             }
-
+            &.v-electricity {
+                .icon {
+                    color: $color-yellow-butter;
+                }
+            }
+            &.v-natgas {
+                .icon {
+                    color: $color-red-cinnabar;
+                }
+            }
+            &.v-solar {
+                .icon {
+                    color: $color-orange-sun;
+                }
+            }
             &.inactive {
                 display: none;
+            }
+        }
+        &.v-choices {
+            text-align: center;
+            .nav-item {
+                @include cg-1of3(false, false);
+            }
+        }
+        &.v-academy {
+            @include cg-1of2(false, false);
+            .nav-item {
+                @include cg-item(false, false);
             }
         }
     }
 }
 
-.social-links {
-    @include box-sizing(border-box);
-    margin: 0;
+.ce-social-links {
+    @include cg-item();
+    margin: 2em 0;
     padding: 0;
+    color: $color-green-jewel;
 
     .social-item {
-        @include box-sizing(border-box);
-        display: inline-block;
-        margin: 0;
-        padding: 0.25em 0;
-        list-style: none;
-
-        .social-link {
-            @include box-sizing(border-box);
-            display: block;
-            padding: 0.5em;
-            width: 2em;
-            height: 2em;
-            background: $color-gray-ghost;
-            color: $color-white-smoke;
-            text-align: center;
-            line-height: 1em;
-
-            &:hover,
-            &:active,
-            &:focus {
-                background: $color-gray-stone;
-                color: $color-white-pure;
-            }
-
-            &.social-twitter {
-                &:hover,
-                &:active,
-                &:focus {
-                    background: $color-brand-twitter;
-                }
-            }
-
-            &.social-facebook {
-                &:hover,
-                &:active,
-                &:focus {
-                    background: $color-brand-facebook;
-                }
-            }
-
-            &.social-linkedin {
-                &:hover,
-                &:active,
-                &:focus {
-                    background: $color-brand-linkedin;
-                }
-            }
-
-            .icon {
-                vertical-align: middle;
-            }
-        }
+        @include cg-1of4(false, false);
+        font-size: 2em;
     }
 }
 
 .legal-links {
     @include cg-row();
+    line-height: 3em;
 
     .legal-item {
         @include cg-1of3(false, false, true);
@@ -244,46 +180,7 @@
 
 .footer-address {
     color: $color-gray-chateau;
-    font-size: $font-size-smaller;
-    line-height: 3em;
+    // font-size: $font-size-smaller;
+    line-height: 3.2em;
 }
 
-.footer-news {
-    @include cg-row();
-    list-style: none;
-
-    .news-item {
-        @include cg-item(true, false);
-    }
-
-    .u-url {
-        @include cg-row();
-
-        &:hover,
-        &:focus {
-            .p-name {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    .u-photo {
-        @include cg-1of2(false, false, true);
-    }
-
-    .news-text {
-        @include cg-1of2(true, true, true);
-    }
-
-    .p-name {
-        font-size: $font-size-normal;
-        color: $color-gray-charcoal;
-        text-decoration: none;
-    }
-
-    .dt-published {
-        font-size: $font-size-smaller;
-        color: $color-gray-charcoal;
-        text-decoration: none;
-    }
-}
