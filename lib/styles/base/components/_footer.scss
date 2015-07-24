@@ -3,10 +3,17 @@
     @include box-sizing(border-box);
     border-top: 0.5em solid $color-green-shamrock;
 
+
     .ce-footer-primary {
         @include box-sizing(border-box);
         width: 100%;
         background: $color-white-smoke;
+        @include breakpoint($mq-xs) {
+            padding: 4em 2em 2em;
+        }
+        @include breakpoint($mq-sm) {
+            padding: 2em;
+        }
     }
 
     .footer-secondary {
@@ -23,10 +30,12 @@
 
             @include breakpoint($mq-xs) {
                 @include cg-item();
+                margin-bottom: 3em;
             }
 
             @include breakpoint($mq-sm) {
                 @include cg-1of2(true, true, true);
+                margin-bottom: 3em;
             }
 
             @include breakpoint($mq-md) {
@@ -104,13 +113,13 @@
     .nav-list {
         .nav-item {
             line-height: 1.8;
-            @include cg-1of2(false, false);
+            @include cg-1of2(false, false, true);
 
             .nav-link {
                 color: $color-gray-chateau;
                 font-weight: $font-weight-body;
                 .icon {
-                    font-size: 3em;
+                    font-size: 4em;
                 }
             }
             &.v-electricity {
@@ -135,14 +144,18 @@
         &.v-choices {
             text-align: center;
             .nav-item {
-                @include cg-1of3(false, false);
+                @include cg-1of3(false, false, true);
             }
         }
         &.v-academy {
-            @include cg-1of2(false, false);
+            @include cg-1of2(false, false, true);
             .nav-item {
                 @include cg-item(false, false);
             }
+        }
+        &.v-seals {
+            @include cg-1of2(false, false, true);
+            text-align: center;
         }
     }
 }
@@ -154,7 +167,7 @@
     color: $color-green-jewel;
 
     .social-item {
-        @include cg-1of4(false, false);
+        @include cg-1of4(false, false, true);
         font-size: 2em;
     }
 }
