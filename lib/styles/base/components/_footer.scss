@@ -39,7 +39,8 @@
             }
 
             @include breakpoint($mq-md) {
-                @include cg-1of4(true, true, true);
+                @include cg-1of2(true, true, true);
+                margin-bottom: 3em;
             }
 
             @include breakpoint($mq-lg-min) {
@@ -145,6 +146,9 @@
             text-align: center;
             .nav-item {
                 @include cg-1of3(false, false, true);
+                a.nav-link:hover {
+                        text-decoration: none;
+                }
             }
         }
         &.v-academy {
@@ -169,6 +173,10 @@
     .social-item {
         @include cg-1of4(false, false, true);
         font-size: 2em;
+        &:hover {
+            color: $color-blue-bahama;
+            text-decoration: none;
+        }
     }
 }
 
