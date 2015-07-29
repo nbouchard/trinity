@@ -52,7 +52,7 @@
         .show-more, .show-less {
             text-align: center;
             margin: 0px auto;
-            max-width: 12em;
+            max-width: 14em;
             color: $color-green-jewel;
             font-size: $font-size-large;
             font-weight: $font-weight-body-strong;
@@ -481,8 +481,12 @@
         }
     }
 
-    .solar-lead-form-wrapper{
+    &.no-results {
+        display: none;
+    }
 
+    &.no-results:only-child {
+        display: block;
     }
 }
 
