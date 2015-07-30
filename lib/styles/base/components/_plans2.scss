@@ -21,27 +21,35 @@
             text-align: left;
             vertical-align: middle;
             font-weight: 400;
+
+            @include breakpoint($mq-md-max) {
+                display: block;
+            }
         }
 
         .plan-data-label {
             font-variant: small-caps;
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             color: $color-gray-chateau;
         }
 
         .plan-data-value {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
         }
 
         .plan-fees,
         .plan-offers,
         .plan-view-expanded {
-            display: table-cell;
+            display: inline-block;
             text-transform: uppercase;
             vertical-align: middle;
             font-weight: 600;
             font-size: 1.25rem;
             color: $color-green-shamrock;
+
+            @include breakpoint($mq-lg-max) {
+                display: table-cell;
+            }
         }
 
         .plan-est-savings,
@@ -51,13 +59,18 @@
 
         &.plan-unit-cost .plan-data-value {
             font-weight: $font-weight-body-strong;
-            font-size: 4rem;
+            font-size: 3.25rem;
             line-height: 1em;
+
+            .cost-unit {
+                font-size: 2.5rem;
+                vertical-align: bottom;
+            }
         }
 
         .plan-est-cost .plan-data-value {
             font-weight: $font-weight-body-strong;
-            font-size: 2.4rem;
+            font-size: 2.25rem;
         }
 
         &.plan-terms .plan-data-value {
@@ -88,12 +101,18 @@
         box-sizing: border-box;
         color: $color-white-pure;
         background-color: $color-gray-oslo;
+        visibility: hidden;
+        font-size: 1.25rem;
 
         .plan-badge-label {
             text-align: center;
             vertical-align: middle;
             text-transform: uppercase;
             font-weight: $font-weight-body-strong;
+        }
+
+        &.is-topPick {
+            visibility: visible;
         }
     }
 
@@ -109,7 +128,17 @@
 
             .tooltip-text {
                 max-height: 4.8rem;
+                white-space: nowrap;
                 overflow: hidden;
+                text-overflow: ellipsis;
+
+                @include breakpoint($mq-lg-min) {
+                    width: 20rem;
+                }
+
+                @include breakpoint($mq-md-max) {
+                    width: 15rem;
+                }
             }
 
             .tooltip-content:before {
@@ -125,16 +154,26 @@
                 border-bottom: 1.5rem solid $color-gray-cape;
             }
 
-            .plan-data-row:nth-child(2) {
-                .plan-data-label,
-                .plan-data-value {
-                    padding: 0;
-                    font-size: 90%;
-                }
+            .plan-supplier-logo {
+                padding-bottom: 0.5rem;
+
             }
 
-            &.inTexas {
-                max-height: 12rem;
+            .plan-name {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+
+            .plan-puct {
+                padding: 0;
+                font-size: 90%;
+                display: table-cell;
+                max-width: 5rem;
+                vertical-align: middle;
+            }
+
+            &.inTexas .plan-supplier-logo {
+                display: table-cell;
             }
         }
 
@@ -151,12 +190,7 @@
 }
 
 .plan-as-card2 {
-    // Set up plan-item on cg-grid to contain the card components
-    @include breakpoint($mq-xs) {
-        @include cg-item();
-    }
-
-    @include breakpoint($mq-sm) {
+    @include breakpoint($mq-sm-max) {
         @include cg-1of2(true, true, true);
     }
 
@@ -171,10 +205,9 @@
             border-color: $color-gray-oslo;
             border-style: solid;
             border-width: 1px 1px 0;
-            display: none;
+            display: table;
 
             &.is-topPick {
-                display: table;
             }
 
             .plan-badge-label {
@@ -185,52 +218,47 @@
         .plan-data-row {
             display: table;
             width: 100%;
-            padding: 0 1.5rem;
+            padding: 0 1rem;
 
             .plan-data-label,
             .plan-data-value {
                 width: 50%;
                 padding: 0.5rem 0;
+
+                @include breakpoint($mq-md-max) {
+                    width: 100%;
+                }
             }
 
             .plan-fees,
             .plan-offers,
             .plan-view-expanded {
-                padding: 0.5rem 0;
+                padding: 0.5rem 1rem;
             }
 
-            .plan-view-expanded a{
+            .plan-view-expanded a {
                 text-decoration: none;
             }
         }
 
         .plan-info {
-            max-height: 40rem;
             border-color: $color-gray-geyser;
             border-style: solid;
             border-width: 1px 1px 0;
 
             .plan-overview {
-                max-height: 27rem;
-                padding: 1rem 0;
+                padding: 0.5rem 0;
                 border-bottom: 1px solid $color-gray-geyser;
             }
 
             .plan-supplier-info {
-                max-height: 8rem;
-                padding: 1rem 0;
+                padding: 0.5rem 0;
                 border-bottom: 1px solid $color-gray-geyser;
-
-                &.inTexas {
-                    max-height: 12rem;
-                }
             }
 
             .plan-details {
-                max-height: 5rem;
-                padding: 1rem 0;
+                padding: 0.5rem 0;
             }
-
         }
 
         .plan-cta {
@@ -265,7 +293,6 @@
         display: table-cell;
         box-sizing: border-box;
         width: 2.5rem;
-        visibility: hidden;
         position: relative;
 
         .plan-badge-label {
@@ -279,10 +306,6 @@
             .icon {
                 display: none;
             }
-        }
-
-        &.is-topPick {
-            visibility: visible;
         }
     }
 

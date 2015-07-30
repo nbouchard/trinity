@@ -9,20 +9,20 @@
                     <div class="plan-table">
                         <div class="plan-data-row plan-unit-cost">
                             <div class="plan-data-label">
-                                per kwh 
+                                per kwh
                                 {{#if puct}}
                                     <div class="ce-tooltip">
                                         <i class="tooltip-icon"></i>
                                         <div class="tooltip-content">
                                             <div class="tooltip-body">
-                                                For 2000 kWh plans
+                                                Based on 2000 kWh usage
                                             </div>
                                         </div>
                                     </div>
                                 {{/if}}
                             </div>
                             <div class="plan-data-value">
-                                12.54&cent;
+                                12.54<span class="cost-unit">&cent;</span>
                             </div>
                         </div>
 
@@ -32,7 +32,7 @@
                             {{#if estCost}}
                             <div class="plan-est-cost">
                                 <div class="plan-data-label">
-                                    est. cost 
+                                    est. cost
                                     <div class="ce-tooltip">
                                         <i class="tooltip-icon"></i>
                                         <div class="tooltip-content">
@@ -40,10 +40,10 @@
                                             <div class="tooltip-body">
                                                 While your exact cost may be different based upon numerous factors including your actual usage, Choose Energy uses Texas historical usage rates for each month in this plan’s term and price to generate an approximate monthly cost over the life of the plan. If your usage differs, update it above to get more accurate cost estimates.
                                             </div>
-                                            
+
                                             <div class="tooltip-headline">Monthly Fees</div>
                                             <div class="tooltip-body">$4.95 monthly service fee</div>
-                                            
+
                                             <div class="tooltip-headline">Early Termination Fees</div>
                                             <div class="tooltip-body">$20.00 for each month remaining in contract</div>
                                         </div>
@@ -57,7 +57,7 @@
                             {{#if estSavings}}
                             <div class="plan-est-savings">
                                 <div class="plan-data-label">
-                                    est. savings 
+                                    est. savings
                                     <div class="ce-tooltip">
                                         <i class="tooltip-icon"></i>
                                         <div class="tooltip-content">
@@ -87,13 +87,13 @@
                         </div>
                         <div class="plan-data-row plan-popularity">
                             <div class="plan-data-label">
-                                popularity 
+                                popularity
                                 <div class="ce-tooltip">
                                     <i class="tooltip-icon"></i>
                                     <div class="tooltip-content">
                                         <div class="tooltip-headline">Popularity</div>
                                         <div class="tooltip-body">
-                                            The number of people who have chosen this energy plan from Choose Energy in the last 30 days. 
+                                            The number of people who have chosen this energy plan from Choose Energy in the last 30 days.
                                         </div>
                                     </div>
                                 </div>
@@ -115,10 +115,15 @@
                 <div class="plan-supplier-details">
                     <div class="plan-supplier-info {{#if puct}}inTexas{{/if}}">
                         <div class="plan-data-row">
-                            <div class="plan-data-label">
+                            <div class="plan-supplier-logo">
                                 <a href="/website_suppliers_detail.html" class="supplier-logo supplier-spark-energy">Spark Energy</a>
                             </div>
-                            <div class="plan-data-value">
+                            {{#if puct}}
+                            <div class="plan-puct">puct # 10041</div>
+                            {{/if}}
+                        </div>
+                        <div class="plan-data-row">
+                            <div class="plan-name">
                                 <div class="ce-tooltip">
                                     <span class="tooltip-text">Green and Clean 5 Plus</span>
                                     <div class="tooltip-content">
@@ -130,13 +135,6 @@
                                 </div>
                             </div>
                         </div>
-                        {{#if puct}}
-                        <div class="plan-data-row">
-                            <div class="plan-data-label">
-                                puct # 10041
-                            </div>
-                        </div>
-                         {{/if}}
                     </div>
                     <div class="plan-details">
                         <div class="plan-data-row">
@@ -147,7 +145,7 @@
                                     <div class="tooltip-content">
                                         <div class="tooltip-headline">Monthly Fees</div>
                                         <div class="tooltip-body">$4.95 monthly service fee</div>
-                    
+
                                         <div class="tooltip-headline">Early Termination Fees</div>
                                         <div class="tooltip-body">$20.00 for each month remaining in contract</div>
                                     </div>
