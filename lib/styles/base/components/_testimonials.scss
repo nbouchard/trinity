@@ -85,7 +85,7 @@
         }
         
         .testimonial-svg {
-            fill: #d2d3d4;
+            fill: $color-gray-geyser;
             width: 90%;
             margin-left: 5%;
             position: absolute;
@@ -107,7 +107,7 @@
                 opacity: 1;
             }
             .testimonial-svg {
-                fill: #80878d;
+                fill: $color-gray-oslo;
                 width:100%;
                 margin-left: 0%;
                 @include breakpoint($mq-sm-max) {
