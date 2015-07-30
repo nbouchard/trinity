@@ -123,16 +123,25 @@
             &.v-electricity {
                 .icon {
                     color: $color-yellow-butter;
+                    &:hover {
+                        color: $color-yellow-galliano;
+                    }
                 }
             }
             &.v-nat-gas {
                 .icon {
                     color: $color-red-cinnabar;
+                    &:hover {
+                        color: $color-red-poppy;
+                    }
                 }
             }
             &.v-solar {
                 .icon {
                     color: $color-orange-sun;
+                    &:hover {
+                        color: $color-orange-tango;
+                    }
                 }
             }
             &.inactive {
@@ -180,6 +189,7 @@
     .social-item {
         @include cg-1of4(false, false, true);
         font-size: 2em;
+        cursor: pointer;
         &:hover {
             color: $color-green-jewel;
             text-decoration: none;
