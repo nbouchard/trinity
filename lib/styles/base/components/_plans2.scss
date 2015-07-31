@@ -40,15 +40,23 @@
         .plan-fees,
         .plan-offers,
         .plan-view-expanded {
-            display: inline-block;
             text-transform: uppercase;
             vertical-align: middle;
             font-weight: 600;
             font-size: 1.25rem;
+            padding: 0.5rem 0.75rem;
             color: $color-green-shamrock;
 
-            @include breakpoint($mq-lg-max) {
+            @include breakpoint($mq-md-max) {
+                display: inline-block;
+            }
+
+            @include breakpoint($mq-lg-min) {
                 display: table-cell;
+            }
+
+            a {
+                text-decoration: none;
             }
         }
 
@@ -159,17 +167,9 @@
 
             }
 
-            .plan-name {
-                font-size: 1.5rem;
-                font-weight: 500;
-            }
-
             .plan-puct {
                 padding: 0;
                 font-size: 90%;
-                display: table-cell;
-                max-width: 5rem;
-                vertical-align: middle;
             }
 
             &.inTexas .plan-supplier-logo {
@@ -177,7 +177,12 @@
             }
         }
 
-        .plan-details {
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .plan-more-info {
             box-sizing: border-box;
         }
 
@@ -196,6 +201,10 @@
 
     @include breakpoint($mq-md-min) {
         @include cg-1of4(true, true, true);
+    }
+
+    .slat-view {
+        display: none;
     }
 
     .plan-card {
@@ -229,16 +238,6 @@
                     width: 100%;
                 }
             }
-
-            .plan-fees,
-            .plan-offers,
-            .plan-view-expanded {
-                padding: 0.5rem 1rem;
-            }
-
-            .plan-view-expanded a {
-                text-decoration: none;
-            }
         }
 
         .plan-info {
@@ -252,12 +251,22 @@
             }
 
             .plan-supplier-info {
-                padding: 0.5rem 0;
-                border-bottom: 1px solid $color-gray-geyser;
+                padding-top: 0.5rem;
+
+                .plan-puct {
+                    display: table-cell;
+                    max-width: 5rem;
+                    vertical-align: middle;
+                }
             }
 
-            .plan-details {
+            .plan-name {
+                padding-bottom: 0.5rem;
+            }
+
+            .plan-more-info {
                 padding: 0.5rem 0;
+                border-top: 1px solid $color-gray-geyser;
             }
         }
 
@@ -280,155 +289,179 @@
 .plan-as-slat2 {
     padding: 0 0.5em;
 
+    .plan-table {
+        display: table;
+        width: 100%;
+    }
+
     .plan-card {
         display: table;
         border-color: $color-gray-geyser;
         border-style: solid;
         border-width: 0 1px 1px;
-        height: 10rem;
+        // min-height: 10rem;
         width: 100%;
+        position: relative;
+
+        .plan-card-body {
+            display: table-cell;
+            position: relative;
+            padding:  4rem 1.5rem 1.5rem;
+            // border: 1px solid red;
+        }
+
+        .plan-info {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 1.5rem 0 0;
+
+            .plan-overview {
+                display: table-cell;
+                vertical-align: middle;
+
+                .plan-data-row {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 0;
+
+                    &.plan-unit-cost {
+                        min-width: 11rem;
+
+                        .plan-data-value {
+                            padding-left: 0;
+                        }
+                    }
+
+                    &.plan-cost-savings {
+                        min-width: 10rem;
+
+                        .plan-est-savings .plan-data-value {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    &.plan-terms {
+                        min-width: 11rem;
+
+                        .plan-data-value {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    &.plan-popularity {
+                        width: 7rem;
+
+                        .plan-data-value {
+                            font-size: 2rem;
+                        }
+
+                        .icon {
+                            display: block;
+                        }
+                    }
+
+                    &.plan-percent-green {
+                        width: 7rem;
+
+                        .plan-data-value {
+                            font-size: 2rem;
+                        }
+
+                        .icon {
+                            display: block;
+                        }
+                    }
+                }
+
+                .plan-data-label{
+                    display: none;
+                }
+
+                .plan-data-value {
+                    display: block;
+                    padding: 1rem;
+                }
+
+                .plan-est-cost .plan-data-value {
+                    padding: 0 1rem;
+                    vertical-align: bottom;
+                }
+
+                .plan-est-savings .plan-data-value {
+                    padding: 0 1rem;
+                    vertical-align: top;
+                }
+            }
+
+            .plan-supplier-info {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 0 2.2rem 0 1.5rem;
+                width: 13rem;
+
+                .plan-supplier-logo {
+                    padding: 0;
+                }
+            }
+
+            .plan-details {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 4rem;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 1rem 1.5rem 0;
+
+                .plan-table {
+                    border-bottom: 1px solid $color-white-lilac;
+                }
+
+                .plan-name {
+                    display: table-cell;
+
+                    .plan-data-row {
+                        text-align: left;
+                    }
+                }
+
+                .plan-more-info {
+                    display: table-cell;
+                    width: 23rem;
+
+                    .plan-fees,
+                    .plan-offers,
+                    .plan-view-expanded {
+                        display: inline-block;
+                        padding: 0.5rem 1.2rem;
+                    }
+                }
+            }
+
+        }
+
+        .plan-cta {
+            display: table-cell;
+            width: 23rem;
+            text-align: center;
+            vertical-align: middle;
+            padding-top: 1.5rem;
+
+            button {
+                width :100%;
+                height: 6rem;
+            }
+        }
     }
 
     .plan-badge {
         display: table-cell;
+        vertical-align: middle;
         box-sizing: border-box;
         width: 2.5rem;
-        position: relative;
 
-        .plan-badge-label {
-            @include transform(rotate(-90deg));
-            transform-origin: 0 0;
-            width: 10rem;
-            padding: 0;
-            position: absolute;
+        .plan-badge-text {
             display: none;
-
-            .icon {
-                display: none;
-            }
-        }
-    }
-
-    .plan-info {
-        display: table-cell;
-
-        .plan-table {
-            display: table;
-            width: 100%;
-            height: 10rem;
-        }
-
-        .plan-overview {
-            display: table-cell;
-            vertical-align: middle;
-
-            .plan-data-row {
-                display: table-cell;
-                vertical-align: middle;
-
-                &.plan-unit-cost {
-                    width: 16.5rem;
-
-                    .plan-data-value {
-                        padding-left: 2rem;
-                    }
-                }
-
-                &.plan-cost-savings {
-                    width: 16rem;
-                }
-
-                &.plan-terms {
-                    width: 11rem;
-                }
-
-                &.plan-popularity {
-                    width: 10.5rem;
-                }
-            }
-
-            .plan-data-label{
-                display: none;
-            }
-
-            .plan-data-value {
-                display: block;
-                padding: 1rem;
-            }
-
-            .plan-est-cost .plan-data-value {
-                padding: 0 1rem;
-                vertical-align: bottom;
-            }
-
-            .plan-est-savings .plan-data-value {
-                padding: 0 1rem;
-                vertical-align: top;
-            }
-        }
-
-        .plan-supplier-details {
-            display: table-cell;
-            width: 24rem;
-            vertical-align: middle;
-
-            .plan-data-row {
-                display: table;
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .plan-supplier-info {
-            display: block;
-            @include clearfix;
-            min-height: 6.5rem;
-
-            .plan-data-label,
-            .plan-data-value {
-                display: table-cell;
-                width: 50%;
-                padding: 0.5rem 0.5rem 0;
-                vertical-align: middle;
-            }
-
-            .plan-data-row:nth-child(1) {
-                height: 6.5rem;
-            }
-
-            .plan-data-row:nth-child(2) {
-                .plan-data-label,
-                .plan-data-value {
-                    padding-bottom: 0.5rem;
-                }
-            }
-        }
-
-        .plan-details {
-            display: block;
-            @include clearfix;
-            border-top: 1px solid $color-white-lilac;
-            height: 3.5rem;
-
-            .plan-fees,
-            .plan-offers,
-            .plan-view-expanded {
-                display: table-cell;
-                padding: 0.5rem;
-            }
-        }
-
-    }
-
-    .plan-cta {
-        display: table-cell;
-        width: 20rem;
-        text-align: center;
-        vertical-align: middle;
-        padding: 0 1.5rem;
-
-        button {
-            width :100%;
         }
     }
 }
@@ -463,24 +496,24 @@
         }
 
         &.sort-unit-cost {
-            width: 16.5rem;
-            padding-left: 2rem;
+            min-width: 11rem;
+            padding-left: 1.5rem;
         }
 
         &.sort-est-cost {
-            width: 16rem;
+            min-width: 10rem;
         }
 
         &.sort-terms {
-            width: 11rem;
+            min-width: 11rem;
         }
 
         &.sort-popularity {
-            width: 10.5rem;
+            width: 7rem;
         }
 
         &.sort-percent-green {
-            width: 9.5rem;
+            width: 7rem;
         }
     }
 
