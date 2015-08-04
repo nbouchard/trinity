@@ -51,11 +51,11 @@
         height: 3em;
         box-sizing: border-box;
         margin: 0;
-        padding: 0.625em;
+        padding: 0.625em 2.2em 0.625em 0.625em;
         background-color: $color-white-pure;
         @include prefixer(appearance, none, webkit moz spec);
         border-radius: 0;
-        max-width: 15em;
+        width: 15em;
     }
 
     .search-steps {

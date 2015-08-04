@@ -8,7 +8,7 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    vertical-align: middle;
+    vertical-align: text-top;
 }
 
 @font-face {
@@ -47,6 +47,7 @@ $c-icon-down-dir: "\e007";
 $c-icon-up-dir: "\e00a";
 $c-icon-left-dir: "\e008";
 $c-icon-right-dir: "\e009";
+$c-icon-char-help-pos: "\e027";
 
 //Icons
 .c-icon-arrow-down:before {

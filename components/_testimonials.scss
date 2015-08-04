@@ -3,45 +3,56 @@
 
     .testimonial {
         @include cg-1of6(false, false, true);
-        @include linear-gradient(to top, $color-white-pure 0%, $color-white-pure 100%);
         cursor: pointer;
-        height: 100%;
+        height: 27em;
         vertical-align: bottom;
-        padding-top: 6em;
+        padding-top: 12em;
         position: relative;
         z-index: $z-body-mid;
 
         @include breakpoint($mq-xs) {
             padding-top: 12em;
+            @include cg-item();
+            display: none;
+            height: 33em;
         }
 
         @include breakpoint($mq-sm) {
             padding-top: 10em;
+            @include cg-item();
+            display: none;
+            height: 32em;
         }
 
         @include breakpoint($mq-md) {
             padding-top: 8em;
+            height: 24em;
         }
+
 
         .testimonial-text {
             opacity: 0;
             position: absolute;
-            padding: 1em 4em;
+            padding: 2em 4em;
             top: 0;
             width: 600%;
+            font-size: 1.4em;
 
-            @include breakpoint($mq-xs) {
+            @include breakpoint($mq-sm-max) {
                 padding: 1em;
+                width: 100%;
             }
         }
 
         .testimonial-quote {
             font-family: $font-family-accent;
-            font-size: $font-size-large;
+            font-size: 1em;
             text-align: center;
+            font-weight: 300;
+            line-height: 1.7;
 
             @include breakpoint($mq-lg-min) {
-                padding: 0.5em 0;
+                padding: 1.5em 0;
             }
 
             &:before {
@@ -55,14 +66,15 @@
 
         .testimonial-person {
             width: 100%;
-            text-align: right;
+            text-align: center;
+            font-weight: 300;
+            font-size: 1em;
 
-            @include breakpoint($mq-lg-min) {
-                padding: 0.5em 0;
+            @include breakpoint($mq-md-min) {
+                padding: 1.5em 0;
             }
-
-            &:before {
-                content: '—';
+            @include breakpoint($mq-sm-max) {
+                padding: 1.5em 0;
             }
         }
 
@@ -71,13 +83,38 @@
             max-width: 100%;
             vertical-align: bottom;
         }
+        
+        .testimonial-svg {
+            fill: $color-gray-geyser;
+            width: 90%;
+            margin-left: 5%;
+            position: absolute;
+            bottom: 0;
+            -webkit-transition: width .5s, margin-left .5s;
+            transition: width .5s, margin-left .5s;
+            @include breakpoint($mq-sm-max) {
+                display: none;
+                max-height: 200px;
+            }
+        }
 
         &.is-active {
-            @include linear-gradient(to top, rgba($color-blue-curious, 0.5) 0%, $color-white-pure 50%, $color-white-pure 100%);
             z-index: $z-body-high;
-
+            @include breakpoint($mq-sm-max) {
+                display: block;
+            }
             .testimonial-text {
                 opacity: 1;
+            }
+            .testimonial-svg {
+                fill: $color-gray-oslo;
+                width:100%;
+                margin-left: 0%;
+                @include breakpoint($mq-sm-max) {
+                    width: 50%;
+                    margin-left: 25%;
+                    display: block;
+                }
             }
         }
 
@@ -90,30 +127,46 @@
         &:nth-child(2) {
             .testimonial-text {
                 left: -100%;
+                @include breakpoint($mq-sm-max) {
+                    left: 0;
+                }
             }
+
         }
 
         &:nth-child(3) {
             .testimonial-text {
                 left: -200%;
+                @include breakpoint($mq-sm-max) {
+                    left: 0;
+                }
             }
         }
 
         &:nth-child(4) {
             .testimonial-text {
                 left: -300%;
+                @include breakpoint($mq-sm-max) {
+                    left: 0;
+                }
             }
         }
 
         &:nth-child(5) {
             .testimonial-text {
                 left: -400%;
+                @include breakpoint($mq-sm-max) {
+                    left: 0;
+                }
             }
         }
 
         &:nth-child(6) {
             .testimonial-text {
                 left: -500%;
+                @include breakpoint($mq-sm-max) {
+                    left: 0;
+                }
             }
         }
     }

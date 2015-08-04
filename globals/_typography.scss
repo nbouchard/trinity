@@ -41,6 +41,8 @@ $font-size-normal: 1em;
 $font-size-smaller: 0.8em;
 $font-size-tinier: 0.5em;
 
+$font-rem-normal: 1.4rem;
+
 @mixin typeface($usage) {
     @if $usage == 'headline' {
         font-weight: $font-weight-headline;
