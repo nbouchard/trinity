@@ -1143,8 +1143,8 @@
 // Primarily contains the plan name.
 //
 .plan-details {
-    @include cg-row(true, true);
-    border-top: solid 1px $color-white-smoke;
+    // @include cg-row(true, true);
+    // border-top: solid 1px $color-white-smoke;
 }
 
 // Supplier Brand

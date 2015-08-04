@@ -7,4 +7,112 @@ tpl:
   title: Interfaces
 ---
 
-{{> cmp_split_editorial}}
+<div class="ce-editorial v-noheight">
+    <div class="editorial-container shop-body">
+        <div class="cg-row is-centered">
+            <div class="ceux-label plan-card-labels">
+                Standard Layout
+                <span>- showing fees, offers & details -</span>
+            </div>
+            <div class="ceux-label plan-card-labels">
+                Texas Layout
+                <span>- showing fees & details -</span>
+            </div>
+            <div class="ceux-label plan-card-labels">
+                Small Business Layout
+                <span>- showing offers & details -</span>
+            </div>
+            <div class="ceux-label plan-card-labels">
+                Natural Gas Layout
+               <span> - showing details only -</span>
+            </div>
+        </div>
+
+        {{#withHash
+            cardView="true"
+            showBadge="true"
+            badgeIcon="c-icon-star-filled"
+            badgeText="Best Overall"
+            estCost="true"
+            estSavings="true"
+            fees="true"
+            offers="true"
+        }}
+            {{> cmp_plan_card_standard}}
+        {{/withHash}}
+
+        {{#withHash
+            cardView="true"
+            estSavings="true"
+            fees="true"
+            puct="true"
+        }}
+            {{> cmp_plan_card_standard}}
+        {{/withHash}}
+
+        {{#withHash
+            cardView="true"
+            showBadge="true"
+            badgeIcon="c-icon-user"
+            badgeText="Most Popular"
+            estSavings="true"
+            offers="true"
+        }}
+            {{> cmp_plan_card_standard}}
+        {{/withHash}}
+
+        {{#withHash
+            cardView="true"
+            showBadge="true"
+            badgeIcon="c-icon-green"
+            badgeText="Best Green"
+            estCost="true"
+        }}
+            {{> cmp_plan_card_standard}}
+        {{/withHash}}
+    </div>
+
+    <div class="editorial-container shop-body">
+        {{> cmp_plans_sorter}}
+
+        {{#withHash
+            slatView="true"
+            showBadge="true"
+            badgeIcon="c-icon-star-filled"
+            badgeText="Best Overall"
+            estCost="true"
+            estSavings="true"
+            fees="true"
+            offers="true"
+        }}
+            {{> cmp_plan_card_standard}}
+        {{/withHash}}
+
+        {{#withHash
+            slatView="true"
+            showBadge="true"
+            badgeIcon="c-icon-clock"
+            badgeText="Best Short Term"
+            estSavings="true"
+            fees="true"
+            puct="true"
+        }}
+            {{> cmp_plan_card_standard}}
+        {{/withHash}}
+
+        {{#withHash
+            slatView="true"
+            estSavings="true"
+            offers="true"
+        }}
+            {{> cmp_plan_card_standard}}
+        {{/withHash}}
+
+        {{#withHash
+            slatView="true"
+            estCost="true"
+        }}
+            {{> cmp_plan_card_standard}}
+        {{/withHash}}
+    </div>
+</div>

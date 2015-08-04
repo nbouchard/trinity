@@ -14,6 +14,29 @@ h4.ceux-heading {
     padding: 0.2em;
 }
 
+.ceux-label {
+    text-transform: uppercase;
+    color: $color-gray-chateau;
+    font-weight: 500;
+
+    span {
+        font-size: 1.3rem;
+        display: block;
+        text-transform: none;
+    }
+
+    &.plan-card-labels {
+        @include breakpoint($mq-sm-max) {
+            @include cg-1of2(true, true, true);
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of4(true, true, true);
+        }
+    }
+}
+
+
 // Base Color Palette
 // Greens
 .swatch-green-jewel {
