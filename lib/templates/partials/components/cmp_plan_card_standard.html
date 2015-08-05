@@ -1,20 +1,20 @@
 <div class="plan-item {{#if cardView}}plan-as-card2{{/if}} {{#if slatView}}plan-as-slat2{{/if}}">
     <section class="plan-card h-product">
-        <div class="plan-badge {{#if showBadge}}is-topPick{{/if}}">
+        {{#if showBadge}}
+        <div class="plan-badge">
             <div class="plan-badge-label"><i class="icon {{badgeIcon}}"></i> {{badgeText}}</div>
         </div>
+        {{/if}}
 
         <div class="plan-details slat-view">
-            <div class="plan-name">
-                <div class="plan-data-row">
-                    <div class="plan-name-info">
-                        <div class="ce-tooltip">
-                            <span class="tooltip-text">Green and Clean 5 Plus</span>
-                            <div class="tooltip-content">
-                                <div class="tooltip-headline">Green and Clean 5 Plus</div>
-                                <div class="tooltip-body">
-                                    New DE customers only. This 6 month plan eliminates market volatility and provides price certainty with a fixed rate for the entire initial term of your contract.
-                                </div>
+            <div class="plan-data-row plan-name">
+                <div class="plan-name-info">
+                    <div class="ce-tooltip">
+                        <span class="tooltip-text">Green and Clean 5 Plus</span>
+                        <div class="tooltip-content">
+                            <div class="tooltip-headline">Green and Clean 5 Plus</div>
+                            <div class="tooltip-body">
+                                New DE customers only. This 6 month plan eliminates market volatility and provides price certainty with a fixed rate for the entire initial term of your contract.
                             </div>
                         </div>
                     </div>

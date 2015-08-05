@@ -14,14 +14,17 @@
     .tooltip-icon {
         position: relative;
         cursor: default;
+        line-height: 1em;
 
         &:before {
             @include icon;
             content: $c-icon-char-help-pos;
             color: $color-blue-curious;
             vertical-align: middle;
-            font-size: 1.15em;
             line-height: 1em;
+            width: 2rem;
+            display: inline-block;
+            text-align: center;
         }
 
         &:after {
@@ -35,6 +38,7 @@
             border-left: 2rem solid transparent;
             border-right: 2rem solid transparent;
             border-bottom: 1.5rem solid $color-gray-cape;
+            z-index: $z-body-high;
         }
     }
 
