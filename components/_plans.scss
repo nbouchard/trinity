@@ -15,6 +15,11 @@
 
 .plan-list {
     @include cg-row();
+
+    h1 {
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 
 // All Plans Interface

@@ -112,7 +112,7 @@
         color: $color-white-pure;
         background-color: $color-gray-oslo;
         font-size: 1.25rem;
-        display: none;
+        display: table;
         position: absolute;
 
         .plan-badge-label {
@@ -122,24 +122,13 @@
             text-transform: uppercase;
             font-weight: $font-weight-body-strong;
         }
-
-        &.is-topPick {
-            display: table;
-        }
     }
 
     .plan-info {
-        box-sizing: border-box;
-
-        .plan-overview {
-            box-sizing: border-box;
-        }
-
         .plan-supplier-info {
-            box-sizing: border-box;
-
             .plan-supplier-logo {
                 padding-bottom: 0.5rem;
+                box-sizing: content-box;
             }
 
             .plan-puct {
@@ -163,6 +152,18 @@
     .plan-cta {
         box-sizing: border-box;
         font-size: $font-size-largest;
+
+        .plan-signup-btn {
+            padding: 0;
+            font-weight: $font-weight-accent;
+            line-height: 1.6em;
+        }
+
+        .btn-extended-info {
+            display: block;
+            font-size: 0.75em;
+            line-height: 1.1em;
+        }
     }
 }
 
@@ -211,11 +212,17 @@
             }
 
             .plan-supplier-info {
-                padding-top: 0.5rem;
+                padding-top: 0.75rem;
                 border-top: 1px solid $color-gray-geyser;
+
+                .plan-supplier-logo {
+                    min-width: 100px;
+                    height: 48px;
+                }
 
                 &.inTexas .plan-supplier-logo {
                     display: table-cell;
+                    width: 50%
                 }
 
                 .plan-puct {
@@ -228,10 +235,29 @@
             .plan-name {
                 padding: 0 0 0.5rem;
                 border-bottom: 1px solid $color-gray-geyser;
+
+                .plan-name-info {
+                    padding: 0 0.5rem;
+                }
+
+                .line-clamp {
+                    display: inline-block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    @include breakpoint($mq-md-max) {
+                        width: 16rem;
+                    }
+
+                    @include breakpoint($mq-lg-min) {
+                        width: 21rem;
+                    }
+                }
             }
 
             .plan-more-info {
-                padding: 0.5rem 0;
+                padding: 0.5rem 0 0;
             }
         }
 
@@ -239,9 +265,10 @@
             height: 6rem;
             background-color: $color-green-shamrock;
 
-            button {
+            .plan-signup-btn {
                 width :100%;
                 height: 100%;
+                font-weight: 400;
             }
         }
     }
@@ -252,7 +279,7 @@
 }
 
 @mixin plan-as-slat() {
-    padding: 0 0.5em;
+    // padding: 0 0.5em;
 
     .card-view {
         display: none !important;
@@ -260,14 +287,13 @@
 
     .plan-card {
         display: table;
-        border-color: $color-gray-geyser;
-        border-style: solid;
-        border-width: 0 1px 1px;
+        border: 1px solid $color-gray-geyser;
         padding: 0.75rem 1.5rem;
         padding-left: 3.5rem;
+        margin-bottom: 0.5em;
         width: 100%;
         position: relative;
-        overflow: hidden;
+        // overflow: hidden;
 
         .plan-badge {
             top: 0;
@@ -303,6 +329,11 @@
                     text-align: left;
                     padding: 0 1rem;
                 }
+
+                .tooltip-content {
+                    width: auto;
+                    max-width: 40rem;
+                }
             }
 
             .plan-more-info {
@@ -316,6 +347,10 @@
                     display: inline-block;
                     padding: 0.5rem 1.2rem;
                 }
+            }
+
+            .ce-tooltip {
+                position: inherit;
             }
         }
 
@@ -343,6 +378,7 @@
 
                     &.plan-cost-savings {
                         width: 20%;
+                        min-width: 10rem;
 
                         .plan-est-cost .plan-data-value {
                             vertical-align: bottom;
@@ -364,6 +400,7 @@
 
                     &.plan-popularity {
                         width: 10%;
+                        min-width: 7.2rem;
 
                         .plan-data-value {
                             font-size: 2rem;
@@ -376,6 +413,7 @@
 
                     &.plan-percent-green {
                         width: 10%;
+                        min-width: 6.6rem;
 
                         .plan-data-value {
                             font-size: 2rem;
@@ -446,25 +484,29 @@
 }
 
 .plans-sorter2 {
-    padding: 0 0.5em;
+    // padding: 0 0.5em;
 
     @include breakpoint($mq-md-max) {
+        padding: 0 0.5em;
+
         .slat-view {
             display: none;
         }
 
-        .sort-link {
+        .sorter-link {
             display: inline-block;
             background-color: $color-white-lilac;
             padding: 1rem 1.5rem;
             text-transform: uppercase;
             font-weight: 600;
             font-size: 1.1rem;
-            // margin: 0 0.5rem;
+            margin: 0.25rem;
         }
     }
 
     @include breakpoint($mq-lg-min) {
+        margin-bottom: 0.25em;
+
         .card-view {
             display: none;
         }
@@ -490,9 +532,9 @@
                 width: 23rem;
             }
 
-            .sort-link {
+            .sorter-link {
                 display: table-cell;
-                padding: 0.5rem 1rem;
+                padding: 0.5rem 0rem 0.5rem 1rem;
                 vertical-align: middle;
                 text-transform: uppercase;
                 font-weight: 600;
@@ -515,6 +557,17 @@
 
                 &.sort-est-cost {
                     width: 20%;
+                    min-width: 10rem;
+
+                    .bothValues {
+                        max-width: 7.3rem;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    .tooltip-content {
+                        min-width: 40rem;
+                    }
                 }
 
                 &.sort-terms {
@@ -523,10 +576,12 @@
 
                 &.sort-popularity {
                     width: 10%;
+                    min-width: 7.2em;
                 }
 
                 &.sort-percent-green {
                     width: 10%;
+                    min-width: 6.6rem;
                 }
 
                 &.sort-supplier {
@@ -541,9 +596,9 @@
                 }
             }
         }
+    }
 
-        .tooltip-icon {
-            font-size: 1.4rem;
-        }
+    .tooltip-icon {
+        font-size: 1.4rem;
     }
 }
