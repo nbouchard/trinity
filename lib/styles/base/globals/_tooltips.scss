@@ -91,6 +91,18 @@
             }
         }
 
+        .repeated {
+            .tooltip-headline {
+                padding: 1.25rem 0 0.3rem;
+            }
+
+            &:first-of-type {
+                .tooltip-headline {
+                    padding-top: 0;
+                }
+            }
+        }
+
         .tooltip-body {
             font-weight: $font-weight-body;
         }

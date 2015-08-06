@@ -152,6 +152,18 @@
     .plan-cta {
         box-sizing: border-box;
         font-size: $font-size-largest;
+
+        .plan-signup-btn {
+            padding: 0;
+            font-weight: $font-weight-accent;
+            line-height: 1.6em;
+        }
+
+        .btn-extended-info {
+            display: block;
+            font-size: 0.75em;
+            line-height: 1.1em;
+        }
     }
 }
 
@@ -548,7 +560,7 @@
                     min-width: 10rem;
 
                     .bothValues {
-                        max-width: 7rem;
+                        max-width: 7.3rem;
                         display: inline-block;
                         vertical-align: middle;
                     }
