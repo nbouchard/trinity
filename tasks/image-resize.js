@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         },
         suppliers_lg: {
             options: {
-                height: 120,
+                height: 96,
                 width: 200
             },
             src: 'lib/images/sprites/raw/supplier-logos/*.png',
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         },
         suppliers_sm: {
             options: {
-                height: 40,
+                height: 26,
                 width: 64
             },
             src: 'lib/images/sprites/raw/supplier-logos/*.png',
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         },
         utilities_lg: {
             options: {
-                height: 120,
+                height: 96,
                 width: 200
             },
             src: 'lib/images/sprites/raw/utility-logos/*.png',
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         },
         utilities_sm: {
             options: {
-                height: 40,
+                height: 26,
                 width: 64
             },
             src: 'lib/images/sprites/raw/utility-logos/*.png',
