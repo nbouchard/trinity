@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         },
         suppliers: {
             options: {
-                height: 60,
+                height: 48,
                 width: 100
             },
             src: 'lib/images/sprites/raw/supplier-logos/*.png',
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         },
         utilities: {
             options: {
-                height: 60,
+                height: 48,
                 width: 100
             },
             src: 'lib/images/sprites/raw/utility-logos/*.png',
