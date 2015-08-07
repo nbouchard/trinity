@@ -18,7 +18,11 @@ tpl:
     <div class="editorial-container">
         <section class="supplier-slat supplier-details">
             <div class="supplier-services">
-                <div class="supplier-image supplier-logo supplier-{{slug}}">{{name}}</div>
+                <div class="supplier-image supplier-logo supplier-{{slug}}-lg">{{name}}</div>
+            </div>
+            <div class="supplier-detail">
+                <div class="supplier-url"><a href="{{profileUrl}}"><h4>{{name}}</h4></a></div>
+                <div class="supplier-locations">Service Locations: TX, CA</div>
                 <ul class="service-icons">
                     <li class="service-icon service-type"><i class="icon c-icon-res" title="Residential"></i></li>
                     <li class="service-icon service-type"><i class="icon c-icon-smb" title="Small Business"></i></li>
@@ -28,11 +32,6 @@ tpl:
                     <li class="service-icon energy-type"><i class="icon c-icon-nat-gas" title="Natural Gas"></i></li>
                     <li class="service-icon energy-type"><i class="icon c-icon-solar" title="Solar"></i></li>
                 </ul>
-            </div>
-            <div class="supplier-detail">
-                <div class="supplier-url"><a href="{{profileUrl}}">{{profileUrl}}</a></div>
-                <div class="supplier-phone">(555) 555-5555</div>
-                <div class="supplier-locations">Service Locations: <a href="#">Texas</a>, <a href="#">California</a></div>
             </div>
         </section>
 
