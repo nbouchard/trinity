@@ -242,3 +242,9 @@
     // flip horizontally
     transform: scaleX(-1);
 }
+
+.v-img140 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 70%
+    );
+}
