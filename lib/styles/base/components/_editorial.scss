@@ -905,27 +905,48 @@
 .v-commercial-lead {
     background-color: $color-white-lily;
 
-    .commercial-form {
-        background: $color-white-pure;
-        padding: 2em;
+    .commercial-form-body {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item();
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-5of8(true, true, true);
+        }
 
         .editorial-subhead {
-            margin-bottom: 1em;
+            margin-bottom: 0.5em;
         }
 
         .a-content .textarea {
             height:4em;
         }
+
         &.v-commercial-form-complete {
             font-size: 1.2em;
             .headline-container {
                 font-size: .8em;
             }
         }
+
+        .checkout-actions {
+            margin: 0 0 1em 0;
+        }
     }
 
-    &.ce-partner-grid {
-        background-color: $color-white-pure;
+    .commercial-form-partners {
+        @include breakpoint($mq-sm-max) {
+            @include cg-item();
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-3of8(true, true, true);
+        }
+    }
+
+    .form-background {
+        background: $color-white-pure;
+        padding: 1.5em;
     }
 }
 

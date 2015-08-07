@@ -28,25 +28,14 @@
             vertical-align: middle;
         }
     }
-    &.v-commercial-lead {
+    &.v-vertical {
         .partner,
         .supplier {
-            @include breakpoint($mq-sm-max) {
-                @include cg-item();
-                padding-top: 2em;
-                padding-bottom: 2em;
-            }
+            @include cg-1of2(true, true, true);
+            padding: 1.5em 0.5em;
 
             @include breakpoint($mq-md) {
                 @include cg-item();
-                padding-top: 2em;
-                padding-bottom: 2em;
-            }
-
-            @include breakpoint($mq-lg-min) {
-                @include cg-item();
-                padding-top: 2em;
-                padding-bottom: 2em;
             }
         }
     }
