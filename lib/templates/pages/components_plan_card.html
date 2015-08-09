@@ -8,7 +8,7 @@ tpl:
 ---
 
 <div class="ce-editorial v-noheight">
-    <div class="editorial-container shop-body">
+    <div class="editorial-container">
         <div class="cg-row is-centered">
             <div class="ceux-label plan-card-labels">
                 Standard Layout
@@ -31,7 +31,6 @@ tpl:
         {{#withHash
             cardView="true"
             showBadge="true"
-            badgeIcon="c-icon-star-filled"
             badgeText="Best Overall"
             estCost="true"
             estSavings="true"
@@ -53,7 +52,6 @@ tpl:
         {{#withHash
             cardView="true"
             showBadge="true"
-            badgeIcon="c-icon-user"
             badgeText="Most Popular"
             estSavings="true"
             offers="true"
@@ -64,7 +62,6 @@ tpl:
         {{#withHash
             cardView="true"
             showBadge="true"
-            badgeIcon="c-icon-green"
             badgeText="Best Green"
             estCost="true"
         }}
@@ -72,12 +69,13 @@ tpl:
         {{/withHash}}
     </div>
 
-    <div class="editorial-container shop-body">
-        <div class="all-plans">{{> cmp_plans_sorter}}
+    <div class="editorial-container">
+        <div class="all-plans">
+            {{> cmp_plans_sorter}}
+
             {{#withHash
                 slatView="true"
                 showBadge="true"
-                badgeIcon="c-icon-star-filled"
                 badgeText="Best Overall"
                 estCost="true"
                 estSavings="true"
@@ -86,11 +84,10 @@ tpl:
             }}
                 {{> cmp_plan_card_standard}}
             {{/withHash}}
-            
+
             {{#withHash
                 slatView="true"
                 showBadge="true"
-                badgeIcon="c-icon-clock"
                 badgeText="Best Short Term"
                 estSavings="true"
                 fees="true"
@@ -98,7 +95,7 @@ tpl:
             }}
                 {{> cmp_plan_card_standard}}
             {{/withHash}}
-            
+
             {{#withHash
                 slatView="true"
                 estSavings="true"
@@ -106,7 +103,7 @@ tpl:
             }}
                 {{> cmp_plan_card_standard}}
             {{/withHash}}
-            
+
             {{#withHash
                 slatView="true"
                 estCost="true"
