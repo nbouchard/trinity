@@ -1115,6 +1115,94 @@
     }
 }
 
+.ce-grid-item {
+    @include breakpoint($mq-sm-max) {
+        padding: 1em 0;
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+
+    @include breakpoint($mq-md-min) {
+        padding: 1em;
+    }
+
+    &.cg-1of2 {
+        &:nth-child(2n+1) {
+            clear: both;
+        }
+    }
+
+    &.cg-1of3 {
+        &:nth-child(3n+1) {
+            clear: both;
+        }
+    }
+
+    &.cg-1of4 {
+        &:nth-child(4n+1) {
+            clear: both;
+        }
+
+        @include breakpoint($mq-md-max) {
+            &:nth-child(2n+1) {
+                clear: both;
+            }
+        }
+    }
+
+    &.cg-1of5 {
+        &:nth-child(5n+1) {
+            clear: both;
+        }
+    }
+
+    &.cg-1of6 {
+        &:nth-child(6n+1) {
+            clear: both;
+        }
+
+        @include breakpoint($mq-md-max) {
+            &:nth-child(3n+1) {
+                clear: both;
+            }
+        }
+    }
+
+    .grid-item-headline {
+        font-size: $font-size-huge;
+        font-weight: $font-weight-headline-book;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.v-stats {
+    @include editorial-bg-color($color: 'light');
+    color: $color-blue-curious;
+
+    .ce-grid-item {
+        text-align: center;
+    }
+
+    .grid-item-headline {
+        font-size: $font-size-extrahuger;
+        font-family: $font-family-body;
+    }
+
+    .grid-item-body {
+        padding-top: 0.5em;
+        font-size: $font-size-larger;
+    }
+}
+
 // For prototype functionality purposes only
 #ce-commercial-form {
     &.is-done {
