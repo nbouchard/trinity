@@ -2,18 +2,22 @@
     <div class="split-visual {{#if bg_color}}split-{{bg_color}}{{/if}} {{#if svg}}svg-bg{{/if}}" style="background-image: url({{photo_bg}});">
         {{#if icon}}
             <div class="split-icon">
-                <i class="fa fa-map-marker"></i>
+                <i class="icon c-icon-{{icon}}"></i>
             </div>
         {{/if}}
     </div>
     <div class="split-content">
         <div class="split-content-interior">
             <div class="split-inner">
-                <h2>Save money</h2>
+                {{#if headline}}
+                    <h2>{{headline}}</h2>
+                {{/if}}
 
-                <p>Last year, Choose Energy customers saved up to 37 percent on their energy bills by shopping around and switching suppliers. That’s because when suppliers compete for your business, you can shop smart by comparing rates. What’s more, we’ve negotiated special rates with our supplier partners that are available only through our site. So, let the savings begin.</p>
+                <p>{{{body_text}}}</p>
 
-                <a href="#" class="split-cta">Let's get saving<i class="icon c-icon-caret-right"></i></a>
+                {{#if cta_text}}
+                    <a href="#" class="split-cta">{{cta_text}}<i class="icon c-icon-caret-right"></i></a>
+                {{/if}}
             </div>
         </div>
     </div>

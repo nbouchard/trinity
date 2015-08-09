@@ -1,0 +1,44 @@
+.press-articles {
+    @include clearfix;
+}
+
+.press-links {
+    text-align: center;
+    margin-top: 2em;
+
+    .link-as-button {
+        @include breakpoint($mq-xs) {
+            display: block;
+
+            &:first-of-type {
+                margin-bottom: 1em;
+            }
+        }
+
+        @include breakpoint($mq-sm-min) {
+            margin: 0 1em;
+        }
+    }
+}
+
+.ce-grid-item.ce-press-item {
+    @include breakpoint($mq-md-min) {
+        padding: 1em 2em;
+    }
+
+    .article-date {
+        color: $color-gray-chateau;
+        padding-bottom: 0.5em;
+    }
+
+    .article-source {
+        text-transform: uppercase;
+        font-weight: $font-weight-body-strong;
+        color: $color-gray-chateau;
+        padding-bottom: 0.5em;
+    }
+
+    .article-title {
+
+    }
+}
