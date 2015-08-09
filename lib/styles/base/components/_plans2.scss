@@ -1,6 +1,9 @@
+// Basic styles for all variations of plan cards
+
 //TODO: Remove these 2 lines after deleting old plan card styles and uncomment the other line
 .plan-as-card2 .plan-card,
-.plan-as-slat2 .plan-card {
+.plan-as-slat2 .plan-card,
+.plan-as-modal .plan-card {
 // .plan-card {
     position: relative;
 
@@ -176,7 +179,6 @@
 
         .plan-signup-btn {
             padding: 0;
-            font-weight: $font-weight-accent;
             line-height: 1.6em;
         }
 
@@ -188,6 +190,7 @@
     }
 }
 
+// Styles specific to the standard size card layout
 @mixin plan-as-card() {
     .slat-view {
         display: none;
@@ -289,6 +292,7 @@
     }
 }
 
+// Styles specific to the standard size zlat layout
 @mixin plan-as-slat() {
     .card-view {
         display: none !important;
@@ -453,33 +457,7 @@
     }
 }
 
-.plan-as-card2 {
-    @include breakpoint($mq-sm-max) {
-        @include cg-1of2(true, true, true);
-    }
-
-    @include breakpoint($mq-md-min) {
-        @include cg-1of4(true, true, true);
-    }
-
-    @include plan-as-card();
-}
-
-.plan-as-slat2 {
-    @include breakpoint($mq-lg-min) {
-        @include plan-as-slat();
-    }
-
-    @include breakpoint($mq-md-max) {
-        @include cg-1of4(true, true, true);
-        @include plan-as-card();
-    }
-
-    @include breakpoint($mq-sm-max) {
-        @include cg-1of2(true, true, true);
-    }
-}
-
+// Styles for the plan card sorter
 .plans-sorter2 {
     @include breakpoint($mq-md-max) {
         padding: 0 0.5em;
@@ -583,5 +561,329 @@
 
     .tooltip-icon {
         font-size: 1.4rem;
+    }
+}
+
+// Layout for grid of plan cards in card layout
+.plan-as-card2 {
+    @include breakpoint($mq-sm-max) {
+        @include cg-1of2(true, true, true);
+    }
+
+    @include breakpoint($mq-md-min) {
+        @include cg-1of4(true, true, true);
+    }
+
+    @include plan-as-card();
+}
+
+// Layout for grid of plan cards in slat layout
+.plan-as-slat2 {
+    @include breakpoint($mq-lg-min) {
+        @include plan-as-slat();
+    }
+
+    @include breakpoint($mq-md-max) {
+        @include cg-1of4(true, true, true);
+        @include plan-as-card();
+    }
+
+    @include breakpoint($mq-sm-max) {
+        @include cg-1of2(true, true, true);
+    }
+}
+
+.plan-as-modal {
+    height: 100%;
+
+    .plan-card {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .plan-data-row {
+            display: table;
+            width: 100%;
+
+            .plan-data-label,
+            .plan-data-value {
+                display: table-cell;
+            }
+        }
+    }
+
+    .plan-header {
+        background-color: $color-white-pure;
+        z-index: $z-overlay-mid;
+        flex: none;
+
+        .plan-basics {
+            @include breakpoint($mq-md-max) {
+                padding: 1rem 1.5rem;
+            }
+
+            @include breakpoint($mq-lg-min) {
+                padding: 1rem 4rem;
+            }
+
+            .plan-data-value {
+                font-weight: 300;
+                font-size: 1.4rem;
+            }
+
+            .plan-supplier-info {
+                width: 10rem;
+                padding-right: 2rem;
+
+                .plan-puct {
+                    text-align: center;
+                    padding: 0.2rem 0 0;
+                    font-size: 80%;
+                    line-height: 1em;
+                }
+            }
+
+            .plan-name {
+                font-weight: 700;
+                line-height: 1.2em;
+
+                @include breakpoint($mq-md-max) {
+                    font-size: 1.8rem;
+                }
+
+                @include breakpoint($mq-lg-min) {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .plan-utility {
+                color: $color-gray-chateau;
+
+                @include breakpoint($mq-md-max) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .plan-cta {
+            .plan-signup-btn {
+                width: 100%;
+                height: auto;
+                padding: 0.3rem 0;
+
+                @include breakpoint($mq-md-max) {
+                }
+
+                @include breakpoint($mq-lg-min) {
+                }
+            }
+        }
+
+        .plan-shortcuts {
+            border-bottom: 1px solid $color-gray-geyser;
+            background-color: $color-white-lily;
+            padding: 0;
+            text-align: left;
+            display: block;
+
+            .plan-shortcut-link {
+                text-transform: uppercase;
+                display: inline-block;
+                font-size: 1.2rem;
+                font-weight: 600;
+
+                @include breakpoint($mq-md-max) {
+                    padding: 1rem 1.5rem;
+                }
+
+                @include breakpoint($mq-lg-min) {
+                    padding: 1rem 4rem;
+                }
+            }
+        }
+    }
+
+    .plan-body {
+        height: 100%;
+        flex: auto;
+        overflow-y: scroll;
+
+        @include breakpoint($mq-md-max) {
+            padding: 0 1.5rem;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            padding: 0 4rem;
+        }
+
+        .section-title {
+            font-family: $font-family-body;
+            color: $color-gray-chateau;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-overview {
+            @include clearfix();
+            border-bottom: 1px solid $color-gray-geyser;
+            padding: 1rem 0;
+
+            @include breakpoint($mq-lg-min) {
+                padding: 2rem 0;
+            }
+
+            .plan-data-row {
+                display: table;
+                width: 100%;
+
+                .plan-data-label,
+                .plan-data-value {
+                    display: table-cell;
+                    padding: 0.5rem 0;
+                }
+
+                .plan-data-label {
+                    width: 12rem;
+                    vertical-align: top;
+                }
+
+                .plan-data-value {
+                    font-size: 1.7rem;
+                }
+            }
+
+            .plan-info-price,
+            .plan-info-other {
+                @include breakpoint($mq-lg-min) {
+                    @include cg-1of2(false, false, true);
+                    padding: 0 1rem;
+
+                    &:first-of-type {
+                        padding-left: 0;
+                    }
+
+                    &:last-of-type {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            .plan-unit-cost {
+                .plan-data-value {
+                    font-size: 2rem;
+                }
+            }
+
+            .plan-fees {
+                .fee-label {
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    color: $color-gray-chateau;
+
+                    @include breakpoint($mq-md-max) {
+                        display: block;
+                        line-height: 1.2em;
+                    }
+                }
+
+                .fee-description {
+                    display: block;
+                    font-size: 1.2rem;
+                    padding-bottom: 0.5rem;
+                    line-height: 1em;
+
+                    &:last-of-type {
+                        padding: 0;
+                    }
+                }
+            }
+
+            .plan-documents {
+                text-align: left;
+                padding: 1.5rem 0 0;
+
+                .plan-document {
+                    display: block;
+                }
+            }
+        }
+
+        .plan-description {
+            border-bottom: 1px solid $color-gray-geyser;
+            padding: 1rem 0;
+            font-weight: 400;
+
+            @include breakpoint($mq-lg-min) {
+                padding: 2rem 0;
+                font-size: 1.6rem;
+            }
+        }
+
+        .plan-about-supplier {
+            border-bottom: 1px solid $color-gray-geyser;
+            padding: 1rem 0;
+
+            @include breakpoint($mq-lg-min) {
+                padding: 2rem 0;
+            }
+        }
+
+        .plan-faqs {
+            padding: 1rem 0;
+
+            @include breakpoint($mq-lg-min) {
+                padding: 2rem 0;
+            }
+
+            .plan-faq-item {
+                padding: 0.5rem 0;
+
+                h5 {
+                    font-family: $font-family-body;
+                    line-height: 1.4em;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .ce-tooltip {
+        position: inherit;
+    }
+}
+
+.plan-details-modal {
+    .modal-dialog {
+        width: auto;
+        margin: auto;
+        position: absolute;
+
+        @include breakpoint($mq-md-max) {
+            top: 3rem;
+            bottom: 3rem;
+            left: 3rem;
+            right: 3rem;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            top: 10rem;
+            bottom: 10rem;
+            left: 10rem;
+            right: 10rem;
+        }
+    }
+
+    .modal-content {
+        height: 100%;
+    }
+
+    .modal-scroll-area {
+        height: 100%;
+        overflow-y: scroll;
     }
 }

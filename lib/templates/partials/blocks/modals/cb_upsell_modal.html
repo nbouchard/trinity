@@ -1,6 +1,6 @@
+<a class="modal-close" onclick="closeModal()"><i class="icon c-icon-char-x"></i></a>
 <div class="modal-header">
     <h2 class="modal-headline nat-gas">Want Natural Gas?</h2>
-    <a href="#" class="btn-close">Close <i class="icon fa fa-times"></i></a>
 </div>
 <div class="modal-body">
     <p class="larger">Natural gas plans may be available in your area.</p>
@@ -10,3 +10,10 @@
         <button type="submit" class="btn-primary" >Compare Natural Gas Rates</button>
     </div>
 </div>
+
+<script type="text/javascript">
+    function closeModal(){
+        document.getElementById('modalBg').classList.add('hidden');
+        document.getElementById('modal').classList.add('hidden');
+    };
+</script>

@@ -1,0 +1,22 @@
+---
+site:
+  name: ChooseUX
+  version: 0.1.0
+tpl:
+  desc: Page Desc
+  title: Interfaces
+---
+
+<!-- From Angular UI modal - added here for styling purposes -->
+<div class="modal-backdrop" id="modalBg"></div>
+<div class="modal plan-details-modal" id="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            {{#withHash
+                puct="true"
+            }}
+                {{> cmp_plan_card_details}}
+            {{/withHash}}
+        </div>
+    </div>
+</div>
