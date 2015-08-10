@@ -3,7 +3,8 @@
 //TODO: Remove these 2 lines after deleting old plan card styles and uncomment the other line
 .plan-as-card2 .plan-card,
 .plan-as-slat2 .plan-card,
-.plan-as-modal .plan-card {
+.plan-as-modal .plan-card,
+.plan-as-expandable .plan-card {
 // .plan-card {
     position: relative;
 
@@ -593,6 +594,7 @@
     }
 }
 
+// Layout for single plan card in a modal
 .plan-as-modal {
     height: 100%;
 
@@ -857,6 +859,7 @@
     }
 }
 
+// Positioning & layout for single plan card modal containers
 .plan-details-modal {
     .modal-dialog {
         width: auto;
@@ -887,3 +890,203 @@
         overflow-y: scroll;
     }
 }
+
+// Layout for list of collapsable plan cards
+.plan-as-expandable {
+    background-color: $color-white-pure;
+    margin-bottom: 2rem;
+
+    .plan-header {
+        background-color: $color-green-cruise-light;
+
+        @include breakpoint($mq-md-max) {
+            padding: 0 1rem;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            padding: 1.5rem 2.5rem 0.75rem;
+            font-size: 1.8rem;
+            font-weight: $font-weight-accent;
+        }
+    }
+
+    .plan-body {
+        @include breakpoint($mq-md-max) {
+            padding: 0 1rem;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            padding: 0 2.5rem;
+        }
+
+        .plan-overview {
+            @include clearfix;
+            border-bottom: 1px solid $color-gray-geyser;
+            padding: 1rem 0;
+
+            .plan-facts {
+                @include cg-1of2(true, true, true);
+                padding-right: 0.5rem;
+
+                .plan-unit-cost,
+                .plan-percent-green {
+                    display: inline-block;
+                    float: left;
+                    width: 50%;
+                }
+
+                .plan-terms {
+                    display: block;
+                    clear: both;
+                    padding-top: 0.5rem;
+
+                    .plan-term-length,
+                    .plan-term-type {
+                        display: inline-block;
+                        line-height: 1.2em;
+                    }
+
+                    .plan-term-type {
+                        padding-left: 0.5rem;
+                    }
+                }
+
+                .plan-data-label,
+                .plan-data-value {
+                    display: block;
+                }
+            }
+
+            .plan-documents {
+                @include cg-1of2(true, true, true);
+                text-align: left;
+                padding-left: 0.5rem;
+
+                .plan-document {
+                    display: block;
+                    font-weight: $font-weight-accent;
+                    font-size: 1.3rem;
+                    padding-bottom: 0.5rem;
+                }
+            }
+        }
+
+        .plan-details {
+            &.is-closed {
+                display: none;
+            }
+
+            .plan-logo-description {
+                display: table;
+                width: 100%;
+                padding: 1rem 0;
+                border-bottom: 1px solid $color-gray-geyser;
+
+                .plan-supplier-info {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-right: 0.5rem;
+                }
+
+                .plan-description {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: left;
+                    font-size: 1.2rem;
+                    padding-left: 0.5rem;
+                }
+            }
+
+            .plan-fees-offer {
+                padding: 1rem 0;
+                border-bottom: 1px solid $color-gray-geyser;
+                @include clearfix;
+
+                .plan-fees {
+                    @include cg-2of3(true, true, true);
+                }
+
+                .plan-offers,
+                .plan-utility {
+                    @include cg-1of3(true, true, true);
+                    padding-bottom: 0;
+
+                    .plan-data-value {
+                        font-size: 1.2rem;
+                        line-height: 1em;
+                    }
+                }
+
+                .plan-data-label,
+                .plan-data-value {
+                    display: block;
+                }
+
+                .fee-label {
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    color: $color-gray-chateau;
+
+                    @include breakpoint($mq-md-max) {
+                        display: block;
+                        line-height: 1.2em;
+                    }
+                }
+
+                .fee-description {
+                    display: block;
+                    font-size: 1.2rem;
+                    padding-bottom: 0.5rem;
+                    line-height: 1em;
+
+                    &:last-of-type {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .plan-actions {
+        display: table;
+        width: 100%;
+
+        @include breakpoint($mq-md-max) {
+            padding: 0 1rem;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            padding: 0 2.5rem;
+        }
+
+        .plan-view-expanded {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            padding: 0.75rem 0;
+            width: 50%;
+            text-decoration: none;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            &.details {
+                color: $color-green-jewel-light;
+                font-size: 1.3rem;
+
+                .is-open:before {
+                    content: $c-icon-chevron-up;
+                }
+
+                .is-closed:before {
+                    content: $c-icon-chevron-down;
+                }
+            }
+
+            &.remove {
+                font-size: 1.1rem;
+                color: $color-gray-chateau;
+            }
+        }
+    }
+}
+

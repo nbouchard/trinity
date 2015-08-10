@@ -1,148 +1,221 @@
 <div class="checkout-cart">
-    <h3 class="cart-header"><i class="icon fa fa-shopping-cart"></i> Your Cart</h3>
-    <ul class="plan-list">
-        <li class="plan-as-expanded plan-item">
-            <section class="plan-card h-product">
-                <div class="plan-page-header">
-                    <div class="plan-page-name">
-                        <h2 class="plan-page-name-container">
-                            <span class="p-name">greenelectric™ Fixed - 6 Months</span>
-                            <small class="plan-utility">plan utility</small>
-                        </h2>
+    <h3 class="cart-header">Your Cart</h3>
+
+    <div class="plan-as-expandable plan-item">
+        <section class="plan-card h-product">
+            <div class="plan-header">
+                Green and Clean 5 Plus
+            </div>
+
+            <div class="plan-body">
+                <div class="plan-data-row plan-overview">
+                    <div class="plan-facts">
+                        <div class="plan-unit-cost">
+                            <div class="plan-data-label">
+                                per kwh
+                            </div>
+                            <div class="plan-data-value">
+                                12.54<span class="cost-unit">&cent;</span>
+                            </div>
+                        </div>
+
+                        <div class="plan-percent-green">
+                            <div class="plan-data-label">
+                                green
+                            </div>
+                            <div class="plan-data-value">
+                                100%<i class="icon c-icon-green"></i>
+                            </div>
+                        </div>
+
+                        <div class="plan-terms">
+                            <div class="plan-data-label">
+                                terms
+                            </div>
+                            <div class="plan-data-value">
+                                <span class="plan-term-length">12 mo.</span>
+                                <span class="plan-term-type">variable <i class="icon c-icon-locked"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plan-documents">
+                        <a class="plan-document" href="#">Electricity Facts Label</a>
+                        <a class="plan-document" href="#">Terms of Service</a>
+                        <a class="plan-document" href="#">Your Rights As A Customer</a>
                     </div>
                 </div>
-                <div class="plan-body">
-                    <div class="plan-page-section">
-                        <div class="plan-callout">
-                            <data class="plan-price plan-data p-price">
-                                <strong class="plan-page-label">Plan Price</strong>
-                                <span class="plan-data-value">9.89¢
-                                    <span></span>
-                                </span>
-                                <abbr class="p-unit plan-data-label" title="HUMAN-READABLE-UNITS-STRING">per kWh</abbr>
-                            </data>
-                        </div>
-                        <div class="plan-page-details">
-                            <p class="plan-rank"><i class="icon fa fa-star" title="Best Plan"></i> Best Plan</p>
-                            <p class="plan-description e-description">New Customers Only.   Enjoy North American Power's 25% greenelectric service while locking in a fixed rate for 6 months.</p>
-                        </div>
-                        <div class="plan-page-actions">
-                            <div class="plan-page-popularity is-centered">
-                                <data class="plan-popularity-data p-popularity">
-                                    <span class="plan-popularity-value">Chosen <strong class="plan-popularity-count">0</strong> Times</span>
-                                    <span class="plan-popularity-label">In Last 30 Days</span>
-                                </data>
+
+                <div class="plan-details">
+                    <div class="plan-data-row plan-logo-description">
+                        <div class="plan-supplier-info">
+                            <div class="plan-supplier-logo">
+                                <a href="/website_suppliers_detail.html" class="supplier-logo supplier-spark-energy">Spark Energy</a>
                             </div>
-                            <div class="plan-page-signup">
-                                <button class="plan-signup-btn btn-primary btn-huge btn-fullwidth" type="button">Sign Up</button>
-                                <span class="x-schema-prop">greenelectric™ Fixed - 6 Months</span>
-                                <span class="x-schema-prop">North American Power</span>
-                                <div class="plan-savings"></div>
-                            </div>
+                            {{#if puct}}
+                            <div class="plan-puct">puct # 10041</div>
+                            {{/if}}
+                        </div>
+
+                        <div class="plan-description">
+                            New DE customers only. This 6 month plan eliminates market volatility and provides price certainty with a fixed rate for the entire initial term of your contract.
                         </div>
                     </div>
-                    <div class="plan-page-section">
-                        <div class="plan-data-row">
-                            <div class="plan-data plan-cost">
-                                <strong class="plan-page-label">Estimated Cost</strong>
-                                <div class="plan-data plan-cost">
-                                    <data class="plan-data-value p-cost-monthly">$60.63</data>
-                                    <abbr class="plan-data-label" title="estimated cost of supply in dollars per month">Estimated per Month</abbr>
-                                </div>
+
+                    <div class="plan-fees-offer">
+                        <div class="plan-data-row plan-fees">
+                            <div class="plan-data-label">
+                                fees
                             </div>
-                            <div class="plan-data plan-contract">
-                                <strong class="plan-page-label">Plan Term</strong>
-                                <data class="plan-data-value p-term">6 months</data>
-                                <data class="plan-data-label p-category"><i class="icon c-icon-locked"></i> Fixed</data>
-                                <!-- <data class="plan-data-label p-category"><i class="icon c-icon-unlocked"></i> Variable</data>
-                                <data class="plan-data-label p-category"><i class="icon c-icon-calendar"></i> End Date</data>
-                                <data class="plan-data-label p-category"><i class="icon c-icon-clock-graph"></i> Time of Use</data>
-                                <data class="plan-data-label p-category"><i class="icon c-icon-graph"></i> Indexed</data>
-                                <data class="plan-data-label p-category"><i class="icon c-icon-credit-card"></i> Prepaid</data>
-                                <data class="plan-data-label p-category"><i class="icon c-icon-price-tag"></i> Introductory</data> -->
-                            </div>
-                            <div class="plan-data plan-renewable">
-                                <strong class="plan-page-label">Renewable</strong>
-                                <data class="plan-data-value p-renewable">25%</data>
-                                <span class="plan-data-label">Green Energy</span>
-                                <span class="plan-data-label">Carbon Offset</span>
+                            <div class="plan-data-value">
+                                <span class="fee-amount">$4.95</span>
+                                <span class="fee-label">Monthly Fees</span>
+                                <span class="fee-description">monthly service fee</span>
+
+                                <span class="fee-amount">$20.00</span>
+                                <span class="fee-label">Early Termination Fees</span>
+                                <span class="fee-description">for each month remaining in contract</span>
                             </div>
                         </div>
-                        <div class="plan-data-row plan-extras">
-                            <div class="plan-data plan-offers">
-                                <strong class="plan-page-label">Offers</strong>
-                                <ul class="plan-data-list">
-                                    <li>No offers.</li>
-                                </ul>
+
+                        <div class="plan-data-row plan-offers">
+                            <div class="plan-data-label">
+                                offers
                             </div>
-                            <div class="plan-data plan-fees">
-                                <strong class="plan-page-label">1 Fees</strong>
-                                <ul class="plan-data-list">
-                                    <li><strong>$1000</strong> - ETF</li>
-                                </ul>
-                            </div>
-                            <div class="plan-data plan-documents">
-                                <strong class="plan-page-label">2 Documents</strong>
-                                <ul class="plan-data-list">
-                                    <li><a target="_blank">Environmental Disclosure</a></li>
-                                    <li><a target="_blank">Terms of Service</a></li>
-                                </ul>
+                            <div class="plan-data-value">
+                                <div class="">none</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="plan-info">
-                        <div class="plan-supplier plan-big-section">
-                            <h4 class="plan-section-header ng-binding">About North American Power</h4>
-                            <div class="supplier-details">
-                                <div class="supplier-logos">
-                                    <a class="supplier-brand supplier-north-american-power" href="/suppliers/north-american-power"><span>North American Power</span></a>
-                                </div>
-                                <div class="supplier-rating">
-                                    <div class="rating-widget" >
-                                        <data class="rating-value p-rating">
-                                            <i class="icon rate-5 fa fa-star-o"></i>
-                                            <i class="icon rate-4 fa fa-star-o"></i>
-                                            <i class="icon rate-3 fa fa-star-half-o"></i>
-                                            <i class="icon rate-2 fa fa-star"></i>
-                                            <i class="icon rate-1 fa fa-star"></i>
-                                        </data>
-                                        <a href="/supplier/north-american-power/#reviews" class="rating-count">
-                                            <span class="rating-count-text">Based on </span>
-                                            <data class="p-rating-count ng-binding" itemprop="reviewCount" value="53">53</data><span class="rating-count-text"> Reviews</span>
-                                        </a>
-                                    </div>
-                                </div>
+
+                        <div class="plan-data-row plan-utility">
+                            <div class="plan-data-label">
+                                utility
                             </div>
-                            <div class="supplier-description">
-                                <p><a href="https://www.chooseenergy.com/suppliers/north-american-power/">North American Power</a>, one of Forbes Top 100 Most Promising Companies, is dedicated to providing its customers with competitive electricity and natural gas rates that are focused on helping the environment through renewable energy sources. North American Power offers its services in many states throughout the country.</p>
+                            <div class="plan-data-value">
+                                <div class="">Centerpoint Energy</div>
                             </div>
                         </div>
-                        <div class="plan-faqs plan-big-section">
-                            <h4 class="plan-section-header">Frequently Asked Questions</h4>
-                            <ul class="plan-faq-list">
-                                <li>
-                                    <h5 class="ng-binding">When will this plan start?</h5>
-                                    <p class="ng-binding">After selecting your plan and accepted by your selected supplier after completing the enrollment form, your new plan will typically begin on the next applicable meter read date after your utility processes your enrollment and continue for the number of billing cycles (months) listed in the plan contract. The account migration process can take 30 - 60 days depending on your utility's and selected supplier's enrollment process and meter read date schedule.</p>
-                                </li>
-                                <li>
-                                    <h5 class="ng-binding">What happens when this plan ends?</h5>
-                                    <p class="ng-binding">One of two things: Either the contract converts to a month-to-month plan at the default fixed/variable market rate, or the plan will be renewed for a second term at the default fixed/variable market rate. Consult your plan's documents for details. Choose Energy and your new supplier will notify you 30-60 days before your plan ends.</p>
-                                </li>
-                                <li>
-                                    <h5 class="ng-binding">How will changing suppliers impact my bill?</h5>
-                                    <p class="ng-binding">One of two things: Either the contract converts to a month-to-month plan at the default fixed/variable market rate, or the plan will be renewed for a second term at the default fixed/variable market rate. Consult your plan's documents for details. Choose Energy and your new supplier will notify you 30-60 days before your plan ends.</p>
-                                </li>
-                                <li>
-                                    <p class="learn-more"><a href="#">Learn More about Switching Suppliers →</a></p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="is-centered">
-                        <button class="plan-page-remover" type="button"><i class="icon fa fa-trash"></i> Remove Plan</button>
                     </div>
                 </div>
-            </section>
-        </li>
-    </ul>
+            </div>
+
+            <div class="plan-actions">
+                <a class="plan-view-expanded details">
+                    details <i class="icon c-icon-chevron-up"></i>
+                </a>
+                <a class="plan-view-expanded remove">
+                    remove <i class="icon c-icon-char-x"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <div class="plan-as-expandable plan-item">
+        <section class="plan-card h-product">
+            <div class="plan-header">
+                Green and Clean 5 Plus
+            </div>
+
+            <div class="plan-body">
+                <div class="plan-data-row plan-overview">
+                    <div class="plan-facts">
+                        <div class="plan-unit-cost">
+                            <div class="plan-data-label">
+                                per kwh
+                            </div>
+                            <div class="plan-data-value">
+                                12.54<span class="cost-unit">&cent;</span>
+                            </div>
+                        </div>
+
+                        <div class="plan-percent-green">
+                            <div class="plan-data-label">
+                                green
+                            </div>
+                            <div class="plan-data-value">
+                                100%<i class="icon c-icon-green"></i>
+                            </div>
+                        </div>
+
+                        <div class="plan-terms">
+                            <div class="plan-data-label">
+                                terms
+                            </div>
+                            <div class="plan-data-value">
+                                <span class="plan-term-length">12 mo.</span>
+                                <span class="plan-term-type">variable <i class="icon c-icon-locked"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plan-documents">
+                        <a class="plan-document" href="#">Electricity Facts Label</a>
+                        <a class="plan-document" href="#">Terms of Service</a>
+                        <a class="plan-document" href="#">Your Rights As A Customer</a>
+                    </div>
+                </div>
+
+                <div class="plan-details is-closed">
+                    <div class="plan-data-row plan-logo-description">
+                        <div class="plan-supplier-info">
+                            <div class="plan-supplier-logo">
+                                <a href="/website_suppliers_detail.html" class="supplier-logo supplier-spark-energy">Spark Energy</a>
+                            </div>
+                            {{#if puct}}
+                            <div class="plan-puct">puct # 10041</div>
+                            {{/if}}
+                        </div>
+
+                        <div class="plan-description">
+                            New DE customers only. This 6 month plan eliminates market volatility and provides price certainty with a fixed rate for the entire initial term of your contract.
+                        </div>
+                    </div>
+
+                    <div class="plan-fees-offer">
+                        <div class="plan-data-row plan-fees">
+                            <div class="plan-data-label">
+                                fees
+                            </div>
+                            <div class="plan-data-value">
+                                <span class="fee-amount">$4.95</span>
+                                <span class="fee-label">Monthly Fees</span>
+                                <span class="fee-description">monthly service fee</span>
+
+                                <span class="fee-amount">$20.00</span>
+                                <span class="fee-label">Early Termination Fees</span>
+                                <span class="fee-description">for each month remaining in contract</span>
+                            </div>
+                        </div>
+
+                        <div class="plan-data-row plan-offers">
+                            <div class="plan-data-label">
+                                offers
+                            </div>
+                            <div class="plan-data-value">
+                                <div class="">none</div>
+                            </div>
+                        </div>
+
+                        <div class="plan-data-row plan-utility">
+                            <div class="plan-data-label">
+                                utility
+                            </div>
+                            <div class="plan-data-value">
+                                <div class="">Centerpoint Energy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plan-actions">
+                <a class="plan-view-expanded details">
+                    details <i class="icon c-icon-chevron-up"></i>
+                </a>
+                <a class="plan-view-expanded remove">
+                    remove <i class="icon c-icon-char-x"></i>
+                </a>
+            </div>
+        </section>
+    </div>
 </div>

@@ -3,22 +3,23 @@
 //     .ce-editorial           - Wrapper for the checkout & confirmation header
 //     .checkout-content       - Wrapper for the checkout & confirmation content area
 //         .checkout-steps     - Wrapper for the checkout form area & confimation messaging
+//         .checkout-cart      - Wrapper for the checkout shopping cart (plan cards)
+//             .cart-header    - Provides structure for the Shopping Cart header
 
 // No styleguide reference
 .ce-checkout{
     .ce-editorial {
-        background-color: $color-white-lily;
+        background-color: $color-blue-danube;
+        color: $color-white-pure;
         min-height: 1em;
         height: 5em;
     }
 
-    .editorial-container,
-    .content-editorial-container {
+    .editorial-container {
         padding: 0em;
     }
 
-    .editorial-headline,
-    .content-editorial-headline {
+    .editorial-headline {
         font-size: $font-size-normal;
         box-sizing: border-box;
 
@@ -55,6 +56,7 @@
 
     .checkout-content {
         @include cg-row(false, false);
+        display: table;
 
         .checkout-steps {
             @include breakpoint($mq-md-max) {
@@ -62,9 +64,33 @@
             }
 
             @include breakpoint($mq-lg-min) {
-                @include cg-5of8(true, true, true);
-                padding-top: 2em;
-                padding-right: 2em;
+                width: 62.5%;
+                display: table-cell;
+                padding: 2em 2em 2em 0.5em;
+            }
+        }
+
+        .checkout-cart {
+            background-color: $color-white-lily;
+            padding: 1.5rem 2rem;
+
+            @include breakpoint($mq-md-max) {
+                @include cg-item(true, true);
+            }
+
+            @include breakpoint($mq-lg-min) {
+                width: 37.5%;
+                display: table-cell;
+            }
+
+            .cart-header {
+                @include cg-row(true, false);
+                line-height: 1.2em;
+                font-size: 1.85em;
+                text-align: center;
+                color: $color-gray-chateau;
+                font-weight: $font-weight-body;
+                padding: 0.5rem 0 0;
             }
         }
     }
@@ -318,37 +344,6 @@
     }
 }
 
-// Checkout Cart Styles
-//
-// .checkout-cart       - Encapsulates the Checkout Shopping Cart (plan cards)
-//      .cart-header    - Provides structure for the Shopping Cart header
-//
-// No styleguide reference
-.checkout-cart {
-    @include breakpoint($mq-md-max) {
-        @include cg-item(true, true);
-    }
-
-    @include breakpoint($mq-lg-min) {
-        @include cg-3of8(false, true, true);
-        position: relative;
-        top: -5em;
-    }
-
-    .cart-header {
-        @include cg-row(true, false);
-        background-color: $color-green-shamrock;
-        color: $color-white-pure;
-        line-height: 1.2em;
-        font-size: 1.85em;
-        padding: 0.75em;
-        height: 2.7em;              // 5em height / 1.85em font size
-
-        i {
-            margin-right: .35em;
-        }
-    }
-}
 
 // Checkout Confirmation Styles
 //
