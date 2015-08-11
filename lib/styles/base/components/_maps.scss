@@ -209,21 +209,20 @@
                     width: 33%;
                 }
                 .product-list-item {
-                    display: none;
+                    color: $color-white-lilac; 
                     text-align: center;
                     font-size: 3em;
                     padding:.2em .2em .1em .2em;
-                    .c-icon-electricity {
-                        color: $color-yellow-butter;
-                    }
-                    .c-icon-nat-gas {
-                        color: $color-red-cinnabar;
-                    }
-                    .c-icon-solar {
-                        color: $color-orange-sun;
-                    }
                     &.is-active {
-                        display: block;
+                        .c-icon-electricity {
+                            color: $color-yellow-butter;
+                        }
+                        .c-icon-nat-gas {
+                            color: $color-red-cinnabar;
+                        }
+                        .c-icon-solar {
+                            color: $color-orange-sun;
+                        }
                     }
                 }
             }
