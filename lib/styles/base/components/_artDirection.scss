@@ -185,6 +185,21 @@
     );
 }
 
+.v-img82 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 30%,
+        $y-pos: 40%
+    );
+}
+
+.v-img90 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 80%,
+        $y-pos: 90%,
+        $opacity: .95
+    );
+}
+
 .v-img91 .photoblock-photo {
     @include photoblock(
         $blend-mode: soft-light,
