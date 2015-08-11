@@ -76,10 +76,6 @@
     @if $strict == true {
         width: 16.66%;
     } @else {
-        @include breakpoint($mq-sm) {
-            width: 33.33%;
-        }
-
         @include breakpoint($mq-md) {
             width: 33.33%;
         }
@@ -142,7 +138,7 @@
     @if $strict == true {
         width: 33.33%;
     } @else {
-        @include breakpoint($mq-xl-min) {
+        @include breakpoint($mq-md-min) {
             width: 33.33%;
         }
 

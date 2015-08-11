@@ -17,7 +17,13 @@
     }
 
     .supplier-services {
-        @include cg-1of3(true, true, true);
+        @include breakpoint($mq-sm-max) {
+            @include cg-item();
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of3(true, true, true);
+        }
 
         @include box-sizing(border-box);
         text-align: center;
@@ -25,9 +31,20 @@
     }
 
     .supplier-detail {
-        @include cg-2of3(true, true, true);
+        @include breakpoint($mq-sm-max) {
+            @include cg-item();
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-2of3(true, true, true);
+        }
+
         @include box-sizing(border-box);
         padding: 1em;
+
+        h4 {
+            padding-top: 0.5em;
+        }
 
         .supplier-name-card {
             .supplier-name {
@@ -55,8 +72,13 @@
             .supplier-url,
             .supplier-phone,
             .supplier-locations {
-                padding: 0 0 0.5em;
+                padding: 0 0 0.25em;
             }
+        }
+
+        .service-icons {
+            padding: 0;
+            font-size: $font-size-normal;
         }
 
         @include breakpoint($mq-sm-max) {
@@ -83,6 +105,28 @@
             }
         }
     }
+
+    &.supplier-overview {
+        .service-icons {
+            @include breakpoint($mq-md-max) {
+                max-width: 8em;
+                margin: auto;
+
+                .service-icon {
+                    display: inline-block;
+                    padding: 0.25em;
+                }
+
+                .spacer {
+                    height: 1px;
+                    width: 100%;
+                    padding: 0;
+                    margin-top: 0.5em;
+                    border-bottom: 1px solid $color-gray-ghost;
+                }
+            }
+        }
+    }
 }
 
 // Supplier/Utility services quicklook bar
@@ -96,39 +140,22 @@
     padding: 0.75em 0 0;
     margin: 0;
     font-size: $font-size-largest;
-    text-align: center;
     color: $color-gray-cape;
     line-height: 1em;
 
     .service-icon {
         display: inline-block;
-        padding: 0.25em 0.4em;
+        padding: 0em 0.4em;
         vertical-align: middle;
+
+        &:first-of-type {
+            padding-left: 0;
+        }
     }
 
     .spacer {
         height: 1.6em;
         padding: 0;
         border-right: 1px solid $color-gray-ghost;
-    }
-
-    @include breakpoint($mq-sm-max) {
-        .service-icon {
-            display: block;
-            padding: 0.25em;
-        }
-    }
-
-    @include breakpoint($mq-md-max) {
-        max-width: 8em;
-        margin: auto;
-
-        .spacer {
-            height: 1px;
-            width: 100%;
-            padding: 0;
-            margin-top: 0.5em;
-            border-bottom: 1px solid $color-gray-ghost;
-        }
     }
 }

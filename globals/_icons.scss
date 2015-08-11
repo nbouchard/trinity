@@ -5,7 +5,7 @@
     font-variant: normal !important;
     text-transform: none !important;
     speak: none;
-    line-height: 1;
+    line-height: 1.2em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     vertical-align: text-top;
@@ -48,6 +48,8 @@ $c-icon-up-dir: "\e00a";
 $c-icon-left-dir: "\e008";
 $c-icon-right-dir: "\e009";
 $c-icon-char-help-pos: "\e027";
+$c-icon-chevron-up: "\e06a";
+$c-icon-chevron-down: "\e069";
 
 //Icons
 .c-icon-arrow-down:before {

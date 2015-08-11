@@ -1,42 +1,222 @@
-// Plan Card List Setup
+// Top Picks & All Plans
 //
-// .plan-list           - Encapsulates any list of Plan Cards
-// .plan-item           - Encapsulates a Plan Card and is used for style triggers
-//      .plan-as-card   - Used to modify a .plan-item to produce the "Card" style at max size
-//      .plan-as-slat   - Used to modify a .plan-item to produce the "Slat" style at max size
-// .plan-card           - The actual h-product microformatted/schema compatible product markup
-//
-// No styleguide reference
-.plan-list,
-.plan-item,
-.plan-card {
-    list-style: none;
-}
+// Adds the correct padding to plan section wrappers
 
-.plan-list {
+.top-picks {
     @include cg-row();
 
+    @include breakpoint($mq-md-max) {
+        padding: 0 0.5em;
+    }
+
+    position: relative;
+}
+
+.all-plans {
+    @include cg-row(true, true);
+    margin-top: 1em;
+}
+
+.card-section-headline {
     h1 {
         display: inline-block;
-        vertical-align: top;
+        vertical-align: text-top;
+    }
+
+    .ce-tooltip {
+        position: inherit;
+
+        .tooltip-content {
+            max-width: 40em;
+            left: 0;
+            transform: translateX(0.5em);
+        }
     }
 }
 
-// All Plans Interface
+// Plan Card
 //
-// Forces the plan comparison interface to not be padded at
-// small sizes and adds padding at larger sizes.
-//
-// No styleguide reference
-.all-plans {
-    @include breakpoint($mq-sm-max) {
-        @include cg-row(false, false);
-        margin-top: 2em;
+// .plan-card    - The actual h-product microformatted/schema compatible product markup
+.plan-card {
+    position: relative;
+
+    .plan-data-row {
+        text-align: center;
+        position: relative;
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        .plan-data-label,
+        .plan-data-value {
+            display: table-cell;
+            text-align: left;
+            vertical-align: middle;
+            font-weight: 400;
+
+            @include breakpoint($mq-md-max) {
+                display: block;
+            }
+        }
+
+        .plan-data-label {
+            font-variant: small-caps;
+            font-size: 1.5rem;
+            color: $color-gray-chateau;
+        }
+
+        .plan-data-value {
+            font-size: 1.5rem;
+        }
+
+        .plan-fees,
+        .plan-offers,
+        .plan-view-expanded {
+            text-transform: uppercase;
+            vertical-align: middle;
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding: 0.5rem 0.75rem;
+            color: $color-green-shamrock;
+
+            @include breakpoint($mq-md-max) {
+                display: inline-block;
+            }
+
+            @include breakpoint($mq-lg-min) {
+                display: table-cell;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .plan-est-savings,
+        .plan-est-cost {
+            display: table-row;
+        }
+
+        &.plan-unit-cost .plan-data-value {
+            font-weight: $font-weight-body-strong;
+            font-size: 3.25rem;
+            line-height: 1em;
+
+            .cost-unit {
+                font-size: 2.5rem;
+                vertical-align: bottom;
+            }
+        }
+
+        .plan-est-cost .plan-data-value {
+            font-weight: $font-weight-body-strong;
+            font-size: 2.25rem;
+        }
+
+        &.plan-terms .plan-data-value {
+            .plan-term-length,
+            .plan-term-type {
+                display: block;
+            }
+
+            .icon {
+                font-size: 0.9em;
+            }
+        }
+
+        &.plan-popularity .plan-data-value {
+            .icon {
+                font-size: 0.9em;
+            }
+        }
+
+        &.plan-percent-green .plan-data-value {
+            .icon {
+                font-size: 1.1em;
+            }
+        }
     }
 
-    @include breakpoint($mq-md-min) {
-        @include cg-row(true, true);
-        margin-top: 2em;
+    .plan-badge {
+        box-sizing: border-box;
+        color: $color-white-pure;
+        background-color: $color-blue-danube;
+        font-size: 1.25rem;
+        padding: 0.25rem 1.5rem;
+        display: table;
+        position: absolute;
+        top: -1.2rem;
+
+        .plan-badge-label {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            font-weight: $font-weight-body-strong;
+        }
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: -0.5rem;
+            content: '';
+            height: 0;
+            width: 0;
+            border-top: 1.2rem solid transparent;
+            border-bottom: 0rem solid transparent;
+            border-right: 0.5rem solid $color-blue-bahama-light;
+        }
+    }
+
+    .plan-info {
+        .plan-supplier-info {
+            .plan-supplier-logo {
+                padding-bottom: 0.5rem;
+                box-sizing: content-box;
+            }
+
+            .plan-puct {
+                padding: 0 0 0 0.5rem;
+                font-size: 75%;
+            }
+        }
+    }
+
+    .plan-details {
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 500;
+
+            .line-clamp {
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .plan-more-info {
+            box-sizing: border-box;
+        }
+    }
+
+    .plan-cta {
+        box-sizing: border-box;
+        font-size: $font-size-largest;
+
+        .plan-signup-btn {
+            padding: 0;
+            line-height: 1.6em;
+            font-weight: 300;
+        }
+
+        .btn-extended-info {
+            display: block;
+            font-size: 0.75em;
+            line-height: 1.1em;
+        }
     }
 }
 
@@ -45,13 +225,6 @@
 // The Plans header switches between a side-by-side header
 // with a feature for triggering plan filtering at large
 // sizes to two rows on smaller screens.
-//
-// No styleguide reference.
-.header-utility-image {
-    display: inline-block;
-    text-indent: -9999px;
-}
-
 .plans-header {
     @include cg-row();
     padding: 0.5em 0;
@@ -64,17 +237,6 @@
         .plans-filter-trigger {
             @include cg-item(true, true);
             text-align: left;
-
-            .btn-primary {
-                float: left;
-            }
-
-            .plan-count {
-                padding-left: $grid-gutter-width;
-                height: $button-base;
-                vertical-align: middle;
-                line-height: $button-base;
-            }
         }
     }
 
@@ -86,10 +248,6 @@
         .plans-filter-trigger {
             @include cg-1of3(true, false, true);
             text-align: right;
-
-            .plan-count {
-                margin-right: $grid-gutter-width;
-            }
         }
     }
 }
@@ -100,1323 +258,959 @@
 // is required to morph between a set of buttons at
 // small sizes to a sortable table header at large sizes.
 //
-// No styleguide reference.
 .plans-sorter {
-    position: relative;
-
     @include breakpoint($mq-md-max) {
-        @include cg-row(true, true);
+        padding: 0 0.5em;
 
-        .slat-cap {
-            .fa-trophy {
-                display: none;
-            }
-
-            .sorter-link-label {
-                display: inline-block;
-            }
-        }
-
-        .sorter-title {
-            @include cg-row(true, true);
-            display: block;
-            font-weight: $font-weight-body-strong;
+        .slat-view {
+            display: none;
         }
 
         .sorter-link {
-            @include ce-button('info');
             display: inline-block;
-            margin-bottom: $grid-gutter-width;
-
-            &.is-active {
-                border-bottom: $button-border-width solid $color-blue-curious;
-                background: $color-blue-bahama;
-            }
-        }
-
-        .sorter-details {
-            display: inline;
+            background-color: $color-white-lilac;
+            padding: 1rem 1.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
         }
     }
 
     @include breakpoint($mq-lg-min) {
-        @include cg-row();
-        padding-right: $card-padding;
-        padding-left: (3 * $card-padding);
-        background: $color-blue-curious;
-        text-align: center;
-        border-radius: $card-corner-radius $card-corner-radius 0 0;
-
-        .sorter-price,
-        .sorter-popularity {
-            @include cg-1of8();
-        }
-
-        .sorter-details {
-            @include cg-1of2(false, false);
-
-            .sorter-link {
-                @include cg-1of4();
-
-                &.v-nocost {
-                    @include cg-1of2();
-                }
-            }
-        }
-
-        .slat-cap {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: $grid-gutter-width 0;
-            width: 3em;
-            background: $color-blue-curious-light;
-            color: $color-white-pure;
-            text-align: center;
-            border-radius: $card-corner-radius 0 0 0;
-
-            .fa-trophy {
-                display: inline-block;
-            }
-
-            .sorter-link-label {
-                display: none;
-            }
-
-            &:hover,
-            &:focus {
-                background: $color-blue-bahama;
-            }
+        .card-view {
+            display: none;
         }
 
         .sorter-title {
             display: none;
         }
 
-        .sorter-link {
-            color: $color-white-pure;
+        .sorter-links {
+            background-color: $color-white-lilac;
+            padding: 0 1.5rem;
+            display: table;
+            position: relative;
+            width: 100%;
+
+            .sorter-container {
+                display: table;
+                width: 100%;
+            }
+
+            .sorter-spacer {
+                display: table-cell;
+                width: 23rem;
+            }
+
+            .sorter-link {
+                display: table-cell;
+                padding: 0.5rem 0rem 0.5rem 1rem;
+                margin: 0 0 0.5rem;
+                vertical-align: middle;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1.1rem;
+                box-sizing: border-box;
+                position: relative;
+
+                .ce-tooltip {
+                    position: inherit;
+
+                    .tooltip-content {
+                        max-width: 30em;
+                    }
+                }
+
+                &.sort-unit-cost {
+                    width: 20%;
+                }
+
+                &.sort-est-cost {
+                    width: 20%;
+                    min-width: 10rem;
+
+                    .bothValues {
+                        max-width: 7.3rem;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    .tooltip-content {
+                        min-width: 40rem;
+                    }
+                }
+
+                &.sort-terms {
+                    width: 20%;
+                }
+
+                &.sort-popularity {
+                    width: 10%;
+                    min-width: 7.2em;
+                }
+
+                &.sort-percent-green {
+                    width: 10%;
+                    min-width: 6.6rem;
+                }
+
+                &.sort-supplier {
+                    width: 20%;
+                    min-width: 14rem;
+                    padding: 0 2.5rem 0 1.5rem;
+                    text-align: center;
+                }
+
+                &.active {
+                    background-color: $color-gray-geyser;
+                }
+            }
         }
     }
 
-    .sorter-link {
-        color: $color-white-pure;
-        text-decoration: none;
-
-        @include breakpoint($mq-lg) {
-            font-size: $font-size-smaller;
-        }
-
-        .fa-sort,
-        .fa-sort-asc,
-        .fa-sort-desc {
-            margin-left: 0.25em;
-            color: $color-white-lilac;
-            font-size: $font-size-smaller;
-        }
-
-        &:hover,
-        &:focus {
-            background: $color-blue-bahama;
-        }
-
-        &.is-active {
-            background: $color-blue-bahama;
-
-            .fa-sort,
-            .fa-sort-asc,
-            .fa-sort-desc {
-                color: $color-white-pure;
-                font-size: $font-size-normal;
-            }
-        }
+    .tooltip-icon {
+        font-size: 1.4rem;
     }
 }
 
 // .plan-as-card
 //
-// Plan as Card styles force the plan-card object to display as a "Card" at maximum size.
-//
-// This variant of plan-item has three content breakpoints:
-//      XS: Card as a Single Row (Strict)
-//      SM: Two Cards Per Row (Strict)
-//      MD+: Four Cards Per Row (Adaptive: 2 cards at MD, 4 cards at LG+)
-//
-// Note: This style has not been fully tested for groups of less than 4 or more than 4.
-//       It should be easily modified to support 2-3 or 5-6 cards.
-//
-// Exposes a Mixin for defining all of the plan-card specific styles to allow for reuse in the Plan as Slat styles at small sizes.
-//
-// No styleguide reference
+// plan-as-card styles force the plan-card object to display as a "Card" at maximum size.
+// This variant of plan-item has two layout breakpoints:
+//    SM-: Two Cards Per Row
+//    MD+: Four Cards Per Row
 @mixin plan-as-card() {
-    @include ce-card(false, false, true);
-
-    // Plan Card Header
-    .plan-badge {
-        @include ce-card-header();
-        background: $color-blue-bahama-light;
-        color: $color-white-pure;
-        text-align: center;
+    .slat-view {
+        display: none;
     }
 
-    // Plan Callout Stat
-    //
-    // The Plan Callout will amplify a given standard Plan Data pattern component.
-    // That means you can place any of the .plan-data components in the Plan Callout
-    // slot in the card and it should render equally well. By default, "Price" is the
-    // Plan Callout in all contexts. The other options are Cost, Term, and Renewable.
-    .plan-callout {
-        @include cg-1of2(true, true, true);
-        font-size: $font-size-huge;
+    .plan-card {
+        margin-top: 1rem;
 
-        .plan-data {
-            @include cg-item();
+        .plan-badge {
+            left: 50%;
+            @include transform(translateX(-50%));
         }
 
-        .plan-data-value {
-            font-weight: $font-weight-subhead;
-        }
-    }
-
-    // Plan Info
-    //
-    // Card-specific Customizations for Plan Info
-    .plan-info {
-        @include cg-row();
-    }
-
-    // Plan Data
-    //
-    // Card-specific Customizations for the Plan Data Pattern
-    .plan-data {
-        @include cg-1of2(true, true, true);
-        font-size: $font-size-smaller;
-
-        .plan-data-value .icon:before {
-            font-size: 0.7em;
-            vertical-align: baseline;
-        }
-    }
-
-    .plan-supplier {
-        @include breakpoint($mq-md-max) {
-            @include cg-1of2(true, true, true);
-        }
-
-        @include breakpoint($mq-lg) {
-            @include cg-item(true, true);
-        }
-
-        @include breakpoint($mq-xl-min) {
-            @include cg-1of2(true, true, true);
-            clear: both;
-        }
-    }
-
-    // Plan Details
-    //
-    // Card-specific Customizations for the Plan Details block
-    .plan-details {
-        text-align: center;
-
-        .plan-name .p-name{
+        .plan-data-row {
+            display: table;
             width: 100%;
-            display: block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            padding: 0 1rem;
+
+            .plan-data-label,
+            .plan-data-value {
+                width: 50%;
+                padding: 0.5rem 0;
+
+                @include breakpoint($mq-md-max) {
+                    width: 100%;
+                }
+            }
         }
 
-        .plan-more-details {
-            display: none;
-        }
+        .plan-info {
+            border-color: $color-gray-geyser;
+            border-style: solid;
+            border-width: 1px 1px 0;
 
-        .plan-savings {
-            display: block;
-        }
-    }
+            .plan-overview {
+                padding: 1rem 0 0.5rem;
+                border-bottom: 1px solid $color-gray-geyser;
+            }
 
-    .plan-popularity {
-        @include cg-1of2(true, true, true);
-        text-align: center;
+            .plan-supplier-info {
+                padding-top: 0.75rem;
+                border-top: 1px solid $color-gray-geyser;
 
-        @include breakpoint($mq-lg) {
-            @include cg-item(true, true);
+                .plan-supplier-logo {
+                    min-width: 100px;
+                    height: 48px;
+                }
 
-            .plan-popularity-data {
-                .plan-popularity-value {
-                    display: inline-block;
-                    font-size: $font-size-larger;
+                &.inTexas .plan-supplier-logo {
+                    display: table-cell;
+                    width: 50%
+                }
 
-                    .plan-popularity-count {
-                        display: inline-block;
-                        font-size: $font-size-larger;
+                .plan-puct {
+                    display: table-cell;
+                    max-width: 5rem;
+                    vertical-align: middle;
+                }
+            }
+
+            .plan-name {
+                padding: 0 0 0.5rem;
+                border-bottom: 1px solid $color-gray-geyser;
+
+                .plan-name-info {
+                    padding: 0 0.5rem;
+                }
+
+                .line-clamp {
+                    @include breakpoint($mq-md-max) {
+                        width: 15rem;
+                    }
+
+                    @include breakpoint($mq-lg-min) {
+                        width: 21rem;
                     }
                 }
+            }
 
-                .plan-popularity-label {
-                    font-size: $font-size-smaller;
+            .plan-more-info {
+                padding: 0.5rem 0 0;
+
+
+                .plan-view-expanded {
+                    @include breakpoint($mq-md-max) {
+                        display: block;
+                    }
                 }
             }
         }
 
-        &.with-meter {
-            .popularity-meter {
-                width: 20%;
-            }
+        .plan-cta {
+            height: 6rem;
+            background-color: $color-green-shamrock;
 
-            .plan-popularity-data {
-                width: 75%;
-            }
-        }
-    }
-
-    // Plan Card Footer
-    .plan-actions {
-        @include cg-row();
-        position: relative;
-
-        .plan-savings {
-            display: none;
-        }
-    }
-
-    .plan-savings {
-        @include cg-item();
-        text-align: center;
-    }
-
-    .plan-signup {
-        @include cg-item(false, true);
-
-        .plan-signup-btn {
-            @include ce-button('primary', 'larger', 'full');
-            font-size: 1.55em;
-            padding: 0.25em;
-            line-height: 1.4em;
-            font-weight: $font-weight-body;
-
-            .btn-extended-info {
-                display: block;
-                font-size: 0.75em;
-                line-height: 1.2em;
-                font-weight: $font-weight-accent;
+            .plan-signup-btn {
+                width :100%;
+                height: 100%;
             }
         }
     }
 
-    // Card-specific Details section
-    .card-details {
-        @include cg-row(true, true);
-        text-align: center;
-
-        .plan-more-details {
-            display: block;
-        }
+    .ce-tooltip {
+        position: inherit;
     }
 }
 
 .plan-as-card {
-    // Set up plan-item on cg-grid to contain the card components
-    @include breakpoint($mq-xs) {
-        @include cg-item();
-    }
-
-    @include breakpoint($mq-sm) {
+    @include breakpoint($mq-sm-max) {
         @include cg-1of2(true, true, true);
     }
 
     @include breakpoint($mq-md-min) {
-        @include cg-1of4();
+        @include cg-1of4(true, true, true);
     }
 
-    // Declare the actual styles for the card components
-    .plan-card {
-        @include plan-as-card();
-    }
-}
-
-// .plan-as-expanded
-//
-// Plan as Expanded styles force the plan-card object to display as an "Expanded Card" at all sizes.
-//
-// This variant of plan-item has no content breakpoints.
-//
-// Note: This style is a standalone card.
-//
-// Exposes a Mixin for defining all of the plan-card specific styles for the Expanded variant.
-//
-// No styleguide reference
-@mixin plan-as-expanded() {
-    @include ce-card(false, false, false);
-    border-top: 0px;
-
-    .plan-page-header {
-        position: relative;
-        width: 100%;
-        min-height: (4em + (2 * 1.75 * $grid-gutter-width));
-        background: $color-blue-curious;
-
-        .plan-page-name {
-            @include cg-row();
-            padding: (1.75 * $grid-gutter-width);
-            height: 100%;
-            line-height: 2em;
-            color: $color-white-pure;
-
-            .plan-page-name-container {
-                display: inline-block;
-                font-size: $font-size-huge;
-                line-height: inherit;
-            }
-
-            .plan-name {
-                display: block;
-                color: $color-white-pure;
-            }
-
-            .plan-utility {
-                display: block;
-                font-weight: $font-weight-body;
-                font-style: italic;
-            }
-        }
-    }
-
-    .plan-page-closer {
-        position: absolute;
-        top: (2 * $grid-gutter-width);
-        right: (2 * $grid-gutter-width);
-        color: $color-white-pure;
-        font-weight: $font-weight-body-strong;
-        cursor: pointer;
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-            color: $color-orange-apricot-light;
-        }
-    }
-
-    .plan-body {
-        @include cg-row(true, false);
-    }
-
-    .plan-page-section {
-        @include cg-row();
-        text-align: center;
-
-        @include breakpoint($mq-md-max) {
-            border-bottom: 1px solid $color-white-lilac;
-        }
-    }
-
-    .plan-callout {
-        .plan-page-label {
-            padding: 0;
-            background: none;
-            font-size: $font-size-normal;
-        }
-
-        .plan-data,
-        .plan-data-value,
-        .plan-data-label,
-        .plan-data-list {
-            padding: 0;
-        }
-    }
-
-    .plan-data-row {
-        @include cg-row();
-
-        .plan-data {
-            @include cg-1of3(false, false, true);
-            padding-bottom: $grid-gutter-width;
-
-            // Overwrite the standard plan-data font-size reduction.
-            @include breakpoint($mq-lg) {
-                font-size: $font-size-normal;
-            }
-        }
-
-        &.plan-extras {
-            .plan-data {
-                @include cg-item(false, false);
-                padding-bottom: $grid-gutter-width;
-            }
-        }
-    }
-
-    .plan-data-value {
-        padding: $grid-gutter-width;
-        padding-bottom: 0;
-
-        .icon:before {
-            font-size: 0.7em;
-            vertical-align: baseline;
-        }
-    }
-
-    .plan-data-label {
-        padding: (1.75 * $grid-gutter-width);
-        padding-top: 0;
-
-        .icon {
-            margin-right: 0.25em;
-        }
-    }
-
-    .plan-data-list {
-        list-style-type: disc;
-        padding-top: $grid-gutter-width;
-        padding-right: $grid-gutter-width;
-        padding-bottom: $grid-gutter-width;
-        padding-left: 4 * $grid-gutter-width;
-        text-align: left;
-        line-height: 1.6em;
-    }
-
-    .plan-page-label {
-        display: block;
-        padding: $grid-gutter-width;
-        width: 100%;
-        background: $color-white-lilac;
-        font-size: $font-size-large;
-    }
-
-    .plan-callout {
-        @include cg-1of2(true, true, true);
-        font-size: $font-size-huge;
-    }
-
-    .plan-page-details {
-        @include cg-1of2(true, true, true);
-    }
-
-    .plan-page-actions {
-        display: none;
-    }
-
-    // Plan Info Sections
-    .plan-big-section {
-        @include cg-item(false, false);
-
-        &.plan-faqs {
-            display: none;
-        }
-    }
-
-    .plan-section-header {
-        padding: $grid-gutter-width;
-        background: $color-white-lilac;
-        text-align: center;
-        font-size: $font-size-large;
-        font-family: $font-family-body;
-    }
-
-    // Plan Supplier Info
-    .supplier-details {
-        @include cg-row();
-    }
-
-    .supplier-logos {
-        @include cg-item(true, true);
-    }
-
-    .supplier-rating {
-        @include breakpoint($mq-sm-max) {
-            @include cg-item(true, true);
-        }
-
-        @include breakpoint($mq-md-min) {
-            @include cg-1of2(true, true, true);
-        }
-    }
-
-    .supplier-description {
-        padding: $grid-gutter-width;
-        text-align: left;
-    }
-
-    // Plan FAQs
-    .plan-faq-list {
-        margin: 0;
-        padding: $grid-gutter-width;
-        list-style: none;
-        line-height: 1.6em;
-
-        .learn-more {
-            text-align: right;
-        }
-    }
-}
-
-.plan-as-expanded {
-    .plan-card {
-        @include plan-as-expanded();
-    }
-}
-// .plan-as-page
-//
-// Plan as Page styles force the plan-card object to display as a standalone "Page".
-// These should look and feel like a complete overlay of the shopping experience.
-//
-// This is the only view where "Plan Extras" are visible.
-//
-// No styleguide reference
-.plan-as-page {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: $z-overlay-high;
-    overflow: scroll;
-    background: $color-white-pure;
-
-    .plan-card {
-        padding-top: (6em + $grid-gutter-width);
-
-        .plan-page-header {
-            position: fixed;
-            -webkit-backface-visibility: hidden;  // These two lines fix a bug in Chrome that
-            -webkit-transform: translateZ(0);     // prevent position:fixed from working correctly
-            z-index: $z-overlay-low;
-            top: 0;
-            left: 0;
-            padding-right: 6em;
-            width: 100%;
-            min-height: (4em + (2 * $grid-gutter-width));
-            background: $color-blue-curious;
-
-            .plan-page-name {
-                @include cg-row();
-                padding: $grid-gutter-width;
-                line-height: 4em;
-
-                @include breakpoint($mq-sm-max) {
-                    line-height: 2em;
-
-                    .plan-name {
-                        display: block;
-                    }
-
-                    .plan-utility {
-                        display: block;
-                    }
-                }
-
-                .plan-page-name-container {
-                    display: inline-block;
-                    font-size: $font-size-huge;
-                    line-height: inherit;
-                }
-
-                .plan-name {
-                    color: $color-white-pure;
-                    margin-right: 1em;
-                }
-
-                .plan-utility {
-                    color: $color-gray-woodsmoke;
-                    font-weight: $font-weight-body;
-                    font-style: italic;
-                }
-            }
-        }
-
-        .plan-page-closer {
-            position: absolute;
-            top: (2 * $grid-gutter-width);
-            right: (2 * $grid-gutter-width);
-            color: $color-white-pure;
-            font-weight: $font-weight-body-strong;
-            cursor: pointer;
-            text-decoration: none;
-
-            &:hover,
-            &:focus {
-                color: $color-orange-apricot-light;
-            }
-        }
-
-        .plan-body {
-            @include cg-row(true, false);
-        }
-
-        .plan-page-section {
-            @include cg-row();
-            text-align: center;
-
-            @include breakpoint($mq-md-max) {
-                border-bottom: 1px solid $color-white-lilac;
-            }
-
-            .plan-contract-type .icon:before {
-                font-size: 0.7em;
-                vertical-align: baseline;
-            }
-        }
-
-        .plan-callout {
-            font-size: $font-size-huge;
-
-            @include breakpoint($mq-sm-max) {
-                @include cg-item(true, true);
-            }
-
-            @include breakpoint($mq-md-min) {
-                @include cg-1of3(true, true, true);
-            }
-
-            .plan-page-label {
-                padding: 0;
-                background: none;
-                font-size: $font-size-normal;
-            }
-
-            .plan-data,
-            .plan-data-value,
-            .plan-data-label,
-            .plan-data-list {
-                padding: 0;
-            }
-        }
-
-        .plan-data-row {
-            @include cg-row();
-
-            .plan-data {
-                @include breakpoint($mq-md-max) {
-                    @include cg-1of3(false, false, true);
-                    padding-bottom: $grid-gutter-width;
-                }
-
-                @include breakpoint($mq-lg-min) {
-                    @include cg-1of3(true, true, true);
-                }
-
-                // Overwrite the standard plan-data font-size reduction.
-                @include breakpoint($mq-lg) {
-                    font-size: $font-size-normal;
-                }
-            }
-
-            &.plan-extras {
-                @include breakpoint($mq-xs-max) {
-                    .plan-data {
-                        @include cg-item(false, false);
-                        padding-bottom: $grid-gutter-width;
-                    }
-                }
-            }
-        }
-
-        .plan-data-value {
-            padding: $grid-gutter-width;
-            padding-bottom: 0;
-        }
-
-        .plan-data-label {
-            padding: (1.75 * $grid-gutter-width);
-            padding-top: 0;
-
-            .icon {
-                margin-right: 0.25em;
-            }
-        }
-
-        .plan-data-list {
-            text-align: left;
-            line-height: 1.6em;
-        }
-
-        .plan-page-label {
-            display: block;
-            padding: $grid-gutter-width;
-            width: 100%;
-            background: $color-white-lilac;
-            font-size: $font-size-large;
-        }
-
-        .plan-page-details {
-            @include breakpoint($mq-sm-max) {
-                @include cg-item(true, true);
-            }
-
-            @include breakpoint($mq-md-min) {
-                @include cg-1of3(true, true, true);
-            }
-        }
-
-        .plan-page-actions {
-            @include breakpoint($mq-sm-max) {
-                @include cg-item(true, true);
-            }
-
-            @include breakpoint($mq-md-min) {
-                @include cg-1of3(true, true, true);
-                float: right;
-            }
-        }
-
-        // Plan Info Sections
-        .plan-big-section {
-            @include breakpoint($mq-xs-max) {
-                @include cg-item(false, false);
-            }
-
-            @include breakpoint($mq-sm-min) {
-                @include cg-1of2(true, true, true);
-            }
-        }
-
-        .plan-section-header {
-            padding: $grid-gutter-width;
-            text-align: center;
-            font-size: $font-size-huge;
-
-            @include breakpoint($mq-xs-max) {
-                background: $color-white-lilac;
-                font-size: $font-size-large;
-                font-family: $font-family-body;
-            }
-        }
-
-        // Plan Supplier Info
-        .supplier-details {
-            @include cg-row();
-        }
-
-        .supplier-logos {
-           @include cg-item(true, true);
-        }
-
-        .supplier-pucId {
-            display: block;
-            padding: 0.5em;
-        }
-
-        .supplier-rating {
-            @include breakpoint($mq-sm-max) {
-                @include cg-item(true, true);
-            }
-
-            @include breakpoint($mq-md-min) {
-                @include cg-1of2(true, true, true);
-            }
-        }
-
-        .supplier-description {
-            padding: $grid-gutter-width;
-            text-align: left;
-        }
-
-        // Plan FAQs
-        .plan-faq-list {
-            margin: 0;
-            padding: $grid-gutter-width;
-            list-style: none;
-            line-height: 1.6em;
-
-            .learn-more {
-                text-align: right;
-            }
-        }
-    }
+    @include plan-as-card();
 }
 
 // .plan-as-slat
 //
-// Plan as Slat styles force the plan-card object to display as a "Slat" at maximum size.
-//
+// plan-as-slat styles force the plan-card object to display as a "Slat" at maximum size.
 // This variant of plan-item has four content breakpoints:
-//      XS: Card as a Single Row (Strict)
-//      SM: Two Cards Per Row (Strict)
-//      MD: Two Cards Per Row (Strict)
-//      LG+: Slat as a Single Row (Strict)
-//
-// No styleguide reference
-.plan-as-slat {
-    @include breakpoint($mq-xs) {
-        @include cg-item();
-    }
-
-    @include breakpoint($mq-sm) {
-        @include cg-1of2(true, true, true);
-    }
-
-    @include breakpoint($mq-md) {
-        @include cg-1of2(true, true, true);
-    }
-
-    @include breakpoint($mq-lg-min) {
-        @include cg-row();
+//      SM-: Two Cards Per Row
+//      MD: Four Cards Per Row
+//      LG+: Slat as a Single Row
+@mixin plan-as-slat() {
+    .card-view {
+        display: none !important;
     }
 
     .plan-card {
-        @include breakpoint($mq-md-max) {
-            @include plan-as-card();
+        display: table;
+        border: 1px solid $color-gray-geyser;
+        padding: 0.75rem 1.5rem;
+        margin-top: 1.5em;
+        width: 100%;
+        position: relative;
+
+        .plan-badge {
+            left: 1.5rem;
         }
 
-        @include breakpoint($mq-lg) {
-            .plan-badge {
-                font-size: $font-size-smaller;
+        .plan-details {
+            display: table-row;
+            box-sizing: border-box;
+
+            .plan-name {
+                display: table-cell;
+                border-bottom: 1px solid $color-white-lilac;
+                padding-right: 1.5rem;
+                vertical-align: bottom;
+
+                .plan-data-row {
+                    text-align: left;
+                    padding: 0 1rem;
+                }
+
+                .tooltip-content {
+                    width: auto;
+                    max-width: 40rem;
+                }
+
+                .line-clamp {
+                    width: 60rem;
+                    vertical-align: bottom;
+                    padding-bottom: 0.25rem;
+                }
+            }
+
+            .plan-more-info {
+                display: table-cell;
+                border-bottom: 1px solid $color-white-lilac;
+                width: 23rem;
+
+                .plan-fees,
+                .plan-offers,
+                .plan-view-expanded {
+                    display: inline-block;
+                    padding: 0.75rem 1.2rem 0.25rem;
+                }
+            }
+
+            .ce-tooltip {
+                position: inherit;
             }
         }
 
-        @include breakpoint($mq-lg-min) {
-            @include ce-slat(true, true, 'left');
+        .plan-info {
+            display: table-row;
+            box-sizing: border-box;
 
-            // Plan Badge Slat Cap
-            .plan-badge {
-                @include ce-slat-cap('left');
-                background: $color-blue-bahama-light;
-                color: $color-white-pure;
-                text-align: center;
-            }
+            .plan-overview {
+                display: table;
+                width: 100%;
+                padding-top: 1rem;
 
-            // Plan Callout Stat
-            //
-            // The Plan Callout will amplify a given standard Plan Data pattern component.
-            // That means you can place any of the .plan-data components in the Plan Callout
-            // slot in the card and it should render equally well. By default, "Price" is the
-            // Plan Callout in all contexts. The other options are Cost, Term, and Renewable.
-            .plan-callout {
-                @include cg-1of8(false);
-                padding: ($grid-gutter-width / 2);
-                padding-top: $grid-gutter-width;
-                text-align: center;
-                font-size: $font-size-largest;
-                line-height: 1.5em;
+                .plan-data-row {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 0 1rem;
 
-                .plan-data-value {
-                    font-weight: $font-weight-subhead;
+                    &.plan-unit-cost {
+                        width: 20%;
+
+                        .plan-data-value {
+                            padding-left: 0;
+                        }
+                    }
+
+                    &.plan-cost-savings {
+                        width: 20%;
+                        min-width: 10rem;
+
+                        .plan-est-cost .plan-data-value {
+                            vertical-align: bottom;
+                        }
+
+                        .plan-est-savings .plan-data-value {
+                            font-size: 2rem;
+                            vertical-align: top;
+                        }
+                    }
+
+                    &.plan-terms {
+                        width: 20%;
+
+                        .plan-data-value {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    &.plan-popularity {
+                        width: 10%;
+                        min-width: 7.2rem;
+
+                        .plan-data-value {
+                            font-size: 2rem;
+                        }
+
+                        .icon {
+                            display: block;
+                        }
+                    }
+
+                    &.plan-percent-green {
+                        width: 10%;
+                        min-width: 6.6rem;
+
+                        .plan-data-value {
+                            font-size: 2rem;
+                        }
+
+                        .icon {
+                            display: block;
+                        }
+                    }
+
+                    &.plan-supplier-info {
+                        width: 20%;
+                        min-width: 14rem;
+                        padding: 0 2.5rem 0 1.5rem;
+
+                        .plan-supplier-logo {
+                            padding-bottom: 0;
+                        }
+                    }
                 }
-            }
 
-            // Plan Info
-            .plan-info {
-                @include cg-5of8(false, false);
-            }
-
-            .plan-renewable,
-            .plan-contract,
-            .plan-contract-type,
-            .plan-cost,
-            .plan-popularity,
-            .plan-supplier {
-                @include cg-1of5();
-            }
-
-            .plan-contract .plan-data-label {
-                font-size: $font-size-larger;
-
-                .icon {
-                    font-size: 0.85em;
-                }
-            }
-
-            .plan-contract-type {
-                font-size: 0.9em;
-
-                .icon {
-                    display: block;
-                    font-size: 0.9em;
-                }
-            }
-
-            // Plan Details
-            .plan-details {
-                margin-top: 0.5em;
-                padding-top: 0.5em;
-
-                .plan-savings {
+                .plan-data-label{
                     display: none;
                 }
             }
 
-            .plan-name {
-                font-size: $font-size-larger;
-            }
-
-            .plan-more-details {
-                float: right;
-                font-size: $font-size-normal;
-            }
-
-            // Plan Description (With Truncation)
-            //
-            // Note: Currently, Plan Description is hidden
-            // except in the full-page Details view.
-            // The truncated option is for us to test the addition
-            // the Description in the Plan cards themselves.
-            .plan-description {
-                position: relative;
-                margin-top: $grid-gutter-width;
-                margin-bottom: $grid-gutter-width;
-                min-height: 3em;
-                line-height: 1.5em;
-
-                &.is-truncated {
-                    overflow: hidden;
-                    height: 3em;
-
-                    &:after {
-                        @include linear-gradient(to right, rgba(255, 255, 255, 0), $color-white-pure 25%, $color-white-pure);
-                        position: absolute;
-                        right: 0;
-                        bottom: 0;
-                        padding-left: 0.25em;
-                        content: '…';
-                    }
-                }
-            }
-
-            // Slat-Specific Plan Popularity Adjustments
-            .plan-popularity {
-                position: relative;
+            .plan-cta {
+                display: table-cell;
+                width: 23rem;
                 text-align: center;
+                vertical-align: middle;
+                padding-top: 1rem;
 
-                &.with-meter {
-                    @include breakpoint($mq-lg) {
-                        .plan-popularity-data {
-                            width: auto;
-                            font-size: $font-size-smaller;
-                        }
-
-                        .plan-popularity-value {
-                            display: block;
-
-                            .plan-popularity-count {
-                                display: inline;
-                                font-size: $font-size-normal;
-                            }
-                        }
-
-                        .popularity-meter {
-                            @include rotate(90deg);
-                            @include transform-origin(100% 75%);
-                            position: absolute;
-                        }
-                    }
-
-                    .popularity-meter {
-                        width: 20%;
-                    }
-
-                    .plan-popularity-data {
-                        width: 75%;
-                    }
+                button {
+                    width :100%;
+                    height: 6rem;
                 }
             }
+        }
+    }
+}
 
-            // Plan Actions Block
-            .plan-actions {
-                @include cg-1of4();
-            }
+.plan-as-slat {
+    @include breakpoint($mq-lg-min) {
+        @include plan-as-slat();
+    }
 
-            .plan-signup {
-                @include cg-row();
+    @include breakpoint($mq-md-max) {
+        @include cg-1of4(true, true, true);
+        @include plan-as-card();
+    }
 
-                .plan-signup-btn {
-                    @include ce-button('primary', 'huge', 'full');
-                    font-size: 1.55em;
-                    padding: 0.25em;
-                    line-height: 1.4em;
-                    font-weight: $font-weight-body;
+    @include breakpoint($mq-sm-max) {
+        @include cg-1of2(true, true, true);
+    }
+}
 
-                    .btn-extended-info {
-                        display: block;
-                        font-size: 0.75em;
+// .plan-as-expandable
+//
+// plan-as-expandable styles force the plan-card object to display a
+// shortened version of the plan card that expands on interaction.
+.plan-as-expandable {
+    background-color: $color-white-pure;
+    margin-bottom: 2rem;
+
+    .plan-header {
+        background-color: $color-green-cruise-light;
+
+        @include breakpoint($mq-md-max) {
+            padding: 0 1rem;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            padding: 1.5rem 2.5rem 0.75rem;
+            font-size: 1.8rem;
+            font-weight: $font-weight-accent;
+        }
+    }
+
+    .plan-body {
+        @include breakpoint($mq-md-max) {
+            padding: 0 1rem;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            padding: 0 2.5rem;
+        }
+
+        .plan-overview {
+            @include clearfix;
+            border-bottom: 1px solid $color-gray-geyser;
+            padding: 1rem 0;
+
+            .plan-facts {
+                @include cg-1of2(true, true, true);
+                padding-right: 0.5rem;
+
+                .plan-unit-cost,
+                .plan-percent-green {
+                    display: inline-block;
+                    float: left;
+                }
+
+                .plan-unit-cost {
+                    width: 60%;
+                }
+
+                .plan-percent-green {
+                    width: 40%;
+                }
+
+                .plan-terms {
+                    display: block;
+                    clear: both;
+                    padding-top: 0.5rem;
+
+                    .plan-term-length,
+                    .plan-term-type {
+                        display: inline-block;
                         line-height: 1.2em;
-                        font-weight: $font-weight-accent;
                     }
+
+                    .plan-term-type {
+                        padding-left: 0.5rem;
+                    }
+                }
+
+                .plan-data-label,
+                .plan-data-value {
+                    display: block;
                 }
             }
 
-            // Details container only used for Plan as Card
-            .card-details {
+            .plan-documents {
+                @include cg-1of2(true, true, true);
+                text-align: left;
+                padding-left: 0.5rem;
+
+                .plan-document {
+                    display: block;
+                    font-weight: $font-weight-accent;
+                    font-size: 1.3rem;
+                    padding-bottom: 0.5rem;
+                }
+            }
+        }
+
+        .plan-details {
+            &.is-closed {
                 display: none;
             }
+
+            .plan-logo-description {
+                display: table;
+                width: 100%;
+                padding: 1.5rem 0;
+                border-bottom: 1px solid $color-gray-geyser;
+
+                .plan-supplier-info {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-right: 0.5rem;
+
+                    .plan-puct {
+                        padding-top: 0.5rem;
+                        font-size: 75%;
+                    }
+                }
+
+                .plan-description {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: left;
+                    font-size: 1.2rem;
+                    padding-left: 0.5rem;
+                }
+            }
+
+            .plan-fees-offer {
+                padding: 1rem 0 1.5rem;;
+                border-bottom: 1px solid $color-gray-geyser;
+                @include clearfix;
+
+                .plan-fees {
+                    @include cg-1of2(false, false, true);
+                    padding-right: 1rem;
+                }
+
+                .plan-offers,
+                .plan-utility {
+                    @include cg-1of2(false, false, true);
+
+                    &:first-of-type {
+                        padding-bottom: 0.5rem;
+                    }
+
+                    .plan-data-value {
+                        font-size: 1.2rem;
+                        line-height: 1em;
+                    }
+                }
+
+                .plan-offers .fee-description {
+                    min-height: 2.1rem;
+                }
+
+                .plan-data-label,
+                .plan-data-value {
+                    display: block;
+                }
+
+                .fee-label {
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    color: $color-gray-chateau;
+
+                    @include breakpoint($mq-md-max) {
+                        display: block;
+                        line-height: 1.2em;
+                    }
+                }
+
+                .fee-description {
+                    display: block;
+                    font-size: 1.2rem;
+                    padding-bottom: 0.5rem;
+                    line-height: 1em;
+
+                    &:last-of-type {
+                        padding: 0;
+                    }
+                }
+            }
         }
     }
-}
 
-// Plan Details
-//
-// Contains the detailed explanation of what the plan is.
-// Primarily contains the plan name.
-//
-.plan-details {
-    // @include cg-row(true, true);
-    // border-top: solid 1px $color-white-smoke;
-}
-
-// Supplier Brand
-.plan-supplier {
-    text-align: center;
-}
-
-.supplier-brand {
-    display: inline-block;
-    text-align: center;
-    text-indent: -9999px;
-}
-
-// Plan Savings
-//
-// Tells the user how much money they'd save per month.
-// An atypical plan data pattern because it's not always present,
-// and it doesn't include a data value and label.
-//
-.plan-savings {
-    @include cg-row();
-    min-height: 4em;
-    color: $color-green-jewel;
-
-    .plan-savings-data {
-        @include cg-item(false, false);
-        height: 3em;
-        text-align: center;
-        line-height: 3em;
-    }
-}
-
-// Plan Data Pattern
-//
-// With the exception of popularity data, plan data
-// displays follow a predictable pattern with a value
-// and a small label of some sort.
-.plan-data-row {
-    @include cg-row();
-}
-
-.plan-data {
-    display: block;
-    text-align: center;
-
-    @include breakpoint($mq-lg) {
-        font-size: $font-size-smaller;
-    }
-
-    .plan-data-value {
-        display: block;
-        font-weight: $font-weight-body-strong;
-        font-size: $font-size-huge;
-    }
-
-    .plan-data-label {
-        display: block;
-        font-size: $font-size-normal;
-    }
-}
-
-// Plan Popularity Data
-//
-// Popularity data follows a slightly different pattern
-// from the standard plan data pattern.
-//
-// No styleguide reference.
-.plan-popularity {
-    .plan-popularity-data {
-        display: block;
+    .plan-actions {
+        display: table;
         width: 100%;
-    }
 
-    .popularity-meter {
-        display: none;
-    }
-
-    &.with-meter {
-        .plan-popularity-data {
-            display: inline-block;
+        @include breakpoint($mq-md-max) {
+            padding: 0 1rem;
         }
 
-        .popularity-meter {
-            display: none;
+        @include breakpoint($mq-lg-min) {
+            padding: 0 2.5rem;
+        }
+
+        .plan-view-expanded {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            padding: 0.75rem 0;
+            width: 50%;
+            text-decoration: none;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            &.details {
+                color: $color-green-jewel-light;
+                font-size: 1.3rem;
+
+                .icon:before {
+                    content: $c-icon-chevron-up;
+                }
+
+                &.is-closed .icon:before {
+                    content: $c-icon-chevron-down;
+                }
+            }
+
+            &.remove {
+                font-size: 1.1rem;
+                color: $color-gray-chateau;
+            }
         }
     }
 }
 
-.plan-popularity-data {
-    vertical-align: middle;
+// .plan-as-modal
+//
+// plan-as-modal styles force the plan-card object to display as a standalone modal.
+.plan-as-modal {
+    height: 100%;
 
-    .plan-popularity-value {
-        display: block;
+    .plan-card {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
 
-        .plan-popularity-count {
+        .plan-data-row {
+            display: table;
+            width: 100%;
+
+            .plan-data-label,
+            .plan-data-value {
+                display: table-cell;
+            }
+        }
+    }
+
+    .plan-header {
+        background-color: $color-white-pure;
+        z-index: $z-overlay-mid;
+        flex: none;
+
+        .plan-basics {
+            @include breakpoint($mq-md-max) {
+                padding: 1rem 1.5rem;
+            }
+
+            @include breakpoint($mq-lg-min) {
+                padding: 1rem 4rem;
+            }
+
+            .plan-data-value {
+                font-weight: 300;
+                font-size: 1.4rem;
+            }
+
+            .plan-supplier-info {
+                width: 10rem;
+                padding-right: 2rem;
+
+                .plan-puct {
+                    text-align: center;
+                    padding: 0.2rem 0 0;
+                    font-size: 75%;
+                    line-height: 1em;
+                }
+            }
+
+            .plan-name {
+                font-weight: 700;
+                line-height: 1.2em;
+
+                @include breakpoint($mq-md-max) {
+                    font-size: 1.8rem;
+                }
+
+                @include breakpoint($mq-lg-min) {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .plan-utility {
+                color: $color-gray-chateau;
+
+                @include breakpoint($mq-md-max) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .plan-cta {
+            .plan-signup-btn {
+                width: 100%;
+                height: auto;
+                padding: 0.3rem 0;
+
+                @include breakpoint($mq-md-max) {
+                }
+
+                @include breakpoint($mq-lg-min) {
+                }
+            }
+        }
+
+        .plan-shortcuts {
+            border-bottom: 1px solid $color-gray-geyser;
+            background-color: $color-white-lily;
+            padding: 0;
+            text-align: left;
             display: block;
-            font-size: $font-size-huge;
-            line-height: 1;
+
+            .plan-shortcut-link {
+                text-transform: uppercase;
+                display: inline-block;
+                font-size: 1.2rem;
+                font-weight: 600;
+
+                @include breakpoint($mq-md-max) {
+                    padding: 1rem 1.5rem;
+                }
+
+                @include breakpoint($mq-lg-min) {
+                    padding: 1rem 4rem;
+                }
+            }
         }
     }
 
-    .plan-popularity-label {
-        display: block;
-        font-size: $font-size-tinier;
+    .plan-body {
+        height: 100%;
+        flex: auto;
+        overflow-y: scroll;
+
+        @include breakpoint($mq-md-max) {
+            padding: 0 1.5rem;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            padding: 0 4rem;
+        }
+
+        .section-title {
+            font-family: $font-family-body;
+            color: $color-gray-chateau;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-overview {
+            @include clearfix();
+            border-bottom: 1px solid $color-gray-geyser;
+            padding: 1rem 0;
+
+            @include breakpoint($mq-lg-min) {
+                padding: 2rem 0;
+            }
+
+            .plan-data-row {
+                display: table;
+                width: 100%;
+
+                .plan-data-label,
+                .plan-data-value {
+                    display: table-cell;
+                    padding: 0.5rem 0;
+                }
+
+                .plan-data-label {
+                    width: 12rem;
+                    vertical-align: top;
+                }
+
+                .plan-data-value {
+                    font-size: 1.7rem;
+                }
+            }
+
+            .plan-info-price,
+            .plan-info-other {
+                @include breakpoint($mq-lg-min) {
+                    @include cg-1of2(false, false, true);
+                    padding: 0 1rem;
+
+                    &:first-of-type {
+                        padding-left: 0;
+                    }
+
+                    &:last-of-type {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            .plan-unit-cost {
+                .plan-data-value {
+                    font-size: 2rem;
+                }
+            }
+
+            .fee-label {
+                font-size: 1rem;
+                text-transform: uppercase;
+                color: $color-gray-chateau;
+
+                @include breakpoint($mq-md-max) {
+                    display: block;
+                    line-height: 1.2em;
+                }
+            }
+
+            .fee-description {
+                display: block;
+                font-size: 1.2rem;
+                padding-bottom: 0.5rem;
+                line-height: 1em;
+
+                &:last-of-type {
+                    padding: 0;
+                }
+            }
+
+            .plan-documents {
+                text-align: left;
+                padding: 1.5rem 0 0;
+
+                .plan-document {
+                    display: block;
+                }
+            }
+        }
+
+        .plan-description {
+            border-bottom: 1px solid $color-gray-geyser;
+            padding: 1rem 0;
+            font-weight: 400;
+
+            @include breakpoint($mq-lg-min) {
+                padding: 2rem 0;
+                font-size: 1.6rem;
+            }
+        }
+
+        .plan-about-supplier {
+            border-bottom: 1px solid $color-gray-geyser;
+            padding: 1rem 0;
+
+            @include breakpoint($mq-lg-min) {
+                padding: 2rem 0;
+            }
+        }
+
+        .plan-faqs {
+            padding: 1rem 0;
+
+            @include breakpoint($mq-lg-min) {
+                padding: 2rem 0;
+            }
+
+            .plan-faq-item {
+                padding: 0.5rem 0;
+
+                h5 {
+                    font-family: $font-family-body;
+                    line-height: 1.4em;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .ce-tooltip {
+        position: inherit;
     }
 }
 
-// Popularity Meter
+// .plan-details-modal
 //
-// These define the basic "Popularity Meter" styles.
-// To enable the meter, add .with-meter to
-// the .plan-popularity container in a plan card.
-//
-// No styleguide reference.
-.popularity-meter {
-    margin: 0;
-    border: 1px solid $color-gray-ghost;
-    border-top: 0;
-    vertical-align: middle;
+// Positioning & layout for single plan card modal containers
+.plan-details-modal {
+    .modal-dialog {
+        width: auto;
+        margin: auto;
+        position: absolute;
 
-    .meter-pill {
-        @include box-sizing(border-box);
-        min-height: 1em;
-        width: 100%;
-        border-top: 1px solid $color-gray-ghost;
-        background: $color-white-lilac;
-    }
-
-    // TODO: Make meter mixin with # of steps and color base
-    .meter-highest {
-        background: $color-white-pure;
-    }
-
-    .meter-high {
-        border-top: 1px solid $color-white-pure;
-        background: $color-white-pure;
-    }
-
-    .meter-mid {
-        border-top: 1px solid $color-white-pure;
-        background: $color-white-pure;
-    }
-
-    .meter-low {
-        border-top: 1px solid $color-white-pure;
-        background: $color-white-pure;
-    }
-
-    .meter-base {
-        border-top: 1px solid $color-orange-apricot-light;
-        background: $color-orange-apricot-light;
-    }
-
-    &.meter-highest {
-        .meter-highest {
-            border-top: 1px solid $color-orange-fiery-light;
-            background: $color-orange-fiery-light;
+        @include breakpoint($mq-md-max) {
+            top: 3rem;
+            bottom: 3rem;
+            left: 3rem;
+            right: 3rem;
         }
 
-        .meter-high {
-            border-top: 1px solid $color-orange-tango-light;
-            background: $color-orange-tango-light;
-        }
-
-        .meter-mid {
-            border-top: 1px solid $color-orange-sun-light;
-            background: $color-orange-sun-light;
-        }
-
-        .meter-low {
-            border-top: 1px solid $color-orange-tacao-light;
-            background: $color-orange-tacao-light;
-        }
-
-        .meter-base {
-            border-top: 1px solid $color-orange-apricot-light;
-            background: $color-orange-apricot-light;
+        @include breakpoint($mq-lg-min) {
+            top: 8rem;
+            bottom: 8rem;
+            left: 8rem;
+            right: 8rem;
+            max-width: 60em;
         }
     }
 
-    &.meter-high {
-        .meter-highest {
-            background: $color-white-pure;
-        }
-
-        .meter-high {
-            border-top: 1px solid $color-orange-tango-light;
-            background: $color-orange-tango-light;
-        }
-
-        .meter-mid {
-            border-top: 1px solid $color-orange-sun-light;
-            background: $color-orange-sun-light;
-        }
-
-        .meter-low {
-            border-top: 1px solid $color-orange-tacao-light;
-            background: $color-orange-tacao-light;
-        }
-
-        .meter-base {
-            border-top: 1px solid $color-orange-apricot-light;
-            background: $color-orange-apricot-light;
-        }
+    .modal-content {
+        height: 100%;
     }
 
-    &.meter-mid {
-        .meter-highest {
-            background: $color-white-pure;
-        }
-
-        .meter-high {
-            border-top: 1px solid $color-white-pure;
-            background: $color-white-pure;
-        }
-
-        .meter-mid {
-            border-top: 1px solid $color-orange-sun-light;
-            background: $color-orange-sun-light;
-        }
-
-        .meter-low {
-            border-top: 1px solid $color-orange-tacao-light;
-            background: $color-orange-tacao-light;
-        }
-
-        .meter-base {
-            border-top: 1px solid $color-orange-apricot-light;
-            background: $color-orange-apricot-light;
-        }
-    }
-
-    &.meter-low {
-        .meter-highest {
-            background: $color-white-pure;
-        }
-
-        .meter-high {
-            border-top: 1px solid $color-white-pure;
-            background: $color-white-pure;
-        }
-
-        .meter-mid {
-            border-top: 1px solid $color-white-pure;
-            background: $color-white-pure;
-        }
-
-        .meter-low {
-            border-top: 1px solid $color-orange-tacao-light;
-            background: $color-orange-tacao-light;
-        }
-
-        .meter-base {
-            border-top: 1px solid $color-orange-apricot-light;
-            background: $color-orange-apricot-light;
-        }
+    .modal-scroll-area {
+        height: 100%;
+        overflow-y: scroll;
     }
 }
 
 // Schema.org Required Properties
 //
-// We will never want to display these in the interface, but they are required
-// for proper Google/Bing Product SEO.
-//
+// We will never want to display these in the interface, but they are required for proper Google/Bing Product SEO.
 // Uses the x- identifier to show that it is a utility class.
-//
-// No styleguide reference.
 @mixin schema-prop() {
     display: none;
 }
@@ -1429,8 +1223,6 @@
 //
 // Provides a list of zip codes in the same utility
 // or physically nearby the current shopping location.
-//
-// No styleguide reference
 .related-zips {
     @include cg-row(true, false);
     text-align: center;

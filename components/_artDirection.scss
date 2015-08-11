@@ -227,6 +227,13 @@
     );
 }
 
+.v-img136 .photoblock-photo {
+    @include photoblock();
+
+    // flip horizontally
+    transform: scaleX(-1);
+}
+
 .v-img138 .photoblock-photo {
     @include photoblock(
         $x-pos: 20%,
@@ -241,4 +248,10 @@
     );
     // flip horizontally
     transform: scaleX(-1);
+}
+
+.v-img140 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 70%
+    );
 }
