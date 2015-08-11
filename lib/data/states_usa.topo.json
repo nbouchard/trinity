@@ -698,7 +698,7 @@
                 "properties": {
                     "name": "New Hampshire",
                     "energy": {
-                        "active": 1,
+                        "active": 0,
                         "residential" : {
                             "electricity" : 0,
                             "natgas": 0,
@@ -710,7 +710,7 @@
                             "solar": 0
                         },
                         "commercial": {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "natgas": 0,
                             "solar": 0
                         }
@@ -725,9 +725,9 @@
                 "properties": {
                     "name": "Rhode Island",
                     "energy": {
-                        "active": 1,
+                        "active": 0,
                         "residential" : {
-                            "electricity" : 1,
+                            "electricity" : 0,
                             "natgas": 0,
                             "solar": 0
                         },
@@ -995,7 +995,7 @@
                 "properties": {
                     "name": "North Carolina",
                     "energy": {
-                        "active": 1,
+                        "active": 0,
                         "residential" : {
                             "electricity" : 0,
                             "natgas": 0,
@@ -1260,7 +1260,7 @@
                             "solar": 1
                         },
                         "smb" : {
-                            "electricity" : 0,
+                            "electricity" : 1,
                             "natgas": 0,
                             "solar": 0
                         },
