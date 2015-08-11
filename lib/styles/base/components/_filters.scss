@@ -255,6 +255,11 @@
         }
 
         text-align: center;
+        position: relative;
+
+        .ce-tooltip {
+            position: inherit;
+        }
 
         .ce-label {
             width: 100%;

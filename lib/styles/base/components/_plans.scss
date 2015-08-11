@@ -8,11 +8,30 @@
     @include breakpoint($mq-md-max) {
         padding: 0 0.5em;
     }
+
+    position: relative;
 }
 
 .all-plans {
     @include cg-row(true, true);
     margin-top: 1em;
+}
+
+.card-section-headline {
+    h1 {
+        display: inline-block;
+        vertical-align: text-top;
+    }
+
+    .ce-tooltip {
+        position: inherit;
+
+        .tooltip-content {
+            max-width: 40em;
+            left: 0;
+            transform: translateX(0.5em);
+        }
+    }
 }
 
 // Plan Card
@@ -159,8 +178,8 @@
             }
 
             .plan-puct {
-                padding: 0;
-                font-size: 90%;
+                padding: 0 0 0 0.5rem;
+                font-size: 75%;
             }
         }
     }
@@ -190,6 +209,7 @@
         .plan-signup-btn {
             padding: 0;
             line-height: 1.6em;
+            font-weight: 300;
         }
 
         .btn-extended-info {
@@ -253,7 +273,7 @@
             text-transform: uppercase;
             font-weight: 600;
             font-size: 1.1rem;
-            margin: 0rem;
+            margin-bottom: 0.5rem;
         }
     }
 
@@ -286,11 +306,21 @@
             .sorter-link {
                 display: table-cell;
                 padding: 0.5rem 0rem 0.5rem 1rem;
+                margin: 0 0 0.5rem;
                 vertical-align: middle;
                 text-transform: uppercase;
                 font-weight: 600;
                 font-size: 1.1rem;
                 box-sizing: border-box;
+                position: relative;
+
+                .ce-tooltip {
+                    position: inherit;
+
+                    .tooltip-content {
+                        max-width: 30em;
+                    }
+                }
 
                 &.sort-unit-cost {
                     width: 20%;
@@ -420,7 +450,7 @@
 
                 .line-clamp {
                     @include breakpoint($mq-md-max) {
-                        width: 16rem;
+                        width: 15rem;
                     }
 
                     @include breakpoint($mq-lg-min) {
@@ -431,6 +461,13 @@
 
             .plan-more-info {
                 padding: 0.5rem 0 0;
+
+
+                .plan-view-expanded {
+                    @include breakpoint($mq-md-max) {
+                        display: block;
+                    }
+                }
             }
         }
 
@@ -441,7 +478,6 @@
             .plan-signup-btn {
                 width :100%;
                 height: 100%;
-                font-weight: 400;
             }
         }
     }
@@ -693,7 +729,14 @@
                 .plan-percent-green {
                     display: inline-block;
                     float: left;
-                    width: 50%;
+                }
+
+                .plan-unit-cost {
+                    width: 60%;
+                }
+
+                .plan-percent-green {
+                    width: 40%;
                 }
 
                 .plan-terms {
@@ -740,13 +783,18 @@
             .plan-logo-description {
                 display: table;
                 width: 100%;
-                padding: 1rem 0;
+                padding: 1.5rem 0;
                 border-bottom: 1px solid $color-gray-geyser;
 
                 .plan-supplier-info {
                     display: table-cell;
                     vertical-align: middle;
                     padding-right: 0.5rem;
+
+                    .plan-puct {
+                        padding-top: 0.5rem;
+                        font-size: 75%;
+                    }
                 }
 
                 .plan-description {
@@ -759,23 +807,31 @@
             }
 
             .plan-fees-offer {
-                padding: 1rem 0;
+                padding: 1rem 0 1.5rem;;
                 border-bottom: 1px solid $color-gray-geyser;
                 @include clearfix;
 
                 .plan-fees {
-                    @include cg-2of3(true, true, true);
+                    @include cg-1of2(false, false, true);
+                    padding-right: 1rem;
                 }
 
                 .plan-offers,
                 .plan-utility {
-                    @include cg-1of3(true, true, true);
-                    padding-bottom: 0;
+                    @include cg-1of2(false, false, true);
+
+                    &:first-of-type {
+                        padding-bottom: 0.5rem;
+                    }
 
                     .plan-data-value {
                         font-size: 1.2rem;
                         line-height: 1em;
                     }
+                }
+
+                .plan-offers .fee-description {
+                    min-height: 2.1rem;
                 }
 
                 .plan-data-label,
@@ -834,11 +890,11 @@
                 color: $color-green-jewel-light;
                 font-size: 1.3rem;
 
-                .is-open:before {
+                .icon:before {
                     content: $c-icon-chevron-up;
                 }
 
-                .is-closed:before {
+                &.is-closed .icon:before {
                     content: $c-icon-chevron-down;
                 }
             }
@@ -900,7 +956,7 @@
                 .plan-puct {
                     text-align: center;
                     padding: 0.2rem 0 0;
-                    font-size: 80%;
+                    font-size: 75%;
                     line-height: 1em;
                 }
             }
@@ -1037,27 +1093,25 @@
                 }
             }
 
-            .plan-fees {
-                .fee-label {
-                    font-size: 1rem;
-                    text-transform: uppercase;
-                    color: $color-gray-chateau;
+            .fee-label {
+                font-size: 1rem;
+                text-transform: uppercase;
+                color: $color-gray-chateau;
 
-                    @include breakpoint($mq-md-max) {
-                        display: block;
-                        line-height: 1.2em;
-                    }
-                }
-
-                .fee-description {
+                @include breakpoint($mq-md-max) {
                     display: block;
-                    font-size: 1.2rem;
-                    padding-bottom: 0.5rem;
-                    line-height: 1em;
+                    line-height: 1.2em;
+                }
+            }
 
-                    &:last-of-type {
-                        padding: 0;
-                    }
+            .fee-description {
+                display: block;
+                font-size: 1.2rem;
+                padding-bottom: 0.5rem;
+                line-height: 1em;
+
+                &:last-of-type {
+                    padding: 0;
                 }
             }
 

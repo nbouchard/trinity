@@ -158,10 +158,6 @@
 
         @include breakpoint($mq-lg-max) {
             padding: 2em;
-
-            &.shop-body {
-                padding: 1em 0;
-            }
         }
 
         &.ea-headline {
@@ -607,6 +603,14 @@
                 }
             }
         }
+    }
+}
+
+.shop-body {
+    padding: 0 0.5em;
+
+    @include breakpoint($mq-lg-max) {
+        padding: 1em 0.5em;
     }
 }
 
