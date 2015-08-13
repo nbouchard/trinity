@@ -1,14 +1,19 @@
 .careers {
+    padding-bottom: 0;
+    
+    h3 {
+        padding: 1em 0;
+        font-weight: normal;
+    }
     .job-listing {
-        margin: 4em 0;
+        margin: 2em 0;
         position: relative;
     }
 
     .job-info {
-        padding-right: 15em;
 
         .job-title {
-            font-size: $font-size-huge;
+            font-size: $font-size-larger;
             display: inline-block;
         }
 
@@ -26,7 +31,7 @@
 
         .btn {
             width: 8em;
-            font-size: $font-size-larger;
+            font-size: $font-size-large;
         }
     }
 }

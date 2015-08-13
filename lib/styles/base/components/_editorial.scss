@@ -1206,6 +1206,24 @@
         font-size: $font-size-larger;
     }
 }
+.v-benefits {
+    .editorial-container {
+        padding-top: 0;
+    }
+    .ce-grid-item {
+        text-align: center;
+        padding: 2em 1em;
+    }
+    .grid-item-headline {
+        font-size: 1.2em;
+    }
+    .grid-item-body {
+    }
+    .grid-item-icon {
+        font-size: 4em;
+        color: $color-green-shamrock;
+    }
+}
 
 // For prototype functionality purposes only
 #ce-commercial-form {

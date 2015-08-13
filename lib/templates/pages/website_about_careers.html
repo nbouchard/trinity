@@ -14,11 +14,129 @@ tpl:
 }}
     {{> cmp_editorial_basic}}
 {{/withHash}}
-
 <div class="ce-editorial v-noheight v-bg-white">
     <div class="editorial-container careers">
-        <h1>Open Positions</h1>
-        <div id="jobs-container"></div>
+        <h1>Benefits & Perks</h1>
+        <h3>the little things that make life wonderful at Choose Energy</h4>
+    </div>
+</div>
+
+<div class="ce-editorial v-noheight v-benefits">
+    <div class="editorial-container">
+        {{#withHash
+            columns="4"
+            icon="c-icon-medical"
+            headline="awesome medical/dental"
+            body_text="comprehensive<br>coverage"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-plane"
+            headline="open vacation policy"
+            body_text="maintain your<br>work/life balance"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-money"
+            headline="salary & equity"
+            body_text="competitive<br>compensation"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-trolley"
+            headline="commuter benefits"
+            body_text="pretaxed commuter<br>benefits"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}   
+        {{#withHash
+            columns="4"
+            icon="c-icon-electricity"
+            headline="direct impact"
+            body_text="on the products<br>we design"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-green"
+            headline="amazing growth<br>opportunities"
+            body_text="grow with us"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-lightbulb"
+            headline="innovation encouraged"
+            body_text="always run with<br>new ideas"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-ping-pong"
+            headline="ping pong"
+            body_text="a sport, an art,<br> a daily ritual"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}   
+        {{#withHash
+            columns="4"
+            icon="c-icon-lunch"
+            headline="team lunches and<br>frequent get-togethers"
+            body_text="we're a tight-knit bunch"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-offsites"
+            headline="offsites"
+            body_text="we travel as a team<br>to get inspired"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-happy-hour"
+            headline="happy hours"
+            body_text="raise a glass<br>at the office"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-nat-gas"
+            headline="free coffee"
+            body_text="and snacks to<br>keep you fueled"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}   
+                                
+    </div>
+</div>
+<div class="ce-editorial v-noheight v-bg-white">
+    <div class="editorial-container careers">
+        <div class="cg-1of2">
+            <h1>Open Positions</h1>
+            <div id="jobs-container"></div>
+        </div>
     </div>
 </div>
 <script>
@@ -42,8 +160,7 @@ tpl:
                     jobPost.innerHTML = '<div class="job-info">' +
                             '<a href="' + link + '" class="job-title">' + title + '</a>' +
                             '<div class="job-tags"><span class="job-tag">' + team + '</span><span class="job-tag">' + location + '</span><span class="job-tag">' +commitment + '</span></div>' +
-                            '</div>' +
-                            '<a href="' + link + '" class="job-apply"><button type="button" class="btn btn-primary">Apply</button></a>'
+                            '</div>'
                         ;
                 var jobs = document.getElementById('jobs-container');
                     jobs.appendChild(jobPost);
