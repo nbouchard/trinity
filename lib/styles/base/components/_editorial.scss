@@ -1209,6 +1209,13 @@
 .v-benefits {
     .editorial-container {
         padding-top: 0;
+        h1 {
+            padding: 1em 0 0;
+        }            
+        h3 {
+            padding: 1em 0;
+            font-weight: normal;
+        }
     }
     .ce-grid-item {
         text-align: center;
