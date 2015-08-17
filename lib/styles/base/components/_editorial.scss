@@ -604,6 +604,23 @@
             }
         }
     }
+
+    .grid-cta {
+        @include cg-item();
+        display: block;
+        padding-bottom: 0;
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: $font-weight-subhead;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:after {
+            @include icon;
+            content: $c-icon-right-dir;
+            vertical-align: middle;
+        }
+    }
 }
 
 .shop-body {
