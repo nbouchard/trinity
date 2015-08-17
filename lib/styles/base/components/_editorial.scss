@@ -1203,6 +1203,15 @@
     p:last-of-type {
         margin-bottom: 0;
     }
+
+    .contact-info {
+        font-size: $font-size-larger;
+
+        &:before {
+            margin-right: 0.5em;
+            font-size: $font-size-largest;
+        }
+    }
 }
 
 .v-stats {
@@ -1230,11 +1239,11 @@
     }
 
     .grid-item-headline {
-        font-size: 1.2em;
+        font-size: $font-size-larger;
     }
 
     .grid-item-icon {
-        font-size: 4em;
+        font-size: $font-size-extrahugest;
         color: $color-blue-curious;
     }
 }

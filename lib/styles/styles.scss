@@ -28,6 +28,12 @@
 @import 'base/components/partnerGrids';
 @import 'base/components/suppliers';
 
+// CE Content Experience Elements
+@import 'base/components/photoblock';
+@import 'base/components/editorial';
+@import 'base/components/testimonials';
+@import 'base/components/maps';
+
 // CE Component Specific Styles
 @import 'base/components/search';
 @import 'base/components/careers';
@@ -40,12 +46,6 @@
 @import 'base/components/pageSpacer';
 @import 'base/components/trendCharts';
 @import 'base/components/press';
-
-// CE Content Experience Elements
-@import 'base/components/photoblock';
-@import 'base/components/editorial';
-@import 'base/components/testimonials';
-@import 'base/components/maps';
 
 // CE Shopping Elements
 @import 'base/components/loading';
