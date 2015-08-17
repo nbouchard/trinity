@@ -1,27 +1,31 @@
 {
-    "name": "ChooseUX",
-    "version": "0.1.0",
-    "description": "Choose Energy User Experience Style Guide",
-    "main": "choose.js",
-    "license": "All rights reserved.",
-    "authors": [{
-        "name": "Alex Stillwell",
-        "email": "astillwell@chooseenergy.com"
-    }, {
-        "name": "Cameron Drake",
-        "email": "cdrake@chooseenergy.com"
-    }, {
-        "name": "Michael Owens",
-        "email": "mowens@chooseenergy.com"
-    }],
-    "homepage": "https://github.com/chooseenergy/ChooseUX",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/chooseenergy/ChooseUX.git"
+  "name": "ChooseUX",
+  "version": "0.1.0",
+  "description": "Choose Energy User Experience Style Guide",
+  "main": "choose.js",
+  "license": "All rights reserved.",
+  "authors": [
+    {
+      "name": "Alex Stillwell",
+      "email": "astillwell@chooseenergy.com"
     },
-    "dependencies": {
+    {
+      "name": "Cameron Drake",
+      "email": "cdrake@chooseenergy.com"
     },
-    "devDependencies": {
-    },
-    "private": true
+    {
+      "name": "Michael Owens",
+      "email": "mowens@chooseenergy.com"
+    }
+  ],
+  "homepage": "https://github.com/chooseenergy/ChooseUX",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chooseenergy/ChooseUX.git"
+  },
+  "dependencies": {
+    "jquery": "~2.1.4"
+  },
+  "devDependencies": {},
+  "private": true
 }
