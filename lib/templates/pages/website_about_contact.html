@@ -76,6 +76,12 @@ tpl:
             var longitude = -122.402215;
         }
         office_map.setView([latitude, longitude], 14);
+
+        var $mapBlock = $('.v-contact-map'),
+            $parentGridItem = $(event.target).closest('.ce-grid-item');
+
+        $mapBlock.find('.ce-grid-item').removeClass('is-active');
+        $parentGridItem.addClass('is-active');
     }
 </script>
 
