@@ -9,15 +9,131 @@ tpl:
 ---
 {{#withHash
     editorial_headline="Careers"
-    editorial_bg="images/photography/Bay_Bridge_Night.jpg"
-    variant_classes="v-short v-bg-dark"
+    editorial_subhead=""
+    editorial_body=""
+    variant_classes="v-bg-info v-bigtalkshort"
 }}
     {{> cmp_editorial_basic}}
 {{/withHash}}
 
-<div class="ce-editorial v-noheight v-bg-white">
-    <div class="editorial-container careers">
-        <h1>Open Positions</h1>
+<div class="ce-editorial v-benefits v-bg-light">
+    <div class="editorial-container">
+        <h1 class="editorial-headline">Benefits & Perks</h1>
+        <h3 class="editorial-subhead">the little things that make life wonderful at Choose Energy</h3>
+        {{#withHash
+            columns="4"
+            icon="c-icon-medical"
+            headline="awesome medical/dental"
+            body_text="comprehensive<br>coverage"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-plane"
+            headline="open vacation policy"
+            body_text="maintain your<br>work/life balance"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-money"
+            headline="salary & equity"
+            body_text="competitive<br>compensation"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-trolley"
+            headline="commuter benefits"
+            body_text="pretaxed commuter<br>benefits"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-electricity"
+            headline="direct impact"
+            body_text="on the products<br>we design"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-green"
+            headline="amazing growth<br>opportunities"
+            body_text="grow with us"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-lightbulb"
+            headline="innovation encouraged"
+            body_text="always run with<br>new ideas"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-ping-pong"
+            headline="ping pong"
+            body_text="a sport, an art,<br> a daily ritual"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-lunch"
+            headline="team lunches and<br>frequent get-togethers"
+            body_text="we're a tight-knit bunch"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-offsites"
+            headline="offsites"
+            body_text="we travel as a team<br>to get inspired"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-happy-hour"
+            headline="happy hours"
+            body_text="raise a glass<br>at the office"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-nat-gas"
+            headline="free coffee"
+            body_text="and snacks to<br>keep you fueled"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+    </div>
+</div>
+
+
+<div class="ce-editorial v-careers">
+    <div class="editorial-container">
+        <h1 class="editorial-headline">Open Positions</h1>
         <div id="jobs-container"></div>
     </div>
 </div>

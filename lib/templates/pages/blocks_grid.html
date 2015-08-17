@@ -235,3 +235,47 @@ tpl:
         {{/withHash}}
     </div>
 </div>
+
+<br>
+
+<div class="ce-editorial v-noheight v-benefits">
+    <div class="editorial-container">
+        {{#withHash
+            columns="4"
+            icon="c-icon-electricity"
+            headline="awesome medical/dental"
+            body_text="comprehensive<br>coverage"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-happy-hour"
+            headline="open vacation policy"
+            body_text="maintain your<br>work/life balance"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-trolley"
+            headline="salary & equity"
+            body_text="competitive<br>compensation"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            icon="c-icon-offsites"
+            headline="commuter benefits"
+            body_text="pretaxed commuter<br>benefits"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}                   
+    </div>
+</div>
+
+<br>
