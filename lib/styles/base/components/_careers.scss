@@ -1,19 +1,16 @@
-.careers {
-    padding-bottom: 0;
-    
-    h3 {
-        padding: 1em 0;
-        font-weight: normal;
-    }
+.v-careers {
     .job-listing {
-        margin: 2em 0;
+        @include clearfix;
+        padding: 2em 0;
         position: relative;
+        border-bottom: 1px solid $color-gray-geyser;
     }
 
     .job-info {
+        @include cg-3of4(false, false, false);
 
         .job-title {
-            font-size: $font-size-larger;
+            font-size: $font-size-huge;
             display: inline-block;
         }
 
@@ -25,13 +22,12 @@
     }
 
     .job-apply {
-        position: absolute;
-        top: 0.6em;
-        right: 0;
+        @include cg-1of4(false, false, false);
+        text-align: right;
 
         .btn {
             width: 8em;
-            font-size: $font-size-large;
+            font-size: $font-size-larger;
         }
     }
 }

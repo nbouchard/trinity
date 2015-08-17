@@ -9,18 +9,17 @@ tpl:
 ---
 {{#withHash
     editorial_headline="Careers"
-    editorial_bg="images/photography/Bay_Bridge_Night.jpg"
-    variant_classes="v-short v-bg-dark"
+    editorial_subhead=""
+    editorial_body=""
+    variant_classes="v-bg-info v-bigtalkshort"
 }}
     {{> cmp_editorial_basic}}
 {{/withHash}}
 
-<div class="ce-editorial v-noheight v-benefits">
+<div class="ce-editorial v-benefits v-bg-light">
     <div class="editorial-container">
-        <h1>Benefits & Perks</h1>
-        <h3>the little things that make life wonderful at Choose Energy</h4>
-    </div>
-    <div class="editorial-container">
+        <h1 class="editorial-headline">Benefits & Perks</h1>
+        <h3 class="editorial-subhead">the little things that make life wonderful at Choose Energy</h3>
         {{#withHash
             columns="4"
             icon="c-icon-medical"
@@ -55,7 +54,8 @@ tpl:
             body_text="pretaxed commuter<br>benefits"
         }}
             {{> cmp_grid_item}}
-        {{/withHash}}   
+        {{/withHash}}
+
         {{#withHash
             columns="4"
             icon="c-icon-electricity"
@@ -90,7 +90,8 @@ tpl:
             body_text="a sport, an art,<br> a daily ritual"
         }}
             {{> cmp_grid_item}}
-        {{/withHash}}   
+        {{/withHash}}
+
         {{#withHash
             columns="4"
             icon="c-icon-lunch"
@@ -125,16 +126,15 @@ tpl:
             body_text="and snacks to<br>keep you fueled"
         }}
             {{> cmp_grid_item}}
-        {{/withHash}}   
-                                
+        {{/withHash}}
     </div>
 </div>
-<div class="ce-editorial v-noheight v-bg-white">
-    <div class="editorial-container careers">
-        <div class="cg-1of2">
-            <h1>Open Positions</h1>
-            <div id="jobs-container"></div>
-        </div>
+
+
+<div class="ce-editorial v-careers">
+    <div class="editorial-container">
+        <h1 class="editorial-headline">Open Positions</h1>
+        <div id="jobs-container"></div>
     </div>
 </div>
 <script>
@@ -158,7 +158,8 @@ tpl:
                     jobPost.innerHTML = '<div class="job-info">' +
                             '<a href="' + link + '" class="job-title">' + title + '</a>' +
                             '<div class="job-tags"><span class="job-tag">' + team + '</span><span class="job-tag">' + location + '</span><span class="job-tag">' +commitment + '</span></div>' +
-                            '</div>'
+                            '</div>' +
+                            '<a href="' + link + '" class="job-apply"><button type="button" class="btn btn-primary">Apply</button></a>'
                         ;
                 var jobs = document.getElementById('jobs-container');
                     jobs.appendChild(jobPost);
