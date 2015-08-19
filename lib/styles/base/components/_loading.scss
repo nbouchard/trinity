@@ -72,6 +72,7 @@
         text-align: center;
         top: 50%; // this + next line vertically centers the icon in the box
         @include prefixer(transform, translateY(-50%), webkit ms spec);
+        color: $color-gray-chateau;
 
         .bad-browser-icons {
             padding: 2em 0;
@@ -89,7 +90,7 @@
             font-weight: normal;
         }
         .bad-browser-text {
-            color: $color-gray-chateau;
+            font-size: $font-size-larger;
         }
     }
 }
