@@ -1,28 +1,41 @@
-.contact-map {
-    width: 100%;
-    height: 800px;
-}
+.v-contact-map {
+    border-bottom: 0.5em solid $color-green-shamrock;
 
-.location {
-    .location-cell {
-        @include cg-1of3(false, false, strict);
+    .editorial-container {
+        padding-bottom: 2em;
+    }
+
+    .ce-grid-item {
         text-align: center;
+        padding-bottom: 0;
         cursor: pointer;
+        color: $color-gray-stone;
         border-right: 1px solid $color-gray-geyser;
 
         &:last-of-type {
             border: 0;
         }
 
-        .contact-icon {
-            color: $color-green-shamrock;
-            font-size: 32px;
-        }
-
-        &:hover {
-            .contact-icon {
-                color: $color-green-jewel-light;
-            }
+        &.is-active {
+            color: $color-green-jungle-light;
         }
     }
+
+    .grid-item-headline {
+        font-size: $font-size-huge;
+    }
+
+    .grid-item-body {
+        font-size: $font-size-larger;
+    }
+
+    .grid-item-icon {
+        font-size: 5em;
+        line-height: 1em;
+    }
+}
+
+.contact-map {
+    width: 100%;
+    height: 800px;
 }

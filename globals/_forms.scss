@@ -26,7 +26,7 @@ select,
 .input {
     @include box-sizing(border-box);
     margin: 0 0.5em;
-    padding: 0.625em;
+    padding: 0 0 0 0.625em;
     border: 1px solid $color-gray-ghost;
     border-left-width: 5px;
     background: $color-white-pure;
@@ -590,64 +590,63 @@ input[type=range]:disabled::-ms-thumb {
 }
 
 // Styling gravity forms
-.gform_wrapper {
-    .gform_heading {
-        font-size: 1.2em;
+
+.gform_heading {
+    font-size: 1.2em;
+}
+
+.gform_body {
+    width: 50em;
+
+    .gform_fields {
+        list-style: none;
     }
 
-    .gform_body {
-        width: 50em;
-
-        .gform_fields {
-            list-style: none;
-        }
-
-        .gfield {
-            width:100%;
-            margin-bottom: 2em;
-        }
-
-        .gfield_label {
-            display: inline-block;
-            width: 100%;
-            max-width: 10em;
-            text-align: right;
-            font-weight: $font-weight-body-strong;
-            box-sizing: border-box;
-        }
-
-        .ginput_container {
-            display: inline-block;
-            box-sizing: border-box;
-            width: 100%;
-            max-width: 38em;
-        }
-
-        .field-large {
-            width: 100%;
-        }
-
-        .field-medium {
-            width: 50%;
-        }
-
-        .field-small {
-            width: 25%;
-        }
-
-        input, textarea {
-            border-left-width: 5px;
-        }
-
-        textarea {
-            width: 100%;
-            height: 6em;
-        }
+    .gfield {
+        width:100%;
+        margin-bottom: 2em;
     }
 
-    .gform_button {
-        float: right;
+    .gfield_label {
+        display: inline-block;
+        width: 100%;
+        max-width: 10em;
+        text-align: right;
+        font-weight: $font-weight-body-strong;
+        box-sizing: border-box;
     }
+
+    .ginput_container {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 38em;
+    }
+
+    .field-large {
+        width: 100%;
+    }
+
+    .field-medium {
+        width: 50%;
+    }
+
+    .field-small {
+        width: 25%;
+    }
+
+    input, textarea {
+        border-left-width: 5px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 6em;
+    }
+}
+
+.gform_button {
+    float: right;
 }
 
 .ce-solar-lead-form {
@@ -672,84 +671,90 @@ input[type=range]:disabled::-ms-thumb {
 }
 
 .ce-contact-form {
-    .gform_heading {
-        float: left;
-        display: inline-block;
-        width: 45%;
-    }
-
     .gform_body {
-        display: inline-block;
-        width: 55%;
+        width: auto;
 
         .gform_fields {
             list-style: none;
+            padding: 0;
         }
 
         .gfield {
-            width:100%;
+            @include clearfix;
             margin-bottom: 2em;
         }
 
         .gfield_label {
-            display: inline-block;
-            width: 100%;
-            max-width: 6em;
-            text-align: right;
-            font-size: 1.4em;
+            float: left;
+            width: 25%;
+            font-size: 1.1em;
+            padding-right: 0.5em;
+            text-align: left;
         }
+
         .ginput_container {
-            display: inline-block;
-            width: 100%;
-            max-width: 32em;
+            float: right;
+            width: 75%;
+
+            input,
+            textarea {
+                width: 100%;
+                max-height: 6em;
+                margin: 0;
+            }
         }
     }
 
-    .gform_button {
-        margin-left: 59.5%;
-        background: $color-blue-curious;
+    .gform_footer {
+        text-align: center;
+        padding-left: 25%;
+
+        .button {
+            @include ce-button('primary');
+            float: none;
+        }
     }
-    
-    &.v-solar {
-        .gform_title {
-            font-weight: 400;
-            font-size: 2.5em;
-        }
-        .gfield_label {
-            font-weight: 200;
-            min-width: 9em;
-        }
-        .gform_heading {
-            width: 100%;
-        }
-        .ginput_container input[type=checkbox] {
+}
+
+.ce-solar-form {
+    .gform_title {
+        font-weight: 400;
+        font-size: 2.5em;
+    }
+    .gfield_label {
+        font-weight: 200;
+        min-width: 9em;
+    }
+    .gform_heading {
+        width: 100%;
+    }
+    .ginput_container input[type=checkbox] {
+        width: 1em;
+    }
+    .gform_body {
+        width: 100%;
+    }
+    .gform_button {
+        margin-left: 29%;
+    }
+    .gform_button {
+            float:left;
+    }
+    .gform_body input, 
+    .gform_body textarea {
+        width: 100%;
+    }
+    .gfield_checkbox {
+        padding: 0 1em;
+        list-style: none;
+        input[type=checkbox] {
+            position: relative;
+            display: inline;
+            height: 1em;
             width: 1em;
         }
-        .gform_body {
-            width: 100%;
-        }
-        .gform_button {
-            margin-left: 29%;
-        }
-        .gform_button {
-                float:left;
-        }
-        .gform_body input, 
-        .gform_body textarea {
-            width: 100%;
-        }
-        .gfield_checkbox {
-            padding: 0 1em;
-            list-style: none;
-            input[type=checkbox] {
-                position: relative;
-                display: inline;
-                height: 1em;
-                width: 1em;
-            }
-            label {
-                display: inline;
-            }
+        label {
+            display: inline;
         }
     }
 }
