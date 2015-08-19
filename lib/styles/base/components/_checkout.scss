@@ -298,6 +298,23 @@
             }
         }
     }
+
+    &.v-legal-docs {
+        .checkout-legal-docs {
+            border: 1px solid $color-gray-chateau;
+            display: inline-block;
+            width: 100%;
+            margin-top: 1em;
+        }
+
+        .checkout-legal-docs-frame {
+            width: 100%;
+            height: 40rem;
+            border: none;
+            display: inline;
+            float: left;
+        }
+    }
 }
 
 // Checkout Actions

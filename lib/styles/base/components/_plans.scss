@@ -155,6 +155,7 @@
             vertical-align: middle;
             text-transform: uppercase;
             font-weight: $font-weight-body-strong;
+            white-space: nowrap;
         }
 
         &:before {
