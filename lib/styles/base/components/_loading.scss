@@ -54,6 +54,46 @@
         opacity: 0;
     }
 }
+.ce-bad-browser {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-overlay-lowest;
+    width: 100%;
+    height: 100%;
+    background-color: $color-white-lilac;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+
+    .bad-browser-content {
+        position: relative;
+        max-width: 80em;
+        margin: 0 auto;
+        text-align: center;
+        top: 50%; // this + next line vertically centers the icon in the box
+        @include prefixer(transform, translateY(-50%), webkit ms spec);
+
+        .bad-browser-icons {
+            padding: 2em 0;
+
+            svg {
+                height: 5em;
+                width: 5em;
+
+                rect {
+                    @include prefixer(animation, lights_on 3s ease 0s infinite, webkit ms spec);
+                }
+            }
+        }
+
+        .bad-browser-text {
+            p {
+                font-size: $font-size-huge;
+            }
+            color: $color-gray-chateau;
+        }
+    }
+}
 
 // Animation for svg lights in icons
 @-webkit-keyframes lights_on {
