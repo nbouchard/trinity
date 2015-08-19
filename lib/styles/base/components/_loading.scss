@@ -85,11 +85,10 @@
                 }
             }
         }
-
+        h3 {
+            font-weight: normal;
+        }
         .bad-browser-text {
-            p {
-                font-size: $font-size-huge;
-            }
             color: $color-gray-chateau;
         }
     }
