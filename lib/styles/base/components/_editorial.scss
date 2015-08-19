@@ -1195,9 +1195,20 @@
         }
     }
 
+    .grid-item-icon {
+        text-align: center;
+        font-size: $font-size-extrahugest;
+        line-height: 1.2em;
+        color: $color-blue-curious;
+    }
+
     .grid-item-headline {
         font-size: $font-size-huge;
         font-weight: $font-weight-headline-book;
+    }
+
+    .grid-item-body {
+        padding-top: 0.5em;
     }
 
     p:last-of-type {
@@ -1228,7 +1239,6 @@
     }
 
     .grid-item-body {
-        padding-top: 0.5em;
         font-size: $font-size-larger;
     }
 }
@@ -1240,11 +1250,6 @@
 
     .grid-item-headline {
         font-size: $font-size-larger;
-    }
-
-    .grid-item-icon {
-        font-size: $font-size-extrahugest;
-        color: $color-blue-curious;
     }
 }
 
