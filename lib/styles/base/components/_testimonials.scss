@@ -14,14 +14,14 @@
             padding-top: 12em;
             @include cg-item();
             display: none;
-            height: 33em;
+            height: 24em;
         }
 
         @include breakpoint($mq-sm) {
             padding-top: 10em;
             @include cg-item();
             display: none;
-            height: 32em;
+            height: 24em;
         }
 
         @include breakpoint($mq-md) {
@@ -41,6 +41,11 @@
             @include breakpoint($mq-sm-max) {
                 padding: 1em;
                 width: 100%;
+                font-size: 1.2em;
+            }
+
+            @include breakpoint($mq-md) {
+                font-size: 1.2em;
             }
         }
 
@@ -90,11 +95,13 @@
             margin-left: 5%;
             position: absolute;
             bottom: 0;
+            max-height: 200px;
             -webkit-transition: width .5s, margin-left .5s;
             transition: width .5s, margin-left .5s;
+
             @include breakpoint($mq-sm-max) {
                 display: none;
-                max-height: 200px;
+                max-height: 150px;
             }
         }
 
