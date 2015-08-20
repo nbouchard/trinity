@@ -9,10 +9,8 @@ tpl:
   classes: energy-academy
 ---
 {{#withHash
-    editorial_subhead="Our Mission"
-    editorial_headline2="Empowering Choice"
-    editorial_bg="images/photography/Bay_Bridge_Night.jpg"
-    variant_classes="v-bigtalkshort v-bg-dark"
+    editorial_headline="Meet our team"
+    variant_classes="v-bigtalkshort v-bg-info"
 }}
     {{> cmp_editorial_basic}}
 {{/withHash}}
@@ -21,12 +19,20 @@ tpl:
 
 {{> cb_team_members}}
 
-<div class="ce-editorial v-short">
-    <div class="content-editorial-container">
-        <h4 class="content-editorial-headline">Interested in joining our team?</h4>
-        <div class="content-editorial-cta">
-            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-            <button type="button" class="btn-primary">See Job Openings</button>
-        </div>
-    </div>
-</div>
+{{#withHash
+    color="light-gray"
+}}
+    {{> cmp_page_spacer}}
+{{/withHash}}
+
+{{#withHash
+    switch=""
+    icon="heart"
+    bg_color="blue"
+    height="short"
+    headline="Feeling the love?"
+    body_text="With bagel Wednesday, Friday offsite lunches and daily Nerf gun wars, we feel it too. We're always looking for new friends so check out our careers page for openings."
+    cta_text="Join us"
+}}
+    {{> cmp_split_editorial}}
+{{/withHash}}

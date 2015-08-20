@@ -776,41 +776,6 @@
     }
 }
 
-.v-team-values {
-    @include editorial-bg-color('light');
-
-    .editorial-content {
-        font-size: $font-size-larger;
-
-        .list-unstyled {
-            margin: 0;
-
-            li {
-                margin: 15px 0;
-
-                &:first-of-type,
-                &:last-of-type {
-                    margin: 0;
-                }
-            }
-        }
-
-        img {
-            max-width: 100%;
-        }
-    }
-}
-
-.v-our-story {
-    @include editorial-bg-color('light');
-
-    .editorial-content {
-        font-size: $font-size-larger;
-        img {
-            max-width: 100%;
-        }
-    }
-}
 .v-team-members {
     .editorial-content {
         padding: 0;
@@ -818,11 +783,36 @@
     }
 
     .team-card {
-        float: left;
-        width: 16.66%;
-        // css trick to set height = width
         height: 0;
-        padding-bottom: 16.66%;
+
+        @include breakpoint($mq-xs) {
+            @include cg-1of2(false, false, true);
+
+            // css trick to set height = width
+            padding-bottom: 50%;
+        }
+
+        @include breakpoint($mq-sm) {
+            @include cg-1of3(false, false, true);
+
+            // css trick to set height = width
+            padding-bottom: 33.33%;
+        }
+
+
+        @include breakpoint($mq-md) {
+            @include cg-1of4(false, false, true);
+
+            // css trick to set height = width
+            padding-bottom: 25%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            @include cg-1of6(false, false, true);
+
+            // css trick to set height = width
+            padding-bottom: 16.66%;
+        }
 
         &.large-card {
             width: 50%;
@@ -854,8 +844,23 @@
             left: 0;
             width: 100%;
             height: 100%;
-            padding: 55px 10px 10px;
             display: none;
+
+            @include breakpoint($mq-xs) {
+                padding: 3em 0.5em 0.5em;
+            }
+
+            @include breakpoint($mq-sm) {
+                padding: 1em 0.5em 0.5em;
+            }
+
+            @include breakpoint($mq-md) {
+                padding: 3.5em 0.5em 0.5em;
+            }
+
+            @include breakpoint($mq-lg-min) {
+                padding: 2em 0.5em 0.5em;
+            }
         }
 
         .team-name {

@@ -60,18 +60,6 @@
         "img": "kate_h.jpg"
     },
     {
-        "firstName": "Michael",
-        "lastName": "Owens",
-        "title": "Head of User Experience",
-        "twitter": "@mko",
-        "superpower": "Being Human.",
-        "slogan": "In all things, people should be respectful. Human kindness is core to the fabric of society.",
-        "weekend": "Cycling, triathlons, charity work, gaming, and comic books.",
-        "guiltyPleasure": "All the Swedish Fish.",
-        "dream": "Living in a world like that of Star Trek.",
-        "img": "michael_o.jpg"
-    },
-    {
         "firstName": "Kyla",
         "lastName": "Westphal",
         "title": "Content Marketing Manager",
@@ -168,18 +156,6 @@
         "img": "barry_l.jpg"
     },
     {
-        "firstName": "Jasmine",
-        "lastName": "Friedrich",
-        "title": "Designer",
-        "twitter": "@asynchronism",
-        "superpower": "Chronomancy + Omniglotism. Think about it.",
-        "slogan": "Interesting is better than good.",
-        "weekend": "Cooking, building things, rolling dice with an unusual number of sides.",
-        "guiltyPleasure": "Reorganizing other people's stuff.",
-        "dream": "To see the technological singularity. And then live forever as a transhuman.",
-        "img": "jasmine_f.jpg"
-    },
-    {
         "firstName": "Phuong",
         "lastName": "Vu",
         "title": "Recruiting Coordinator",
@@ -189,7 +165,7 @@
         "weekend": "Hiking, Pilates, and spending time with my dogs Boston & Chloe",
         "guiltyPleasure": "Fried chicken",
         "dream": "Meeting Oprah! And being able to traveling the world",
-        "img": "phuong_v.jpg"
+        "img": "pvu.jpg"
     },
     {
         "firstName": "Ethan",
@@ -298,18 +274,6 @@
         "guiltyPleasure": "Bacon, bacon, bacon...did I mention bacon?",
         "dream": "Visit every continent...and one muscle-up (just one).",
         "img": "simona_g.jpg"
-    },
-    {
-        "firstName": "Jeremy",
-        "lastName": "Post",
-        "title": "VP Online Marketing",
-        "twitter": "@jeremypost",
-        "superpower": "Vlookups & Pivot Tables",
-        "slogan": "Wanderer, there is no road. The road is make by walking. - Antonio Machado",
-        "weekend": "Adventurees with my daughter, Evelyn",
-        "guiltyPleasure": "Terry Pratchett novels.",
-        "dream": "Owning a brewery.",
-        "img": "jeremy_p.jpg"
     },
     {
         "firstName": "Kerry",
