@@ -86,6 +86,30 @@
                 vertical-align: middle;
             }
         }
+
+        &.v-green {
+            color: $color-green-jungle-light;
+        }
+
+        &.v-blue {
+            color: $color-blue-curious;
+        }
+
+        &.v-orange {
+            color: $color-orange-sun;
+        }
+
+        &.v-light-gray {
+            color: $color-white-lilac;
+        }
+
+        &.v-dark-gray {
+            color: $color-gray-oslo;
+        }
+
+        &.v-white {
+            color: $color-white-pure;
+        }
     }
 
     @include breakpoint($mq-sm-max) {

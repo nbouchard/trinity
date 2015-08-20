@@ -1,0 +1,43 @@
+---
+site:
+  name: ChooseUX
+  version: 0.1.0
+tpl:
+  desc: Page Desc
+  title: Interfaces
+---
+<br>
+
+<div class="ce-editorial v-noheight v-bg-light">
+    <div class="editorial-container">
+        {{#withHash
+            color="green"
+        }}
+            {{> cmp_zip_search}}
+        {{/withHash}}
+    </div>
+</div>
+
+<br>
+
+<div class="ce-editorial v-bigtalkshort v-noheight">
+    <div class="editorial-container">
+        {{#withHash
+            color="dark-gray"
+        }}
+            {{> cmp_zip_search}}
+        {{/withHash}}
+    </div>
+</div>
+
+<div class="ce-editorial v-noheight v-bg-light">
+    <div class="editorial-container">
+        {{#withHash
+            color="blue"
+        }}
+            {{> cmp_zip_search}}
+        {{/withHash}}
+    </div>
+</div>
+
+<br>
