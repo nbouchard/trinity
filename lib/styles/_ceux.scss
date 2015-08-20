@@ -37,6 +37,30 @@ h4.ceux-heading {
 }
 
 
+.ceux-navmenu {
+    .nav-group {
+        padding: 1.5rem 1rem;
+    }
+
+    .nav {
+        @include clearfix;
+    }
+
+    .sub-menu {
+        .nav-item {
+            @include cg-1of2(false, false, true);
+        }
+
+        &.full-width .nav-item{
+            width: 100%;
+        }
+
+        @include breakpoint($mq-sm-max) {
+            display: none;
+        }
+    }
+}
+
 // Base Color Palette
 // Greens
 .swatch-green-jewel {

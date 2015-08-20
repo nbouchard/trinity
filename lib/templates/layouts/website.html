@@ -45,22 +45,20 @@
     <!-- END TODO -->
 
 </head>
-<body class="has-sidenav has-cart {{ site.classes }}">
+<body class="has-navmenu {{ site.classes }}">
 {{> website_header }}
 <main class="site-main {{ tpl.classes }}">
     {{> body }}
 </main>
 {{> website_footer }}
-{{> website_sidenav }}
-{{> website_shopping_cart }}
+{{> website_navmenu }}
 
 <!-- TODO: Add JS bundle syntax -->
 <script src="js/vendors/angular/angular.js"></script>
 <script src="js/vendors/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="js/vendors/jquery/dist/jquery.min.js"></script>
 <script src="js/ceux.js"></script>
-<script src="js/sidenav.js"></script>
-<script src="js/shopping_cart.js"></script>
+<script src="js/navmenu.js"></script>
 <script src="js/testimonials.js"></script>
 <script src="js/dropdown.js"></script>
 <script src="js/zip_search.js"></script>

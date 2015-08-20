@@ -1,0 +1,112 @@
+// Structural
+body.has-navmenu {
+    &.menu-active {
+        .main-nav {
+            top: 6rem;
+
+            @include breakpoint($mq-md-max) {
+                top: 4rem;
+            }
+        }
+
+        .nav .nav-list .nav-menu {
+            background-color: $color-gray-charcoal;
+
+            .nav-link {
+                color: $color-white-pure;
+            }
+        }
+    }
+}
+
+.main-nav {
+    @include transition(all 0.5s ease-in-out);
+    position: absolute;
+    background-color: $color-gray-charcoal;
+    width: 100%;
+    overflow: hidden;
+    z-index: $z-overlay-lowest;
+    top: -20rem;
+
+    @include breakpoint($mq-sm-max) {
+        top: -30rem;
+    }
+
+    .nav-wrapper {
+        @include clearfix;
+        max-width: 80em;
+        margin: 0 auto;
+    }
+
+    .logo {
+        @include box-sizing(border-box);
+        padding: 2em 4em;
+        width: 100%;
+        text-align: center;
+
+        @include breakpoint($mq-sm-max) {
+            display: none;
+        }
+    }
+
+    .nav-group {
+        @include cg-1of4(true, true, true);
+        padding: 1.5rem 2rem;
+
+        @include breakpoint($mq-sm-max) {
+            @include cg-1of2(true, true, true);
+
+            &:nth-of-type(2n+1) {
+                clear: both;
+            }
+        }
+    }
+
+    .nav {
+        padding-bottom: 0.5rem;
+
+        @include breakpoint($mq-md-min) {
+            padding-bottom: 1rem;
+        }
+
+        .nav-list {
+            margin: 0;
+
+            .nav-item {
+                .nav-link {
+                    color: $color-white-pure;
+                    font-weight: $font-weight-body;
+                    line-height: 1.6em;
+                    font-size: 1.7rem;
+
+                    &:hover,
+                    &:focus {
+                        color: $color-orange-apricot;
+                        text-decoration: none;
+                    }
+                }
+
+                &.is-active {
+                    .nav-link {
+                        color: $color-green-cruise;
+
+                        &:hover,
+                        &:focus {
+                            color: $color-green-cruise;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sub-menu {
+            padding-left: 0rem;
+
+            .nav-item .nav-link{
+                color: $color-gray-geyser;
+                font-size: 1.45rem;
+            }
+        }
+    }
+}
