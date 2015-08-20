@@ -1251,6 +1251,11 @@
 .v-benefits {
     .ce-grid-item {
         text-align: center;
+
+        @include breakpoint($mq-sm-max) {
+            @include cg-1of2(false,false,true);
+            padding: 1em 0;
+        }
     }
 
     .grid-item-headline {
