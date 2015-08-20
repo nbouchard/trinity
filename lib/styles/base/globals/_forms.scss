@@ -623,6 +623,41 @@ input[type=range]:disabled::-ms-thumb {
         max-width: 38em;
     }
 
+    .gfield_checkbox {
+        padding: 0;
+
+        li {
+            list-style: none;
+        }
+
+        [type="checkbox"] + label {
+            display: block;
+            padding: 0.25em 0.5em;
+        }
+
+        [type="checkbox"] + label:before {
+            content: '';
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            border: 0.2em solid $color-white-pure;
+            box-shadow: 0 0 0 0.15em $color-gray-geyser;
+            margin: 0 0.75em 0 0;
+            transition: 0.5s ease all;
+            background-color: $color-white-pure;
+        }
+
+        [type="checkbox"]:checked + label:before {
+            background-color: $color-green-shamrock;
+        }
+
+        [type="checkbox"]:disabled + label:before {
+            border: 0;
+            background-color: $color-gray-geyser;
+        }
+    }
+
     .field-large {
         width: 100%;
     }
