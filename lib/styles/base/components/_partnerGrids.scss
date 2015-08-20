@@ -10,17 +10,30 @@
     .supplier {
         list-style: none;
         text-align: center;
+        min-height: 62px;
 
         @include breakpoint($mq-sm-max) {
             @include cg-1of2(true, true, true);
+
+            &:nth-of-type(2n+1) {
+                clear: both;
+            }
         }
 
         @include breakpoint($mq-md) {
             @include cg-1of4(true, true, true);
+
+            &:nth-of-type(4n+1) {
+                clear: both;
+            }
         }
 
         @include breakpoint($mq-lg-min) {
             @include cg-1of8(true, true, true);
+
+            &:nth-of-type(8n+1) {
+                clear: both;
+            }
         }
 
         .supplier-logo {

@@ -1088,12 +1088,17 @@
             &.cg-1of4,
             &.cg-1of5 {
                 @include cg-1of2(true, true, true);
+
+                &:nth-of-type(2n+1) {
+                    clear: both;
+                }
             }
 
             &.cg-1of3,
             &.cg-1of5 {
                 &.more-from-ea {
                     @include cg-item(true, true);
+                    clear: both;
                 }
             }
         }
