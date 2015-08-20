@@ -20,8 +20,8 @@ body.has-navmenu {
 }
 
 .main-nav {
-    @include transition(all 0.5s ease-in-out);
-    position: absolute;
+    // @include transition(all 0.5s ease-in-out);
+    position: fixed;
     background-color: $color-gray-charcoal;
     width: 100%;
     overflow: hidden;
