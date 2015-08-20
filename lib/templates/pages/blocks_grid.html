@@ -340,3 +340,47 @@ tpl:
         {{/withHash}}
     </div>
 </div>
+
+<br>
+
+<div class="ce-editorial v-noheight v-bg-light">
+    <div class="editorial-container">
+        {{#withHash
+            columns="4"
+            svg="images/illustrations/HowItWorks_Producers.svg"
+            headline="Producers"
+            body_text="The companies that produce the energy you use."
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            svg="images/illustrations/HowItWorks_Suppliers.svg"
+            headline="Suppliers"
+            body_text="The companies who shop for energy on the open market and sell it to you for a competitive rate."
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            svg="images/illustrations/HowItWorks_Utilities.svg"
+            headline="Utilities"
+            body_text="The companies who transport and deliver the energy you bought to your home or business."
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="4"
+            svg="images/illustrations/HowItWorks_Comsumers.svg"
+            headline="Consumers"
+            body_text="Anyone who uses energy—like you."
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+    </div>
+</div>
+
+<br>
