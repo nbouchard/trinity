@@ -46,7 +46,7 @@ h4.ceux-heading {
         @include clearfix;
     }
 
-    .nav-sub-list {
+    .sub-menu {
         .nav-item {
             @include cg-1of2(false, false, true);
         }

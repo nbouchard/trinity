@@ -21,12 +21,12 @@ body.has-navmenu {
 
 .main-nav {
     @include transition(all 0.5s ease-in-out);
-    position: fixed;
+    position: absolute;
     background-color: $color-gray-charcoal;
     width: 100%;
     overflow: hidden;
     z-index: $z-overlay-lowest;
-    top: -25rem;
+    top: -20rem;
 
     @include breakpoint($mq-sm-max) {
         top: -30rem;
@@ -100,7 +100,7 @@ body.has-navmenu {
             }
         }
 
-        .nav-sub-list {
+        .sub-menu {
             padding-left: 0rem;
 
             .nav-item .nav-link{
