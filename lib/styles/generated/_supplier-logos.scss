@@ -65,7 +65,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-cincinnati-bell-energy {
   background-image: url(../images/supplier-logos.png);
-  background-position: 0px -601px;
+  background-position: -100px -605px;
   width: 100px;
   height: 14px;
 }
@@ -77,7 +77,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-clearview-energy {
   background-image: url(../images/supplier-logos.png);
-  background-position: -200px -528px;
+  background-position: -300px -528px;
   width: 100px;
   height: 39px;
 }
@@ -101,7 +101,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-continuum-energy {
   background-image: url(../images/supplier-logos.png);
-  background-position: -500px -572px;
+  background-position: 0px -605px;
   width: 100px;
   height: 15px;
 }
@@ -137,15 +137,15 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-ethical-electric {
   background-image: url(../images/supplier-logos.png);
-  background-position: -400px -528px;
+  background-position: -500px -528px;
   width: 100px;
   height: 31px;
 }
 .supplier-first-choice-power {
   background-image: url(../images/supplier-logos.png);
-  background-position: -300px -144px;
+  background-position: -500px -480px;
   width: 100px;
-  height: 48px;
+  height: 46px;
 }
 .supplier-first-energy-solutions {
   background-image: url(../images/supplier-logos.png);
@@ -167,7 +167,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-ftr-energy-services {
   background-image: url(../images/supplier-logos.png);
-  background-position: -100px -572px;
+  background-position: -200px -574px;
   width: 100px;
   height: 27px;
 }
@@ -185,7 +185,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-gexa-energy {
   background-image: url(../images/supplier-logos.png);
-  background-position: -200px -572px;
+  background-position: -300px -574px;
   width: 100px;
   height: 26px;
 }
@@ -221,7 +221,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-infinite-energy {
   background-image: url(../images/supplier-logos.png);
-  background-position: -500px -528px;
+  background-position: 0px -574px;
   width: 100px;
   height: 31px;
 }
@@ -251,19 +251,19 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-lakeshore-energy {
   background-image: url(../images/supplier-logos.png);
-  background-position: 0px -572px;
+  background-position: -100px -574px;
   width: 100px;
   height: 29px;
 }
 .supplier-maeandg {
   background-image: url(../images/supplier-logos.png);
-  background-position: 0px -384px;
+  background-position: 0px -48px;
   width: 100px;
   height: 48px;
 }
 .supplier-marin-clean-energy {
   background-image: url(../images/supplier-logos.png);
-  background-position: 0px -528px;
+  background-position: -100px -528px;
   width: 100px;
   height: 44px;
 }
@@ -287,7 +287,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-new-york-gas-and-electric {
   background-image: url(../images/supplier-logos.png);
-  background-position: -100px -528px;
+  background-position: -200px -528px;
   width: 100px;
   height: 41px;
 }
@@ -369,81 +369,87 @@ Icon classes can be used entirely standalone. They are named after their origina
   width: 100px;
   height: 48px;
 }
-.supplier-reliant {
+.supplier-reliant-energy {
   background-image: url(../images/supplier-logos.png);
   background-position: -500px -432px;
   width: 100px;
   height: 48px;
 }
-.supplier-smart {
+.supplier-reliant {
   background-image: url(../images/supplier-logos.png);
   background-position: 0px -480px;
   width: 100px;
   height: 48px;
 }
-.supplier-source-power-and-gas {
-  background-image: url(../images/supplier-logos.png);
-  background-position: -300px -572px;
-  width: 100px;
-  height: 25px;
-}
-.supplier-spark-energy {
-  background-image: url(../images/supplier-logos.png);
-  background-position: -200px -480px;
-  width: 100px;
-  height: 48px;
-}
-.supplier-startex-power {
-  background-image: url(../images/supplier-logos.png);
-  background-position: -300px -480px;
-  width: 100px;
-  height: 48px;
-}
-.supplier-sunpower {
-  background-image: url(../images/supplier-logos.png);
-  background-position: 0px -48px;
-  width: 100px;
-  height: 48px;
-}
-.supplier-suntech {
+.supplier-smart {
   background-image: url(../images/supplier-logos.png);
   background-position: -100px -480px;
   width: 100px;
   height: 48px;
 }
-.supplier-sunwave-gas-and-power {
+.supplier-source-power-and-gas {
+  background-image: url(../images/supplier-logos.png);
+  background-position: -400px -574px;
+  width: 100px;
+  height: 25px;
+}
+.supplier-spark-energy {
+  background-image: url(../images/supplier-logos.png);
+  background-position: -300px -480px;
+  width: 100px;
+  height: 48px;
+}
+.supplier-startex-power {
+  background-image: url(../images/supplier-logos.png);
+  background-position: -200px -480px;
+  width: 100px;
+  height: 48px;
+}
+.supplier-sunpower {
   background-image: url(../images/supplier-logos.png);
   background-position: 0px -432px;
   width: 100px;
   height: 48px;
 }
-.supplier-switch-energy {
+.supplier-suntech {
   background-image: url(../images/supplier-logos.png);
   background-position: -100px -384px;
   width: 100px;
   height: 48px;
 }
-.supplier-tara-energy {
+.supplier-sunwave-gas-and-power {
+  background-image: url(../images/supplier-logos.png);
+  background-position: 0px -384px;
+  width: 100px;
+  height: 48px;
+}
+.supplier-switch-energy {
   background-image: url(../images/supplier-logos.png);
   background-position: -400px -336px;
   width: 100px;
   height: 48px;
 }
-.supplier-think-energy {
+.supplier-tara-energy {
   background-image: url(../images/supplier-logos.png);
   background-position: -400px -96px;
   width: 100px;
   height: 48px;
 }
-.supplier-trieagle {
+.supplier-think-energy {
   background-image: url(../images/supplier-logos.png);
   background-position: 0px -336px;
   width: 100px;
   height: 48px;
 }
-.supplier-trina-solar {
+.supplier-trieagle {
   background-image: url(../images/supplier-logos.png);
   background-position: -100px -288px;
+  width: 100px;
+  height: 48px;
+}
+.supplier-trina-solar {
+  background-image: url(../images/supplier-logos.png);
+  background-position: -300px -144px;
   width: 100px;
   height: 48px;
 }
@@ -461,7 +467,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-washington-gas-energy-services {
   background-image: url(../images/supplier-logos.png);
-  background-position: -400px -572px;
+  background-position: -500px -574px;
   width: 100px;
   height: 22px;
 }
@@ -479,7 +485,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-yep-energy {
   background-image: url(../images/supplier-logos.png);
-  background-position: -300px -528px;
+  background-position: -400px -528px;
   width: 100px;
   height: 34px;
 }
@@ -491,7 +497,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .supplier-zero-cost-solar {
   background-image: url(../images/supplier-logos.png);
-  background-position: -500px -480px;
+  background-position: 0px -528px;
   width: 100px;
   height: 46px;
 }

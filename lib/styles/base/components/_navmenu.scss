@@ -29,7 +29,7 @@ body.has-navmenu {
     top: -20rem;
 
     @include breakpoint($mq-sm-max) {
-        top: -30rem;
+        top: -35rem;
     }
 
     .nav-wrapper {
