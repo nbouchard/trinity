@@ -8,23 +8,17 @@ tpl:
   title: Choose Energy Homepage for Residential
 ---
 {{> cb_residential_search_hero}}
+
 {{> cmp_product_bar}}
 
-{{#withHash
-    color="light-gray"
-}}
-    {{> cmp_page_spacer}}
-{{/withHash}}
 {{> cb_map_general}}
 
 {{> cmp_triptych}}
+
+{{> cmp_testimonial}}
+
 {{> cb_our_suppliers}}
 
-{{#withHash
-    color="blue"
-}}
-    {{> cmp_page_spacer}}
-{{/withHash}}
 {{#withHash
     four_articles="true"
 }}
@@ -32,5 +26,3 @@ tpl:
 {{/withHash}}
 
 {{> cmp_pucs}}
-
-{{> cmp_testimonial}}
