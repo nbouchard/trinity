@@ -930,7 +930,9 @@
 
 .v-commercial-lead {
     background-color: $color-white-lily;
-
+    .editorial-container {
+        padding: .5em 0 2em 0
+    }
     .commercial-form-body {
         @include breakpoint($mq-sm-max) {
             @include cg-item();
@@ -941,6 +943,7 @@
         }
 
         .editorial-subhead {
+            font-size: 2em;
             margin-bottom: 0.5em;
         }
 
@@ -990,14 +993,14 @@
                 max-width: 100%;
                 font-size: 1.5em;
                 padding: 0 10%;
-                margin: .5em 0 0 0;
+                margin: 0;
                 text-align: left;
             }
 
             .triptych-caption {
                 max-width: 100%;
                 padding: 0 10%;
-                margin: .5em 0 0 0;
+                margin: .5em 0 .5em 0;
                 text-align: left;
             }
 
