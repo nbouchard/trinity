@@ -21,18 +21,18 @@
             @include box-sizing(border-box);
             display: table-cell;
             margin: 0;
-            padding: 0;
+            padding: 1.5em 0;
             vertical-align: middle;
         }
 
         .content-tip-larger,
         .v-tip-larger {
-            font-size: 3em;
+            font-size: 2em;
         }
 
         .content-tip-normal,
         .v-tip-normal {
-            font-size: 1.5em;
+            font-size: 1.4em;
         }
 
         .content-tip-smaller,
@@ -49,7 +49,7 @@
 
     &.v-tip-normal {
         .tip-container p {
-            font-size: 1.5em;
+            font-size: 1.4em;
         }
     }
 

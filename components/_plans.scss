@@ -228,7 +228,7 @@
 // sizes to two rows on smaller screens.
 .plans-header {
     @include cg-row();
-    padding: 0.5em 0;
+    padding: 0.5em;
 
     @include breakpoint($mq-sm-max) {
         .plans-title {

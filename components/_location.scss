@@ -12,12 +12,24 @@
         color: $color-gray-stone;
         border-right: 1px solid $color-gray-geyser;
 
+        @include breakpoint($mq-sm-max) {
+            border: none;
+
+            .grid-item-icon {
+                display: none;
+            }
+        }
+
         &:last-of-type {
             border: 0;
         }
 
         &.is-active {
             color: $color-green-jungle-light;
+
+            .grid-item-icon {
+                color: $color-green-shamrock;
+            }
         }
     }
 
@@ -32,6 +44,7 @@
     .grid-item-icon {
         font-size: 5em;
         line-height: 1em;
+        color: $color-gray-stone;
     }
 }
 

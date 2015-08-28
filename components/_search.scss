@@ -60,7 +60,7 @@
 
     .search-steps {
         @include clearfix;
-        padding: 0.5em;
+        padding: 0.5em 0;
         margin: 0;
         list-style: none;
         display: block;
@@ -85,6 +85,30 @@
                 font-size: $font-size-largest;
                 vertical-align: middle;
             }
+        }
+
+        &.v-green {
+            color: $color-green-jungle-light;
+        }
+
+        &.v-blue {
+            color: $color-blue-curious;
+        }
+
+        &.v-orange {
+            color: $color-orange-sun;
+        }
+
+        &.v-light-gray {
+            color: $color-white-lilac;
+        }
+
+        &.v-dark-gray {
+            color: $color-gray-oslo;
+        }
+
+        &.v-white {
+            color: $color-white-pure;
         }
     }
 

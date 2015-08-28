@@ -58,8 +58,5 @@
         &:hover {
             color: $color-blue-curious;
         }
-        @include breakpoint($mq-sm-max) {
-            width: 100%;
-        }
     }
 }

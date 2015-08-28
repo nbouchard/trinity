@@ -22,8 +22,16 @@
     }
 
     .job-apply {
-        @include cg-1of4(false, false, false);
-        text-align: right;
+        @include breakpoint($mq-sm-max) {
+            @include cg-item(false, false);
+            padding-top: 1em;
+            text-align: center;
+        }
+
+        @include breakpoint($mq-md-min) {
+            @include cg-1of4(false, false, false);
+            text-align: right;
+        }
 
         .btn {
             width: 8em;

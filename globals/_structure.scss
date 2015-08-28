@@ -8,10 +8,10 @@ body {
     @include transition-duration(0.3s);
     position: relative;
     z-index: $z-body-mid;
-    padding-top: 6em;
+    padding-top: 6rem;
 
     @include breakpoint($mq-md-max) {
-        padding-top: 4em;
+        padding-top: 4rem;
     }
 }
 
