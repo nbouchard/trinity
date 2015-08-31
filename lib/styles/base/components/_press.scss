@@ -37,7 +37,7 @@
     }
 }
 
-.ce-grid-item.ce-press-item {
+.ce-press-item {
     @include breakpoint($mq-md-min) {
         padding: 1em 2em;
     }
@@ -56,5 +56,25 @@
 
     .article-title {
 
+    }
+
+    .press-release-info {
+        border-top: 1px solid $color-green-aquamarine-light;
+        border-bottom: 1px solid $color-green-aquamarine-light;
+        @include clearfix;
+
+        .byline {
+            @include cg-1of2(true, false, true);
+
+            .article-source {
+                padding-bottom: 0;
+            }
+        }
+
+        .social {
+            @include cg-1of2(true, false, true);
+            padding: 1em 0 0;
+            text-align: right;
+        }
     }
 }
