@@ -936,7 +936,9 @@
 
 .v-commercial-lead {
     background-color: $color-white-lily;
-
+    .editorial-container {
+        padding: .5em 0 2em 0
+    }
     .commercial-form-body {
         @include breakpoint($mq-sm-max) {
             @include cg-item();
@@ -947,6 +949,7 @@
         }
 
         .editorial-subhead {
+            font-size: 2em;
             margin-bottom: 0.5em;
         }
 
@@ -983,7 +986,11 @@
 }
 
 .v-commercial-list {
+    .editorial-container {
+        padding: 1em;
+    }    
     .ce-editorial-triptych {
+
         .triptych-item {
             margin: 0;
             padding: 0;
@@ -992,25 +999,30 @@
                 max-width: 100%;
                 font-size: 1.5em;
                 padding: 0 10%;
-                margin: 1.5em 0 0 0;
+                margin: 0;
                 text-align: left;
             }
 
             .triptych-caption {
                 max-width: 100%;
                 padding: 0 10%;
-                margin: 1em 0 0 0;
+                margin: .5em 0 .5em 0;
                 text-align: left;
             }
 
             .icon {
-                font-size: 7em;
+                display: inline-block;
                 line-height: 0;
-                color: $color-orange-sun;
+                color: $color-blue-curious;
+                font-size: 35px;
+                line-height: 40px;
+                height: 38px;
+                text-align: left;
+                vertical-align: bottom;
             }
 
             @include breakpoint($mq-sm-max) {
-                padding: 2em 0;
+                padding: 1em 0;
             }
         }
     }
