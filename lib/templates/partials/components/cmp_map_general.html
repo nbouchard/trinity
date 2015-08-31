@@ -110,7 +110,7 @@
                 .attr("height", height);
 
             var usa = svg.append("g");
-            d3.json("/data/states_usa.topo.json", function(error, us) {
+            d3.json("data/states_usa.topo.json", function(error, us) {
                 usa.append("g")
                     .selectAll("path")
                     .data(topojson.feature(us, us.objects.states).features)
