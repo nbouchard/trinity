@@ -2,10 +2,10 @@
 body.has-navmenu {
     &.menu-active {
         .main-nav {
-            top: 6rem;
+            max-height: 30rem;
 
             @include breakpoint($mq-md-max) {
-                top: 4rem;
+                max-height: 40rem;
             }
         }
 
@@ -20,16 +20,16 @@ body.has-navmenu {
 }
 
 .main-nav {
-    // @include transition(all 0.5s ease-in-out);
-    position: fixed;
+    @include transition(all 0.5s ease-in-out);
+    position: absolute;
     background-color: $color-gray-charcoal;
     width: 100%;
     overflow: hidden;
-    z-index: $z-overlay-lowest;
-    top: -20rem;
+    top: 6rem;
+    max-height: 0;
 
-    @include breakpoint($mq-sm-max) {
-        top: -30rem;
+    @include breakpoint($mq-md-max) {
+        top: 4rem;
     }
 
     .nav-wrapper {

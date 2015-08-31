@@ -82,7 +82,7 @@
         &.map-selected {
             fill: $color-red-poppy;
         }
-    }    
+    }
     .map-solar {
         fill: $color-orange-sun;
         stroke: $color-white-pure;
@@ -167,10 +167,6 @@
         .locations-product-matrix {
             @include cg-item();
             padding: 0 3em 0 0;
-            
-            @include breakpoint($mq-md-max) {
-                display: none;
-            }
 
             .product-header {
                 display: inline-block;
@@ -209,7 +205,7 @@
                     width: 33%;
                 }
                 .product-list-item {
-                    color: $color-white-lilac; 
+                    color: $color-white-lilac;
                     text-align: center;
                     font-size: 3em;
                     padding:.2em .2em .1em .2em;
@@ -234,7 +230,7 @@
                 text-align: center;
                 h3 {
                     font-weight: 200;
-                }                
+                }
                 &.is-active {
                     display: inline-block;
                 }

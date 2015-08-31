@@ -270,3 +270,10 @@
         $x-pos: 70%
     );
 }
+
+.v-img148 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 35%,
+        $y-pos: 70%
+    );
+}

@@ -700,6 +700,12 @@
     }
 }
 
+.v-locations-map {
+    @include breakpoint($mq-md-max) {
+        display: none;
+    }
+}
+
 .v-solar-how-to {
     @include editorial-bg-color($color: 'info');
 
