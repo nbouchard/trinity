@@ -430,7 +430,9 @@
         background-color: $color-yellow-marzipan-light;
         padding: 0.5em 8em;
         text-align: center;
-
+        @include breakpoint($mq-md-max) {
+            padding: 0.5em 0.5em;
+        }
         .details {
             font-size: $font-size-smaller;
             margin-top: 0.5em;
@@ -498,6 +500,11 @@
 .noplans-follow {
     text-align: center;
     margin: 2em 25%;
+    
+    @include breakpoint($mq-md-max) {
+       margin: 0;
+       padding: 0 0.5em;
+    }
 }
 
 .shop-header {
