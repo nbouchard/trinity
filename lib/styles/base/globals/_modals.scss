@@ -21,8 +21,8 @@
         width: 40em;
         margin: 15em auto;
         @include breakpoint($mq-md-max) {
-            width: 100%;
-            margin: 0;
+            width: 95%;
+            margin: 10em auto;
         }
     }
 }
@@ -30,11 +30,7 @@
 .modal-content {
     position: relative;
     background-color: $color-white-pure;
-    @include breakpoint($mq-md-max) {
-        top: 0;
-        bottom: 0;
-        position: absolute;
-    }
+
     .modal-close {
         position: absolute;
         top: -1.5em;
@@ -52,7 +48,7 @@
             top: 0.5em;
             right: 0;
             color: $color-gray-stone;
-            background-color: none;
+            background-color: transparent;
         }
         .icon {
             display: table-cell;
@@ -66,9 +62,14 @@
     .modal-header {
         background-color: $color-white-lilac;
         padding: 1.5em 1.5em 1em;
-
+        @include breakpoint($mq-md-max) {
+            padding: 1.5em 1.5em 0.5em;
+        }
         .modal-headline {
             font-size: $font-size-huger;
+            @include breakpoint($mq-md-max) {
+                font-size: 1.5em;
+            }
 
             &:before {
                 @include icon;
@@ -81,6 +82,10 @@
                 color: $color-red-cinnabar;
                 top: -2px;
                 font-size: $font-size-smaller;
+                @include breakpoint($mq-md-max) {
+                    font-size: 1em;
+                    top: -6px;
+                }
             }
 
             &.electricity:before {
