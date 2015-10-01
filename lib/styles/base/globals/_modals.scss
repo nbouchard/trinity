@@ -20,14 +20,21 @@
     .modal-dialog {
         width: 40em;
         margin: 15em auto;
+        @include breakpoint($mq-md-max) {
+            width: 100%;
+            margin: 0;
+        }
     }
 }
 
 .modal-content {
     position: relative;
     background-color: $color-white-pure;
-    position: relative;
-
+    @include breakpoint($mq-md-max) {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+    }
     .modal-close {
         position: absolute;
         top: -1.5em;
@@ -41,7 +48,12 @@
         text-decoration: none;
         z-index: $z-overlay-high;
         cursor: pointer;
-
+        @include breakpoint($mq-md-max) {
+            top: 0.5em;
+            right: 0;
+            color: $color-gray-stone;
+            background-color: none;
+        }
         .icon {
             display: table-cell;
             vertical-align: middle;
