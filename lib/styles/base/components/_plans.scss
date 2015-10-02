@@ -267,6 +267,12 @@
             display: none;
         }
 
+        .sorter-title {
+            padding-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+
         .sorter-link {
             display: inline-block;
             background-color: $color-white-lilac;
@@ -274,7 +280,7 @@
             text-transform: uppercase;
             font-weight: 600;
             font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+            margin: 0.5rem 1rem 0.5rem 0;
         }
     }
 
@@ -696,15 +702,15 @@
 
     .plan-header {
         background-color: $color-green-cruise-light;
+        font-weight: $font-weight-accent;
+        font-size: 1.8rem;
 
         @include breakpoint($mq-md-max) {
-            padding: 0 1rem;
+            padding: 0.5rem 1.5rem;
         }
 
         @include breakpoint($mq-lg-min) {
             padding: 1.5rem 2.5rem 0.75rem;
-            font-size: 1.8rem;
-            font-weight: $font-weight-accent;
         }
     }
 

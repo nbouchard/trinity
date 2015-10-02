@@ -509,7 +509,7 @@
 
 .shop-header {
     @include breakpoint($mq-md-max) {
-        @include cg-item(true, true);
+        @include cg-item(true, false);
     }
 
     @include breakpoint($mq-lg-min) {
