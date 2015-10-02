@@ -24,7 +24,6 @@
         margin: 1em 0.5em 0 0;
         padding: 0;
         color: $color-gray-chateau;
-
         &:after {
             @include icon;
             font-size: $font-size-largest;
@@ -33,6 +32,9 @@
             top: 0.5em;
             position:absolute;
             pointer-events:none;
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                display: none;
+            }
         }
     }
 
@@ -56,6 +58,9 @@
         @include prefixer(appearance, none, webkit moz spec);
         border-radius: 0;
         width: 15em;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            padding-right: .625em
+        }
     }
 
     .search-steps {
