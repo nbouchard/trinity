@@ -178,6 +178,24 @@
             width: 100%;
             height: 2em;
             margin: 0;
+            &.v-field-large {
+                width: 100%;
+                margin-bottom: 1em;
+            }
+
+            &.v-field-medium {
+                width: 50%;
+                margin-bottom: 1em;
+                margin-right: 1em; 
+            }
+
+            &.v-field-small {
+                width: 25%;
+                margin-bottom: 1em;
+            }
+            &.v-field-bottom {
+                margin-bottom: 0;
+            }
         }
 
         &.with-button {
