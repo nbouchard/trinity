@@ -69,7 +69,7 @@
         .checkout-steps {
             @include breakpoint($mq-md-max) {
                 @include cg-item(true, true);
-                padding: 0 1.5rem 2rem;
+                padding: 2rem 1.5rem;
             }
 
             @include breakpoint($mq-lg-min) {
@@ -304,12 +304,10 @@
             .ce-label-text {
                 padding: 0.1em 0.5em;
             }
-
-
         }
 
         .a-content {
-            width: 87%;
+            width: 86%;
             text-align: left;
         }
 
@@ -364,6 +362,13 @@
 
         .checkout-action {
             @include ce-button('primary');
+
+            @include breakpoint($mq-md-max) {
+                float: none;
+                display: block;
+                margin: 0 auto 10px;
+                width: 20em;
+            }
         }
     }
 
@@ -374,6 +379,13 @@
         .checkout-action {
             @include ce-button('primary');
             float: right;
+
+            @include breakpoint($mq-md-max) {
+                float: none;
+                display: block;
+                margin: 10px auto 0px;
+                width: 20em;
+            }
         }
     }
 
