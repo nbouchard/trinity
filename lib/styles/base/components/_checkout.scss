@@ -357,21 +357,13 @@
     }
 
     .checkout-previous {
-        @include cg-1of2(false, false);
+        @include cg-1of2(false, false,true);
         min-height: 1em;
-
-        @include breakpoint($mq-md-max) {
-            float: left;
-            display: inline-block;
-            margin: 0 auto;
-            width: 50%;
-        }
 
         .checkout-action {
             @include ce-button('primary');
 
             @include breakpoint($mq-md-max) {
-                float: none;
                 margin: 0 auto;
                 width: 10em;
                 display: block;
@@ -380,24 +372,17 @@
     }
 
     .checkout-next {
-        @include cg-1of2(false, false);
+        @include cg-1of2(false, false, true);
         min-height: 1em;
-
-        @include breakpoint($mq-md-max) {
-            display: inline-block;
-            margin: 0 auto;
-            width: 50%;
-        }
+        text-align: right;
 
         .checkout-action {
             @include ce-button('primary');
-            float: right;
 
             @include breakpoint($mq-md-max) {
-                display: block;
                 margin: 0 auto;
                 width: 10em;
-                float: none;
+                display: block;
             }
         }
     }
