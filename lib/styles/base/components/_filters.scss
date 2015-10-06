@@ -30,8 +30,15 @@
     }
 
     .filter-section-main {
-        padding: 20px;
         background: $color-white-pure;
+
+        @include breakpoint($mq-md-max) {
+            padding: 1rem;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            padding: 2rem;
+        }
     }
 
     .filter-section-refine {
@@ -164,10 +171,6 @@
 
         @include breakpoint($mq-md-min) {
             @include cg-1of2(true, true, true);
-        }
-
-        @include breakpoint($mq-md-max) {
-            padding-right: 3em;
         }
 
         @include breakpoint($mq-lg-min) {
