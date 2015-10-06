@@ -357,34 +357,32 @@
     }
 
     .checkout-previous {
-        @include cg-1of2(false, false);
+        @include cg-1of2(false, false,true);
         min-height: 1em;
 
         .checkout-action {
             @include ce-button('primary');
 
             @include breakpoint($mq-md-max) {
-                float: none;
+                margin: 0 auto;
+                width: 10em;
                 display: block;
-                margin: 0 auto 10px;
-                width: 20em;
             }
         }
     }
 
     .checkout-next {
-        @include cg-1of2(false, false);
+        @include cg-1of2(false, false, true);
         min-height: 1em;
+        text-align: right;
 
         .checkout-action {
             @include ce-button('primary');
-            float: right;
 
             @include breakpoint($mq-md-max) {
-                float: none;
+                margin: 0 auto;
+                width: 10em;
                 display: block;
-                margin: 10px auto 0px;
-                width: 20em;
             }
         }
     }
