@@ -10,6 +10,21 @@
 .ce-tooltip {
     display: inline-block;
     position: relative;
+    line-height: 1em;
+
+    .tooltip-icon:after,
+    .tooltip-text:after {
+        display: none;
+        position: absolute;
+        bottom: -1.6rem;
+        content: '';
+        height: 0;
+        width: 0;
+        border-left: 2rem solid transparent;
+        border-right: 2rem solid transparent;
+        border-bottom: 1.5rem solid $color-gray-cape;
+        z-index: $z-body-high;
+    }
 
     .tooltip-icon {
         position: relative;
@@ -28,17 +43,8 @@
         }
 
         &:after {
-            display: none;
-            position: absolute;
             bottom: -1.6rem;
             left: -50%;
-            content: '';
-            height: 0;
-            width: 0;
-            border-left: 2rem solid transparent;
-            border-right: 2rem solid transparent;
-            border-bottom: 1.5rem solid $color-gray-cape;
-            z-index: $z-body-high;
         }
     }
 
@@ -47,19 +53,12 @@
         display: inline-block;
         cursor: default;
         color: $color-green-shamrock;
+        line-height: 1em;
 
         &:after {
-            display: none;
-            position: absolute;
             bottom: -1.6rem;
             left: 50%;
             @include transform(translateX(-50%));
-            content: '';
-            height: 0;
-            width: 0;
-            border-left: 2rem solid transparent;
-            border-right: 2rem solid transparent;
-            border-bottom: 1.5rem solid $color-gray-cape;
         }
     }
 
@@ -67,10 +66,9 @@
         display: none;
         position: absolute;
         @include transform(translateX(-50%));
+        margin-top: 1.6rem;
         left: 50%;
         width: 100%;
-        min-width: 20rem;
-        margin-top: 1.4rem;
         z-index: $z-body-high;
         box-sizing: border-box;
         padding: 1.5rem 2rem;
@@ -80,6 +78,15 @@
         text-transform: none;
         font-variant: normal;
         text-align: left;
+        line-height: 1.4em;
+
+        @include breakpoint($mq-md-max) {
+            min-width: 16rem;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            min-width: 20rem;
+        }
 
         .tooltip-headline {
             color: $color-gray-ghost;
@@ -113,6 +120,26 @@
         .tooltip-text:after,
         .tooltip-content {
             display: block;
+        }
+    }
+
+    // Tooltip displays above the icon/text instead of below
+    &.dir-up {
+        .tooltip-icon:after,
+        .tooltip-text:after {
+            top: -1.6rem;
+            bottom: auto;
+            border-bottom: none;
+            border-top: 1.5rem solid $color-gray-cape;
+        }
+
+        .tooltip-content {
+            margin-top: -2.7rem;
+            @include transform(translateX(-50%) translateY(-100%));
+        }
+
+        .tooltip-icon + .tooltip-content {
+            margin-top: -3.4rem;
         }
     }
 }
