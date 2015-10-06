@@ -394,7 +394,7 @@
             float: right;
 
             @include breakpoint($mq-md-max) {
-                display: inline-block;
+                display: block;
                 margin: 0 auto;
                 width: 10em;
                 float: none;
