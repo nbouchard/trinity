@@ -751,6 +751,83 @@ input[type=range]:disabled::-ms-thumb {
     }
 }
 
+.ce-commercial-form {
+    .gform_body {
+        width: auto;
+
+        .gform_fields {
+            list-style: none;
+            padding: 0;
+        }
+
+        .gfield {
+            @include clearfix;
+            margin-bottom: 2em;
+        }
+
+        .gfield_label {
+            float: left;
+            width: 25%;
+            font-size: 1.1em;
+            padding-right: 0.5em;
+            text-align: left;
+        }
+
+        .ginput_container {
+            float: right;
+            width: 75%;
+
+            input,
+            textarea {
+                width: 100%;
+                max-height: 6em;
+                margin: 0;
+            }
+            input {
+                width: 100%;
+                height: 2em;
+                margin: 0;
+                display: inline-block;
+            }
+            select {
+                width: 100%;
+                height: 2em;
+                margin: 0;
+            }
+
+            .address_line_1, .address_city, .address_zip {
+                    width: 50%;
+                    margin-bottom: 1em;
+                    margin-right: 1em; 
+                    display: inline-block;
+            }
+            .address_line_2, .address_state {
+                    width: 25%;
+                    margin-bottom: 1em;
+                    display: inline-block;
+            }
+            .address_zip {
+                margin-bottom: 0;
+            }
+            .hidden_sub_label {
+                display: none;
+            }
+        }
+    }
+
+    .gform_footer {
+        text-align: center;
+        padding-left: 25%;
+
+        .button {
+            @include ce-button('primary');
+            float: none;
+        }
+    }
+}
+
+
+
 .ce-solar-form {
     .gform_title {
         font-weight: 400;
