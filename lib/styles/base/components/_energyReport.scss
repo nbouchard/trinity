@@ -1,3 +1,12 @@
 .energy-report-utility-finder {
     @include editorial-bg-color('info');
+    padding: 3em 0;
+    text-align: center;
+    .location-utility {
+        background-color: lighten($color-blue-curious, 15%);
+        padding: 2em 0;
+    }
+}
+.energy-report-rebate-calculator {
+    padding: 2em 0;
 }

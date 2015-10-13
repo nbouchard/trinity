@@ -8,26 +8,40 @@ tpl:
   title: Website Page
   classes: energy-academy
 ---
-{{#withHash
-    editorial_headline="Meet our team"
-    variant_classes="v-bigtalkshort v-bg-info"
-}}
-    {{> cmp_editorial_basic}}
-{{/withHash}}
-
 
 <div class="energy-report-utility-finder">
-    <h1>Home Energy Snapshot: Salt Lake City, UT</h1>
-    <h2>Understand your electricity bill and tap into simple home energy savings.</h2>
-    <div class="location-utility">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>Home Energy Snapshot: Salt Lake City, UT</h1>
+                <p>Understand your electricity bill and tap into simple home energy savings.</p>
+                <div class="location-utility">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Your Location</label>
+                                <span class="location-name">Salt Lake City, UT</span>
+                                <input type="text" placeholder="[current zip]">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Your Utility</label>
+                                <select name="" id="">
+                                    <option value="">Utility 1</option>
+                                    <option value="">Utility 2</option>
+                                    <option value="">Utility 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <p>You live in a regulated utility zone, which means that your local power company is the only energy provider available in your area.</p>
+            </div>
+        </div>
     </div>
-    <p>You live in a regulated utility zone, which means that your local power company is the only energy provider available in your area.</p>
 </div>
 
+
 <div class="container">
-
-
     <div class="row energy-report-rebate-calculator">
         <h2>Energy Bill Calculator</h2>
         <p>Wondering how your electricity bill stacks up to your neighbors'? Use our calculator to understand how your bill breaks down and compare it to an average household in your area.</p>
