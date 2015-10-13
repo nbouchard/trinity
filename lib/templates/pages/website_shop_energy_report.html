@@ -1,1 +1,159 @@
-TEST
+---
+layout: website
+site:
+  name: ChooseUX
+  version: 0.1.0
+tpl:
+  desc: Page Desc
+  title: Website Page
+  classes: energy-academy
+---
+{{#withHash
+    editorial_headline="Meet our team"
+    variant_classes="v-bigtalkshort v-bg-info"
+}}
+    {{> cmp_editorial_basic}}
+{{/withHash}}
+
+
+<div class="ce-energy-report-utility-finder">
+    <h1>Home Energy Snapshot: Salt Lake City, UT</h1>
+    <h2>Understand your electricity bill and tap into simple home energy savings.</h2>
+    <div class="location-utility">
+
+    </div>
+    <p>You live in a regulated utility zone, which means that your local power company is the only energy provider available in your area.</p>
+</div>
+
+
+<div class="ce-energy-report-rebate-calculator">
+    <h2>Energy Bill Calculator</h2>
+    <p>Wondering how your electricity bill stacks up to your neighbors'? Use our calculator to understand how your bill breaks down and compare it to an average household in your area.</p>
+    <div class="slider">
+        Start Here
+        <button class="btn-primary" type="button">Compare Costs</button>
+    </div>
+    <div class="average-bill">
+        <h3>Average monthy bill</h3>
+        <p>The average household in your area will pay $132.13 for electricity this month.</p>
+    </div>
+    <div class="monthly-bill">
+        <h3>Your monthly bill</h3>
+        <p>How much energy do you use every month?</p>
+    </div>
+
+</div>
+
+<div class="ce-subscribe">
+    <p>Stay one step ahead of your energy bills with personalized bill predicutions. Sign up with your email address and stay tuned for monthly bill alerts</p>
+    <form action="">
+        <input type="text" placeholder="Please enter your email...">
+        <button class="btn-primary" type="button">Get Updates</button>
+    </form>
+</div>
+
+
+<hr>
+
+
+<div class="ce-energy-report-rebates">
+    <h2>Energy Tax Rebates and Incentives</h2>
+    <p>State and local government agencies and utilities offer a variety of tax credits, rebates and other incentives. Here’s what is available in your area.</p>
+    <div class="rebate">
+        <div class="date"></div>
+        <div class="title"><a href="#">Tribal Energy Program Grant</a></div>
+    </div>
+    <div class="rebate">
+        <div class="date"></div>
+        <div class="title"><a href="#">Tribal Energy Program Grant</a></div>
+    </div>
+    <div class="rebate">
+        <div class="date"></div>
+        <div class="title"><a href="#">Tribal Energy Program Grant</a></div>
+    </div>
+    <div class="pagination">
+        <a href="#" class="prev">Prev</a>
+        <span class="current-page">5 / 13</span>
+        <a href="#" class="next">Next</a>
+    </div>
+</div>
+
+
+<hr>
+
+<div class="ce-energy-report-related-posts">
+    <h2>Energy Saving Tips</h2>
+    <p>Knowledge is power. Read up on the latest tips for saving money and energy at home.</p>
+    <div class="row no-pad related-article">
+        <article class="col-md-4 row" ng-repeat="post in posts">
+            <a class="u-url" href="{{ post.permalink }}">
+                <div class="col-md-12 no-pad">
+                    <img src="{{ post.thumbnail }}" alt="thumbnail" />
+                    <div class="caption">
+                        <time datetime="2014-09-03T13:00-700">September 3<sup>rd</sup>, 2014</time>
+                        <span class="hearts"><i class="fa fa-heart"></i> 27</span>
+                    </div>
+                </div>
+                <div class="col-md-12 article-info">
+                    <h2 class="article-title">
+                        {{ post.title }}
+                    </h2>
+                    <div class="article-description">
+                        {{ post.excerpt }}
+                    </div>
+                </div>
+            </a>
+        </article>
+    </div>
+
+    <div class="row no-pad related-article">
+        <article class="col-md-4 row">
+            <a class="u-url" href="website_academy_blog_single.html">
+                <div class="col-md-12 no-pad">
+                    <img src="http://placekitten.com/320/180" alt="thumbnail" />
+                    <div class="caption">
+                        <time datetime="2014-09-03T13:00-700">September 3<sup>rd</sup>, 2014</time>
+                        <span class="hearts"><i class="fa fa-heart"></i> 27</span>
+                    </div>
+                </div>
+                <div class="col-md-12 article-info">
+                    <h2 class="article-title">
+                        How solar power can help more than the environment
+                    </h2>
+                    <div class="article-description">
+                        Now that many states have deregulated their services, customers are empowered to chvoose power from among a list of suppliers in... <span class="pseudo-link" href="#"> Read more</span>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="col-md-4 row">
+            <a class="u-url" href="website_academy_blog_single.html">
+                <div class="col-md-12 no-pad">
+                    <img src="http://placekitten.com/320/180" alt="thumbnail" />
+                    <div class="caption">
+                        <time datetime="2014-09-03T13:00-700">September 3<sup>rd</sup>, 2014</time>
+                        <span class="hearts"><i class="fa fa-heart"></i> 27</span>
+                    </div>
+                </div>
+                <div class="col-md-12 article-info">
+                    <h2 class="article-title">
+                        Lifestyle changes that can help you save cash
+                    </h2>
+                    <div class="article-description">
+                        Now that many states have deregulated their services, customers are empowered to chvoose power from among a list of suppliers in... <span class="pseudo-link" href="#"> Read more</span>
+                    </div>
+                </div>
+            </a>
+        </article>
+    </div>
+
+
+</div>
+
+
+<div class="ce-subscribe">
+    <form action="">
+        <input type="text" placeholder="Please enter your email...">
+        <button class="btn-primary" type="button">Get Updates</button>
+    </form>
+</div>
