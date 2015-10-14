@@ -10,4 +10,42 @@
 .energy-report-rebate-calculator {
     padding: 2em 0;
     text-align: center;
+    .slider {
+        padding-top: 3em;
+        padding-bottom: 4em;
+    }
+    .average-bill {
+        border-right: 1px solid $color-gray-chateau;
+    }
+}
+.energy-report-subscribe {
+    padding: 2em 0;
+    text-align: center;
+}
+.energy-report-rebates {
+    padding: 2em 0;
+    text-align: center;
+    .rebate-item {
+        padding: 1em 0.5em;
+        text-align: left;
+        border-bottom: 1px solid $color-gray-geyser;
+        .date {
+            margin-bottom: 0.25em;
+            color: $color-gray-chateau;
+        }
+    }
+    .pagination {
+        .prev {
+            text-align: left;
+        }
+        .next {
+            text-align: right;
+        }
+    }
+}
+.energy-report-related-posts {
+    text-align: center;
+    article {
+        text-align: left;
+    }
 }
