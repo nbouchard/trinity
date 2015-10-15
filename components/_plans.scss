@@ -453,6 +453,12 @@
 
                 .plan-name-info {
                     padding: 0 0.5rem;
+
+                    .ce-tooltip.dir-up {
+                        .tooltip-content {
+                            margin-top: -3.4rem;
+                        }
+                    }
                 }
 
                 .line-clamp {
@@ -462,6 +468,10 @@
 
                     @include breakpoint($mq-lg-min) {
                         width: 21rem;
+                    }
+
+                    @include breakpoint($mq-xs) {
+                        width: 12rem;
                     }
                 }
             }
