@@ -47,18 +47,24 @@ tpl:
             <h2>Energy Bill Calculator</h2>
             <p>Wondering how your electricity bill stacks up to your neighbors'? Use our calculator to understand how your bill breaks down and compare it to an average household in your area.</p>
             <div class="row">
-                <div class="slider col-md-12">Start Here
+                <div class="slider col-md-12">
+                    <label>
+                        <span>Start Here <i class="icon c-icon-arrow-right"></i></span>
+                        <input type="range" id="range" value="0" min="0" max="4000">
+                    </label>
                     <button class="btn-primary" type="button">Compare Costs</button>
                 </div>
             </div>
             <div class="row">
                 <div class="average-bill col-md-6">
                     <h3>Average monthy bill</h3>
-                    <p>The average household in your area will pay $132.13 for electricity this month.</p>
+                    <p>The average household in your area will pay <strong>$132.13</strong> for electricity this month.</p>
+                    <div class="chart">[Chart Placeholder]</div>
                 </div>
                 <div class="monthly-bill col-md-6">
                     <h3>Your monthly bill</h3>
                     <p>How much energy do you use every month?</p>
+                    <div class="chart">[Chart Placeholder]</div>
                 </div>
             </div>
         </div>
@@ -168,3 +174,12 @@ tpl:
 
 
 </div>
+
+
+<script>
+    if (document.querySelector) {
+        document.querySelector('#range').onchange = function(e) {
+            e.target.nextElementSibling.innerText = e.target.value;
+        }
+    }
+</script>

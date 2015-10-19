@@ -1,27 +1,46 @@
+// Utility Finder
+//
+// .energy-report-utility-finder - Zip code search and utility select
 .energy-report-utility-finder {
     @include editorial-bg-color('info');
+
     padding: 3em 0;
     text-align: center;
+
     .location-utility {
         background-color: lighten($color-blue-curious, 15%);
         padding: 2em 0;
     }
 }
+
+// Bill Calculator
+//
+// .energy-report-rebate-calculator - Slider and usage charts
 .energy-report-rebate-calculator {
     padding: 2em 0;
     text-align: center;
+
     .slider {
         padding-top: 3em;
         padding-bottom: 4em;
     }
+
     .average-bill {
         border-right: 1px solid $color-gray-chateau;
     }
 }
+
+// Subscribe
+//
+// .energy-report-subscribe  - Email capture form
 .energy-report-subscribe {
     padding: 2em 0;
     text-align: center;
 }
+
+// Rebates and Incentives
+//
+// .energy-report-rebates  - List of rebate content with popup/tooltips
 .energy-report-rebates {
     padding: 2em 0;
     text-align: center;
@@ -43,6 +62,10 @@
         }
     }
 }
+
+// Related Posts
+//
+// .energy-report-related-posts - List two posts with image and excerpt side-by-side
 .energy-report-related-posts {
     text-align: center;
     article {
