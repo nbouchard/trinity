@@ -48,11 +48,30 @@ tpl:
             <p>Wondering how your electricity bill stacks up to your neighbors'? Use our calculator to understand how your bill breaks down and compare it to an average household in your area.</p>
             <div class="row">
                 <div class="slider col-md-12">
-                    <label>
-                        <span>Start Here <i class="icon c-icon-arrow-right"></i></span>
-                        <input type="range" id="range" value="0" min="0" max="4000">
-                    </label>
-                    <button class="btn-primary" type="button">Compare Costs</button>
+                    <!-- <label> -->
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-1">
+                            <label for=""><span>Start Here <i class="icon c-icon-arrow-right"></i></span></label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="range" id="range" value="0" min="0" max="4000">
+                            <div class="graduations">
+                                <div><span>0</span></div>
+                                <div><span>1,000</span></div>
+                                <div><span>2,000</span></div>
+                                <div><span>3,000</span><span class="last">4,000</span></div>
+                            </div>
+                            <div id="output"></div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn-primary" type="button">Compare Costs</button>
+                        </div>
+                    </div>
+
+
+
+                    <!-- </label> -->
+
                 </div>
             </div>
             <div class="row">
@@ -179,7 +198,7 @@ tpl:
 <script>
     if (document.querySelector) {
         document.querySelector('#range').onchange = function(e) {
-            e.target.nextElementSibling.innerText = e.target.value;
+            document.querySelector('#output').innerText = e.target.value;
         }
     }
 </script>
