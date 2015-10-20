@@ -51,15 +51,39 @@ tpl:
                     <!-- <label> -->
                     <div class="row">
                         <div class="col-md-2 col-md-offset-1">
-                            <label for=""><span>Start Here <i class="icon c-icon-arrow-right"></i></span></label>
+                            <label for="range"><span>Start Here <i class="icon c-icon-arrow-right"></i></span></label>
                         </div>
                         <div class="col-md-6">
                             <input type="range" id="range" value="0" min="0" max="4000">
                             <div class="graduations">
-                                <div><span>0</span></div>
-                                <div><span>1,000</span></div>
-                                <div><span>2,000</span></div>
-                                <div><span>3,000</span><span class="last">4,000</span></div>
+                                <div class="graduation">
+                                    <div class="graduation-measure">
+                                        <div class="graduation-mark"></div>
+                                        0 <span>kWh</span>
+                                    </div>
+                                </div>
+                                <div class="graduation">
+                                    <div class="graduation-measure">
+                                        <div class="graduation-mark"></div>
+                                        1,000 <span>kWh</span>
+                                    </div>
+                                </div>
+                                <div class="graduation">
+                                    <div class="graduation-measure">
+                                        <div class="graduation-mark"></div>
+                                        2,000 <span>kWh</span>
+                                    </div>
+                                </div>
+                                <div class="graduation">
+                                    <div class="graduation-measure">
+                                        <div class="graduation-mark"></div>
+                                        3,000 <span>kWh</span>
+                                    </div>
+                                    <div class="graduation-measure last">
+                                        <div class="graduation-mark"></div>
+                                        4,000 <span>kWh</span>
+                                    </div>
+                                </div>
                             </div>
                             <div id="output"></div>
                         </div>
