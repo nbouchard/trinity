@@ -1,3 +1,8 @@
+.container.energy-report {
+    padding-bottom: 2em;
+}
+
+
 // Utility Finder
 //
 // .energy-report-utility-finder - Zip code search and utility select
@@ -141,8 +146,14 @@
 //
 // .energy-report-related-posts - List two posts with image and excerpt side-by-side
 .energy-report-related-posts {
+    padding: 2em 0;
     text-align: center;
+    // border: 1px solid aqua;
+    > div {
+        // border: 1px solid orange;
+    }
     article {
         text-align: left;
+        // border: 1px solid lime;
     }
 }
