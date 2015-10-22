@@ -9,33 +9,47 @@
 .energy-report-utility-finder {
     @include editorial-bg-color('info');
 
-    padding: 3em 0;
+    padding: 3em 0 0;
     text-align: center;
 
     .location-utility {
         background-color: lighten($color-blue-curious, 15%);
-        padding: 2em 0;
+        padding: 2.25em 0 2em;
         margin: 1.5em 0;
 
-        label {
-            display: block;
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 1em;
+        form {
+            padding: 2em 0;
+
+            label {
+                display: block;
+                font-size: 1.25rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 1em;
+            }
+
+            .location-search {
+                border-right: 1px solid #fff;
+                .location-name {
+                    font-size: 1.25em;
+                }
+            }
+
+            input,
+            select {
+                border-left-width: 1px;
+                height: 2.25em;
+            }
+
+            input {
+                width: 6em;
+            }
+            select {
+                width: 13em;
+            }
         }
 
-        .location-name {
-            font-size: 1.5rem;
-        }
 
-        input {
-            border-left-width: 1px;
-        }
-
-        select {
-            width: 70%;
-            border-left-width: 1px;
-        }
     }
 }
 
