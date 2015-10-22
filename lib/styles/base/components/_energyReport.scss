@@ -12,6 +12,10 @@
     padding: 3em 0 0;
     text-align: center;
 
+    p {
+        font-size: $font-size-larger;
+    }
+
     .location-utility {
         background-color: lighten($color-blue-curious, 15%);
         padding: 2.25em 0 2em;
@@ -22,7 +26,7 @@
 
             label {
                 display: block;
-                font-size: 1.25rem;
+                font-size: $font-size-smaller;
                 font-weight: 700;
                 text-transform: uppercase;
                 margin-bottom: 1em;
@@ -31,7 +35,7 @@
             .location-search {
                 border-right: 1px solid #fff;
                 .location-name {
-                    font-size: 1.25em;
+                    font-size: $font-size-larger;
                 }
             }
 
@@ -60,12 +64,16 @@
     padding: 3em 0;
     text-align: center;
 
+    p {
+        font-size: $font-size-larger;
+    }
+
     .slider {
         padding-top: 3em;
         padding-bottom: 4em;
 
         label {
-            font-size: 1.25em;
+            font-size: $font-size-larger;
             line-height: .5em;
             text-transform: uppercase;
 
@@ -149,6 +157,10 @@
     padding: 2em 0;
     text-align: center;
 
+    p {
+        font-size: $font-size-larger;
+    }
+
     input {
         width: 35%;
         border-left-width: 1px;
@@ -161,6 +173,10 @@
 .energy-report-rebates {
     padding: 2em 0;
     text-align: center;
+
+    p {
+        font-size: $font-size-larger;
+    }
 
     .rebate-item {
         padding: 1em 0.5em;
@@ -329,12 +345,12 @@
 .energy-report-related-posts {
     padding: 2em 0;
     text-align: center;
-    // border: 1px solid aqua;
-    > div {
-        // border: 1px solid orange;
+
+    p {
+        font-size: $font-size-larger;
     }
+
     article {
         text-align: left;
-        // border: 1px solid lime;
     }
 }
