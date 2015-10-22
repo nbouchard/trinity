@@ -179,82 +179,59 @@
     }
 
     .rebate-item {
+        position: relative;
         padding: 1em 0.5em;
         text-align: left;
         border-bottom: 1px solid $color-gray-geyser;
 
+        .rebate-title {
+            font-size: $font-size-largest;
+            color: $color-green-shamrock;
+            cursor: pointer;
+            // line-height: 1em;
+        }
 
 
 
 
 
 
-        .ce-tooltip {
-            display: inline-block;
-            position: relative;
-            line-height: 1em;
+
+        .rebate-tooltip {
+            position: absolute;
             width: 100%;
 
-            .tooltip-icon:after,
-            .tooltip-text:after {
-                display: none;
-            }
-
-            .tooltip-text {
-                position: relative;
-                display: inline-block;
-                cursor: default;
-                font-size: $font-size-largest;
-                color: $color-green-shamrock;
-                line-height: 1em;
-                width: 100%;
-
-                &:after {
-                    bottom: auto;
-                    left: 50%;
-                    // left: -1.6rem;
-                    @include transform(translateX(-50%));
-                }
-            }
-
             .tooltip-content:before {
-                // display: none;
-                // display: block;
+                display: block;
                 position: absolute;
-                // bottom: -1.6rem;
-
-                top: 1rem;
-                left: -1.5rem;
-                content: '';
-                height: 0;
-                width: 0;
-                border-top: 2rem solid transparent;
-                border-bottom: 2rem solid transparent;
-                border-right: 1.5rem solid $color-gray-cape;
-                // border-bottom: 1.5rem solid $color-gray-cape;
+                top: 2em;
+                left: -.9em;
+                content: '\25C0';
+                @include transform( scale( 1.5, 2.75 ) );
+                color: $color-white-pure;
+                text-shadow: -1px 0px 0px $color-gray-chateau;
                 z-index: $z-body-high;
             }
 
             .tooltip-content {
                 display: none;
-                // display: block;
                 position: absolute;
-                @include transform(translateX(0));
-                // margin-top: 1.6rem;
                 margin: 0;
-                top: -2rem;
-                left: 50%;
-                width: auto;
+                top: -3.75em;
+                right: 0;
+                width: 52%;
                 z-index: $z-body-high;
                 box-sizing: border-box;
-                padding: 1.5rem 2rem;
-                background-color: $color-gray-cape;
-                color: $color-white-pure;
+                padding: 1.5rem 0 1.5rem 2rem;
+                background-color: $color-white-pure;
+                color: $color-gray-charcoal;
                 font-size: $font-rem-normal;
                 text-transform: none;
                 font-variant: normal;
                 text-align: left;
                 line-height: 1.4em;
+                border: 1px solid $color-gray-chateau;
+                border-radius: 2px;
 
                 @include breakpoint($mq-md-max) {
                     min-width: 16rem;
@@ -274,22 +251,10 @@
                     }
                 }
 
-                .repeated {
-                    .tooltip-headline {
-                        padding: 1.25rem 0 0.3rem;
-                    }
-
-                    &:first-of-type {
-                        .tooltip-headline {
-                            padding-top: 0;
-                        }
-                    }
-                }
-
                 .tooltip-body {
                     font-weight: $font-weight-body;
-                    max-height: 30rem;
-                    padding-right: 2rem;
+                    max-height: 15em;
+                    padding-right: 1.25em;
                     overflow-y: scroll;
                 }
 
@@ -298,16 +263,6 @@
                 }
             }
 
-            // &:hover {
-            //     .tooltip-icon:after,
-            //     .tooltip-text:after {
-            //         display: none;
-            //     }
-            //     .tooltip-content:before,
-            //     .tooltip-content {
-            //         display: block;
-            //     }
-            // }
 
         }
 
