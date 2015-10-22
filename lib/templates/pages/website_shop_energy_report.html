@@ -83,8 +83,9 @@ tpl:
                                         4,000 <span>kWh</span>
                                     </div>
                                 </div>
+                                <div id="output"></div>
                             </div>
-                            <div id="output"></div>
+
                         </div>
                         <div class="col-md-2">
                             <button class="btn-primary" type="button">Compare Costs</button>
@@ -254,11 +255,31 @@ tpl:
 
 </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
-    if (document.querySelector) {
-        document.querySelector('#range').onchange = function(e) {
-            document.querySelector('#output').innerText = e.target.value;
-        }
-    }
+    // if (document.querySelector) {
+    //     document.querySelector('#range').onchange = function(e) {
+    //         document.querySelector('#output').innerText = e.target.value;
+    //     }
+    // }
+    // $('input[type="range"]').on('mouseup', function() {
+    //     var val = $(this).val();
+    //     $('#output').html( 'Test: ' + val );
+    // }).on('mousedown input', function() {
+    //     var val = $(this).val();
+    //     $('#output').html(  'Test: ' + val  );
+    // });
+
+    $('input[type="range"]').click( function() {
+        var val = $(this).val();
+        var result = parseFloat( parseInt( val, 10 ) * 100) / parseInt( 4000, 10 );
+        $('#output').css( 'left', result + '%' ).html( 'Val: ' + val + '<br>' + 'Percent: ' + result );
+    });
+
+    // $('input[type="range"]').on( 'change', function() {
+    //     var val = $(this).val();
+    //     var result = parseFloat( parseInt( val, 10 ) * 100) / parseInt( 4000, 10 );
+    //     $('#output').css( 'left', result + '%' ).html( 'Val: ' + val + '<br>' + 'Percent: ' + result );
+    // });
+
 </script>
