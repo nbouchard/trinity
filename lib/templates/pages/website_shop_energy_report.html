@@ -153,10 +153,8 @@ tpl:
                         </div>
                     </div>
                     <div class="rebate-item">
-                        <div class="ce-tooltip">
-                            <span class="tooltip-text">
-                                <span class="line-clamp">Tribal Energy Program Grant</span>
-                            </span>
+                        <div class="rebate-title">Tribal Energy Program Grant</div>
+                        <div class="rebate-tooltip">
                             <div class="tooltip-content">
                                 <div class="tooltip-link"><a href="#">Apply for Rebate</a></div>
                                 <div class="tooltip-headline">Summary</div>
@@ -177,7 +175,26 @@ tpl:
                         </div>
                     </div>
                     <div class="rebate-item">
-                        <a href="#">Tribal Energy Program Grant</a>
+                        <div class="rebate-title">Tribal Energy Program Grant</div>
+                        <div class="rebate-tooltip">
+                            <div class="tooltip-content">
+                                <div class="tooltip-link"><a href="#">Apply for Rebate</a></div>
+                                <div class="tooltip-headline">Summary</div>
+                                <div class="tooltip-body">
+                                    Any South Dakota property owner may grant a wind easement with the same effect as a conveyance of an interest in real property. Easements must be established in writing, and must be filed, recorded and indexed in the office of the register of deeds of the county in which they are granted. The maximum term of an easement is 50 years. Any payments associated with an easement must be made on an annual basis to the owner of the real property. An easement must include the following information:
+
+                                    - A description of the real property subject to the easement and a description of the real property benefiting from the wind easement;
+
+                                    - A description of the real property subject to the easement and of the real property benefiting from  the easement;
+
+                                    Any South Dakota property owner may grant a wind easement with the same effect as a conveyance of an interest in real property. Easements must be established in writing, and must be filed, recorded and indexed in the office of the register of deeds of the county in which they are granted. The maximum term of an easement is 50 years. Any payments associated with an easement must be made on an annual basis to the owner of the real property. An easement must include the following information:
+
+                                    - A description of the real property subject to the easement and a description of the real property benefiting from the wind easement;
+
+                                    - A description of the real property subject to the easement and of the real property benefiting from  the easement;
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -266,11 +283,13 @@ tpl:
     //     $('#output').html(  'Test: ' + val  );
     // });
     $( '.rebate-item' ).click( function() {
-        $this = $(this);
-        $tooltip = $this.find( '.tooltip-content' );
-        $tooltips = $( '.tooltip-content' );
-        $tooltips.removeClass( 'active' );
-        $tooltip.toggleClass( 'active' );
+        $( '.rebate-item' ).removeClass( 'active' );
+        $(this).toggleClass( 'active' );
+        // $this = $(this);
+        // $tooltip = $this.find( '.tooltip-content' );
+        // $tooltips = $( '.tooltip-content' );
+        // $tooltips.removeClass( 'active' );
+        // $tooltip.toggleClass( 'active' );
     });
 
     $( '.rebate-item' ).first().click();
