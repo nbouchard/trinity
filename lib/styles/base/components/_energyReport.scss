@@ -204,6 +204,7 @@
                 position: relative;
                 display: inline-block;
                 cursor: default;
+                font-size: $font-size-largest;
                 color: $color-green-shamrock;
                 line-height: 1em;
                 width: 100%;
@@ -217,7 +218,7 @@
             }
 
             .tooltip-content:before {
-                display: none;
+                // display: none;
                 // display: block;
                 position: absolute;
                 // bottom: -1.6rem;
@@ -291,18 +292,22 @@
                     padding-right: 2rem;
                     overflow-y: scroll;
                 }
-            }
 
-            &:hover {
-                .tooltip-icon:after,
-                .tooltip-text:after {
-                    display: none;
-                }
-                .tooltip-content:before,
-                .tooltip-content {
+                &.active {
                     display: block;
                 }
             }
+
+            // &:hover {
+            //     .tooltip-icon:after,
+            //     .tooltip-text:after {
+            //         display: none;
+            //     }
+            //     .tooltip-content:before,
+            //     .tooltip-content {
+            //         display: block;
+            //     }
+            // }
 
         }
 

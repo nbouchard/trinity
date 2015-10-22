@@ -133,7 +133,7 @@ tpl:
                     <div class="rebate-item">
                         <div class="ce-tooltip">
                             <span class="tooltip-text">
-                                <span class="line-clamp"><h3>Tribal Energy Program Grant</h3></span>
+                                <span class="line-clamp">Tribal Energy Program Grant</span>
                             </span>
                             <div class="tooltip-content">
                                 <div class="tooltip-link"><a href="#">Apply for Rebate</a></div>
@@ -157,7 +157,7 @@ tpl:
                     <div class="rebate-item">
                         <div class="ce-tooltip">
                             <span class="tooltip-text">
-                                <span class="line-clamp"><h3>Tribal Energy Program Grant</h3></span>
+                                <span class="line-clamp">Tribal Energy Program Grant</span>
                             </span>
                             <div class="tooltip-content">
                                 <div class="tooltip-link"><a href="#">Apply for Rebate</a></div>
@@ -179,7 +179,7 @@ tpl:
                         </div>
                     </div>
                     <div class="rebate-item">
-                        <h3><a href="#">Tribal Energy Program Grant</a></h3>
+                        <a href="#">Tribal Energy Program Grant</a>
                     </div>
                 </div>
             </div>
@@ -267,8 +267,17 @@ tpl:
     //     var val = $(this).val();
     //     $('#output').html(  'Test: ' + val  );
     // });
+    $( '.rebate-item' ).click( function() {
+        $this = $(this);
+        $tooltip = $this.find( '.tooltip-content' );
+        $tooltips = $( '.tooltip-content' );
+        $tooltips.removeClass( 'active' );
+        $tooltip.toggleClass( 'active' );
+    });
 
-    $('input[type="range"]').click( function() {
+    $( '.rebate-item' ).first().click();
+
+    $( 'input[type="range"]' ).click( function() {
         var val = $(this).val();
         var result = parseFloat( parseInt( val, 10 ) * 100) / parseInt( 4000, 10 );
         $('#output').css( 'left', result + '%' ).html( 'Val: ' + val + '<br>' + 'Percent: ' + result );
