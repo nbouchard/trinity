@@ -28,8 +28,13 @@
             font-size: 1.5rem;
         }
 
+        input {
+            border-left-width: 1px;
+        }
+
         select {
             width: 70%;
+            border-left-width: 1px;
         }
     }
 }
@@ -132,6 +137,7 @@
 
     input {
         width: 35%;
+        border-left-width: 1px;
     }
 }
 
