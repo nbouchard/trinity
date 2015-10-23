@@ -8,20 +8,64 @@ tpl:
   title: Partner with Choose Energy
 ---
 
-<div class="content-editorial" style="background: url('images/photography/Bay_Bridge_Night.jpg') no-repeat; background-size: cover;">
-    <div class="content-editorial-container">
-        <h1 class="content-editorial-headline">Partner with Choose Energy</h1>
-        <nav class="breadcrumbs">
-            <ol class="nav-list">
-                <li class="nav-item"><a href="website_homepage_residential.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="website_about_overview.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="website_about_partner_with_us.html" class="nav-link">Partner with Choose Energy</a></li>
-            </ol>
-        </nav>
+{{#withHash
+    editorial_headline="Earn money as a Choose Energy affiliate"
+    editorial_subhead="It’s quick and easy to get started"
+    editorial_body=""
+    variant_classes="v-bg-primary v-bigtalkshort"
+}}
+    {{> cmp_editorial_basic}}
+{{/withHash}}
+
+{{#withHash
+    editorial_headline="Earn cash by helping your site visitors lower their energy bills"
+    editorial_subhead=""
+    editorial_body="Joining our affiliate program allows you to earn additional revenue from your website traffic. Each valid lead generated from your website will earn you a commission. Complete a short application, share your unique link, and get paid when the leads roll in."
+    variant_classes=""
+}}
+    {{> cmp_editorial_basic}}
+{{/withHash}}
+
+<div class="ce-editorial v-noheight v-bg-light v-benefits">
+    <div class="editorial-container">
+        <h1 class="editorial-headline">Benefits</h1>
+        <h3 class="editorial-subhead">We connect valid leads to energy suppliers, and provide a platform for you to track your metrics.</h3>
+
+        {{#withHash
+            columns="3"
+            headline="Competitive and fast commission payouts"
+            body_text="Commission checks over $50 are sent monthly"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="3"
+            headline="Real-time conversion data"
+            body_text="Track your traffic and earnings online 24/7"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
+
+        {{#withHash
+            columns="3"
+            headline="Live support"
+            body_text="Have questions? You can always reach out to us at affiliates@chooseenergy.com"
+        }}
+            {{> cmp_grid_item}}
+        {{/withHash}}
     </div>
 </div>
-<div>
-    Partnership content goes here.
+
+<div class="ce-editorial">
+    <div class="editorial-container">
+        <div class="cg-1of8"></div>
+        <div class="commercial-form cg-3of4">
+            <div class="gf_browser_chrome gform_wrapper" id="gform_wrapper_5">
+                {{> cb_affiliate_form}}
+            </div>
+        </div>
+    </div>
 </div>
 
 
