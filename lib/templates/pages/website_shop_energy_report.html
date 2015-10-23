@@ -84,7 +84,6 @@ tpl:
                                         4,000 <span>kWh</span>
                                     </div>
                                 </div>
-                                <!-- <div id="output"></div> -->
                                 <div class="slider-tooltip"></div>
                             </div>
 
@@ -278,12 +277,13 @@ tpl:
 
     $( '.rebate-item' ).first().click();
 
-
-
     $( 'input[type="range"]' ).on('mousedown input', function() {
         var val = $(this).val();
-        var result = parseFloat( parseInt( val, 10 ) * 100) / parseInt( 4000, 10 );
-        $('.slider-tooltip').css( 'left', result + '%' ).html( 'Val: ' + val );
+        var percent = parseFloat( parseInt( val, 10 ) * 100) / parseInt( 4000, 10 );
+        var cents = val * 9;
+        var dollars = cents / 100;
+        dollars.toLocaleString( 'en-US', { style: 'currency', currency: 'USD' } );
+        $('.slider-tooltip').css( 'left', percent + '%' ).html( '<sup>$</sup><span>' + dollars + '</span>' );
     });
 
 

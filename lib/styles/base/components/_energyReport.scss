@@ -88,42 +88,100 @@
             padding: 0;
         }
 
-        // input[type=range]::-webkit-slider-thumb:before {
-        #output {
-            display: block;
-            position: absolute;
-            // content: attr(data-content);
-            top: -90px;
-            width: 60px;
-            height: 60px;
-            background: #ccc;
-            color: #000;
-            vertical-align: top;
-
-            @include transform(translateX(-50%));
-
+        input[type=range]::-webkit-slider-thumb,
+        input[type=range]::-moz-range-thumb,
+        input[type=range]::-ms-thumb {
+            position: relative;
         }
+
+        input[type=range]::-webkit-slider-thumb:before {
+            display: block;
+            position: relative;
+            top: -1.6em;
+            content: '\25BC';
+            @include transform( scale( 1.1, .8 ) translateX(-2px) );
+            color: $color-white-pure;
+            text-shadow: 0px 2px 0px $color-gray-chateau;
+            z-index: $z-body-high;
+        }
+
+        input[type=range]::-webkit-slider-thumb:after {
+            display: block;
+            position: relative;
+            content: '';
+            top: -5.5em;
+            left: -2.25em;
+            width: 5em;
+            height: 4.5em;
+            z-index: $z-body-high;
+        }
+
+
+        input[type=range]::-moz-range-thumb:before {
+            display: block;
+            position: relative;
+            top: -1.6em;
+            content: '\25BC';
+            @include transform( scale( 1.1, .8 ) translateX(-2px) );
+            color: $color-white-pure;
+            text-shadow: 0px 2px 0px $color-gray-chateau;
+            z-index: $z-body-high;
+        }
+
+        input[type=range]::-moz-range-thumb:after {
+            display: block;
+            position: relative;
+            content: '';
+            top: -5.5em;
+            left: -2.25em;
+            width: 5em;
+            height: 4.5em;
+            z-index: $z-body-high;
+        }
+
+        input[type=range]::-ms-thumb:before {
+            display: block;
+            position: relative;
+            top: -1.6em;
+            content: '\25BC';
+            @include transform( scale( 1.1, .8 ) translateX(-2px) );
+            color: $color-white-pure;
+            text-shadow: 0px 2px 0px $color-gray-chateau;
+            z-index: $z-body-high;
+        }
+
+        input[type=range]::-ms-thumb:after {
+            display: block;
+            position: relative;
+            content: '';
+            top: -5.5em;
+            left: -2.25em;
+            width: 5em;
+            height: 4.5em;
+            z-index: $z-body-high;
+        }
+
         .slider-tooltip {
             display: block;
             position: absolute;
-            top: -5.75em;
+            top: -4.6em;
             width: 5em;
-            height: 3em;
-            vertical-align: top;
+            height: 2.5em;
+            margin-left: -2.5em;
+            box-sizing: border-box;
             border: 1px solid $color-gray-chateau;
             border-radius: 2px;
-            @include transform(translateX(-50%));
+            font-size: $font-size-larger;
+            line-height: 2.5em;
 
-            &:after {
-                display: block;
-                position: absolute;
-                bottom: -1em;
-                left: 50%;
-                content: '\25BC';
-                @include transform( scale( 1.1, .8 ) translateX(-50%) );
-                color: $color-white-pure;
-                text-shadow: 0px 1px 0px $color-gray-chateau;
-                z-index: $z-body-high;
+            sup {
+                position: relative;
+                left: -1px;
+                font-size: 1.1rem;
+            }
+
+            span {
+                font-weight: $font-weight-accent;
             }
         }
 
