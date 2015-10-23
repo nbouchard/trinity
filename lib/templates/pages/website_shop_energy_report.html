@@ -84,7 +84,8 @@ tpl:
                                         4,000 <span>kWh</span>
                                     </div>
                                 </div>
-                                <div id="output"></div>
+                                <!-- <div id="output"></div> -->
+                                <div class="slider-tooltip"></div>
                             </div>
 
                         </div>
@@ -282,7 +283,7 @@ tpl:
     $( 'input[type="range"]' ).on('mousedown input', function() {
         var val = $(this).val();
         var result = parseFloat( parseInt( val, 10 ) * 100) / parseInt( 4000, 10 );
-        $('#output').css( 'left', result + '%' ).html( 'Val: ' + val + '<br>' + 'Percent: ' + result );
+        $('.slider-tooltip').css( 'left', result + '%' ).html( 'Val: ' + val );
     });
 
 
