@@ -180,7 +180,6 @@
 
     .rebate-list {
         padding-top: 1em;
-        // padding-bottom: 1em;
     }
 
     .rebate-item {
@@ -240,10 +239,24 @@
                     min-width: 20rem;
                 }
 
+                .tooltip-link {
+                    border-bottom: 1px solid $color-white-lilac;
+                    margin-right: 2rem;
+                    padding-bottom: 1rem;
+
+                    a {
+                        font-size: $font-size-normal;
+                        font-weight: $font-weight-accent;
+                        text-transform: uppercase;
+                    }
+                }
+
                 .tooltip-headline {
-                    color: $color-gray-ghost;
-                    text-transform: uppercase;
-                    padding: 1.25rem 0 0.3rem;
+                    // color: $color-gray-ghost;
+                    // text-transform: uppercase;
+                    padding: 1.25rem 0 1rem;
+                    font-size: $font-size-large;
+                    font-weight: $font-weight-body-strong;
 
                     &:first-of-type {
                         padding-top: 0;
@@ -252,6 +265,7 @@
 
                 .tooltip-body {
                     font-weight: $font-weight-body;
+                    line-height: 1.6em;
                     max-height: 15em;
                     padding-right: 1.25em;
                     overflow-y: scroll;
