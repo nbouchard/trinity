@@ -78,7 +78,14 @@
             text-transform: uppercase;
 
             i {
+                display: inline-block;
                 font-size: 1.25em;
+                color: $color-white-pure;
+                background: $color-gray-charcoal;
+                width: 1.2em;
+                height: 1.2em;
+                border-radius: 0.6em;
+                margin-left: 0.25em;
             }
         }
 
