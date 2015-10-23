@@ -684,28 +684,9 @@ input[type=range]:disabled::-ms-thumb {
     float: right;
 }
 
-.ce-solar-lead-form {
-    .gform_body {
-        margin: 0 auto;
-
-        .gform_fields {
-            margin: 0;
-            padding: 0;
-        }
-    }
-
-    .gform_footer {
-        width: 50em;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .gform_button {
-        float: none;
-    }
-}
-
-.ce-contact-form {
+.ce-contact-form,
+.ce-solar-lead-form,
+.ce-affliate-form {
     .gform_body {
         width: auto;
 
@@ -725,11 +706,13 @@ input[type=range]:disabled::-ms-thumb {
             font-size: 1.1em;
             padding-right: 0.5em;
             text-align: left;
+            display: block;
         }
 
         .ginput_container {
             float: right;
             width: 75%;
+            max-width: 100%;
 
             input,
             textarea {
@@ -737,6 +720,26 @@ input[type=range]:disabled::-ms-thumb {
                 max-height: 6em;
                 margin: 0;
             }
+
+            select {
+                height: 3em;
+                margin: 0;
+                width: 100%;
+            }
+
+            .ginput_left {
+                width: 45%;
+                float: left;
+            }
+
+            .ginput_right {
+                width: 45%;
+                float: right;
+            }
+        }
+
+        .gsection {
+            padding-top: 2em;
         }
     }
 
@@ -747,7 +750,30 @@ input[type=range]:disabled::-ms-thumb {
         .button {
             @include ce-button('primary');
             float: none;
+            margin: 0;
         }
+
+        &.right_label {
+            text-align: right;
+        }
+    }
+}
+
+.ce-affliate-form {
+    .form_t_and_c {
+        border: 1px solid $color-gray-charcoal;
+        padding: 0.5em;
+        max-height: 20em;
+        overflow-y: scroll;
+
+        p:first-child {
+            margin-top:0;
+        }
+
+    }
+
+    .gform_footer button{
+        font-size: 1.25em;
     }
 }
 
@@ -784,12 +810,14 @@ input[type=range]:disabled::-ms-thumb {
                 max-height: 6em;
                 margin: 0;
             }
+
             input {
                 width: 100%;
                 height: 2.5em;
                 margin: 0;
                 display: inline-block;
             }
+
             select {
                 width: 100%;
                 height: 2.5em;
@@ -823,51 +851,6 @@ input[type=range]:disabled::-ms-thumb {
         .button {
             @include ce-button('primary');
             float: none;
-        }
-    }
-}
-
-
-
-.ce-solar-form {
-    .gform_title {
-        font-weight: 400;
-        font-size: 2.5em;
-    }
-    .gfield_label {
-        font-weight: 200;
-        min-width: 9em;
-    }
-    .gform_heading {
-        width: 100%;
-    }
-    .ginput_container input[type=checkbox] {
-        width: 1em;
-    }
-    .gform_body {
-        width: 100%;
-    }
-    .gform_button {
-        margin-left: 29%;
-    }
-    .gform_button {
-            float:left;
-    }
-    .gform_body input, 
-    .gform_body textarea {
-        width: 100%;
-    }
-    .gfield_checkbox {
-        padding: 0 1em;
-        list-style: none;
-        input[type=checkbox] {
-            position: relative;
-            display: inline;
-            height: 1em;
-            width: 1em;
-        }
-        label {
-            display: inline;
         }
     }
 }
