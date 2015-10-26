@@ -97,8 +97,10 @@ tpl:
             <div class="row">
                 <div class="average-bill col-md-6">
                     <h3>Average monthy bill</h3>
-                    <!-- <div class="chart">[Chart Placeholder]</div> -->
-                    <div id="chart1" class="chart"></div>
+                    <div class="chart">
+                        <div id="chart1" class="google-chart"></div>
+                        <div class="chart-value"><sup>$</sup>195.72</div>
+                    </div>
                 </div>
                 <div class="monthly-bill col-md-6">
                     <h3>Your monthly bill</h3>
@@ -303,11 +305,11 @@ tpl:
             },
             pieSliceText: 'none',
             backgroundColor: 'transparent',
-            // backgroundColor: '#000',
+            // pieSliceBorderColor: 'transparent',
             width: '100%',
             // height: 'auto',
             colors: ['#cbb5ea', '#adc8e6', '#b8dfcc'],
-            pieHole: 0.5
+            pieHole: 0.55
         };
         var chart = new google.visualization.PieChart( document.getElementById( 'chart1' ) );
         chart.draw( data, options );

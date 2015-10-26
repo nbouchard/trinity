@@ -237,27 +237,35 @@
         border-right: 1px solid $color-gray-chateau;
 
         .chart {
-            width: 100%;
-            height: auto;
-            min-height: 300px;
-            &:after {
+            position: relative;
+
+            .chart-value {
                 position: absolute;
-                display: block;
-                content: '';
-                top: 55%;
+                top: 50%;
                 left: 50%;
-                width: 11em;
-                height: 11em;
-                background: #000;
                 @include transform( translateX(-50%) translateY(-50%) );
-                z-index: -10;
-            }
-            svg {
-                // min-height: 300px !important;
-                // margin-top: 30px;
-
+                font-size: $font-size-huger;
+                color: $color-white-pure;
             }
 
+            .google-chart {
+                position: relative;
+                width: 100%;
+                height: auto;
+                min-height: 300px;
+                &:after {
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    top: 50%;
+                    left: 50%;
+                    width: 12em;
+                    height: 12em;
+                    background: #000;
+                    @include transform( translateX(-50%) translateY(-50%) );
+                    z-index: -10;
+                }
+            }
         }
     }
 }
