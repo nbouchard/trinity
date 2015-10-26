@@ -239,6 +239,7 @@
     .chart {
         position: relative;
 
+
         .chart-value {
             position: absolute;
             top: 50%;
@@ -279,20 +280,28 @@
                 text-align: left;
             }
         }
-    }
-    .monthly-bill {
-        .chart-value {
-            top: 45%;
-            left: 50%;
-        }
-        .google-chart {
-            min-height: 350px;
 
-            &:after {
-                top: 45%;
+        &.chart-null {
+            .google-chart:after {
+                background: $color-gray-chateau;
             }
         }
     }
+
+
+    // .monthly-bill {
+    //     .chart-value {
+    //         top: 45%;
+    //         left: 50%;
+    //     }
+    //     .google-chart {
+    //         min-height: 350px;
+
+    //         &:after {
+    //             top: 45%;
+    //         }
+    //     }
+    // }
 }
 
 // Subscribe
