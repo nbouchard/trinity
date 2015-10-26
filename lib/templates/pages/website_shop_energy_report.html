@@ -104,8 +104,10 @@ tpl:
                 </div>
                 <div class="monthly-bill col-md-6">
                     <h3>Your monthly bill</h3>
-                    <p>How much energy do you use every month?</p>
-                    <div class="chart"></div>
+                     <div class="chart">
+                        <div id="chart2" class="google-chart"></div>
+                        <div class="chart-value"><sup>$</sup>285.45</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -274,6 +276,7 @@ tpl:
 <script>
     google.load('visualization', '1.0', {'packages':['corechart']});
     google.setOnLoadCallback(chart1);
+    google.setOnLoadCallback(chart2);
 
     function chart1() {
         var data = new google.visualization.DataTable();
@@ -281,11 +284,10 @@ tpl:
         data.addColumn('string', 'Allocation');
         data.addColumn('number', 'Dollars');
         data.addColumn({type:'string', role:'tooltip'});
-        data.addColumn({type:'string', role:'annotationText'});
         data.addRows([
-        ['Supply', 97.71, 'Cost of electrons that are on-the-move.', 'My Annotation'],
-        ['Taxes / Fees', 21.14, 'State and/or local taxes that are used to fund local programs.', 'My Annotation'],
-        ['Delivery', 76.57, 'Delivery of electrons that are on-the-move.', 'My Annotation']
+            ['Supply', 97.71, 'Cost of electrons that are on-the-move.'],
+            ['Taxes / Fees', 21.14, 'State and/or local taxes that are used to fund local programs.'],
+            ['Delivery', 76.57, 'Delivery of electrons that are on-the-move.']
         ]);
 
         data.setFormattedValue(0, 0, "Supply: $" + 97.71.toFixed(2));
@@ -294,28 +296,92 @@ tpl:
 
         var options = {
             legend:{
-                'position':'labeled',
-
+                position: 'labeled',
+                textStyle: {
+                    color: '#424649',
+                    fontSize: 16,
+                },
             },
             chartArea: {
-                // left: 0,
                 top: 20,
-                width: '90%',
+                width: '100%',
                 height: '90%'
             },
+            tooltip: {
+                isHtml: true,
+                textStyle: {
+                    fontSize: 14,
+                },
+            },
             pieSliceText: 'none',
+            pieStartAngle: 45,
             backgroundColor: 'transparent',
-            // pieSliceBorderColor: 'transparent',
             width: '100%',
-            // height: 'auto',
             colors: ['#cbb5ea', '#adc8e6', '#b8dfcc'],
             pieHole: 0.55
         };
         var chart = new google.visualization.PieChart( document.getElementById( 'chart1' ) );
         chart.draw( data, options );
     }
+
+
+    function chart2() {
+        var data = new google.visualization.DataTable();
+
+        data.addColumn('string', 'Allocation');
+        data.addColumn('number', 'Dollars');
+        data.addColumn({type:'string', role:'tooltip'});
+        data.addRows([
+            ['Supply', 142.72, 'Cost of electrons that are on-the-move.'],
+            ['Taxes / Fees', 23.68, 'State and/or local taxes that' + "\n" + 'are used to fund local programs.'],
+            ['Delivery', 119.05, 'Delivery of electrons that are on-the-move.']
+        ]);
+
+        // data.setFormattedValue(0, 0, "Supply: $" + 142.72.toFixed(2));
+        // data.setFormattedValue(1, 0, "Taxes/Fees: $" + 23.68.toFixed(2));
+        // data.setFormattedValue(2, 0, "Delivery: $" + 119.05.toFixed(2));
+
+        var formatter = new google.visualization.NumberFormat({ prefix: "$" });
+        formatter.format( data, 1 );
+
+        var options = {
+            legend:{
+                position: 'bottom',
+                textStyle: {
+                    color: '#424649',
+                    fontSize: 14,
+                },
+            },
+            chartArea: {
+                top: 20,
+                width: '100%',
+                height: '80%'
+            },
+            tooltip: {
+                // isHtml: true,
+                textStyle: {
+                    fontSize: 14,
+                },
+            },
+            pieSliceTextStyle: {
+                fontSize: 13,
+                color: '#64696d',
+            },
+            pieSliceText: 'value',
+            pieStartAngle: 45,
+            backgroundColor: 'transparent',
+            width: '100%',
+            colors: ['#cbb5ea', '#adc8e6', '#b8dfcc'],
+            pieHole: 0.55
+        };
+        var chart = new google.visualization.PieChart( document.getElementById( 'chart2' ) );
+        chart.draw( data, options );
+    }
+
+
     $(window).resize(function(){
            chart1();
+           chart2();
     });
 </script>
 <script>

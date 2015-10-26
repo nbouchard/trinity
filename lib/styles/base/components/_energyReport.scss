@@ -235,36 +235,61 @@
 
     .average-bill {
         border-right: 1px solid $color-gray-chateau;
+    }
+    .chart {
+        position: relative;
 
-        .chart {
+        .chart-value {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform( translateX(-50%) translateY(-50%) );
+            font-size: $font-size-huger;
+            color: $color-white-pure;
+            z-index: -5;
+
+            sup {
+                position: relative;
+                left: -3px;
+                font-size: 1.75rem;
+            }
+        }
+
+        .google-chart {
             position: relative;
+            width: 100%;
+            height: auto;
+            min-height: 300px;
 
-            .chart-value {
+            &:after {
                 position: absolute;
+                display: block;
+                content: '';
                 top: 50%;
                 left: 50%;
+                width: 12em;
+                height: 12em;
+                background: #000;
                 @include transform( translateX(-50%) translateY(-50%) );
-                font-size: $font-size-huger;
-                color: $color-white-pure;
+                z-index: -10;
             }
 
-            .google-chart {
-                position: relative;
-                width: 100%;
-                height: auto;
-                min-height: 300px;
-                &:after {
-                    position: absolute;
-                    display: block;
-                    content: '';
-                    top: 50%;
-                    left: 50%;
-                    width: 12em;
-                    height: 12em;
-                    background: #000;
-                    @include transform( translateX(-50%) translateY(-50%) );
-                    z-index: -10;
-                }
+            .google-visualization-tooltip {
+                max-width: 15em;
+                text-align: left;
+            }
+        }
+    }
+    .monthly-bill {
+        .chart-value {
+            top: 45%;
+            left: 50%;
+        }
+        .google-chart {
+            min-height: 350px;
+
+            &:after {
+                top: 45%;
             }
         }
     }
