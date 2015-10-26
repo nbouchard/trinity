@@ -84,7 +84,7 @@ tpl:
                                         4,000 <span>kWh</span>
                                     </div>
                                 </div>
-                                <div class="slider-tooltip"></div>
+                                <div id="slider-tooltip" class="slider-tooltip"></div>
                             </div>
 
                         </div>
@@ -97,13 +97,13 @@ tpl:
             <div class="row">
                 <div class="average-bill col-md-6">
                     <h3>Average monthy bill</h3>
-                    <p>The average household in your area will pay <strong>$132.13</strong> for electricity this month.</p>
-                    <div class="chart">[Chart Placeholder]</div>
+                    <!-- <div class="chart">[Chart Placeholder]</div> -->
+                    <div id="chart1" class="chart"></div>
                 </div>
                 <div class="monthly-bill col-md-6">
                     <h3>Your monthly bill</h3>
                     <p>How much energy do you use every month?</p>
-                    <div class="chart">[Chart Placeholder]</div>
+                    <div class="chart"></div>
                 </div>
             </div>
         </div>
@@ -112,7 +112,6 @@ tpl:
 
     <div class="row energy-report-subscribe">
         <div class="col-md-8 col-md-offset-2">
-            <p>Stay one step ahead of your energy bills with personalized bill predicutions. Sign up with your email address and stay tuned for monthly bill alerts</p>
             <form action="">
                 <input type="text" placeholder="Please enter your email...">
                 <button class="btn-primary" type="button">Get Updates</button>
@@ -269,6 +268,54 @@ tpl:
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://www.google.com/jsapi"></script>
+<script>
+    google.load('visualization', '1.0', {'packages':['corechart']});
+    google.setOnLoadCallback(chart1);
+
+    function chart1() {
+        var data = new google.visualization.DataTable();
+
+        data.addColumn('string', 'Allocation');
+        data.addColumn('number', 'Dollars');
+        data.addColumn({type:'string', role:'tooltip'});
+        data.addColumn({type:'string', role:'annotationText'});
+        data.addRows([
+        ['Supply', 97.71, 'Cost of electrons that are on-the-move.', 'My Annotation'],
+        ['Taxes / Fees', 21.14, 'State and/or local taxes that are used to fund local programs.', 'My Annotation'],
+        ['Delivery', 76.57, 'Delivery of electrons that are on-the-move.', 'My Annotation']
+        ]);
+
+        data.setFormattedValue(0, 0, "Supply: $" + 97.71.toFixed(2));
+        data.setFormattedValue(1, 0, "Taxes/Fees: $" + 21.14.toFixed(2));
+        data.setFormattedValue(2, 0, "Delivery: $" + 76.57.toFixed(2));
+
+        var options = {
+            legend:{
+                'position':'labeled',
+
+            },
+            chartArea: {
+                // left: 0,
+                top: 20,
+                width: '90%',
+                height: '90%'
+            },
+            pieSliceText: 'none',
+            backgroundColor: 'transparent',
+            // backgroundColor: '#000',
+            width: '100%',
+            // height: 'auto',
+            colors: ['#cbb5ea', '#adc8e6', '#b8dfcc'],
+            pieHole: 0.6
+        };
+        var chart = new google.visualization.PieChart( document.getElementById( 'chart1' ) );
+        chart.draw( data, options );
+    }
+    $(window).resize(function(){
+           chart1();
+    });
+</script>
 <script>
     $( '.rebate-item' ).click( function() {
         $( '.rebate-item' ).removeClass( 'active' );
@@ -277,13 +324,13 @@ tpl:
 
     $( '.rebate-item' ).first().click();
 
-    $( 'input[type="range"]' ).on('mousedown input', function() {
+    $( '#range' ).on('mousedown input', function() {
         var val = $(this).val();
         var percent = parseFloat( parseInt( val, 10 ) * 100) / parseInt( 4000, 10 );
         var cents = val * 9;
         var dollars = cents / 100;
         dollars.toLocaleString( 'en-US', { style: 'currency', currency: 'USD' } );
-        $('.slider-tooltip').css( 'left', percent + '%' ).html( '<sup>$</sup><span>' + dollars + '</span>' );
+        $('#slider-tooltip').css( 'left', percent + '%' ).html( '<sup>$</sup><span>' + dollars + '</span>' );
     });
 
 

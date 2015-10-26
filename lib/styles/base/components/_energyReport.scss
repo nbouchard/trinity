@@ -235,6 +235,16 @@
 
     .average-bill {
         border-right: 1px solid $color-gray-chateau;
+
+        .chart {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            svg {
+                // min-height: 300px !important;
+                // margin-top: 30px;
+            }
+        }
     }
 }
 
