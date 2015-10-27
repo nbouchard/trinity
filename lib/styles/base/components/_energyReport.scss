@@ -34,6 +34,12 @@
 
             .location-search {
                 border-right: 1px solid #fff;
+
+                @include breakpoint($mq-md-max) {
+                    border: none;
+                    margin-bottom: 1.5em;
+                }
+
                 .location-name {
                     font-size: $font-size-larger;
                 }
@@ -72,10 +78,18 @@
         padding-top: 3em;
         padding-bottom: 4em;
 
+        @include breakpoint($mq-md-max) {
+            padding-top: 2em;
+        }
+
         label {
             font-size: $font-size-larger;
             line-height: .5em;
             text-transform: uppercase;
+
+            @include breakpoint($mq-md-max) {
+                margin-bottom: 4em;
+            }
 
             i {
                 display: inline-block;
@@ -86,6 +100,10 @@
                 height: 1.2em;
                 border-radius: 0.6em;
                 margin-left: 0.25em;
+
+                @include breakpoint($mq-md-max) {
+                    @include transform( rotate(90deg) );
+                }
             }
         }
 
@@ -93,6 +111,10 @@
             width: 100%;
             margin: 1em 0 0;
             padding: 0;
+
+            @include breakpoint($mq-md-max) {
+                width: 80%;
+            }
         }
 
         input[type=range]::-webkit-slider-thumb,
@@ -196,6 +218,10 @@
             position: relative;
             margin: 1em auto 0;
 
+            @include breakpoint($mq-md-max) {
+                width: 80%;
+            }
+
             .graduation {
                 float: left;
                 width: 25%;
@@ -231,10 +257,21 @@
                 }
             }
         }
+
+        button {
+            @include breakpoint($mq-md-max) {
+                display: none;
+            }
+        }
     }
 
     .average-bill {
         border-right: 1px solid $color-gray-chateau;
+
+        @include breakpoint($mq-md-max) {
+            border: none;
+            margin-bottom: 3em;
+        }
     }
     .chart {
         position: relative;
@@ -454,5 +491,11 @@
 
     article {
         text-align: left;
+
+        &:first-child {
+            @include breakpoint($mq-md-max) {
+                margin-bottom: 3em;
+            }
+        }
     }
 }
