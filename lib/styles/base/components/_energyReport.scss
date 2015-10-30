@@ -376,10 +376,15 @@
 
             &.active {
                 color: $color-gray-charcoal;
+
+                &:after {
+                    display: block;
+                }
             }
 
             &:after {
-                display: block;
+                // display: block;
+                display: none;
                 position: absolute;
                 top: 50%;
                 right: -0.05em;
