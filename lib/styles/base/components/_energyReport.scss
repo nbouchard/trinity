@@ -397,17 +397,15 @@
 
 
         .rebate-tooltip {
-            // display: none;
-
+            display: none;
             position: absolute;
-            display: flex;
+            // display: flex;
             flex-direction: column;
             top: 0;
             right: 15px;
             bottom: 0;
             width: 50%;
             height: 100%;
-            // z-index: $z-body-high;
             box-sizing: border-box;
             padding: 1.5rem 0 1.5rem 2rem;
             background-color: $color-white-pure;
@@ -419,7 +417,7 @@
             line-height: 1.4em;
             border: 1px solid $color-gray-chateau;
             border-radius: 2px;
-            overflow:hidden;
+            // overflow:hidden;
 
             .tooltip-link {
                 border-bottom: 1px solid $color-white-lilac;
@@ -455,6 +453,10 @@
                         padding-top: 0;
                     }
                 }
+            }
+
+            &.active {
+                display: flex;
             }
 
 

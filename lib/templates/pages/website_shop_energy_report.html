@@ -136,17 +136,34 @@ tpl:
 
 
                         <div class="col-md-6">
-                            <div class="rebate-title">Tribal Energy Program Grant Tribal Energy Program Grant</div>
-                            <div class="rebate-title">Tribal Energy Program Grant Tribal Energy</div>
-                            <div class="rebate-title">Tribal Energy Program Grant Tribal </div>
-                            <div class="rebate-title">Tribal Energy Program Grant Tribal Energy Program</div>
+                            <div class="rebate-title" data-rebate-id="1">Tribal Energy Program Grant Tribal Energy Program Grant</div>
+                            <div class="rebate-title" data-rebate-id="2">Tribal Energy Program Grant Tribal Energy</div>
+                            <div class="rebate-title" data-rebate-id="3">Tribal Energy Program Grant Tribal </div>
+                            <div class="rebate-title" data-rebate-id="4">Tribal Energy Program Grant Tribal Energy Program</div>
                         </div>
                         <div class="col-md-6 rebate-tooltip-col">
-                            <div class="rebate-tooltip">
+                            <div id="1" class="rebate-tooltip">
                                 <div class="tooltip-link"><a href="#">Apply for Rebate</a></div>
                                 <div class="tooltip-content">
-                                    <div class="tooltip-headline">Summary</div>
+                                    <div class="tooltip-headline">Summary #1</div>
+                                    <p>Number 1. Any South Dakota property owner may grant a wind easement with the same effect as a conveyance of an interest in real property. Easements must be established in writing, and must be filed, recorded and indexed in the office of the register of deeds of the county in which they are granted. The maximum term of an easement is 50 years. Any payments associated with an easement must be made on an annual basis to the owner of the real property. An easement must include the following information:</p>
+
+                                    <p>- A description of the real property subject to the easement and a description of the real property benefiting from the wind easement;</p>
+
+                                    <p>- A description of the real property subject to the easement and of the real property benefiting from  the easement;</p>
+
                                     <p>Any South Dakota property owner may grant a wind easement with the same effect as a conveyance of an interest in real property. Easements must be established in writing, and must be filed, recorded and indexed in the office of the register of deeds of the county in which they are granted. The maximum term of an easement is 50 years. Any payments associated with an easement must be made on an annual basis to the owner of the real property. An easement must include the following information:</p>
+
+                                    <p>- A description of the real property subject to the easement and a description of the real property benefiting from the wind easement;</p>
+
+                                    <p>- A description of the real property subject to the easement and of the real property benefiting from  the easement;</p>
+                                </div>
+                           </div>
+                           <div id="2" class="rebate-tooltip">
+                                <div class="tooltip-link"><a href="#">Apply for Rebate</a></div>
+                                <div class="tooltip-content">
+                                    <div class="tooltip-headline">Summary #2</div>
+                                    <p>Number 2. Any South Dakota property owner may grant a wind easement with the same effect as a conveyance of an interest in real property. Easements must be established in writing, and must be filed, recorded and indexed in the office of the register of deeds of the county in which they are granted. The maximum term of an easement is 50 years. Any payments associated with an easement must be made on an annual basis to the owner of the real property. An easement must include the following information:</p>
 
                                     <p>- A description of the real property subject to the easement and a description of the real property benefiting from the wind easement;</p>
 
@@ -327,12 +344,14 @@ tpl:
     });
 </script>
 <script>
-    // $( '.rebate-item' ).click( function() {
-    //     $( '.rebate-item' ).removeClass( 'active' );
-    //     $(this).toggleClass( 'active' );
-    // });
-
-    // $( '.rebate-item' ).first().click();
+    $( '.rebate-title' ).click( function() {
+        var rebateId = $( this ).data( 'rebateId' );
+        var id = '#' + rebateId;
+        $( '.rebate-title, .rebate-tooltip' ).removeClass( 'active' );
+        $( this ).toggleClass( 'active' );
+        $( id ).toggleClass( 'active' );
+    });
+    $( '.rebate-title' ).first().click();
 
     $( '#range' ).on('mousedown input', function() {
         var val = $(this).val();
