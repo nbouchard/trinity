@@ -366,13 +366,26 @@
 
         .rebate-title {
             position: relative;
-            padding: 1.75em 0.5em;
+            padding: 1em 0.5em;
             text-align: left;
             border-bottom: 1px solid $color-gray-geyser;
             font-size: $font-size-largest;
             color: $color-green-shamrock;
             cursor: pointer;
-            line-height: 1em;
+            line-height: 1.5em;
+
+            &:after {
+                display: none;
+                position: absolute;
+                top: 45%;
+                right: -0.05em;
+                content: '\25C0';
+                @include transform( scale( 1.5, 2.75 ) translateY(-5%)  );
+                // @include transform( scale( 1.5, 2.75 ) );
+                color: $color-white-pure;
+                text-shadow: -1px 0px 0px $color-gray-chateau;
+                z-index: $z-body-high;
+            }
 
             &.active {
                 color: $color-gray-charcoal;
@@ -382,19 +395,11 @@
                 }
             }
 
-            &:after {
-                // display: block;
-                display: none;
-                position: absolute;
-                top: 50%;
-                right: -0.05em;
-                content: '\25C0';
-                // @include transform( scale( 1.5, 2.75 ) translateY(-50%)  );
-                @include transform( scale( 1.5, 2.75 ) );
-                color: $color-white-pure;
-                text-shadow: -1px 0px 0px $color-gray-chateau;
-                z-index: $z-body-high;
+            &:last-child {
+                border: none;
             }
+
+
         }
 
 
