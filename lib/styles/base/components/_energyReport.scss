@@ -358,7 +358,6 @@
         position: relative;
         padding-top: 1em;
         height: 100%;
-    // position: relative;
 
         .rebate-tooltip-col {
             position: static;
@@ -381,7 +380,6 @@
                 right: -0.05em;
                 content: '\25C0';
                 @include transform( scale( 1.5, 2.75 ) translateY(-5%)  );
-                // @include transform( scale( 1.5, 2.75 ) );
                 color: $color-white-pure;
                 text-shadow: -1px 0px 0px $color-gray-chateau;
                 z-index: $z-body-high;
@@ -398,18 +396,11 @@
             &:last-child {
                 border: none;
             }
-
-
         }
-
-
-    // .rebate-item {
-
 
         .rebate-tooltip {
             display: none;
             position: absolute;
-            // display: flex;
             flex-direction: column;
             top: 0;
             right: 15px;
@@ -427,14 +418,12 @@
             line-height: 1.4em;
             border: 1px solid $color-gray-chateau;
             border-radius: 2px;
-            // overflow:hidden;
 
             .tooltip-link {
                 border-bottom: 1px solid $color-white-lilac;
                 margin-right: 2rem;
                 margin-bottom: 1.5rem;
                 padding-bottom: 1rem;
-
 
                 a {
                     font-size: $font-size-normal;
@@ -444,8 +433,6 @@
             }
 
             .tooltip-content {
-                // display: none;
-                // max-height: 15em;
                 padding-right: 1.25em;
                 overflow-y: scroll;
 
@@ -468,15 +455,7 @@
             &.active {
                 display: flex;
             }
-
-
-            // overflow: hidden;
-
-
-
-
         }
-
     }
 
     .pagination {
