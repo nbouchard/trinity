@@ -145,7 +145,6 @@
             z-index: $z-body-high;
         }
 
-
         input[type=range]::-moz-range-thumb:before {
             display: block;
             position: relative;
@@ -359,101 +358,124 @@
         padding-top: 1em;
         height: 100%;
 
-        .rebate-tooltip-col {
-            position: static;
-        }
+        .rebate-item {
 
-        .rebate-title {
-            position: relative;
-            padding: 1em 0.5em;
-            text-align: left;
-            border-bottom: 1px solid $color-gray-geyser;
-            font-size: $font-size-largest;
-            color: $color-green-shamrock;
-            cursor: pointer;
-            line-height: 1.5em;
-
-            &:after {
-                display: none;
-                position: absolute;
-                top: 45%;
-                right: -0.05em;
-                content: '\25C0';
-                @include transform( scale( 1.5, 2.75 ) translateY(-5%)  );
-                color: $color-white-pure;
-                text-shadow: -1px 0px 0px $color-gray-chateau;
-                z-index: $z-body-high;
+            .rebate-tooltip-col {
+                position: static;
             }
 
-            &.active {
-                color: $color-gray-charcoal;
+            .rebate-title {
+                position: relative;
+                padding: 1em 0.5em;
+                text-align: left;
+                border-bottom: 1px solid $color-gray-geyser;
+                font-size: $font-size-largest;
+                color: $color-green-shamrock;
+                cursor: pointer;
+                line-height: 1.5em;
 
                 &:after {
-                    display: block;
+                    display: none;
+                    position: absolute;
+                    top: 45%;
+                    right: -0.05em;
+                    content: '\25C0';
+                    @include transform( scale( 1.5, 2.75 ) translateY(-5%)  );
+                    color: $color-white-pure;
+                    text-shadow: -1px 0px 0px $color-gray-chateau;
+                    z-index: $z-body-high;
                 }
             }
 
-            &:last-child {
-                border: none;
-            }
-        }
+            .rebate-tooltip {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                top: 0;
+                right: 15px;
+                bottom: 0;
+                width: 50%;
+                height: 100%;
+                box-sizing: border-box;
+                padding: 1.5rem 1px 1.5rem 2rem;
+                background-color: $color-white-pure;
+                color: $color-gray-charcoal;
+                font-size: $font-rem-normal;
+                text-transform: none;
+                font-variant: normal;
+                text-align: left;
+                line-height: 1.4em;
+                border: 1px solid $color-gray-chateau;
+                border-radius: 2px;
 
-        .rebate-tooltip {
-            display: none;
-            position: absolute;
-            flex-direction: column;
-            top: 0;
-            right: 15px;
-            bottom: 0;
-            width: 50%;
-            height: 100%;
-            box-sizing: border-box;
-            padding: 1.5rem 0 1.5rem 2rem;
-            background-color: $color-white-pure;
-            color: $color-gray-charcoal;
-            font-size: $font-rem-normal;
-            text-transform: none;
-            font-variant: normal;
-            text-align: left;
-            line-height: 1.4em;
-            border: 1px solid $color-gray-chateau;
-            border-radius: 2px;
-
-            .tooltip-link {
-                border-bottom: 1px solid $color-white-lilac;
-                margin-right: 2rem;
-                margin-bottom: 1.5rem;
-                padding-bottom: 1rem;
-
-                a {
-                    font-size: $font-size-normal;
-                    font-weight: $font-weight-accent;
-                    text-transform: uppercase;
-                }
-            }
-
-            .tooltip-content {
-                padding-right: 1.25em;
-                overflow-y: scroll;
-
-                p {
-                    font-size: $font-size-normal;
-                    line-height: 1.6em;
+                @include breakpoint($mq-md-max) {
+                    position: static;
+                    width: 100%;
+                    border: none;
                 }
 
-                .tooltip-headline {
-                    padding: 1.25rem 0 0;
-                    font-size: $font-size-large;
-                    font-weight: $font-weight-body-strong;
+                .tooltip-link {
+                    border-bottom: 1px solid $color-white-lilac;
+                    margin-right: 2rem;
+                    margin-bottom: 1.5rem;
+                    padding-bottom: 1rem;
 
-                    &:first-of-type {
-                        padding-top: 0;
+                    a {
+                        font-size: $font-size-normal;
+                        font-weight: $font-weight-accent;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .tooltip-content {
+                    padding-right: 1.25em;
+                    overflow-y: scroll;
+
+                    @include breakpoint($mq-md-max) {
+                        overflow-y: auto;
+                    }
+
+                    p {
+                        font-size: $font-size-normal;
+                        line-height: 1.6em;
+                    }
+
+                    .tooltip-headline {
+                        padding: 1.25rem 0 0;
+                        font-size: $font-size-large;
+                        font-weight: $font-weight-body-strong;
+
+                        &:first-of-type {
+                            padding-top: 0;
+                        }
                     }
                 }
             }
 
+            &:last-child .rebate-title {
+                border: none;
+
+                @include breakpoint($mq-sm-max) {
+                    border-bottom: 1px solid $color-gray-geyser;
+                }
+            }
+
             &.active {
-                display: flex;
+                .rebate-title {
+                    color: $color-gray-charcoal;
+
+                    &:after {
+                        display: block;
+
+                        @include breakpoint($mq-md-max) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .rebate-tooltip {
+                    display: flex;
+                }
             }
         }
     }
