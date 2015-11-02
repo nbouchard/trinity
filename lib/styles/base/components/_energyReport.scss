@@ -158,6 +158,10 @@
             color: $color-white-pure;
             text-shadow: 0px 2px 0px $color-gray-chateau;
             z-index: $z-body-high;
+
+            @include breakpoint($mq-sm-max) {
+                top: -1.7em;
+            }
         }
 
         input[type=range]::-moz-range-thumb:after {
@@ -180,6 +184,10 @@
             color: $color-white-pure;
             text-shadow: 0px 2px 0px $color-gray-chateau;
             z-index: $z-body-high;
+
+            @include breakpoint($mq-sm-max) {
+                top: -1.7em;
+            }
         }
 
         input[type=range]::-ms-thumb:after {
