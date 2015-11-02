@@ -132,6 +132,10 @@
             color: $color-white-pure;
             text-shadow: 0px 2px 0px $color-gray-chateau;
             z-index: $z-body-high;
+
+            @include breakpoint($mq-sm-max) {
+                top: -1.7em;
+            }
         }
 
         input[type=range]::-webkit-slider-thumb:after {
@@ -145,7 +149,6 @@
             z-index: $z-body-high;
         }
 
-
         input[type=range]::-moz-range-thumb:before {
             display: block;
             position: relative;
@@ -155,6 +158,10 @@
             color: $color-white-pure;
             text-shadow: 0px 2px 0px $color-gray-chateau;
             z-index: $z-body-high;
+
+            @include breakpoint($mq-sm-max) {
+                top: -1.7em;
+            }
         }
 
         input[type=range]::-moz-range-thumb:after {
@@ -177,6 +184,10 @@
             color: $color-white-pure;
             text-shadow: 0px 2px 0px $color-gray-chateau;
             z-index: $z-body-high;
+
+            @include breakpoint($mq-sm-max) {
+                top: -1.7em;
+            }
         }
 
         input[type=range]::-ms-thumb:after {
@@ -340,6 +351,10 @@
     input {
         width: 35%;
         border-left-width: 1px;
+
+        @include breakpoint($mq-sm-max) {
+            width: 55%;
+        }
     }
 }
 
@@ -355,48 +370,50 @@
     }
 
     .rebate-list {
-        padding-top: 1em;
-    }
-
-    .rebate-item {
         position: relative;
-        padding: 1.75em 0.5em;
-        text-align: left;
-        border-bottom: 1px solid $color-gray-geyser;
+        padding-top: 1em;
+        height: 100%;
 
-        .rebate-title {
-            font-size: $font-size-largest;
-            color: $color-green-shamrock;
-            cursor: pointer;
-            line-height: 1em;
-        }
+        .rebate-item {
 
-        .rebate-tooltip {
-            position: absolute;
-            width: 100%;
-
-            .tooltip-content:before {
-                display: block;
-                position: absolute;
-                top: 2em;
-                left: -.9em;
-                content: '\25C0';
-                @include transform( scale( 1.5, 2.75 ) );
-                color: $color-white-pure;
-                text-shadow: -1px 0px 0px $color-gray-chateau;
-                z-index: $z-body-high;
+            .rebate-tooltip-col {
+                position: static;
             }
 
-            .tooltip-content {
+            .rebate-title {
+                position: relative;
+                padding: 1em 0.5em;
+                text-align: left;
+                border-bottom: 1px solid $color-gray-geyser;
+                font-size: $font-size-largest;
+                color: $color-green-shamrock;
+                cursor: pointer;
+                line-height: 1.5em;
+
+                &:after {
+                    display: none;
+                    position: absolute;
+                    top: 45%;
+                    right: -0.05em;
+                    content: '\25C0';
+                    @include transform( scale( 1.5, 2.75 ) translateY(-5%)  );
+                    color: $color-white-pure;
+                    text-shadow: -1px 0px 0px $color-gray-chateau;
+                    z-index: $z-body-high;
+                }
+            }
+
+            .rebate-tooltip {
                 display: none;
                 position: absolute;
-                margin: 0;
-                top: -3.75em;
-                right: 0;
-                width: 52%;
-                z-index: $z-body-high;
+                flex-direction: column;
+                top: 0;
+                right: 15px;
+                bottom: 0;
+                width: 50%;
+                height: 100%;
                 box-sizing: border-box;
-                padding: 1.5rem 0 1.5rem 2rem;
+                padding: 1.5rem 1px 1.5rem 2rem;
                 background-color: $color-white-pure;
                 color: $color-gray-charcoal;
                 font-size: $font-rem-normal;
@@ -408,16 +425,15 @@
                 border-radius: 2px;
 
                 @include breakpoint($mq-md-max) {
-                    min-width: 16rem;
-                }
-
-                @include breakpoint($mq-lg-min) {
-                    min-width: 20rem;
+                    position: static;
+                    width: 100%;
+                    border: none;
                 }
 
                 .tooltip-link {
                     border-bottom: 1px solid $color-white-lilac;
                     margin-right: 2rem;
+                    margin-bottom: 1.5rem;
                     padding-bottom: 1rem;
 
                     a {
@@ -427,42 +443,56 @@
                     }
                 }
 
-                .tooltip-headline {
-                    padding: 1.25rem 0 0;
-                    font-size: $font-size-large;
-                    font-weight: $font-weight-body-strong;
-
-                    &:first-of-type {
-                        padding-top: 0;
-                    }
-                }
-
-                .tooltip-body {
-                    max-height: 15em;
+                .tooltip-content {
                     padding-right: 1.25em;
                     overflow-y: scroll;
+
+                    @include breakpoint($mq-md-max) {
+                        overflow-y: auto;
+                    }
 
                     p {
                         font-size: $font-size-normal;
                         line-height: 1.6em;
                     }
+
+                    .tooltip-headline {
+                        padding: 1.25rem 0 0;
+                        font-size: $font-size-large;
+                        font-weight: $font-weight-body-strong;
+
+                        &:first-of-type {
+                            padding-top: 0;
+                        }
+                    }
                 }
             }
-        }
 
-        &.active {
+            &:last-child .rebate-title {
+                border: none;
 
-            .rebate-title {
-                color: $color-gray-charcoal;
+                @include breakpoint($mq-sm-max) {
+                    border-bottom: 1px solid $color-gray-geyser;
+                }
             }
 
-            .tooltip-content {
-                display: block;
-            }
-        }
+            &.active {
+                .rebate-title {
+                    color: $color-gray-charcoal;
 
-        &:last-child {
-            border: none;
+                    &:after {
+                        display: block;
+
+                        @include breakpoint($mq-md-max) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .rebate-tooltip {
+                    display: flex;
+                }
+            }
         }
     }
 
