@@ -351,6 +351,10 @@
     input {
         width: 35%;
         border-left-width: 1px;
+
+        @include breakpoint($mq-sm-max) {
+            width: 55%;
+        }
     }
 }
 
