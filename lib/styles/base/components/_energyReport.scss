@@ -70,6 +70,10 @@
     padding: 3em 0;
     text-align: center;
 
+    @include breakpoint($mq-sm-max) {
+        padding-bottom: 0;
+    }
+
     p {
         font-size: $font-size-larger;
     }
@@ -281,12 +285,11 @@
 
         @include breakpoint($mq-md-max) {
             border: none;
-            margin-bottom: 3em;
         }
     }
+
     .chart {
         position: relative;
-
 
         .chart-value {
             position: absolute;
@@ -297,10 +300,16 @@
             color: $color-white-pure;
             z-index: -5;
 
+            @include breakpoint($mq-sm-max) {
+                font-size: $font-size-larger;
+                top: 34%;
+            }
+
+
             sup {
                 position: relative;
                 left: -3px;
-                font-size: 1.75rem;
+                font-size: 1.1rem;
             }
         }
 
@@ -321,6 +330,13 @@
                 background: #000;
                 @include transform( translateX(-50%) translateY(-50%) );
                 z-index: -10;
+
+                @include breakpoint($mq-sm-max) {
+                    width: 8em;
+                    height: 8em;
+                    top: 38%;
+                    @include transform( translateX(-50%) translateY(-60%) );
+                }
             }
 
             .google-visualization-tooltip {
