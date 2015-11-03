@@ -1,0 +1,547 @@
+.container.energy-report {
+    padding-bottom: 2em;
+}
+
+
+// Utility Finder
+//
+// .energy-report-utility-finder - Zip code search and utility select
+.energy-report-utility-finder {
+    @include editorial-bg-color('info');
+
+    padding: 3em 0 0;
+    text-align: center;
+
+    p {
+        font-size: $font-size-larger;
+    }
+
+    .location-utility {
+        background-color: lighten($color-blue-curious, 15%);
+        padding: 2.25em 0 2em;
+        margin: 1.5em 0;
+
+        form {
+            padding: 2em 0;
+
+            label {
+                display: block;
+                font-size: $font-size-smaller;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 1em;
+            }
+
+            .location-search {
+                border-right: 1px solid #fff;
+
+                @include breakpoint($mq-md-max) {
+                    border: none;
+                    margin-bottom: 1.5em;
+                }
+
+                .location-name {
+                    font-size: $font-size-larger;
+                }
+            }
+
+            input,
+            select {
+                border-left-width: 1px;
+                height: 2.25em;
+            }
+
+            input {
+                width: 6em;
+            }
+            select {
+                width: 13em;
+            }
+        }
+
+
+    }
+}
+
+// Bill Calculator
+//
+// .energy-report-rebate-calculator - Slider and usage charts
+.energy-report-rebate-calculator {
+    padding: 3em 0;
+    text-align: center;
+
+    @include breakpoint($mq-sm-max) {
+        padding-bottom: 0;
+    }
+
+    p {
+        font-size: $font-size-larger;
+    }
+
+    .slider {
+        padding-top: 3em;
+        padding-bottom: 4em;
+
+        @include breakpoint($mq-md-max) {
+            padding-top: 2em;
+        }
+
+        label {
+            font-size: $font-size-larger;
+            line-height: .5em;
+            text-transform: uppercase;
+
+            @include breakpoint($mq-md-max) {
+                margin-bottom: 4em;
+            }
+
+            i {
+                display: inline-block;
+                font-size: 1.25em;
+                color: $color-white-pure;
+                background: $color-gray-charcoal;
+                width: 1.2em;
+                height: 1.2em;
+                border-radius: 0.6em;
+                margin-left: 0.25em;
+
+                @include breakpoint($mq-md-max) {
+                    @include transform( rotate(90deg) );
+                }
+            }
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin: 1em 0 0;
+            padding: 0;
+
+            @include breakpoint($mq-md-max) {
+                width: 80%;
+            }
+        }
+
+        input[type=range]::-webkit-slider-thumb,
+        input[type=range]::-moz-range-thumb,
+        input[type=range]::-ms-thumb {
+            position: relative;
+        }
+
+        input[type=range]::-webkit-slider-thumb:before {
+            display: block;
+            position: relative;
+            top: -1.6em;
+            content: '\25BC';
+            @include transform( scale( 1.1, .8 ) translateX(-2px) );
+            color: $color-white-pure;
+            text-shadow: 0px 2px 0px $color-gray-chateau;
+            z-index: $z-body-high;
+
+            @include breakpoint($mq-sm-max) {
+                top: -1.7em;
+            }
+        }
+
+        input[type=range]::-webkit-slider-thumb:after {
+            display: block;
+            position: relative;
+            content: '';
+            top: -5.5em;
+            left: -2.25em;
+            width: 5em;
+            height: 4.5em;
+            z-index: $z-body-high;
+        }
+
+        input[type=range]::-moz-range-thumb:before {
+            display: block;
+            position: relative;
+            top: -1.6em;
+            content: '\25BC';
+            @include transform( scale( 1.1, .8 ) translateX(-2px) );
+            color: $color-white-pure;
+            text-shadow: 0px 2px 0px $color-gray-chateau;
+            z-index: $z-body-high;
+
+            @include breakpoint($mq-sm-max) {
+                top: -1.7em;
+            }
+        }
+
+        input[type=range]::-moz-range-thumb:after {
+            display: block;
+            position: relative;
+            content: '';
+            top: -5.5em;
+            left: -2.25em;
+            width: 5em;
+            height: 4.5em;
+            z-index: $z-body-high;
+        }
+
+        input[type=range]::-ms-thumb:before {
+            display: block;
+            position: relative;
+            top: -1.6em;
+            content: '\25BC';
+            @include transform( scale( 1.1, .8 ) translateX(-2px) );
+            color: $color-white-pure;
+            text-shadow: 0px 2px 0px $color-gray-chateau;
+            z-index: $z-body-high;
+
+            @include breakpoint($mq-sm-max) {
+                top: -1.7em;
+            }
+        }
+
+        input[type=range]::-ms-thumb:after {
+            display: block;
+            position: relative;
+            content: '';
+            top: -5.5em;
+            left: -2.25em;
+            width: 5em;
+            height: 4.5em;
+            z-index: $z-body-high;
+        }
+
+        .slider-tooltip {
+            display: block;
+            position: absolute;
+            top: -4.6em;
+            width: 5em;
+            height: 2.5em;
+            margin-left: -2.5em;
+            box-sizing: border-box;
+            border: 1px solid $color-gray-chateau;
+            border-radius: 2px;
+            font-size: $font-size-larger;
+            line-height: 2.5em;
+
+            sup {
+                position: relative;
+                left: -1px;
+                font-size: 1.1rem;
+            }
+
+            span {
+                font-weight: $font-weight-accent;
+            }
+        }
+
+        .graduations {
+            position: relative;
+            margin: 1em auto 0;
+
+            @include breakpoint($mq-md-max) {
+                width: 80%;
+            }
+
+            .graduation {
+                float: left;
+                width: 25%;
+                margin-left: -0.4em;
+
+                .graduation-mark {
+                    position: relative;
+                    left: -1px;
+                    width: 0;
+                    height: 10px;
+                    margin: 0 auto 0.25em;
+                    border-left: 2px solid #444;
+                }
+
+                .graduation-measure {
+                    float: left;
+                    text-align: center;
+                    font-weight: 600;
+
+                    span {
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+
+                    &.last {
+                        float: right;
+                        margin-right: -2.75em;
+                    }
+                }
+
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        button {
+            @include breakpoint($mq-md-max) {
+                display: none;
+            }
+        }
+    }
+
+    .average-bill {
+        border-right: 1px solid $color-gray-chateau;
+
+        @include breakpoint($mq-md-max) {
+            border: none;
+        }
+    }
+
+    .chart {
+        position: relative;
+
+        .chart-value {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform( translateX(-50%) translateY(-50%) );
+            font-size: $font-size-huger;
+            color: $color-white-pure;
+            z-index: -5;
+
+            @include breakpoint($mq-sm-max) {
+                font-size: $font-size-larger;
+                top: 34%;
+            }
+
+
+            sup {
+                position: relative;
+                left: -3px;
+                font-size: 1.1rem;
+            }
+        }
+
+        .google-chart {
+            position: relative;
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+
+            &:after {
+                position: absolute;
+                display: block;
+                content: '';
+                top: 50%;
+                left: 50%;
+                width: 12em;
+                height: 12em;
+                background: #000;
+                @include transform( translateX(-50%) translateY(-50%) );
+                z-index: -10;
+
+                @include breakpoint($mq-sm-max) {
+                    width: 8em;
+                    height: 8em;
+                    top: 38%;
+                    @include transform( translateX(-50%) translateY(-60%) );
+                }
+            }
+
+            .google-visualization-tooltip {
+                max-width: 15em;
+                text-align: left;
+            }
+        }
+
+        &.chart-null {
+            .google-chart:after {
+                background: $color-gray-chateau;
+            }
+        }
+    }
+}
+
+// Subscribe
+//
+// .energy-report-subscribe  - Email capture form
+.energy-report-subscribe {
+    padding: 2em 0;
+    text-align: center;
+
+    p {
+        font-size: $font-size-larger;
+    }
+
+    input {
+        width: 35%;
+        border-left-width: 1px;
+
+        @include breakpoint($mq-sm-max) {
+            width: 55%;
+        }
+    }
+}
+
+// Rebates and Incentives
+//
+// .energy-report-rebates  - List of rebate content with popup/tooltips
+.energy-report-rebates {
+    padding: 2em 0;
+    text-align: center;
+
+    p {
+        font-size: $font-size-larger;
+    }
+
+    .rebate-list {
+        position: relative;
+        padding-top: 1em;
+        height: 100%;
+
+        .rebate-item {
+
+            .rebate-tooltip-col {
+                position: static;
+            }
+
+            .rebate-title {
+                position: relative;
+                padding: 1em 0.5em;
+                text-align: left;
+                border-bottom: 1px solid $color-gray-geyser;
+                font-size: $font-size-largest;
+                color: $color-green-shamrock;
+                cursor: pointer;
+                line-height: 1.5em;
+
+                &:after {
+                    display: none;
+                    position: absolute;
+                    top: 45%;
+                    right: -0.05em;
+                    content: '\25C0';
+                    @include transform( scale( 1.5, 2.75 ) translateY(-5%)  );
+                    color: $color-white-pure;
+                    text-shadow: -1px 0px 0px $color-gray-chateau;
+                    z-index: $z-body-high;
+                }
+            }
+
+            .rebate-tooltip {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                top: 0;
+                right: 15px;
+                bottom: 0;
+                width: 50%;
+                height: 100%;
+                box-sizing: border-box;
+                padding: 1.5rem 0 1.5rem 2rem;
+                background-color: $color-white-pure;
+                color: $color-gray-charcoal;
+                font-size: $font-rem-normal;
+                text-transform: none;
+                font-variant: normal;
+                text-align: left;
+                line-height: 1.4em;
+                border: 1px solid $color-gray-chateau;
+                border-radius: 2px;
+
+                @include breakpoint($mq-md-max) {
+                    position: static;
+                    width: 100%;
+                    border: none;
+                }
+
+                .tooltip-link {
+                    border-bottom: 1px solid $color-white-lilac;
+                    margin-right: 2rem;
+                    margin-bottom: 1.5rem;
+                    padding-bottom: 1rem;
+
+                    a {
+                        font-size: $font-size-normal;
+                        font-weight: $font-weight-accent;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .tooltip-content {
+                    padding-right: 1.25em;
+                    overflow-y: scroll;
+
+                    @include breakpoint($mq-md-max) {
+                        overflow-y: auto;
+                    }
+
+                    p {
+                        font-size: $font-size-normal;
+                        line-height: 1.6em;
+                    }
+
+                    .tooltip-headline {
+                        padding: 1.25rem 0 0;
+                        font-size: $font-size-large;
+                        font-weight: $font-weight-body-strong;
+
+                        &:first-of-type {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+
+            &:last-child .rebate-title {
+                border: none;
+
+                @include breakpoint($mq-sm-max) {
+                    border-bottom: 1px solid $color-gray-geyser;
+                }
+            }
+
+            &.active {
+                .rebate-title {
+                    color: $color-gray-charcoal;
+
+                    &:after {
+                        display: block;
+
+                        @include breakpoint($mq-md-max) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .rebate-tooltip {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .pagination {
+
+        .prev {
+            text-align: left;
+        }
+
+        .next {
+            text-align: right;
+        }
+    }
+}
+
+// Related Posts
+//
+// .energy-report-related-posts - List two posts with image and excerpt side-by-side
+.energy-report-related-posts {
+    padding: 2em 0;
+    text-align: center;
+
+    p {
+        font-size: $font-size-larger;
+    }
+
+    article {
+        text-align: left;
+
+        &:first-child {
+            @include breakpoint($mq-md-max) {
+                margin-bottom: 3em;
+            }
+        }
+    }
+}
