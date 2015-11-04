@@ -409,10 +409,11 @@
                 &:after {
                     display: none;
                     position: absolute;
-                    top: 45%;
+                    top: 44%;
                     right: -0.05em;
                     content: '\25C0';
                     @include transform( scale( 1.5, 2.75 ) translateY(-5%)  );
+                    font-family: Arial, sans-serif;
                     color: $color-white-pure;
                     text-shadow: -1px 0px 0px $color-gray-chateau;
                     z-index: $z-body-high;
