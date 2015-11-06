@@ -132,7 +132,8 @@
             position: relative;
             top: -1.6em;
             content: '\25BC';
-            @include transform( scale( 1.1, .8 ) translateX(-2px) );
+            @include transform( scale( 1.2, .9 ) translateX(-2px) );
+            font-family: Arial, sans-serif;
             color: $color-white-pure;
             text-shadow: 0px 2px 0px $color-gray-chateau;
             z-index: $z-body-high;
@@ -158,7 +159,8 @@
             position: relative;
             top: -1.6em;
             content: '\25BC';
-            @include transform( scale( 1.1, .8 ) translateX(-2px) );
+            @include transform( scale( 1.2, .9 ) translateX(-2px) );
+            font-family: Arial, sans-serif;
             color: $color-white-pure;
             text-shadow: 0px 2px 0px $color-gray-chateau;
             z-index: $z-body-high;
@@ -184,7 +186,8 @@
             position: relative;
             top: -1.6em;
             content: '\25BC';
-            @include transform( scale( 1.1, .8 ) translateX(-2px) );
+            @include transform( scale( 1.2, .9 ) translateX(-2px) );
+            font-family: Arial, sans-serif;
             color: $color-white-pure;
             text-shadow: 0px 2px 0px $color-gray-chateau;
             z-index: $z-body-high;
@@ -409,10 +412,11 @@
                 &:after {
                     display: none;
                     position: absolute;
-                    top: 45%;
+                    top: 44%;
                     right: -0.05em;
                     content: '\25C0';
                     @include transform( scale( 1.5, 2.75 ) translateY(-5%)  );
+                    font-family: Arial, sans-serif;
                     color: $color-white-pure;
                     text-shadow: -1px 0px 0px $color-gray-chateau;
                     z-index: $z-body-high;
