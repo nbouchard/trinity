@@ -130,6 +130,14 @@
     );
 }
 
+.v-img51 .photoblock-photo {
+    @include photoblock(
+        $bg-color: $color-gray-ghost,
+        $x-pos: 10%,
+        $y-pos: 60%
+    );
+}
+
 .v-img56 .photoblock-photo {
     @include photoblock(
         $bg-color: $color-gray-edward,

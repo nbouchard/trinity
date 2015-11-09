@@ -125,6 +125,36 @@
                 left: auto;
             }
         }
+
+        .carousel-inner {
+            > .item {
+                // Photo BG
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-position-x: 50%;
+                background-position-y: 50%;
+                background-repeat: no-repeat;
+                background-blend-mode: multiply;
+                margin: auto;
+                height: 600px;
+                background-color: $color-gray-edward;
+
+                &.v-img1 {
+                    background-color: $color-gray-ghost;
+                }
+
+                &.v-img2 {
+                    background-position-x: 40%;
+                    background-position-y: 60%;
+                }
+
+                &.v-img3 {
+                    $x-pos: 90%;
+                }
+            }
+        }
     }
 
     .colorful {
