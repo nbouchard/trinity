@@ -1,0 +1,6 @@
+body {
+    background: aqua;
+}
+h1 {
+    @include clearfix;
+}
