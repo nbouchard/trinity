@@ -1,0 +1,352 @@
+// Mixins for defining the various Choose Grid System elements.
+//
+// Styleguide Foundations.GridSystem.GridMixins
+@mixin cg-row($v-padding: false, $h-padding: false) {
+    @include box-sizing(border-box);
+    @include clearfix();
+    width: 100%;
+    max-width: $site-max-width;
+    display: block;
+    margin: 0 auto;
+
+    @if $v-padding == true {
+        padding-top: $grid-gutter-width;
+        padding-bottom: $grid-gutter-width;
+    } @else {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @if $h-padding == true {
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+    } @else {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// item = 1of1 = 2of2 = 3of3 = 4of4 = 5of5 = 6of6 = 8of8
+@mixin cg-item($v-padding: true, $h-padding: true) {
+    @include box-sizing(border-box);
+    width: 100%;
+    float: left;
+    margin: 0;
+
+    @if $v-padding == true {
+        padding-top: $grid-gutter-width;
+        padding-bottom: $grid-gutter-width;
+    } @else {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @if $h-padding == true {
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+    } @else {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@mixin cg-1of8($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 12.5%;
+    } @else {
+        @include breakpoint($mq-lg) {
+            width: 12.5%;
+        }
+
+        @include breakpoint($mq-xl-min) {
+            width: 12.5%;
+        }
+
+        &.is-strict {
+            width: 12.5%;
+        }
+    }
+}
+
+@mixin cg-1of6 ($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 16.66%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 16.66%;
+        }
+
+        &.is-strict {
+            width: 16.66%;
+        }
+    }
+}
+
+@mixin cg-1of5($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 20%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 20%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 20%;
+        }
+
+        &.is-strict {
+            width: 20%;
+        }
+    }
+}
+
+// 1of4 = 2of8
+@mixin cg-1of4($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 25%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 50%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 25%;
+        }
+
+        &.is-strict {
+            width: 25%;
+        }
+    }
+}
+
+// 1of3 = 2of6
+@mixin cg-1of3($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 33.33%;
+    } @else {
+        @include breakpoint($mq-md-min) {
+            width: 33.33%;
+        }
+
+        &.is-strict {
+            width: 33.33%;
+        }
+    }
+}
+
+@mixin cg-3of8($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 37.5%;
+    } @else {
+        @include breakpoint($mq-lg) {
+            width: 37.5%;
+        }
+
+        @include breakpoint($mq-xl-min) {
+            width: 37.5%;
+        }
+
+        &.is-strict {
+            width: 37.5%;
+        }
+    }
+}
+
+@mixin cg-2of5($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 40%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 40%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 40%;
+        }
+
+        &.is-strict {
+            width: 40%;
+        }
+    }
+}
+
+// 1of2 = 2of4 = 3of6 = 4of8
+@mixin cg-1of2($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 50%;
+    } @else {
+        @include breakpoint($mq-lg) {
+            width: 50%;
+        }
+
+        @include breakpoint($mq-xl-min) {
+            width: 50%;
+        }
+
+        &.is-strict {
+            width: 50%;
+        }
+    }
+}
+
+@mixin cg-3of5($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 60%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 60%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 60%;
+        }
+
+        &.is-strict {
+            width: 60%;
+        }
+    }
+}
+
+@mixin cg-5of8($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 62.5%;
+    } @else {
+        @include breakpoint($mq-lg) {
+            width: 62.5%;
+        }
+
+        @include breakpoint($mq-xl-min) {
+            width: 62.5%;
+        }
+
+        &.is-strict {
+            width: 62.5%;
+        }
+    }
+}
+
+// 2of3 = 4of6
+@mixin cg-2of3($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 66.67%;
+    } @else {
+        @include breakpoint($mq-xl-min) {
+            width: 66.67%;
+        }
+
+        &.is-strict {
+            width: 66.67%;
+        }
+    }
+}
+
+// 3of4 = 6of8
+@mixin cg-3of4($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 75%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 50%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 75%;
+        }
+
+        &.is-strict {
+            width: 75%;
+        }
+    }
+}
+
+@mixin cg-4of5($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 80%;
+    } @else {
+        @include breakpoint($mq-md) {
+            width: 80%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 80%;
+        }
+
+        &.is-strict {
+            width: 80%;
+        }
+    }
+}
+
+@mixin cg-5of6 ($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 83.33%;
+    } @else {
+        @include breakpoint($mq-sm) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-md) {
+            width: 33.33%;
+        }
+
+        @include breakpoint($mq-lg-min) {
+            width: 83.33%;
+        }
+
+        &.is-strict {
+            width: 83.33%;
+        }
+    }
+}
+
+@mixin cg-7of8($v-padding: true, $h-padding: true, $strict: false) {
+    @include cg-item($v-padding, $h-padding);
+
+    @if $strict == true {
+        width: 87.5%;
+    } @else {
+        @include breakpoint($mq-lg) {
+            width: 87.5%;
+        }
+
+        @include breakpoint($mq-xl-min) {
+            width: 87.5%;
+        }
+
+        &.is-strict {
+            width: 87.5%;
+        }
+    }
+}

@@ -28,16 +28,16 @@ module.exports = function(grunt) {
     );
 
     // Build Task
-    grunt.registerTask('build:devwp',
-        'Build site files for DevWP.',
-        [
-            'clean:dist',
-            'process-images:devwp',
-            'compile-css:devwp',
-            'compile-html',
-            'copy:dist',
-        ]
-    );
+    // grunt.registerTask('build:devwp',
+    //     'Build site files for DevWP.',
+    //     [
+    //         'clean:dist',
+    //         'process-images:devwp',
+    //         'compile-css:devwp',
+    //         'compile-html',
+    //         'copy:dist',
+    //     ]
+    // );
 
     // Build Task
     grunt.registerTask('build:dist',
@@ -72,15 +72,15 @@ module.exports = function(grunt) {
             'sprite:all',
         ]
     );
-    grunt.registerTask('process-images:devwp',
-        'Process and resize all of our images for DevWP.',
-        [
-            'clean:sprites',
-            'copy:pathswp',
-            'resize:all',
-            'sprite:all:wp',
-        ]
-    );
+    // grunt.registerTask('process-images:devwp',
+    //     'Process and resize all of our images for DevWP.',
+    //     [
+    //         'clean:sprites',
+    //         'copy:pathswp',
+    //         'resize:all',
+    //         'sprite:all:wp',
+    //     ]
+    // );
 
     // CSS Compile Task
     grunt.registerTask('compile-css:dev',
