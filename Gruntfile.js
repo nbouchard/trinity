@@ -27,30 +27,6 @@ module.exports = function(grunt) {
         ]
     );
 
-    // Build Task
-    // grunt.registerTask('build:devwp',
-    //     'Build site files for DevWP.',
-    //     [
-    //         'clean:dist',
-    //         'process-images:devwp',
-    //         'compile-css:devwp',
-    //         'compile-html',
-    //         'copy:dist',
-    //     ]
-    // );
-
-    // Build Task
-    grunt.registerTask('build:dist',
-        'Build site files for GH Pages.',
-        [
-            'clean:dist',
-            'process-images:all',
-            'compile-css:dist',
-            'compile-html',
-            'copy:dist',
-        ]
-    );
-
     // Code Verification Task
     // Note: This is a slow task.
     grunt.registerTask('verify',
@@ -72,15 +48,6 @@ module.exports = function(grunt) {
             'sprite:all',
         ]
     );
-    // grunt.registerTask('process-images:devwp',
-    //     'Process and resize all of our images for DevWP.',
-    //     [
-    //         'clean:sprites',
-    //         'copy:pathswp',
-    //         'resize:all',
-    //         'sprite:all:wp',
-    //     ]
-    // );
 
     // CSS Compile Task
     grunt.registerTask('compile-css:dev',
@@ -88,25 +55,6 @@ module.exports = function(grunt) {
         [
             'sass',
             'autoprefixer',
-        ]
-    );
-
-    // CSS Compile Task
-    grunt.registerTask('compile-css:devwp',
-        'Process and compile our CSS for distribution to DevWP.',
-        [
-            'sass',
-            'autoprefixer',
-        ]
-    );
-
-    // CSS Compile Task
-    grunt.registerTask('compile-css:dist',
-        'Process and compile our CSS for distribution to GH Pages.',
-        [
-            'sass',
-            'autoprefixer',
-            'cssmin',
         ]
     );
 
