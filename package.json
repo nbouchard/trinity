@@ -1,58 +1,47 @@
 {
-  "name": "ChooseUX",
-  "version": "0.1.0",
-  "description": "Choose Energy User Experience Style Guide",
-  "author": "Choose Energy <ux@chooseenergy.com>",
-  "homepage": "https://github.com/chooseenergy/ChooseUX",
-  "contributors": [
-    {
-      "name": "Alex Stillwell",
-      "email": "astillwell@chooseenergy.com"
+    "name": "ChooseUX",
+    "version": "0.1.0",
+    "description": "Choose Energy User Experience Style Guide",
+    "author": "Choose Energy <ux@chooseenergy.com>",
+    "homepage": "https://github.com/chooseenergy/ChooseUX",
+    "contributors": [
+        {
+            "name": "Nicole Bouchard",
+            "email": "nbouchard@chooseenergy.com"
+        }
+        {
+            "name": "Cameron Drake",
+            "email": "cdrake@chooseenergy.com"
+        },
+    ],
+    "main": "choose.js",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/chooseenergy/ChooseUX.git"
     },
-    {
-      "name": "Cameron Drake",
-      "email": "cdrake@chooseenergy.com"
+    "bugs": {
+        "url": "https://github.com/chooseenergy/ChooseUX/issues"
     },
-    {
-      "name": "Michael Owens",
-      "email": "mowens@chooseenergy.com"
+    "dependencies": {},
+    "devDependencies": {
+        "assemble": "^0.4.42",
+        "grunt": "^0.4.5",
+        "grunt-autoprefixer": "^3.0.0",
+        "grunt-contrib-clean": "^0.6.0",
+        "grunt-contrib-connect": "^0.10.1",
+        "grunt-contrib-copy": "^0.8.0",
+        "grunt-contrib-jshint": "^0.11.1",
+        "grunt-contrib-watch": "^0.6.1",
+        "grunt-html-inspector": "^0.1.6",
+        "grunt-lib-phantomjs": "^0.3.1",
+        "grunt-newer": "^1.1.0",
+        "grunt-image-resize": "^1.0.0",
+        "grunt-sass": "^0.18.1",
+        "grunt-scss-lint": "^0.3.6",
+        "grunt-spritesmith": "^4.5.1",
+        "handlebars-helpers": "^0.5.8",
+        "time-grunt": "^1.1.0"
     },
-    {
-      "name": "Nicole Bouchard",
-      "email": "nbouchard@chooseenergy.com"
-    }
-  ],
-  "main": "choose.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/chooseenergy/ChooseUX.git"
-  },
-  "bugs": {
-    "url": "https://github.com/chooseenergy/ChooseUX/issues"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "assemble": "^0.4.42",
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^3.0.0",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-connect": "^0.10.1",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-cssmin": "^0.12.2",
-    "grunt-contrib-htmlmin": "^0.4.0",
-    "grunt-contrib-jshint": "^0.11.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-gh-pages": "^0.10.0",
-    "grunt-html-inspector": "^0.1.6",
-    "grunt-lib-phantomjs": "^0.3.1",
-    "grunt-newer": "^1.1.0",
-    "grunt-image-resize": "^1.0.0",
-    "grunt-sass": "^0.18.1",
-    "grunt-scss-lint": "^0.3.6",
-    "grunt-spritesmith": "^4.5.1",
-    "handlebars-helpers": "^0.5.8",
-    "time-grunt": "^1.1.0"
-  },
-  "private": true,
-  "license": "All rights reserved."
+    "private": true,
+    "license": "All rights reserved."
 }
