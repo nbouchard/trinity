@@ -8,11 +8,11 @@
         {
             "name": "Nicole Bouchard",
             "email": "nbouchard@chooseenergy.com"
-        }
+        },
         {
             "name": "Cameron Drake",
             "email": "cdrake@chooseenergy.com"
-        },
+        }
     ],
     "main": "choose.js",
     "repository": {
