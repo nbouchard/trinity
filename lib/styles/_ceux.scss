@@ -1,0 +1,131 @@
+a {
+    text-decoration: none;
+}
+
+
+
+.site-header {
+    @include clearfix();
+    background-color: #f2f2f2;
+    padding: 0 30px;
+    height: 60px;
+    line-height: 60px;
+
+    h1 {
+        float: left;
+        margin: 0;
+    }
+
+    nav {
+        float: left;
+        margin-left: 20px;
+
+        ul {
+            list-style: none;
+            margin: 0;
+
+            li {
+                float: left;
+
+                a {
+                    display: block;
+                    padding: 0 12px;
+                    line-height: 60px;
+
+                    &:hover {
+                        background: darken( #f2f2f2, 5% );
+                    }
+                }
+
+                &.selected > a {
+                    background: darken( #f2f2f2, 5% );
+                }
+            }
+        }
+    }
+}
+
+
+
+.sidebar {
+    float: left;
+    width: 20%;
+
+    nav {
+
+        ul {
+            list-style: none;
+            font-size: 15px;
+            line-height: 1.6em;
+            outline: 0;
+            padding-left: 30px;
+
+            li  {
+
+                a {
+                    padding: 12px;
+                    border-radius: 5px;
+                    margin-bottom: 6px;
+                    color: #484848;
+                    display: block;
+                    line-height: 1em;
+
+                    &:hover {
+                        background: #f2f3f2;
+                    }
+                }
+
+                &.selected {
+                    > a {
+                        background: #ccebf3;
+                    }
+                }
+            }
+        }
+
+        ul ul {
+            padding-left: 15px;
+        }
+
+        ul li li a {
+            padding: 6px;
+            font-size: 14px;
+            border-radius: 0;
+            border-left: 3px solid #fff;
+
+            &:hover {
+                background: none;
+                border-left: 3px solid #ccebf3;
+            }
+        }
+
+        ul > li > ul > li.selected > a {
+            background: none;
+            border-left: 3px solid #ccebf3;
+            border-radius: 0;
+        }
+
+        li > ul {
+            display: none;
+        }
+
+        li.selected > ul {
+            display: block;
+        }
+    }
+}
+
+.site-main {
+    float: right;
+    width: 80%;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+
+.site-footer {
+    clear: both;
+    @include clearfix();
+    background-color: #f2f2f2;
+    padding: 0 30px;
+}
