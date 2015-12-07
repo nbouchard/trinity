@@ -27,6 +27,7 @@ module.exports = function(grunt) {
             layoutdir: 'lib/templates/layouts/',
             layout: 'default',
             data: ['lib/templates/data/*.json','lib/templates/data/**/*.json'],
+            stylesdir: 'dist/css/'
         },
         pages: {
             // src: ['lib/templates/*.html'],{,*/}*
