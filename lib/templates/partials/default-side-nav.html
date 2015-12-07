@@ -1,9 +1,13 @@
-<ul>
-{{#each pages}}
-<li>{{dirname}} : {{basename}}</li>
-{{/each}}
-</ul>
 <nav>
+    <ul>
+        {{#each pages}}
+        <li {{#is ../page.dest this.dest}} class="selected"{{/is}}>
+            <a href="{{ relative ../page.dest this.dest }}">{{ data.tpl.title }}</a>
+        </li>
+        {{/each}}
+    </ul>
+</nav>
+<!-- <nav>
     <ul>
         <li class="selected"><a href="company.html">Company</a>
             <ul>
@@ -44,4 +48,4 @@
             </ul>
         </li>
     </ul>
-</nav>
+</nav> -->
