@@ -46,187 +46,186 @@
 {{#is page.data.section 'Pattern Library'}}
 <nav>
     <ul>
-        <li><a href="/pattern-library/getting-started/getting-started.html">Getting Started</a>
+        <li{{#is basename "getting-started"}} class="selected"{{/is}}><a href="/pattern-library/getting-started/getting-started.html">Getting Started</a>
             <ul>
-                <li><a href="/pattern-library/getting-started/overview.html">Overview</a></li>
-                <li><a href="/pattern-library/getting-started/browser-support.html">Browser Support</a></li>
-                <li><a href="/pattern-library/getting-started/code-standards.html">Code Standards</a></li>
-                <li><a href="/pattern-library/getting-started/tools/tools.html">Tools</a>
+                <li{{#is basename "overview"}} class="selected"{{/is}}><a href="/pattern-library/getting-started/overview.html">Overview</a></li>
+                <li{{#is basename "browser-support"}} class="selected"{{/is}}><a href="/pattern-library/getting-started/browser-support.html">Browser Support</a></li>
+                <li{{#is basename "code-standards"}} class="selected"{{/is}}><a href="/pattern-library/getting-started/code-standards.html">Code Standards</a></li>
+                <li{{#is basename "tools"}} class="selected"{{/is}}><a href="/pattern-library/getting-started/tools/tools.html">Tools</a>
                     <ul>
-                        <li><a href="/pattern-library/getting-started/tools/font-generator.html">Font Generator</a></li>
-                        <li><a href="/pattern-library/getting-started/tools/image-compression.html">Image Compression</a></li>
-                        <li><a href="/pattern-library/getting-started/tools/sprites.html">Sprites</a></li>
+                        <li{{#is basename "font-generator"}} class="selected"{{/is}}><a href="/pattern-library/getting-started/tools/font-generator.html">Font Generator</a></li>
+                        <li{{#is basename "image-compression"}} class="selected"{{/is}}><a href="/pattern-library/getting-started/tools/image-compression.html">Image Compression</a></li>
+                        <li{{#is basename "sprites"}} class="selected"{{/is}}><a href="/pattern-library/getting-started/tools/sprites.html">Sprites</a></li>
                     </ul>
                 </li>
-                <li><a href="/pattern-library/getting-started/microdata.html">Microdata</a></li>
-                <li><a href="/pattern-library/getting-started/seo-optimization">SEO Optimization</a></li>
+                <li{{#is basename "microdata"}} class="selected"{{/is}}><a href="/pattern-library/getting-started/microdata.html">Microdata</a></li>
+                <li{{#is basename "seo-optimization"}} class="selected"{{/is}}><a href="/pattern-library/getting-started/seo-optimization">SEO Optimization</a></li>
             </ul>
         </li>
-        <li><a href="/pattern-library/ui-elements/">UI Elements</a>
+        <li{{#is basename "ui-elements"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/ui-elements.html">UI Elements</a>
             <ul>
-                <li><a href="/pattern-library/ui-elements/">Typography</a>
+                <li{{#is basename "typography"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/typography.html">Typography</a>
                     <ul>
-                        <li><a href="/pattern-library/ui-elements/">Headings</a>
+                        <li{{#is basename "headings"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/headings/headings.html">Headings</a>
                             <ul>
-                                <li><a href="/pattern-library/ui-elements/">H1 - H6</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Headings w/ Subtext</a></li>
+                                <li{{#is basename "h1-h6"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/headings/h1-h6.html">H1 - H6</a></li>
+                                <li{{#is basename "headings-with-subtext"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/headings/headings-with-subtext.html">Headings w/ Subtext</a></li>
                             </ul>
                         </li>
-                        <li><a href="/pattern-library/ui-elements/">Paragraphs</a>
+                        <li{{#is basename "paragraphs"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/paragraphs/paragraphs.html">Paragraphs</a>
                             <ul>
-                                <li><a href="/pattern-library/ui-elements/">Unclassified</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Lead Paragraph</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Secondary Paragraph</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Tertiary Paragraph</a></li>
+                                <li{{#is basename "unclassified"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/paragraphs/unclassified.html">Unclassified</a></li>
+                                <li{{#is basename "lead-paragraph"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/paragraphs/lead-paragraph.html">Lead Paragraph</a></li>
+                                <li{{#is basename "secondary-paragraph"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/paragraphs/secondary-paragraph.html">Secondary Paragraph</a></li>
+                                <li{{#is basename "tertiary-paragraph"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/paragraphs/tertiary-paragraph.html">Tertiary Paragraph</a></li>
                             </ul>
                         </li>
-                        <li><a href="/pattern-library/ui-elements/">Quotations / Callouts</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Inline Elements</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Links</a></li>
+                        <li{{#is basename "quotations-callouts"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/quotations-callouts.html">Quotations / Callouts</a></li>
+                        <li{{#is basename "inline-elements"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/inline-elements.html">Inline Elements</a></li>
+                        <li{{#is basename "links"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/typography/links.html">Links</a></li>
                     </ul>
                 </li>
-                <li><a href="/pattern-library/ui-elements/">Form Elements</a>
+                <li{{#is basename "form-elements"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/form-elements.html">Form Elements</a>
                     <ul>
-                        <li><a href="/pattern-library/ui-elements/">Buttons</a>
+                        <li{{#is basename "buttons"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/buttons/buttons.html">Buttons</a>
                             <ul>
-                                <li><a href="/pattern-library/ui-elements/">Search</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Primary / CTA</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Info / More</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Success / Confirm</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Warning</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Sizes</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Disabled States</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Button Groups</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Links As Buttons</a></li>
+                                <li{{#is basename "search"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/buttons/search.html">Search</a></li>
+                                <li{{#is basename "primary-cta"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/buttons/primary-cta.html">Primary / CTA</a></li>
+                                <li{{#is basename "info-more"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/buttons/info-more.html">Info / More</a></li>
+                                <li{{#is basename "success-confirm"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/buttons/success-confirm.html">Success / Confirm</a></li>
+                                <li{{#is basename "warning"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/buttons/warning.html">Warning</a></li>
+                                <li{{#is basename "sizes"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/buttons/sizes.html">Sizes</a></li>
+                                <li{{#is basename "disabled-states"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/buttons/disabled-states.html">Disabled States</a></li>
+                                <li{{#is basename "button-groups"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/buttons/button-groups.html">Button Groups</a></li>
+                                <li{{#is basename "links-as-buttons"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/buttons/links-as-buttons.html">Links As Buttons</a></li>
                             </ul>
                         </li>
-                        <li><a href="/pattern-library/ui-elements/">Inputs</a>
+                        <li{{#is basename "inputs"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/inputs/inputs.html">Inputs</a>
                             <ul>
-                                <li><a href="/pattern-library/ui-elements/">Text</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Email</a></li>
-                                <li><a href="/pattern-library/ui-elements/">URL</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Phone</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Textarea</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Inputs with Icons</a></li>
+                                <li{{#is basename "text"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/inputs/text.html">Text</a></li>
+                                <li{{#is basename "email"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/inputs/email.html">Email</a></li>
+                                <li{{#is basename "url"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/inputs/url.html">URL</a></li>
+                                <li{{#is basename "phone"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/inputs/phone.html">Phone</a></li>
+                                <li{{#is basename "textarea"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/inputs/textarea.html">Textarea</a></li>
+                                <li{{#is basename "inputs-with-icons"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/inputs/inputs-with-icons.html">Inputs with Icons</a></li>
                             </ul>
                         </li>
-                        <li><a href="/pattern-library/ui-elements/">Select / Dropdowns</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Checkboxes &amp; Radio Buttons</a>
+                        <li{{#is basename "select-dropdowns"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/select-dropdowns.html">Select / Dropdowns</a></li>
+                        <li{{#is basename "checkboxes-radio-buttons"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/checkboxes-radio-buttons/checkboxes-radio-buttons.html">Checkboxes &amp; Radio Buttons</a>
                             <ul>
-                                <li><a href="/pattern-library/ui-elements/">Horizontal Labels</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Stacked Labels</a></li>
-                                <li><a href="/pattern-library/ui-elements/">With Description Text</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Radio Grid</a></li>
+                                <li{{#is basename "horzontal-labels"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/checkboxes-radio-buttons/horzontal-labels.html">Horizontal Labels</a></li>
+                                <li{{#is basename "stacked-labels"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/checkboxes-radio-buttons/stacked-labels.html">Stacked Labels</a></li>
+                                <li{{#is basename "labels-with-description-text"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/checkboxes-radio-buttons/labels-with-description-text.html">With Description Text</a></li>
+                                <li{{#is basename "radio-grid"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/checkboxes-radio-buttons/radio-grid.html">Radio Grid</a></li>
                             </ul>
                         </li>
-                        <li><a href="/pattern-library/ui-elements/">Dates</a>
+                        <li{{#is basename "dates"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/dates/dates.html">Dates</a>
                             <ul>
-                                <li><a href="/pattern-library/ui-elements/">Datepicker</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Day Select</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Week Select</a></li>
-                                <li><a href="/pattern-library/ui-elements/">Year Select</a></li>
+                                <li{{#is basename "datepicker"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/dates/datepicker.html">Datepicker</a></li>
+                                <li{{#is basename "day-select"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/dates/day-select.html">Day Select</a></li>
+                                <li{{#is basename "week-selec"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/dates/week-select.html">Week Select</a></li>
+                                <li{{#is basename "year-select"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/dates/year-select.html">Year Select</a></li>
                             </ul>
                         </li>
-                        <li><a href="/pattern-library/ui-elements/">Help / Validation</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Switch / On-Off Toggle</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Sliders</a></li>
-
+                        <li{{#is basename "help-validation"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/help-validation.html">Help / Validation</a></li>
+                        <li{{#is basename "switch-on-off-toggle"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/switch-on-off-toggle.html">Switch / On-Off Toggle</a></li>
+                        <li{{#is basename "sliders"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/form-elements/sliders.html">Sliders</a></li>
                     </ul>
                 </li>
-                <li><a href="/pattern-library/ui-elements/">Grid System</a>
+                <li{{#is basename "grid-system"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/grid-system/grid-system.html">Grid System</a>
                     <ul>
-                        <li><a href="/pattern-library/ui-elements/">Grid Sizes</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Grid Gutters</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Mixed Grids</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Responsive Columns</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Nested Grids</a></li>
+                        <li{{#is basename "grid-sizes"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/grid-system/grid-sizes.html">Grid Sizes</a></li>
+                        <li{{#is basename "grid-gutters"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/grid-system/grid-gutters.html">Grid Gutters</a></li>
+                        <li{{#is basename "mixed-grids"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/grid-system/mixed-grids.html">Mixed Grids</a></li>
+                        <li{{#is basename "responsive-columns"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/grid-system/responsive-columns.html">Responsive Columns</a></li>
+                        <li{{#is basename "nested-grids"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/grid-system/nested-grids.html">Nested Grids</a></li>
                     </ul>
                 </li>
-                <li><a href="/pattern-library/ui-elements/">Lists</a>
+                <li{{#is basename "lists"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/lists/lists.html">Lists</a>
                     <ul>
-                        <li><a href="/pattern-library/ui-elements/">Ordered</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Unordered</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Nested Lists</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Inline</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Unstyled</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Definition List</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Horizontal Definition List</a></li>
+                        <li{{#is basename "ordered"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/lists/ordered.html">Ordered</a></li>
+                        <li{{#is basename "unordered"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/lists/unordered.html">Unordered</a></li>
+                        <li{{#is basename "nested"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/lists/nested.html">Nested Lists</a></li>
+                        <li{{#is basename "inline"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/lists/inline.html">Inline</a></li>
+                        <li{{#is basename "unstyle"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/lists/unstyle.html">Unstyled</a></li>
+                        <li{{#is basename "definition"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/lists/definition.html">Definition List</a></li>
+                        <li{{#is basename "horizontal-definition"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/lists/horizontal-definition.html">Horizontal Definition List</a></li>
                     </ul>
                 </li>
-                <li><a href="/pattern-library/ui-elements/">Tables</a></li>
-                <li><a href="/pattern-library/ui-elements/">Icons</a>
+                <li{{#is basename "tables"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/tables.html">Tables</a></li>
+                <li{{#is basename "icons"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/icons.html">Icons</a>
                     <ul>
-                        <li><a href="/pattern-library/ui-elements/">Choose Icons</a></li>
+                        <li{{#is basename "choose-icons"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/choose-icons.html">Choose Icons</a></li>
                     </ul>
                 </li>
-                <li><a href="/pattern-library/ui-elements/">Navigation</a>
+                <li{{#is basename "navigation"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/navigation/navigation.html">Navigation</a>
                     <ul>
-                        <li><a href="/pattern-library/ui-elements/">Tabs</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Pills</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Pagination &amp; Pager</a></li>
+                        <li{{#is basename "tabs"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/navigation/tabs.html">Tabs</a></li>
+                        <li{{#is basename "pills"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/navigation/pills.html">Pills</a></li>
+                        <li{{#is basename "pagination"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/navigation/pagination.html">Pagination &amp; Pager</a></li>
                     </ul>
                 </li>
-                <li><a href="/pattern-library/ui-elements/">Helper Classes / Utilities</a>
+                <li{{#is basename "helper-classes-utilities"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/helper-classes-utilities.html">Helper Classes / Utilities</a>
                     <ul>
-                        <li><a href="/pattern-library/ui-elements/">Spacing</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Colors</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Size</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Links</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Typography</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Display &amp; Visibility</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Responsive Utilities</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Direction Pulls / Floats / Vertical Alignment</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Flexbox</a></li>
-                        <li><a href="/pattern-library/ui-elements/">Positioning</a></li>
+                        <li{{#is basename "spacing"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/spacing.html">Spacing</a></li>
+                        <li{{#is basename "colors"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/colors.html">Colors</a></li>
+                        <li{{#is basename "size"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/size.html">Size</a></li>
+                        <li{{#is basename "links"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/links.html">Links</a></li>
+                        <li{{#is basename "typography"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/typography.html">Typography</a></li>
+                        <li{{#is basename "display-visibility"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/display-visibility.html">Display &amp; Visibility</a></li>
+                        <li{{#is basename "responsive-utilities"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/responsive-utilities.html">Responsive Utilities</a></li>
+                        <li{{#is basename "direction-pulls"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/direction-pulls.html">Direction Pulls / Floats / Vertical Alignment</a></li>
+                        <li{{#is basename "flexbox"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/flexbox.html">Flexbox</a></li>
+                        <li{{#is basename "positioning"}} class="selected"{{/is}}><a href="/pattern-library/ui-elements/helper-classes-utilities/positioning.html">Positioning</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <li><a href="/pattern-library/">Reusable Modules / Objects</a>
+        <li{{#is basename "reusable-modules-objects"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/reusable-modules-objects.html">Reusable Modules / Objects</a>
             <ul>
-                <li><a href="/pattern-library/">Blocks</a>
+                <li{{#is basename "blocks"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/blocks/blocks.html">Blocks</a>
                     <ul>
-                        <li><a href="/pattern-library/">Sizes</a></li>
-                        <li><a href="/pattern-library/">Colors</a></li>
-                        <li><a href="/pattern-library/">Image Backgrounds</a></li>
+                        <li{{#is basename "sizes"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/blocks/sizes.html">Sizes</a></li>
+                        <li{{#is basename "colors"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/blocks/colors.html">Colors</a></li>
+                        <li{{#is basename "image-backgrounds"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/blocks/image-backgrounds.html">Image Backgrounds</a></li>
                     </ul>
                 </li>
-                <li><a href="/pattern-library/">Form Groups</a>
+                <li{{#is basename "form-groups"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/form-groups/form-groups.html">Form Groups</a>
                     <ul>
-                        <li><a href="/pattern-library/">Search</a></li>
-                        <li><a href="/pattern-library/">Horizontal</a></li>
-                        <li><a href="/pattern-library/">Inline</a></li>
+                        <li{{#is basename "search"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/form-groups/search.html">Search</a></li>
+                        <li{{#is basename "horizontal"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/form-groups/horizontal.html">Horizontal</a></li>
+                        <li{{#is basename "inline"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/form-groups/inline.html">Inline</a></li>
                     </ul>
                 </li>
-                <li><a href="/pattern-library/">Header</a></li>
-                <li><a href="/pattern-library/">Footer</a></li>
-                <li><a href="/pattern-library/">Main Nav</a></li>
-                <li><a href="/pattern-library/">Images</a>
+                <li{{#is basename "header"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/header.html">Header</a></li>
+                <li{{#is basename "footer"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/footer.html">Footer</a></li>
+                <li{{#is basename "main-navigation"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/main-navigation.html">Main Nav</a></li>
+                <li{{#is basename "images"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/images/images.html">Images</a>
                     <ul>
-                        <li><a href="/pattern-library/">Supplier Logos</a></li>
-                        <li><a href="/pattern-library/">Block Images</a></li>
-                        <li><a href="/pattern-library/">Hero Elements</a></li>
-                        <li><a href="/pattern-library/">Blog Thumbnail</a></li>
+                        <li{{#is basename "supplier-logos"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/images/supplier-logos.html">Supplier Logos</a></li>
+                        <li{{#is basename "block-images"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/images/block-images.html">Block Images</a></li>
+                        <li{{#is basename "hero-elements"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/images/hero-elements.html">Hero Elements</a></li>
+                        <li{{#is basename "blog-thumbnail"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/images/blog-thumbnail.html">Blog Thumbnail</a></li>
                     </ul>
                 </li>
-                <li><a href="/pattern-library/">Plan Cards</a></li>
-                <li><a href="/pattern-library/">Tooltips</a></li>
-                <li><a href="/pattern-library/">Accordion</a></li>
-                <li><a href="/pattern-library/">Carousel</a></li>
-                <li><a href="/pattern-library/">Modals</a></li>
-                <li><a href="/pattern-library/">Alerts</a></li>
-                <li><a href="/pattern-library/">Social Links</a></li>
-                <li><a href="/pattern-library/">Progress Bar</a></li>
-                <li><a href="/pattern-library/">Loading</a></li>
-                <li><a href="/pattern-library/">Graphs</a></li>
-                <li><a href="/pattern-library/">Video Player</a></li>
+                <li{{#is basename "plan-cards"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/plan-cards.html">Plan Cards</a></li>
+                <li{{#is basename "tooltips"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/tooltips.html">Tooltips</a></li>
+                <li{{#is basename "accordions"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/accordions.html">Accordion</a></li>
+                <li{{#is basename "carousel"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/carousel.html">Carousel</a></li>
+                <li{{#is basename "modals"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/modals.html">Modals</a></li>
+                <li{{#is basename "alert"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/alert.html">Alerts</a></li>
+                <li{{#is basename "social-links"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/social-links.html">Social Links</a></li>
+                <li{{#is basename "progress-bar"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/progress-bar.html">Progress Bar</a></li>
+                <li{{#is basename "loading"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/loading.html">Loading</a></li>
+                <li{{#is basename "graphs"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/graphs.html">Graphs</a></li>
+                <li{{#is basename "video-player"}} class="selected"{{/is}}><a href="/pattern-library/reusable-modules-objects/video-player.html">Video Player</a></li>
             </ul>
         </li>
-        <li><a href="/pattern-library/">About</a>
+        <li{{#is basename "about"}} class="selected"{{/is}}><a href="/pattern-library/about/about.html">About</a>
             <ul>
-                <li><a href="/pattern-library/">Us</a></li>
-                <li><a href="/pattern-library/">Why?</a></li>
-                <li><a href="/pattern-library/">Resources / References</a></li>
+                <li{{#is basename "us"}} class="selected"{{/is}}><a href="/pattern-library/about/us.html">Us</a></li>
+                <li{{#is basename "why"}} class="selected"{{/is}}><a href="/pattern-library/about/why.html">Why?</a></li>
+                <li{{#is basename "resources-reference"}} class="selected"{{/is}}><a href="/pattern-library/about/resources-reference.html">Resources / References</a></li>
             </ul>
         </li>
     </ul>
