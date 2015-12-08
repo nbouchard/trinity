@@ -54,6 +54,7 @@ a {
             font-size: 15px;
             line-height: 1.6em;
             outline: 0;
+            padding-left: 30px;
 
             li  {
 
@@ -64,6 +65,10 @@ a {
                     color: #484848;
                     display: block;
                     line-height: 1em;
+
+                    &:hover {
+                        background: #f2f3f2;
+                    }
                 }
 
                 &.selected {
@@ -72,6 +77,28 @@ a {
                     }
                 }
             }
+        }
+
+        ul ul {
+            padding-left: 15px;
+        }
+
+        ul li li a {
+            padding: 6px;
+            font-size: 14px;
+            border-radius: 0;
+            border-left: 3px solid #fff;
+
+            &:hover {
+                background: none;
+                border-left: 3px solid #ccebf3;
+            }
+        }
+
+        ul > li > ul > li.selected > a {
+            background: none;
+            border-left: 3px solid #ccebf3;
+            border-radius: 0;
         }
 
         li > ul {

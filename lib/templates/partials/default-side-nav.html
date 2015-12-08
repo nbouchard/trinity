@@ -1,51 +1,234 @@
+{{#is page.data.section 'Style Guide'}}
 <nav>
     <ul>
-        {{#each pages}}
-        <li {{#is ../page.dest this.dest}} class="selected"{{/is}}>
-            <a href="{{ relative ../page.dest this.dest }}">{{ data.tpl.title }}</a>
+        <li{{#is basename "company"}} class="selected"{{/is}}><a href="/style-guide/company/company.html">Company</a>
+            <ul>
+                <li{{#is basename "vision"}} class="selected"{{/is}}><a href="/style-guide/company/vision.html">Vision</a></li>
+                <li{{#is basename "values"}} class="selected"{{/is}}><a href="/style-guide/company/values.html">Values</a></li>
+                <li{{#is basename "philosophy"}} class="selected"{{/is}}><a href="/style-guide/company/philosophy.html">Philosophy</a></li>
+                <li{{#is basename "promise"}} class="selected"{{/is}}><a href="/style-guide/company/promise.html">Promise</a></li>
+            </ul>
         </li>
-        {{/each}}
+        <li{{#is basename "brand-guidelines"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-guidelines.html">Brand Guidelines</a>
+            <ul>
+                <li{{#is basename "brand-voice"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-voice/brand-voice.html">Brand Voice</a>
+                    <ul>
+                        <li{{#is basename "brand-promise"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-voice/brand-promise.html">Brand Promise</a></li>
+                        <li{{#is basename "word-choices"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-voice/word-choices.html">Word Choices</a></li>
+                        <li{{#is basename "sentence-length"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-voice/sentence-length.html">Sentence Length</a></li>
+                    </ul>
+                </li>
+                <li{{#is basename "brand-visuals"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-visuals/brand-visuals.html">Brand Visuals</a>
+                    <ul>
+                        <li{{#is basename "overview"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-visuals/overview.html">Overview</a></li>
+                        <li{{#is basename "photography"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-visuals/photography.html">Photography</a></li>
+                        <li{{#is basename "olors"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-visuals/colors.html">Colors</a></li>
+                        <li{{#is basename "fonts"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-visuals/fonts.html">Fonts</a></li>
+                        <li{{#is basename "logo-treatments"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-visuals/logo-treatments.html">Logo Treatments</a></li>
+                        <li{{#is basename "blocks"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-visuals/blocks.html">Blocks</a></li>
+                        <li{{#is basename "color-block-angle"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-visuals/color-block-angle.html">Color Block &amp; Angle</a></li>
+                        <li{{#is basename "favicon-app-icons"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/brand-visuals/favicon-app-icons.html">Favicon / App Icons</a></li>
+                    </ul>
+                </li>
+                <li{{#is basename "resources"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/resources/resources.html">Resources</a>
+                    <ul>
+                        <li{{#is basename "ce-logos"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/resources/ce-logos.html">CE Logos</a></li>
+                        <li{{#is basename "ce-icon-font"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/resources/ce-icon-font.html">CE Icon Font</a></li>
+                        <li{{#is basename "downloadable-color-swatches"}} class="selected"{{/is}}><a href="/style-guide/brand-guidelines/resources/downloadable-color-swatches.html">Downloadable Color Swatches</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
     </ul>
 </nav>
-<!-- <nav>
+{{/is}}
+
+{{#is page.data.section 'Pattern Library'}}
+<nav>
     <ul>
-        <li class="selected"><a href="company.html">Company</a>
+        <li><a href="/pattern-library/getting-started/getting-started.html">Getting Started</a>
             <ul>
-                <li><a href="style-guide/company/vision.html">Vision</a></li>
-                <li><a href="style-guide/company/values.html">Values</a></li>
-                <li><a href="style-guide/company/philosophy.html">Philosophy</a></li>
-                <li><a href="style-guide/company/promise.html">Promise</a></li>
+                <li><a href="/pattern-library/getting-started/overview.html">Overview</a></li>
+                <li><a href="/pattern-library/getting-started/browser-support.html">Browser Support</a></li>
+                <li><a href="/pattern-library/getting-started/code-standards.html">Code Standards</a></li>
+                <li><a href="/pattern-library/getting-started/tools/tools.html">Tools</a>
+                    <ul>
+                        <li><a href="/pattern-library/getting-started/tools/font-generator.html">Font Generator</a></li>
+                        <li><a href="/pattern-library/getting-started/tools/image-compression.html">Image Compression</a></li>
+                        <li><a href="/pattern-library/getting-started/tools/sprites.html">Sprites</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pattern-library/getting-started/microdata.html">Microdata</a></li>
+                <li><a href="/pattern-library/getting-started/seo-optimization">SEO Optimization</a></li>
             </ul>
         </li>
-        <li><a href="brand-guidelines/brand-voice/brand-promise.html">Brand Guidelines</a>
+        <li><a href="/pattern-library/ui-elements/">UI Elements</a>
             <ul>
-                <li><a href="brand-guidelines/brand-voice/brand-promise.html">Brand Voice</a>
+                <li><a href="/pattern-library/ui-elements/">Typography</a>
                     <ul>
-                        <li><a href="brand-guidelines/brand-voice/brand-promise.html">Brand Promise</a></li>
-                        <li><a href="brand-guidelines/brand-voice/word-choices.html">Word Choices</a></li>
-                        <li><a href="brand-guidelines/brand-voice/sentence-length.html">Sentence Length</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Headings</a>
+                            <ul>
+                                <li><a href="/pattern-library/ui-elements/">H1 - H6</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Headings w/ Subtext</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/pattern-library/ui-elements/">Paragraphs</a>
+                            <ul>
+                                <li><a href="/pattern-library/ui-elements/">Unclassified</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Lead Paragraph</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Secondary Paragraph</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Tertiary Paragraph</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/pattern-library/ui-elements/">Quotations / Callouts</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Inline Elements</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Links</a></li>
                     </ul>
                 </li>
-                <li><a href="brand-guidelines/brand-visuals/overview.html">Brand Visuals</a>
+                <li><a href="/pattern-library/ui-elements/">Form Elements</a>
                     <ul>
-                        <li><a href="brand-guidelines/brand-visuals/overview.html">Overview</a></li>
-                        <li><a href="brand-guidelines/brand-visuals/photography.html">Photography</a></li>
-                        <li><a href="brand-guidelines/brand-visuals/color.html">Colors</a></li>
-                        <li><a href="brand-guidelines/brand-visuals/fonts.html">Fonts</a></li>
-                        <li><a href="brand-guidelines/brand-visuals/logo-treatments.html">Logo Treatments</a></li>
-                        <li><a href="brand-guidelines/brand-visuals/blocks.html">Blocks</a></li>
-                        <li><a href="brand-guidelines/brand-visuals/color-block-angle.html">Color Block &amp; Angle</a></li>
-                        <li><a href="brand-guidelines/brand-visuals/favicon-app-icon.html">Favicon / App Icons</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Buttons</a>
+                            <ul>
+                                <li><a href="/pattern-library/ui-elements/">Search</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Primary / CTA</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Info / More</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Success / Confirm</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Warning</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Sizes</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Disabled States</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Button Groups</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Links As Buttons</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/pattern-library/ui-elements/">Inputs</a>
+                            <ul>
+                                <li><a href="/pattern-library/ui-elements/">Text</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Email</a></li>
+                                <li><a href="/pattern-library/ui-elements/">URL</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Phone</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Textarea</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Inputs with Icons</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/pattern-library/ui-elements/">Select / Dropdowns</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Checkboxes &amp; Radio Buttons</a>
+                            <ul>
+                                <li><a href="/pattern-library/ui-elements/">Horizontal Labels</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Stacked Labels</a></li>
+                                <li><a href="/pattern-library/ui-elements/">With Description Text</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Radio Grid</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/pattern-library/ui-elements/">Dates</a>
+                            <ul>
+                                <li><a href="/pattern-library/ui-elements/">Datepicker</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Day Select</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Week Select</a></li>
+                                <li><a href="/pattern-library/ui-elements/">Year Select</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/pattern-library/ui-elements/">Help / Validation</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Switch / On-Off Toggle</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Sliders</a></li>
+
                     </ul>
                 </li>
-                <li><a href="brand-guidelines/resources/ce-logos.html">Resources</a>
+                <li><a href="/pattern-library/ui-elements/">Grid System</a>
                     <ul>
-                        <li><a href="brand-guidelines/resources/ce-logos.html">CE Logos</a></li>
-                        <li><a href="brand-guidelines/resources/ce-icon-font.html">CE Icon Font</a></li>
-                        <li><a href="brand-guidelines/resources/downloadable-color-swatches.html">Downloadable Color Swatches</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Grid Sizes</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Grid Gutters</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Mixed Grids</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Responsive Columns</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Nested Grids</a></li>
                     </ul>
                 </li>
+                <li><a href="/pattern-library/ui-elements/">Lists</a>
+                    <ul>
+                        <li><a href="/pattern-library/ui-elements/">Ordered</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Unordered</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Nested Lists</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Inline</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Unstyled</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Definition List</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Horizontal Definition List</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pattern-library/ui-elements/">Tables</a></li>
+                <li><a href="/pattern-library/ui-elements/">Icons</a>
+                    <ul>
+                        <li><a href="/pattern-library/ui-elements/">Choose Icons</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pattern-library/ui-elements/">Navigation</a>
+                    <ul>
+                        <li><a href="/pattern-library/ui-elements/">Tabs</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Pills</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Pagination &amp; Pager</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pattern-library/ui-elements/">Helper Classes / Utilities</a>
+                    <ul>
+                        <li><a href="/pattern-library/ui-elements/">Spacing</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Colors</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Size</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Links</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Typography</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Display &amp; Visibility</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Responsive Utilities</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Direction Pulls / Floats / Vertical Alignment</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Flexbox</a></li>
+                        <li><a href="/pattern-library/ui-elements/">Positioning</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="/pattern-library/">Reusable Modules / Objects</a>
+            <ul>
+                <li><a href="/pattern-library/">Blocks</a>
+                    <ul>
+                        <li><a href="/pattern-library/">Sizes</a></li>
+                        <li><a href="/pattern-library/">Colors</a></li>
+                        <li><a href="/pattern-library/">Image Backgrounds</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pattern-library/">Form Groups</a>
+                    <ul>
+                        <li><a href="/pattern-library/">Search</a></li>
+                        <li><a href="/pattern-library/">Horizontal</a></li>
+                        <li><a href="/pattern-library/">Inline</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pattern-library/">Header</a></li>
+                <li><a href="/pattern-library/">Footer</a></li>
+                <li><a href="/pattern-library/">Main Nav</a></li>
+                <li><a href="/pattern-library/">Images</a>
+                    <ul>
+                        <li><a href="/pattern-library/">Supplier Logos</a></li>
+                        <li><a href="/pattern-library/">Block Images</a></li>
+                        <li><a href="/pattern-library/">Hero Elements</a></li>
+                        <li><a href="/pattern-library/">Blog Thumbnail</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pattern-library/">Plan Cards</a></li>
+                <li><a href="/pattern-library/">Tooltips</a></li>
+                <li><a href="/pattern-library/">Accordion</a></li>
+                <li><a href="/pattern-library/">Carousel</a></li>
+                <li><a href="/pattern-library/">Modals</a></li>
+                <li><a href="/pattern-library/">Alerts</a></li>
+                <li><a href="/pattern-library/">Social Links</a></li>
+                <li><a href="/pattern-library/">Progress Bar</a></li>
+                <li><a href="/pattern-library/">Loading</a></li>
+                <li><a href="/pattern-library/">Graphs</a></li>
+                <li><a href="/pattern-library/">Video Player</a></li>
+            </ul>
+        </li>
+        <li><a href="/pattern-library/">About</a>
+            <ul>
+                <li><a href="/pattern-library/">Us</a></li>
+                <li><a href="/pattern-library/">Why?</a></li>
+                <li><a href="/pattern-library/">Resources / References</a></li>
             </ul>
         </li>
     </ul>
-</nav> -->
+</nav>
+{{/is}}

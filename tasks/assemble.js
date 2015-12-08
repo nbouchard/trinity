@@ -27,7 +27,8 @@ module.exports = function(grunt) {
             layoutdir: 'lib/templates/layouts/',
             layout: 'default',
             data: ['lib/templates/data/*.json','lib/templates/data/**/*.json'],
-            stylesdir: 'dist/css/'
+            // helpers: ['lib/helpers/*.js'],
+            stylesdir: 'dist/css/',
         },
         pages: {
             // src: ['lib/templates/*.html'],{,*/}*
@@ -51,3 +52,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('assemble');
 
 };
+
+
+// module.exports.foo = function(str) {
+//     return  str;
+// };
+
+
