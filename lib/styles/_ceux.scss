@@ -36,6 +36,10 @@ a {
                         background: darken( #f2f2f2, 5% );
                     }
                 }
+
+                &.selected > a {
+                    background: darken( #f2f2f2, 5% );
+                }
             }
         }
     }
