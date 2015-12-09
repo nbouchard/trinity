@@ -8,4 +8,21 @@ tpl:
   desc: Page Desc
   title: Quotations / Callouts
 ---
-<h2>Quotations / Callouts</h2>
+<h2>{{ tpl.title }}</h2>
+
+<div class="example-block">
+    <div class="example">
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+    </div>
+
+{{#markdown}}
+```html
+<blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+```
+{{/markdown}}
+
+</div>

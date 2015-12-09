@@ -6,6 +6,6 @@ site:
 section: Pattern Library
 tpl:
   desc: Page Desc
-  title: Paragraphs
+  title: Footer
 ---
-<h2>{{ tpl.title }}</h2>
+<h2>Footer</h2>

@@ -6,6 +6,45 @@ site:
 section: Pattern Library
 tpl:
   desc: Page Desc
-  title: Headings With Subtext
+  title: Headings with Subtext
 ---
-<h2>Headings With Subtext</h2>
+<h2>{{ tpl.title }}</h2>
+
+<div class="example-block">
+    <div class="example">
+        <h1>
+            Heading One
+            <span>Subtext</span>
+        </h1>
+        <hr>
+        <h2>
+            Heading Two
+            <span>Subtext</span>
+        </h2>
+        <hr>
+        <h3>
+            Heading Three
+            <span>Subtext</span>
+        </h3>
+    </div>
+
+{{#markdown}}
+```html
+<h1>
+    Heading One
+    <span>Subtext</span>
+</h1>
+
+<h2>
+    Heading Two
+    <span>Subtext</span>
+</h2>
+
+<h3>
+    Heading Three
+    <span>Subtext</span>
+</h3>
+```
+{{/markdown}}
+
+</div>
