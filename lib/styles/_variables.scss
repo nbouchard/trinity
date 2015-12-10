@@ -1,210 +1,88 @@
-$wp-tablet-width: max-width 782px;
-$wp-tablet-only: 601px 782px;
-$wp-mobile-width: max-width 600px;
-$wp-color-bg: #222;
-$wp-color-text: #ccc;
-
-
-// Base Site Variables
-$site-max-width: 80em;
-$site-shoppingcart-width: 30em;
-
-$site-tablet-width: 48em;
-
-// Base Button Variables
-$button-base: 3em;
-$button-border-width: 0.25em;
-$button-icon-base: 3em;
-$button-icon-lineheight: 2em;
-
-// Z-Index Variables
-$z-overlay-high: 1030;
-$z-overlay-mid: 1020;
-$z-overlay-low: 1010;
-$z-overlay-lowest: 1000;
-$z-body-high: 30;
-$z-body-mid: 20;
-$z-body-low: 10;
-$z-underlay-high: 5;
-$z-underlay-mid: 3;
-$z-underlay-low: 1;
-$z-underlay-negative: -1;
-
-// Card System Variables
-$card-corner-radius: 2px;
-$card-padding: 1em;
-$card-header-height: 2em;
-
-// Grid System Variables
-$grid-gutter-width: 0.5em;
-
-// Bootstrap legacy variables
-$screen-xs-max: 767px;
-$screen-sm-max: 991px;
-
-
-
 //
-// Core Brand Color: Green
-//
-// Our Primary brand color centers around the "Shamrock" hue.
-//
-$color-green-jewel:             #146f50;        // jewel
-$color-green-jewel-light:       #1a9068;        // jewel-light
-$color-green-jungle:            #2c9f76;        // jungle
-$color-green-jungle-light:      #33aa80;        // jungle-light
-$color-green-shamrock:          #35ba8d;        // jade
-$color-green-shamrock-light:    #4bcca0;        // jade-light
-$color-green-aquamarine:        #71d0ae;        // jamaica
-$color-green-aquamarine-light:  #8dd6b9;        // jamaica-light
-$color-green-cruise:            #b8dfcc;        // juniper
-$color-green-cruise-light:      #d3ebdf;        // juniper-light
-
-//
-// Core Brand Color: Blue
-//
-// Our Informational brand color centers around the "Curious" hue.
-//
-$color-blue-bahama:             #246289;        // pluto
-$color-blue-bahama-light:       #2c78a8;        // pluto-light
-$color-blue-boston:             #3482b3;        // peacock
-$color-blue-boston-light:       #3689bf;        // peacock-light
-$color-blue-curious:            #328fca;        // pacific
-$color-blue-curious-light:      #50a0d4;        // pacific-light
-$color-blue-danube:             #75b0d8;        // paradise
-$color-blue-danube-light:       #8fbbde;        // paradise-light
-$color-blue-perano:             #adc8e6;        // powder
-$color-blue-perano-light:       #cbdcef;        // powder-light
-
-//
-// Core Brand Color: Orange
-//
-// Our Secondary brand color centers around the "Sun" hue.
-//
-$color-orange-fiery:            #ae6329;        // terracotta
-$color-orange-fiery-light:      #ce7530;        // terracotta-light
-$color-orange-tango:            #d87c39;        // tango
-$color-orange-tango-light:      #e0813d;        // tango-light
-$color-orange-sun:              #ed8733;        // tangerine
-$color-orange-sun-light:        #f09c57;        // tangerine-light
-$color-orange-tacao:            #f3ad79;        // topaz
-$color-orange-tacao-light:      #f6b98c;        // topaz-light
-$color-orange-apricot:          #facaa4;        // taffy
-$color-orange-apricot-light:    #fce0c9;        // taffy-light
-
-// Supplementary Brand Color: Red
-//
-// Centers around the "Cinnabar" hue.
-//
-$color-red-tamarillo:           #9a2013;        // cardinal
-$color-red-tamarillo-light:     #bd2718;        // cardinal-light
-$color-red-poppy:               #bb352c;        // crimson
-$color-red-cinnabar:            #e84c3d;        // cinnabar
-$color-red-cinnabar-light:      #eb6c5f;        // cinnabar-light
-$color-red-pink:                #ef928a;        // coral
-$color-red-azalea:              #f6bcb6;        // carnation
-$color-red-azalea-light:        #fadcd9;        // carnation-light
-
-// Supplementary Brand Color: Yellow
-//
-// Centers around the "Butter" hue.
-//
-$color-yellow-gold:             #a7880b;        // gold
-$color-yellow-gold-light:       #bf9a00;        // gold-light
-$color-yellow-galliano:         #cca629;        // gobi
-$color-yellow-butter:           #f1c40f;        // glowcloud
-$color-yellow-butter-light:     #f4d247;        // glowcloud-light
-$color-yellow-corn:             #f5d870;        // glitter
-$color-yellow-marzipan:         #f9e8a3;        // gardenia
-$color-yellow-marzipan-light:   #fcf1c8;        // gardenia-light
-
-// Supplementary Brand Color: Purple
-//
-// Centers around the "Violet" hue.
-//
-$color-purple-windsor:          #48237d;        // licorice
-$color-purple-windsor-light:    #5a2c9c;        // licorice-light
-$color-purple-royal:            #653ca4;        // lacuna
-$color-purple-violet:           #7f4acc;        // luscious
-$color-purple-violet-light:     #9569d5;        // luscious-light
-$color-purple-wisteria:         #b091dd;        // lavender
-$color-purple-quartz:           #cbb5ea;        // lilac
-$color-purple-quartz-light:     #e0d4f3;        // lilac-light
-
-// Data Visualization Color: Olive
-//
-// Centers around the "Mantis" hue.
-//
-$color-olive-apple:             #557f33;        // avocado
-$color-olive-apple-light:       #689e3e;        // avocado-light
-$color-olive-mantis:            #7ec752;        // apple
-$color-olive-mantis-light:      #8fd06a;        // apple-light
-$color-olive-mint:              #d5ecc2;        // aloe
-$color-olive-mint-light:        #e8f4dc;        // aloe-light
-
-// Data Visualization Color: Magenta
-//
-// Centers around the "Mulberry" hue.
-//
-$color-magenta-disco:           #6e1332;        // maroon
-$color-magenta-disco-light:     #8f1941;        // maroon-light
-$color-magenta-mulberry:        #cc4a78;        // mulberry
-$color-magenta-mulberry-light:  #d5698f;        // mulberry-light
-$color-magenta-mauve:           #deb7ca;        // mauve
-$color-magenta-mauve-light:     #deb7ca;        // mauve-light
-
-// Neutral Brand Color: Gray
-//
-// Centers around the "Chateau" hue.
-//
-$color-gray-black:              #000;           // not labeled in new palette
-$color-gray-woodsmoke:          #353638;        // woodsmoke
-$color-gray-charcoal:           #424649;        // woodsmoke-light
-$color-gray-cape:               #515558;        // woolen
-$color-gray-cape-light:         #64696d;        // woolen-light
-$color-gray-stone:              #71767c;        // windgap
-$color-gray-stone-light:        #7a7f85;        // windgap-light
-$color-gray-oslo:               #80878d;        // wolfpelt
-$color-gray-chateau:            #959aa0;        // wolfpelt-light
-$color-gray-edward:             #a9aeb2;        // whale
-$color-gray-ghost:              #babec1;        // whale-light
-$color-gray-geyser:             #d1d2d4;        // winter
-$color-white-lilac:             #e4e5e7;        // winter-light
-$color-white-lily:              #f6f6f6;        // white-alt
-$color-white-pure:              #fff;           // white
-
-$color-gray-nero:               #222526;        // not used in new palette
-$color-white-smoke:             #efefef;        // not used in new palette
-
-// Other Brand Colors
-//
-// No styleguide reference.
-$color-brand-facebook:          #3a5778;
-$color-brand-twitter:           #55acee;
-$color-brand-linkedin:          #0e7bb6;
-$color-brand-gplus:             #e64d3d;
+// Variables
+// --------------------------------------------------
 
 
-//Variables
-$c-icon-sun: "\e04c";
-$c-icon-nat-gas: "\e043";
-$c-icon-electricity: "\e02b";
-$c-icon-chevron-down: "\e069";
-$c-icon-chevron-up: "\e06a";
-$c-icon-facebook: "\e05c";
-$c-icon-twitter: "\e065";
-$c-icon-gplus: "\e05d";
-$c-icon-linkedin: "\e05e";
-$c-icon-email: "\e040";
-$c-icon-down-dir: "\e007";
-$c-icon-up-dir: "\e00a";
-$c-icon-left-dir: "\e008";
-$c-icon-right-dir: "\e009";
-$c-icon-char-help-pos: "\e027";
-$c-icon-chevron-up: "\e06a";
-$c-icon-chevron-down: "\e069";
-$c-icon-char-x: "\e06e";
-$c-icon-char-plus: "\e00c";
+// Colors
+// -------------------------
+
+$black         : #000;
+$gray-darker   : #222;
+$gray-dark     : #333;
+$gray          : #555;
+$gray-light    : #777;
+$gray-lighter  : #eee;
+$white         : #fff;
+
+$brand-primary : #337ab7;
+$brand-success : #5cb85c;
+$brand-info    : #5bc0de;
+$brand-warning : #f0ad4e;
+$brand-danger  : #d9534f;
+
+
+// Typography
+// -------------------------
+
+$font-family-sans-serif  : Keivit, sans-serif;
+$font-family-serif       : Bitter, serif;
+$font-family-monospace   : Menlo, Monaco, monospace;
+$font-family-base        : ;
+
+$font-size-base          : 14px;
+$font-size-large         : 1.5rem;
+$font-size-small         : 0.8rem;
+
+$font-size-h1            : 2rem;
+$font-size-h2            : 1.75rem;
+$font-size-h3            : 1.5rem;
+$font-size-h4            : 1.25rem;
+$font-size-h5            : 1rem;
+$font-size-h6            : 0.8rem;
+
+// Unit-less `line-height` for use in components like buttons.
+$line-height-base        : 1.428571429; // 20/14
+// Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+// $line-height-computed :    floor((@font-size-base * @line-height-base)); // ~20px
+
+$headings-font-family    : $font-family-sans-serif;
+$headings-font-weight    : 700;
+$headings-line-height    : 1.1;
+$headings-color          : inherit;
+
+
+// Iconography
+// -------------------------
+// TBD
+
+
+// Buttons
+// -------------------------
+// TBD
+
+
+// Forms
+// -------------------------
+// TBD
+
+
+// Tables
+// -------------------------
+// TBD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -239,79 +117,13 @@ $mq-xxs: screen (max-width 19.99em);
 //
 // Tables - Based off of Bootstrap (http://getbootstrap.com/css/#tables)
 // --------------------------------------------------
-$table-bg:                        $color-white-pure;
-$table-bg-accent:                 $color-white-lily;
+$table-bg:                        $white;
+$table-bg-accent:                 $gray-lighter;
 $table-cell-padding:              1em;
 $table-condensed-cell-padding:    ($table-cell-padding/2);
-$table-border-color:              $color-white-lilac;
-$table-bg-hover:                  $color-white-smoke;
-$text-muted:                      $color-gray-ghost;
+$table-border-color:              $gray;
+$table-bg-hover:                  $gray-light;
+$text-muted:                      $gray-light;
 $line-height:                     1.2;
 $ine-height-base:                 1.2;
 
-
-
-
-
-$font-family-monospace: 'Inconsolata', Monaco, monospace;
-$font-family-headline: 'FranklinGothic URW', sans-serif;
-$font-family-subhead: 'FranklinGothic URW', sans-serif;
-$font-family-accent: 'Merriweather', serif;
-$font-family-body: 'Proxima Nova', sans-serif;
-$font-family-icon: 'CE Icons';
-$font-family-fa-icon: FontAwesome;
-
-$font-weight-headline: 600;
-$font-weight-headline-book: 500;
-$font-weight-headline-strong: 900;
-$font-weight-subhead: 400;
-$font-weight-subhead-strong: 700;
-$font-weight-accent: 400;
-$font-weight-accent-strong: 700;
-$font-weight-body: 300;
-$font-weight-body-strong: 600;
-
-$font-size-extrahugest: 4em;
-$font-size-extrahuger: 3.5em;
-$font-size-extrahuge: 3em;
-$font-size-hugest: 2.5em;
-$font-size-huger: 2em;
-$font-size-huge: 1.75em;
-$font-size-largest: 1.5em;
-$font-size-larger: 1.25em;
-$font-size-large: 1.1em;
-$font-size-normal: 1em;
-$font-size-smaller: 0.8em;
-$font-size-tinier: 0.5em;
-
-$font-rem-normal: 1.4rem;
-
-
-
-
-
-// Media Query Breakpoints for breakpoint-sass
-
-// Hi-DPI MQs should be used for higher resolution image/icon replacements where non-vector graphics are used
-$mq-hidpi-base: screen (min-resolution 1.5dppx);
-$mq-hidpi-2x: screen (min-resolution 2dppx);
-$mq-hidpi-3x: screen (min-resolution 3dppx);
-
-// Alternate Breakpoint Specifications
-$mq-xxl: screen (min-width 120em);
-$mq-xl: screen (min-width 80em) (max-width 119.99em);
-$mq-xl-max: screen (max-width 119.99em);
-$mq-xl-min: screen (min-width 80em);
-$mq-lg: screen (min-width 60em) (max-width 79.99em);
-$mq-lg-max: screen (max-width 79.99em);
-$mq-lg-min: screen (min-width 60em);
-$mq-md: screen (min-width 48em) (max-width 59.99em);
-$mq-md-max: screen (max-width 59.99em);
-$mq-md-min: screen (min-width 48em);
-$mq-sm: screen (min-width 30em) (max-width 47.99em);
-$mq-sm-max: screen (max-width 47.99em);
-$mq-sm-min: screen (min-width 30em);
-$mq-xs: screen (min-width 20em) (max-width 29.99em);
-$mq-xs-max: screen (max-width 29.99em);
-$mq-xs-min: screen (min-width 20em);
-$mq-xxs: screen (max-width 19.99em);
