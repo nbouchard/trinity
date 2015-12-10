@@ -1,4 +1,6 @@
-@import 'mixins/vendors/breakpoint';
+@import 'mixins/vendors/breakpoint/breakpoint';
+@import 'mixins/vendors/bourbon/bourbon';
+@import 'mixins/vendors/neat/neat';
 @import 'mixins/clearfix';
 @import 'mixins/forms';
 // @import 'mixins/grid';
