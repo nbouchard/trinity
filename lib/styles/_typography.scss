@@ -2,6 +2,15 @@
 // Typography
 // --------------------------------------------------
 
+// Import Kievit
+@include font-face( 'Kievit', '../fonts/kievit/KievitWeb', 400, $file-formats: woff );
+@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Ita', 400, italic, $file-formats: woff );
+@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Medi', 600, $file-formats: woff );
+@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-MediIta', 600, italic, $file-formats: woff );
+@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Bold', 700, $file-formats: woff );
+@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-BoldIta', 700, italic, $file-formats: woff );
+@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Black', 900, italic, $file-formats: woff );
+
 body {
     color: $base-font-color;
     font-family: $base-font-family;
@@ -15,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading-font-family;
+    font-family: $headings-font-family;
     font-size: $base-font-size;
     line-height: $heading-line-height;
     margin: 0 0 $small-spacing;
