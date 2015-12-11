@@ -50,6 +50,7 @@ a {
 .sidebar {
     float: left;
     width: 20%;
+    margin-top: 20px;
 
     nav {
 
@@ -111,6 +112,12 @@ a {
 
         li.selected > ul {
             display: block;
+        }
+
+        &.fixed {
+            position: fixed;
+            top: 20px;
+            width: 20%;
         }
     }
 }
