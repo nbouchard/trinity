@@ -1,13 +1,13 @@
 #{$all-buttons} {
   appearance: none;
-  background-color: $action-color;
+  background-color: $brand-primary;
   border: 0;
   border-radius: $base-border-radius;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
@@ -20,7 +20,7 @@
 
   &:hover,
   &:focus {
-    background-color: shade($action-color, 20%);
+    background-color: shade($brand-primary, 20%);
     color: #fff;
   }
 
@@ -29,7 +29,7 @@
     opacity: 0.5;
 
     &:hover {
-      background-color: $action-color;
+      background-color: $brand-primary;
     }
   }
 }
