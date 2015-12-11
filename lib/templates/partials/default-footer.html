@@ -1,8 +1,26 @@
 <footer class="site-footer">
-    <p>&copy; Copyright</p>
+    <p>&copy; 2015 Choose Energy</p>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
+    var nav = jQuery( '.sidebar nav' );
+    var navLink = jQuery( '.sidebar nav li a[href*=#]' );
+    var navLinkListItems =  jQuery( '.sidebar nav li a[href*=#]' ).parent( 'li' );
+
+    jQuery( navLink ).click( function() {
+        navLinkListItems.removeClass( 'selected' );
+        jQuery( this ).parent().addClass( 'selected' );
+        jQuery( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+    });
     jQuery( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+    jQuery( window ).scroll( function() {
+        if( jQuery( window ).scrollTop() <= 60 ) {
+            nav.removeClass( 'fixed' );
+        } else {
+            nav.addClass( 'fixed' );
+        }
+    });
 </script>
