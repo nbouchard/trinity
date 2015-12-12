@@ -1,68 +1,94 @@
 //
 // Pattern Library / Style Guide
 // --------------------------------------------------
-// a {
-//     text-decoration: none;
-// }
 
+html {
+    font-size: $font-size-base;
+}
+
+body {
+    background-color: $body-bg;
+    color: $text-color;
+
+    > .container {
+        @include outer-container;
+        padding-bottom: 2.5rem;
+    }
+}
+
+a {
+    color: $link-color;
+
+    &:hover {
+        color: $link-hover-color;
+    }
+}
 
 
 .site-header {
-    @include clearfix();
-    background-color: #f2f2f2;
-    padding: 0 30px;
-    height: 60px;
-    line-height: 60px;
-
-    h1 {
-        float: left;
-        margin: 0;
-    }
+    background-color: #5B5E63;
 
     nav {
-        float: left;
-        margin-left: 20px;
+        @include outer-container;
+
+        h1 {
+            margin: 0;
+
+            @include span-columns( 1.35 );
+            @include omega;
+
+            text-align: center;
+
+            a {
+                font-size: $font-size-large;
+                line-height: 4rem;
+            }
+
+        }
 
         ul {
+            @include span-columns( 10 );
+
             list-style: none;
             margin: 0;
 
             li {
                 float: left;
-
-                a {
-                    display: block;
-                    padding: 0 12px;
-                    line-height: 60px;
-
-                    &:hover {
-                        background: darken( #f2f2f2, 5% );
-                    }
-                }
-
-                &.selected > a {
-                    background: darken( #f2f2f2, 5% );
-                }
             }
+        }
+
+        a {
+            display: block;
+            font-size: 1rem;
+            color: $white;
+            padding: 0 12px;
+            line-height: 4rem;
+
+
+            &:hover {
+                background: darken( #5B5E63, 10% );
+            }
+        }
+
+        .selected > a {
+            background: darken( #5B5E63, 5% );
         }
     }
 }
 
 
-
 .sidebar {
-    float: left;
-    width: 20%;
-    margin-top: 20px;
+    margin-top: 2.5rem;
+    @include span-columns( 4 );
 
     nav {
+        max-width: 302px;
 
         ul {
             list-style: none;
             font-size: 15px;
             line-height: 1.6em;
             outline: 0;
-            padding-left: 30px;
 
             li  {
 
@@ -75,13 +101,13 @@
                     line-height: 1em;
 
                     &:hover {
-                        background: #f2f3f2;
+                        background: #f4f4f4;
                     }
                 }
 
                 &.selected {
                     > a {
-                        background: #ccebf3;
+                        background: $gray-lighter;
                     }
                 }
             }
@@ -99,13 +125,13 @@
 
             &:hover {
                 background: none;
-                border-left: 3px solid #ccebf3;
+                border-left: 3px solid $gray-lighter;
             }
         }
 
         ul > li > ul > li.selected > a {
             background: none;
-            border-left: 3px solid #ccebf3;
+            border-left: 3px solid $gray-lighter;
             border-radius: 0;
         }
 
@@ -119,20 +145,19 @@
 
         &.fixed {
             position: fixed;
-            top: 20px;
-            width: 20%;
+            top: 2.5rem;
+            @include span-columns( 4 );
         }
     }
 }
 
+
 .site-main {
-    float: right;
-    width: 80%;
-    padding-left: 30px;
-    box-sizing: border-box;
+    @include span-columns( 8 );
 
     .example-block {
         border: 1px solid #ddd;
+        border-radius: 4px;
         margin-bottom: 50px;
 
         .example {
@@ -147,41 +172,106 @@
         }
 
         pre {
-            display: block;
-            padding: 15px;
             margin: 0;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #333;
-            word-break: normal;
-            white-space: nowrap;
-            background-color: #f5f5f5;
             border-top: 1px solid #ddd;
 
             code {
-                font-family: Menlo, Monaco, monospace;
-                padding: 0;
+                padding: 1rem;
                 white-space: pre-wrap;
-                background-color: transparent;
-                border-radius: 0;
-
-                &:first-child {
-                    display: inline-block;
-                    padding-right: 45px;
-                }
-
+                border-radius: 0 0 4px 4px;
             }
         }
-
     }
-
-
 }
 
 
 .site-footer {
     clear: both;
-    @include clearfix();
-    background-color: #f2f2f2;
-    padding: 0 30px;
+    border-top: 1px solid $gray-lighter;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: $gray-light;
+}
+
+
+
+// Highlight.js Theme - Solarized Light
+// -------------------------
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #fdf6e3;
+  color: #657b83;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #93a1a1;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-built_in,
+.hljs-deletion {
+  color: #dc322f;
+}
+
+.hljs-formula {
+  background: #eee8d5;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
 }

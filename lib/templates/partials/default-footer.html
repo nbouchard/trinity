@@ -3,24 +3,31 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
 <script>
-    var nav = jQuery( '.sidebar nav' );
-    var navLink = jQuery( '.sidebar nav li a[href*=#]' );
-    var navLinkListItems =  jQuery( '.sidebar nav li a[href*=#]' ).parent( 'li' );
+jQuery(document).ready(function($) {
+    var nav = $( '.sidebar nav' );
+    var navLink = $( '.sidebar nav li a[href*=#]' );
+    var navLinkListItems =  $( '.sidebar nav li a[href*=#]' ).parent( 'li' );
 
-    jQuery( navLink ).click( function() {
+    $( navLink ).click( function() {
         navLinkListItems.removeClass( 'selected' );
-        jQuery( this ).parent().addClass( 'selected' );
-        jQuery( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+        $( this ).parent().addClass( 'selected' );
+        $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
 
     });
-    jQuery( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+    $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
 
-    jQuery( window ).scroll( function() {
-        if( jQuery( window ).scrollTop() <= 60 ) {
+    $( window ).scroll( function() {
+        if( $( window ).scrollTop() <= 56 ) {
             nav.removeClass( 'fixed' );
         } else {
             nav.addClass( 'fixed' );
         }
     });
+
+    $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+});
 </script>
