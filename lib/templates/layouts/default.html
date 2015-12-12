@@ -5,15 +5,19 @@
 
     <title>{{ site.name }} - {{ tpl.title }} - Version {{ site.version }}</title>
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
     <link href="/css/globals.css" media="screen, projection" rel="stylesheet" type="text/css">
     <link href="/css/styles.css" media="screen, projection" rel="stylesheet" type="text/css">
+
 </head>
 <body class="{{ site.classes }}">
     {{> default-header }}
-    {{> default-side-nav}}
-    <main class="site-main {{ tpl.classes }}">
-        {{> body }}
-    </main>
+    <div class="container">
+        {{> default-side-nav}}
+        <main class="site-main {{ tpl.classes }}">
+            {{> body }}
+        </main>
+    </div>
     {{> default-footer }}
 </body>
 </html>
