@@ -8,19 +8,27 @@
 // -------------------------
 @include font-face( 'Kievit', '../fonts/kievit/KievitWeb', 400, $file-formats: woff );
 @include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Ita', 400, italic, $file-formats: woff );
-@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Medi', 600, $file-formats: woff );
-@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-MediIta', 600, italic, $file-formats: woff );
+@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Medi', 500, $file-formats: woff );
+@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-MediIta', 500, italic, $file-formats: woff );
 @include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Bold', 700, $file-formats: woff );
 @include font-face( 'Kievit', '../fonts/kievit/KievitWeb-BoldIta', 700, italic, $file-formats: woff );
 @include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Black', 900, italic, $file-formats: woff );
+@import url( 'https://fonts.googleapis.com/css?family=Bitter:400,400italic,700' );
+
+
+// HTML
+// -------------------------
+html {
+    font-size: $font-size-base;
+}
 
 
 // Body
 // -------------------------
 body {
     color: $gray-dark;
-    font-family: $font-family-base ;
-    font-size: $font-size-base;
+    font-family: $font-family-base;
+    font-size: $font-size-normal;
     line-height: $line-height-base;
 }
 
@@ -31,40 +39,114 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $headings-font-family;
     // font-size: $base-font-size;
     line-height: $headings-line-height;
-    // margin: 0 0 $small-spacing;
+    margin: 0;
+
+    span {
+        display: block;
+        font-weight: 500;
+    }
+
+    &.subtext {
+        line-height: 1.2;
+    }
 }
+
 h1 {
     font-size: $font-size-h1;
     font-weight: 700;
+
+    span {
+        font-size: $font-size-h1 * 0.8;
+    }
 }
+
 h2 {
     font-size: $font-size-h2;
     font-weight: 700;
+
+    span {
+        display: block;
+        font-size: $font-size-h2 * 0.8;
+    }
 }
+
 h3 {
     font-size: $font-size-h3;
-    font-weight: 700;
+    font-weight: 500;
+
+    span {
+        display: block;
+        font-size: $font-size-h3 * 0.8;
+    }
 }
+
 h4 {
     font-size: $font-size-h4;
-    font-weight: 600;
+    font-weight: 500;
 }
+
 h5 {
     font-size: $font-size-h5;
-    font-weight: 600;
+    font-weight: 500;
 }
+
 h6 {
     font-size: $font-size-h6;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
-
-
-
+// Paragraphs
+// -------------------------
 p {
-    margin: 0 0 $small-spacing;
+    margin: 0 0 $font-size-normal;
+
+    &.lead {
+        font-family: $font-family-serif;
+        font-size: 4.8rem;
+    }
+
+    &.secondary {
+        font-family: $font-family-serif;
+        font-size: 3.6rem;
+    }
+
+    &.tertiary {
+        font-size: 2.4rem;
+    }
 }
+
+
+// Block Quotes
+// -------------------------
+blockquote {
+    margin: 0;
+    p {
+        font-family: $font-family-serif;
+        font-size: 4rem;
+        font-style: italic;
+    }
+}
+
+
+// Misc. Inline Elements
+// -------------------------
+mark {
+    background-color: #fcf8e3;
+    padding: .2rem;
+}
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: $code-color;
+    background-color: $code-bg;
+    border-radius: $border-radius-base;
+}
+
+
+
+
+
 
 a {
     color: $brand-primary;
