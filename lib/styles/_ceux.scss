@@ -118,7 +118,7 @@ a {
         }
 
         ul li li a {
-            padding: 6px;
+            padding: 5px 6px;
             font-size: 14px;
             border-radius: 0;
             border-left: 3px solid #fff;
@@ -127,6 +127,10 @@ a {
                 background: none;
                 border-left: 3px solid $gray-lighter;
             }
+        }
+
+        ul li li li a {
+            padding: 3px 6px;
         }
 
         ul > li > ul > li.selected > a {
