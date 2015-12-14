@@ -2,14 +2,8 @@
 // Pattern Library / Style Guide
 // --------------------------------------------------
 
-html {
-    font-size: $font-size-base;
-}
 
 body {
-    background-color: $body-bg;
-    color: $text-color;
-
     > .container {
         @include outer-container;
         padding-bottom: 2.5rem;
@@ -27,6 +21,7 @@ a {
 
 .site-header {
     background-color: #5B5E63;
+    margin-bottom: 2rem;
 
     nav {
         @include outer-container;
@@ -40,8 +35,8 @@ a {
             text-align: center;
 
             a {
-                font-size: $font-size-large;
-                line-height: 4rem;
+                font-size: 2.2rem;
+                line-height: 6rem;
             }
 
         }
@@ -59,10 +54,10 @@ a {
 
         a {
             display: block;
-            font-size: 1rem;
+            font-size: 1.6rem;
             color: $white;
             padding: 0 12px;
-            line-height: 4rem;
+            line-height: 6rem;
 
 
             &:hover {
@@ -78,7 +73,7 @@ a {
 
 
 .sidebar {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     @include span-columns( 4 );
 
     nav {
@@ -173,6 +168,10 @@ a {
                 border-top: 1px solid #ddd;
                 border-bottom: 1px solid #fff;
             }
+
+            p:last-child {
+                margin: 0;
+            }
         }
 
         pre {
@@ -180,6 +179,7 @@ a {
             border-top: 1px solid #ddd;
 
             code {
+                font-size: 1.4rem;
                 padding: 1rem;
                 white-space: pre-wrap;
                 border-radius: 0 0 4px 4px;
@@ -194,7 +194,7 @@ a {
     border-top: 1px solid $gray-lighter;
     padding: 30px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: $gray-light;
 }
 
