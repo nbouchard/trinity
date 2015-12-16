@@ -36,7 +36,7 @@ $font-family-base        : $font-family-sans-serif;
 
 $font-size-base          : 10px;
 $font-size-normal        : 1.6rem;
-$font-size-large         : 2rem;
+$font-size-large         : 2.4rem;
 $font-size-small         : 1rem;
 
 $font-size-h1            : 6rem;
@@ -63,6 +63,18 @@ $code-color : #c7254e;
 $code-bg    : #f9f2f4;
 
 
+// Buttons
+// -------------------------
+$btn-yellow: #fbb431;
+$btn-green: #009c95;
+$btn-gray: #939ea1;
+
+// Forms
+// -------------------------
+// $padding-base-vertical:     6px;
+// $padding-base-horizontal:   12px;
+$input-border: #ccc;
+
 // Iconography
 // -------------------------
 // TBD
@@ -86,7 +98,7 @@ $code-bg    : #f9f2f4;
 
 // From Bitters - Planning to revise and work in above where appropriate
 $base-border-radius: 3px;
-$base-spacing: $line-height-base * 1em;
+$base-spacing: $line-height-base * 1rem;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
