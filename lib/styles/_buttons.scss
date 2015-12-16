@@ -1,35 +1,99 @@
-#{$all-buttons} {
-  appearance: none;
-  background-color: $brand-primary;
-  border: 0;
-  border-radius: $base-border-radius;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 600;
-  line-height: 1;
-  padding: $small-spacing $base-spacing;
-  text-decoration: none;
-  transition: background-color $base-duration $base-timing;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-
-  &:hover,
-  &:focus {
-    background-color: shade($brand-primary, 20%);
+.btn {
+    appearance: none;
+    background-color: $btn-gray;
+    border: 0;
     color: #fff;
-  }
+    cursor: pointer;
+    display: inline-block;
+    font-family: $font-family-base;
+    font-size: $font-size-normal;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    line-height: $line-height-base;
+    padding: 0.9rem 2.4rem 0.7rem 2.4rem;
+    text-decoration: none;
+    // transition: background-color $base-duration $base-timing;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
 
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-
-    &:hover {
-      background-color: $brand-primary;
+    &:hover,
+    &:focus {
+        background-color: darken(#939ea1, 10%);
+        color: #fff;
     }
-  }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        &:hover {
+            background-color: #939ea1;
+        }
+    }
+}
+
+$tri-height: ($font-size-normal * $line-height-base) + 1.8rem;
+
+.btn-yellow {
+    background-color: $btn-yellow;
+    color: $gray-darker;
+
+    &:before {
+        display: none;
+        @include triangle( 2rem $tri-height, transparent $btn-yellow, up-left);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: darken( $btn-yellow, 10% );
+        color: $gray-darker;
+
+        &:before {
+            border-right-color: darken( $btn-yellow, 10% );
+        }
+    }
+
+
+
+}
+
+.btn-green {
+    background-color: $white;
+    box-shadow: 0 0 0 4px $btn-green inset;
+    color: $btn-green;
+
+    &:before {
+        display: none;
+        @include triangle( 2rem $tri-height, transparent $btn-yellow, up-left);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: inherit;
+        box-shadow: 0 0 0 4px darken($btn-green, 10%) inset;
+        color: darken($btn-green, 10%);
+    }
+}
+
+.btn-gray {
+    background-color: $btn-gray;
+
+    &:before {
+        display: none;
+        @include triangle( 2rem $tri-height, transparent $btn-gray, up-left);
+    }
+
+    &:hover,
+    &:focus {
+        &:before {
+            border-right-color: darken( $btn-gray, 10% );
+        }
+    }
+
+}
+
+.btn-lg {
+    font-size: $font-size-large;
+    padding: 1rem 4rem 0.8rem 4rem;
 }

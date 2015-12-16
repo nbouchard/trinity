@@ -13,67 +13,58 @@ tpl:
 
 <h2 id="buttons">Buttons</h2>
 <p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-<h3>Search</h3>
+
+<h3>Button Tags</h3>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <a class="btn btn-gray" href="#" role="button">Link</a>
+        <button class="btn btn-gray" type="submit">Button</button>
+        <input class="btn btn-gray" type="button" value="Input">
+        <input class="btn btn-gray" type="submit" value="Submit">
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
+<a class="btn btn-gray" href="#" role="button">Link</a>
+<button class="btn btn-gray" type="submit">Button</button>
+<input class="btn btn-gray" type="button" value="Input">
+<input class="btn btn-gray" type="submit" value="Submit">
 ```
 {{/markdown}}
 </div>
 
-<h3>Primary / CTA</h3>
+<h3>Options</h3>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <button type="button" class="btn btn-green">Green</button>
+
+        <button type="button" class="btn btn-yellow">Yellow</button>
+
+        <button type="button" class="btn btn-gray">Gray</button>
+
+        <hr>
+        <h6>TBD</h6>
+        <!-- Search button -->
+        <button type="button" class="btn btn-search">Search</button>
+
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <button type="button" class="btn btn-primary">Primary / CTA</button>
+
+        <!-- Indicates a successful or positive action -->
+        <button type="button" class="btn btn-success">Success / Confirm</button>
+
+        <!-- Contextual button for informational alert messages -->
+        <button type="button" class="btn btn-info">Info / More</button>
+
+        <!-- Indicates caution should be taken with this action -->
+        <button type="button" class="btn btn-warning">Warning</button>
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h3>Info / More</h3>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h3>Success / Confirm</h3>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h3>Warning</h3>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
+<button type="button" class="btn btn-green">Green</button>
+<button type="button" class="btn btn-yellow">Yellow</button>
+<button type="button" class="btn btn-gray">Gray</button>
 ```
 {{/markdown}}
 </div>
@@ -81,124 +72,137 @@ tpl:
 <h3>Sizes</h3>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <p>
+            <button type="button" class="btn btn-gray btn-lg">Large button</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-gray">Default button</button>
+        </p>
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
+<p>
+    <button type="button" class="btn btn-gray btn-lg">Large button</button>
+</p>
+<p>
+    <button type="button" class="btn btn-gray">Default button</button>
+</p>
 ```
 {{/markdown}}
 </div>
 
-<h3>Disabled states</h3>
+<h3>Disabled State</h3>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <button type="button" class="btn btn-lg btn-gray" disabled="disabled">Primary button</button>
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
+<button type="button" class="btn btn-lg btn-gray" disabled="disabled">Primary button</button>
 ```
 {{/markdown}}
 </div>
 
+<div class="de-emphasize">
 <h3>Button groups</h3>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <h6>TBD</h6>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary">Left</button>
+            <button type="button" class="btn btn-primary">Middle</button>
+            <button type="button" class="btn btn-primary">Right</button>
+        </div>
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-primary">Left</button>
+    <button type="button" class="btn btn-primary">Middle</button>
+    <button type="button" class="btn btn-primary">Right</button>
+</div>
 ```
 {{/markdown}}
 </div>
-
-<h3>Links as buttons</h3>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
 </div>
+
 
 
 <h2 id="inputs">Inputs</h2>
 <p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-
-<h3>Text</h3>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <div class="form-group">
+            <label for="example-text">Text</label>
+            <input type="email" class="form-control" id="example-text" placeholder="Text">
+        </div>
+        <div class="form-group">
+            <label for="example-email">Email</label>
+            <input type="email" class="form-control" id="example-email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="example-url">URL</label>
+            <input type="url" class="form-control" id="example-url" placeholder="URL">
+        </div>
+        <div class="form-group">
+            <label for="example-tel">Phone</label>
+            <input type="tel" class="form-control" id="example-tel" placeholder="Phone">
+        </div>
+        <div class="form-group">
+            <label for="example-textarea">Textarea</label>
+            <textarea class="form-control" id="example-textarea" rows="3"></textarea>
+        </div>
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
+<div class="form-group">
+    <label for="example-text">Text</label>
+    <input type="text" class="form-control" id="example-text" placeholder="Text">
+</div>
+<div class="form-group">
+    <label for="example-email">Email</label>
+    <input type="email" class="form-control" id="example-email" placeholder="Email">
+</div>
+<div class="form-group">
+    <label for="example-url">URL</label>
+    <input type="url" class="form-control" id="example-url" placeholder="URL">
+</div>
+<div class="form-group">
+    <label for="example-tel">Phone</label>
+    <input type="tel" class="form-control" id="example-tel" placeholder="Phone">
+</div>
+<div class="form-group">
+    <label for="example-textarea">Textarea</label>
+    <textarea class="form-control" id="example-textarea" rows="3"></textarea>
+</div>
 ```
 {{/markdown}}
 </div>
 
-<h3>Email</h3>
+<h3>Search Form</h3>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <form class="search-form">
+            <input type="search" class="form-control" id="search" placeholder="Enter your zip code">
+            <button type="button" class="btn btn-search btn-yellow">Search</button>
+        </form>
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
+<form class="search-form">
+    <input type="search" class="form-control" id="search" placeholder="Enter your zip code">
+    <button type="button" class="btn btn-search btn-yellow">Search</button>
+</form>
 ```
 {{/markdown}}
 </div>
 
-<h3>URL</h3>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h3>Phone</h3>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h3>Textarea</h3>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
+<div class="de-emphasize">
 <h3>Inputs with Icons</h3>
 <div class="example-block">
     <div class="example">
@@ -211,35 +215,66 @@ tpl:
 ```
 {{/markdown}}
 </div>
+</div>
 
 
 <h2 id="select">Select / Dropdowns</h2>
 <p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <select class="form-control">
+            <option>One</option>
+            <option>Two</option>
+            <option>Three</option>
+            <option>Four</option>
+            <option>Five</option>
+        </select>
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
+<select class="form-control">
+    <option>One</option>
+    <option>Two</option>
+    <option>Three</option>
+    <option>Four</option>
+    <option>Five</option>
+</select>
 ```
 {{/markdown}}
 </div>
 
-
+<div class="de-emphasize">
 <h2 id="checkboxes">Checkboxes & Radio Buttons</h2>
 <p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
 
 <h3>Horizontal Labels</h3>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+            </label>
+        </div>
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
+<div class="checkbox">
+    <label>
+        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+    </label>
+</div>
+<div class="radio">
+    <label>
+        <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+    </label>
+</div>
 ```
 {{/markdown}}
 </div>
@@ -381,4 +416,5 @@ tpl:
 <p>Example</p>
 ```
 {{/markdown}}
+</div>
 </div>
