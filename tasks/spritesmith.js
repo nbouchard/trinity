@@ -37,39 +37,75 @@ module.exports = function(grunt) {
                 }
             }
         },
-        utilities: {
+        utilities_electricity: {
             src: 'lib/images/sprites/size-standard/utility-logos/*.png',
             dest: 'lib/images/utility-logos.png',
-            destCss: 'lib/styles/generated/_utility-logos.scss',
+            destCss: 'lib/styles/generated/_utility-logos-electricity.scss',
             imgPath: '../images/utility-logos.png',
             cssFormat: 'css',
             cssOpts: {
                 cssSelector: function(sprite) {
-                    return '.utility-' + sprite.name;
+                    return '.utility-' + sprite.name + '-electricity';
                 }
             }
         },
-        utilities_sm: {
+        utilities_natgas: {
+            src: 'lib/images/sprites/size-standard/utility-logos/*.png',
+            dest: 'lib/images/utility-logos.png',
+            destCss: 'lib/styles/generated/_utility-logos-natgas.scss',
+            imgPath: '../images/utility-logos.png',
+            cssFormat: 'css',
+            cssOpts: {
+                cssSelector: function(sprite) {
+                    return '.utility-' + sprite.name + '-naturalgas';
+                }
+            }
+        },
+        utilities_electricity_sm: {
             src: 'lib/images/sprites/size-small/utility-logos/*.png',
             dest: 'lib/images/utility-logos-sm.png',
-            destCss: 'lib/styles/generated/_utility-logos-sm.scss',
+            destCss: 'lib/styles/generated/_utility-logos-electricity-sm.scss',
             imgPath: '../images/utility-logos-sm.png',
             cssFormat: 'css',
             cssOpts: {
                 cssSelector: function(sprite) {
-                    return '.utility-' + sprite.name + '-sm';
+                    return '.utility-' + sprite.name + '-electricity-sm';
                 }
             }
         },
-        utilities_lg: {
+        utilities_natgas_sm: {
+            src: 'lib/images/sprites/size-small/utility-logos/*.png',
+            dest: 'lib/images/utility-logos-sm.png',
+            destCss: 'lib/styles/generated/_utility-logos-natgas-sm.scss',
+            imgPath: '../images/utility-logos-sm.png',
+            cssFormat: 'css',
+            cssOpts: {
+                cssSelector: function(sprite) {
+                    return '.utility-' + sprite.name + '-naturalgas-sm';
+                }
+            }
+        },
+        utilities_electricity_lg: {
             src: 'lib/images/sprites/size-large/utility-logos/*.png',
             dest: 'lib/images/utility-logos-lg.png',
-            destCss: 'lib/styles/generated/_utility-logos-lg.scss',
+            destCss: 'lib/styles/generated/_utility-logos-electricity-lg.scss',
             imgPath: '../images/utility-logos-lg.png',
             cssFormat: 'css',
             cssOpts: {
                 cssSelector: function(sprite) {
-                    return '.utility-' + sprite.name + '-lg';
+                    return '.utility-' + sprite.name + '-electricity-lg';
+                }
+            }
+        },
+        utilities_natgas_lg: {
+            src: 'lib/images/sprites/size-large/utility-logos/*.png',
+            dest: 'lib/images/utility-logos-lg.png',
+            destCss: 'lib/styles/generated/_utility-logos-natgas-lg.scss',
+            imgPath: '../images/utility-logos-lg.png',
+            cssFormat: 'css',
+            cssOpts: {
+                cssSelector: function(sprite) {
+                    return '.utility-' + sprite.name + '-naturalgas-lg';
                 }
             }
         },
@@ -109,39 +145,75 @@ module.exports = function(grunt) {
                 }
             }
         },
-        utilitieswp: {
+        utilities_electricity_wp: {
             src: 'lib/images/sprites/size-standard/utility-logos/*.png',
             dest: 'lib/images/utility-logos.png',
-            destCss: 'lib/styles/generated/_utility-logos.scss',
+            destCss: 'lib/styles/generated/_utility-logos-electricity.scss',
             imgPath: '/wp-content/themes/ChooseEnergyTheme/images/utility-logos.png',
             cssFormat: 'css',
             cssOpts: {
                 cssSelector: function(sprite) {
-                    return '.utility-' + sprite.name;
+                    return '.utility-' + sprite.name + '-electricity';
                 }
             }
         },
-        utilitieswp_sm: {
+        utilities_natgas_wp: {
+            src: 'lib/images/sprites/size-standard/utility-logos/*.png',
+            dest: 'lib/images/utility-logos.png',
+            destCss: 'lib/styles/generated/_utility-logos-natgas.scss',
+            imgPath: '/wp-content/themes/ChooseEnergyTheme/images/utility-logos.png',
+            cssFormat: 'css',
+            cssOpts: {
+                cssSelector: function(sprite) {
+                    return '.utility-' + sprite.name + '-naturalgas';
+                }
+            }
+        },
+        utilities_electricity_wp_sm: {
             src: 'lib/images/sprites/size-small/utility-logos/*.png',
             dest: 'lib/images/utility-logos-sm.png',
-            destCss: 'lib/styles/generated/_utility-logos-sm.scss',
+            destCss: 'lib/styles/generated/_utility-logos-electricity-sm.scss',
             imgPath: '/wp-content/themes/ChooseEnergyTheme/images/utility-logos-sm.png',
             cssFormat: 'css',
             cssOpts: {
                 cssSelector: function(sprite) {
-                    return '.utility-' + sprite.name + '-sm';
+                    return '.utility-' + sprite.name + '-electricity-sm';
                 }
             }
         },
-        utilitieswp_lg: {
+        utilities_natgas_wp_sm: {
+            src: 'lib/images/sprites/size-small/utility-logos/*.png',
+            dest: 'lib/images/utility-logos-sm.png',
+            destCss: 'lib/styles/generated/_utility-logos-natgas-sm.scss',
+            imgPath: '/wp-content/themes/ChooseEnergyTheme/images/utility-logos-sm.png',
+            cssFormat: 'css',
+            cssOpts: {
+                cssSelector: function(sprite) {
+                    return '.utility-' + sprite.name + '-naturalgas-sm';
+                }
+            }
+        },
+        utilities_electricity_wp_lg: {
             src: 'lib/images/sprites/size-large/utility-logos/*.png',
             dest: 'lib/images/utility-logos-lg.png',
-            destCss: 'lib/styles/generated/_utility-logos-lg.scss',
+            destCss: 'lib/styles/generated/_utility-logos-electricity-lg.scss',
             imgPath: '/wp-content/themes/ChooseEnergyTheme/images/utility-logos-lg.png',
             cssFormat: 'css',
             cssOpts: {
                 cssSelector: function(sprite) {
-                    return '.utility-' + sprite.name + '-lg';
+                    return '.utility-' + sprite.name + '-electricity-lg';
+                }
+            }
+        },
+        utilities_natgas_wp_lg: {
+            src: 'lib/images/sprites/size-large/utility-logos/*.png',
+            dest: 'lib/images/utility-logos-lg.png',
+            destCss: 'lib/styles/generated/_utility-logos-natgas-lg.scss',
+            imgPath: '/wp-content/themes/ChooseEnergyTheme/images/utility-logos-lg.png',
+            cssFormat: 'css',
+            cssOpts: {
+                cssSelector: function(sprite) {
+                    return '.utility-' + sprite.name + '-naturalgas-lg';
                 }
             }
         },

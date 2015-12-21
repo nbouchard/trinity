@@ -117,52 +117,64 @@ module.exports = function(grunt) {
             'image_resize:suppliers',
             'image_resize:suppliers_lg',
             'image_resize:suppliers_sm',
-            'image_resize:utilities',
-            'image_resize:utilities_lg',
-            'image_resize:utilities_sm',
+            'image_resize:utilities_electricity',
+            'image_resize:utilities_electricity_lg',
+            'image_resize:utilities_electricity_sm',
+            'image_resize:utilities_natgas',
+            'image_resize:utilities_natgas_lg',
+            'image_resize:utilities_natgas_sm',
         ]
     );
     grunt.registerTask('resize:std',
         'Process and resize standard size images.',
         [
             'image_resize:suppliers',
-            'image_resize:utilities',
+            'image_resize:utilities_electricity',
+            'image_resize:utilities_natgas',
         ]
     );
     grunt.registerTask('sprite:all',
         'Sprite all images (non-WordPress).',
         [
-            'newer:sprite:suppliers',
-            'newer:sprite:utilities',
-            'newer:sprite:suppliers_sm',
-            'newer:sprite:utilities_sm',
-            'newer:sprite:suppliers_lg',
-            'newer:sprite:utilities_lg',
+            'sprite:suppliers',
+            'sprite:utilities_electricity',
+            'sprite:utilities_natgas',
+            'sprite:suppliers_sm',
+            'sprite:utilities_electricity_sm',
+            'sprite:utilities_natgas_sm',
+            'sprite:suppliers_lg',
+            'sprite:utilities_electricity_lg',
+            'sprite:utilities_natgas_lg',
         ]
     );
     grunt.registerTask('sprite:all:wp',
         'Sprite all images (WordPress).',
         [
-            'newer:sprite:supplierswp',
-            'newer:sprite:utilitieswp',
-            'newer:sprite:supplierswp_sm',
-            'newer:sprite:utilitieswp_sm',
-            'newer:sprite:supplierswp_lg',
-            'newer:sprite:utilitieswp_lg',
+            'sprite:supplierswp',
+            'sprite:utilities_electricity_wp',
+            'sprite:utilities_natgas_wp',
+            'sprite:supplierswp_sm',
+            'sprite:utilities_electricity_wp_sm',
+            'sprite:utilities_natgas_wp_sm',
+            'sprite:supplierswp_lg',
+            'sprite:utilities_electricity_wp_lg',
+            'sprite:utilities_natgas_wp_lg',
         ]
     );
     grunt.registerTask('sprite:std',
         'Sprite standard size images (non-WordPress).',
         [
             'newer:sprite:suppliers',
-            'newer:sprite:utilities',
+            'newer:sprite:utilities_electricity',
+            'newer:sprite:utilities_natgas',
         ]
     );
     grunt.registerTask('sprite:std:wp',
         'Sprite standard size images (WordPress).',
         [
             'newer:sprite:supplierswp',
-            'newer:sprite:utilitieswp',
+            'newer:sprite:utilities_electricity_wp',
+            'newer:sprite:utilities_natgas_wp',
         ]
     );
 
