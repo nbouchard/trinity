@@ -285,3 +285,36 @@
         $y-pos: 70%
     );
 }
+
+.v-img151 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 20%,
+        $y-pos: 20%
+    );
+}
+
+.v-img152 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 80%,
+        $y-pos: 0%
+    );
+}
+
+.v-img153 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 60%,
+        $y-pos: 60%
+    );
+}
+
+.v-img154 .photoblock-photo {
+    @include photoblock(
+        $y-pos: 60%
+    );
+}
+
+.v-img155 .photoblock-photo {
+    @include photoblock(
+        $x-pos: 20%
+    );
+}
