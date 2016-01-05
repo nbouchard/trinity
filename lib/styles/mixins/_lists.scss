@@ -1,0 +1,12 @@
+@mixin list-unstyled() {
+    list-style: none;
+    padding-left: 0;
+}
+
+@mixin list-inline() {
+    li {
+        display: inline-block;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
