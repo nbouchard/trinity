@@ -1,0 +1,190 @@
+//
+// Site Header
+// --------------------------------------------------
+.site-root.v-fixed-header {
+    padding-top: 48rem;
+}
+.ce-siteHeader {
+    @include outer-container( 100% );
+
+    a {
+        color: $white;
+    }
+
+    .hero {
+        height: 46rem;
+        background: #007fb6;
+        color: $white;
+
+        .hero-content {
+            @include outer-container;
+            padding-top: 10rem;
+        }
+    }
+
+    .navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+
+        .nav-trigger {
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            background: rgba( $gray-darker, 0.5 );
+            padding: 2rem;
+            color: $white;
+            z-index: 1000;
+
+        }
+
+        .nav-main {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba( $gray-darker, 0.95 );
+            padding-top: 5rem;
+            height: 39rem;
+
+
+            .nav-main-menu {
+                @include outer-container;
+
+                ul {
+                    @include span-columns( 2.4 );
+                    @include list-unstyled;
+
+                    &:last-child {
+                        @include omega;
+                    }
+
+                    a {
+                        font-size: $font-size-large;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .tabs {
+        @include row;
+        @include list-unstyled;
+        background: rgba( $gray-darker, 0.85 );
+        margin: 0;
+
+        li {
+            @include span-columns( 2 );
+            text-align: center;
+
+            &:first-child {
+                @include shift(4);
+                @include omega;
+            }
+
+            a {
+                display: block;
+                font-size: $font-size-large;
+                padding-top: $spacing-base;
+                padding-bottom: $spacing-base;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+
+            &.active {
+                background: rgba( $gray-darker, 1 );
+
+                a {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        position: relative;
+        background: $gray-darker;
+        padding: 2rem 0;
+
+        form {
+            display: none;
+            max-width: 55rem;
+            margin: 0 auto;
+
+            &:first-child {
+                display: block;
+            }
+        }
+
+    }
+
+    .site-logo {
+        @include span-columns( 3 );
+        max-height: 40px;
+
+        img {
+            position: relative;
+            top: -15px;
+            max-height: 50px;
+        }
+
+    }
+
+
+
+    &.v-fixed {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+
+        .hero {
+            display: none;
+        }
+
+        .site-logo {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 4rem;
+            z-index: 1000;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            .nav-trigger {
+                top: 7rem;
+            }
+
+            .nav-main {
+                top: 14rem;
+                left: 0;
+                width: 100%;
+                padding-top: 5rem;
+                height: 39rem;
+            }
+        }
+
+        .tabs {
+            li {
+                a {
+                    font-size: $font-size-normal;
+                }
+            }
+        }
+    }
+
+    &.v-hero {
+        .tabs {
+            margin-top: -7rem;
+        }
+    }
+}

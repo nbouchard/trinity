@@ -161,7 +161,7 @@ a {
 
         .example {
             @include outer-container;
-
+            position: relative;
             padding: 15px;
 
             hr {
@@ -223,6 +223,24 @@ a {
     text-align: center;
     font-size: 1.6rem;
     color: $gray-light;
+}
+
+.ce-siteHeader.v-example {
+    position: static;
+
+    .tab-content {
+        form {
+            display: none;
+            max-width: 55rem;
+            width: 40%;
+            margin: 0 auto;
+
+            &:first-child {
+                display: block;
+            }
+        }
+    }
+
 }
 
 
