@@ -1,0 +1,55 @@
+//
+// Utility Mixins
+// --------------------------------------------------
+
+//
+// Colors
+// -------------------------
+
+@mixin text-default() {
+    color: $gray-dark;
+}
+@mixin text-green() {
+    color: $green;
+}
+@mixin text-yellow() {
+    color: $yellow;
+}
+@mixin text-blue() {
+    color: $blue;
+}
+@mixin text-gray() {
+    color: $gray;
+}
+@mixin text-white() {
+    color: $white;
+}
+@mixin bg-green() {
+    background-color: $green;
+}
+@mixin bg-yellow() {
+    background-color: $yellow;
+}
+@mixin bg-blue() {
+    background-color: $blue;
+}
+@mixin bg-gray() {
+    background-color: $gray;
+}
+@mixin bg-white() {
+    background-color: $white;
+}
+@mixin bg-black() {
+    background-color: $black;
+}
+@mixin bg-gray-lightest() {
+    background-color: $gray-lightest;
+}
+
+
+//
+// Grid
+// -------------------------
+// .omega {
+//     @include omega;
+// }

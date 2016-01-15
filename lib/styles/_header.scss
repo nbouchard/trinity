@@ -1,30 +1,21 @@
 //
 // Site Header
 // --------------------------------------------------
-.site-root.v-fixed-header {
-    padding-top: 48rem;
-}
+
 .ce-siteHeader {
     @include outer-container( 100% );
+    position: absolute;
+    top: 45rem;
+    width: 100%;
+    z-index: 100;
 
     a {
         color: $white;
     }
 
-    .hero {
-        height: 46rem;
-        background: #007fb6;
-        color: $white;
-
-        .hero-content {
-            @include outer-container;
-            padding-top: 10rem;
-        }
-    }
-
-    .navigation {
+    .ce-mainNavigation {
         position: absolute;
-        top: 0;
+        top: -45rem;
         left: 0;
         width: 100%;
 
@@ -48,7 +39,7 @@
             width: 100%;
             background: rgba( $gray-darker, 0.95 );
             padding-top: 5rem;
-            height: 39rem;
+            height: 45rem;
 
 
             .nav-main-menu {
@@ -125,51 +116,43 @@
     }
 
     .site-logo {
-        @include span-columns( 3 );
-        max-height: 40px;
+        position: absolute;
+        left: 5rem;
+        bottom: 1.5rem;
+        max-height: 60px;
+        z-index: 1000;
 
         img {
             position: relative;
-            top: -15px;
-            max-height: 50px;
+            top: 0;
+            height: 60px;
         }
-
     }
+}
 
-
-
-    &.v-fixed {
+.site-root.v-fixed-header {
+    .ce-siteHeader {
         position: fixed;
         top: 0px;
         width: 100%;
+
+        .site-logo {
+            display: block;
+        }
 
         .hero {
             display: none;
         }
 
-        .site-logo {
-            position: absolute;
-            bottom: 2.5rem;
-            left: 4rem;
-            z-index: 1000;
-        }
-
-        .navigation {
-            position: absolute;
+        .ce-mainNavigation {
             top: 0;
-            left: 0;
-            width: 100%;
 
             .nav-trigger {
-                top: 7rem;
+                top: 6.5rem;
             }
 
             .nav-main {
                 top: 14rem;
-                left: 0;
-                width: 100%;
-                padding-top: 5rem;
-                height: 39rem;
             }
         }
 
@@ -181,10 +164,15 @@
             }
         }
     }
+}
 
-    &.v-hero {
-        .tabs {
-            margin-top: -7rem;
-        }
+.site-root.v-hero-module {
+    .site-logo {
+        display: none;
+    }
+
+    .site-main {
+        padding-top: 12rem;
+        // padding-bottom: 40rem;
     }
 }
