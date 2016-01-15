@@ -41,6 +41,14 @@
         });
         $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
 
+        // $( window ).scroll( function() {
+        //     if( $( window ).scrollTop() <= 56 ) {
+        //         nav.removeClass( 'fixed' );
+        //     } else {
+        //         nav.addClass( 'fixed' );
+        //     }
+        // });
+
         $( window ).scroll( function() {
             if( $( window ).scrollTop() <= 56 ) {
                 sidebar.removeClass( 'fixed' );
