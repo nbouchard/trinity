@@ -3,16 +3,15 @@
 // --------------------------------------------------
 
 
-//
 // Import Web Fonts
 // -------------------------
-@include font-face( 'Kievit', '../fonts/kievit/KievitWeb', 400, $file-formats: woff );
-@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Ita', 400, italic, $file-formats: woff );
-@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Medi', 500, $file-formats: woff );
-@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-MediIta', 500, italic, $file-formats: woff );
-@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Bold', 700, $file-formats: woff );
-@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-BoldIta', 700, italic, $file-formats: woff );
-@include font-face( 'Kievit', '../fonts/kievit/KievitWeb-Black', 900, italic, $file-formats: woff );
+@include font-face( 'Kievit', '#{$kievit-font-path}/KievitWeb', 400, $file-formats: woff );
+@include font-face( 'Kievit', '#{$kievit-font-path}/KievitWeb-Ita', 400, italic, $file-formats: woff );
+@include font-face( 'Kievit', '#{$kievit-font-path}/KievitWeb-Medi', 500, $file-formats: woff );
+@include font-face( 'Kievit', '#{$kievit-font-path}/KievitWeb-MediIta', 500, italic, $file-formats: woff );
+@include font-face( 'Kievit', '#{$kievit-font-path}/KievitWeb-Bold', 700, $file-formats: woff );
+@include font-face( 'Kievit', '#{$kievit-font-path}/KievitWeb-BoldIta', 700, italic, $file-formats: woff );
+@include font-face( 'Kievit', '#{$kievit-font-path}/KievitWeb-Black', 900, italic, $file-formats: woff );
 @import url( 'https://fonts.googleapis.com/css?family=Bitter:400,400italic,700' );
 
 
@@ -33,17 +32,32 @@ body {
 }
 
 
+// Links
+// -------------------------
+
+a {
+    color: $brand-primary;
+    text-decoration: none;
+    transition: color $base-duration $base-timing;
+
+    &:active,
+    &:focus,
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
 // Headings
 // -------------------------
 h1, h2, h3, h4, h5, h6 {
     font-family: $headings-font-family;
-    // font-size: $base-font-size;
     line-height: $headings-line-height;
     margin: 0;
 
     span {
         display: block;
-        font-weight: 500;
+        font-weight: $font-weight-medium;
     }
 
     &.subtext {
@@ -53,46 +67,46 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: $font-size-h1;
-    font-weight: 700;
+    font-weight: $font-weight-bold;
 
     span {
-        font-size: $font-size-h1 * 0.8;
+        font-size: $font-size-h1 * 0.75;
     }
 }
 
 h2 {
     font-size: $font-size-h2;
-    font-weight: 700;
+    font-weight: $font-weight-bold;
 
     span {
         display: block;
-        font-size: $font-size-h2 * 0.8;
+        font-size: $font-size-h2 * 0.75;
     }
 }
 
 h3 {
     font-size: $font-size-h3;
-    font-weight: 500;
+    font-weight: $font-weight-bold;
 
     span {
         display: block;
-        font-size: $font-size-h3 * 0.8;
+        font-size: $font-size-h3 * 0.75;
     }
 }
 
 h4 {
     font-size: $font-size-h4;
-    font-weight: 500;
+    font-weight: $font-weight-medium;
 }
 
 h5 {
     font-size: $font-size-h5;
-    font-weight: 500;
+    font-weight: $font-weight-medium;
 }
 
 h6 {
     font-size: $font-size-h6;
-    font-weight: 500;
+    font-weight: $font-weight-medium;
 }
 
 
@@ -100,20 +114,20 @@ h6 {
 // -------------------------
 p {
     margin: 0 0 $font-size-normal;
+}
 
-    &.lead {
-        font-family: $font-family-serif;
-        font-size: 4.8rem;
-    }
+.primary {
+    @include primary-text;
+}
 
-    &.secondary {
-        font-family: $font-family-serif;
-        font-size: 3.6rem;
-    }
+.secondary {
+    @include secondary-text;
 
-    &.tertiary {
-        font-size: 2.4rem;
-    }
+}
+
+.tertiary {
+    @include tertiary-text;
+
 }
 
 
@@ -121,6 +135,7 @@ p {
 // -------------------------
 blockquote {
     margin: 0;
+
     p {
         font-family: $font-family-serif;
         font-size: 4rem;
@@ -135,29 +150,13 @@ mark {
     background-color: #fcf8e3;
     padding: .2rem;
 }
+
 code {
     padding: 2px 4px;
     font-size: 90%;
     color: $code-color;
     background-color: $code-bg;
     border-radius: $border-radius-base;
-}
-
-
-
-
-
-
-a {
-    color: $brand-primary;
-    text-decoration: none;
-    transition: color $base-duration $base-timing;
-
-    &:active,
-    &:focus,
-    &:hover {
-        color: shade($brand-primary, 25%);
-    }
 }
 
 hr {

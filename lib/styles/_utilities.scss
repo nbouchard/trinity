@@ -8,31 +8,54 @@
 .text-default {
     color: $gray-dark;
 }
+
 .text-green {
     color: $green;
 }
+
 .text-yellow {
     color: $yellow;
 }
+
 .text-gray {
     color: $gray;
 }
+
 .bg-green {
-    background-color: $green;
-}
-.bg-yellow {
-    background-color: $yellow;
-}
-.bg-gray {
-    background-color: $gray;
-}
-.bg-white {
-    background-color: $white;
-}
-.bg-black {
-    background-color: $black;
+    @include bg-green;
 }
 
+.bg-yellow {
+    @include bg-yellow;
+}
+
+.bg-blue {
+    @include bg-blue;
+}
+
+.bg-gray {
+    @include bg-gray;
+}
+
+.bg-white {
+    @include bg-white;
+}
+
+.bg-black {
+    @include bg-black;
+}
+
+.border-left-color-green {
+    border-left-color: $green !important;
+}
+
+.border-left-color-blue {
+    border-left-color: $blue !important;
+}
+
+.border-left-color-gray {
+    border-left-color: $gray !important;
+}
 
 //
 // Typography
@@ -40,21 +63,27 @@
 .align-left {
     text-align: left;
 }
+
 .align-right {
     text-align: right;
 }
+
 .align-center {
     text-align: center;
 }
+
 .nowrap {
     white-space: nowrap;
 }
+
 .uppercase {
     text-transform: uppercase;
 }
+
 .lowercase {
     text-transform: lowercase;
 }
+
 .break-word {
     word-wrap: break-word;
     word-break: break-word;
@@ -68,12 +97,15 @@
 .show {
     display: block !important;
 }
+
 .hide {
     display: none !important;
 }
+
 .invisible {
     visibility: hidden;
 }
+
 .overflow-hidden {
     overflow: hidden
 }
@@ -85,31 +117,17 @@
 .pull-left {
     float: left !important;
 }
+
 .pull-right {
     float: right !important;
 }
+
 .center-block {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
 .clearfix {
     @include clearfix;
-}
-
-
-//
-// Virtical Alignment
-// -------------------------
-.align-top {
-    vertical-align: top !important;
-}
-.align-middle {
-    vertical-align: middle !important;
-}
-.align-baseline {
-    vertical-align: baseline !important;
-}
-.align-bottom {
-    vertical-align: bottom !important;
 }

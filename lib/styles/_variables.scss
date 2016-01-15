@@ -5,172 +5,176 @@
 
 // Colors
 // -------------------------
-
-$black         : #000;
-$gray-darker   : #222;
-$gray-dark     : #333;
-$gray          : #555;
-$gray-light    : #777;
-$gray-lighter  : #eee;
-$white         : #fff;
-
-$brand-primary : #337ab7;
-$brand-success : #5cb85c;
-$brand-info    : #5bc0de;
-$brand-warning : #f0ad4e;
-$brand-danger  : #d9534f;
+$black              : #000;
+$gray-darker        : #222;
+$gray-dark          : #333;
+$gray-medium        : #555;
+$gray-medium-light  : #777;
+$gray-light         : #aaa;
+$gray-lighter       : #eee;
+$gray-lightest      : #f8f8f8;
+$white              : #fff;
 
 $yellow        : #fbb431;
 $green         : #009c95;
+$blue          : #007fb6;
 $gray          : #939ea1;
 
-$body-bg:               $white;
-$text-color:            $gray-dark;
-$link-color:            $brand-primary;
-$link-hover-color:      darken( $link-color, 15% );
 
+$brand-primary      : $blue;
+$body-bg            : $white;
+$text-color         : $gray-dark;
+$link-color         : $blue;
+$link-hover-color   : darken( $link-color, 15% );
 
-// Typography
+$code-color : #c7254e;
+$code-bg    : #f9f2f4;
+
+// Typography Variables
 // -------------------------
-
 $font-family-sans-serif  : Kievit, sans-serif;
 $font-family-serif       : Bitter, serif;
 $font-family-monospace   : Menlo, Monaco, monospace;
 $font-family-base        : $font-family-sans-serif;
 
+$font-weight-bold        : 700;
+$font-weight-medium      : 500;
+$font-weight-regular     : 400;
+$font-weight-light       : 200;
+
 $font-size-base          : 10px;
+$font-size-xsmall        : 1.2rem;
+$font-size-small         : 1.4rem;
 $font-size-normal        : 1.6rem;
-$font-size-large         : 2.4rem;
-$font-size-small         : 1rem;
+$font-size-large         : 2.2rem;
+$font-size-xlarge        : 2.8rem;
 
-$font-size-h1            : 6rem;
-$font-size-h2            : 4.8rem;
-$font-size-h3            : 4.2rem;
-$font-size-h4            : 3.6rem;
-$font-size-h5            : 2.8rem;
-$font-size-h6            : 2.1rem;
+$font-size-h1            : 4.8rem;
+$font-size-h2            : 3.6rem;
+$font-size-h3            : 3.0rem;
+$font-size-h4            : 2.5rem;
+$font-size-h5            : 2.1rem;
+$font-size-h6            : 1.8rem;
 
-// Unit-less `line-height` for use in components like buttons.
-$line-height-base        : 1.618;
+$icon-size-large         : 20rem;
+$icon-size-medium        : 15rem;
+$icon-size-small         : 10rem;
+$icon-size-xsmall        : 7rem;
 
-$spacing-base            : floor( $line-height-base * $font-size-base );
-$spacing-small           : $spacing-base / 2;
-// Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-// $line-height-computed :    floor((@font-size-base * @line-height-base)); // ~20px
+// Unit-less `line-height`.
+$line-height-small       : 1.25;
+$line-height-base        : 1.5;
+$line-height-medium      : 1.75;
+$line-height-tall        : 2;
 
 $headings-font-family    : $font-family-sans-serif;
-$headings-line-height    : $line-height-base;
+$headings-line-height    : $line-height-small;
 $headings-color          : inherit;
 
 $border-radius-base: 3px;
 
-// Code
+
+// Font Paths
 // -------------------------
-$code-color : #c7254e;
-$code-bg    : #f9f2f4;
+$kievit-font-path       : '../fonts/kievit';
+$chooseicon-font-path   : '../fonts/chooseicon';
+$fa-font-path           : '../fonts/fontawesome';
 
 
-// Buttons
+// Animation
 // -------------------------
-$btn-yellow: #fbb431;
-$btn-green: #009c95;
-$btn-gray: #939ea1;
-
-// Forms
-// -------------------------
-// $padding-base-vertical:     6px;
-// $padding-base-horizontal:   12px;
-$input-border: #ccc;
-
-// Iconography
-// -------------------------
-// TBD
-
-
-// Buttons
-// -------------------------
-// TBD
-
-
-// Forms
-// -------------------------
-// TBD
-// $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
-// $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
-
-// Tables
-// -------------------------
-// TBD
-
-
-// From Bitters - Planning to revise and work in above where appropriate
-$base-border-radius: 3px;
-$base-spacing: $line-height-base * 1rem;
-$small-spacing: $base-spacing / 2;
-$base-z-index: 0;
-
-$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($brand-primary, $lightness: -5%, $alpha: -0.3);
-
 $base-duration: 150ms;
 $base-timing: ease;
 
 
+// Z-index
+// -------------------------
+$z-index-base: 0;
+$z-index-low-1: 10;
+$z-index-low-2: 20;
+$z-index-low-3: 30;
+$z-index-medium-1: 100;
+$z-index-medium-2: 120;
+$z-index-medium-3: 130;
+$z-index-high-1: 1000;
+$z-index-high-2: 1200;
+$z-index-high-3: 1300;
+
+// Breakpoints
+// -------------------------
+$mobile: max-width 639px;
+$tablet: min-width 640px max-width 1049px;
+$desktop: min-width 1050px;
+
+$tablet-up: min-width 500px;
+$tablet-down: max-width 1049px;
+
+// Neat Grid Overrides
+// -------------------------
+$gutter: 1rem !global;
+$grid-columns: 4 !global;
+
+$max-width: 99rem;
+$max-width-tablet: 60rem;
+$max-width-mobile: 45rem;
+
+$column: ($max-width - 3 * $gutter) / $grid-columns;
+$column-tablet: ($max-width-tablet - $gutter) / ( $grid-columns / 2 );
+$column-mobile: ($max-width-mobile / ( $grid-columns / 4 ));
+
+// Grid
+// -------------------------
+$grid-padding: 3rem;
+$grid-padding-tablet: 2rem;
+$grid-padding-mobile: 2rem;
+
+$grid-block-short: 22rem;
+$grid-block-tall: 45rem;
+
+$grid-block-short-tablet: 16rem;
+$grid-block-tall-tablet: 33rem;
+
+$page-width: $max-width + ( $grid-padding * 2);
+$page-width-tablet: $max-width-tablet + 2rem;
+$page-width-mobile: $max-width-mobile + 2rem;
+
+// Buttons
+// -------------------------
+$btn-yellow: $yellow;
+$btn-green: $green;
+$btn-gray: $gray;
 
 
+// Forms
+// -------------------------
+$input-border: #ccc;
+
+// From Bitters - Planning to revise and work in above where appropriate
+$base-spacing: $line-height-base * 1rem;
+$small-spacing: $base-spacing / 2;
+
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($brand-primary, $lightness: -5%, $alpha: -0.3);
 
 
+// Iconography
+// -------------------------
+$ce-icon-bolt: "\e900";
+$ce-icon-business: "\e901";
+$ce-icon-chat: "\e902";
+$ce-icon-commercial: "\e903";
+$ce-icon-copy: "\e904";
+$ce-icon-dollar: "\e905";
+$ce-icon-gas: "\e906";
+$ce-icon-help: "\e907";
+$ce-icon-home: "\e908";
+$ce-icon-lightbulb: "\e909";
+$ce-icon-plug: "\e90a";
+$ce-icon-solar: "\e90b";
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Media Query Breakpoints for breakpoint-sass
-
-// Hi-DPI MQs should be used for higher resolution image/icon replacements where non-vector graphics are used
-$mq-hidpi-base: screen (min-resolution 1.5dppx);
-$mq-hidpi-2x: screen (min-resolution 2dppx);
-$mq-hidpi-3x: screen (min-resolution 3dppx);
-
-// Alternate Breakpoint Specifications
-$mq-xxl: screen (min-width 120em);
-$mq-xl: screen (min-width 80em) (max-width 119.99em);
-$mq-xl-max: screen (max-width 119.99em);
-$mq-xl-min: screen (min-width 80em);
-$mq-lg: screen (min-width 60em) (max-width 79.99em);
-$mq-lg-max: screen (max-width 79.99em);
-$mq-lg-min: screen (min-width 60em);
-$mq-md: screen (min-width 48em) (max-width 59.99em);
-$mq-md-max: screen (max-width 59.99em);
-$mq-md-min: screen (min-width 48em);
-$mq-sm: screen (min-width 30em) (max-width 47.99em);
-$mq-sm-max: screen (max-width 47.99em);
-$mq-sm-min: screen (min-width 30em);
-$mq-xs: screen (min-width 20em) (max-width 29.99em);
-$mq-xs-max: screen (max-width 29.99em);
-$mq-xs-min: screen (min-width 20em);
-$mq-xxs: screen (max-width 19.99em);
-
-
-
-//
-// Tables - Based off of Bootstrap (http://getbootstrap.com/css/#tables)
-// --------------------------------------------------
+// Tables
+// -------------------------
 $table-bg:                        $white;
 $table-bg-accent:                 $gray-lighter;
 $table-cell-padding:              1em;
@@ -180,4 +184,31 @@ $table-bg-hover:                  $gray-light;
 $text-muted:                      $gray-light;
 $line-height:                     1.2;
 $ine-height-base:                 1.2;
+
+
+// Hero Module & Header
+// -------------------------
+$hero_module_height: 46rem;
+$hero_module_height_mobile: 40rem;
+
+// Can't stack calcs, so need to hardcode this value
+// Angle should be at 22.5 degrees, so multiply height by tan(22.5 degrees) to find value
+// = $hero_module_height * .41
+$angle_width: 18.8rem;
+
+// Mobile version with angle rotated
+// Angle should be at 12.5 degrees, so multiply max mobile breakpoint by tan(12.5 degrees) to find value
+// = 639px * .22
+$angle_height_mobile: 14rem;
+
+// Pushes the angle off the center line by the set amount
+// A visual hack to make the spacing look better
+$angle-offset: 3rem;
+
+// Menu item heights for calculating offsets
+$nav_height: 12rem;
+$nav_height_small: 10rem;
+// zip search pieces
+$tab-height: 5rem;
+$search-bar-height: 8rem;
 
