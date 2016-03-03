@@ -225,8 +225,34 @@ a {
     color: $gray-light;
 }
 
+
 .ce-siteHeader.v-example {
-    position: static;
+    position: relative;
+    top: 0px;
+
+    .site-logo {
+        display: block;
+    }
+
+    .ce-mainNavigation {
+        top: 0;
+
+        .nav-trigger {
+            top: 6.5rem;
+        }
+
+        .nav-main {
+            top: 14rem;
+        }
+    }
+
+    .tabs {
+        li {
+            a {
+                font-size: $font-size-normal;
+            }
+        }
+    }
 
     .tab-content {
         form {
