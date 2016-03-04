@@ -71,10 +71,8 @@ body {
 .site-sidebar {
     @include grid-columns( 1 );
     padding: 2rem 0;
-    // display: none;
 
     nav {
-        // max-width: 302px;
 
         ul {
             @include list-unstyled;
@@ -221,9 +219,8 @@ body {
 .site-footer {
     clear: both;
     border-top: 1px solid $gray-lighter;
-    padding: 30px;
+    padding: $grid-padding;
     text-align: center;
-    font-size: 1.6rem;
     color: $gray-light;
 }
 
