@@ -1,5 +1,7 @@
-@import 'mixins';
 @import 'variables';
+@import 'mixins';
+
+@import 'vendors/fontawesome/font-awesome';
 
 @import 'normalize';
 @import 'buttons';
@@ -7,6 +9,8 @@
 @import 'lists';
 @import 'tables';
 @import 'typography';
+@import 'icons';
 @import 'utilities';
+@import 'page-frame';
 @import 'header';
 @import 'footer';

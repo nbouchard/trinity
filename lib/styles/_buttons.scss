@@ -1,7 +1,8 @@
+a.btn,
 .btn {
     appearance: none;
-    background-color: $btn-gray;
-    border: 0;
+    background-color: $gray;
+    border: none;
     color: #fff;
     cursor: pointer;
     display: inline-block;
@@ -21,6 +22,8 @@
     &:focus {
         background-color: darken(#939ea1, 10%);
         color: #fff;
+        border: none;
+        text-decoration: none;
     }
 
     &:disabled {
@@ -35,64 +38,65 @@
 
 $tri-height: ($font-size-normal * $line-height-base) + 1.8rem;
 
+a.btn-yellow,
 .btn-yellow {
-    background-color: $btn-yellow;
+    background-color: $yellow;
     color: $gray-darker;
 
     &:before {
         display: none;
-        @include triangle( 2rem $tri-height, transparent $btn-yellow, up-left);
+        @include triangle( 2rem $tri-height, transparent $yellow, up-left);
     }
 
     &:hover,
     &:focus {
-        background-color: darken( $btn-yellow, 10% );
+        background-color: darken( $yellow, 10% );
         color: $gray-darker;
 
         &:before {
-            border-right-color: darken( $btn-yellow, 10% );
+            border-right-color: darken( $yellow, 10% );
         }
     }
-
-
-
 }
 
+a.btn-green,
 .btn-green {
-    background-color: $white;
-    box-shadow: 0 0 0 4px $btn-green inset;
-    color: $btn-green;
+    border: 2px solid $green;
+    background-color: transparent;
+    color: $green;
 
     &:before {
         display: none;
-        @include triangle( 2rem $tri-height, transparent $btn-yellow, up-left);
+        @include triangle( 2rem $tri-height, transparent $yellow, up-left);
     }
 
     &:hover,
     &:focus {
-        background-color: inherit;
-        box-shadow: 0 0 0 4px darken($btn-green, 10%) inset;
-        color: darken($btn-green, 10%);
+        background-color: transparent;
+        border: 2px solid $green;
+        border-color: darken($green, 10%);
+        color: darken($green, 10%);
     }
 }
 
+a.btn-gray,
 .btn-gray {
-    background-color: $btn-gray;
+    background-color: $gray;
 
     &:before {
         display: none;
-        @include triangle( 2rem $tri-height, transparent $btn-gray, up-left);
+        @include triangle( 2rem $tri-height, transparent $gray, up-left);
     }
 
     &:hover,
     &:focus {
         &:before {
-            border-right-color: darken( $btn-gray, 10% );
+            border-right-color: darken( $gray, 10% );
         }
     }
-
 }
 
+a.btn-lg,
 .btn-lg {
     font-size: $font-size-large;
     padding: 1rem 4rem 0.8rem 4rem;

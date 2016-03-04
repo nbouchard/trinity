@@ -14,9 +14,11 @@
 <body class="{{ site.classes }}">
     {{> default-header }}
     <div class="container">
-        {{> default-side-nav}}
         <main class="site-main {{ tpl.classes }}">
-            {{> body }}
+            {{> default-side-nav}}
+            <div class="site-primary">
+                {{> body }}
+            </div>
         </main>
     </div>
     {{> default-footer }}
