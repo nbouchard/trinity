@@ -71,10 +71,8 @@ body {
 .site-sidebar {
     @include grid-columns( 1 );
     padding: 2rem 0;
-    // display: none;
 
     nav {
-        // max-width: 302px;
 
         ul {
             @include list-unstyled;
