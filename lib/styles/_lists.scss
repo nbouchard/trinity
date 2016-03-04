@@ -35,17 +35,17 @@ dl {
     }
 
     &.horizontal {
-        @include outer-container;
 
         dt {
-            @include span-columns( 3 );
+            float: left;
             clear: left;
+            width: 20%;
             margin-top: 0;
         }
 
         dd {
-            @include span-columns( 9 );
-            @include omega;
+            width: 80%;
+            margin-left: 20%;
         }
     }
 }
