@@ -1,352 +1,150 @@
-// Mixins for defining the various Choose Grid System elements.
+// Custom Neat grid functions
+// A simplified version of the Neat grid with fixed widths rather than percentages for columns and margins
+// So we can have better control over the spacing at various breakpoints
+
+@function fixed-grid( $columns, $column-width) {
+  @return $columns * $column-width + ($columns - 1) * $fg-gutter;
+}
+
+@mixin span-columns-fixed( $span: $columns, $fg-column: $column-width ) {
+    $columns: nth($span, 1);
+    $container-columns: container-span($span);
+    $items-per-line: $grid-columns / $columns;
+
+    $parent-columns: get-parent-columns($container-columns) !global;
+
+    $direction: get-direction($layout-direction, $default-layout-direction);
+    $opposite-direction: get-opposite-direction($direction);
+
+    float: #{$opposite-direction};
+
+    margin-#{$direction}: $gutter;
+    width: fixed-grid( $columns, $fg-column );
+
+    &:last-child {
+        margin-#{$direction}: 0;
+    }
+}
+
+// CE Grid
+// -------------------------
+// Translates the 4 visual columns into Neat grid columns and adds our standard padding and bottom gutters
+// Allows setting of default heights for square blocks
 //
-// Styleguide Foundations.GridSystem.GridMixins
-@mixin cg-row($v-padding: false, $h-padding: false) {
-    @include box-sizing(border-box);
-    @include clearfix();
-    width: 100%;
-    max-width: $site-max-width;
-    display: block;
-    margin: 0 auto;
+// @param {Number (unitless)} $columns [$grid-columns]
+//   - Number of columns to span as it appears in our mockups - can be 1, 2, 3, or 4
+//
+// @param {String} $height [flex]
+//   - Sets a fixed height for a block to force it square. Can be either 'short' or 'tall'.
+//
+// @example scss
+//   .element {
+//     @include grid-columns( 2 , short);
+//   }
+//
+// @example css
+//   .element {
+//      display: block;
+//      float: left;
+//      margin-right: 1rem;
+//      width: 24rem;
+//      padding: 3rem;
+//      height: 21rem;
+//    }
+//
+//    .element:last-child {
+//      margin-right: 0;
+//    }
 
-    @if $v-padding == true {
-        padding-top: $grid-gutter-width;
-        padding-bottom: $grid-gutter-width;
-    } @else {
-        padding-top: 0;
-        padding-bottom: 0;
+@mixin grid-columns( $columns, $height: flex ) {
+    @include span-columns-fixed( $columns, $column );
+    padding: $grid-padding;
+    margin-bottom: $gutter;
+
+    @if $height == short {
+        height: $grid-block-short;
+    } @else if $height == tall {
+        height: $grid-block-tall;
     }
 
-    @if $h-padding == true {
-        padding-left: $grid-gutter-width;
-        padding-right: $grid-gutter-width;
-    } @else {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
+    @include media( $tablet ) {
+        @include span-columns-fixed( $columns , $column-tablet );
+        padding: $grid-padding-tablet;
 
-// item = 1of1 = 2of2 = 3of3 = 4of4 = 5of5 = 6of6 = 8of8
-@mixin cg-item($v-padding: true, $h-padding: true) {
-    @include box-sizing(border-box);
-    width: 100%;
-    float: left;
-    margin: 0;
-
-    @if $v-padding == true {
-        padding-top: $grid-gutter-width;
-        padding-bottom: $grid-gutter-width;
-    } @else {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-    @if $h-padding == true {
-        padding-left: $grid-gutter-width;
-        padding-right: $grid-gutter-width;
-    } @else {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@mixin cg-1of8($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 12.5%;
-    } @else {
-        @include breakpoint($mq-lg) {
-            width: 12.5%;
+        @if $height == short {
+            height: $grid-block-short-tablet;
+        } @else if $height == tall {
+            height: $grid-block-tall-tablet;
         }
+    }
 
-        @include breakpoint($mq-xl-min) {
-            width: 12.5%;
-        }
-
-        &.is-strict {
-            width: 12.5%;
-        }
+    @include media( $mobile , 1 ) {
+        @include span-columns( 1 , $column-mobile );
+        padding: $grid-padding-mobile;
+        min-height: $grid-block-short-tablet;
+        height: auto;
     }
 }
 
-@mixin cg-1of6 ($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
+//
+// Grid Utilities
+// -------------------------
+// Creates the correct outer-container for each breakpoint
+@mixin grid-container {
+    @include outer-container;
 
-    @if $strict == true {
-        width: 16.66%;
-    } @else {
-        @include breakpoint($mq-md) {
-            width: 33.33%;
-        }
+    @include media( $tablet) {
+        @include outer-container( $max-width-tablet );
+    }
 
-        @include breakpoint($mq-lg-min) {
-            width: 16.66%;
-        }
-
-        &.is-strict {
-            width: 16.66%;
-        }
+    @include media( $mobile) {
+        @include outer-container( $max-width-mobile );
     }
 }
 
-@mixin cg-1of5($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
 
-    @if $strict == true {
-        width: 20%;
-    } @else {
-        @include breakpoint($mq-md) {
-            width: 20%;
-        }
+// Standard treament for grid blocks that act as headlines
+@mixin grid-headline {
+    @include text-white;
+    text-align: center;
+    @include flexbox-center;
 
-        @include breakpoint($mq-lg-min) {
-            width: 20%;
-        }
-
-        &.is-strict {
-            width: 20%;
-        }
+    @include media( $tablet-down) {
+        @include flexbox-center;
     }
 }
 
-// 1of4 = 2of8
-@mixin cg-1of4($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
+// Standard treament for grid blocks that are filled with a background image
+@mixin grid-bgImage {
+    background-size: cover;
+    background-position: 50% 50%;
+    @include hide-text;
+}
 
-    @if $strict == true {
-        width: 25%;
-    } @else {
-        @include breakpoint($mq-md) {
-            width: 50%;
+// Standard treament for grid blocks that have an image inside it that should expand to fit the block
+// @param {String} $fillAxis [vertical]
+//   - Sets the axis that the image should fill to 100%. Can take either 'vertical' or 'horizontal'.
+
+@mixin grid-image ( $fillAxis: vertical ) {
+    @include flexbox-center;
+    padding: 0;
+    overflow: hidden;
+
+    @if $fillAxis == vertical {
+        img {
+            height: 100%;
+            max-width: none;
         }
-
-        @include breakpoint($mq-lg-min) {
-            width: 25%;
-        }
-
-        &.is-strict {
-            width: 25%;
+    } @else if $fillAxis == horizontal {
+        img {
+            width: 100%;
         }
     }
 }
 
-// 1of3 = 2of6
-@mixin cg-1of3($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 33.33%;
-    } @else {
-        @include breakpoint($mq-md-min) {
-            width: 33.33%;
-        }
-
-        &.is-strict {
-            width: 33.33%;
-        }
-    }
-}
-
-@mixin cg-3of8($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 37.5%;
-    } @else {
-        @include breakpoint($mq-lg) {
-            width: 37.5%;
-        }
-
-        @include breakpoint($mq-xl-min) {
-            width: 37.5%;
-        }
-
-        &.is-strict {
-            width: 37.5%;
-        }
-    }
-}
-
-@mixin cg-2of5($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 40%;
-    } @else {
-        @include breakpoint($mq-md) {
-            width: 40%;
-        }
-
-        @include breakpoint($mq-lg-min) {
-            width: 40%;
-        }
-
-        &.is-strict {
-            width: 40%;
-        }
-    }
-}
-
-// 1of2 = 2of4 = 3of6 = 4of8
-@mixin cg-1of2($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 50%;
-    } @else {
-        @include breakpoint($mq-lg) {
-            width: 50%;
-        }
-
-        @include breakpoint($mq-xl-min) {
-            width: 50%;
-        }
-
-        &.is-strict {
-            width: 50%;
-        }
-    }
-}
-
-@mixin cg-3of5($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 60%;
-    } @else {
-        @include breakpoint($mq-md) {
-            width: 60%;
-        }
-
-        @include breakpoint($mq-lg-min) {
-            width: 60%;
-        }
-
-        &.is-strict {
-            width: 60%;
-        }
-    }
-}
-
-@mixin cg-5of8($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 62.5%;
-    } @else {
-        @include breakpoint($mq-lg) {
-            width: 62.5%;
-        }
-
-        @include breakpoint($mq-xl-min) {
-            width: 62.5%;
-        }
-
-        &.is-strict {
-            width: 62.5%;
-        }
-    }
-}
-
-// 2of3 = 4of6
-@mixin cg-2of3($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 66.67%;
-    } @else {
-        @include breakpoint($mq-xl-min) {
-            width: 66.67%;
-        }
-
-        &.is-strict {
-            width: 66.67%;
-        }
-    }
-}
-
-// 3of4 = 6of8
-@mixin cg-3of4($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 75%;
-    } @else {
-        @include breakpoint($mq-md) {
-            width: 50%;
-        }
-
-        @include breakpoint($mq-lg-min) {
-            width: 75%;
-        }
-
-        &.is-strict {
-            width: 75%;
-        }
-    }
-}
-
-@mixin cg-4of5($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 80%;
-    } @else {
-        @include breakpoint($mq-md) {
-            width: 80%;
-        }
-
-        @include breakpoint($mq-lg-min) {
-            width: 80%;
-        }
-
-        &.is-strict {
-            width: 80%;
-        }
-    }
-}
-
-@mixin cg-5of6 ($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 83.33%;
-    } @else {
-        @include breakpoint($mq-sm) {
-            width: 33.33%;
-        }
-
-        @include breakpoint($mq-md) {
-            width: 33.33%;
-        }
-
-        @include breakpoint($mq-lg-min) {
-            width: 83.33%;
-        }
-
-        &.is-strict {
-            width: 83.33%;
-        }
-    }
-}
-
-@mixin cg-7of8($v-padding: true, $h-padding: true, $strict: false) {
-    @include cg-item($v-padding, $h-padding);
-
-    @if $strict == true {
-        width: 87.5%;
-    } @else {
-        @include breakpoint($mq-lg) {
-            width: 87.5%;
-        }
-
-        @include breakpoint($mq-xl-min) {
-            width: 87.5%;
-        }
-
-        &.is-strict {
-            width: 87.5%;
-        }
-    }
+// Standard treament for grid blocks that are filled with an image
+@mixin grid-bigIcon {
+    @include grid-columns( 1, short );
+    @include flexbox-center;
+    font-size: $icon-size-large;
 }

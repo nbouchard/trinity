@@ -6,50 +6,120 @@
 // Colors
 // -------------------------
 
-@mixin text-default() {
+@mixin text-default {
     color: $gray-dark;
 }
-@mixin text-green() {
+
+@mixin text-green {
     color: $green;
 }
-@mixin text-yellow() {
+
+@mixin text-yellow {
     color: $yellow;
 }
-@mixin text-blue() {
+
+@mixin text-blue {
     color: $blue;
 }
-@mixin text-gray() {
+
+@mixin text-gray {
     color: $gray;
 }
-@mixin text-white() {
+
+@mixin text-white {
     color: $white;
 }
-@mixin bg-green() {
+
+@mixin bg-green {
     background-color: $green;
 }
-@mixin bg-yellow() {
+
+@mixin bg-yellow {
     background-color: $yellow;
 }
-@mixin bg-blue() {
+
+@mixin bg-blue {
     background-color: $blue;
 }
-@mixin bg-gray() {
+
+@mixin bg-gray {
     background-color: $gray;
 }
-@mixin bg-white() {
+
+@mixin bg-white {
     background-color: $white;
 }
-@mixin bg-black() {
+
+@mixin bg-black {
     background-color: $black;
 }
-@mixin bg-gray-lightest() {
+
+@mixin bg-gray-lightest {
     background-color: $gray-lightest;
 }
 
 
 //
-// Grid
+// Typography
 // -------------------------
-// .omega {
-//     @include omega;
-// }
+
+@mixin primary-text {
+    font-family: $font-family-serif;
+    font-size: $font-size-h4;
+    line-height: $line-height-medium;
+}
+
+@mixin secondary-text {
+    font-family: $font-family-serif;
+    font-size: $font-size-h5;
+    line-height: $line-height-medium;
+}
+
+@mixin tertiary-text {
+    font-size: $font-size-h6;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-medium;
+}
+
+
+//
+// Alignment
+// -------------------------
+//
+// For all flexbox utilities, apply the utility mixin to the parent item
+// that wraps all the items you want aligned
+
+// Use flexbox to center items both horizontally and vertically
+// Child elements will wrap onto multiple lines if necessary
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+// Use flexbox to center a single line of items vertically
+// Forces all child elements to be on a single line
+@mixin flexbox-center-vertically {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+// Use flexbox to center a multiple lines of items vertically
+// Child elements will wrap onto multiple lines and will center within parent
+@mixin flexbox-align-vertically {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+// Use flexbox to make child items maintain the same height regardless of content
+// Content within the child items remains top aligned
+@mixin flexbox-same-height {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}

@@ -1,0 +1,61 @@
+//
+// Icons
+// --------------------------------------------------
+
+@include font-face( 'chooseicon', '#{$chooseicon-font-path}/chooseicon', 400, normal, $file-formats: ttf woff svg );
+
+[class^="ce-icon-"], [class*=" ce-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'chooseicon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ce-icon-bolt:before {
+    content: "\e900";
+}
+.ce-icon-smallbusiness:before,
+.ce-icon-business:before {
+    content: "\e901";
+}
+.ce-icon-chat:before {
+    content: "\e902";
+}
+.ce-icon-commercial:before {
+    content: "\e903";
+}
+.ce-icon-copy:before {
+    content: "\e904";
+}
+.ce-icon-dollar:before {
+    content: "\e905";
+}
+.ce-icon-naturalgas:before,
+.ce-icon-gas:before {
+    content: "\e906";
+}
+.ce-icon-help:before {
+    content: "\e907";
+}
+.ce-icon-residential:before,
+.ce-icon-home:before {
+    content: "\e908";
+}
+.ce-icon-lightbulb:before {
+    content: "\e909";
+}
+.ce-icon-electricity:before,
+.ce-icon-plug:before {
+    content: "\e90a";
+}
+.ce-icon-solar:before {
+    content: "\e90b";
+}

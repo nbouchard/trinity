@@ -5,46 +5,36 @@
 
 body {
     > .container {
-        @include outer-container;
+        @include outer-container ( $page-width );
         padding-bottom: 2.5rem;
     }
-}
 
-a {
-    color: $link-color;
-
-    &:hover {
-        color: $link-hover-color;
+    .testing {
+        @include grid-container;
     }
 }
 
 
 .site-header {
     background-color: #5B5E63;
-    margin-bottom: 2rem;
 
     nav {
         @include outer-container;
 
         h1 {
+            float: left;
             margin: 0;
-
-            @include span-columns( 1.35 );
-            @include omega;
-
             text-align: center;
 
             a {
                 font-size: 2.2rem;
                 line-height: 6rem;
             }
-
         }
 
         ul {
-            @include span-columns( 10 );
-
-            list-style: none;
+            @include list-unstyled;
+            float: left;
             margin: 0;
 
             li {
@@ -58,6 +48,7 @@ a {
             color: $white;
             padding: 0 12px;
             line-height: 6rem;
+            text-decoration: none;
 
 
             &:hover {
@@ -72,15 +63,20 @@ a {
 }
 
 
-.sidebar {
-    margin-top: 1.5rem;
-    @include span-columns( 4 );
+.site-main {
+    @include grid-container;
+}
+
+
+.site-sidebar {
+    @include grid-columns( 1 );
+    padding: 2rem 0;
 
     nav {
         max-width: 302px;
 
         ul {
-            list-style: none;
+            @include list-unstyled;
             font-size: 15px;
             line-height: 1.6em;
             outline: 0;
@@ -89,11 +85,12 @@ a {
 
                 a {
                     padding: 12px;
-                    border-radius: 5px;
+                    border-radius: 3px;
                     margin-bottom: 6px;
                     color: #484848;
                     display: block;
                     line-height: 1em;
+                    text-decoration: none;
 
                     &:hover {
                         background: #f4f4f4;
@@ -151,8 +148,8 @@ a {
 }
 
 
-.site-main {
-    @include span-columns( 8 );
+.site-primary {
+    @include grid-columns( 3 );
 
     .example-block {
         border: 1px solid #ddd;
@@ -206,7 +203,6 @@ a {
                     border-radius: 4px;
                 }
             }
-            // border-top: none;
         }
     }
 
