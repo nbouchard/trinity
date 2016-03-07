@@ -9,111 +9,20 @@ tpl:
   title: Header
 ---
 <h1>Header</h1>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<p>There are two distinct versions of the site header — one that incorporates a hero unit, and one that does not. Pages without a hero unit have a fixed position header by default. For pages with a hero unit, the header switches between fixed and static postion, depending on scroll location.</p>
 <div class="example-block">
     <div class="example">
-
-        <header class="ce-siteHeader v-example" role="banner">
-
-            <h1 class="site-logo"><a href="#"><img src="../../images/logo-choose-energy.svg" alt="Choose Energy"></a></h1>
-
-            <div class="ce-mainNavigation">
-                <a href="#" class="nav-trigger">Nav Trigger</a>
-                <div class="nav-main">
-                    <nav class="nav-main-menu" role="navigation">
-                        ...
-                    </nav>
-                </div>
-            </div>
-
-            <ul class="tabs">
-                <li class="active"><a href="#search-zip-home">Home</a></li>
-                <li><a href="#search-zip-business">Business</a></li>
-            </ul>
-
-            <div class="tab-content">
-                <form class="search-form" id="search-zip-home">
-                    <input type="search" class="form-control" id="search" placeholder="Enter your zip code (home)">
-                    <button type="button" class="btn btn-search btn-yellow">Search</button>
-                </form>
-                <form class="search-form" id="search-zip-business">
-                    <input type="search" class="form-control" id="search" placeholder="Enter your zip code (biz)">
-                    <button type="button" class="btn btn-search btn-yellow">Search</button>
-                </form>
-            </div>
-        </header>
-
+        Header with hero unit:
+        <img src="../../images/ceux-header-hero.jpg" alt="">
+        <br><br>
+        Fixed header:
+        <img src="../../images/ceux-header-fixed.jpg" alt="">
     </div>
 
 {{#markdown}}
 ```html
-<header class="ce-siteHeader v-hero" role="banner">
-
-    <h1 class="site-logo"><a href="#"><img src="wp-content/themes/ChooseEnergyTheme/images/logos/choose-energy-charcoal.png" alt=""></a></h1>
-
-    <div class="hero">
-        <div class="hero-content">
-            <h3 class="subtext">
-                Save on your electricty bills
-                <span>Find the right plan in 30 seconds</span>
-            </h3>
-        </div>
-    </div>
-
-    <div class="navigation">
-        <a href="#" class="nav-trigger">Nav Trigger</a>
-        <div class="nav-main">
-            <nav class="nav-main-menu" role="navigation">
-                <ul>
-                    <li><a href="#">Plans for Home</a></li>
-                    <li><a href="#">Plans for Business</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Energy Choices</a></li>
-                    <li><a href="#">Electricity</a></li>
-                    <li><a href="#">Natural Gas</a></li>
-                    <li><a href="#">Solar</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Energy Suppliers</a></li>
-                    <li><a href="#">Service Areas</a></li>
-                    <li><a href="#">Public Utility Commissions</a></li>
-                    <li><a href="#">Utilities</a></li>
-                    <li><a href="#">State Trend Reports</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Energy Blog</a></li>
-                    <li><a href="#">How Switching Works</a></li>
-                    <li><a href="#">Why Switch</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-
-    <ul class="tabs">
-        <li class="active"><a href="#search-zip-home">Home</a></li>
-        <li><a href="#search-zip-business">Business</a></li>
-    </ul>
-
-    <div class="tab-content">
-        <form class="search-form" id="search-zip-home">
-            <input type="search" class="form-control" id="search" placeholder="Enter your zip code (home)">
-            <button type="button" class="btn btn-search btn-yellow">Search</button>
-        </form>
-        <form class="search-form" id="search-zip-business">
-            <input type="search" class="form-control" id="search" placeholder="Enter your zip code (biz)">
-            <button type="button" class="btn btn-search btn-yellow">Search</button>
-        </form>
-    </div>
+<header class="ce-siteHeader" role="banner">
+    ...
 </header>
 ```
 {{/markdown}}
