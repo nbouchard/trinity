@@ -2,10 +2,10 @@ module.exports = function(grunt) {
 
     grunt.config('html-inspector', {
         options: {
-            parameters: 'noglobals=true'
+            // parameters: 'noglobals=true'
         },
         all: {
-            src: ['dist/*.html']
+            src: ['dist/**/*.html']
         }
     });
 
