@@ -31,6 +31,8 @@ For our SCSS files, we use [SCSS Lint](https://github.com/brigade/scss-lint) whi
 
 It should be noted that we do not enforce SCSS linting rules as strictly as our JS linting. By default, our SCSS Lint is set up to report warnings but not fail the grunt task using the `--force` flag.
 
+Running `gem update --system && gem install scss-lint` may be required to get SCSS linting to run.
+
 #### HTML Inspector
 
 For our HTML validation, we care more about the resultant HTML files than the actual template files themselves, so we run [HTML Inspector](https://github.com/philipwalton/html-inspector) on the resultant HTML files in `dist/` instead of the raw template files.
