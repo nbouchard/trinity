@@ -54,7 +54,7 @@ module.exports = function(grunt) {
         'Process and compile our CSS for local development.',
         [
             'sass',
-            'autoprefixer',
+            'postcss:dist',
         ]
     );
 
