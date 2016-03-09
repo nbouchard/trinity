@@ -1,0 +1,398 @@
+---
+layout: default
+site:
+  name: ChooseUX
+  version: 0.1.0
+section: Pattern Library
+tpl:
+  desc: Page Desc
+  title: Form Elements
+---
+<h1>Form Elements</h1>
+<p>Baseline styles and usage examples for for common form elements.</p>
+
+<h2 id="buttons">Buttons</h2>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+
+<h3>Button Tags</h3>
+<div class="example-block">
+    <div class="example">
+        <a class="btn btn-gray" href="#" role="button">Link</a>
+        <button class="btn btn-gray" type="submit">Button</button>
+        <input class="btn btn-gray" type="button" value="Input">
+        <input class="btn btn-gray" type="submit" value="Submit">
+    </div>
+
+{{#markdown}}
+```html
+<a class="btn btn-gray" href="#" role="button">Link</a>
+<button class="btn btn-gray" type="submit">Button</button>
+<input class="btn btn-gray" type="button" value="Input">
+<input class="btn btn-gray" type="submit" value="Submit">
+```
+{{/markdown}}
+</div>
+
+<h3>Options</h3>
+<div class="example-block">
+    <div class="example">
+        <button type="button" class="btn btn-green">Green</button>
+
+        <button type="button" class="btn btn-yellow">Yellow</button>
+
+        <button type="button" class="btn btn-gray">Gray</button>
+    </div>
+
+{{#markdown}}
+```html
+<button type="button" class="btn btn-green">Green</button>
+<button type="button" class="btn btn-yellow">Yellow</button>
+<button type="button" class="btn btn-gray">Gray</button>
+```
+{{/markdown}}
+</div>
+
+<h3>Sizes</h3>
+<div class="example-block">
+    <div class="example">
+        <p>
+            <button type="button" class="btn btn-gray btn-lg">Large button</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-gray">Default button</button>
+        </p>
+    </div>
+
+{{#markdown}}
+```html
+<p>
+    <button type="button" class="btn btn-gray btn-lg">Large button</button>
+</p>
+<p>
+    <button type="button" class="btn btn-gray">Default button</button>
+</p>
+```
+{{/markdown}}
+</div>
+
+<h3>Disabled State</h3>
+<div class="example-block">
+    <div class="example">
+        <button type="button" class="btn btn-lg btn-gray" disabled="disabled">Primary button</button>
+    </div>
+
+{{#markdown}}
+```html
+<button type="button" class="btn btn-lg btn-gray" disabled="disabled">Primary button</button>
+```
+{{/markdown}}
+</div>
+
+<!-- <h3>Button groups</h3>
+<div class="example-block">
+    <div class="example">
+        <h6>TBD</h6>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary">Left</button>
+            <button type="button" class="btn btn-primary">Middle</button>
+            <button type="button" class="btn btn-primary">Right</button>
+        </div>
+    </div>
+
+{{#markdown}}
+```html
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-primary">Left</button>
+    <button type="button" class="btn btn-primary">Middle</button>
+    <button type="button" class="btn btn-primary">Right</button>
+</div>
+```
+{{/markdown}}
+</div> -->
+
+
+
+<h2 id="inputs">Inputs</h2>
+<p>Common inputs with :hover and :focus effects.</p>
+<div class="example-block">
+    <div class="example">
+        <div class="form-group">
+            <label for="example-text">Text</label>
+            <input type="email" class="form-control" id="example-text" placeholder="Text">
+        </div>
+        <div class="form-group">
+            <label for="example-email">Email</label>
+            <input type="email" class="form-control" id="example-email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="example-url">URL</label>
+            <input type="url" class="form-control" id="example-url" placeholder="URL">
+        </div>
+        <div class="form-group">
+            <label for="example-tel">Phone</label>
+            <input type="tel" class="form-control" id="example-tel" placeholder="Phone">
+        </div>
+        <div class="form-group">
+            <label for="example-textarea">Textarea</label>
+            <textarea class="form-control" id="example-textarea" rows="3"></textarea>
+        </div>
+    </div>
+
+{{#markdown}}
+```html
+<div class="form-group">
+    <label for="example-text">Text</label>
+    <input type="text" class="form-control" id="example-text" placeholder="Text">
+</div>
+<div class="form-group">
+    <label for="example-email">Email</label>
+    <input type="email" class="form-control" id="example-email" placeholder="Email">
+</div>
+<div class="form-group">
+    <label for="example-url">URL</label>
+    <input type="url" class="form-control" id="example-url" placeholder="URL">
+</div>
+<div class="form-group">
+    <label for="example-tel">Phone</label>
+    <input type="tel" class="form-control" id="example-tel" placeholder="Phone">
+</div>
+<div class="form-group">
+    <label for="example-textarea">Textarea</label>
+    <textarea class="form-control" id="example-textarea" rows="3"></textarea>
+</div>
+```
+{{/markdown}}
+</div>
+
+<!-- <h3>Search Form</h3>
+<div class="example-block">
+    <div class="example">
+        <form class="search-form">
+            <input type="search" class="form-control" id="search" placeholder="Enter your zip code">
+            <button type="button" class="btn btn-search btn-yellow">Search</button>
+        </form>
+    </div>
+
+{{#markdown}}
+```html
+<form class="search-form">
+    <input type="search" class="form-control" id="search" placeholder="Enter your zip code">
+    <button type="button" class="btn btn-search btn-yellow">Search</button>
+</form>
+```
+{{/markdown}}
+</div> -->
+
+<!-- <h3>Inputs with Icons</h3>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div> -->
+
+
+<h2 id="select">Select / Dropdowns</h2>
+<p>Add the <code>.select2-form</code> class to <code>&lt;select&gt;</code> tags to apply our custom styles and behaviors to dropdowns. Requires jQuery and the <a href="https://select2.github.io/">Select2</a> javascript plugin.</p>
+<div class="example-block">
+    <div class="example">
+        <select class="select2-form">
+            <option>One</option>
+            <option>Two</option>
+            <option>Three</option>
+            <option>Four</option>
+            <option>Five</option>
+        </select>
+    </div>
+
+{{#markdown}}
+```html
+<select class="select2-form">
+    <option>One</option>
+    <option>Two</option>
+    <option>Three</option>
+    <option>Four</option>
+    <option>Five</option>
+</select>
+```
+{{/markdown}}
+</div>
+
+<!-- <h2 id="checkboxes">Checkboxes & Radio Buttons</h2>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+
+<h3>Horizontal Labels</h3>
+<div class="example-block">
+    <div class="example">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+            </label>
+        </div>
+    </div>
+
+{{#markdown}}
+```html
+<div class="checkbox">
+    <label>
+        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+    </label>
+</div>
+<div class="radio">
+    <label>
+        <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+    </label>
+</div>
+```
+{{/markdown}}
+</div>
+
+<h3>Stacked Labels</h3>
+
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+
+<h3>w/ description text</h3>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+
+<h3>Radio grid (buttons where only one can be selected)</h3>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+
+
+<h2 id="dates">Dates</h2>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+
+<h3>Datepicker</h3>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+
+<h3>Day select</h3>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+
+<h3>Week select</h3>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+
+<h3>Year select</h3>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+
+
+<h2 id="help">Help / Validation</h2>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+
+<h2 id="switch">Switch / On-Off toggle</h2>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+
+<h2 id="sliders">Sliders</h2>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+ -->

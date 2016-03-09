@@ -1,0 +1,133 @@
+//
+// Utility Classes
+// --------------------------------------------------
+
+//
+// Colors
+// -------------------------
+.text-default {
+    color: $gray-dark;
+}
+
+.text-green {
+    color: $green;
+}
+
+.text-yellow {
+    color: $yellow;
+}
+
+.text-gray {
+    color: $gray;
+}
+
+.bg-green {
+    @include bg-green;
+}
+
+.bg-yellow {
+    @include bg-yellow;
+}
+
+.bg-blue {
+    @include bg-blue;
+}
+
+.bg-gray {
+    @include bg-gray;
+}
+
+.bg-white {
+    @include bg-white;
+}
+
+.bg-black {
+    @include bg-black;
+}
+
+.border-left-color-green {
+    border-left-color: $green !important;
+}
+
+.border-left-color-blue {
+    border-left-color: $blue !important;
+}
+
+.border-left-color-gray {
+    border-left-color: $gray !important;
+}
+
+//
+// Typography
+// -------------------------
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.break-word {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+
+//
+// Display & Visibility
+// -------------------------
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.overflow-hidden {
+    overflow: hidden
+}
+
+
+//
+// Floats
+// -------------------------
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clearfix {
+    @include clearfix;
+}

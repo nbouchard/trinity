@@ -1,0 +1,150 @@
+// Custom Neat grid functions
+// A simplified version of the Neat grid with fixed widths rather than percentages for columns and margins
+// So we can have better control over the spacing at various breakpoints
+
+@function fixed-grid( $columns, $column-width) {
+  @return $columns * $column-width + ($columns - 1) * $fg-gutter;
+}
+
+@mixin span-columns-fixed( $span: $columns, $fg-column: $column-width ) {
+    $columns: nth($span, 1);
+    $container-columns: container-span($span);
+    $items-per-line: $grid-columns / $columns;
+
+    $parent-columns: get-parent-columns($container-columns) !global;
+
+    $direction: get-direction($layout-direction, $default-layout-direction);
+    $opposite-direction: get-opposite-direction($direction);
+
+    float: #{$opposite-direction};
+
+    margin-#{$direction}: $gutter;
+    width: fixed-grid( $columns, $fg-column );
+
+    &:last-child {
+        margin-#{$direction}: 0;
+    }
+}
+
+// CE Grid
+// -------------------------
+// Translates the 4 visual columns into Neat grid columns and adds our standard padding and bottom gutters
+// Allows setting of default heights for square blocks
+//
+// @param {Number (unitless)} $columns [$grid-columns]
+//   - Number of columns to span as it appears in our mockups - can be 1, 2, 3, or 4
+//
+// @param {String} $height [flex]
+//   - Sets a fixed height for a block to force it square. Can be either 'short' or 'tall'.
+//
+// @example scss
+//   .element {
+//     @include grid-columns( 2 , short);
+//   }
+//
+// @example css
+//   .element {
+//      display: block;
+//      float: left;
+//      margin-right: 1rem;
+//      width: 24rem;
+//      padding: 3rem;
+//      height: 21rem;
+//    }
+//
+//    .element:last-child {
+//      margin-right: 0;
+//    }
+
+@mixin grid-columns( $columns, $height: flex ) {
+    @include span-columns-fixed( $columns, $column );
+    padding: $grid-padding;
+    margin-bottom: $gutter;
+
+    @if $height == short {
+        height: $grid-block-short;
+    } @else if $height == tall {
+        height: $grid-block-tall;
+    }
+
+    @include media( $tablet ) {
+        @include span-columns-fixed( $columns , $column-tablet );
+        padding: $grid-padding-tablet;
+
+        @if $height == short {
+            height: $grid-block-short-tablet;
+        } @else if $height == tall {
+            height: $grid-block-tall-tablet;
+        }
+    }
+
+    @include media( $mobile , 1 ) {
+        @include span-columns( 1 , $column-mobile );
+        padding: $grid-padding-mobile;
+        min-height: $grid-block-short-tablet;
+        height: auto;
+    }
+}
+
+//
+// Grid Utilities
+// -------------------------
+// Creates the correct outer-container for each breakpoint
+@mixin grid-container {
+    @include outer-container;
+
+    @include media( $tablet) {
+        @include outer-container( $max-width-tablet );
+    }
+
+    @include media( $mobile) {
+        @include outer-container( $max-width-mobile );
+    }
+}
+
+
+// Standard treament for grid blocks that act as headlines
+@mixin grid-headline {
+    @include text-white;
+    text-align: center;
+    @include flexbox-center;
+
+    @include media( $tablet-down) {
+        @include flexbox-center;
+    }
+}
+
+// Standard treament for grid blocks that are filled with a background image
+@mixin grid-bgImage {
+    background-size: cover;
+    background-position: 50% 50%;
+    @include hide-text;
+}
+
+// Standard treament for grid blocks that have an image inside it that should expand to fit the block
+// @param {String} $fillAxis [vertical]
+//   - Sets the axis that the image should fill to 100%. Can take either 'vertical' or 'horizontal'.
+
+@mixin grid-image ( $fillAxis: vertical ) {
+    @include flexbox-center;
+    padding: 0;
+    overflow: hidden;
+
+    @if $fillAxis == vertical {
+        img {
+            height: 100%;
+            max-width: none;
+        }
+    } @else if $fillAxis == horizontal {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// Standard treament for grid blocks that are filled with an image
+@mixin grid-bigIcon {
+    @include grid-columns( 1, short );
+    @include flexbox-center;
+    font-size: $icon-size-large;
+}

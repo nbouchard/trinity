@@ -1,0 +1,203 @@
+//
+// Site Footer
+// --------------------------------------------------
+
+.ce-siteFooter {
+    color: $white;
+
+    a {
+        color: $white;
+        font-weight: $font-weight-regular;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: lighten( $yellow, 15%);
+            text-decoration: none;
+        }
+    }
+
+    .site-footer-outer {
+        &.v-light {
+            background: rgba( $gray-darker, 0.85 );
+        }
+        &.v-dark {
+            background: $gray-darker;
+        }
+    }
+
+    .site-footer-inner {
+        @include grid-container;
+        padding: $grid-padding;
+
+        @include media( $tablet-down ) {
+            padding: $grid-padding-tablet 1rem;
+        }
+    }
+
+    .v-energyTypes {
+        @include clearfix;
+        text-align: center;
+        margin: 0 auto;
+
+        @include media( $desktop ) {
+            width: 70%;
+        }
+
+        .nav-link {
+            float: left;
+            width: 33%;
+            text-decoration: none;
+            font-size: $font-size-h5;
+
+            @include media( $mobile ) {
+                font-size: $font-size-h5 * 0.75;
+            }
+
+            .icon {
+                display: block;
+                font-size: $icon-size-xsmall;
+
+                @include media( $mobile ) {
+                    font-size: $icon-size-xsmall * 0.75;
+                }
+            }
+        }
+    }
+
+    .footer-menu {
+        @include grid-container;
+        padding-bottom: $grid-padding;
+
+        .footer-links {
+            padding: 0 $grid-padding;
+
+            @include media( $tablet-down ) {
+                padding: 0 $grid-padding-tablet;
+            }
+        }
+
+        h5 {
+            margin-bottom: 1rem;
+        }
+
+        .nav-link {
+            display: block;
+        }
+    }
+
+    .footer-links {
+        @include clearfix;
+
+        &.v-about {
+            display: block;
+            float: left;
+            width: 25%;
+
+            @include media( $tablet ) {
+                width: 33%;
+            }
+
+            @include media( $mobile ) {
+                width: 100%;
+                padding-bottom: $grid-padding-tablet;
+
+                .nav-list {
+                    @include prefixer(column-count, 2, webkit moz spec);
+                    column-count: 2;
+                }
+            }
+        }
+
+        &.v-service {
+            display: block;
+            float: left;
+            width: 50%;
+
+            @include media( $tablet ) {
+                width: 66%;
+            }
+
+            @include media( $mobile ) {
+                width: 100%;
+            }
+
+            .nav-list {
+                @include prefixer(column-count, 2, webkit moz spec);
+                column-count: 2;
+            }
+        }
+
+        &.v-blog {
+            display: block;
+            float: left;
+            width: 25%;
+            @include omega;
+
+            @include media( $tablet-down ) {
+                clear: both;
+                width: 100%;
+                padding-top: $grid-padding-tablet;
+
+                .nav-list {
+                    @include prefixer(column-count, 3, webkit moz spec);
+                    column-count: 3;
+                }
+            }
+
+            @include media( $mobile ) {
+                .nav-list {
+                    @include prefixer(column-count, 2, webkit moz spec);
+                    column-count: 2;
+                }
+            }
+        }
+
+        &.v-social {
+            text-align: center;
+            padding-bottom: 2rem;
+
+            a {
+                font-size: $font-size-large;
+                text-decoration: none;
+                padding: 0.5rem 1rem 0;
+                border-right: 1px solid $white;
+
+                &:last-of-type {
+                    border: none;
+                }
+            }
+
+        }
+
+        &.v-copyright {
+            font-size: $font-size-xsmall;
+            text-align: center;
+            padding-bottom: 2rem;
+
+            a {
+                padding: 0 1rem;
+            }
+        }
+
+        &.v-seals {
+            @include flexbox-center;
+
+            .bbb-seal {
+                display: inline-block !important;
+                float: left;
+                position: relative;
+                overflow: hidden;
+                width: 40px;
+                height: 73px;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .secure-seal {
+                float: left;
+                margin: 0 2rem;
+            }
+        }
+    }
+}

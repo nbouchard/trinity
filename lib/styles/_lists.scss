@@ -1,0 +1,51 @@
+ul,
+ol {
+    padding-left: 2rem;
+
+    li li {
+        list-style: none;
+    }
+
+    &.unstyled {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    &.inline {
+        li {
+            display: inline-block;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+    }
+}
+
+
+dl {
+
+    dt {
+        font-size: $font-size-h6;
+        font-weight: 500;
+        margin-top: $font-size-normal;
+    }
+
+    dd {
+        margin: 0;
+        margin-bottom: $font-size-normal;
+    }
+
+    &.horizontal {
+
+        dt {
+            float: left;
+            clear: left;
+            width: 20%;
+            margin-top: 0;
+        }
+
+        dd {
+            width: 80%;
+            margin-left: 20%;
+        }
+    }
+}

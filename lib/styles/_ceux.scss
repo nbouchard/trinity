@@ -1,801 +1,364 @@
-.ceux-heading {
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid $color-white-smoke;
-}
+//
+// Pattern Library / Style Guide
+// --------------------------------------------------
 
-h2.ceux-heading,
-h4.ceux-heading {
-    margin-top: 1.5em;
-}
 
-.ceux-color-inline {
-    margin: 0 0.1em;
-    padding: 0.2em;
-}
-
-.ceux-label {
-    text-transform: uppercase;
-    color: $color-gray-chateau;
-    font-weight: 500;
-
-    span {
-        font-size: 1.3rem;
-        display: block;
-        text-transform: none;
+body {
+    > .container {
+        @include outer-container ( $page-width );
+        padding-bottom: 2.5rem;
     }
 
-    &.plan-card-labels {
-        @include breakpoint($mq-sm-max) {
-            @include cg-1of2(true, true, true);
+    .testing {
+        @include grid-container;
+    }
+}
+
+
+.site-header {
+    background-color: #5B5E63;
+
+    nav {
+        @include outer-container;
+
+        h1 {
+            float: left;
+            margin: 0;
+            text-align: center;
+
+            a {
+                font-size: 2.2rem;
+                line-height: 6rem;
+            }
         }
-
-        @include breakpoint($mq-md-min) {
-            @include cg-1of4(true, true, true);
-        }
-    }
-}
-
-
-.ceux-navmenu {
-    .nav-group {
-        padding: 1.5rem 1rem;
-    }
-
-    .nav {
-        @include clearfix;
-    }
-
-    .sub-menu {
-        .nav-item {
-            @include cg-1of2(false, false, true);
-        }
-
-        &.full-width .nav-item{
-            width: 100%;
-        }
-
-        @include breakpoint($mq-sm-max) {
-            display: none;
-        }
-    }
-}
-
-// Base Color Palette
-// Greens
-.swatch-green-jewel {
-    background-color: $color-green-jewel;
-    color: $color-white-pure;
-}
-
-.swatch-green-jewel-light {
-    background-color: $color-green-jewel-light;
-    color: $color-white-pure;
-}
-.swatch-green-jungle {
-    background-color: $color-green-jungle;
-    color: $color-white-pure;
-}
-
-.swatch-green-jungle-light {
-    background-color: $color-green-jungle-light;
-    color: $color-white-pure;
-}
-
-.swatch-green-jade {
-    background-color: $color-green-shamrock;
-    color: $color-white-pure;
-}
-
-.swatch-green-jade-light {
-    background-color: $color-green-shamrock-light;
-    color: $color-gray-charcoal;
-}
-
-.swatch-green-jamaica {
-    background-color: $color-green-aquamarine;
-    color: $color-gray-charcoal;
-}
-
-.swatch-green-jamaica-light {
-    background-color: $color-green-aquamarine-light;
-    color: $color-gray-charcoal;
-}
-
-.swatch-green-juniper {
-    background-color: $color-green-cruise;
-    color: $color-gray-charcoal;
-}
-
-.swatch-green-juniper-light {
-    background-color: $color-green-cruise-light;
-    color: $color-gray-charcoal;
-}
-
-//Blues
-.swatch-blue-pluto {
-    background-color: $color-blue-bahama;
-    color: $color-white-pure;
-}
-
-.swatch-blue-pluto-light {
-    background-color: $color-blue-bahama-light;
-    color: $color-white-pure;
-}
-
-.swatch-blue-peacock {
-    background-color: $color-blue-boston;
-    color: $color-white-pure;
-}
-
-.swatch-blue-peacock-light {
-    background-color: $color-blue-boston-light;
-    color: $color-white-pure;
-}
-
-.swatch-blue-pacific {
-    background-color: $color-blue-curious;
-    color: $color-white-pure;
-}
-
-.swatch-blue-pacific-light {
-    background-color: $color-blue-curious-light;
-    color: $color-gray-charcoal;
-}
-
-.swatch-blue-paradise {
-    background-color: $color-blue-danube;
-    color: $color-gray-charcoal;
-}
-
-.swatch-blue-paradise-light {
-    background-color: $color-blue-danube-light;
-    color: $color-gray-charcoal;
-}
-
-.swatch-blue-powder {
-    background-color: $color-blue-perano;
-    color: $color-gray-charcoal;
-}
-
-.swatch-blue-powder-light {
-    background-color: $color-blue-perano-light;
-    color: $color-gray-charcoal;
-}
-
-// Oranges
-.swatch-orange-terracotta {
-    background-color: $color-orange-fiery;
-    color: $color-white-pure;
-}
-
-.swatch-orange-terracotta-light {
-    background-color: $color-orange-fiery-light;
-    color: $color-white-pure;
-}
-
-.swatch-orange-tango {
-    background-color: $color-orange-tango;
-    color: $color-white-pure;
-}
-
-.swatch-orange-tango-light {
-    background-color: $color-orange-tango-light;
-    color: $color-white-pure;
-}
-
-.swatch-orange-tangerine {
-    background-color: $color-orange-sun;
-    color: $color-white-pure;
-}
-
-.swatch-orange-tangerine-light {
-    background-color: $color-orange-sun-light;
-    color: $color-gray-charcoal;
-}
-
-.swatch-orange-topaz {
-    background-color: $color-orange-tacao;
-    color: $color-gray-charcoal;
-}
-
-.swatch-orange-topaz-light {
-    background-color: $color-orange-tacao-light;
-    color: $color-gray-charcoal;
-}
-
-.swatch-orange-taffy {
-    background-color: $color-orange-apricot;
-    color: $color-gray-charcoal;
-}
-
-.swatch-orange-taffy-light {
-    background-color: $color-orange-apricot-light;
-    color: $color-gray-charcoal;
-}
-
-// Grays
-.swatch-gray-black {
-    background-color: $color-gray-black;
-    color: $color-white-smoke;
-}
-
-.swatch-gray-woodsmoke {
-    background-color: $color-gray-woodsmoke;
-    color: $color-white-smoke;
-}
-
-.swatch-gray-woodsmoke-light {
-    background-color: $color-gray-charcoal;
-    color: $color-white-smoke;
-}
-
-.swatch-gray-woolen {
-    background-color: $color-gray-cape;
-    color: $color-white-smoke;
-}
-
-.swatch-gray-woolen-light {
-    background-color: $color-gray-cape-light;
-    color: $color-white-smoke;
-}
-
-.swatch-gray-windgap {
-    background-color: $color-gray-stone;
-    color: $color-white-smoke;
-}
-
-.swatch-gray-windgap-light {
-    background-color: $color-gray-stone-light;
-    color: $color-white-smoke;
-}
-
-.swatch-gray-wolfpelt {
-    background-color: $color-gray-oslo;
-    color: $color-white-smoke;
-}
-
-.swatch-gray-wolfpelt-light {
-    background-color: $color-gray-chateau;
-    color: $color-white-smoke;
-}
-
-.swatch-gray-whale {
-    background-color: $color-gray-edward;
-    color: $color-gray-charcoal;
-}
-
-.swatch-gray-whale-light {
-    background-color: $color-gray-ghost;
-    color: $color-gray-charcoal;
-}
-
-.swatch-gray-winter {
-    background-color: $color-gray-geyser;
-    color: $color-gray-charcoal;
-}
-
-.swatch-gray-winter-light {
-    background-color: $color-white-lilac;
-    color: $color-gray-charcoal;
-}
-
-.swatch-white-alt {
-    background-color: $color-white-lily;
-    color: $color-gray-charcoal;
-}
-
-.swatch-white {
-    background-color: $color-white-pure;
-    color: $color-gray-charcoal;
-}
-
-// Reds
-.swatch-red-cardinal {
-    background-color: $color-red-tamarillo;
-    color: $color-white-pure;
-}
-
-.swatch-red-cardinal-light {
-    background-color: $color-red-tamarillo-light;
-    color: $color-white-pure;
-}
-
-.swatch-red-crimson {
-    background-color: $color-red-poppy;
-    color: $color-white-pure;
-}
-
-.swatch-red-cinnabar {
-    background-color: $color-red-cinnabar;
-    color: $color-white-pure;
-}
-
-.swatch-red-cinnabar-light {
-    background-color: $color-red-cinnabar-light;
-    color: $color-white-pure;
-}
-
-.swatch-red-coral {
-    background-color: $color-red-pink;
-    color: $color-gray-charcoal;
-}
-
-.swatch-red-carnation {
-    background-color: $color-red-azalea;
-    color: $color-gray-charcoal;
-}
-
-.swatch-red-carnation-light {
-    background-color: $color-red-azalea-light;
-    color: $color-gray-charcoal;
-}
-
-// Yellows
-.swatch-yellow-gold {
-    background-color: $color-yellow-gold;
-    color: $color-white-pure;
-}
-
-.swatch-yellow-gold-light {
-    background-color: $color-yellow-gold-light;
-    color: $color-white-pure;
-}
-
-.swatch-yellow-gobi {
-    background-color: $color-yellow-galliano;
-    color: $color-white-pure;
-}
-
-.swatch-yellow-glowcloud {
-    background-color: $color-yellow-butter;
-    color: $color-white-pure;
-}
-
-.swatch-yellow-glowcloud-light {
-    background-color: $color-yellow-butter-light;
-    color: $color-white-pure;
-}
-
-.swatch-yellow-glitter {
-    background-color: $color-yellow-corn;
-    color: $color-gray-charcoal;
-}
-
-.swatch-yellow-gardenia {
-    background-color: $color-yellow-marzipan;
-    color: $color-gray-charcoal;
-}
-
-.swatch-yellow-gardenia-light {
-    background-color: $color-yellow-marzipan-light;
-    color: $color-gray-charcoal;
-}
-
-// Purples
-.swatch-purple-licorice {
-    background-color: $color-purple-windsor;
-    color: $color-white-pure;
-}
-
-.swatch-purple-licorice-light {
-    background-color: $color-purple-windsor-light;
-    color: $color-white-pure;
-}
-
-.swatch-purple-lacuna {
-    background-color: $color-purple-royal;
-    color: $color-white-pure;
-}
-
-.swatch-purple-luscious {
-    background-color: $color-purple-violet;
-    color: $color-white-pure;
-}
-
-.swatch-purple-luscious-light {
-    background-color: $color-purple-violet-light;
-    color: $color-white-pure;
-}
-
-.swatch-purple-lavender {
-    background-color: $color-purple-wisteria;
-    color: $color-gray-charcoal;
-}
-
-.swatch-purple-lilac {
-    background-color: $color-purple-quartz;
-    color: $color-gray-charcoal;
-}
-
-.swatch-purple-lilac-light {
-    background-color: $color-purple-quartz-light;
-    color: $color-gray-charcoal;
-}
-
-// Olives
-.swatch-olive-avocado {
-    background-color: $color-olive-apple;
-    color: $color-white-pure;
-}
-
-.swatch-olive-avocado-light {
-    background-color: $color-olive-apple-light;
-    color: $color-white-pure;
-}
-
-.swatch-olive-apple {
-    background-color: $color-olive-mantis;
-    color: $color-white-pure;
-}
-
-.swatch-olive-apple-light {
-    background-color: $color-olive-mantis-light;
-    color: $color-white-pure;
-}
-
-.swatch-olive-aloe {
-    background-color: $color-olive-mint;
-    color: $color-gray-charcoal;
-}
-
-.swatch-olive-aloe-light {
-    background-color: $color-olive-mint-light;
-    color: $color-gray-charcoal;
-}
-
-// Magentas
-.swatch-magenta-maroon {
-    background-color: $color-magenta-disco;
-    color: $color-white-pure;
-}
-
-.swatch-magenta-maroon-light {
-    background-color: $color-magenta-disco-light;
-    color: $color-white-pure;
-}
-
-.swatch-magenta-mulberry {
-    background-color: $color-magenta-mulberry;
-    color: $color-white-pure;
-}
-
-.swatch-magenta-mulberry-light {
-    background-color: $color-magenta-mulberry-light;
-    color: $color-white-pure;
-}
-
-.swatch-magenta-mauve {
-    background-color: $color-magenta-mauve;
-    color: $color-gray-charcoal;
-}
-
-.swatch-magenta-mauve-light {
-    background-color: $color-magenta-mauve-light;
-    color: $color-gray-charcoal;
-}
-
-
-.ceux-color-grid {
-    @include cg-row(false, false);
-    padding-bottom: 20px;
-}
-
-.ceux-color {
-    @include cg-1of5();
-}
-
-.ceux-color-swatch {
-    padding: 5px;
-    margin: 0 ;
-
-    .ceux-color-name {
-        text-align: center;
-        font-size: $font-size-larger;
-        font-weight: $font-weight-subhead;
-    }
-
-    .ceux-color-value,
-    .ceux-color-variable {
-        margin: 0px;
-    }
-}
-
-.ceux-editorial-heading {
-    @include box-sizing(border-box);
-    margin: 1em auto;
-    max-width: ($site-max-width / 1.75);
-    width: 100%;
-}
-
-.ceux-section {
-    @include box-sizing(border-box);
-    margin: 2em auto;
-    padding: 3em 2em 0;
-
-    .cg-row {
-        border-bottom: 1px solid $color-white-lilac;
-    }
-
-    .ceux-subsection {
-        margin-bottom: 1em;
-        padding: 0.5em 0 1.5em;
-        border-bottom: 1px solid $color-white-smoke;
-
-        &:last-child {
-            border-bottom: 0;
-        }
-    }
-
-    &:last-child {
-        border-bottom: 0;
-    }
-}
-
-.ceux-typeface {
-    .implement {
-        color: $color-gray-ghost;
-        font-size: 0.75em;
-
-        code {
-            display: inline-block;
-            padding: 0.5em;
-            background: $color-white-smoke;
-            color: $color-gray-chateau;
-        }
-    }
-}
-
-.ceux-typeface-specimen {
-    padding: 0.5em;
-    background: $color-white-smoke;
-    font-size: 2em;
-
-    &.ceux-typeface-body {
-        padding: 1em;
-        font-size: 1em;
-    }
-}
-
-.ceux-all-the-things {
-    text-decoration: underline;
-    font-weight: 600;
-    font-style: italic;
-}
-
-.ceux-result div {
-    display: block;
-    padding: 10px 0px;
-}
-
-.ceux-example {
-    padding: 1em 0;
-    @include clearfix;
-}
-
-.supplier-startex {
-    background: url('#{$image-path}sprites/size-standard/supplier-logos/startex-power.png') center center no-repeat;
-    background-size: contain;
-}
-
-.supplier-txu {
-    background: url('#{$image-path}sprites/size-standard/supplier-logos/txu-energy.png') center center no-repeat;
-    background-size: contain;
-}
-
-.supplier-champion {
-    background: url('#{$image-path}sprites/size-standard/supplier-logos/champion-energy.png') center center no-repeat;
-    background-size: contain;
-}
-
-.editorial-cooking-with-gas {
-    background: url('#{$image-path}placeholders/cooking_with_gas.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.editorial-energy-at-dusk {
-    background: url('#{$image-path}placeholders/energy_at_dusk.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.editorial-brand-positioning {
-    background: url('#{$image-path}placeholders/brand_positioning.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.editorial-brand-attributes {
-    background: url('#{$image-path}placeholders/brand_attributes.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.editorial-company-vision {
-    background: url('#{$image-path}placeholders/company_vision.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.editorial-company-mission {
-    background: url('#{$image-path}placeholders/company_mission.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.editorial-company-promise {
-    background: url('#{$image-path}placeholders/company_promise.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.editorial-choose-ux {
-    background: $color-blue-curious;
-}
-
-.ceux-table-of-contents {
-    padding: 30px 0 0;
-    border-bottom: 1px solid $color-white-lilac;
-
-    .cg-1of5 {
-        padding: 0.5em;
-    }
-
-    h1 {
-        padding: 10px 0;
-    }
-
-    h3 {
-        padding-bottom: 0.25em;
-    }
-
-    a {
-        font-weight: 300;
-    }
-
-    .list-unstyled {
-        margin: 0;
 
         ul {
-            padding: 5px 0px 10px 25px;
-        }
-    }
-}
-
-.ceux-content-block-example {
-    @include cg-row(true, false);
-    margin: 0px;
-    max-width: none;
-
-    .cg-1of1 {
-        padding: 0.5em 2em;
-    }
-}
-
-.ceux-icon-reference {
-    margin: 15px auto;
-    width: 90%;
-
-    h1 {
-        margin: 40px 0 20px;
-        font-weight: 700;
-        font-size: 38px;
-        line-height: 32px;
-        color: $color-blue-curious;
-    }
-
-    h2 {
-        font-size: 18px;
-        padding: 0 0 21px 5px;
-        margin: 45px 0 0 0;
-        text-transform: uppercase;
-        font-weight: 500
-    }
-
-    .small {
-        font-size: 14px;
-    }
-
-    .glyphs.character-mapping {
-        margin: 0 0 20px 0;
-        padding: 20px 0 20px 30px;
-        border: 1px solid #d8e0e5;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-
-        li {
-            margin: 0 30px 20px 0;
-            display: inline-block;
-            width: 90px
-        }
-
-        .icon {
-            margin: 10px 0 10px 15px;
-            padding: 15px;
-            position: relative;
-            width: 55px;
-            height: 55px;
-            overflow: hidden;
-            -webkit-border-radius: 3px;
-            border-radius: 3px;
-            font-size: 32px;
-
-            svg { fill: #000 }
-        }
-
-        input {
-            margin: 0;
-            padding: 5px 0;
-            line-height: 14px;
-            font-size: 14px;
-            display: block;
-            width: 100%;
-            border: 1px solid #d8e0e5;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-            text-align: center;
-            outline: 0;
-            color: $color-gray-charcoal !important;
-
-            &:focus {
-                border: 1px solid #fbde4a;
-                -webkit-box-shadow: inset 0 0 3px #fbde4a;
-                box-shadow: inset 0 0 3px #fbde4a
-            }
-
-            &:hover {
-                -webkit-box-shadow: inset 0 0 3px #fbde4a;
-                box-shadow: inset 0 0 3px #fbde4a
-            }
-        }
-    }
-
-    .glyphs.css-mapping {
-        margin: 0 0 60px 0;
-        padding: 30px 0 20px 30px;
-        border: 1px solid #d8e0e5;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-
-        li {
-            margin: 0 30px 20px 0;
-            padding: 0;
-            display: inline-block;
-            overflow: hidden
-        }
-
-        .icon {
-            margin: 0;
-            margin-right: 10px;
-            padding: 13px;
-            height: 50px;
-            width: 50px;
-            overflow: hidden;
+            @include list-unstyled;
             float: left;
-            font-size: 24px;
+            margin: 0;
+
+            li {
+                float: left;
+            }
         }
 
-        input {
-            margin: 0;
-            margin-top: 5px;
-            padding: 8px;
-            line-height: 16px;
-            font-size: 16px;
+        a {
             display: block;
-            width: 150px;
-            height: 40px;
-            border: 1px solid #d8e0e5;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-            background: #fff;
-            outline: 0;
-            float: right;
-            color: $color-gray-charcoal !important;
+            font-size: 1.6rem;
+            color: $white;
+            padding: 0 12px;
+            line-height: 6rem;
+            text-decoration: none;
 
-            &:focus {
-                border: 1px solid #fbde4a;
-                -webkit-box-shadow: inset 0 0 3px #fbde4a;
-                box-shadow: inset 0 0 3px #fbde4a
-            }
 
             &:hover {
-                -webkit-box-shadow: inset 0 0 3px #fbde4a;
-                box-shadow: inset 0 0 3px #fbde4a
+                background: darken( #5B5E63, 10% );
+            }
+        }
+
+        .selected > a {
+            background: darken( #5B5E63, 5% );
+        }
+    }
+}
+
+
+.site-main {
+    @include grid-container;
+}
+
+
+.site-sidebar {
+    @include grid-columns( 1 );
+    padding: 2rem 0;
+
+    nav {
+
+        ul {
+            @include list-unstyled;
+            font-size: 15px;
+            line-height: 1.6em;
+            outline: 0;
+
+            li  {
+
+                a {
+                    padding: 12px;
+                    border-radius: 3px;
+                    margin-bottom: 6px;
+                    color: #484848;
+                    display: block;
+                    line-height: 1em;
+                    text-decoration: none;
+
+                    &:hover {
+                        background: #f4f4f4;
+                    }
+                }
+
+                &.selected {
+                    > a {
+                        background: $gray-lighter;
+                    }
+                }
+            }
+        }
+
+        ul ul {
+            padding-left: 15px;
+        }
+
+        ul li li a {
+            padding: 5px 6px;
+            font-size: 14px;
+            border-radius: 0;
+            border-left: 3px solid #fff;
+
+            &:hover {
+                background: none;
+                border-left: 3px solid $gray-lighter;
+            }
+        }
+
+        ul li li li a {
+            padding: 3px 6px;
+        }
+
+        ul > li > ul > li.selected > a {
+            background: none;
+            border-left: 3px solid $gray-lighter;
+            border-radius: 0;
+        }
+
+        li > ul {
+            display: none;
+        }
+
+        li.selected > ul {
+            display: block;
+        }
+
+
+    }
+
+    &.fixed {
+        nav {
+            @include grid-columns( 1 );
+            position: fixed;
+            padding: 0;
+            top: 2.5rem;
+        }
+    }
+}
+
+
+.site-primary {
+    @include grid-columns( 3 );
+
+    .example-block {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 50px;
+
+        .example {
+            @include outer-container;
+            position: relative;
+            padding: 15px;
+
+            hr {
+                border: 0;
+                height: 0;
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #fff;
+            }
+
+            p:last-child {
+                margin: 0;
+            }
+
+            .color-block {
+                @include span-columns( 2 );
+                height: 4rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+
+                &.bordered {
+                    border: 1px solid #ccc;
+                }
+            }
+
+            .icon-block {
+                float: left;
+                width: 25%;
+                text-align: center;
+                margin: 1rem 0;
+                i {
+                    font-size: 4rem;
+                }
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        pre {
+            margin: 0;
+            border-top: 1px solid #ddd;
+
+            code {
+                font-size: 1.4rem;
+                padding: 1rem;
+                white-space: pre-wrap;
+                border-radius: 0 0 4px 4px;
+            }
+        }
+
+        &.code-only {
+            pre {
+                border-top: none;
+                code {
+                    border-radius: 4px;
+                }
             }
         }
     }
+
+    .de-emphasize {
+        opacity: 0.3;
+    }
+}
+
+
+.site-footer {
+    clear: both;
+    border-top: 1px solid $gray-lighter;
+    padding: $grid-padding;
+    text-align: center;
+    color: $gray-light;
+}
+
+
+.ce-siteHeader.v-example {
+    position: relative;
+    top: 0px;
+
+    .site-logo {
+        display: block;
+    }
+
+    .ce-mainNavigation {
+        top: 0;
+
+        .nav-trigger {
+            top: 6.5rem;
+        }
+
+        .nav-main {
+            top: 14rem;
+        }
+    }
+
+    .tabs {
+        li {
+            a {
+                font-size: $font-size-normal;
+            }
+        }
+    }
+
+    .tab-content {
+        form {
+            display: none;
+            max-width: 55rem;
+            width: 40%;
+            margin: 0 auto;
+
+            &:first-child {
+                display: block;
+            }
+        }
+    }
+
+}
+
+
+
+// Highlight.js Theme - Solarized Light
+// -------------------------
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #fdf6e3;
+  color: #657b83;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #93a1a1;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-built_in,
+.hljs-deletion {
+  color: #dc322f;
+}
+
+.hljs-formula {
+  background: #eee8d5;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
 }

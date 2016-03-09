@@ -5,13 +5,20 @@ module.exports = function(grunt) {
             flatten: true,
             partials: ['lib/templates/partials/*.html','lib/templates/partials/**/*.html'],
             layoutext: '.html',
-            layoutdir: 'lib/templates/layouts',
+            layoutdir: 'lib/templates/layouts/',
             layout: 'default',
-            data: ['lib/templates/data/*.json', 'lib/templates/data/**/*.json'],
+            data: ['lib/templates/data/*.json','lib/templates/data/**/*.json'],
+            stylesdir: 'dist/css/',
         },
         pages: {
-            src: ['lib/templates/pages/*.html'],
-            dest: 'dist/'
+            files: [
+                {
+                    expand: true,
+                    cwd: 'lib/templates/pages/',
+                    src: ['*.html','**/*.html'],
+                    dest: 'dist/',
+                }
+            ]
         }
     });
 

@@ -1,0 +1,237 @@
+---
+layout: default
+site:
+  name: ChooseUX
+  version: 0.1.0
+section: Pattern Library
+tpl:
+  desc: Page Desc
+  title: Lists
+---
+<h1>Lists</h1>
+<p>Baseline styles and usage examples for for ordered and unordered lists.</p>
+<h2 id="ordered">Ordered</h2>
+<div class="example-block">
+    <div class="example">
+        <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Vel volutpat purus felis rutrum</li>
+            <li>Semper enim lacinia etiam</li>
+            <li>Ullamcorper turpis quis </li>
+            <li>Maecenas vestibulum</li>
+            <li>In lectus nec Semper quisque</li>
+        </ol>
+    </div>
+
+{{#markdown}}
+```html
+<ol>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Vel volutpat purus felis rutrum</li>
+    <li>Semper enim lacinia etiam</li>
+    <li>Ullamcorper turpis quis </li>
+    <li>Maecenas vestibulum</li>
+    <li>In lectus nec Semper quisque</li>
+</ol>
+```
+{{/markdown}}
+</div>
+
+<h2 id="unordered">Unordered</h2>
+<div class="example-block">
+    <div class="example">
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Vel volutpat purus felis rutrum</li>
+            <li>Semper enim lacinia etiam</li>
+            <li>Ullamcorper turpis quis </li>
+            <li>Maecenas vestibulum</li>
+            <li>In lectus nec Semper quisque</li>
+        </ul>
+    </div>
+
+{{#markdown}}
+```html
+<ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Vel volutpat purus felis rutrum</li>
+    <li>Semper enim lacinia etiam</li>
+    <li>Ullamcorper turpis quis </li>
+    <li>Maecenas vestibulum</li>
+    <li>In lectus nec Semper quisque</li>
+</ul>
+```
+{{/markdown}}
+</div>
+
+<h2 id="nested">Nested Lists</h2>
+<div class="example-block">
+    <div class="example">
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Vel volutpat purus felis rutrum</li>
+            <li>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Vel volutpat purus felis rutrum</li>
+                    <li>Vel volutpat purus felis rutrum</li>
+                </ul>
+            </li>
+            <li>Ullamcorper turpis quis </li>
+            <li>Maecenas vestibulum</li>
+        </ul>
+
+        <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Vel volutpat purus felis rutrum</li>
+            <li>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Vel volutpat purus felis rutrum</li>
+                    <li>Vel volutpat purus felis rutrum</li>
+                </ol>
+            </li>
+            <li>Ullamcorper turpis quis </li>
+            <li>Maecenas vestibulum</li>
+        </ol>
+    </div>
+
+{{#markdown}}
+```html
+<ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Vel volutpat purus felis rutrum</li>
+    <li>
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Vel volutpat purus felis rutrum</li>
+            <li>Vel volutpat purus felis rutrum</li>
+        </ul>
+    </li>
+    <li>Ullamcorper turpis quis </li>
+    <li>Maecenas vestibulum</li>
+</ul>
+
+<ol>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Vel volutpat purus felis rutrum</li>
+    <li>
+        <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Vel volutpat purus felis rutrum</li>
+            <li>Vel volutpat purus felis rutrum</li>
+        </ol>
+    </li>
+    <li>Ullamcorper turpis quis </li>
+    <li>Maecenas vestibulum</li>
+</ol>
+```
+{{/markdown}}
+</div>
+
+<h2 id="inline">Inline</h2>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<div class="example-block">
+    <div class="example">
+        <ul class="inline">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Vel volutpat purus felis rutrum</li>
+            <li>Semper enim lacinia etiam</li>
+            <li>Ullamcorper turpis quis </li>
+            <li>Maecenas vestibulum</li>
+            <li>In lectus nec Semper quisque</li>
+        </ul>
+    </div>
+
+{{#markdown}}
+```html
+<ul class="inline">
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Vel volutpat purus felis rutrum</li>
+    <li>Semper enim lacinia etiam</li>
+    <li>Ullamcorper turpis quis </li>
+    <li>Maecenas vestibulum</li>
+    <li>In lectus nec Semper quisque</li>
+</ul>
+```
+{{/markdown}}
+</div>
+
+<h2 id="unstyled">Unstyled</h2>
+<p>Add <code>.unstyled</code> class to <code>&lt;ul&gt;</code> tag to remove formatting.</p>
+<div class="example-block">
+    <div class="example">
+        <ul class="unstyled">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Vel volutpat purus felis rutrum</li>
+            <li>Semper enim lacinia etiam</li>
+            <li>Ullamcorper turpis quis </li>
+            <li>Maecenas vestibulum</li>
+            <li>In lectus nec Semper quisque</li>
+        </ul>
+    </div>
+
+{{#markdown}}
+```html
+<ul class="unstyled">
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Vel volutpat purus felis rutrum</li>
+    <li>Semper enim lacinia etiam</li>
+    <li>Ullamcorper turpis quis </li>
+    <li>Maecenas vestibulum</li>
+    <li>In lectus nec Semper quisque</li>
+</ul>
+```
+{{/markdown}}
+</div>
+
+<h2 id="definition">Definition List</h2>
+<div class="example-block">
+    <div class="example">
+        <dl>
+            <dt>Lorem ipsum</dt>
+            <dd>Vel volutpat purus felis rutrum</dd>
+
+            <dt>Semper enim</dt>
+            <dd>Ullamcorper turpis quis</dd>
+        </dl>
+    </div>
+
+{{#markdown}}
+```html
+<dl>
+    <dt>Lorem ipsum</dt>
+    <dd>Vel volutpat purus felis rutrum</dd>
+
+    <dt>Semper enim</dt>
+    <dd>Ullamcorper turpis quis</dd>
+</dl>
+```
+{{/markdown}}
+</div>
+
+<h2 id="horizontal-definition">Horizontal Definition List</h2>
+<div class="example-block">
+    <div class="example">
+        <dl class="horizontal">
+            <dt>Lorem ipsum</dt>
+            <dd>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</dd>
+
+            <dt>Semper enim</dt>
+            <dd>Etiam aliquam at mauris laoreet pulvinar etiam, vestibulum volutpat at, rutrum sed eu vestibulum. Tempor mauris aliquam semper, feugiat amet nulla amet faucibus, velit sed in neque.</dd>
+        </dl>
+    </div>
+
+{{#markdown}}
+```html
+<dl class="horizontal">
+    <dt>Lorem ipsum</dt>
+    <dd>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</dd>
+
+    <dt>Semper enim</dt>
+    <dd>Etiam aliquam at mauris laoreet pulvinar etiam, vestibulum volutpat at, rutrum sed eu vestibulum. Tempor mauris aliquam semper, feugiat amet nulla amet faucibus, velit sed in neque.</dd>
+</dl>
+```
+{{/markdown}}
+</div>
+

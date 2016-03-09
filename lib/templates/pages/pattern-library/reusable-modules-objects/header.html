@@ -1,0 +1,29 @@
+---
+layout: default
+site:
+  name: ChooseUX
+  version: 0.1.0
+section: Pattern Library
+tpl:
+  desc: Page Desc
+  title: Header
+---
+<h1>Header</h1>
+<p>There are two distinct versions of the site header — one that incorporates a hero unit, and one that does not. Pages without a hero unit have a fixed position header by default. For pages with a hero unit, the header switches between fixed and static postion, depending on scroll location.</p>
+<div class="example-block">
+    <div class="example">
+        Header with hero unit:
+        <img src="../../images/ceux-header-hero.jpg" alt="">
+        <br><br>
+        Fixed header:
+        <img src="../../images/ceux-header-fixed.jpg" alt="">
+    </div>
+
+{{#markdown}}
+```html
+<header class="ce-siteHeader" role="banner">
+    ...
+</header>
+```
+{{/markdown}}
+</div>

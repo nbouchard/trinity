@@ -1,0 +1,52 @@
+//
+// Page Frame
+// --------------------------------------------------
+
+.ce-siteMain {
+    @include media( $desktop) {
+        @include outer-container ( $page-width );
+        padding: 1rem $grid-padding;
+    }
+
+    @include media( $tablet) {
+        @include outer-container ( $page-width-tablet );
+        padding: 1rem;
+    }
+
+    @include media( $mobile) {
+        @include outer-container ( $page-width-mobile );
+        padding: 1rem;
+    }
+}
+
+.site-root.v-fixed-header {
+    padding-top: $nav_height_small;
+
+    @include media( $mobile ) {
+        padding-top: 13rem;
+    }
+
+    &.v-hero-module {
+        padding-top: 0;
+    }
+}
+
+.site-root.v-hero-module {
+    .ce-siteMain {
+        > :first-child {
+            margin-top: 0;
+        }
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+//Hide Olark plugin on mobile screens
+@include media( $mobile) {
+    #habla_beta_container_do_not_rely_on_div_classes_or_names {
+        display: none;
+    }
+}
