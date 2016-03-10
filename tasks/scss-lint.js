@@ -3,7 +3,8 @@ module.exports = function(grunt) {
     grunt.config('scsslint', {
         allFiles: [
           'lib/styles/**/*.scss',
-          '!lib/styles/base/vendors/**/*.scss',
+          '!lib/styles/mixins/vendors/**/*.scss',
+          '!lib/styles/vendors/**/*.scss',
           '!lib/styles/generated/**/*.scss'
         ],
         options: {

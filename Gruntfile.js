@@ -42,9 +42,10 @@ module.exports = function(grunt) {
         'Process and compile our CSS for local development.',
         [
             'sass',
-            'autoprefixer',
+            'postcss:dist',
         ]
     );
+
 
     // HTML Compile Task
     // TODO: Move Angular.JS partials into a HTML->JS compilation task.

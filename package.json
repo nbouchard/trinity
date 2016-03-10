@@ -12,6 +12,10 @@
         {
             "name": "Cameron Drake",
             "email": "cdrake@chooseenergy.com"
+        },
+        {
+            "name": "Matt Seymour",
+            "email": "seymour@mobiah.com"
         }
     ],
     "main": "choose.js",
@@ -26,7 +30,8 @@
     "devDependencies": {
         "assemble": "^0.4.42",
         "grunt": "^0.4.5",
-        "grunt-autoprefixer": "^3.0.0",
+        "autoprefixer": "^6.3.1",
+        "grunt-postcss": "^0.7.1",
         "grunt-contrib-clean": "^0.6.0",
         "grunt-contrib-connect": "^0.10.1",
         "grunt-contrib-copy": "^0.8.0",
@@ -35,7 +40,6 @@
         "grunt-html-inspector": "^0.1.6",
         "grunt-lib-phantomjs": "^0.3.1",
         "grunt-newer": "^1.1.0",
-        "grunt-image-resize": "^1.0.0",
         "grunt-sass": "^0.18.1",
         "grunt-scss-lint": "^0.3.6",
         "grunt-spritesmith": "^4.5.1",
