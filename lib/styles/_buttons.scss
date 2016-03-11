@@ -1,51 +1,112 @@
+//
+// Baseline button styles
+// --------------------------------------------------
+
 a.btn,
 .btn {
     appearance: none;
-    background-color: $gray;
+    background-color: $blue;
     border: none;
     color: #fff;
     cursor: pointer;
     display: inline-block;
     font-family: $font-family-base;
     font-size: $font-size-normal;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 700;
+    font-weight: 500;
     line-height: $line-height-base;
-    padding: 0.9rem 2.4rem 0.7rem 2.4rem;
+    padding: 0.8rem 2.4rem;
+    margin-bottom: 0;
     text-decoration: none;
     // transition: background-color $base-duration $base-timing;
-    user-select: none;
     vertical-align: middle;
     white-space: nowrap;
 
     &:hover,
     &:focus {
-        background-color: darken(#939ea1, 10%);
+        background-color: darken($blue, 10%);
         color: #fff;
         border: none;
         text-decoration: none;
     }
 
     &:disabled {
+        background-color: $gray-light;
         cursor: not-allowed;
-        opacity: 0.5;
 
-        &:hover {
-            background-color: #939ea1;
+        &:hover,
+        &:focus {
+            background-color: $gray-light;
         }
     }
 }
 
-$tri-height: ($font-size-normal * $line-height-base) + 1.8rem;
+//
+// Size variants
+// --------------------------------------------------
 
-a.btn-yellow,
-.btn-yellow {
+a.btn-lg,
+.btn-lg {
+    font-size: $font-size-large;
+    padding: 0.9rem 3.5rem;
+}
+
+a.btn-sm,
+.btn-sm {
+    font-size: $font-size-small;
+    padding: 0.7rem 2rem;
+}
+
+a.btn-wide,
+.btn-wide {
+    width: 30rem;
+}
+
+//
+// Style variants
+// --------------------------------------------------
+
+a.btn-primary,
+.btn-primary {
+    background-color: $green;
+
+    &:hover,
+    &:focus {
+        background-color: darken( $green, 7% );
+    }
+}
+
+a.btn-secondary,
+.btn-secondary {
+    border: 2px solid $green;
+    background-color: transparent;
+    color: $green;
+    padding: 0.6rem 2.2rem;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        border: 2px solid $green;
+        border-color: darken($green, 7%);
+        color: darken($green, 7%);
+    }
+}
+
+a.btn-search,
+.btn-search {
+    $tri-height: ($font-size-normal * $line-height-base) + 1.6rem;
     background-color: $yellow;
     color: $gray-darker;
+    position: relative;
 
-    &:before {
-        display: none;
-        @include triangle( 2rem $tri-height, transparent $yellow, up-left);
+    &.btn-angle {
+
+        &:before {
+            @include triangle( 2rem $tri-height, transparent $yellow, up-left);
+            position: absolute;
+            content: '';
+            left: -2rem;
+            top: 0rem;
+        }
     }
 
     &:hover,
@@ -57,47 +118,4 @@ a.btn-yellow,
             border-right-color: darken( $yellow, 10% );
         }
     }
-}
-
-a.btn-green,
-.btn-green {
-    border: 2px solid $green;
-    background-color: transparent;
-    color: $green;
-
-    &:before {
-        display: none;
-        @include triangle( 2rem $tri-height, transparent $yellow, up-left);
-    }
-
-    &:hover,
-    &:focus {
-        background-color: transparent;
-        border: 2px solid $green;
-        border-color: darken($green, 10%);
-        color: darken($green, 10%);
-    }
-}
-
-a.btn-gray,
-.btn-gray {
-    background-color: $gray;
-
-    &:before {
-        display: none;
-        @include triangle( 2rem $tri-height, transparent $gray, up-left);
-    }
-
-    &:hover,
-    &:focus {
-        &:before {
-            border-right-color: darken( $gray, 10% );
-        }
-    }
-}
-
-a.btn-lg,
-.btn-lg {
-    font-size: $font-size-large;
-    padding: 1rem 4rem 0.8rem 4rem;
 }

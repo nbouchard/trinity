@@ -1,3 +1,7 @@
+//
+// Baseline form element styling
+// --------------------------------------------------
+
 fieldset {
   background-color: $gray-lighter;
   // border: $base-border;
@@ -59,10 +63,14 @@ select {
 
 }
 
-.form-control {
+
+//
+// Inputs & Textareas
+// --------------------------------------------------
+ input,
+ textarea {
     display: block;
-    width: 100%;
-    padding: 0.9rem 1.2rem 0.7rem 1.2rem;
+    padding: 0.7rem 1.2rem;
     font-family: $font-family-base;
     font-size: $font-size-normal;
     line-height: $line-height-base;
@@ -71,26 +79,12 @@ select {
     margin-bottom: 1.6rem;
     box-sizing: border-box;
 
-    // Customize the `:focus` state to imitate native WebKit styles.
-    // .form-control-focus();
-
-    // Placeholder
-    // .placeholder();
-
-    // Unstyle the caret on `<select>`s in IE10+.
-    &::-ms-expand {
-        border: 0;
-        background-color: transparent;
+    &.no-border {
+        padding: 0.9rem 1.3rem;
     }
 
-
-    &[disabled],
-    fieldset[disabled] & {
+    &[disabled] {
         cursor: not-allowed;
-    }
-
-    textarea {
-        height: auto;
     }
 
     &:hover {
@@ -105,9 +99,31 @@ select {
     &:disabled {
         background-color: shade($white, 5%);
         cursor: not-allowed;
+
+        &:hover,
+        &:focus {
+            border-color: $input-border;
+        }
     }
+ }
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+textarea {
+    width: 100%;
 }
 
+textarea {
+    height: auto;
+}
+
+
+//
+// Select2 Dropdowns
+// --------------------------------------------------
 .select2 {
     width: 100% !important;
 
@@ -117,7 +133,7 @@ select {
         outline: none;
         display: block;
         width: 100%;
-        padding: 0.8rem 1.2rem 0.6rem 1.2rem;
+        padding: 0.7rem 1.2rem;
         font-family: $font-family-base;
         font-size: $font-size-normal;
         line-height: $line-height-base;
@@ -136,8 +152,9 @@ select {
             width: auto;
             top: 50%;
             right: 2.5rem;
+
             b {
-                border-color: #939ea1 transparent transparent transparent !important;
+                border-color: $gray transparent transparent transparent !important;
                 border-style: solid !important;
                 border-width: 9px 8px 0 8px !important;
             }
@@ -145,22 +162,70 @@ select {
     }
 
 }
+
 .select2-dropdown {
-    border: 1px solid $input-border !important;
+    border-color: $input-border;
     border-radius: 0;
+
+    &.select2-dropdown--above {
+        top: 1px;
+    }
+
+    &.select2-dropdown--below {
+        top: -1px;
+    }
 
     .select2-results__option {
         padding-left: 1.2rem;
         padding-right: 1.2rem;
-        // padding: 0 !important;
     }
 
     .select2-results__option[aria-selected=true] {
-        background-color: #f2f2f2;
+        background-color: $gray-lightest;
         color: inherit;
     }
     .select2-results__option--highlighted[aria-selected] {
-        background-color: #f2f2f2;
+        background-color: $gray-lightest;
         color: inherit;
+    }
+}
+
+//
+// Zip Search Form
+// --------------------------------------------------
+
+.search-form {
+    .zip-input {
+        float: left;
+        width: 80%;
+        border-right: none;
+
+        &:hover,
+        &:focus {
+            border-color: $input-border;
+        }
+    }
+
+    .select-pricing-buckets {
+        float: left;
+        width: 40%;
+        border: 1px solid $input-border;
+        border-right: none;
+        padding-right: 2rem;
+
+        .select2-selection {
+            border: none;
+        }
+    }
+
+    .btn-search {
+        float: left;
+        width: 20%;
+    }
+
+    &.search-business {
+        .zip-input {
+            width: 40%;
+        }
     }
 }
