@@ -33,7 +33,6 @@ module.exports = function(grunt) {
         [
             'jshint',
             'scsslint',
-            'html-inspector',
         ]
     );
 
