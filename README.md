@@ -19,7 +19,7 @@ Built into ChooseUX's `Gruntfile.js` are a number of different predefined tasks 
 
 ### `grunt verify`
 
-Grunt Verify is designed to allow someone to check the overall code quality of our site against our various coding style guides. We check code quality on our SCSS, JS, and resulting HTML.
+Grunt Verify is designed to allow someone to check the overall code quality of our site against our various coding style guides. We check code quality on our SCSS and JS.
 
 #### JSHint
 
@@ -33,29 +33,17 @@ It should be noted that we do not enforce SCSS linting rules as strictly as our 
 
 Running `gem update --system && gem install scss-lint` may be required to get SCSS linting to run.
 
-#### HTML Inspector
-
-For our HTML validation, we care more about the resultant HTML files than the actual template files themselves, so we run [HTML Inspector](https://github.com/philipwalton/html-inspector) on the resultant HTML files in `dist/` instead of the raw template files.
-
-We haven't done much in terms of configuration or testing of this tool yet, so we may end up utilizing a different approach long-term, but the idea is to make sure we're using proper best practices as well as checking for some great feedback around semantics in our HTML for SEO purposes.
-
-We'll likely add more HTML evaluation tools to this suite, but this is the first we're testing.
-
 ### `grunt compile-html`
 
 The `compile-html` task set currently exists just to run our HTML template renderer, Assemble.
 
 #### Assemble
 
-To better facilitate a more efficient method of templating across different products and platforms, we use [Assemble.io](http://assemble.io) to generate the static site upon which we prototype. It also allows us to build platform-agnostic HTML templates and partials that can be used in both our Angular.JS and WordPress environments.
+[Assemble.io](http://assemble.io) is the static site generator for our pattern library.
 
 ### `grunt compile-css`
 
 The `compile-css` task set is how we generate all of our CSS used across our products. We are using Glue via the sprite-glue task runner to generate spritesheets, Libsass to generate CSS from SCSS, and then we run the resulting CSS through Autoprefixer.
-
-#### Glue
-
-In order to remove the remarkably slow Compass dependency, we had to find an alternative to the Compass sprite generator. [Glue](http://glue.readthedocs.org) fits the bill pretty well, as it is a very fast spritesheet generator that has a pretty efficient task runner and lots of options.
 
 #### Libsass
 
@@ -83,7 +71,7 @@ The `serve` task is the primary task set to use when wanting to start developmen
 
 #### `grunt-contrib-connect`
 
-The [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect) task runner starts a server and has the ability to enable Livereload to let the server push changes made to files in `dist` to the browser (Hooray for no more reloading!). Once the server starts and exposes a static file server at `http://localhost:PORT`, it will automatically open in your default browser. If anyone is having issues with this, we can add another grunt plugin that will allow the browser in which we open the site to be configured at the command line.
+The [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect) task runner starts a server and has the ability to enable Livereload to let the server push changes made to files in `dist` to the browser. Once the server starts and exposes a static file server at `http://localhost:PORT`, it will automatically open in your default browser.
 
 #### `grunt-contrib-watch`
 
@@ -94,9 +82,8 @@ The [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) task r
 - Rerun `sass:dist` to update the distributable CSS file if any of our SCSS files change.
 - Clean `dist/js/` and `dist/data/` if a JS or Data file changes.
 
-Long-term, we'll add more watchers to do things like copy AngularJS partials, images, fonts, and similar, but for now, if you change anything that doesn't already have a watcher set up, it's easy enough to just run `grunt build` for now.
-
+If you change anything that doesn't already have a watcher set up, run `grunt build`.
 
 ### Questions?
 
-If you have any questions or requests, let [@mko](https://github.com/mko) know or add it to the repo's [GitHub Issues](https://github.com/chooseenergy/ChooseUX/issues).
+If you have any questions or requests, add it to the repo's [GitHub Issues](https://github.com/chooseenergy/ChooseUX/issues).
