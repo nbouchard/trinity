@@ -119,25 +119,22 @@ p {
 
 .secondary {
     @include secondary-text;
-
 }
 
 .tertiary {
     @include tertiary-text;
-
 }
 
+.quote {
+    @include quote-text;
+}
 
 // Block Quotes
 // -------------------------
 blockquote {
     margin: 0;
-
-    p {
-        font-family: $font-family-serif;
-        font-size: 4rem;
-        font-style: italic;
-    }
+    font-family: $font-family-serif;
+    font-style: italic;
 }
 
 

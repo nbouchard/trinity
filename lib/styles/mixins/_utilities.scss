@@ -70,8 +70,8 @@
 }
 
 @mixin secondary-text {
-    font-family: $font-family-serif;
     font-size: $font-size-h5;
+    font-weight: $font-weight-medium;
     line-height: $line-height-medium;
 }
 
@@ -81,6 +81,11 @@
     line-height: $line-height-medium;
 }
 
+@mixin quote-text {
+    font-size: $font-size-h5;
+    font-family: $font-family-serif;
+    font-style: italic;
+}
 
 //
 // Alignment

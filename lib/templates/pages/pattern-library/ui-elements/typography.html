@@ -16,7 +16,7 @@ tpl:
 
 <h2 id="headings">Headings</h2>
 <p>Headings <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, including usage examples for headings with subtext.</p>
-<h3 id="h1-h6">H1 – H6</h3>
+<h4 id="h1-h6">H1 – H6</h4>
 <div class="example-block">
     <div class="example">
         <h1>Heading One</h1>
@@ -43,7 +43,7 @@ tpl:
 ```
 {{/markdown}}
 </div>
-<h3 id="headings-with-subtext">Headings with Subtext</h3>
+<h4 id="headings-with-subtext">Headings with Subtext</h4>
 <p>Add subtext to a heading by including a <code>&lt;span&gt;</code> inside <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, or <code>&lt;h3&gt;</code>. Contents of the <code>&lt;span&gt;</code> will be treated as subtext.</p>
 <div class="example-block">
     <div class="example">
@@ -87,7 +87,7 @@ tpl:
 
 <h2 id="paragraphs">Paragraphs</h2>
 <p>Unclassified, primary, secondary, and tertiary paragraphs.</p>
-<h3 id="unclassified-paragraph">Unclassified</h3>
+<h4 id="unclassified-paragraph">Unclassified</h4>
 <p>Standard body text.</p>
 <div class="example-block">
     <div class="example">
@@ -106,7 +106,7 @@ tpl:
 ```
 {{/markdown}}
 </div>
-<h3 id="lead-paragraph">Primary</h3>
+<h4 id="lead-paragraph">Primary</h4>
 <p>Add a significant amount of emphasis to a paragraph.</p>
 <div class="example-block">
     <div class="example">
@@ -119,7 +119,7 @@ tpl:
 ```
 {{/markdown}}
 </div>
-<h3 id="secondary-paragraph">Secondary</h3>
+<h4 id="secondary-paragraph">Secondary</h4>
 <p>Add a moderate amount of emphasis to a paragraph.</p>
 <div class="example-block">
     <div class="example">
@@ -132,7 +132,7 @@ tpl:
 ```
 {{/markdown}}
 </div>
-<h3 id="tertiary-paragraph">Tertiary</h3>
+<h4 id="tertiary-paragraph">Tertiary</h4>
 <p>Add a small amount of emphasis to a paragraph.</p>
 <div class="example-block">
     <div class="example">
@@ -149,19 +149,15 @@ tpl:
 
 
 <h2 id="quotations-callouts">Quotations / Callouts</h2>
-<p>Default blockquote.</p>
+<p>Quotes for testimonials</p>
 <div class="example-block">
     <div class="example">
-        <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        </blockquote>
+        <p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
     </div>
 
 {{#markdown}}
 ```html
-<blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-</blockquote>
+<p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 ```
 {{/markdown}}
 </div>
@@ -169,7 +165,7 @@ tpl:
 
 
 <h2 id="inline-elements">Inline Elements</h2>
-<h3 id="bold">Bold</h3>
+<h4 id="bold">Bold</h4>
 <div class="example-block">
     <div class="example">
         <p>Lorem ipsum dolor sit amet, <strong>ipsum commodo eros</strong> lacus.</p>
@@ -181,7 +177,7 @@ tpl:
 ```
 {{/markdown}}
 </div>
-<h3 id="italics">Italics</h3>
+<h4 id="italics">Italics</h4>
 <div class="example-block">
     <div class="example">
         <p>Lorem ipsum dolor sit amet, <em>ipsum commodo eros</em> lacus.</p>
@@ -193,7 +189,7 @@ tpl:
 ```
 {{/markdown}}
 </div>
-<h3 id="abbreviations">Abbreviations</h3>
+<h4 id="abbreviations">Abbreviations</h4>
 <div class="example-block">
     <div class="example">
         <p>Lorem ipsum dolor sit amet, <abbr title="Expanded version of abbriviated text">ipsum</abbr> commodo eros lacus.</p>
@@ -205,7 +201,7 @@ tpl:
 ```
 {{/markdown}}
 </div>
-<h3 id="code">Code</h3>
+<h4 id="code">Code</h4>
 <div class="example-block">
     <div class="example">
         <p>Lorem ipsum dolor sit amet, <code>&lt;section&gt;</code> commodo eros lacus.</p>
