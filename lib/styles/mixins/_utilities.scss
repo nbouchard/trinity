@@ -54,6 +54,10 @@
     background-color: $black;
 }
 
+@mixin bg-gray-light {
+    background-color: $gray-light;
+}
+
 @mixin bg-gray-lightest {
     background-color: $gray-lightest;
 }
@@ -127,4 +131,20 @@
     display: flex;
     align-items: stretch;
     flex-wrap: nowrap;
+}
+
+// Basic WYSIWYG image alignment styles
+@mixin wysiwyg-img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+@mixin wysiwyg-img-align-right {
+    float: right;
+    margin: 10px 0 10px 10px;
+}
+
+@mixin wysiwyg-img-align-left {
+    float: left;
+    margin: 10px 10px 10px 0;
 }

@@ -4,12 +4,13 @@
 
 a.btn,
 .btn {
+    @include bg-blue;
+    @include text-white;
     appearance: none;
-    background-color: $blue;
     border: none;
-    color: #fff;
     cursor: pointer;
     display: inline-block;
+    -webkit-font-smoothing: antialiased;
     font-family: $font-family-base;
     font-size: $font-size-normal;
     font-weight: 500;
@@ -23,19 +24,19 @@ a.btn,
 
     &:hover,
     &:focus {
+        @include text-white;
         background-color: darken($blue, 10%);
-        color: #fff;
         border: none;
         text-decoration: none;
     }
 
     &:disabled {
-        background-color: $gray-light;
+        @include bg-gray-light;
         cursor: not-allowed;
 
         &:hover,
         &:focus {
-            background-color: $gray-light;
+            @include bg-gray-light;
         }
     }
 }
@@ -67,7 +68,7 @@ a.btn-wide,
 
 a.btn-primary,
 .btn-primary {
-    background-color: $green;
+    @include bg-green;
 
     &:hover,
     &:focus {
@@ -77,9 +78,9 @@ a.btn-primary,
 
 a.btn-secondary,
 .btn-secondary {
+    @include text-green;
     border: 2px solid $green;
     background-color: transparent;
-    color: $green;
     padding: 0.6rem 2.2rem;
 
     &:hover,
@@ -94,8 +95,8 @@ a.btn-secondary,
 a.btn-search,
 .btn-search {
     $tri-height: ($font-size-normal * $line-height-base) + 1.6rem;
-    background-color: $yellow;
-    color: $gray-darker;
+    @include bg-yellow;
+    @include text-default;
     position: relative;
 
     &.btn-angle {

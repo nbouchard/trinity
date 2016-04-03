@@ -6,19 +6,19 @@
 // Colors
 // -------------------------
 .text-default {
-    color: $gray-dark;
+    @include text-default;
 }
 
 .text-green {
-    color: $green;
+    @include text-green;
 }
 
 .text-yellow {
-    color: $yellow;
+    @include text-yellow;
 }
 
 .text-gray {
-    color: $gray;
+    @include text-gray;
 }
 
 .bg-green {

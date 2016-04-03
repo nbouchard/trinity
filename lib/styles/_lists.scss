@@ -2,10 +2,6 @@ ul,
 ol {
     padding-left: 2rem;
 
-    li li {
-        list-style: none;
-    }
-
     &.unstyled {
         list-style: none;
         padding-left: 0;

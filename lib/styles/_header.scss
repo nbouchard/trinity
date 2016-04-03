@@ -94,7 +94,7 @@
 
             @include media( $mobile ) {
                 height: $hero_module_height_mobile + $search-bar-height;
-                padding: 6rem 1rem $grid-padding-mobile;
+                padding: 8rem 1rem $grid-padding-mobile;
             }
 
 
@@ -119,6 +119,7 @@
 
                     @include media( $tablet ) {
                         padding: 0 1rem;
+                        margin: 0;
                         width: 33%;
 
                         &:nth-child(4) {
@@ -127,21 +128,27 @@
                     }
 
                     @include media( $mobile ) {
-                        padding: 0 1rem;
-                        width: 100%;
+                        padding: 0;
                         margin: 0;
+                        width: 50%;
                     }
 
 
                     > li {
-                        padding-bottom: 1rem;
-
-                        @include media( $mobile ) {
-                            padding-top: 1rem;
-                        }
+                        margin-bottom: 1rem;
 
                         > a {
                             font-size: $font-size-h5;
+                            display: block;
+                        }
+
+                        @include media( $mobile ) {
+                            padding: 0;
+
+                            > a {
+                                display: block;
+                                margin: 1.5rem;
+                            }
                         }
                     }
 
@@ -170,6 +177,15 @@
                     @include list-unstyled;
                     padding-top: 0.5rem;
 
+                    .nav-link {
+                        margin-top: 0.5rem;
+                        display: block;
+                    }
+
+                    @include media( $tablet ) {
+                        padding: 0;
+                    }
+
                     @include media( $mobile ) {
                         display: none;
                     }
@@ -191,13 +207,13 @@
         }
 
         .tab {
+            @include text-white;
             display: inline-block;
             width: $column;
             margin-right: 1rem;
             text-align: center;
             height: 100%;
             font-size: $font-size-h6;
-            color: $white;
             padding: 1.2rem;
 
             @include media( $tablet ) {
@@ -228,8 +244,8 @@
             &:active,
             &:focus,
             &:hover {
+                @include text-yellow;
                 background: rgba( $gray-darker, 1 );
-                color: $yellow;
                 text-decoration: none;
             }
         }
@@ -243,9 +259,9 @@
 
         .search-form {
             @include clearfix();
+            @include bg-white;
             max-width: 55rem;
             margin: 0 auto;
-            background-color: $white;
 
             @include media( $tablet ) {
                 max-width: 35rem;
@@ -307,7 +323,7 @@
             }
         }
 
-        input[type='text'] {
+        input[type='tel'] {
             border-color: $white;
         }
 
@@ -419,10 +435,5 @@
                 }
             }
         }
-    }
-
-    .ce-heroModule {
-        height: $hero_module_height - 2rem;
-        margin-bottom: $search-bar-height;
     }
 }

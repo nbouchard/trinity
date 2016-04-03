@@ -3,38 +3,39 @@
 // --------------------------------------------------
 
 fieldset {
-  background-color: $gray-lighter;
-  // border: $base-border;
-  margin: 0 0 $small-spacing;
-  padding: $base-spacing;
+    background-color: $gray-lighter;
+    margin: 0 0 $small-spacing;
+    padding: $base-spacing;
 }
 
 input,
 label,
 select {
-  display: block;
-  font-family: $font-family-base;
-  font-size: $font-size-normal;
+    display: block;
+    font-family: $font-family-base;
+    font-size: $font-size-normal;
+    font-feature-settings: "lnum";
 }
 
 label {
-  font-weight: 500;
-  margin-bottom: $small-spacing / 2;
+    font-weight: 500;
+    margin-bottom: $small-spacing / 2;
 
-  &.required::after {
-    content: "*";
-  }
+    &.required::after {
+        content: "*";
+    }
 
-  abbr {
-    display: none;
-  }
+    abbr {
+        display: none;
+    }
 }
 
 #{$all-text-inputs},
 select[multiple=multiple] {}
 
 textarea {
-  resize: vertical;
+    resize: vertical;
+    font-feature-settings: "lnum";
 }
 
 input[type="search"] {
@@ -43,24 +44,23 @@ input[type="search"] {
 
 input[type="checkbox"],
 input[type="radio"] {
-  display: inline;
-  margin-right: $small-spacing / 2;
+    display: inline;
+    margin-right: $small-spacing / 2;
 
-  + label {
-    display: inline-block;
-  }
+    + label {
+        display: inline-block;
+    }
 }
 
 input[type="file"] {
-  margin-bottom: $small-spacing;
-  width: 100%;
+    margin-bottom: $small-spacing;
+    width: 100%;
 }
 
 select {
     margin-bottom: $base-spacing;
     max-width: 100%;
     width: auto;
-
 }
 
 
@@ -97,7 +97,7 @@ select {
     }
 
     &:disabled {
-        background-color: shade($white, 5%);
+        background-color: shade( $white, 5% );
         cursor: not-allowed;
 
         &:hover,

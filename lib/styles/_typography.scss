@@ -25,11 +25,10 @@ html {
 // Body
 // -------------------------
 body {
-    color: $gray-dark;
+    @include text-default;
     font-family: $font-family-base;
     font-size: $font-size-normal;
     line-height: $line-height-base;
-    font-feature-settings: "lnum";
 }
 
 
@@ -52,8 +51,8 @@ a {
 // Headings
 // -------------------------
 h1, h2, h3, h4, h5, h6 {
-    font-family: $headings-font-family;
     line-height: $headings-line-height;
+    -webkit-font-smoothing: antialiased;
     margin: 0;
 
     span {
