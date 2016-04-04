@@ -14,6 +14,7 @@ tpl:
 <h2 id="buttons">Buttons</h2>
 <p>There are multiple ways to implement buttons depending on the situation, while stil getting a consistent visual output. The <code>.btn</code> class and any variant classes can be applied to a link, button, or input HTML element.</p>
 
+<h4>Button Types</h4>
 <div class="example-block">
     <div class="example">
         <a class="btn" href="#" role="button">Link</a>
@@ -32,6 +33,7 @@ tpl:
 {{/markdown}}
 </div>
 
+<h4>Button Styles</h4>
 <p>We have four standard button styles to be used across the site. The search button also has a special variant to add the angle to the button.</p>
 <div class="example-block">
     <div class="example">
@@ -61,6 +63,7 @@ tpl:
 {{/markdown}}
 </div>
 
+<h4>Button Sizes</h4>
 <p>There are 3 standard sizes for buttons, based off of standard text sizes.</p>
 <div class="example-block">
     <div class="example">
@@ -84,7 +87,7 @@ tpl:
 {{/markdown}}
 </div>
 
-<h4>Disabled State</h4>
+<h4>Disabled Buttons</h4>
 <div class="example-block">
     <div class="example">
         <button type="button" class="btn btn-primary" disabled="disabled">Disabled button</button>
@@ -393,12 +396,12 @@ tpl:
 <div class="example-block">
     <div class="example">
         <form class="search-form search-home" >
-            <input class="zip-input" type="search" placeholder="Enter your zip code" autofocus="autofocus">
+            <input class="zip-input" type="tel" placeholder="Enter your zip code">
             <button class="btn btn-search btn-angle" type="button">Search</button>
         </form>
 
         <form class="search-form search-business">
-            <input class="zip-input" type="search" placeholder="Enter your zip code" autofocus="autofocus">
+            <input class="zip-input" type="tel" placeholder="Enter your zip code">
             <div class="select-pricing-buckets">
                 <select class="size-select select2-form">
                     <option value="">Select average bill</option>
@@ -416,12 +419,12 @@ tpl:
 {{#markdown}}
 ```html
 <form class="search-form search-home" >
-    <input class="zip-input" type="search" placeholder="Enter your zip code" autofocus="autofocus">
+    <input class="zip-input" type="tel" placeholder="Enter your zip code">
     <button class="btn btn-search btn-angle" type="button">Search</button>
 </form>
 
 <form class="search-form search-business">
-    <input class="zip-input" type="search" placeholder="Enter your zip code" autofocus="autofocus">
+    <input class="zip-input" type="tel" placeholder="Enter your zip code">
     <div class="select-pricing-buckets">
         <select class="size-select select2-form">
             <option value="">Select average bill</option>

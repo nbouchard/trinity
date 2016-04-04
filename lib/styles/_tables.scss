@@ -1,24 +1,25 @@
 table {
-  border-collapse: collapse;
-  margin: $small-spacing 0;
-  table-layout: fixed;
-  width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
 }
 
 th {
-  border-bottom: 1px solid shade($gray-light, 25%);
-  font-weight: 600;
-  padding: $small-spacing 0;
-  text-align: left;
+    @include bg-blue;
+    @include text-white;
+    font-weight: $font-weight-medium;
+    padding: $small-spacing;
+    text-align: left;
 }
 
 td {
-  border-bottom: 1px solid $gray-light;
-  padding: $small-spacing 0;
+    border-bottom: 1px solid $gray-light;
+    padding: $small-spacing;
+    text-align: left;
 }
 
 tr,
 td,
 th {
-  vertical-align: middle;
+    vertical-align: middle;
 }
