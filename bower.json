@@ -5,7 +5,7 @@
     "Choose Energy <nbouchard@chooseenergy.com>"
   ],
   "description": "Global ChooseUX Components",
-  "dist": [
+  "main": [
       "lib/fonts/**/.*",
       "lib/styles/mixins/**/.*",
       "lib/styles/vendors/**/.*",
