@@ -25,6 +25,7 @@
     "lib/templates",
     "*.md",
     "*.js",
+    "*.json",
     "tasks"
   ]
 }
