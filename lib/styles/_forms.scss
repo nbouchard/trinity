@@ -18,15 +18,16 @@ select {
 }
 
 label {
+    display: inline-block;
     font-weight: 500;
-    margin-bottom: $small-spacing / 2;
+    margin-right: $base-spacing;
 
-    &.required::after {
-        content: "*";
+    &:last-of-type {
+        margin: 0;
     }
 
-    abbr {
-        display: none;
+    &.stacked {
+        display: block;
     }
 }
 
@@ -45,11 +46,6 @@ input[type="search"] {
 input[type="checkbox"],
 input[type="radio"] {
     display: inline;
-    margin-right: $small-spacing / 2;
-
-    + label {
-        display: inline-block;
-    }
 }
 
 input[type="file"] {
@@ -67,8 +63,8 @@ select {
 //
 // Inputs & Textareas
 // --------------------------------------------------
- input,
- textarea {
+input,
+textarea {
     display: block;
     padding: 0.7rem 1.2rem;
     font-family: $font-family-base;
@@ -228,4 +224,43 @@ textarea {
             width: 40%;
         }
     }
+}
+
+//
+// Checkboxes & Radio buttons
+// --------------------------------------------------
+
+input[type="radio"],
+input[type="checkbox"]  {
+    visibility: hidden;
+    margin: 0 0.5rem 0 0;
+    line-height: 1;
+
+    &:before {
+        visibility: visible;
+        content: '';
+        display: inline-block;
+        width: 1.4rem;
+        height: 1.4rem;
+        border: 1px solid $gray-light;
+        transition: 0.25s ease all;
+        background-color: $white;
+    }
+
+    &:checked {
+        &:before {
+            background-color: $green;
+            border-color: $green;
+        }
+    }
+
+    &:disabled {
+        &:before {
+            background-color: $gray-lighter;
+        }
+    }
+}
+
+input[type="radio"]:before {
+    border-radius: 1rem;
 }

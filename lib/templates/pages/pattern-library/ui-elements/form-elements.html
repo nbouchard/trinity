@@ -218,42 +218,153 @@ tpl:
 {{/markdown}}
 </div>
 
-<!-- <h2 id="checkboxes">Checkboxes & Radio Buttons</h2>
+<h2 id="checkboxes">Checkboxes</h2>
 <p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
 
-<h4>Horizontal Labels</h4>
+<h4>Horizontal</h4>
 <div class="example-block">
     <div class="example">
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-            </label>
-        </div>
-        <div class="radio">
-            <label>
-                <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-            </label>
-        </div>
+        <label>
+            <input type="checkbox" id="blankCheckbox1" value="option1">
+            Checkbox #1
+        </label>
+        <label>
+            <input type="checkbox" id="blankCheckbox2" value="option2">
+            Checkbox #2
+        </label>
+        <label>
+            <input type="checkbox" id="blankCheckbox3" value="option3" disabled>
+            Checkbox #3 (disabled)
+        </label>
     </div>
 
 {{#markdown}}
 ```html
-<div class="checkbox">
-    <label>
-        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-    </label>
-</div>
-<div class="radio">
-    <label>
-        <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-    </label>
-</div>
+<label>
+    <input type="checkbox" id="blankCheckbox1" value="option1">
+    Checkbox #1
+</label>
+<label>
+    <input type="checkbox" id="blankCheckbox2" value="option2">
+    Checkbox #2
+</label>
+<label>
+    <input type="checkbox" id="blankCheckbox3" value="option3" disabled>
+    Checkbox #3 (disabled)
+</label>
 ```
 {{/markdown}}
 </div>
 
-<h4>Stacked Labels</h4>
+<h4>Stacked</h4>
+<div class="example-block">
+    <div class="example">
+        <label class="stacked">
+            <input type="checkbox" id="blankCheckbox1" value="option1">
+            Checkbox #1
+        </label>
+        <label class="stacked">
+            <input type="checkbox" id="blankCheckbox2" value="option2">
+            Checkbox #2
+        </label>
+        <label class="stacked">
+            <input type="checkbox" id="blankCheckbox3" value="option3" disabled>
+            Checkbox #3 (disabled)
+        </label>
+    </div>
 
+{{#markdown}}
+```html
+<label class="stacked">
+    <input type="checkbox" id="blankCheckbox1" value="option1">
+    Checkbox #1
+</label>
+<label class="stacked">
+    <input type="checkbox" id="blankCheckbox2" value="option2">
+    Checkbox #2
+</label>
+<label class="stacked">
+    <input type="checkbox" id="blankCheckbox3" value="option3" disabled>
+    Checkbox #3 (disabled)
+</label>
+```
+{{/markdown}}
+</div>
+
+<h2 id="radio">Radio Buttons</h2>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+
+<h4>Horizontal</h4>
+<div class="example-block">
+    <div class="example">
+        <label>
+            <input type="radio" name="radio1" id="blankRadio1" value="option1">
+            Radio #1
+        </label>
+        <label>
+            <input type="radio" name="radio1" id="blankRadio2" value="option2">
+            Radio #2
+        </label>
+        <label>
+            <input type="radio" name="radio1" id="blankRadio3" value="option3" disabled>
+            Radio #3 (disabled)
+        </label>
+    </div>
+
+{{#markdown}}
+```html
+<label>
+    <input type="radio" name="radio1" id="blankRadio1" value="option1">
+    Radio #1
+</label>
+<label>
+    <input type="radio" name="radio1" id="blankRadio2" value="option2">
+    Radio #2
+</label>
+<label>
+    <input type="radio" name="radio1" id="blankRadio3" value="option3" disabled>
+    Radio #3 (disabled)
+</label>
+```
+{{/markdown}}
+</div>
+
+<h4>Stacked</h4>
+<div class="example-block">
+    <div class="example">
+        <label class="stacked">
+            <input type="radio" name="radio2" id="blankRadio1" value="option1">
+            Radio #1
+        </label>
+        <label class="stacked">
+            <input type="radio" name="radio2" id="blankRadio2" value="option2">
+            Radio #2
+        </label>
+        <label class="stacked">
+            <input type="radio" name="radio2" id="blankRadio3" value="option3" disabled>
+            Radio #3 (disabled)
+        </label>
+    </div>
+
+{{#markdown}}
+```html
+<label class="stacked">
+    <input type="radio" name="radio2" id="blankRadio1" value="option1">
+    Radio #1
+</label>
+<label class="stacked">
+    <input type="radio" name="radio2" id="blankRadio2" value="option2">
+    Radio #2
+</label>
+<label class="stacked">
+    <input type="radio" name="radio2" id="blankRadio3" value="option3" disabled>
+    Radio #3 (disabled)
+</label>
+```
+{{/markdown}}
+</div>
+
+<h4>Radios as blocks</h4>
 <div class="example-block">
     <div class="example">
         <p>Example</p>
@@ -266,34 +377,8 @@ tpl:
 {{/markdown}}
 </div>
 
-<h4>w/ description text</h4>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
 
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h4>Radio grid (buttons where only one can be selected)</h4>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-
-<h2 id="dates">Dates</h2>
+<!-- <h2 id="dates">Dates</h2>
 <p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
 
 <h4>Datepicker</h4>
@@ -391,52 +476,3 @@ tpl:
 {{/markdown}}
 </div>
  -->
-
-<h4>Search Form</h4>
-<div class="example-block">
-    <div class="example">
-        <form class="search-form search-home" >
-            <input class="zip-input" type="tel" placeholder="Enter your zip code">
-            <button class="btn btn-search btn-angle" type="button">Search</button>
-        </form>
-
-        <form class="search-form search-business">
-            <input class="zip-input" type="tel" placeholder="Enter your zip code">
-            <div class="select-pricing-buckets">
-                <select class="size-select select2-form">
-                    <option value="">Select average bill</option>
-                    <option value="smb_0">$0 &#x2013; $500 / month</option>
-                    <option value="smb_501">$501 &#x2013; $1500 / month</option>
-                    <option value="smb_1501">$1501 &#x2013; $2500 / month</option>
-                    <option value="smb_2501">$2501 &#x2013; $5000 / month</option>
-                    <option value="smb_5001">More than $5000 / month</option>
-                </select>
-            </div>
-            <button class="btn btn-search btn-angle" type="button">Search</button>
-        </form>
-    </div>
-
-{{#markdown}}
-```html
-<form class="search-form search-home" >
-    <input class="zip-input" type="tel" placeholder="Enter your zip code">
-    <button class="btn btn-search btn-angle" type="button">Search</button>
-</form>
-
-<form class="search-form search-business">
-    <input class="zip-input" type="tel" placeholder="Enter your zip code">
-    <div class="select-pricing-buckets">
-        <select class="size-select select2-form">
-            <option value="">Select average bill</option>
-            <option value="smb_0">$0 &#x2013; $500 / month</option>
-            <option value="smb_501">$501 &#x2013; $1500 / month</option>
-            <option value="smb_1501">$1501 &#x2013; $2500 / month</option>
-            <option value="smb_2501">$2501 &#x2013; $5000 / month</option>
-            <option value="smb_5001">More than $5000 / month</option>
-        </select>
-    </div>
-    <button class="btn btn-search btn-angle" type="button">Search</button>
-</form>
-```
-{{/markdown}}
-</div>
