@@ -6,9 +6,9 @@
   ],
   "description": "Global ChooseUX Components",
   "main": [
-      "lib/fonts/**/.*",
-      "lib/styles/mixins/**/.*",
-      "lib/styles/vendors/**/.*",
+      "lib/fonts",
+      "lib/styles/mixins",
+      "lib/styles/vendors",
       "lib/styles/global.scss"
   ],
   "dependencies": {
@@ -18,7 +18,11 @@
   ],
   "private": true,
   "ignore": [
-    "**/.*",
+    "lib/images",
+    "lib/js"
+    "lib/styles/styles.scss",
+    "lib/styles/_ceux.scss",
+    "lib/templates",
     "*.md",
     "*.js",
     "tasks"
