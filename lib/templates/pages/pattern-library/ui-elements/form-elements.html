@@ -126,38 +126,38 @@ tpl:
 <div class="example-block">
     <div class="example">
         <div class="form-group">
-            <input type="text" id="example-text" placeholder="You need to put something here" required>
             <label for="example-text">Text</label>
+            <input type="text" id="example-text" placeholder="You need to put something here" required>
             <span class="validation-message is-hidden">This field is required</span>
         </div>
         <div class="form-group">
-            <input type="email" id="example-email" placeholder="example@example.com" required>
             <label for="example-email">Email</label>
+            <input type="email" id="example-email" placeholder="example@example.com" required>
             <span class="validation-message">Must be a valid email address</span>
         </div>
         <div class="form-group">
-            <input type="url" id="example-url" placeholder="http://www.example.com">
             <label for="example-url">URL (optional)</label>
+            <input type="url" id="example-url" placeholder="http://www.example.com">
             <span class="validation-message is-hidden">This field is required</span>
         </div>
         <div class="form-group">
-            <input type="tel" id="example-tel" placeholder="###-###-####">
             <label for="example-tel">Phone (optional)</label>
+            <input type="tel" id="example-tel" placeholder="###-###-####">
             <span class="validation-message is-hidden">This field is required</span>
         </div>
         <div class="form-group">
-            <input type="search" id="example-search" placeholder="Enter your zip code to search" required>
             <label for="example-search">Search</label>
+            <input type="search" id="example-search" placeholder="Enter your zip code to search" required>
             <span class="validation-message is-hidden">This field is required</span>
         </div>
         <div class="form-group">
-            <textarea id="example-textarea" rows="3" placeholder="Write your message" required></textarea>
             <label for="example-textarea">Textarea</label>
+            <textarea id="example-textarea" rows="3" placeholder="Write your message" required></textarea>
             <span class="validation-message is-hidden">This field is required</span>
         </div>
         <div class="form-group">
-            <input type="text" id="example-disabled" disabled>
             <label for="example-disabled">Disabled</label>
+            <input type="text" id="example-disabled" disabled>
             <span class="info-message">You must do something else first</span>
         </div>
     </div>
@@ -165,39 +165,39 @@ tpl:
 {{#markdown}}
 ```html
 <div class="form-group">
-    <input type="text" id="example-text" required>
     <label for="example-text">Text</label>
-    <span class="validation-message">This field is required</span>
+    <input type="text" id="example-text" placeholder="You need to put something here" required>
+    <span class="validation-message is-hidden">This field is required</span>
 </div>
 <div class="form-group">
-    <input type="email" id="example-email" required>
     <label for="example-email">Email</label>
-    <span class="validation-message">This field is required</span>
+    <input type="email" id="example-email" placeholder="example@example.com" required>
+    <span class="validation-message">Must be a valid email address</span>
 </div>
 <div class="form-group">
-    <input type="url" id="example-url" required>
-    <label for="example-url">URL</label>
-    <span class="validation-message">This field is required</span>
+    <label for="example-url">URL (optional)</label>
+    <input type="url" id="example-url" placeholder="http://www.example.com">
+    <span class="validation-message is-hidden">This field is required</span>
 </div>
 <div class="form-group">
-    <input type="tel" id="example-tel" required>
-    <label for="example-tel">Phone</label>
-    <span class="validation-message">This field is required</span>
+    <label for="example-tel">Phone (optional)</label>
+    <input type="tel" id="example-tel" placeholder="###-###-####">
+    <span class="validation-message is-hidden">This field is required</span>
 </div>
 <div class="form-group">
-    <input type="search" id="example-search" required>
-    <label for="example-serach">Search</label>
-    <span class="validation-message">This field is required</span>
+    <label for="example-search">Search</label>
+    <input type="search" id="example-search" placeholder="Enter your zip code to search" required>
+    <span class="validation-message is-hidden">This field is required</span>
 </div>
 <div class="form-group">
-    <textarea id="example-textarea" rows="3" required></textarea>
     <label for="example-textarea">Textarea</label>
-    <span class="validation-message">This field is required</span>
+    <textarea id="example-textarea" rows="3" placeholder="Write your message" required></textarea>
+    <span class="validation-message is-hidden">This field is required</span>
 </div>
 <div class="form-group">
-    <input type="text" id="example-disabled" disabled>
     <label for="example-disabled">Disabled</label>
-    <span class="validation-message">This field is required</span>
+    <input type="text" id="example-disabled" disabled>
+    <span class="info-message">You must do something else first</span>
 </div>
 ```
 {{/markdown}}
@@ -207,24 +207,32 @@ tpl:
 <p>Add the <code>.select2-form</code> class to <code>&lt;select&gt;</code> tags to apply our custom styles and behaviors to dropdowns. Requires jQuery and the <a href="https://select2.github.io/">Select2</a> javascript plugin.</p>
 <div class="example-block">
     <div class="example">
-        <select class="select2-form">
-            <option>One</option>
-            <option>Two</option>
-            <option>Three</option>
-            <option>Four</option>
-            <option>Five</option>
-        </select>
+        <div class="form-group">
+            <label for="example-dropdown">Number Selection</label>
+            <select class="select2-form" id="example-dropdown">
+                <option value="" disabled selected hidden>Select a number</option>
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+                <option value="five">Five</option>
+            </select>
+        </div>
     </div>
 
 {{#markdown}}
 ```html
-<select class="select2-form">
-    <option>One</option>
-    <option>Two</option>
-    <option>Three</option>
-    <option>Four</option>
-    <option>Five</option>
-</select>
+<div class="form-group">
+    <label for="example-dropdown">Number Selection</label>
+    <select class="select2-form" id="example-dropdown">
+        <option value="" disabled selected hidden>Select a number</option>
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+        <option value="four">Four</option>
+        <option value="five">Five</option>
+    </select>
+</div>
 ```
 {{/markdown}}
 </div>

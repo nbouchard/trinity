@@ -72,6 +72,8 @@ tpl:
 </div>
 
 <h2 id="zip-search">Zip Search</h2>
+
+<h4>Residential search (default)</h4>
 <p></p>
 
 <div class="example-block">
@@ -80,12 +82,28 @@ tpl:
             <input class="zip-input" type="tel" placeholder="Enter your zip code">
             <button class="btn btn-search btn-angle" type="button">Search</button>
         </form>
+    </div>
 
+{{#markdown}}
+```html
+<form class="search-form search-home" >
+    <input class="zip-input" type="tel" placeholder="Enter your zip code">
+    <button class="btn btn-search btn-angle" type="button">Search</button>
+</form>
+```
+{{/markdown}}
+</div>
+
+<h4>Business search</h4>
+<p></p>
+
+<div class="example-block">
+    <div class="example">
         <form class="search-form search-business">
             <input class="zip-input" type="tel" placeholder="Enter your zip code">
             <div class="select-pricing-buckets">
                 <select class="size-select select2-form">
-                    <option value="">Select average bill</option>
+                    <option value="" disabled selected hidden>Select average bill</option>
                     <option value="smb_0">$0 &#x2013; $500 / month</option>
                     <option value="smb_501">$501 &#x2013; $1500 / month</option>
                     <option value="smb_1501">$1501 &#x2013; $2500 / month</option>
@@ -99,16 +117,11 @@ tpl:
 
 {{#markdown}}
 ```html
-<form class="search-form search-home" >
-    <input class="zip-input" type="tel" placeholder="Enter your zip code">
-    <button class="btn btn-search btn-angle" type="button">Search</button>
-</form>
-
 <form class="search-form search-business">
     <input class="zip-input" type="tel" placeholder="Enter your zip code">
     <div class="select-pricing-buckets">
         <select class="size-select select2-form">
-            <option value="">Select average bill</option>
+            <option value="" disabled selected hidden>Select average bill</option>
             <option value="smb_0">$0 &#x2013; $500 / month</option>
             <option value="smb_501">$501 &#x2013; $1500 / month</option>
             <option value="smb_1501">$1501 &#x2013; $2500 / month</option>
