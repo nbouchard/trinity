@@ -31,7 +31,7 @@ node_modules
 .sass-cache
 
 # Ignore distributable files
-dist
+# dist 
 
 # Ignore generated logo sprites & processed logos
 lib/images/supplier-logos-lg.png
