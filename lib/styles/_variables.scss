@@ -19,6 +19,7 @@ $yellow        : #fbb431;
 $green         : #009c95;
 $blue          : #007fb6;
 $gray          : #939ea1;
+$red           : #f16767;
 
 
 $brand-primary      : $blue;
@@ -26,6 +27,7 @@ $body-bg            : $white;
 $text-color         : $gray-dark;
 $link-color         : $blue;
 $link-hover-color   : darken( $link-color, 15% );
+$error-color        : $red;
 
 $code-color : #c7254e;
 $code-bg    : #f9f2f4;

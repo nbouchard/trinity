@@ -3,18 +3,19 @@
 // --------------------------------------------------
 
 fieldset {
-    background-color: $gray-lighter;
+    @include bg-gray-lightest;
     margin: 0 0 $small-spacing;
     padding: $base-spacing;
 }
 
-input,
 label,
-select {
+input,
+select,
+textarea {
     display: block;
+    font-feature-settings: "lnum";
     font-family: $font-family-base;
     font-size: $font-size-normal;
-    font-feature-settings: "lnum";
 }
 
 label {
@@ -31,26 +32,10 @@ label {
     }
 }
 
-#{$all-text-inputs},
-select[multiple=multiple] {}
-
 textarea {
     resize: vertical;
-    font-feature-settings: "lnum";
-}
-
-input[type="search"] {
-    box-sizing: border-box;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    display: inline;
-}
-
-input[type="file"] {
-    margin-bottom: $small-spacing;
-    width: 100%;
+    height: auto;
+    min-height: 10rem;
 }
 
 select {
@@ -59,36 +44,56 @@ select {
     width: auto;
 }
 
+input[type="search"] {
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    margin-bottom: $small-spacing;
+    width: 100%;
+}
+
+// For unknown reasons, these dont't work when comma separated
+::placeholder {
+    color: $gray-light;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $gray-light;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: $gray-light;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: $gray-light;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    color: $gray-light;
+}
 
 //
 // Inputs & Textareas
 // --------------------------------------------------
 input,
 textarea {
-    display: block;
-    padding: 0.7rem 1.2rem;
-    font-family: $font-family-base;
-    font-size: $font-size-normal;
+    @include bg-white;
     line-height: $line-height-base;
-    background-color: $white;
+    height: 6rem;
     border: 1px solid $input-border;
-    margin-bottom: 1.6rem;
-    box-sizing: border-box;
-
-    &.no-border {
-        padding: 0.9rem 1.3rem;
-    }
 
     &[disabled] {
         cursor: not-allowed;
     }
 
     &:hover {
-        border-color: darken( $input-border, 20% );
+        border-color: $gray;
     }
 
     &:focus {
-        border-color: darken( $input-border, 40% );
+        border-color: $gray;
         outline: none;
     }
 
@@ -101,7 +106,7 @@ textarea {
             border-color: $input-border;
         }
     }
- }
+}
 
 input[type="text"],
 input[type="search"],
@@ -112,8 +117,62 @@ textarea {
     width: 100%;
 }
 
-textarea {
-    height: auto;
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+
+    label {
+        position: absolute;
+        top: 0.8rem;
+        left: 2rem;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-xsmall;
+        color: $gray-medium-light;
+        // line-height: 6rem;
+        // transform: translate3d(0, 0, 0);
+        // transition: all 0.2s ease-in-out;
+    }
+
+    input {
+        padding: 1.5rem 2rem 0;
+
+        &:valid,
+        &:focus {
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    textarea {
+        padding: 3rem 2rem 2rem;
+    }
+
+    .validation-message,
+    .info-message {
+        @include text-white;
+        display: block;
+        height: 3rem;
+        width: 100%;
+        padding: 0 2rem;
+        line-height: 3rem;
+        font-size: $font-size-small;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .validation-message {
+        background-color: $error-color;
+
+        &.is-hidden,
+        &.ng-hide {
+            height: 0;
+        }
+    }
+
+    .info-message {
+        @include bg-gray;
+    }
 }
 
 
@@ -124,22 +183,18 @@ textarea {
     width: 100% !important;
 
     .select2-selection {
-        border-radius: 0;
-        height: auto;
+        @include bg-white;
+        width: 100%;
+        height: 6rem;
+        padding: 0 2rem;
         outline: none;
         display: block;
-        width: 100%;
-        padding: 0.7rem 1.2rem;
-        font-family: $font-family-base;
-        font-size: $font-size-normal;
-        line-height: $line-height-base;
-        background-color: $white;
         border: 1px solid $input-border;
-        box-sizing: border-box;
+        border-radius: 0;
 
         .select2-selection__rendered {
             padding: 0;
-            line-height: $line-height-base;
+            line-height: 6rem;
         }
 
         .select2-selection__arrow {
@@ -152,7 +207,8 @@ textarea {
             b {
                 border-color: $gray transparent transparent transparent !important;
                 border-style: solid !important;
-                border-width: 9px 8px 0 8px !important;
+                border-width: 10px 7px 0 7px !important;
+                margin-top: -4px;
             }
         }
     }
@@ -162,6 +218,7 @@ textarea {
 .select2-dropdown {
     border-color: $input-border;
     border-radius: 0;
+    font-feature-settings: "lnum";
 
     &.select2-dropdown--above {
         top: 1px;
@@ -172,16 +229,18 @@ textarea {
     }
 
     .select2-results__option {
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
+        height: 5rem;
+        line-height: 5rem;
+        padding: 0 2rem;
     }
 
     .select2-results__option[aria-selected=true] {
-        background-color: $gray-lightest;
+        @include bg-white;
         color: inherit;
     }
+
     .select2-results__option--highlighted[aria-selected] {
-        background-color: $gray-lightest;
+        @include bg-gray-lightest;
         color: inherit;
     }
 }
@@ -194,6 +253,8 @@ textarea {
     .zip-input {
         float: left;
         width: 80%;
+        padding: 0.7rem 1.2rem;
+        height: 4rem;
         border-right: none;
 
         &:hover,
@@ -205,12 +266,25 @@ textarea {
     .select-pricing-buckets {
         float: left;
         width: 40%;
+        height: 4rem;
         border: 1px solid $input-border;
         border-right: none;
         padding-right: 2rem;
 
         .select2-selection {
             border: none;
+            height: 3.8rem;
+            padding: 0 1.2rem;
+
+            .select2-selection__rendered {
+                line-height: 4rem;
+            }
+        }
+
+        .select2-results__option {
+            height: 4rem;
+            line-height: 4rem;
+            padding: 0 1.2rem;
         }
     }
 
@@ -232,11 +306,14 @@ textarea {
 
 input[type="radio"],
 input[type="checkbox"]  {
+    display: inline;
     visibility: hidden;
     margin: 0 0.5rem 0 0;
+    height: auto;
     line-height: 1;
 
     &:before {
+        @include bg-white;
         visibility: visible;
         content: '';
         display: inline-block;
@@ -244,12 +321,11 @@ input[type="checkbox"]  {
         height: 1.4rem;
         border: 1px solid $gray-light;
         transition: 0.25s ease all;
-        background-color: $white;
     }
 
     &:checked {
         &:before {
-            background-color: $green;
+            @include bg-green;
             border-color: $green;
         }
     }

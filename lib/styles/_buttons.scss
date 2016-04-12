@@ -14,8 +14,9 @@ a.btn,
     font-family: $font-family-base;
     font-size: $font-size-normal;
     font-weight: 500;
-    line-height: $line-height-base;
-    padding: 0.8rem 2.4rem;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 2.4rem;
     margin-bottom: 0;
     text-decoration: none;
     // transition: background-color $base-duration $base-timing;
@@ -48,18 +49,20 @@ a.btn,
 a.btn-lg,
 .btn-lg {
     font-size: $font-size-large;
-    padding: 0.9rem 3.5rem;
+    height: 5rem;
+    line-height: 5rem;
 }
 
 a.btn-sm,
 .btn-sm {
     font-size: $font-size-small;
-    padding: 0.7rem 2rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
 }
 
 a.btn-wide,
 .btn-wide {
-    width: 30rem;
+    width: 100%;
 }
 
 //
@@ -81,7 +84,8 @@ a.btn-secondary,
     @include text-green;
     border: 2px solid $green;
     background-color: transparent;
-    padding: 0.6rem 2.2rem;
+    line-height: 3.6rem;
+    padding: 0 2.2rem;
 
     &:hover,
     &:focus {
