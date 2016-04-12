@@ -26,6 +26,12 @@
     "*.md",
     "*.js",
     "*.json",
+    ".bower.json",
+    ".gitignore",
+    ".gitmodules",
+    ".jshintrc",
+    ".scss-lint.yml",
+    "bower.json",
     "tasks"
   ]
 }
