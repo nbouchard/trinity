@@ -3,7 +3,8 @@
 // --------------------------------------------------
 
 a.btn,
-.btn {
+.btn,
+.button {
     @include bg-blue;
     @include text-white;
     appearance: none;
@@ -80,7 +81,8 @@ a.btn-primary,
 }
 
 a.btn-secondary,
-.btn-secondary {
+.btn-secondary,
+.gform_button {
     @include text-green;
     border: 2px solid $green;
     background-color: transparent;

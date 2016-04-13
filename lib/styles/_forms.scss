@@ -21,7 +21,6 @@ textarea {
 
 label {
     display: inline-block;
-    font-weight: 500;
     margin-right: $base-spacing;
 
     &:last-of-type {
@@ -118,11 +117,17 @@ textarea {
     width: 100%;
 }
 
-.form-group {
+input[type="button"],
+input[type="submit"] {
+    height: auto;
+}
+
+.form-group,
+.gfield:not(.normal-label) {
     position: relative;
     margin-bottom: 2rem;
 
-    label {
+    > label {
         position: absolute;
         top: 0.8rem;
         left: 2rem;
@@ -132,7 +137,10 @@ textarea {
         z-index: $z-index-low-1;
         // transition: all 0.2s ease-in-out;
     }
+}
 
+.form-group,
+.gfield {
     input {
         padding: 1.5rem 2rem 0;
 
@@ -150,7 +158,9 @@ textarea {
     }
 
     .validation-message,
-    .info-message {
+    .validation_message,
+    .info-message,
+    .ginput_counter {
         @include text-white;
         display: block;
         height: 3rem;
@@ -161,7 +171,8 @@ textarea {
         transition: all 0.2s ease-in-out;
     }
 
-    .validation-message {
+    .validation-message,
+    .validation_message {
         background-color: $error-color;
 
         &.is-hidden,
@@ -170,11 +181,61 @@ textarea {
         }
     }
 
-    .info-message {
+    .info-message,
+    .ginput_counter {
         @include bg-gray;
     }
 }
 
+
+//
+// Gravity Forms
+// --------------------------------------------------
+.gform_wrapper {
+    ul {
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .gfield_required,
+    .field_sublabel_hidden_label > label,
+    .validation_message.instruction {
+        display: none;
+    }
+
+    .validation_error {
+        color: $error-color;
+    }
+
+    .gfield.normal-label {
+        margin-bottom: 2rem;
+
+        > label {
+            font-weight: $font-weight-medium;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .gfield_checkbox,
+    .gfield_radio {
+        padding: 0 2rem;
+        li {
+            display: inline-block;
+            margin-right: $base-spacing;
+
+            &:last-of-type {
+                margin: 0;
+            }
+
+            &.stacked {
+                display: block;
+            }
+        }
+    }
+}
 
 //
 // Select2 Dropdowns
@@ -191,6 +252,7 @@ textarea {
         display: block;
         border: 1px solid $input-border;
         border-radius: 0;
+        font-feature-settings: "lnum";
 
         .select2-selection__rendered {
             padding: 0;
