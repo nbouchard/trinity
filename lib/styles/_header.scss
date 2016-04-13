@@ -264,7 +264,7 @@
             margin: 0 auto;
 
             @include media( $tablet ) {
-                max-width: 35rem;
+                max-width: 40rem;
             }
 
             &.inactive {
@@ -275,24 +275,12 @@
                 display: block;
             }
 
-            .form-control,
-            .btn {
-                float: left;
-            }
-
             .form-control {
-                height: 4.2rem;
                 width: 80%;
                 margin: 0;
 
                 @include media( $tablet-down ) {
-                    font-size: $font-size-normal * 0.8;
-                    line-height: $line-height-base * 0.9;
-                    padding: 0.9rem 0.9rem 0.7rem 0.9rem;
-                }
-
-                @include media( $mobile ) {
-                    font-size: $font-size-normal;
+                    font-size: $font-size-normal * 0.9;
                 }
 
                 &:before {
@@ -302,23 +290,12 @@
             }
 
             .btn-search {
-                height: 4.2rem;
-                padding: 1rem 1.5rem 0.8rem 1.5rem;
-                position: relative;
                 width: 20%;
 
                 @include media( $tablet-down ) {
                     font-size: $font-size-normal * 0.9;
                     line-height: $line-height-base * 0.9;
-                    padding: 1rem 1rem 0.8rem 1rem;
-                }
-
-                &:before {
-                    display: block;
-                    position: absolute;
-                    content: '';
-                    left: -2rem;
-                    top: 0rem;
+                    padding: 0 1rem;
                 }
             }
         }
@@ -333,18 +310,19 @@
             }
 
             .select-pricing-buckets {
-                height: 4.2rem;
                 width: 45%;
-                float: left;
-                padding-right: 2rem;
+                border-color: $white $white $white $input-border;
             }
 
             .select2-selection {
-                border-color: $white $white $white $input-border;
-                height: 4.2rem;
+                padding: 0.8rem 0 0.6rem 1rem;
 
                 @include media( $tablet-down ) {
-                    padding: 0.8rem 0 0.6rem 1rem;
+                    padding: 1rem 0 0.7rem 1rem;
+                }
+
+                .select2-selection__arrow {
+                    right: 1.5rem;
                 }
             }
 
@@ -352,15 +330,9 @@
                 line-height: $line-height-base;
 
                 @include media( $tablet-down ) {
-                    font-size: $font-size-normal * 0.8;
-                    line-height: 2;
+                    font-size: $font-size-normal * 0.9;
+                    line-height: $line-height-base * 0.9;
                 }
-            }
-
-            .select2-selection__arrow b {
-                border-width: 8px 7px 0 7px !important;
-                margin-left: 10px;
-                margin-top: -3px;
             }
         }
     }

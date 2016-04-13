@@ -71,24 +71,28 @@
     font-family: $font-family-serif;
     font-size: $font-size-h4;
     line-height: $line-height-medium;
+    -webkit-font-smoothing: antialiased;
 }
 
 @mixin secondary-text {
     font-size: $font-size-h5;
     font-weight: $font-weight-medium;
     line-height: $line-height-medium;
+    -webkit-font-smoothing: antialiased;
 }
 
 @mixin tertiary-text {
     font-size: $font-size-h6;
     font-weight: $font-weight-medium;
     line-height: $line-height-medium;
+    -webkit-font-smoothing: antialiased;
 }
 
 @mixin quote-text {
     font-size: $font-size-h5;
     font-family: $font-family-serif;
     font-style: italic;
+    -webkit-font-smoothing: antialiased;
 }
 
 //
