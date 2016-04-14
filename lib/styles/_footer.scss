@@ -3,10 +3,10 @@
 // --------------------------------------------------
 
 .ce-siteFooter {
-    color: $white;
+    @include text-white;
 
     a {
-        color: $white;
+        @include text-white;
         font-weight: $font-weight-regular;
 
         &:active,
@@ -19,10 +19,11 @@
 
     .site-footer-outer {
         &.v-light {
-            background: rgba( $gray-darker, 0.85 );
+            background-color: rgba( $gray-darker, 0.85 );
         }
+
         &.v-dark {
-            background: $gray-darker;
+            background-color: $gray-darker;
         }
     }
 
@@ -69,6 +70,10 @@
         @include grid-container;
         padding-bottom: $grid-padding;
 
+        @include media( $mobile ) {
+            display: none;
+        }
+
         .footer-links {
             padding: 0 $grid-padding;
 
@@ -83,6 +88,7 @@
 
         .nav-link {
             display: block;
+            margin: 0.5rem 0;
         }
     }
 
@@ -103,8 +109,9 @@
                 padding-bottom: $grid-padding-tablet;
 
                 .nav-list {
-                    @include prefixer(column-count, 2, webkit moz spec);
-                    column-count: 2;
+                    display: none;
+                    // @include prefixer(column-count, 2, webkit moz spec);
+                    // column-count: 2;
                 }
             }
         }
@@ -157,11 +164,22 @@
             text-align: center;
             padding-bottom: 2rem;
 
-            a {
+            @include media( $tablet-down ) {
+                display: flex;
+                justify-content: center;
+                flex-wrap: nowrap;
+            }
+
+            .social-item {
                 font-size: $font-size-large;
                 text-decoration: none;
                 padding: 0.5rem 1rem 0;
                 border-right: 1px solid $white;
+
+                @include media( $tablet-down ) {
+                    padding: 1rem 2.5rem;
+                    line-height: 1;
+                }
 
                 &:last-of-type {
                     border: none;

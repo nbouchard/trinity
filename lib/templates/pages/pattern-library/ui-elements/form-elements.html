@@ -12,83 +12,92 @@ tpl:
 <p>Baseline styles and usage examples for for common form elements.</p>
 
 <h2 id="buttons">Buttons</h2>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<p>There are multiple ways to implement buttons depending on the situation, while stil getting a consistent visual output. The <code>.btn</code> class and any variant classes can be applied to a link, button, or input HTML element.</p>
 
-<h3>Button Tags</h3>
+<h4>Button Types</h4>
 <div class="example-block">
     <div class="example">
-        <a class="btn btn-gray" href="#" role="button">Link</a>
-        <button class="btn btn-gray" type="submit">Button</button>
-        <input class="btn btn-gray" type="button" value="Input">
-        <input class="btn btn-gray" type="submit" value="Submit">
+        <a class="btn" href="#" role="button">Link</a>
+        <button class="btn" type="button">Button</button>
+        <input class="btn" type="button" value="Input">
+        <input class="btn" type="submit" value="Submit">
     </div>
 
 {{#markdown}}
 ```html
-<a class="btn btn-gray" href="#" role="button">Link</a>
-<button class="btn btn-gray" type="submit">Button</button>
-<input class="btn btn-gray" type="button" value="Input">
-<input class="btn btn-gray" type="submit" value="Submit">
+<a class="btn" href="#" role="button">Link</a>
+<button class="btn" type="button">Button</button>
+<input class="btn" type="button" value="Input">
+<input class="btn" type="submit" value="Submit">
 ```
 {{/markdown}}
 </div>
 
-<h3>Options</h3>
-<div class="example-block">
-    <div class="example">
-        <button type="button" class="btn btn-green">Green</button>
-
-        <button type="button" class="btn btn-yellow">Yellow</button>
-
-        <button type="button" class="btn btn-gray">Gray</button>
-    </div>
-
-{{#markdown}}
-```html
-<button type="button" class="btn btn-green">Green</button>
-<button type="button" class="btn btn-yellow">Yellow</button>
-<button type="button" class="btn btn-gray">Gray</button>
-```
-{{/markdown}}
-</div>
-
-<h3>Sizes</h3>
+<h4>Button Styles</h4>
+<p>We have four standard button styles to be used across the site. The search button also has a special variant to add the angle to the button.</p>
 <div class="example-block">
     <div class="example">
         <p>
-            <button type="button" class="btn btn-gray btn-lg">Large button</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn">Basic</button>
         </p>
+
         <p>
-            <button type="button" class="btn btn-gray">Default button</button>
+            <button type="button" class="btn btn-search">Search</button>
+            <button type="button" class="btn btn-search btn-angle" style="margin-left: 2rem">Search with angle</button>
         </p>
     </div>
 
 {{#markdown}}
 ```html
-<p>
-    <button type="button" class="btn btn-gray btn-lg">Large button</button>
-</p>
-<p>
-    <button type="button" class="btn btn-gray">Default button</button>
-</p>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn">Basic</button>
+<button type="button" class="btn btn-search">Search</button>
+<button type="button" class="btn btn-search btn-angle">Search with angle</button>
 ```
 {{/markdown}}
 </div>
 
-<h3>Disabled State</h3>
+<h4>Button Sizes</h4>
+<p>There are 3 standard sizes for buttons, based off of standard text sizes.</p>
 <div class="example-block">
     <div class="example">
-        <button type="button" class="btn btn-lg btn-gray" disabled="disabled">Primary button</button>
+        <p>
+            <button type="button" class="btn btn-primary btn-lg">Large button</button>
+            <button type="button" class="btn btn-primary">Default button</button>
+            <button type="button" class="btn btn-primary btn-sm">Small button</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-primary btn-wide">Wide button</button>
+        </p>
     </div>
 
 {{#markdown}}
 ```html
-<button type="button" class="btn btn-lg btn-gray" disabled="disabled">Primary button</button>
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-primary">Default button</button>
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-primary btn-wide">Wide button</button>
 ```
 {{/markdown}}
 </div>
 
-<!-- <h3>Button groups</h3>
+<h4>Disabled Buttons</h4>
+<div class="example-block">
+    <div class="example">
+        <button type="button" class="btn btn-primary" disabled="disabled">Disabled button</button>
+    </div>
+
+{{#markdown}}
+```html
+<button type="button" class="btn btn-primary" disabled="disabled">Disabled button</button>
+```
+{{/markdown}}
+</div>
+
+<!-- <h4>Button groups</h4>
 <div class="example-block">
     <div class="example">
         <h6>TBD</h6>
@@ -118,23 +127,38 @@ tpl:
     <div class="example">
         <div class="form-group">
             <label for="example-text">Text</label>
-            <input type="email" class="form-control" id="example-text" placeholder="Text">
+            <input type="text" id="example-text" placeholder="You need to put something here" required>
+            <span class="validation-message is-hidden">This field is required</span>
         </div>
         <div class="form-group">
             <label for="example-email">Email</label>
-            <input type="email" class="form-control" id="example-email" placeholder="Email">
+            <input type="email" id="example-email" placeholder="example@example.com" required>
+            <span class="validation-message">Must be a valid email address</span>
         </div>
         <div class="form-group">
-            <label for="example-url">URL</label>
-            <input type="url" class="form-control" id="example-url" placeholder="URL">
+            <label for="example-url">URL (optional)</label>
+            <input type="url" id="example-url" placeholder="http://www.example.com">
+            <span class="validation-message is-hidden">This field is required</span>
         </div>
         <div class="form-group">
-            <label for="example-tel">Phone</label>
-            <input type="tel" class="form-control" id="example-tel" placeholder="Phone">
+            <label for="example-tel">Phone (optional)</label>
+            <input type="tel" id="example-tel" placeholder="###-###-####">
+            <span class="validation-message is-hidden">This field is required</span>
+        </div>
+        <div class="form-group">
+            <label for="example-search">Search</label>
+            <input type="search" id="example-search" placeholder="Enter your zip code to search" required>
+            <span class="validation-message is-hidden">This field is required</span>
         </div>
         <div class="form-group">
             <label for="example-textarea">Textarea</label>
-            <textarea class="form-control" id="example-textarea" rows="3"></textarea>
+            <textarea id="example-textarea" rows="3" placeholder="Write your message" required></textarea>
+            <span class="validation-message is-hidden">This field is required</span>
+        </div>
+        <div class="form-group">
+            <label for="example-disabled">Disabled</label>
+            <input type="text" id="example-disabled" disabled>
+            <span class="info-message">You must do something else first</span>
         </div>
     </div>
 
@@ -142,166 +166,224 @@ tpl:
 ```html
 <div class="form-group">
     <label for="example-text">Text</label>
-    <input type="text" class="form-control" id="example-text" placeholder="Text">
+    <input type="text" id="example-text" placeholder="You need to put something here" required>
+    <span class="validation-message is-hidden">This field is required</span>
 </div>
 <div class="form-group">
     <label for="example-email">Email</label>
-    <input type="email" class="form-control" id="example-email" placeholder="Email">
+    <input type="email" id="example-email" placeholder="example@example.com" required>
+    <span class="validation-message">Must be a valid email address</span>
 </div>
 <div class="form-group">
-    <label for="example-url">URL</label>
-    <input type="url" class="form-control" id="example-url" placeholder="URL">
+    <label for="example-url">URL (optional)</label>
+    <input type="url" id="example-url" placeholder="http://www.example.com">
+    <span class="validation-message is-hidden">This field is required</span>
 </div>
 <div class="form-group">
-    <label for="example-tel">Phone</label>
-    <input type="tel" class="form-control" id="example-tel" placeholder="Phone">
+    <label for="example-tel">Phone (optional)</label>
+    <input type="tel" id="example-tel" placeholder="###-###-####">
+    <span class="validation-message is-hidden">This field is required</span>
+</div>
+<div class="form-group">
+    <label for="example-search">Search</label>
+    <input type="search" id="example-search" placeholder="Enter your zip code to search" required>
+    <span class="validation-message is-hidden">This field is required</span>
 </div>
 <div class="form-group">
     <label for="example-textarea">Textarea</label>
-    <textarea class="form-control" id="example-textarea" rows="3"></textarea>
+    <textarea id="example-textarea" rows="3" placeholder="Write your message" required></textarea>
+    <span class="validation-message is-hidden">This field is required</span>
+</div>
+<div class="form-group">
+    <label for="example-disabled">Disabled</label>
+    <input type="text" id="example-disabled" disabled>
+    <span class="info-message">You must do something else first</span>
 </div>
 ```
 {{/markdown}}
 </div>
-
-<!-- <h3>Search Form</h3>
-<div class="example-block">
-    <div class="example">
-        <form class="search-form">
-            <input type="search" class="form-control" id="search" placeholder="Enter your zip code">
-            <button type="button" class="btn btn-search btn-yellow">Search</button>
-        </form>
-    </div>
-
-{{#markdown}}
-```html
-<form class="search-form">
-    <input type="search" class="form-control" id="search" placeholder="Enter your zip code">
-    <button type="button" class="btn btn-search btn-yellow">Search</button>
-</form>
-```
-{{/markdown}}
-</div> -->
-
-<!-- <h3>Inputs with Icons</h3>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div> -->
-
 
 <h2 id="select">Select / Dropdowns</h2>
 <p>Add the <code>.select2-form</code> class to <code>&lt;select&gt;</code> tags to apply our custom styles and behaviors to dropdowns. Requires jQuery and the <a href="https://select2.github.io/">Select2</a> javascript plugin.</p>
 <div class="example-block">
     <div class="example">
-        <select class="select2-form">
-            <option>One</option>
-            <option>Two</option>
-            <option>Three</option>
-            <option>Four</option>
-            <option>Five</option>
-        </select>
-    </div>
-
-{{#markdown}}
-```html
-<select class="select2-form">
-    <option>One</option>
-    <option>Two</option>
-    <option>Three</option>
-    <option>Four</option>
-    <option>Five</option>
-</select>
-```
-{{/markdown}}
-</div>
-
-<!-- <h2 id="checkboxes">Checkboxes & Radio Buttons</h2>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-
-<h3>Horizontal Labels</h3>
-<div class="example-block">
-    <div class="example">
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-            </label>
-        </div>
-        <div class="radio">
-            <label>
-                <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-            </label>
+        <div class="form-group">
+            <label for="example-dropdown">Number Selection</label>
+            <select class="select2-form" id="example-dropdown">
+                <option value="" disabled selected hidden>Select a number</option>
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+                <option value="five">Five</option>
+            </select>
         </div>
     </div>
 
 {{#markdown}}
 ```html
-<div class="checkbox">
-    <label>
-        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-    </label>
-</div>
-<div class="radio">
-    <label>
-        <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-    </label>
+<div class="form-group">
+    <label for="example-dropdown">Number Selection</label>
+    <select class="select2-form" id="example-dropdown">
+        <option value="" disabled selected hidden>Select a number</option>
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+        <option value="four">Four</option>
+        <option value="five">Five</option>
+    </select>
 </div>
 ```
 {{/markdown}}
 </div>
 
-<h3>Stacked Labels</h3>
-
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h3>w/ description text</h3>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h3>Radio grid (buttons where only one can be selected)</h3>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-
-<h2 id="dates">Dates</h2>
+<h2 id="checkboxes">Checkboxes</h2>
 <p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
 
-<h3>Datepicker</h3>
+<h4>Horizontal</h4>
+<div class="example-block">
+    <div class="example">
+        <label>
+            <input type="checkbox" id="blankCheckbox1" value="option1">
+            Checkbox #1
+        </label>
+        <label>
+            <input type="checkbox" id="blankCheckbox2" value="option2">
+            Checkbox #2
+        </label>
+        <label>
+            <input type="checkbox" id="blankCheckbox3" value="option3" disabled>
+            Checkbox #3 (disabled)
+        </label>
+    </div>
+
+{{#markdown}}
+```html
+<label>
+    <input type="checkbox" id="blankCheckbox1" value="option1">
+    Checkbox #1
+</label>
+<label>
+    <input type="checkbox" id="blankCheckbox2" value="option2">
+    Checkbox #2
+</label>
+<label>
+    <input type="checkbox" id="blankCheckbox3" value="option3" disabled>
+    Checkbox #3 (disabled)
+</label>
+```
+{{/markdown}}
+</div>
+
+<h4>Stacked</h4>
+<div class="example-block">
+    <div class="example">
+        <label class="stacked">
+            <input type="checkbox" id="blankCheckbox1" value="option1">
+            Checkbox #1
+        </label>
+        <label class="stacked">
+            <input type="checkbox" id="blankCheckbox2" value="option2">
+            Checkbox #2
+        </label>
+        <label class="stacked">
+            <input type="checkbox" id="blankCheckbox3" value="option3" disabled>
+            Checkbox #3 (disabled)
+        </label>
+    </div>
+
+{{#markdown}}
+```html
+<label class="stacked">
+    <input type="checkbox" id="blankCheckbox1" value="option1">
+    Checkbox #1
+</label>
+<label class="stacked">
+    <input type="checkbox" id="blankCheckbox2" value="option2">
+    Checkbox #2
+</label>
+<label class="stacked">
+    <input type="checkbox" id="blankCheckbox3" value="option3" disabled>
+    Checkbox #3 (disabled)
+</label>
+```
+{{/markdown}}
+</div>
+
+<h2 id="radio">Radio Buttons</h2>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+
+<h4>Horizontal</h4>
+<div class="example-block">
+    <div class="example">
+        <label>
+            <input type="radio" name="radio1" id="blankRadio1" value="option1">
+            Radio #1
+        </label>
+        <label>
+            <input type="radio" name="radio1" id="blankRadio2" value="option2">
+            Radio #2
+        </label>
+        <label>
+            <input type="radio" name="radio1" id="blankRadio3" value="option3" disabled>
+            Radio #3 (disabled)
+        </label>
+    </div>
+
+{{#markdown}}
+```html
+<label>
+    <input type="radio" name="radio1" id="blankRadio1" value="option1">
+    Radio #1
+</label>
+<label>
+    <input type="radio" name="radio1" id="blankRadio2" value="option2">
+    Radio #2
+</label>
+<label>
+    <input type="radio" name="radio1" id="blankRadio3" value="option3" disabled>
+    Radio #3 (disabled)
+</label>
+```
+{{/markdown}}
+</div>
+
+<h4>Stacked</h4>
+<div class="example-block">
+    <div class="example">
+        <label class="stacked">
+            <input type="radio" name="radio2" id="blankRadio1" value="option1">
+            Radio #1
+        </label>
+        <label class="stacked">
+            <input type="radio" name="radio2" id="blankRadio2" value="option2">
+            Radio #2
+        </label>
+        <label class="stacked">
+            <input type="radio" name="radio2" id="blankRadio3" value="option3" disabled>
+            Radio #3 (disabled)
+        </label>
+    </div>
+
+{{#markdown}}
+```html
+<label class="stacked">
+    <input type="radio" name="radio2" id="blankRadio1" value="option1">
+    Radio #1
+</label>
+<label class="stacked">
+    <input type="radio" name="radio2" id="blankRadio2" value="option2">
+    Radio #2
+</label>
+<label class="stacked">
+    <input type="radio" name="radio2" id="blankRadio3" value="option3" disabled>
+    Radio #3 (disabled)
+</label>
+```
+{{/markdown}}
+</div>
+
+<h4>Radios as blocks</h4>
 <div class="example-block">
     <div class="example">
         <p>Example</p>
@@ -314,7 +396,11 @@ tpl:
 {{/markdown}}
 </div>
 
-<h3>Day select</h3>
+
+<!-- <h2 id="dates">Dates</h2>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+
+<h4>Datepicker</h4>
 <div class="example-block">
     <div class="example">
         <p>Example</p>
@@ -327,7 +413,7 @@ tpl:
 {{/markdown}}
 </div>
 
-<h3>Week select</h3>
+<h4>Day select</h4>
 <div class="example-block">
     <div class="example">
         <p>Example</p>
@@ -340,7 +426,20 @@ tpl:
 {{/markdown}}
 </div>
 
-<h3>Year select</h3>
+<h4>Week select</h4>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+{{#markdown}}
+```html
+<p>Example</p>
+```
+{{/markdown}}
+</div>
+
+<h4>Year select</h4>
 <div class="example-block">
     <div class="example">
         <p>Example</p>

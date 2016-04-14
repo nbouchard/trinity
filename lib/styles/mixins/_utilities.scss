@@ -54,6 +54,10 @@
     background-color: $black;
 }
 
+@mixin bg-gray-light {
+    background-color: $gray-light;
+}
+
 @mixin bg-gray-lightest {
     background-color: $gray-lightest;
 }
@@ -67,20 +71,29 @@
     font-family: $font-family-serif;
     font-size: $font-size-h4;
     line-height: $line-height-medium;
+    -webkit-font-smoothing: antialiased;
 }
 
 @mixin secondary-text {
-    font-family: $font-family-serif;
     font-size: $font-size-h5;
+    font-weight: $font-weight-medium;
     line-height: $line-height-medium;
+    -webkit-font-smoothing: antialiased;
 }
 
 @mixin tertiary-text {
     font-size: $font-size-h6;
     font-weight: $font-weight-medium;
     line-height: $line-height-medium;
+    -webkit-font-smoothing: antialiased;
 }
 
+@mixin quote-text {
+    font-size: $font-size-h5;
+    font-family: $font-family-serif;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+}
 
 //
 // Alignment
@@ -122,4 +135,37 @@
     display: flex;
     align-items: stretch;
     flex-wrap: nowrap;
+}
+
+// Basic WYSIWYG image alignment styles
+@mixin wysiwyg-img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+@mixin wysiwyg-img-align-right {
+    float: right;
+    margin: 10px 0 10px 10px;
+}
+
+@mixin wysiwyg-img-align-left {
+    float: left;
+    margin: 10px 10px 10px 0;
+}
+
+//
+// Visibility
+// -------------------------
+//
+
+// Hide only visually, but have it available for screen readers: h5bp.com/v
+@mixin visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

@@ -10,15 +10,16 @@ $gray-darker        : #222;
 $gray-dark          : #333;
 $gray-medium        : #555;
 $gray-medium-light  : #777;
-$gray-light         : #aaa;
+$gray-light         : #ccc;
 $gray-lighter       : #eee;
-$gray-lightest      : #f8f8f8;
+$gray-lightest      : #f5f5f5;
 $white              : #fff;
 
 $yellow        : #fbb431;
 $green         : #009c95;
 $blue          : #007fb6;
 $gray          : #939ea1;
+$red           : #f16767;
 
 
 $brand-primary      : $blue;
@@ -26,6 +27,7 @@ $body-bg            : $white;
 $text-color         : $gray-dark;
 $link-color         : $blue;
 $link-hover-color   : darken( $link-color, 15% );
+$error-color        : $red;
 
 $code-color : #c7254e;
 $code-bg    : #f9f2f4;
@@ -106,7 +108,7 @@ $mobile: max-width 639px;
 $tablet: min-width 640px max-width 1049px;
 $desktop: min-width 1050px;
 
-$tablet-up: min-width 500px;
+$tablet-up: min-width 640px;
 $tablet-down: max-width 1049px;
 
 // Neat Grid Overrides
@@ -147,7 +149,7 @@ $btn-gray: $gray;
 
 // Forms
 // -------------------------
-$input-border: #ccc;
+$input-border: $gray-light;
 
 // From Bitters - Planning to revise and work in above where appropriate
 $base-spacing: $line-height-base * 1rem;

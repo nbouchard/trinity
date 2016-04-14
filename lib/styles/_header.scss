@@ -94,7 +94,7 @@
 
             @include media( $mobile ) {
                 height: $hero_module_height_mobile + $search-bar-height;
-                padding: 6rem 1rem $grid-padding-mobile;
+                padding: 8rem 1rem $grid-padding-mobile;
             }
 
 
@@ -119,6 +119,7 @@
 
                     @include media( $tablet ) {
                         padding: 0 1rem;
+                        margin: 0;
                         width: 33%;
 
                         &:nth-child(4) {
@@ -127,21 +128,27 @@
                     }
 
                     @include media( $mobile ) {
-                        padding: 0 1rem;
-                        width: 100%;
+                        padding: 0;
                         margin: 0;
+                        width: 50%;
                     }
 
 
                     > li {
-                        padding-bottom: 1rem;
-
-                        @include media( $mobile ) {
-                            padding-top: 1rem;
-                        }
+                        margin-bottom: 1rem;
 
                         > a {
                             font-size: $font-size-h5;
+                            display: block;
+                        }
+
+                        @include media( $mobile ) {
+                            padding: 0;
+
+                            > a {
+                                display: block;
+                                margin: 1.5rem;
+                            }
                         }
                     }
 
@@ -170,6 +177,15 @@
                     @include list-unstyled;
                     padding-top: 0.5rem;
 
+                    .nav-link {
+                        margin-top: 0.5rem;
+                        display: block;
+                    }
+
+                    @include media( $tablet ) {
+                        padding: 0;
+                    }
+
                     @include media( $mobile ) {
                         display: none;
                     }
@@ -191,13 +207,13 @@
         }
 
         .tab {
+            @include text-white;
             display: inline-block;
             width: $column;
             margin-right: 1rem;
             text-align: center;
             height: 100%;
             font-size: $font-size-h6;
-            color: $white;
             padding: 1.2rem;
 
             @include media( $tablet ) {
@@ -228,8 +244,8 @@
             &:active,
             &:focus,
             &:hover {
+                @include text-yellow;
                 background: rgba( $gray-darker, 1 );
-                color: $yellow;
                 text-decoration: none;
             }
         }
@@ -243,12 +259,12 @@
 
         .search-form {
             @include clearfix();
+            @include bg-white;
             max-width: 55rem;
             margin: 0 auto;
-            background-color: $white;
 
             @include media( $tablet ) {
-                max-width: 35rem;
+                max-width: 40rem;
             }
 
             &.inactive {
@@ -259,24 +275,12 @@
                 display: block;
             }
 
-            .form-control,
-            .btn {
-                float: left;
-            }
-
             .form-control {
-                height: 4.2rem;
                 width: 80%;
                 margin: 0;
 
                 @include media( $tablet-down ) {
-                    font-size: $font-size-normal * 0.8;
-                    line-height: $line-height-base * 0.9;
-                    padding: 0.9rem 0.9rem 0.7rem 0.9rem;
-                }
-
-                @include media( $mobile ) {
-                    font-size: $font-size-normal;
+                    font-size: $font-size-normal * 0.9;
                 }
 
                 &:before {
@@ -286,28 +290,17 @@
             }
 
             .btn-search {
-                height: 4.2rem;
-                padding: 1rem 1.5rem 0.8rem 1.5rem;
-                position: relative;
                 width: 20%;
 
                 @include media( $tablet-down ) {
                     font-size: $font-size-normal * 0.9;
                     line-height: $line-height-base * 0.9;
-                    padding: 1rem 1rem 0.8rem 1rem;
-                }
-
-                &:before {
-                    display: block;
-                    position: absolute;
-                    content: '';
-                    left: -2rem;
-                    top: 0rem;
+                    padding: 0 1rem;
                 }
             }
         }
 
-        input[type='text'] {
+        input[type='tel'] {
             border-color: $white;
         }
 
@@ -317,18 +310,19 @@
             }
 
             .select-pricing-buckets {
-                height: 4.2rem;
                 width: 45%;
-                float: left;
-                padding-right: 2rem;
+                border-color: $white $white $white $input-border;
             }
 
             .select2-selection {
-                border-color: $white $white $white $input-border;
-                height: 4.2rem;
+                padding: 0.8rem 0 0.6rem 1rem;
 
                 @include media( $tablet-down ) {
-                    padding: 0.8rem 0 0.6rem 1rem;
+                    padding: 1rem 0 0.7rem 1rem;
+                }
+
+                .select2-selection__arrow {
+                    right: 1.5rem;
                 }
             }
 
@@ -336,15 +330,9 @@
                 line-height: $line-height-base;
 
                 @include media( $tablet-down ) {
-                    font-size: $font-size-normal * 0.8;
-                    line-height: 2;
+                    font-size: $font-size-normal * 0.9;
+                    line-height: $line-height-base * 0.9;
                 }
-            }
-
-            .select2-selection__arrow b {
-                border-width: 8px 7px 0 7px !important;
-                margin-left: 10px;
-                margin-top: -3px;
             }
         }
     }
@@ -419,10 +407,5 @@
                 }
             }
         }
-    }
-
-    .ce-heroModule {
-        height: $hero_module_height - 2rem;
-        margin-bottom: $search-bar-height;
     }
 }
