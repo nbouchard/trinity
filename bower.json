@@ -6,10 +6,7 @@
   ],
   "description": "Global ChooseUX Components",
   "main": [
-      "lib/fonts",
-      "lib/styles/mixins",
-      "lib/styles/vendors",
-      "lib/styles/global.scss"
+      "dist/css"
   ],
   "dependencies": {
   },
