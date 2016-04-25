@@ -15,11 +15,8 @@
   ],
   "private": true,
   "ignore": [
-    "lib/images",
-    "lib/js",
-    "lib/styles/styles.scss",
-    "lib/styles/_ceux.scss",
-    "lib/templates",
+    "lib",
+    "lib/",
     "*.md",
     "*.js",
     "*.json",
