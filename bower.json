@@ -9,7 +9,7 @@
       "dist/css",
       "lib/fonts",
       "lib/styles/mixins",
-      "lib/styles/vendors"
+      "lib/styles/vendors",
       "lib/styles/global.scss"
   ],
   "dependencies": {
