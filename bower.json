@@ -10,7 +10,19 @@
       "lib/fonts",
       "lib/styles/mixins",
       "lib/styles/vendors",
-      "lib/styles/*.scss"
+      "lib/styles/global.scss",
+      "lib/styles/_buttons.scss",
+      "lib/styles/_normalize.scss",
+      "lib/styles/_buttons.scss",
+      "lib/styles/_forms.scss",
+      "lib/styles/_lists.scss",
+      "lib/styles/_tables.scss",
+      "lib/styles/_typograhy.scss",
+      "lib/styles/_icons.scss",
+      "lib/styles/_utilities.scss",
+      "lib/styles/_page-frame.scss",
+      "lib/styles/_header.scss",
+      "lib/styles/_footer.scss"
   ],
   "dependencies": {
   },
