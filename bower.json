@@ -10,7 +10,7 @@
       "lib/fonts",
       "lib/styles/mixins",
       "lib/styles/vendors",
-      "lib/styles/global.scss"
+      "lib/styles/*.scss"
   ],
   "dependencies": {
   },
