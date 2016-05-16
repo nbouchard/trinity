@@ -1,0 +1,38 @@
+{
+  "name": "choose-ux",
+  "homepage": "https://github.com/chooseenergy/ChooseUX",
+  "authors": [
+    "Choose Energy <nbouchard@chooseenergy.com>"
+  ],
+  "description": "Global ChooseUX Components",
+  "main": [
+      "dist/css",
+      "lib/fonts",
+      "lib/styles/mixins",
+      "lib/styles/vendors",
+      "lib/styles/global.scss"
+  ],
+  "dependencies": {
+  },
+  "moduleType": [
+    "globals"
+  ],
+  "private": true,
+  "ignore": [
+    "lib/images",
+    "lib/js",
+    "lib/styles/styles.scss",
+    "lib/styles/_ceux.scss",
+    "lib/templates",
+    "*.md",
+    "*.js",
+    "*.json",
+    ".bower.json",
+    ".gitignore",
+    ".gitmodules",
+    ".jshintrc",
+    ".scss-lint.yml",
+    "bower.json",
+    "tasks"
+  ]
+}
