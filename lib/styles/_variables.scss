@@ -192,11 +192,14 @@ $ine-height-base:                 1.2;
 // -------------------------
 $hero_module_height: 46rem;
 $hero_module_height_mobile: 40rem;
+$hero_module_height_short: 30rem;
+$hero_module_height_mobile_short: 24rem;
 
 // Can't stack calcs, so need to hardcode this value
 // Angle should be at 22.5 degrees, so multiply height by tan(22.5 degrees) to find value
 // = $hero_module_height * .41
 $angle_width: 18.8rem;
+$angle_width_short: 12.3rem;
 
 // Mobile version with angle rotated
 // Angle should be at 12.5 degrees, so multiply max mobile breakpoint by tan(12.5 degrees) to find value
