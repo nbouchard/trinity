@@ -1,0 +1,476 @@
+//
+// Site Header
+// --------------------------------------------------
+// prototype only css
+.screen {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+// real css
+.mobile-container {
+    display:block;
+    margin-top:60px;
+    padding:20px;
+}
+.plancard {
+    border: 1px solid $green;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Kievit OT", sans-serif;
+    margin: 0px auto 20px;
+
+    @include media( $tablet-up ) {
+        max-width: 375px;
+    }
+    &.yellow {
+        border-color: $yellow;
+        .s{
+            header {
+                background-color: $yellow;
+            }
+        }
+    }
+    &.blue {
+        border-color: $blue;
+        .s{
+            header {
+                background-color: $blue;
+            }
+        }
+    }
+
+    section {
+        background-color: $gray-lightest;
+        width: 100%;
+        height: 140px;
+        &.s {
+            height: 36px;
+            background-color: #fff;
+            header {
+                height: 36px;
+                background-color: $green;
+                width: 64%;
+                color: #fff;
+                text-align: center;
+                line-height: 36px;
+                @include media( $tablet-up ) {
+                    width: 240px;
+                }
+            }
+            aside {
+                margin-right: -4.8vw;
+                border-bottom: 37px solid transparent;
+                border-left: 5vw solid #FFF;
+                @include media( $tablet-up ) {
+                    margin-right: -18px;
+                    border-bottom: 36px solid transparent;
+                    border-left: 18px solid #FFF;
+                }
+            }
+        }
+        h3, h4 {
+            display: inline-block;
+            width: 150px;
+            float: left;
+            color: #fff;
+        }
+        h3 {
+            font-size: 18px;
+            margin: 0 0 0 30px;
+        }
+        h4 {
+            font-size: 14px;
+            font-weight: normal;
+            margin: 25px 0 0 30px;
+        }
+        header {
+            display: inline-block;
+            width: 58.595%;
+            float: right;
+            height: 140px;
+            background: #fff;
+        }
+        aside {
+            height: 0;
+            width: 0;
+            display: inline-block;
+            float: right;
+            margin-right: -17.8vw;
+            border-bottom: 140px solid transparent;
+            border-left: 18vw solid $gray-lightest;
+            @include media( $tablet-up ) {
+                margin-right: -70px;
+                border-left: 70px solid $gray-lightest;
+            } 
+        }
+    }
+    .l {
+        display: inline-block;
+        padding: 0;
+        margin: 10px 0;
+        width: 40%;
+        text-align: center;
+        h5 {
+            margin: 0;
+        }
+        .permon {
+            display: inline-block;
+            font-size: 32px;
+            line-height: 48px;
+            font-weight: 400;
+            margin-top: 5px;
+            color: #EE001D;
+            &:before {
+                content: "$";
+                font-size: 20px;
+                vertical-align: top;
+                margin-right: -7px;
+            }
+            label {
+                display: block;
+                font-size: 14px;
+                color: #222;
+            }
+        }
+        .price {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 400;
+            color: #222;
+            vertical-align: top;
+            margin-top: 10px;
+            width: 100%;
+            label {
+                display: inline-block;
+                font-size: 12px;
+                color: #222;
+            }
+        }
+        ul {
+            list-style: none;
+            margin: 10px 0 0;
+            padding: 0;
+            li {
+                font-size: 10px;
+            }
+        }
+    }
+    .r {
+        display: block;
+        float: right;
+        padding: 0px 0px 0px 15%;
+        margin: 20px 0 0;
+        width: 85%;
+        text-align: center;
+        h5 {
+            margin: 0;
+        }
+        .logo {
+            height: 35px;
+            width: 100%;
+            margin: 15px 0;
+            background: url("https://www.chooseenergy.com/wp-content/uploads/2015/03/CES-Solutions-Stacked-logo_-CMYK-blue-2-200x0-c-default.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        span {
+            font-size: 16px;
+            color: #FBB431;
+            margin-bottom: 10px;
+        }
+        h5 {
+            font-size: 16px;
+            color: #222;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        a {
+            font-size: 9px;
+            color: #009c95;
+            text-decoration: none;
+        }
+    }
+    footer {
+        width: 400px;
+        padding: 15px 0 0;
+        button {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            border: 4px solid #009C95;
+            color: #009C95;
+            background: #fff;
+            padding: 10px 20px;
+            font-size: 11px;
+            font-family: "Kievit OT", sans-serif;
+            font-weight: 600;
+        }
+    }
+}
+.user-info, .plan-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    li {
+        border-bottom: 1px solid rgba(146, 158, 162, .5);
+        padding: 10px;
+        &.address {
+            i {
+                font-size: 24px;
+                vertical-align: top;
+                margin-right: 10px;
+            }
+        }
+        &.utility {
+            span {
+                color: #939EA1;
+            }
+        }
+        &.estimates {
+            color: $green;
+            &:before {
+                font-family: FontAwesome;
+                content: "\f054";
+                display: block;
+                float: right;
+                line-height: 48px;
+            }
+        }
+    }
+    & li:last-child {
+        border-bottom: none;
+        font-family: $font-family-serif;
+        padding: 20px;
+    }
+}
+.plan-details {
+    li {
+        font-size: 16px;
+        font-weight: $font-weight-medium;
+        padding: 20px;
+    }
+    & li:last-child {
+        border-bottom: 1px solid rgba(146, 158, 162, .5);
+        font-family: $font-family-sans-serif;
+    }
+    i {
+        font-size: 3rem;
+        margin-right: 10px;
+        vertical-align: bottom;
+    }
+}
+.plan-info {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-bottom: 1px solid rgba(146, 158, 162, .5);
+    padding: 20px 0 30px;
+
+    .l {
+        border-right: 1px solid rgba(146, 158, 162, .5);
+        display: table-cell;
+        text-align: center;
+        vertical-align: top;
+
+        .permon {
+            display: inline-block;
+            font-size: 32px;
+            line-height: 36px;
+            font-weight: 400;
+            color: #EE001D;
+            &:before {
+                content: "$";
+                font-size: 20px;
+                vertical-align: top;
+                margin-right: -7px;
+            }
+            label {
+                display: block;
+                font-size: 14px;
+                color: #222;
+            }
+        }
+        .price {
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            color: #222;
+            vertical-align: top;
+            margin-top: 10px;
+            label {
+                display: inline-block;
+                font-size: 12px;
+                color: #222;
+            }
+        }
+    }
+    .r {
+        display: table-cell;
+        text-align: center;
+        vertical-align: top;
+        
+        .logo {
+            height: 35px;
+            width: 100%;
+            margin: 15px 0;
+            background: url("https://www.chooseenergy.com/wp-content/uploads/2015/03/CES-Solutions-Stacked-logo_-CMYK-blue-2-200x0-c-default.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        span {
+            font-size: 16px;
+            color: #FBB431;
+            margin-bottom: 10px;
+        }
+        h5 {
+            font-size: 16px;
+            color: #222;
+            font-weight: 500;
+            margin: 0;
+            -webkit-margin-before: 0;
+            -webkit-margin-after: 0;
+        }
+    }
+}
+.plan-faqs {
+    section {
+        display: block;
+        height: auto;
+        border-bottom: 1px solid rgba(146, 158, 162, .5);
+        &.active {
+            p {
+                height: auto;
+                display: block;
+                color: $gray;
+                padding: 0 0 20px 0;
+                font-size: 1.8rem;
+            }
+            h6 {
+                &:before {
+                    content: '\f077';
+                }
+            }
+        }
+        p {
+            height: 0px;
+            overflow: hidden;
+            margin: 0;
+        }
+        h6 {
+            padding: 20px 0;
+            font-weight: $font-weight-medium;
+            &:before {
+                content: '\f078';
+                font-family: FontAwesome;
+                display: block;
+                float: right;
+                line-height: 24px;
+                color: $green;
+                padding-right: 20px;
+            }
+        }
+        a {
+            display: block;
+            margin: 20px 0 0 0;
+            color: $green;
+        }
+    }
+}
+.button-offset{
+    display: block;
+    height: 13.5rem;
+}
+.button-container-float {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    padding: 20px;
+    button:first-child {
+        margin-bottom: 1.5rem;
+    }
+}
+.button-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    width: 100%;
+    &.mixed {
+        button:first-child {
+            width: 33%;
+            margin-right: 3%;
+        }
+        button:last-child {
+            width: 62%;
+        }
+    }
+}
+.mobile-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $gray-lightest;
+    z-index: 1000;
+
+    &.active {
+        display: block;
+    }
+    &.guided {
+        h5.question {
+            border: none;
+            i {
+                font-size: 48px;
+            }
+        }
+    }
+    .mobile-container {
+        margin-top: 0;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .close {
+        float:right;
+        font-size: 24px;
+        line-height: 24px;
+        vertical-align: top;
+    }
+    h5.question {
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid $gray;
+        font-family: $font-family-serif;
+        margin-top: 5rem;
+        padding-bottom: 2rem;
+        margin-bottom: 3.5rem;
+    }
+    .explainer {
+        color: $gray;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+.filter-list {
+    display: inline-block;
+    width: 49%;
+    h6 {
+        padding: 10px;
+    }
+    label {
+        padding: 10px;
+    }
+}
+

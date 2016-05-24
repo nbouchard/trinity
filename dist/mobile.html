@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ChooseUX">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+
+
+    <title>ChooseUX - Home Page - Version 0.1.0</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet">
+    <link href="/css/globals.css" media="screen, projection" rel="stylesheet">
+    <link href="/css/styles.css" media="screen, projection" rel="stylesheet">
+
+</head>
+<body class=" home page page-id-709 page-template page-template-page-landing-page page-template-page-landing-page-php has-navmenu">
+    <main class="site-root v-hero-module v-fixed-header ">
+        <header class="ce-siteHeader" role="banner">
+    <div class="ce-mainNavigation">
+        <a href="#"><img class="site-logo" src="https://www.chooseenergy.com/wp-content/themes/ChooseEnergyTheme/images/logos/logo-choose-energy.svg" alt="Choose Energy"></a>
+    </div>
+
+    <div class="ce-zipSearch v-mobile">
+        <div class="tab-content">
+            <form class="search-form search-home active" id="search-zip-home" action="javascript:void(0);">
+                <input id="searchZipcodeRes" name="searchZipcodeRes" class="form-control zip-input" type="tel" placeholder="Enter your zip code" autofocus="autofocus">
+                <input type="hidden" id="serviceTypeRes" name="serviceTypeRes" value="residential">
+                <input type="hidden" name="productTypeRes" id="productTypeRes" value="electricity">
+                <button class="btn btn-search btn-angle" id="zip-search-res-submit" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="ce-mobileSearch open">
+            <i class="fa fa-search"></i>
+        </div>
+    </div>
+</header>
+
+        
+
+<!-- PLANS LIST PAGE -->
+
+<div id="plan-list" class="screen">
+	<div class="mobile-container">
+		<ul class="user-info">
+			<li class="address"><i class="fa fa-map-marker"></i>1315 S 20th St, Philadelphia, PA 19146</li>
+			<li class="utility">
+				<span>Utility</span> PECO
+			</li>
+			<li class="estimates">
+				Estimated usage: 1,330 kWh<br/>
+				Rate: 7.9¢/kWh
+			</li>
+			<li>
+				<h5>
+					Top 3 of 6 electricity rates
+				</h5>
+			</li>
+		</ul>
+		<div class="plancard blue">
+		    <section>
+		    	    <div class="l">
+		        		<div class="permon">
+				            246.43
+				            <label>per month</label>
+				        </div>
+				        <div class="price">
+				            6.55¢
+				            <label>/ kWh</label>
+				        </div>
+				    </div>
+		        <header>
+		        	<div class="r">
+				        <h5>8 months fixed</h5>
+				        <div class="logo"></div>
+				        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+				    </div>
+		    	</header>
+		        <aside>
+				</aside>
+		    </section>
+		    <section class="s">
+		    	<header>Best for the Planet</header>
+		    	<aside></aside>
+		    </section>
+		</div>
+		<div class="plancard yellow">
+		    <section>
+		    	    <div class="l">
+		        		<div class="permon">
+				            93.27
+				            <label>per month</label>
+				        </div>
+				        <div class="price">
+				            6.50¢
+				            <label>/ kWh</label>
+				        </div>
+				    </div>
+		        <header>
+		        	<div class="r">
+				        <h5>12 months fixed</h5>
+				        <div class="logo"></div>
+				        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+				    </div>
+		    	</header>
+		        <aside>
+				</aside>
+		    </section>
+		    <section class="s">
+		    	<header>Best Overall</header>
+		    	<aside></aside>
+		    </section>
+		</div>
+		<div class="plancard">
+		    <section>
+		    	    <div class="l">
+		        		<div class="permon">
+				            93.27
+				            <label>per month</label>
+				        </div>
+				        <div class="price">
+				            6.50¢
+				            <label>/ kWh</label>
+				        </div>
+				    </div>
+		        <header>
+		        	<div class="r">
+				        <h5>12 months fixed</h5>
+				        <div class="logo"></div>
+				        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+				    </div>
+		    	</header>
+		        <aside>
+				</aside>
+		    </section>
+		</div>
+		<button type="button" class="btn btn-secondary btn-wide btn-lg btn-thick">See more rates</button>
+	</div>
+</div>
+
+<!-- PLAN DETAILS PAGE -->
+
+<div id="plan-details" class="screen">
+	<div class="mobile-container">
+		<div class="plan-info">
+    	    <div class="l">
+        		<div class="permon">
+		            93.27
+		            <label>per month</label>
+		        </div>
+		        <div class="price">
+		            6.50¢
+		            <label>/ kWh</label>
+		        </div>
+		    </div>
+        	<div class="r">
+		        <h5>12 months fixed</h5>
+		        <div class="logo"></div>
+		        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+		    </div>
+		</div>
+		<ul class="plan-details">
+			<li><i class="offer-icon fa fa-certificate"></i>Get a free smart thermostat</li>
+			<li><i class="offer-icon fa fa-certificate"></i>No early termination fee</li>
+		</ul>
+		<div class="plan-faqs">
+			<section class="active">
+					<h6>About ConEdison Solutions</h6>
+					<p>
+						ConEdison Solutions, a subsidiary of Consolidated Edison, Inc. (NYSE: ED), is a national energy services leader committed to providing its residential and commercial customers with customized energy solutions and services - competitive power supply, renewable energy, sustainability services - that maximize the value of energy and reduce cost.<br/>
+						<a href="#">ConEdison website</a>
+					</p>
+			</section>
+			<section>
+					<h6>When will this plan start?</h6>
+					<p>
+						ConEdison Solutions, a subsidiary of Consolidated Edison, Inc. (NYSE: ED), is a national energy services leader committed to providing its residential and commercial customers with customized energy solutions and services - competitive power supply, renewable energy, sustainability services - that maximize the value of energy and reduce cost.
+					</p>
+			</section>
+			
+			<section>
+					<h6>What happens when this plan ends? Do I parish? Do i survive?</h6>
+					<p>
+						ConEdison Solutions, a subsidiary of Consolidated Edison, Inc. (NYSE: ED), is a national energy services leader committed to providing its residential and commercial customers with customized energy solutions and services - competitive power supply, renewable energy, sustainability services - that maximize the value of energy and reduce cost.
+					</p>
+			</section>
+		</div>
+		<div class="button-offset"></div>
+		<div class="button-container-float">
+			<button type="button" class="btn btn-secondary btn-wide btn-lg btn-thick">Call Us (800) 779 - 2545</button>
+			<button type="button" class="btn btn-primary btn-wide btn-lg">Sign up</button>
+		</div>
+	</div>
+</div>
+
+<!-- POPUPS -->
+
+<div class="mobile-popup active">
+
+<!-- Prototype Nav -->
+
+	<div id="nav" class="mobile-container">
+		<div class="close">
+			<i class="fa fa-times"></i>
+		</div>
+		<h5 class="question">Navigate to the other screens</h5>
+		<div class="go-to-plan-list">Go to plan list</div>
+		<div class="go-to-plan-details">Go to plan details</div>
+		<div class="go-to-filters">Go to filters</div>
+		<div class="go-to-change-usage">Go to change usage</div>
+		<div class="go-to-address">Go to address</div>
+		<div class="go-to-last-bill">Go to last bill</div>
+		<div class="go-to-rate-type">Go to rate type</div>
+	</div>
+
+<!-- Filters -->
+
+	<div id="filters" class="mobile-container">
+		<div class="close">
+			<i class="fa fa-times"></i>
+		</div>
+		<h5 class="question">Filters</h5>
+		<div class="filter-list">
+			<h6>Plan Type</h6>
+			<label class="stacked">
+			    <input type="checkbox" value="Prepaid">
+			    Prepaid
+			</label>
+			<label class="stacked">
+			    <input type="checkbox" value="Green">
+			    Green
+			</label>
+			<label class="stacked">
+			    <input type="checkbox" value="Offers">
+			    Offers
+			</label>
+		</div>
+		<div class="filter-list">
+			<h6>Contract Term</h6>
+			<label class="stacked">
+			    <input type="checkbox" value="Prepaid">
+			    6 Months
+			</label>
+			<label class="stacked">
+			    <input type="checkbox" value="Green">
+			    12 Months
+			</label>
+			<label class="stacked">
+			    <input type="checkbox" value="Offers">
+			    24+ Months
+			</label>
+		</div>
+		<div class="button-container mixed">
+			<button type="button" class="btn btn-secondary">Cancel</button>
+			<button type="button" class="btn btn-primary">Apply Filters</button>
+		</div>
+	</div>
+
+<!-- Bill Question -->
+
+	<div id="last-bill" class="mobile-container active">
+		<div class="close">
+			<i class="fa fa-times"></i>
+		</div>
+		<h5 class="question">How much was your last bill?</h5>
+		<div class="explainer">This will help us calculate the best rate.</div>
+		<div class="form-group text-version">
+		    <label for="address">Estimated Rate</label>
+		    <input type="text" placeholder="1300" required value="$150">
+		    <span class="validation-message is-hidden">This field is required</span>
+		</div>
+		<div class="form-group range">
+			<input class="range" type="range" name="points" min="0" max="100">
+		</div>
+		<div class="button-container">
+			<button type="button" class="btn btn-primary btn-wide">Next</button>
+		</div>
+	</div>
+
+<!-- Change usage/rate -->
+
+	<div id="change-usage" class="mobile-container">
+		<div class="close">
+			<i class="fa fa-times"></i>
+		</div>
+		<h5 class="question">Change usage / rate </h5>
+		<div class="form-group text-version">
+		    <label for="address">Usage</label>
+		    <input type="text" placeholder="1300" required value="1,300kWh">
+		    <span class="validation-message is-hidden">This field is required</span>
+		</div>
+		<div class="form-group range">
+			<input type="range" name="points" min="0" max="100">
+		</div>		
+		<div class="form-group text-version">
+		    <label for="address">Estimated Rate</label>
+		    <input type="text"  placeholder="1300" required value="7.9¢/kWh">
+		    <span class="validation-message is-hidden">This field is required</span>
+		</div>
+		<div class="form-group range">
+			<input class="range" type="range" name="points" min="0" max="100">
+		</div>	
+		<div class="button-container mixed">
+			<button type="button" class="btn btn-secondary">Cancel</button>
+			<button type="button" class="btn btn-primary">Recalculate</button>
+		</div>
+	</div>
+
+<!-- Rates question (contract vs prepaid) -->
+
+	<div id="rate-type" class="mobile-container">
+		<div class="close">
+			<i class="fa fa-times"></i>
+		</div>
+		<h5 class="question">What types of rates do<br/>you want to see?</h5>
+		<div class="btn-select">
+			<h5>Contract</h5>
+			<span>Similar to a phone contract.<br/>Needs good credit or a deposit.</span>
+		</div>
+		<div class="btn-select">
+			<h5>Prepaid</h5>
+			<span>Pay-as-you-go, no deposit or<br/>credit check needed.</span>
+		</div>
+	</div>
+</div>
+
+<!-- Address question -->
+
+<div class="mobile-popup guided">
+	<div id="address" class="mobile-container">
+		<div class="close">
+			<i class="fa fa-times"></i>
+		</div>
+		<h5 class="question"><i class="ce-icon-bolt"></i></h5>
+		<div class="form-group text-version">
+		    <label for="address">Address</label>
+		    <input type="text" placeholder="Enter your address" required value="1943 15th Street">
+		    <span class="validation-message is-hidden">This field is required</span>
+		</div>
+		<div class="form-group no-label">
+		    <select class="select2-form">
+                <option value="" disabled="" selected="" hidden="">Select your utility</option>
+                <option value="one">Duquesne Light Co.</option>
+                <option value="two">Met-Ed</option>
+                <option value="three">PECO</option>
+                <option value="four">Penelec</option>
+                <option value="five">Penn Power</option>
+                <option value="six">Pike County Light & Power</option>
+            </select>
+		</div>
+	</div>
+</div>
+			        
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        
+        // required for production
+        $( 'select.select2-form' ).select2({
+            minimumResultsForSearch: Infinity
+        });
+
+        // prototype only
+        $( '.close' ).click(function() {
+            console.log("clicked close");
+            $(this).parent().parent().removeClass('active');
+        });
+        // prototype only
+        $( '.btn-select' ).click(function() {
+            console.log("slide down");
+            $(this).parent().parent().removeClass('active');
+        });
+        $( '.form-group.text-version').click(function(){
+            console.log("make into text field again");
+            $(this).removeClass('text-version');
+        });
+        $( '.form-group.text-version input').focusout(function(){
+            console.log("make into text only");
+            $(this).parent().addClass('text-version');
+        });
+        $( '.plan-faqs section').click(function () {
+            console.log("faq toggled");
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            } else {
+                $( '.plan-faqs section').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+
+        // FAKE NAVIGATION FOR PROTOTYPE
+
+        $( '.ce-mainNavigation').click(function () {
+            console.log("main nav");
+            $('.active').removeClass('active');
+            $('#nav').addClass('active');
+            $('#nav').parent().addClass('active');
+        });
+        $('.go-to-plan-list').click(function () {
+            console.log("nav plan-list");
+            $('.active').removeClass('active');
+            $('#plan-list').addClass('active');
+        });
+        $('.go-to-plan-details').click(function () {
+            console.log("nav plan details");
+            $('.active').removeClass('active');
+            $('#plan-details').addClass('active');
+        });
+        $('.go-to-filters').click(function () {
+            console.log("nav filters");
+            $('.active').removeClass('active');
+            $('#filters').addClass('active');
+            $('#filters').parent().addClass('active');
+        });
+        $('.go-to-change-usage').click(function () {
+            console.log("nav change usage");
+            $('.active').removeClass('active');
+            $('#change-usage').addClass('active');
+            $('#change-usage').parent().addClass('active');
+        });
+        $('.go-to-address').click(function () {
+            console.log("nav address");
+            $('.active').removeClass('active');
+            $('#address').addClass('active');
+            $('#address').parent().addClass('active');
+        });
+        $('.go-to-last-bill').click(function () {
+            console.log("nav last bill");
+            $('.active').removeClass('active');
+            $('#last-bill').addClass('active');
+            $('#last-bill').parent().addClass('active');
+        });
+        $('.go-to-rate-type').click(function () {
+            console.log("nav rate type");
+            $('.active').removeClass('active');
+            $('#rate-type').addClass('active');
+            $('#rate-type').parent().addClass('active');
+        });
+    });
+    </script>
+</body>
+</html>

@@ -80,6 +80,7 @@ a.btn-primary,
     }
 }
 
+
 a.btn-secondary,
 .btn-secondary,
 .gform_button {
@@ -125,4 +126,28 @@ a.btn-search,
             border-right-color: darken( $yellow, 10% );
         }
     }
+}
+a.btn-select,
+.btn-select {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid $green;
+    padding: 3rem 2rem;
+    margin: 1rem 0;
+    text-align: center;
+    span {
+        font-size: $font-size-h6;
+        color: $gray;
+        font-weight: $font-weight-regular;
+    }
+    h5 {
+        margin-bottom: 1.5rem;
+        font-weight: $font-weight-regular;
+    }
+}
+a.btn-thick,
+.btn-thick {
+    border-width: 4px;
+    font-weight: 500;
+    font-size: 20px;
 }

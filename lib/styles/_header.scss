@@ -195,6 +195,13 @@
     }
 
     .ce-zipSearch {
+        &.v-mobile {
+            width: 100%;
+            box-sizing: border-box;
+            .tab-content {
+                display: none;
+            }
+        }
         .tabs {
             @include flexbox-center;
             background: rgba( $gray-darker, 0.85 );
@@ -303,7 +310,20 @@
         input[type='tel'] {
             border-color: $white;
         }
-
+        .ce-mobileSearch {
+            @include text-white();
+            @include bg-black();
+            position: relative;
+            box-sizing: border-box;
+            padding: 2rem;
+            background: $gray-darker;
+            height: 70px;
+            text-align: right;
+            i {
+                line-height: 30px;
+                font-size: 20px;
+            }
+        }
         .search-business {
             .zip-input {
                 width: 35%;
