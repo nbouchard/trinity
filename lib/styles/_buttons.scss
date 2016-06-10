@@ -144,6 +144,20 @@ a.btn-select,
         margin-bottom: 1.5rem;
         font-weight: $font-weight-regular;
     }
+    @include media( $tablet-up ) {
+        text-align: center;
+        width: 30rem;
+    }
+    &:hover {
+        text-decoration: none;
+        border-color: darken( $green, 10% );
+        h5 {
+            color: darken( $green, 10% );
+        }
+        span {
+            color: darken( $gray, 10% );
+        }
+    }
 }
 a.btn-thick,
 .btn-thick {
