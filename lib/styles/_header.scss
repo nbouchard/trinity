@@ -11,6 +11,24 @@
 
     @include media ( $mobile ) {
         top: $hero_module_height_mobile;
+        &.v-mobile-shop {
+            .ce-mainNavigation {
+                text-align: center;
+                margin-top: 2rem;
+                .site-logo {
+                    left: 0;
+                    position: relative;
+                }
+            }
+            .ce-zipSearch {
+                .tab-content {
+                    padding-top: 0rem;
+                    height: 7rem;
+                    top:37rem;
+                    background-color: transparent; 
+                }
+            }
+        }
     }
 
     a {
