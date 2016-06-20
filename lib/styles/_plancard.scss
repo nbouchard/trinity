@@ -111,7 +111,7 @@
                 content: "$";
                 font-size: $font-size-h5;
                 vertical-align: top;
-                margin-right: -.7rem;
+                margin-right: -.3rem;
             }
             label {
                 display: block;
@@ -121,7 +121,7 @@
         }
         .price {
             display: inline-block;
-            font-size: $font-size-normal;
+            font-size: $font-size-large;
             font-weight: $font-weight-regular;
             color: $gray-darker;
             vertical-align: top;
@@ -131,6 +131,7 @@
                 display: inline-block;
                 font-size: $font-size-xsmall;
                 color: $gray-darker;
+                margin-left: -.2rem;
             }
         }
         ul {
@@ -210,6 +211,11 @@
                 line-height: $font-size-h1;
             }
         }
+        span {
+            color: #939EA1;
+            display: block;
+            font-weight: 200;
+        }
     }
     & li:last-child {
         border-bottom: none;
@@ -231,6 +237,17 @@
         font-size: $font-size-h3;
         margin-right: 1rem;
         vertical-align: bottom;
+    }
+}
+.plan-desc {
+    text-align: left;
+    border-bottom: 1px solid rgba(146, 158, 162, .5);
+    padding: 2rem 0;
+    h6 {
+        padding-bottom: 1rem;
+    }
+    a {
+        color: $green;
     }
 }
 .plan-info {
@@ -256,7 +273,7 @@
                 content: "$";
                 font-size: $font-size-h5;
                 vertical-align: top;
-                margin-right: -1rem;
+                margin-right: -.3rem;
             }
             label {
                 display: block;
@@ -266,7 +283,7 @@
         }
         .price {
             display: block;
-            font-size: $font-size-normal;
+            font-size: $font-size-large;
             font-weight: $font-weight-regular;
             color: $gray-darker;
             vertical-align: top;
@@ -275,6 +292,7 @@
                 display: inline-block;
                 font-size: $font-size-xsmall;
                 color: $gray-darker;
+                margin-left: -.2rem;
             }
         }
     }
@@ -305,7 +323,28 @@
             -webkit-margin-before: 0;
             -webkit-margin-after: 0;
         }
+        label {
+            display: block;
+            font-size: $font-size-xsmall;
+            color: #95989A;
+        }
     }
+}
+.plan-docs {
+    border-bottom: 1px solid rgba(146, 158, 162, .5);
+    padding: 1rem 0;
+    a {
+        color: $green;
+        font-weight: $font-weight-medium;
+    }
+    section {
+        display: block;
+        height: auto;
+        padding: .5rem 0;
+        &.puct {
+            color: $gray;
+        }
+    }  
 }
 .plan-faqs {
     section {
@@ -333,7 +372,7 @@
         }
         h6 {
             padding: 2rem 0;
-            font-weight: $font-weight-medium;
+            font-weight: $font-weight-regular;
             &:before {
                 content: '\f078';
                 font-family: FontAwesome;
@@ -341,7 +380,7 @@
                 float: right;
                 line-height: 2.4rem;
                 color: $green;
-                padding-right: 2rem;
+                padding: 0 2rem 0 1rem;
             }
         }
         a {
@@ -353,7 +392,7 @@
 }
 .button-offset{
     display: block;
-    height: 13.5rem;
+    height: 6.5rem;
 }
 .button-container-float {
     position: fixed;
@@ -362,8 +401,8 @@
     right: 0;
     background-color: $white;
     padding: 2rem;
-    button:first-child {
-        margin-bottom: 1.5rem;
+    button {
+        width: 49%;
     }
 }
 .button-container {
