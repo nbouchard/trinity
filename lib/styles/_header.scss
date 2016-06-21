@@ -321,7 +321,7 @@
             text-align: right;
             i {
                 line-height: 30px;
-                font-size: 20px;
+                font-size: 24px;
             }
         }
         .search-business {
@@ -368,8 +368,8 @@
         width: 100%;
 
         .site-logo {
-            top: 1rem;
-            height: 50px;
+            top: 1.5rem;
+            height: 40px;
 
             @include media( $mobile ) {
                 left: 2rem;

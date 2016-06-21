@@ -191,8 +191,8 @@
         padding: 1rem;
         &.address {
             i {
-                font-size: $font-size-h4;
-                vertical-align: top;
+                font-size: 2.5rem;
+                vertical-align: middle;
                 margin-right: 1rem;
             }
         }
@@ -234,9 +234,9 @@
         font-family: $font-family-sans-serif;
     }
     i {
-        font-size: $font-size-h3;
+        font-size: 2.5rem;
         margin-right: 1rem;
-        vertical-align: bottom;
+        vertical-align: middle;
     }
 }
 .plan-desc {
@@ -379,8 +379,9 @@
                 display: block;
                 float: right;
                 line-height: 2.4rem;
-                color: $green;
-                padding: 0 2rem 0 1rem;
+                color: $gray;
+                padding: 0 2rem 0 1.5rem;
+                font-size: 1.4rem;
             }
         }
         a {
@@ -452,9 +453,10 @@
     }
     .close {
         float:right;
-        font-size: $font-size-h4;
-        line-height: $font-size-h4;
+        font-size: $font-size-h6;
+        line-height: $font-size-h6;
         vertical-align: top;
+        color: $gray;
     }
     h5.question {
         display: block;
