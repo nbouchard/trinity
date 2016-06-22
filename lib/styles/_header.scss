@@ -15,17 +15,36 @@
             .ce-mainNavigation {
                 text-align: center;
                 margin-top: 2rem;
+                .nav-main {
+                    display: none;
+                }
+                .nav-trigger {
+                    display: none;
+                }
                 .site-logo {
                     left: 0;
                     position: relative;
                 }
             }
             .ce-zipSearch {
+                .tabs {
+                    display: none;
+                }
+                .search-form {
+                    display: none;
+                }
                 .tab-content {
                     padding-top: 0rem;
                     height: 7rem;
-                    top:37rem;
+                    top:-6rem;
                     background-color: transparent; 
+                }
+                .mobile-shop-button {
+                    text-align: center;
+                    font-size: 2rem;
+                    color: $gray-darker;
+                    height: 5rem;
+                    line-height: 5rem;
                 }
             }
         }
@@ -273,6 +292,9 @@
             padding: 2rem;
             background: $gray-darker;
             height: $search-bar-height;
+            .mobile-shop-button {
+                display: none;
+            }
         }
 
         .search-form {
