@@ -11,43 +11,6 @@
 
     @include media ( $mobile ) {
         top: $hero_module_height_mobile;
-        &.v-mobile-shop {
-            .ce-mainNavigation {
-                text-align: center;
-                margin-top: 2rem;
-                .nav-main {
-                    display: none;
-                }
-                .nav-trigger {
-                    display: none;
-                }
-                .site-logo {
-                    left: 0;
-                    position: relative;
-                }
-            }
-            .ce-zipSearch {
-                .tabs {
-                    display: none;
-                }
-                .search-form {
-                    display: none;
-                }
-                .tab-content {
-                    padding-top: 0rem;
-                    height: 7rem;
-                    top:-6rem;
-                    background-color: transparent; 
-                }
-                .mobile-shop-button {
-                    text-align: center;
-                    font-size: 2rem;
-                    color: $gray-darker;
-                    height: 5rem;
-                    line-height: 5rem;
-                }
-            }
-        }
     }
 
     a {
@@ -292,6 +255,7 @@
             padding: 2rem;
             background: $gray-darker;
             height: $search-bar-height;
+
             .mobile-shop-button {
                 display: none;
             }
@@ -372,6 +336,70 @@
                 @include media( $tablet-down ) {
                     font-size: $font-size-normal * 0.9;
                     line-height: $line-height-base * 0.9;
+                }
+            }
+        }
+    }
+
+    &.v-mobile-shop {
+
+        @include media ( $mobile ) {
+            // top: $hero_module_height_short;
+
+            .ce-mainNavigation {
+                text-align: center;
+                margin-top: $grid-padding-mobile;
+                top: -$hero_module_height_mobile;
+                // margin-top: 2rem;
+
+                .nav-main {
+                    display: none;
+                }
+
+                .nav-trigger {
+                    display: none;
+                }
+
+                .site-logo {
+                    position: static;
+                    display: block;
+                    margin: 0 auto;
+                    height: 4.5rem;
+                    // left: 0;
+                    // position: relative;
+                }
+            }
+
+            .ce-zipSearch {
+
+                .tabs {
+                    display: none;
+                }
+
+                .search-form {
+                    display: none;
+                }
+
+                .tab-content {
+                    // position: absolute;
+                    // bottom: 0;
+                    // padding-top: 0rem;
+                    padding: $gutter;
+                    height: 7rem;
+                    // height: 5rem;
+                    // top: 30rem;
+                    top: -7rem;
+                    // bottom: 0;
+                    background-color: transparent;
+                }
+
+                .mobile-shop-button {
+                    display: block;
+                    text-align: center;
+                    // font-size: 2rem;
+                    color: $gray-darker;
+                    // height: 5rem;
+                    // line-height: 5rem;
                 }
             }
         }
