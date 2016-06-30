@@ -195,6 +195,13 @@
     }
 
     .ce-zipSearch {
+        &.v-mobile {
+            width: 100%;
+            box-sizing: border-box;
+            .tab-content {
+                display: none;
+            }
+        }
         .tabs {
             @include flexbox-center;
             background: rgba( $gray-darker, 0.85 );
@@ -255,6 +262,10 @@
             padding: 2rem;
             background: $gray-darker;
             height: $search-bar-height;
+
+            .mobile-shop-button {
+                display: none;
+            }
         }
 
         .search-form {
@@ -303,7 +314,20 @@
         input[type='tel'] {
             border-color: $white;
         }
-
+        .ce-mobileSearch {
+            @include text-white();
+            @include bg-black();
+            position: relative;
+            box-sizing: border-box;
+            padding: 2rem;
+            background: $gray-darker;
+            height: 70px;
+            text-align: right;
+            i {
+                line-height: 30px;
+                font-size: 24px;
+            }
+        }
         .search-business {
             .zip-input {
                 width: 35%;
@@ -336,6 +360,70 @@
             }
         }
     }
+
+    &.v-mobile-shop {
+
+        @include media ( $mobile ) {
+            // top: $hero_module_height_short;
+
+            .ce-mainNavigation {
+                text-align: center;
+                margin-top: $grid-padding-mobile;
+                top: -$hero_module_height_mobile;
+                // margin-top: 2rem;
+
+                .nav-main {
+                    display: none;
+                }
+
+                .nav-trigger {
+                    display: none;
+                }
+
+                .site-logo {
+                    position: static;
+                    display: block;
+                    margin: 0 auto;
+                    height: 4.5rem;
+                    // left: 0;
+                    // position: relative;
+                }
+            }
+
+            .ce-zipSearch {
+
+                .tabs {
+                    display: none;
+                }
+
+                .search-form {
+                    display: none;
+                }
+
+                .tab-content {
+                    // position: absolute;
+                    // bottom: 0;
+                    // padding-top: 0rem;
+                    padding: $gutter;
+                    height: 7rem;
+                    // height: 5rem;
+                    // top: 30rem;
+                    top: -7rem;
+                    // bottom: 0;
+                    background-color: transparent;
+                }
+
+                .mobile-shop-button {
+                    display: block;
+                    text-align: center;
+                    // font-size: 2rem;
+                    color: $gray-darker;
+                    // height: 5rem;
+                    // line-height: 5rem;
+                }
+            }
+        }
+    }
 }
 
 .site-root.v-fixed-header {
@@ -348,8 +436,8 @@
         width: 100%;
 
         .site-logo {
-            top: 1rem;
-            height: 50px;
+            top: 1.5rem;
+            height: 40px;
 
             @include media( $mobile ) {
                 left: 2rem;

@@ -169,6 +169,7 @@ input[type="submit"] {
         line-height: 3rem;
         font-size: $font-size-small;
         transition: all 0.2s ease-in-out;
+        overflow: hidden;
     }
 
     .validation-message,
@@ -184,6 +185,29 @@ input[type="submit"] {
     .info-message,
     .ginput_counter {
         @include bg-gray;
+    }
+    &.no-label {
+        .select2 .select2-selection {
+            padding: 1.9rem 2rem 0;
+        }
+    }
+    &.text-version {
+        input {
+            border: none;
+            background-color: transparent;
+            color: $green;
+            text-align: center;
+            padding: 1.5rem 0 0;
+        }
+        label {
+            display: none;
+        }
+    }
+    &.range {
+        input[type=range] {
+            height: 2rem;
+            margin-bottom: 4rem;
+        }
     }
 }
 
@@ -269,7 +293,7 @@ input[type="submit"] {
             b {
                 border-color: $gray transparent transparent transparent !important;
                 border-style: solid !important;
-                border-width: 10px 7px 0 7px !important;
+                border-width: 7px 5px 0 5px !important;
                 margin-top: -4px;
             }
         }
@@ -405,4 +429,88 @@ input[type="checkbox"]  {
 
 input[type="radio"]:before {
     border-radius: 1rem;
+}
+
+//
+// Range Slider
+// --------------------------------------------------
+
+@mixin range-slider-track($color: $gray, $height: 3px, $radius: 2px) {
+    background: $gray;
+    height: $height;
+    border-radius: $radius;
+    cursor: pointer;
+}
+
+@mixin range-slider-thumb($color: $green, $diameter: 20px) {
+    height: $diameter;
+    width: $diameter;
+    border-radius: 50%;
+    background: $color;
+    cursor: pointer;
+}
+
+input[type=range] {
+    -webkit-appearance: none; // needed to remove default webkit styles
+    border: 0;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    height: 2rem;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    @include range-slider-track();
+}
+
+input[type=range]::-webkit-slider-thumb {
+    @include range-slider-thumb(); // needed to remove default webkit styles
+    -webkit-appearance: none;
+    margin-top: -9px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+input[type=range]:disabled::-webkit-slider-thumb {
+    background: $gray;
+}
+
+input[type=range]::-moz-range-track {
+    @include range-slider-track();
+}
+
+input[type=range]::-moz-range-thumb {
+    @include range-slider-thumb();
+    border: 0;
+    box-sizing: border-box;
+}
+
+input[type=range]:disabled::-moz-range-thumb {
+    background: $gray;
+}
+
+input[type=range]::-ms-track {
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-width: 6px 0; // leaves room for the larger thumb to overflow with a transparent border
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    @include range-slider-track();
+    height: auto;
+}
+
+input[type=range]::-ms-fill-upper {
+    @include range-slider-track();
+    height: auto;
+}
+
+input[type=range]::-ms-thumb {
+    @include range-slider-thumb();
+}
+
+input[type=range]:disabled::-ms-thumb {
+    background: $gray;
 }
