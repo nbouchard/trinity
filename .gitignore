@@ -34,16 +34,8 @@ node_modules
 .sass-cache
 
 # Ignore distributable files
-# dist 
-
-# Ignore generated logo sprites & processed logos
-lib/images/supplier-logos-lg.png
-lib/images/supplier-logos-sm.png
-lib/images/supplier-logos.png
-lib/images/utility-logos-lg.png
-lib/images/utility-logos-sm.png
-lib/images/utility-logos.png
-lib/images/sprites/size-large/*
-lib/images/sprites/size-small/*
-lib/images/sprites/size-standard/*
-lib/styles/generated/*
+dist/images
+dist/pattern-library
+dist/style-guide
+dist/index.html
+dist/mobile.html
