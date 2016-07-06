@@ -364,13 +364,11 @@
     &.v-mobile-shop {
 
         @include media ( $mobile ) {
-            // top: $hero_module_height_short;
 
             .ce-mainNavigation {
                 text-align: center;
-                margin-top: $grid-padding-mobile;
+                margin-top: $grid-padding;
                 top: -$hero_module_height_mobile;
-                // margin-top: 2rem;
 
                 .nav-main {
                     display: none;
@@ -385,8 +383,6 @@
                     display: block;
                     margin: 0 auto;
                     height: 4.5rem;
-                    // left: 0;
-                    // position: relative;
                 }
             }
 
@@ -401,25 +397,16 @@
                 }
 
                 .tab-content {
-                    // position: absolute;
-                    // bottom: 0;
-                    // padding-top: 0rem;
                     padding: $gutter;
                     height: 7rem;
-                    // height: 5rem;
-                    // top: 30rem;
                     top: -7rem;
-                    // bottom: 0;
                     background-color: transparent;
                 }
 
                 .mobile-shop-button {
                     display: block;
                     text-align: center;
-                    // font-size: 2rem;
                     color: $gray-darker;
-                    // height: 5rem;
-                    // line-height: 5rem;
                 }
             }
         }
