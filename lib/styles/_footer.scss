@@ -34,6 +34,25 @@
         @include media( $tablet-down ) {
             padding: $grid-padding-tablet 1rem;
         }
+
+        .telephone {
+            display: none;
+            font-size: $font-size-large;
+            text-align: center;
+        }
+
+        &.v-mobile-shop {
+            @include media( $mobile ) {
+
+                .telephone {
+                    display: block;
+                }
+
+                .nav-list {
+                    display: none;
+                }
+            }
+        }
     }
 
     .v-energyTypes {
@@ -110,8 +129,6 @@
 
                 .nav-list {
                     display: none;
-                    // @include prefixer(column-count, 2, webkit moz spec);
-                    // column-count: 2;
                 }
             }
         }
