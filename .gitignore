@@ -1,6 +1,10 @@
 # ugh
 .DS_Store
 
+# Sublime project files
+*.sublime-project
+*.sublime-workspace
+
 # Logs
 logs
 *.log
