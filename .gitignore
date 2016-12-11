@@ -38,8 +38,4 @@ node_modules
 .sass-cache
 
 # Ignore distributable files
-dist/images
-dist/pattern-library
-dist/style-guide
-dist/index.html
-dist/mobile.html
+dist/*

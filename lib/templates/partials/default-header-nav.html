@@ -1,4 +1,7 @@
 <ul>
-    <li{{#is basename "style-guide"}} class="selected"{{/is}}><a href="/style-guide/style-guide.html">Style Guide</a></li>
-    <li{{#is basename "pattern-library"}} class="selected"{{/is}}><a href="/pattern-library/pattern-library.html">Pattern Library</a></li>
+    <li{{#is page.data.section 'Brand'}} class="selected"{{/is}}><a href="/brand/index.html">Brand</a></li>
+    <li{{#is page.data.section 'Patterns'}} class="selected"{{/is}}><a href="/patterns/index.html">Patterns</a></li>
+    <li{{#is page.data.section 'Components'}} class="selected"{{/is}}><a href="/components/index.html">Components</a></li>
+    <li{{#is page.data.section 'Code'}} class="selected"{{/is}}><a href="/code/index.html">Code Guidelines</a></li>
+    <li{{#is page.data.section 'Resources'}} class="selected"{{/is}}><a href="/resources/index.html">Resources</a></li>
 </ul>
