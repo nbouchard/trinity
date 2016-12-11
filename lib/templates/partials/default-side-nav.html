@@ -18,12 +18,45 @@
 <div class="site-sidebar">
     <nav>
         <ul>
-            <li{{#is basename "typography"}} class="selected"{{/is}}><a href="/patterns/typography.html">Typography</a></li>
-            <li{{#is basename "form-elements"}} class="selected"{{/is}}><a href="/patterns/form-elements.html">Form Elements</a></li>
-            <li{{#is basename "lists"}} class="selected"{{/is}}><a href="/patterns/lists.html">Lists</a></li>
+            <li{{#is basename "typography"}} class="selected"{{/is}}><a href="/patterns/typography.html">Typography</a>
+                <ul>
+                    <li><a href="#headings">Headings</a></li>
+                    <li><a href="#paragraphs">Paragraph Styles</a></li>
+                    <li><a href="#inline-elements">Inline Elements</a></li>
+                    <li><a href="#links">Links</a></li>
+                </ul>
+            </li>
+            <li{{#is basename "form-elements"}} class="selected"{{/is}}><a href="/patterns/form-elements.html">Form Elements</a>
+                <ul>
+                    <li><a href="#buttons">Buttons</a></li>
+                    <li><a href="#inputs">Inputs</a></li>
+                    <li><a href="#select">Select / Dropdowns</a></li>
+                    <li><a href="#checkboxes">Checkboxes</a></li>
+                    <li><a href="#radio">Radio Buttons</a></li>
+                </ul>
+            </li>
+            <li{{#is basename "lists"}} class="selected"{{/is}}><a href="/patterns/lists.html">Lists</a>
+                <ul>
+                    <li><a href="#standard-lists">Standard Lists</a></li>
+                    <li><a href="#definition-lists">Definition Lists</a></li>
+                </ul>
+            </li>
             <li{{#is basename "tables"}} class="selected"{{/is}}><a href="/patterns/tables.html">Tables</a></li>
             <li{{#is basename "icons"}} class="selected"{{/is}}><a href="/patterns/icons.html">Icons</a></li>
-            <li{{#is basename "utilities"}} class="selected"{{/is}}><a href="/patterns/utilities.html">Utilities</a></li>
+            <li{{#is basename "utilities"}} class="selected"{{/is}}><a href="/patterns/utilities.html">Utilities</a>
+                <ul>
+                    <li><a href="#spacing">Spacing</a></li>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#size">Size</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#typography">Typography</a></li>
+                    <li><a href="#display-visibility">Display &amp; Visibility</a></li>
+                    <li><a href="#responsive-utilities">Responsive Utilities</a></li>
+                    <li><a href="#direction-pulls">Direction Pulls / Floats / Vertical Alignment</a></li>
+                    <li><a href="#flexbox">Flexbox</a></li>
+                    <li><a href="#positioning">Positioning</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </div>
@@ -33,12 +66,34 @@
 <div class="site-sidebar">
     <nav>
         <ul>
-            <li{{#is basename "global"}} class="selected"{{/is}}><a href="/components/global.html">Global Elements</a></li>
-            <li{{#is basename "grid"}} class="selected"{{/is}}><a href="/components/grid.html">Grid System</a></li>
+            <li{{#is basename "global"}} class="selected"{{/is}}><a href="/components/global.html">Global Elements</a>
+                <ul>
+                    <li><a href="#header">Header</a></li>
+                    <li><a href="#footer">Footer</a></li>
+                    <li><a href="#main-nav">Main Nav</a></li>
+                    <li><a href="#zip-search">Zip Search</a></li>
+                </ul>
+            </li>
+            <li{{#is basename "grid"}} class="selected"{{/is}}><a href="/components/grid.html">Grid System</a>
+                <ul>
+                    <li><a href="#colors">How to Use</a></li>
+                    <li><a href="#grid-sizes">Grid Sizes</a></li>
+                    <li><a href="#grid-gutters">Grid Gutters</a></li>
+                    <li><a href="#mixed-grids">Mixed Grids</a></li>
+                    <li><a href="#responsive-columns">Responsive Columns</a></li>
+                    <li><a href="#nested-grids">Nested Grids</a></li>
+                </ul>
+            </li>
             <li{{#is basename "plan-cards"}} class="selected"{{/is}}><a href="/components/plan-cards.html">Plan Cards</a></li>
             <li{{#is basename "blocks"}} class="selected"{{/is}}><a href="/components/blocks.html">Blocks</a></li>
             <li{{#is basename "navigation"}} class="selected"{{/is}}><a href="/components/navigation.html">Navigation</a></li>
-            <li{{#is basename "form-groups"}} class="selected"{{/is}}><a href="/components/form-groups.html">Form Groups</a></li>
+            <li{{#is basename "form-groups"}} class="selected"{{/is}}><a href="/components/form-groups.html">Form Groups</a>
+                <ul>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#horizontal">Horizontal</a></li>
+                    <li><a href="#inline">Inline</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </div>
@@ -48,10 +103,35 @@
 <div class="site-sidebar">
     <nav>
         <ul>
-            <li{{#is basename "standards"}} class="selected"{{/is}}><a href="/code/standards.html">Code Standards</a></li>
+            <li{{#is basename "general"}} class="selected"{{/is}}><a href="/code/general.html">General Standards</a>
+                <ul>
+                    <li><a href="#formatting">Formatting</a></li>
+                    <li><a href="#files">File Organization</a></li>
+                    <li><a href="#browsers">Browser Support</a></li>
+                </ul>
+            </li>
+            <li{{#is basename "html"}} class="selected"{{/is}}><a href="/code/html.html">HTML Standards</a>
+                <ul>
+                    <li><a href="#elements">HTML Elements</a></li>
+                    <li><a href="#styling">HTML Styling</a></li>
+                </ul>
+            </li>
+           </li>
+            <li{{#is basename "css"}} class="selected"{{/is}}><a href="/code/css.html">CSS & SCSS Standards</a>
+                <ul>
+                    <li><a href="#basic">Basic Formatting</a></li>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#fonts">Font Sizing</a></li>
+                    <li><a href="#naming">Class Naming Conventions</a></li>
+                    <li><a href="#specificity">Nesting & Specificity</a></li>
+                    <li><a href="#selectors">Selectors</a></li>
+                    <li><a href="#performance">Performance</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                    <li><a href="#prefixing">Browser Prefixing</a></li>
+                </ul>
+            </li>
             <li{{#is basename "microdata"}} class="selected"{{/is}}><a href="/code/microdata.html">Microdata</a></li>
             <li{{#is basename "seo"}} class="selected"{{/is}}><a href="/code/seo.html">SEO Optimization</a></li>
-            <li{{#is basename "browsers"}} class="selected"{{/is}}><a href="/code/browsers.html">Browser Support</a></li>
         </ul>
     </nav>
 </div>
