@@ -22,19 +22,22 @@ body {
         @include outer-container;
 
         h1 {
-            float: left;
+            @include grid-columns( 1 );
+            padding: 0;
             margin: 0;
-            text-align: center;
 
             a {
                 font-size: 2.2rem;
                 line-height: 6rem;
+                float: left;
             }
         }
 
         ul {
+            @include grid-columns( 3 );
             @include list-unstyled;
             float: left;
+            padding: 0;
             margin: 0;
 
             li {
@@ -73,6 +76,8 @@ body {
     padding: 2rem 0;
 
     nav {
+        border-right: 1px solid $gray-medium;
+        padding-right: 2rem;
 
         ul {
             @include list-unstyled;
@@ -145,7 +150,7 @@ body {
         nav {
             @include grid-columns( 1 );
             position: fixed;
-            padding: 0;
+            padding: 0 2rem 0 0;
             top: 2.5rem;
         }
     }
@@ -154,6 +159,20 @@ body {
 
 .site-primary {
     @include grid-columns( 3 );
+
+    .page-title {
+        border-bottom: 1px solid $gray-medium;
+        line-height: 1.8;
+    }
+
+    .section-title {
+        margin: 4rem 0 1rem;
+    }
+
+    .subsection-title {
+        margin: 3rem 0 1rem;
+        color: $gray-medium;
+    }
 
     .example-block {
         border: 1px solid #ddd;
