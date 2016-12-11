@@ -8,13 +8,12 @@ tpl:
   desc: Page Desc
   title: Form Elements
 ---
-<h1>Form Elements</h1>
-<p>Baseline styles and usage examples for for common form elements.</p>
+<h2 class="page-title">Form Elements</h2>
 
-<h2 id="buttons">Buttons</h2>
+<h3 class="section-title" id="buttons">Buttons</h3>
 <p>There are multiple ways to implement buttons depending on the situation, while stil getting a consistent visual output. The <code>.btn</code> class and any variant classes can be applied to a link, button, or input HTML element.</p>
 
-<h4>Button Types</h4>
+<h5 class="subsection-title">Button Types</h5>
 <div class="example-block">
     <div class="example">
         <a class="btn" href="#" role="button">Link</a>
@@ -33,7 +32,7 @@ tpl:
 {{/markdown}}
 </div>
 
-<h4>Button Styles</h4>
+<h5 class="subsection-title">Button Styles</h5>
 <p>We have four standard button styles to be used across the site. The search button also has a special variant to add the angle to the button.</p>
 <div class="example-block">
     <div class="example">
@@ -60,7 +59,7 @@ tpl:
 {{/markdown}}
 </div>
 
-<h4>Button Sizes</h4>
+<h5 class="subsection-title">Button Sizes</h5>
 <p>There are 3 standard sizes for buttons, based off of standard text sizes.</p>
 <div class="example-block">
     <div class="example">
@@ -84,7 +83,7 @@ tpl:
 {{/markdown}}
 </div>
 
-<h4>Disabled Buttons</h4>
+<h5 class="subsection-title">Disabled Buttons</h5>
 <div class="example-block">
     <div class="example">
         <button type="button" class="btn btn-primary" disabled="disabled">Disabled button</button>
@@ -97,7 +96,7 @@ tpl:
 {{/markdown}}
 </div>
 
-<!-- <h4>Button groups</h4>
+<!-- <h5 class="subsection-title">Button groups</h5>
 <div class="example-block">
     <div class="example">
         <h6>TBD</h6>
@@ -121,7 +120,7 @@ tpl:
 
 
 
-<h2 id="inputs">Inputs</h2>
+<h3 class="section-title" id="inputs">Inputs</h3>
 <p>Common inputs with :hover and :focus effects.</p>
 <div class="example-block">
     <div class="example">
@@ -203,7 +202,7 @@ tpl:
 {{/markdown}}
 </div>
 
-<h2 id="select">Select / Dropdowns</h2>
+<h3 class="section-title" id="select">Select / Dropdowns</h3>
 <p>Add the <code>.select2-form</code> class to <code>&lt;select&gt;</code> tags to apply our custom styles and behaviors to dropdowns. Requires jQuery and the <a href="https://select2.github.io/">Select2</a> javascript plugin.</p>
 <div class="example-block">
     <div class="example">
@@ -237,10 +236,10 @@ tpl:
 {{/markdown}}
 </div>
 
-<h2 id="checkboxes">Checkboxes</h2>
+<h3 class="section-title" id="checkboxes">Checkboxes</h3>
 <p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
 
-<h4>Horizontal</h4>
+<h5 class="subsection-title">Horizontal</h5>
 <div class="example-block">
     <div class="example">
         <label>
@@ -275,7 +274,7 @@ tpl:
 {{/markdown}}
 </div>
 
-<h4>Stacked</h4>
+<h5 class="subsection-title">Stacked</h5>
 <div class="example-block">
     <div class="example">
         <label class="stacked">
@@ -310,10 +309,10 @@ tpl:
 {{/markdown}}
 </div>
 
-<h2 id="radio">Radio Buttons</h2>
+<h3 class="section-title" id="radio">Radio Buttons</h3>
 <p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
 
-<h4>Horizontal</h4>
+<h5 class="subsection-title">Horizontal</h5>
 <div class="example-block">
     <div class="example">
         <label>
@@ -348,7 +347,7 @@ tpl:
 {{/markdown}}
 </div>
 
-<h4>Stacked</h4>
+<h5 class="subsection-title">Stacked</h5>
 <div class="example-block">
     <div class="example">
         <label class="stacked">
@@ -383,77 +382,8 @@ tpl:
 {{/markdown}}
 </div>
 
-<h4>Radios as blocks</h4>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
 
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-
-<!-- <h2 id="dates">Dates</h2>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-
-<h4>Datepicker</h4>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h4>Day select</h4>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h4>Week select</h4>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h4>Year select</h4>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-
-<h2 id="help">Help / Validation</h2>
+<h3 class="section-title" id="sliders">Sliders</h3>
 <p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
 <div class="example-block">
     <div class="example">
@@ -466,32 +396,3 @@ tpl:
 ```
 {{/markdown}}
 </div>
-
-<h2 id="switch">Switch / On-Off toggle</h2>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h2 id="sliders">Sliders</h2>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
- -->
