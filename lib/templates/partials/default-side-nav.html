@@ -131,8 +131,14 @@
                     <li><a href="#prefixing">Browser Prefixing</a></li>
                 </ul>
             </li>
-            <li{{#is basename "microdata"}} class="selected"{{/is}}><a href="/code/microdata.html">Microdata</a></li>
-            <li{{#is basename "seo"}} class="selected"{{/is}}><a href="/code/seo.html">SEO Optimization</a></li>
+            <li{{#is basename "seo"}} class="selected"{{/is}}><a href="/code/seo.html">SEO Optimization</a>
+                <ul>
+                    <li><a href="#arcitecture">Site Architecture</a></li>
+                    <li><a href="#structured">Structured Data</a></li>
+                    <li><a href="#social">Social</a></li>
+                    <li><a href="#tools">Testing Tools</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </div>
@@ -142,10 +148,22 @@
 <div class="site-sidebar">
     <nav>
         <ul>
-            <li{{#is basename "brand-resources"}} class="selected"{{/is}}><a href="/resources/brand-resources.html">Brand Resources</a></li>
-            <li{{#is basename "sprites"}} class="selected"{{/is}}><a href="/resources/sprites.html">Logo Sprites</a></li>
-            <li{{#is basename "icon-fonts"}} class="selected"{{/is}}><a href="/resources/icon-fonts.html">Icon Fonts</a></li>
-            <li{{#is basename "pattern-libraries"}} class="selected"{{/is}}><a href="/resources/pattern-libraries.html">Pattern Library Examples</a></li>
+            <li{{#is basename "pattern-libraries"}} class="selected"{{/is}}><a href="/resources/pattern-libraries.html">Pattern Library Examples</a>
+                <ul>
+                    <li><a href="#pattern">Pattern Libraries / UI Toolkits</a></li>
+                    <li><a href="#style">Style Guides</a></li>
+                    <li><a href="#other">Other Resources</a></li>
+                </ul>
+            </li>
+            <li{{#is basename "brand-assets"}} class="selected"{{/is}}><a href="/resources/brand-assets.html">Brand Assets</a>
+                <ul>
+                    <li><a href="#icons.html">Icons</a></li>
+                    <li><a href="#logos.html">Logos</a></li>
+                    <li><a href="#colors.html">Color Swatches</a></li>
+
+                </ul>
+            </li>
+            <li{{#is basename "tools"}} class="selected"{{/is}}><a href="/resources/tools.html">Tools</a></li>
         </ul>
     </nav>
 </div>
