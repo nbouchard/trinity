@@ -159,10 +159,21 @@ body {
 
 .site-primary {
     @include grid-columns( 3 );
+    padding: 3rem 1rem;
+
+    &.wide {
+        @include grid-columns( 4 );
+        padding: 3rem 1rem;
+    }
 
     .page-title {
         border-bottom: 1px solid $gray-medium;
         line-height: 1.8;
+        margin-bottom: 2rem;
+
+        span {
+            @include text-green;
+        }
     }
 
     .section-title {
@@ -245,6 +256,17 @@ body {
     .de-emphasize {
         opacity: 0.3;
     }
+
+
+    .callout-text {
+        @include secondary-text;
+    }
+
+    .aside-text {
+        .half-col {
+            width: 50%;
+            float: left;        }
+    }
 }
 
 
@@ -300,6 +322,43 @@ body {
 
 }
 
+
+//
+// Secondary Text Module
+// --------------------------------------------------
+
+.ce-secondaryTextModule {
+    @include grid-container;
+    @include text-green;
+    @include flexbox-same-height;
+    border: 1px solid $green;
+    margin-bottom: $gutter;
+
+    .secondary-text-content {
+        @include grid-columns( 3 );
+        @include flexbox-align-vertically;
+        margin-bottom: 0;
+        
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .secondary-text-icon {
+        @include grid-columns( 1 );
+        @include flexbox-center;
+        margin-bottom: 0;
+        padding-right: 0;
+
+        .icon {
+            font-size: $icon-size-medium;
+        }
+
+        @include media( $tablet-down ) {
+            display: none;
+        }
+    }
+}
 
 
 // Highlight.js Theme - Solarized Light
