@@ -212,6 +212,7 @@ body {
 
             .color-block {
                 @include span-columns( 2 );
+                @include omega( 2n );
                 height: 4rem;
                 margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
@@ -519,3 +520,71 @@ body {
 .hljs-strong {
   font-weight: bold;
 }
+
+
+
+// Flexbox examples
+// -------------------------
+.flexbox-1 {
+    @include bg-blue;
+    @include text-white;
+    @include primary-text;
+    @include flexbox-center;
+    height: 8rem;
+    margin-bottom: 2rem;
+}
+
+.flexbox-2 {
+    @include bg-yellow;
+    @include tertiary-text;
+    @include flexbox-center-vertically;
+    height: 8rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+
+    p:first-child {
+        margin: 0;
+        font-size: $font-size-h4;
+        padding-right: 2rem;
+    }
+}
+
+.flexbox-3 {
+    @include bg-gray;
+    @include text-white;
+    @include flexbox-align-vertically;
+    height: 12rem;
+    margin-bottom: 2rem;
+
+    h4 {
+        width: 30%;
+        padding: 1rem;
+    }
+
+    p {
+        width: 70%;
+        padding: 1rem;
+    }
+}
+
+.flexbox-4 {
+    @include text-green;
+    @include flexbox-same-height;
+
+    div {
+        width: 35rem;
+        padding: 1rem;
+
+        &:first-child {
+            border: 1px solid $green;
+            margin-right: 2rem;
+        }
+
+        &:last-child {
+            @include bg-green;
+            @include text-white;
+        }
+    }
+}
+
+

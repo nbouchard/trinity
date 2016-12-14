@@ -237,7 +237,7 @@ tpl:
 </div>
 
 <h3 class="section-title" id="checkboxes">Checkboxes</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<p>Checkout boxes can be laid out either side by side or stacked. If the checkbox is accompanied by a label, both text an <code>&lt;input&gt;</code> tag should always be wrapped by a <code>&lt;label&gt;</code> tag to ensure that clicking on the label also selects the item.</p>
 
 <h5 class="subsection-title">Horizontal</h5>
 <div class="example-block">
@@ -310,7 +310,7 @@ tpl:
 </div>
 
 <h3 class="section-title" id="radio">Radio Buttons</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<p>Radio buttons can be laid out either side by side or stacked. If the radio button is accompanied by a label, both text an <code>&lt;input&gt;</code> tag should always be wrapped by a <code>&lt;label&gt;</code> tag to ensure that clicking on the label also selects the item.</p>
 
 <h5 class="subsection-title">Horizontal</h5>
 <div class="example-block">
@@ -383,16 +383,30 @@ tpl:
 </div>
 
 
-<h3 class="section-title" id="sliders">Sliders</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<h3 class="section-title" id="range">Range Sliders</h3>
+<p>Range sliders should be used in situation where users can select from a range of values (such as price). The range slider on it's own will not display the value associated with the selection, so be sure to include a text version of the value that can be linked to the slider value.</p>
+
+<p>All sliders are required to have a min value, max value, and initial value.</p>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <div class="form-group text-version">
+            <label for="rate">Estimated Rate</label>
+            <input type="text" placeholder="1300" value="$150">
+        </div>
+        <div class="form-group range">
+            <input class="range" type="range" name="rate" min="0" max="300">
+        </div>
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
+<div class="form-group text-version">
+    <label for="rate">Estimated Rate</label>
+    <input type="text" placeholder="1300" value="$150">
+</div>
+<div class="form-group range">
+    <input class="range" type="range" name="rate" min="0" max="100">
+</div>
 ```
 {{/markdown}}
 </div>

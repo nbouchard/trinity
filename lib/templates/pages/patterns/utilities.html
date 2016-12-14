@@ -10,31 +10,20 @@ tpl:
 ---
 <h2 class="page-title">Utilities</h2>
 
-<h3 class="section-title" id="spacing">Spacing</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
 <h3 class="section-title" id="colors">Colors</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+
+<p>There are utility classes (and corresponding mixins) for setting the common font and background colors. The classes should be primarily used for development purposes and only used in production code if no other style edits will be added to a tag. If more than one attribute will be changed, create a custom class for the element and use the mixin to import the color change.</p>
 
 <h5 class="subsection-title">Text Colors</h5>
 <div class="example-block">
     <div class="example">
         <p class="text-default">Lorem ipsum dolor sit amet, ipsum commodo eros lacus.</p>
 
-        <p class="text-green">Adipiscing lectus quis eu vel mauris duis, ac tellus mauris cursus et. Sed deserunt augue orci.</p>
+        <p class="text-green">Adipiscing lectus quis eu vel mauris duis, ac tellus mauris cursus et.</p>
 
-        <p class="text-yellow">Lacus mus nunc semper mauris etiam bibendum, tortor sed suscipit lectus purus imperdiet.</p>
+        <p class="text-blue">Sed deserunt augue orci lectus purus imperdiet.</p>
+
+        <p class="text-yellow">Lacus mus nunc semper mauris etiam bibendum, tortor sed suscipit .</p>
 
         <p class="text-gray">Mauris quis metus quam vel euismod faucibus, ante nec erat erat.</p>
     </div>
@@ -43,9 +32,11 @@ tpl:
 ```html
 <p class="text-default">Lorem ipsum dolor sit amet, ipsum commodo eros lacus.</p>
 
-<p class="text-green">Adipiscing lectus quis eu vel mauris duis, ac tellus mauris cursus et. Sed deserunt augue orci.</p>
+<p class="text-green">Adipiscing lectus quis eu vel mauris duis, ac tellus mauris cursus et.</p>
 
-<p class="text-yellow">Lacus mus nunc semper mauris etiam bibendum, tortor sed suscipit lectus purus imperdiet.</p>
+<p class="text-blue">Sed deserunt augue orci lectus purus imperdiet.</p>
+
+<p class="text-yellow">Lacus mus nunc semper mauris etiam bibendum, tortor sed suscipit .</p>
 
 <p class="text-gray">Mauris quis metus quam vel euismod faucibus, ante nec erat erat.</p>
 ```
@@ -55,54 +46,28 @@ tpl:
 <h5 class="subsection-title">Background Colors</h5>
 <div class="example-block">
     <div class="example">
-        <div class="bg-white color-block bordered"></div>
-        <div class="bg-black color-block"></div>
         <div class="bg-green color-block"></div>
+        <div class="bg-blue color-block"></div>
         <div class="bg-yellow color-block"></div>
         <div class="bg-gray color-block"></div>
+        <div class="bg-white color-block bordered"></div>
+        <div class="bg-black color-block"></div>
     </div>
 
 {{#markdown}}
 ```html
-<div class="bg-white"></div>
-<div class="bg-black"></div>
 <div class="bg-green"></div>
+<div class="bg-blue"></div>
 <div class="bg-yellow"></div>
 <div class="bg-gray"></div>
+<div class="bg-white"></div>
+<div class="bg-black"></div>
 ```
 {{/markdown}}
 </div>
 
-<h3 class="section-title" id="size">Size</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-<div class="example-block">
-    <div class="example">
-
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h3 class="section-title" id="links">Links</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
-
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
-
-<h3 class="section-title" id="typography">Typography (alignment, text transforms, whitespace  & wordwrap)</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<h3 class="section-title" id="typography">Typography</h3>
+<p>There are a handful of basic typography utilities dealing with alignment, transformation, and wrapping. As with the color utilities, these classes should be primarily used for development purposes and only used in production code if no other style edits will be added to a tag.</p>
 
 <h5 class="subsection-title">Alignment</h5>
 <div class="example-block">
@@ -153,10 +118,50 @@ tpl:
 {{/markdown}}
 </div>
 
+<h5 class="subsection-title">Typography Mixins</h5>
+<p>There are also a set of typography mixins that can be used to apply the various paragraph styles to customs classes. These can be used in conjunction with the color mixins to create blocks of important text.</p>
+
+<div class="example-block">
+    <div class="example">
+        <div class="primary text-green">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+        <div class="secondary text-yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+        <div class="tertiary text-white bg-gray" style="padding: 1rem";>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+        <div class="quote text-blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+
+{{#markdown}}
+```css
+.block-1 {
+    @include primary-text();
+    @include text-green();
+}
+
+.block-2 {
+    @include secondary-text();
+    @include text-yellow();
+}
+
+.block-3 {
+    @include tertiary-text();
+    @include bg-gray();
+    @include text-white();
+}
+
+.block-1 {
+    @include quote-text();
+    @include text-blue();
+}
+
+```
+{{/markdown}}
+</div>
 
 
-<h3 class="section-title" id="display-visibility">Display & visibility</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<h3 class="section-title" id="display">Display & Visibility</h3>
+<p>These classes should primarily be used to set a temporary display or visibility state that connected to a user interaction.</p>
 <div class="example-block code-only">
 {{#markdown}}
 ```css
@@ -187,24 +192,11 @@ tpl:
 {{/markdown}}
 </div>
 
-<h3 class="section-title" id="responsive-utilities">Responsive Utilities</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
+<h3 class="section-title" id="floats">Floats & Positioning</h3>
+<p>The direction pull classes should only be used to add a temporary override in response to a user interaction since they use the otherwise unwanted <code>!important</code> attribute.</p>
 
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
+<p>The clearfix class can be used in cases where it is the only style change that needs to be applied.</p>
 
-<h3 class="section-title" id="direction-pulls">Direction pulls / floats / vertical alignment</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-
-<h5 class="subsection-title">Floats</h5>
 <div class="example-block code-only">
 {{#markdown}}
 ```css
@@ -236,62 +228,88 @@ tpl:
 {{/markdown}}
 </div>
 
-<h5 class="subsection-title">Vertical Alignment</h5>
-<div class="example-block code-only">
-{{#markdown}}
-```css
-.align-top {
-    vertical-align: top !important;
-}
-.align-middle {
-    vertical-align: middle !important;
-}
-.align-baseline {
-    vertical-align: baseline !important;
-}
-.align-bottom {
-    vertical-align: bottom !important;
-}
-```
-{{/markdown}}
-</div>
-
-<div class="example-block code-only">
-{{#markdown}}
-```html
-<div class="align-top">...</div>
-<div class="align-middle">...</div>
-<div class="align-baseline">...</div>
-<div class="align-bottom">...</div>
-```
-{{/markdown}}
-</div>
-
 
 <h3 class="section-title" id="flexbox">Flexbox</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<p>To make aligning and positioning elements in our block grid system easier, we've provide a set of flexbox utility mixin that assist with easily applying standard layouts. These mixins should all be applied to the parent element (the containing div) and not to individual items within the flexbox which may require additional styling to tweak positioning.</p>
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <div class="flexbox-1">Lorem ipsum dolor sit amet</div>
+        <div class="flexbox-2">
+            <p>Obcaecati</p>
+            <p>Repudiandae ligendi architecto aperiam reprehenderit</p>
+        </div>
+        <div class="flexbox-3">
+            <h4>Ipsam pariatur suscipit</h4>
+            <p>Facilis explicabo quidem alias mollitia quam, dicta illo quod quas ea totam veniam, necessitatibus reiciendis officiis voluptatum sint quia similique eveniet, tempore.</p>
+        </div>
+        <div class="flexbox-4">
+            <div>Explicabo impedit voluptate aspernatur velit vitae labore numquam</div>
+            <div>Fugit voluptatibus reprehenderit itaque facilis quaerat minus neque, iste deleniti, at rem quos odit voluptates maxime. Quasi excepturi unde impedit laborum sequi!</div>
+        </div>
     </div>
 
 {{#markdown}}
 ```html
-<p>Example</p>
+
+.block-1 {
+    // Centers items both horizontally and vertically
+    // Child elements will wrap onto multiple lines if necessary
+    @include flexbox-center();
+}
+
+.block-2 {
+    // Centers a single line of items vertically
+    // Forces all child elements to be on a single line
+    @include flexbox-center-vertically();
+}
+
+.block-3 {
+    // Centers multiple lines of items vertically
+    // Child elements will wrap onto multiple lines and will center within parent
+    @include flexbox-align-vertically();
+}
+
+.block-4 {
+    // Makes child items maintain the same height regardless of content
+    // Content within the child items remains top aligned
+    @include flexbox-same-height();
+}
 ```
 {{/markdown}}
 </div>
 
-<h3 class="section-title" id="positioning">Positioning (relative, fixed, etc.)</h3>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+
+<h3 class="section-title" id="variables">Global Variables</h3>
+<p>The global <code>_variables.scss</code> file contains the range of options for sizes, lineheights, and weights for fonts and icons, as well as z-index positions, colors, breakpoints, and grid dimensions.</p>
+
+<p>All values for these attributes used across the site should come from these variables to facilitate easy updates and maintenance. <b>Do not</b> use values outside those listed in the <code>_variables.scss</code> file or hardcode any values in individual css files.</p>
+
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
+        <div style="font-weight: 700;">$font-weight-bold</div>
+        <div style="font-weight: 500;">$font-weight-medium</div>
+        <div style="font-weight: 400;">$font-weight-regular</div>
+        <div style="font-weight: 200;">$font-weight-light</div>
+        <br>
+        <div style="font-size: 1.2rem;">$font-size-xsmall</div>
+        <div style="font-size: 1.4rem;">$font-size-small</div>
+        <div style="font-size: 1.6rem;">$font-size-normal</div>
+        <div style="font-size: 2.2rem;">$font-size-large</div>
+        <div style="font-size: 2.8rem;">$font-size-xlarge</div>
     </div>
 
 {{#markdown}}
-```html
-<p>Example</p>
+```css
+$font-weight-bold        : 700;
+$font-weight-medium      : 500;
+$font-weight-regular     : 400;
+$font-weight-light       : 200;
+
+$font-size-xsmall        : 1.2rem;
+$font-size-small         : 1.4rem;
+$font-size-normal        : 1.6rem;
+$font-size-large         : 2.2rem;
+$font-size-xlarge        : 2.8rem;
 ```
 {{/markdown}}
 </div>

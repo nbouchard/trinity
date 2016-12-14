@@ -21,6 +21,14 @@
     @include text-gray;
 }
 
+.text-blue {
+    @include text-blue;
+}
+
+.text-white {
+    @include text-white;
+}
+
 .bg-green {
     @include bg-green;
 }
@@ -60,16 +68,16 @@
     text-align: center;
 }
 
-.nowrap {
-    white-space: nowrap;
-}
-
 .uppercase {
     text-transform: uppercase;
 }
 
 .lowercase {
     text-transform: lowercase;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 .break-word {
