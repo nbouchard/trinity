@@ -76,14 +76,18 @@ body {
     padding: 2rem 0;
 
     nav {
-        border-right: 1px solid $gray-medium;
-        padding-right: 2rem;
+
+        >ul { 
+            margin-right: 1rem;
+            border-right: 1px solid $gray-medium;
+        }
 
         ul {
             @include list-unstyled;
             font-size: 15px;
             line-height: 1.6em;
             outline: 0;
+            padding-right: 2rem;
 
             li  {
 
@@ -150,7 +154,7 @@ body {
         nav {
             @include grid-columns( 1 );
             position: fixed;
-            padding: 0 2rem 0 0;
+            padding: 0;
             top: 2.5rem;
         }
     }
@@ -159,7 +163,7 @@ body {
 
 .site-primary {
     @include grid-columns( 3 );
-    padding: 3rem 1rem;
+    padding: 3rem 0;
 
     &.wide {
         @include grid-columns( 4 );
@@ -360,6 +364,81 @@ body {
     }
 }
 
+
+//
+// Stats Module
+// --------------------------------------------------
+
+.ce-statsModule {
+    @include grid-container;
+
+    a {
+        @include omega( 3n );
+    }
+
+    .stats-icon {
+        @include grid-bigIcon;
+        @include text-green;
+    }
+
+    .stats-item {
+        @include grid-columns( 1, short );
+        @include grid-headline;
+        @include text-green;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-h3;
+        border: 1px solid $green;
+        text-decoration: none;
+
+        &:active,
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: darken( $green, 10% );
+            border-color: darken( $green, 10% );
+        }
+    }
+}
+
+
+//
+// Directory Card Module
+// --------------------------------------------------
+
+.ce-directoryCardsModule {
+    @include grid-container;
+
+    .directory-card {
+        @include grid-columns( 2 , tall );
+        @include omega( 2n );
+        border: 1px solid $green;
+
+        @include media( $tablet-down) {
+            height: auto;
+        }
+
+        h5 {
+            margin-bottom: 1rem;
+            @include text-green;
+            text-align: center;
+        }
+
+        p {
+            font-size: $font-size-small;
+        }
+
+        ul {
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include media( $tablet-down) {
+                height: auto;
+            }
+        }
+    }
+}
 
 // Highlight.js Theme - Solarized Light
 // -------------------------
