@@ -8,11 +8,10 @@ tpl:
   desc: Page Desc
   title: Global Page Elements
 ---
-<h1>Global Page Elements</h1>
-<p></p>
+<h2 class="page-title">Global Page Elements</h2>
 
 
-<h2 id="header">Header</h2>
+<h3 class="section-title" id="header">Header</h3>
 <p>There are two distinct versions of the site header — one that incorporates a hero unit, and one that does not. Pages without a hero unit have a fixed position header by default. For pages with a hero unit, the header switches between fixed and static postion, depending on scroll location.</p>
 
 <div class="example-block">
@@ -50,7 +49,7 @@ tpl:
 {{/markdown}}
 </div>
 
-<h2 id="main-nav">Main Navigation</h2>
+<h3 class="section-title" id="main-nav">Main Navigation</h3>
 <p>The main navigation is a part of the site header. The size and postion of the navigation changes depending on whether the header is static or fixed.</p>
 
 <div class="example-block">
@@ -67,70 +66,6 @@ tpl:
 <div class="ce-mainNavigation">
     ...
 </div>
-```
-{{/markdown}}
-</div>
-
-<h2 id="zip-search">Zip Search</h2>
-
-<h4>Residential search (default)</h4>
-<p></p>
-
-<div class="example-block">
-    <div class="example">
-        <form class="search-form search-home" >
-            <input class="zip-input" type="tel" placeholder="Enter your zip code">
-            <button class="btn btn-search btn-angle" type="button">Search</button>
-        </form>
-    </div>
-
-{{#markdown}}
-```html
-<form class="search-form search-home" >
-    <input class="zip-input" type="tel" placeholder="Enter your zip code">
-    <button class="btn btn-search btn-angle" type="button">Search</button>
-</form>
-```
-{{/markdown}}
-</div>
-
-<h4>Business search</h4>
-<p></p>
-
-<div class="example-block">
-    <div class="example">
-        <form class="search-form search-business">
-            <input class="zip-input" type="tel" placeholder="Enter your zip code">
-            <div class="select-pricing-buckets">
-                <select class="size-select select2-form">
-                    <option value="" disabled selected hidden>Select average bill</option>
-                    <option value="smb_0">$0 &#x2013; $500 / month</option>
-                    <option value="smb_501">$501 &#x2013; $1500 / month</option>
-                    <option value="smb_1501">$1501 &#x2013; $2500 / month</option>
-                    <option value="smb_2501">$2501 &#x2013; $5000 / month</option>
-                    <option value="smb_5001">More than $5000 / month</option>
-                </select>
-            </div>
-            <button class="btn btn-search btn-angle" type="button">Search</button>
-        </form>
-    </div>
-
-{{#markdown}}
-```html
-<form class="search-form search-business">
-    <input class="zip-input" type="tel" placeholder="Enter your zip code">
-    <div class="select-pricing-buckets">
-        <select class="size-select select2-form">
-            <option value="" disabled selected hidden>Select average bill</option>
-            <option value="smb_0">$0 &#x2013; $500 / month</option>
-            <option value="smb_501">$501 &#x2013; $1500 / month</option>
-            <option value="smb_1501">$1501 &#x2013; $2500 / month</option>
-            <option value="smb_2501">$2501 &#x2013; $5000 / month</option>
-            <option value="smb_5001">More than $5000 / month</option>
-        </select>
-    </div>
-    <button class="btn btn-search btn-angle" type="button">Search</button>
-</form>
 ```
 {{/markdown}}
 </div>

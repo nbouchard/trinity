@@ -8,46 +8,48 @@ tpl:
   desc: Page Desc
   title: Navigation
 ---
-<h1>Navigation</h1>
+<h2 class="page-title">Navigation</h2>
 
-<h2 id="tabs">Tabs</h2>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<h3 class="section-title" id="pagination">Pagination</h3>
+<p>Use the paginition element anytime there is more than one page of results.</p>
+
 <div class="example-block">
     <div class="example">
-        <p>Example</p>
-    </div>
+        <ul class="pagination">
+            <li><a href="#" class="prev">Prev</a></li>
 
+            <li><a href="#" class="page-number">1</a></li>
+            <li><a href="#" class="page-number current">2</a></li>
+            <li><a href="#" class="page-number">3</a></li>
+            <li><a href="#" class="page-number">4</a></li>
+            <li><a href="#" class="page-number">5</a></li>
+            <li><a href="#" class="page-number">6</a></li>
+
+            <li><a href="#" class="dots">...</a></li>
+
+            <li><a href="#" class="page-number ">10</a></li>
+
+            <li><a href="#" class="next">Next</a></li>
+        </ul>
+    </div>
 {{#markdown}}
 ```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
+<ul class="pagination">
+    <li><a href="#" class="prev">Prev</a></li>
 
-<h2 id="pills">Pills (horizontal & stacked)</h2>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
+    <li><a href="#" class="page-number">1</a></li>
+    <li><a href="#" class="page-number current">2</a></li>
+    <li><a href="#" class="page-number">3</a></li>
+    <li><a href="#" class="page-number">4</a></li>
+    <li><a href="#" class="page-number">5</a></li>
+    <li><a href="#" class="page-number">6</a></li>
 
-{{#markdown}}
-```html
-<p>Example</p>
-```
-{{/markdown}}
-</div>
+    <li><a href="#" class="dots">...</a></li>
 
-<h2 id="pagination">Pagination & pager (Prev, Next)</h2>
-<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
-<div class="example-block">
-    <div class="example">
-        <p>Example</p>
-    </div>
+    <li><a href="#" class="page-number ">10</a></li>
 
-{{#markdown}}
-```html
-<p>Example</p>
+    <li><a href="#" class="next">Next</a></li>
+</ul>
 ```
 {{/markdown}}
 </div>
