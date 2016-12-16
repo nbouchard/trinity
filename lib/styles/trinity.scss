@@ -588,3 +588,102 @@ body {
 }
 
 
+// Grid examples
+// -------------------------
+
+.grid-example {
+    @include grid-container;
+
+    &.flexbox-same-height {
+        @include flexbox-same-height;
+    }
+    
+    div {
+        @include bg-green;
+        @include text-white;
+
+        &.block-1 {
+            @include grid-columns( 2 );
+            width: 45.8rem;
+        }
+
+        &.block-2 {
+            @include grid-columns( 1 );
+            @include omega();
+        }
+
+        &.block-3 {
+            @include grid-columns( 2, tall );
+            width: 45.8rem;
+            height: 45.8rem;
+        }
+
+        &.block-4 {
+            @include grid-columns( 1, short );
+            @include omega();
+        }
+
+        &.block-5 {
+            @include grid-columns( 1 );
+            width: 22.9rem;
+
+        }
+
+        &.block-6 {
+            @include grid-columns( 1 );
+            @include bg-white;
+            @include text-green;
+            border: 1px solid $green;
+            width: 22.9rem;
+        }
+
+        &.block-7 {
+            @include grid-columns( 3 );
+            @include bg-white;
+            @include text-default;
+            padding: $grid-padding 0;
+            width: 70.7rem;
+        }
+
+        &.block-8 {
+            @include grid-columns( 2, short );
+            @include grid-bgImage;
+            background-image: url("/images/killowatt-meter.jpg");
+            width: 45.8rem;
+        }
+
+        &.block-9 {
+            @include grid-columns( 2, short );
+            @include grid-image( horizontal );
+            width: 45.8rem;
+        }
+
+        &.block-10 {
+            @include grid-columns( 2, short );
+            @include grid-headline;
+            @include bg-blue;
+            width: 45.8rem;
+        }
+
+        &.block-11 {
+            @include grid-columns( 1, short );
+            @include grid-bigIcon;
+            @include bg-white;
+            @include text-yellow;
+        }
+
+        &.flexbox-center {
+            @include flexbox-center;
+
+            h5 {
+                display: inline-block;
+            }
+        }
+
+        &.flexbox-center-vertically {
+            @include flexbox-center-vertically;
+        }
+    }
+}
+
+
