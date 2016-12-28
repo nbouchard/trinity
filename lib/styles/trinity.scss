@@ -649,7 +649,7 @@ body {
         &.block-8 {
             @include grid-columns( 2, short );
             @include grid-bgImage;
-            background-image: url("/images/killowatt-meter.jpg");
+            background-image: url("/trinity/images/killowatt-meter.jpg");
             width: 45.8rem;
         }
 

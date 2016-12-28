@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     	    ]
         },
         dist: {
-    	    src: 'dist/css/*.css'
+    	    src: 'dist/trinity/css/*.css'
         }
     });
 
