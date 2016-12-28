@@ -441,6 +441,7 @@ body {
     }
 }
 
+
 // Highlight.js Theme - Solarized Light
 // -------------------------
 .hljs {
@@ -687,3 +688,141 @@ body {
 }
 
 
+// Brand examples
+// -------------------------
+
+.color-tile {
+    width: 17.5rem;
+    margin-right: 1rem;
+    float: left;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    p {
+        margin: 0;
+    }
+
+    & + p {
+        clear: both;
+    }
+
+    .color {
+        height: 8.5rem;
+
+        &.blue {
+            background-color: $blue;
+        }
+
+        &.green {
+            background-color: $green;
+        }
+
+        &.gray {
+            background-color: $gray;
+        }
+
+        &.yellow {
+            background-color: $yellow;
+        }
+
+        &.red {
+            background-color: $red;
+        }
+
+        &.white {
+            background-color: $white;
+            border: 1px solid $gray-medium;
+        }
+
+        &.gray-lightest {
+            background-color: $gray-lightest;
+        }
+
+        &.gray-lighter {
+            background-color: $gray-lighter;
+        }
+
+        &.gray-light {
+            background-color: $gray-light;
+        }
+
+        &.gray-medium-light {
+            background-color: $gray-medium-light;
+        }
+
+        &.gray-medium {
+            background-color: $gray-medium;
+        }
+
+        &.gray-dark {
+            background-color: $gray-dark;
+        }
+
+        &.gray-darker {
+            background-color: $gray-darker;
+        }
+
+        &.black {
+            background-color: $black;
+        }
+    }
+}
+
+.font-example {
+    width: 50%;
+    float: left;
+    margin: 2rem 0 ;
+    text-align: center;
+
+    span {
+        font-size: $font-size-h5;
+        display: block;
+        text-align: left;
+    }
+
+    &.bitter span {
+        font-family: $font-family-serif;
+    }
+
+    &.italic span {
+        font-style: italic;
+    }
+
+    &.medium span {
+        font-weight: $font-weight-medium;
+    }
+
+    &.bold span {
+        font-weight: $font-weight-bold;
+    }
+}
+
+.icon-example {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin: 2rem 0;
+    i {
+        font-size: 6rem;
+    }
+    span {
+        display: block;
+    }
+}
+
+.photography-example {
+    div {
+        @include omega( 2n );
+    }
+
+    .block-large {
+        @include grid-columns( 2, short );
+        @include grid-bgImage;
+        width: 45.8rem;
+    }
+
+    .block-small {
+        @include grid-columns( 1, short );
+        @include grid-bgImage;
+    }
+}

@@ -2,13 +2,20 @@
 <div class="site-sidebar">
     <nav>
         <ul>
-            <li{{#is basename "logos"}} class="selected"{{/is}}><a href="/brand/logos.html">Logos</a></li>
-            <li{{#is basename "colors"}} class="selected"{{/is}}><a href="/brand/colors.html">Colors</a></li>
-            <li{{#is basename "fonts"}} class="selected"{{/is}}><a href="/brand/fonts.html">Fonts</a></li>
-            <li{{#is basename "icons"}} class="selected"{{/is}}><a href="/brand/icons.html">Icons</a></li>
-            <li{{#is basename "layouts"}} class="selected"{{/is}}><a href="/brand/layouts.html">Layouts</a></li>
-            <li{{#is basename "blocks"}} class="selected"{{/is}}><a href="/brand/blocks.html">Blocks</a></li>
-            <li{{#is basename "photography"}} class="selected"{{/is}}><a href="/brand/photography.html">Photography</a></li>
+            <li{{#is basename "visuals"}} class="selected"{{/is}}><a href="/brand/visuals.html">Visual Elements</a>
+                <ul>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#fonts">Fonts</a></li>
+                    <li><a href="#icons">Icons</a></li>
+                    <li><a href="#photography">Photography</a></li>
+                </ul>
+            </li>
+            <li{{#is basename "logos"}} class="selected"{{/is}}><a href="/brand/logos.html">Logo Treatments</a>
+                <ul>
+                    <li><a href="#variations">Logo Variations</a></li>
+                    <li><a href="#use">Logo Use</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </div>
@@ -92,8 +99,6 @@
             <li{{#is basename "form-groups"}} class="selected"{{/is}}><a href="/components/form-groups.html">Form Groups</a>
                 <ul>
                     <li><a href="#search">Zip Search</a></li>
-                    <!-- <li><a href="#horizontal">Horizontal</a></li>
-                    <li><a href="#inline">Inline</a></li> -->
                 </ul>
             </li>
         </ul>
@@ -134,10 +139,11 @@
             </li>
             <li{{#is basename "seo"}} class="selected"{{/is}}><a href="/code/seo.html">SEO Optimization</a>
                 <ul>
-                    <li><a href="#arcitecture">Site Architecture</a></li>
                     <li><a href="#structured">Structured Data</a></li>
-                    <li><a href="#social">Social</a></li>
-                    <li><a href="#tools">Testing Tools</a></li>
+                    <li><a href="#sitemaps">Sitemaps & URLs</a></li>
+                    <li><a href="#arcitecture">Page Architecture</a></li>
+                    <li><a href="#mobile">Mobile Optimization</a></li>
+                    <li><a href="#testing">Testing Tools</a></li>
                 </ul>
             </li>
         </ul>
@@ -158,7 +164,6 @@
 
                 </ul>
             </li>
-            <li{{#is basename "tools"}} class="selected"{{/is}}><a href="/resources/tools.html">Tools</a></li>
             <li{{#is basename "pattern-libraries"}} class="selected"{{/is}}><a href="/resources/pattern-libraries.html">Pattern Library Examples</a>
                 <ul>
                     <li><a href="#pattern">Pattern Libraries / UI Toolkits</a></li>
