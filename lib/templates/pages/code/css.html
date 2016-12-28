@@ -1,0 +1,167 @@
+---
+layout: default
+site:
+  name: Trinity
+  version: 0.1.0
+section: Code
+tpl:
+  desc: Page Desc
+  title: Code Standards
+---
+
+<h2 class="page-title">CSS & SCSS</h2>
+
+<h3 id="basic" class="section-title">Basic Formatting</h5>
+<ul>
+    <li>Put spaces after : in property declarations.</li>
+    <li>Put spaces before { in rule declarations.</li>
+    <li>Always put a blank line (two line breaks) between rules.</li>
+    <li>Place closing braces of declaration blocks on a new line.</li>
+    <li>Always start a new line for each selector and declaration.</li>
+    <li>End every declaration with a semicolon for consistency and extensibility reasons.</li>
+    <li>Use single ('') rather than double ("") quotation marks for attribute selectors or property values. Do not use quotation marks in URI values (ie. in <code>url()</code>).</li>
+    <li>Avoid specifying units for zero values, e.g., <code>margin: 0</code>; instead of <code>margin: 0px;</code>.</li>
+</ul>
+
+{{#markdown}}
+```html
+.video {
+    margin-top: 1em;
+}
+
+.image,
+.photo {
+    padding: 2em 0;
+    margin: 0.5em;
+}
+
+.text {
+    font-family: 'open sans', arial, sans-serif;
+}
+```
+{{/markdown}}
+
+
+<h3 id="colors" class="section-title">Colors</h5>
+<p>Use hex color codes unless using <code>rgba()</code> in raw CSS (SCSS’ rgba() function is overloaded to accept hex colors as a param, ).</p>
+
+<p>Use 3 character hexadecimal notation where possible and lowercase characters in hex numbers.</p>
+
+<p>All color definitions should reside in the global <code>_variables.scss</code> file in the colors section. Avoid creating new color definitions if possible, as we want to limit the number of colors used throughout the site to increase consistency and provide structure around our brand identity. Refer to the brand documentation for specifics around color usage.</p>
+
+{{#markdown}}
+```html
+.white {
+   color: #fff;
+}
+
+.transparent_black {
+    color: rgba(#000, .5)
+}
+```
+{{/markdown}}
+
+<h3 id="fonts" class="section-title">Font Sizing</h5>
+<p>In order to get the best combination of flexibility and accuracy, we use rem for font-size.</p>
+
+<p>We’ve set our baseline font size at 10px, so to match an exact pixel size in designs, divide that number by 10 to come up with rem (eg. 72px will be 7.2rem). This allows us to be very specific with the sizes and be sure that they we will remain consistent no matter what sizes are applied to a parent element, while also allowing the font size to scale when the browser zooms.</p>
+
+<p>Additionally, unit-less line-height is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the font-size.</p>
+
+<h3 id="naming" class="section-title">Class Naming Conventions</h5>
+<h5 class="subsection-title">Component Classes</h5>
+<p>The basic syntax is as follows: <code>ce-<{componentName}></code>.</p>
+
+<p>The componentName value must always be camelCase and prefixed with the <code>ce-</code> namespace. It functions as a component scope isolating tag and so there should only be one component class per component. All component-specific element styles should be namespaced to the component class, but do not need the <code>ce-</code> prefix. This removes the need to update more than component specific class if creating variants or reusing the module elsewhere.</p>
+
+<h5 class="subsection-title">Variant Classes</h5>
+<p>The basic syntax is as follows: <code>v-<{variantName}></code>.</p>
+
+<p>Used hand in hand with component classes to account for variants in the look of a component such as an alternative color pallet or layout. Try to limit the number of variants in use on any particular component. While there are some variants that can be stacked together, if you find that you are adding multiple variants it is best to create a custom variant specific to that instance to reduce the chance of error.</p>
+
+
+<h5 class="subsection-title">Utility Classes</h5>
+<p>The basic syntax is as follows: <code>u-<{utilityName}></code>.</p>
+
+<p>The <code>utilityName</code> value must always be camelCase and prefixed with the <code>u-</code> namespace. Utility classes modify low-level structural and positional traits of elements, and their usage is most frequent when prototyping or designing in the browser. Utility classes may be applied directly to any element, though they may not always have an effect (i.e. <code>u-textLeft</code> will apply text-align to any element, but an img element would be unaffected by this utility class).</p>
+
+<p>Every Utility Class is paired with a SCSS mixin that may be included in any element's property declarations to apply the utility. Using the utility mixin is the preferred method, but these utility classes exist specifically to allow a designer or developer the option to prototype using the utility classes without spending an egregious amount of time experimenting with different SCSS mixins.</p>
+
+<p>Utility Classes should be avoided for use in production unless the only styling an element will receive is via the utility class.</p>
+
+<h5 class="subsection-title">JavaScript Classes</h5>
+<p>The basic syntax is as follows: <code>js-<{targetName}></code>.</p>
+
+<p>The <code>targetName</code> value must always be camelCase and prefixed with the <code>js-</code> namespace. JavaScript-specific classes reduce the risk that changing the structure or theme of components will inadvertently affect any required JavaScript behaviour and complex functionality. It is not necessary to use them in every case, just think of them as a tool in your utility belt. If you are creating a class, which you don't intend to use for styling, but instead only as a selector in JavaScript, you should probably be adding the <code>js-</code> prefix.</p>
+
+
+<p>JavaScript-specific classes should not, under any circumstances, be styled.</p>
+
+
+<h3 id="specificity" class="section-title">Nesting & Specificity</h5>
+<p>If possible, avoid nesting deeper than three levels in our css as this introduces too much specificity and affect where else you can use this style. If you find yourself needing nesting deeper than three levels, consider refactoring the styles into smaller components or simplifying the DOM structure.</p>
+
+<p>Also avoid using ids unless absolutely necessary - they trump the specificity of classes and can lead to odd inheritance situations where they will unintentionally override class styles. </p>
+
+<p>Same goes for the <code>!important</code> rule - if you’re using it that usually means you’ve designed your css poorly and you should rethink how you’ve written that section of code. For any <code>!important</code> rules to pass code review, there must be clear comments in the css explaining why it was the only appropriate solution.</p>
+
+<p>Read more about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">CSS specificity</a> if any of this is unfamiliar.</p>
+
+<h3 id="selectors" class="section-title">Selectors</h5>
+<p>Generally, use the following rules:</p>
+
+<ul>
+    <li>Select what you want explicitly, rather than relying on circumstance or coincidence. Good selector intent will rein in the reach and leak of your styles.</li>
+    <li>Write selectors for reusability, so that you can work more efficiently and reduce waste and repetition.</li>
+    <li>Do not nest selectors unnecessarily, because this will increase specificity and affect where else you can use your styles.</li>
+    <li>Do not qualify selectors unnecessarily, as this will impact the number of different elements you can apply styles to.</li>
+    <li>Keep selectors as short as possible, in order to keep specificity down and performance up.</li>
+    <li>Be thoughtful about selector intent when creating styles - try not to create selectors that are too broad or could unintentionally affect new items. For example, when styling the main nav, the first example below would apply the styles to any list within the header. This runs the risk of applying a very specific style to a wide number of elements requiring significantly more CSS to undo. The second example is better because it must be explicitly set and will only affect the right element for the right reason.</li>
+</ul>
+
+{{#markdown}}
+```html
+// Bad selector intent
+header ul { }
+
+// Good selector intent
+.site-nav { }
+```
+{{/markdown}}
+
+<p>Avoid using selectors that style things based on where they are - element styling should not be reliant on where we place them but should remain location independant. </p>
+
+{{#markdown}}
+```html
+// Bad selector intent
+.contentBlock a { }
+
+// Good selector intent
+.btn { }
+```
+{{/markdown}}
+
+<p>The one exception to this rule is when creating components (the ones prefixed with <code>ce-</code>). When creating styles for items that must live within this component, nested selectors are encouraged to make sure component-specific styling doesn’t affect elements outside the component. The component itself should not be nested however, as that should be location independent. </p>
+
+<h3 id="performance" class="section-title">Performance</h5>
+<p>A lot of the rules around CSS selectors and their effect on performance are pretty out of date at this point - browsers have gotten fast enough at parsing CSS that this is no longer the major bottleneck in CSS performance it once was. Furthermore, there is disparity across browsers of what the slowest selectors are anyway.</p>
+
+
+<p>Excessive unused styles are likely to cost more, performance wise, than any selectors so we should look into way the site can have stylesheets broken out and added in only when needed (dependency graph style).</p>
+
+
+<p>The real battle for high performing CSS is in the use of render-expensive properties and values – getting something painted to screen fast is obviously important but so is how a page feels when the user interacts with it. Look for expensive property and value pairs first (Chrome continuous repaint mode is your friend here), they are likely to provide the biggest gains.</p>
+
+
+<p>Avoid using the wildcard (*) selector even when nested inside a class or id because it is very, very expensive - what this selector actually does is find every single node in the DOM and then looks to see if it lives anywhere at any level within your class or id. The only place is this should be used is in our normalizer to reset the box model for all elements.</p>
+
+
+<h3 id="comments" class="section-title">Comments</h5>
+<p>Document your styles with comments as often as possible following KSS syntax. Long-term, this <a href="http://warpspire.com/kss/">KSS documentation</a> will be used in the living style guide so we don't have to manage the documentation separately from the code.</p>
+
+
+<p>Use // for comment blocks (instead of /* */). The preprocessor will automatically strip these out of production code.</p>
+
+
+<h3 id="prefixing" class="section-title">Browser Prefixing</h5>
+<p>Browser prefixes for CSS3 properties should never be created manually. Instead, we use autoprefixer as one of our grunt tasks to generate any needed browser prefixes based off of browser support rules.</p>

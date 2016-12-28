@@ -1,0 +1,193 @@
+---
+layout: default
+site:
+  name: Trinity
+  version: 0.1.0
+section: Components
+tpl:
+  desc: Page Desc
+  title: Plan Cards
+---
+<h2 class="page-title">Plan Cards</h2>
+
+<p>The plan card is one of the most important reusable components for the site, and it's important that they are clean and easy to read at all screen sizes.</p>
+
+<p>The plan cards can be displayed in any of the 4 brand colors - gray, green, yellow, and blue. The badge is optional and should only be displayed for plans that are top ranked in their category. All plans without a badge should use the default gray color.</p>
+
+<div class="example-block">
+    <div class="example">
+        <div class="ce-plancard">
+            <section class="info">
+                <div class="price">
+                    <div class="monthlyCost">
+                        246
+                        <label>approx. per month</label>
+                    </div>
+                    <div class="unitCost">
+                        6.55
+                        <label>¢ / kWh</label>
+                    </div>
+                </div>
+                <div class="details">
+                    <h5 class="term">8 months fixed</h5>
+                    <div class="logo">
+                        <img src="/images/ConEd_optimized.png" alt="supplier logo">
+                    </div>
+                    <span class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </span>
+                    <div class="angle"></div>
+                </div>
+            </section>
+
+            <section class="badge">
+                <div class="label">Best Overall</div>
+                <div class="angle"></div>
+            </section>
+        </div>
+
+        <div class="ce-plancard v-green">
+            <section class="info">
+                <div class="price">
+                    <div class="monthlyCost">
+                        230
+                        <label>approx. per month</label>
+                    </div>
+                    <div class="unitCost">
+                        6.42
+                        <label>¢ / kWh</label>
+                    </div>
+                </div>
+                <div class="details">
+                    <h5 class="term">12 months fixed</h5>
+                    <div class="logo">
+                        <img src="/images/NRG_optimized.png" alt="supplier logo">
+                    </div>
+                    <span class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-empty"></i>
+                    </span>
+                    <div class="angle"></div>
+                </div>
+            </section>
+
+            <section class="badge">
+                <div class="label">Best for the Planet</div>
+                <div class="angle"></div>
+            </section>
+        </div>
+
+        <div class="ce-plancard v-blue">
+            <section class="info">
+                <div class="price">
+                    <div class="monthlyCost">
+                        263
+                        <label>approx. per month</label>
+                    </div>
+                    <div class="unitCost">
+                        6.71
+                        <label>¢ / kWh</label>
+                    </div>
+                </div>
+                <div class="details">
+                    <h5 class="term">6 months fixed</h5>
+                    <div class="logo">
+                        <img src="/images/TriEagle_optimized.png" alt="supplier logo">
+                    </div>
+                    <span class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-empty"></i>
+                    </span>
+                    <div class="angle"></div>
+                </div>
+            </section>
+
+            <section class="badge">
+                <div class="label">Best Short Term</div>
+                <div class="angle"></div>
+            </section>
+        </div>
+
+        <div class="ce-plancard v-yellow">
+            <section class="info">
+                <div class="price">
+                    <div class="monthlyCost">
+                        225
+                        <label>approx. per month</label>
+                    </div>
+                    <div class="unitCost">
+                        6.40
+                        <label>¢ / kWh</label>
+                    </div>
+                </div>
+                <div class="details">
+                    <h5 class="term">12 months fixed</h5>
+                    <div class="logo">
+                        <img src="/images/Startex_optimized.png" alt="supplier logo">
+                    </div>
+                    <span class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </span>
+                    <div class="angle"></div>
+                </div>
+            </section>
+
+            <section class="badge">
+                <div class="label">Most Popular</div>
+                <div class="angle"></div>
+            </section>
+        </div>
+    </div>
+
+{{#markdown}}
+```html
+<div class="ce-plancard v-blue">
+    <section class="info">
+        <div class="price">
+            <div class="monthlyCost">
+                246
+                <label>approx. per month</label>
+            </div>
+            <div class="unitCost">
+                6.55
+                <label>¢ / kWh</label>
+            </div>
+        </div>
+        <div class="details">
+            <h5 class="term">8 months fixed</h5>
+            <div class="logo">
+                <img src="/images/ConEd_optimized.png" alt="supplier logo">
+            </div>
+            <span class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </span>
+            <div class="angle"></div>
+        </div>
+    </section>
+
+    <section class="badge">
+        <div class="label">Best Overall</div>
+        <div class="angle"></div>
+    </section>
+</div>
+```
+{{/markdown}}
+</div>

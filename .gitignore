@@ -1,6 +1,10 @@
 # ugh
 .DS_Store
 
+# Sublime project files
+*.sublime-project
+*.sublime-workspace
+
 # Logs
 logs
 *.log
@@ -34,8 +38,4 @@ node_modules
 .sass-cache
 
 # Ignore distributable files
-dist/images
-dist/pattern-library
-dist/style-guide
-dist/index.html
-dist/mobile.html
+dist/*

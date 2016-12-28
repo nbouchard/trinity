@@ -1,0 +1,98 @@
+---
+layout: default
+site:
+  name: Trinity
+  version: 0.1.0
+section: Code
+tpl:
+  desc: Page Desc
+  title: General Standards
+---
+
+<h2 class="page-title">General Standards</h2>
+
+
+<h3 id="formatting" class="section-title">Formatting</h3>
+
+<h5 class="subsection-title">Encoding</h5>
+<p>Make sure your editor uses UTF-8 as character encoding, without a byte order mark.</p>
+
+
+<p>Specify the encoding in HTML templates and documents via <code>&lt;meta charset="utf-8"&gt;</code>. Do not specify the encoding of style sheets as these assume UTF-8.</p>
+
+
+<p>This will also mean you shouldn’t need to use entity references like <code>& mdash;, & rdquo;, or & #x263a;</code>, assuming the same encoding (UTF-8) is used for files and editors as well as among teams.</p>
+
+
+<p>(More on encodings and when and how to specify them can be found in <a href="http://www.w3.org/International/tutorials/tutorial-char-enc/">Handling character encodings in HTML and CSS</a>.)</p>
+
+
+<h5 class="subsection-title">Indentation</h5>
+<p>Use soft-tabs with a four space indent (for readability and consistency across all of our codebases). Spaces are the only way to guarantee code renders the same in any person’s environment. Don’t use tabs or mix tabs and spaces for indentation.</p>
+
+
+<h5 class="subsection-title">Capitalization</h5>
+<p>All code should be lowercase: This applies to HTML element names, attributes, attribute values, CSS selectors, properties, and property values (with the exception of strings).</p>
+
+
+<h5 class="subsection-title">Trailing Whitespace</h5>
+<p>Remove trailing white spaces since they are unnecessary and can complicate diffs. To make this easy, configure your editor to "show invisibles". This will allow you to eliminate end of line whitespace, eliminate unintended blank line whitespace, and avoid polluting commits.</p>
+
+
+<h5 class="subsection-title">Line Breaks</h5>
+<p>Use a new line for every block, list, or table element, and indent every such child element. Indent each nested html rule as well, to reflect hierarchy and improve readability.</p>
+
+
+<h5 class="subsection-title">Code Validity</h5>
+<p>Use valid code unless that is not possible due to otherwise unattainable performance goals regarding file size, CSS validator bugs, or requiring proprietary syntax.</p>
+
+<p>Use tools such as the <a href="http://validator.w3.org/nu/">W3C HTML validator</a> and <a href="http://jigsaw.w3.org/css-validator/">W3C CSS validator</a> to test.</p>
+
+<h3 id="files" class="section-title">File organization</h3>
+
+<h5 class="subsection-title">Variables</h5>
+<p>We use a number of variables in our styles and in order to make sure they all load in before any files that are dependent on them, all variable should live in the <code>_variables.scss</code> file.</p> 
+
+
+<h5 class="subsection-title">Mixins</h5>
+<p>We also have a number of scss mixins in our styles and they all reside within the mixins folder in the <code>lib/styles</code> directory. This includes all vendor mixins (such as bourbon, neat, and breakpoint), and any custom mixins we create. Customs mixins should be split into multiple files based off their purpose to improve readability & maintainability.</p>
+
+
+<h5 class="subsection-title">Z-Index</h5>
+<p>Our Z-Index scale is defined in <code>_variables.scss</code>, and it provides a total of nine indices spread across three categories: low, medium, and high. Each of these categories has a specific purpose:</p>
+<ul>
+    <li><b>low:</b> Provides mid-range z-index values used for the body of any current interface. The majority of the site is set to the z-body-mid value.</li>
+    <li><b>medium:</b> Provides high z-index values used to create the effect of being above a given interface. These are primarily used for popups, toasts, floating headers, and similar components.</li>
+    <li><b>high:</b> Provides low z-index values used to create the effect of being beneath a given interface. These are primarily used for background components.</li>
+</ul>
+
+<p>Stacking order is a uniquely odd thing. If you are running into issues, please read <a href="http://philipwalton.com/articles/what-no-one-told-you-about-z-index/">"What No One Told You About Z-Index"</a>, as it's a great overview of how stacking order works. Pay particular attention to the <a href="http://philipwalton.com/articles/what-no-one-told-you-about-z-index/#stacking-contexts">Stacking Contexts</a>. Ideally, we should create stacking contexts using position and z-index as opposed to using the opacity hack.</p>
+
+
+<h5 class="subsection-title">Typography</h5>
+<p>All typographical base definitions should reside in the global _typography.scss file. </p>
+
+<h5 class="subsection-title">Media Queries</h5>
+<p>We use <a href="http://breakpoint-sass.com/">breakpoint</a> to define media queries. Specific breakpoints should be defined in the <code>_variables.scss</code> file. This allows us to fine-tune media queries across the site all at once. If a component needs a specific media query breakpoint, define it at the top of the file in which the component-specific breakpoint is used.</p>
+
+
+<p>Our standard breakpoints are:</p>
+<ul>
+    <li>Phone: 320px wide</li>
+    <li>Tablet: 768px wide</li>
+    <li>Laptop: 990px wide</li>
+    <li>Desktop: 1200px wide</li>
+</ul>
+
+
+The styles should snap from breakpoint to breakpoint rather than scale in between each in order to ensure that the blocks with remain square.
+
+
+<h3 id="browsers" class="section-title">Browser Support</h3>
+<p>Due to limitations in our Angular codebase, we are currently only supporting the follwowing modern browsers: 
+<ul>
+    <li>Chrome</li>
+    <li>Firefox</li>
+    <li>Safari</li>
+    <li>IE9+</li>
+</ul>

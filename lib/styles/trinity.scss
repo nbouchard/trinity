@@ -1,0 +1,828 @@
+//
+// Pattern Library / Style Guide
+// --------------------------------------------------
+
+
+body {
+    > .container {
+        @include outer-container ( $page-width );
+        padding-bottom: 2.5rem;
+    }
+
+    .testing {
+        @include grid-container;
+    }
+}
+
+
+.site-header {
+    background-color: #5B5E63;
+
+    nav {
+        @include outer-container;
+
+        h1 {
+            @include grid-columns( 1 );
+            padding: 0;
+            margin: 0;
+
+            a {
+                font-size: 2.2rem;
+                line-height: 6rem;
+                float: left;
+            }
+        }
+
+        ul {
+            @include grid-columns( 3 );
+            @include list-unstyled;
+            float: left;
+            padding: 0;
+            margin: 0;
+
+            li {
+                float: left;
+            }
+        }
+
+        a {
+            display: block;
+            font-size: 1.6rem;
+            color: $white;
+            padding: 0 12px;
+            line-height: 6rem;
+            text-decoration: none;
+
+
+            &:hover {
+                background: darken( #5B5E63, 10% );
+            }
+        }
+
+        .selected > a {
+            background: darken( #5B5E63, 5% );
+        }
+    }
+}
+
+
+.site-main {
+    @include grid-container;
+}
+
+
+.site-sidebar {
+    @include grid-columns( 1 );
+    padding: 2rem 0;
+
+    nav {
+
+        >ul { 
+            margin-right: 1rem;
+            border-right: 1px solid $gray-medium;
+        }
+
+        ul {
+            @include list-unstyled;
+            font-size: 15px;
+            line-height: 1.6em;
+            outline: 0;
+            padding-right: 2rem;
+
+            li  {
+
+                a {
+                    padding: 12px;
+                    border-radius: 3px;
+                    margin-bottom: 6px;
+                    color: #484848;
+                    display: block;
+                    line-height: 1em;
+                    text-decoration: none;
+
+                    &:hover {
+                        background: #f4f4f4;
+                    }
+                }
+
+                &.selected {
+                    > a {
+                        background: $gray-lighter;
+                    }
+                }
+            }
+        }
+
+        ul ul {
+            padding-left: 15px;
+        }
+
+        ul li li a {
+            padding: 5px 6px;
+            font-size: 14px;
+            border-radius: 0;
+            border-left: 3px solid #fff;
+
+            &:hover {
+                background: none;
+                border-left: 3px solid $gray-lighter;
+            }
+        }
+
+        ul li li li a {
+            padding: 3px 6px;
+        }
+
+        ul > li > ul > li.selected > a {
+            background: none;
+            border-left: 3px solid $gray-lighter;
+            border-radius: 0;
+        }
+
+        li > ul {
+            display: none;
+        }
+
+        li.selected > ul {
+            display: block;
+        }
+
+
+    }
+
+    &.fixed {
+        nav {
+            @include grid-columns( 1 );
+            position: fixed;
+            padding: 0;
+            top: 2.5rem;
+        }
+    }
+}
+
+
+.site-primary {
+    @include grid-columns( 3 );
+    padding: 3rem 0;
+
+    &.wide {
+        @include grid-columns( 4 );
+        padding: 3rem 1rem;
+    }
+
+    .page-title {
+        border-bottom: 1px solid $gray-medium;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+
+        span {
+            @include text-green;
+        }
+    }
+
+    .section-title {
+        margin: 4rem 0 1rem;
+    }
+
+    .subsection-title {
+        margin: 3rem 0 1rem;
+        color: $gray-medium;
+    }
+
+    .example-block {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 50px;
+
+        .example {
+            @include outer-container;
+            position: relative;
+            padding: 15px;
+
+            hr {
+                border: 0;
+                height: 0;
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #fff;
+            }
+
+            p:last-child {
+                margin: 0;
+            }
+
+            .color-block {
+                @include span-columns( 2 );
+                @include omega( 2n );
+                height: 4rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+
+                &.bordered {
+                    border: 1px solid #ccc;
+                }
+            }
+
+            .icon-block {
+                float: left;
+                width: 25%;
+                text-align: center;
+                margin: 1rem 0;
+                i {
+                    font-size: 4rem;
+                }
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        pre {
+            margin: 0;
+            border-top: 1px solid #ddd;
+
+            code {
+                font-size: 1.4rem;
+                padding: 1rem;
+                white-space: pre-wrap;
+                border-radius: 0 0 4px 4px;
+            }
+        }
+
+        &.code-only {
+            pre {
+                border-top: none;
+                code {
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    .de-emphasize {
+        opacity: 0.3;
+    }
+
+
+    .callout-text {
+        @include secondary-text;
+    }
+
+    .aside-text {
+        .half-col {
+            width: 50%;
+            float: left;        }
+    }
+}
+
+
+.site-footer {
+    clear: both;
+    border-top: 1px solid $gray-lighter;
+    padding: $grid-padding;
+    text-align: center;
+    color: $gray-light;
+}
+
+
+.ce-siteHeader.v-example {
+    position: relative;
+    top: 0px;
+
+    .site-logo {
+        display: block;
+    }
+
+    .ce-mainNavigation {
+        top: 0;
+
+        .nav-trigger {
+            top: 6.5rem;
+        }
+
+        .nav-main {
+            top: 14rem;
+        }
+    }
+
+    .tabs {
+        li {
+            a {
+                font-size: $font-size-normal;
+            }
+        }
+    }
+
+    .tab-content {
+        form {
+            display: none;
+            max-width: 55rem;
+            width: 40%;
+            margin: 0 auto;
+
+            &:first-child {
+                display: block;
+            }
+        }
+    }
+
+}
+
+
+//
+// Secondary Text Module
+// --------------------------------------------------
+
+.ce-secondaryTextModule {
+    @include grid-container;
+    @include text-green;
+    @include flexbox-same-height;
+    border: 1px solid $green;
+    margin-bottom: $gutter;
+
+    .secondary-text-content {
+        @include grid-columns( 3 );
+        @include flexbox-align-vertically;
+        margin-bottom: 0;
+        
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .secondary-text-icon {
+        @include grid-columns( 1 );
+        @include flexbox-center;
+        margin-bottom: 0;
+        padding-right: 0;
+
+        .icon {
+            font-size: $icon-size-medium;
+        }
+
+        @include media( $tablet-down ) {
+            display: none;
+        }
+    }
+}
+
+
+//
+// Stats Module
+// --------------------------------------------------
+
+.ce-statsModule {
+    @include grid-container;
+
+    a {
+        @include omega( 3n );
+    }
+
+    .stats-icon {
+        @include grid-bigIcon;
+        @include text-green;
+    }
+
+    .stats-item {
+        @include grid-columns( 1, short );
+        @include grid-headline;
+        @include text-green;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-h3;
+        border: 1px solid $green;
+        text-decoration: none;
+
+        &:active,
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: darken( $green, 10% );
+            border-color: darken( $green, 10% );
+        }
+    }
+}
+
+
+//
+// Directory Card Module
+// --------------------------------------------------
+
+.ce-directoryCardsModule {
+    @include grid-container;
+
+    .directory-card {
+        @include grid-columns( 2 , tall );
+        @include omega( 2n );
+        border: 1px solid $green;
+
+        @include media( $tablet-down) {
+            height: auto;
+        }
+
+        h5 {
+            margin-bottom: 1rem;
+            @include text-green;
+            text-align: center;
+        }
+
+        p {
+            font-size: $font-size-small;
+        }
+
+        ul {
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include media( $tablet-down) {
+                height: auto;
+            }
+        }
+    }
+}
+
+
+// Highlight.js Theme - Solarized Light
+// -------------------------
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #fdf6e3;
+  color: #657b83;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #93a1a1;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-built_in,
+.hljs-deletion {
+  color: #dc322f;
+}
+
+.hljs-formula {
+  background: #eee8d5;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+
+
+// Flexbox examples
+// -------------------------
+.flexbox-1 {
+    @include bg-blue;
+    @include text-white;
+    @include primary-text;
+    @include flexbox-center;
+    height: 8rem;
+    margin-bottom: 2rem;
+}
+
+.flexbox-2 {
+    @include bg-yellow;
+    @include tertiary-text;
+    @include flexbox-center-vertically;
+    height: 8rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+
+    p:first-child {
+        margin: 0;
+        font-size: $font-size-h4;
+        padding-right: 2rem;
+    }
+}
+
+.flexbox-3 {
+    @include bg-gray;
+    @include text-white;
+    @include flexbox-align-vertically;
+    height: 12rem;
+    margin-bottom: 2rem;
+
+    h4 {
+        width: 30%;
+        padding: 1rem;
+    }
+
+    p {
+        width: 70%;
+        padding: 1rem;
+    }
+}
+
+.flexbox-4 {
+    @include text-green;
+    @include flexbox-same-height;
+
+    div {
+        width: 35rem;
+        padding: 1rem;
+
+        &:first-child {
+            border: 1px solid $green;
+            margin-right: 2rem;
+        }
+
+        &:last-child {
+            @include bg-green;
+            @include text-white;
+        }
+    }
+}
+
+
+// Grid examples
+// -------------------------
+
+.grid-example {
+    @include grid-container;
+
+    &.flexbox-same-height {
+        @include flexbox-same-height;
+    }
+    
+    div {
+        @include bg-green;
+        @include text-white;
+
+        &.block-1 {
+            @include grid-columns( 2 );
+            width: 45.8rem;
+        }
+
+        &.block-2 {
+            @include grid-columns( 1 );
+            @include omega();
+        }
+
+        &.block-3 {
+            @include grid-columns( 2, tall );
+            width: 45.8rem;
+            height: 45.8rem;
+        }
+
+        &.block-4 {
+            @include grid-columns( 1, short );
+            @include omega();
+        }
+
+        &.block-5 {
+            @include grid-columns( 1 );
+            width: 22.9rem;
+
+        }
+
+        &.block-6 {
+            @include grid-columns( 1 );
+            @include bg-white;
+            @include text-green;
+            border: 1px solid $green;
+            width: 22.9rem;
+        }
+
+        &.block-7 {
+            @include grid-columns( 3 );
+            @include bg-white;
+            @include text-default;
+            padding: $grid-padding 0;
+            width: 70.7rem;
+        }
+
+        &.block-8 {
+            @include grid-columns( 2, short );
+            @include grid-bgImage;
+            background-image: url("/images/killowatt-meter.jpg");
+            width: 45.8rem;
+        }
+
+        &.block-9 {
+            @include grid-columns( 2, short );
+            @include grid-image( horizontal );
+            width: 45.8rem;
+        }
+
+        &.block-10 {
+            @include grid-columns( 2, short );
+            @include grid-headline;
+            @include bg-blue;
+            width: 45.8rem;
+        }
+
+        &.block-11 {
+            @include grid-columns( 1, short );
+            @include grid-bigIcon;
+            @include bg-white;
+            @include text-yellow;
+        }
+
+        &.flexbox-center {
+            @include flexbox-center;
+
+            h5 {
+                display: inline-block;
+            }
+        }
+
+        &.flexbox-center-vertically {
+            @include flexbox-center-vertically;
+        }
+    }
+}
+
+
+// Brand examples
+// -------------------------
+
+.color-tile {
+    width: 17.5rem;
+    margin-right: 1rem;
+    float: left;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    p {
+        margin: 0;
+    }
+
+    & + p {
+        clear: both;
+    }
+
+    .color {
+        height: 8.5rem;
+
+        &.blue {
+            background-color: $blue;
+        }
+
+        &.green {
+            background-color: $green;
+        }
+
+        &.gray {
+            background-color: $gray;
+        }
+
+        &.yellow {
+            background-color: $yellow;
+        }
+
+        &.red {
+            background-color: $red;
+        }
+
+        &.white {
+            background-color: $white;
+            border: 1px solid $gray-medium;
+        }
+
+        &.gray-lightest {
+            background-color: $gray-lightest;
+        }
+
+        &.gray-lighter {
+            background-color: $gray-lighter;
+        }
+
+        &.gray-light {
+            background-color: $gray-light;
+        }
+
+        &.gray-medium-light {
+            background-color: $gray-medium-light;
+        }
+
+        &.gray-medium {
+            background-color: $gray-medium;
+        }
+
+        &.gray-dark {
+            background-color: $gray-dark;
+        }
+
+        &.gray-darker {
+            background-color: $gray-darker;
+        }
+
+        &.black {
+            background-color: $black;
+        }
+    }
+}
+
+.font-example {
+    width: 50%;
+    float: left;
+    margin: 2rem 0 ;
+    text-align: center;
+
+    span {
+        font-size: $font-size-h5;
+        display: block;
+        text-align: left;
+    }
+
+    &.bitter span {
+        font-family: $font-family-serif;
+    }
+
+    &.italic span {
+        font-style: italic;
+    }
+
+    &.medium span {
+        font-weight: $font-weight-medium;
+    }
+
+    &.bold span {
+        font-weight: $font-weight-bold;
+    }
+}
+
+.icon-example {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin: 2rem 0;
+    i {
+        font-size: 6rem;
+    }
+    span {
+        display: block;
+    }
+}
+
+.photography-example {
+    div {
+        @include omega( 2n );
+    }
+
+    .block-large {
+        @include grid-columns( 2, short );
+        @include grid-bgImage;
+        width: 45.8rem;
+    }
+
+    .block-small {
+        @include grid-columns( 1, short );
+        @include grid-bgImage;
+    }
+}
