@@ -9,4 +9,69 @@ tpl:
   title: SEO Optimization
 ---
 
-<h2>SEO Optimization</h2>
+<h2 class="page-title">SEO Optimization</h2>
+
+<h3 id="structured" class="section-title">Structured Data</h3>
+<p>One of the most important parts of our SEO optimization strategy is the move to using structured data markup whenever possible to provide context and extra information about our content to search engines.</p>
+
+<p>While there are multiple formats that are well supported, for consistency sake, all instances of structured data markup on the Choose Energy site should be written using the <a href="www.schema.org" target="blank">schema.org</a> vocabulary and the microdata format. In addition, we prefer to have the schema markup written into the codebase rather than relying on google webmaster tools to add it in after the fact to reduce the need to coordinate our SEO content in multiple places.</p>
+
+<p>Of the various schemas available for use, the primary one we use is the <a href="https://schema.org/Product">Product schema</a>. Any plan card that appears on the site (in shopping or on a content page) should include the product schema listing all the appropriate data, particularly the price data. Within certain plan cards, we may also use the <a href="https://schema.org/Rating">Ratings schema</a> to highlight supplier ratings.</p>
+
+
+<h3 id="sitemaps" class="section-title">Sitemaps & URLs</h3>
+<p>In order to maximize the value of our seo efforts, we need to be meticulous in how we construct our sitempas and urls. We've spent a lot of effort recovering from early mistakes in this area and it take a very long time to see results so it's important to following the guidelines set out by the marketing team.</p>
+
+<h5 class="subsection-title">URL Patterns</h5>
+<p>One of the simplest changes we've made is to simplfy and standardize our URL patterns. In general, whenever a URL is procedurally generated (as in the shopping experience), we want to follow the same patterns as on content pages. The most important aspect of this is trying to keep the URLs short, human readable, and filled with descriptive keywords.</p>
+
+<h5 class="subsection-title">Duplicate Content Issues</h5>
+<p>One of the biggest difficulties we've had previously had to do with the appearance of duplicate content on the site. We've come up with several ways of addressing this issue that work together to maintain the flexibility we need on the site while avoiding being penalized by search engines.</p>
+
+<p>We particularly noticed this issue when it came to sitemaps for the shopping pages. Of the approximately 40k urls we can generate in the shopping experience based on a combination of zip codes, service types, and energy types, only a tiny fraction of those pages were being successfully indexed due the pages in question having a large amount of content in common (even if they weren't exact duplicates). We didn't want to get rid of all the specific URLs because they provide value to us, but we wanted to avoid the SEO penalty they were generating.</p>
+
+<h5 class="subsection-title">Cannonical URLs</h5>
+<p>The cannonical URL tag is intended to address just this kind of issue. In effect, it tells a search engine to treat the page as if it were a copy of the cannonical page (much like a search engine treats a 301 redirect).</p>
+
+<p>In our case, in order to address the duplicate content issues, we first determined which urls to use as cannonical pages (utility zone urls), and added cannonical referece links to the header for all duplicate pages (zip code urls). We then reduced the pages submitted for sitemap indexing to the cannonical pages to much better results.</p>
+
+
+<h3 id="architecture" class="section-title">Page Architecture</h3>
+<p>While the marketing team will maintain the SEO content on much of the site, we want to make sure that we've provided them with the tools and page architecture they need to complete their tasks.</p>
+
+<ul>
+    <li>Code to Content Ratio - the text to code ratio for any page should be a minimium of 10%</li>
+    <li>Page meta data - all pages should load in appropriate metadata including a unique title and meta description</li>
+    <li>Social Metadata - include open graph data on all content pages to ensure that pages will be shared with correct images and descriptions on social media platforms</li>
+    <li>Images - all content images should include alt text descriptions</li>
+    <li>Page Speed - use the <a href="https://developers.google.com/speed/pagespeed/insights/">Page Speed Insights</a> tool to ensure we're loading the page quickly enough.</li>
+</ul>
+
+<h3 id="mobile" class="section-title">Mobile Optimization</h3>
+<p>Our mobile traffic currently makes up a fifth of our traffic and we only expect that to grow, so it's important that we specifically optimize our site for mobile devices. We primarily use responsive design to adapt the page layouts depending on the screen size, but we've also been experimenting with a mobile-only experience that has a dramatically different flow than the desktop experience.</p>
+
+<p>In either case, we need to ensure that we're making the design mobile friendly. This includes doing the following:</p>
+
+<ul>
+    <li>Ensuring the touchpoints / tap targets are far enough apart so a user won't touch 2 at once</li>
+    <li>Using a legible font size (at least 16pt for body text)</li>
+    <li>Setting up the viewport meta tag correctly </li>
+    <li>Maintaining a fast page speed (even over slower connections)</li>
+</ul>
+
+<p>You can use the <a href="https://search.google.com/search-console/mobile-friendly">Mobile Friendly Test</a> to validate we've met all these criteria.</p>
+
+<h3 id="testing" class="section-title">Testing Tools</h3>
+<p>There are a variety of publicly available tools we can use to test that we're optimizing our SEO  performance.</p>
+
+<h5 class="subsection-title"><a href="https://www.google.com/webmasters/tools/home">Google Webmaster Tools</a></h5>
+<p>The first place to go for info about how the site is performing is the Google Webmaster console. It covers all sort of data about the site but we particularly use it to keep an eye out for any errors that could be affecting our search engine ranking.</p>
+
+<h5 class="subsection-title"><a href="https://search.google.com/structured-data/testing-tool">Structured Data Testing Tool</a></h5>
+<p>When implementing new schema data, it's important to make sure we've got the markup written correctly. Use the Structured Data testing tool to ensure there are no errors in the schema data.</p>
+
+<h5 class="subsection-title"><a href="https://developers.google.com/speed/pagespeed/insights/">Page Speed Insights</a></h5>
+<p>Ensuring our pages load quickly will improve our SEO ranking, so it's helpful to check the page speeds for issues whenever we make significant changes to how our site works.</p>
+
+<h5 class="subsection-title"><a href="https://moz.com/blog/seo-cheat-sheet">Mozilla SEO Cheatsheet</a></h5>
+<p>A quick reference to the most impactful best practices in search engine optimization and technical SEO standards published by the guys at Mozilla. It's updated every few years as standards change which particularly helpful.</p>
