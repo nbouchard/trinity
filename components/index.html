@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ChooseUX">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+
+
+    <title>Trinity - Components - Version 0.1.0</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet">
+    <link href="/trinity/css/globals.css" media="screen, projection" rel="stylesheet">
+    <link href="/trinity/css/styles.css" media="screen, projection" rel="stylesheet">
+
+</head>
+<body class="">
+    <header class="site-header">
+    <nav class="primary-nav">
+        <h1><a href="/trinity/index.html">TRINITY</a></h1>
+        <ul>
+    <li><a href="/trinity/brand/index.html">Brand</a></li>
+    <li><a href="/trinity/patterns/index.html">Patterns</a></li>
+    <li class="selected"><a href="/trinity/components/index.html">Components</a></li>
+    <li><a href="/trinity/code/index.html">Code Guidelines</a></li>
+    <li><a href="/trinity/resources/index.html">Resources</a></li>
+</ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <main class="site-main ">
+            
+
+
+
+
+<div class="site-sidebar">
+    <nav>
+        <ul>
+            <li><a href="/trinity/components/global.html">Global Elements</a>
+                <ul>
+                    <li><a href="#header">Header</a></li>
+                    <li><a href="#footer">Footer</a></li>
+                    <li><a href="#main-nav">Main Nav</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/components/grid.html">Grid System</a>
+                <ul>
+                    <li><a href="#about">About Our Grid System</a></li>
+                    <li><a href="#how">How to Use</a></li>
+                    <li><a href="#responsive">Responsive Design</a></li>
+                    <li><a href="#utilities">Grid Utilities</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/components/plan-cards.html">Plan Cards</a></li>
+            <li><a href="/trinity/components/navigation.html">Navigation</a>
+                <ul>
+                    <li><a href="#pagination">Pagination</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/components/form-groups.html">Form Groups</a>
+                <ul>
+                    <li><a href="#search">Zip Search</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+
+
+            <div class="site-primary">
+                
+
+<h2 class="page-title">Components</h2>
+
+<p class="callout-text">UI components are modular blocks that we can combine to create more complex interfaces.</p>
+
+<p>Components are more complex than the basic patterns, but no so complex that they can't be reused across the site. Although some of them will be complex, in general components should be as simple and abstracted as possible to facilitate reuse.</p>
+
+<div class="ce-statsModule">
+    <a class="stats-item" href="/trinity/components/global.html">Global Elements</a>
+
+    <a class="stats-item" href="/trinity/components/grid.html">Grid System</a>
+
+    <a class="stats-item" href="/trinity/components/plan-cards.html">Plan Cards</a>
+
+    <a class="stats-item" href="/trinity/components/navigation.html">Navigation</a>
+
+    <div class="stats-icon">
+        <i class="ce-icon-bolt"></i>
+    </div>
+</div>
+
+            </div>
+        </main>
+    </div>
+    <footer class="site-footer">
+    <p>&copy; 2016 Choose Energy</p>
+</footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        var sidebar = $( '.site-sidebar' );
+        var nav = $( '.site-sidebar nav' );
+        var navLink = $( '.site-sidebar nav li a[href*=#]' );
+        var navLinkListItems =  $( '.site-sidebar nav li a[href*=#]' ).parent( 'li' );
+
+        $( navLink ).click( function() {
+            navLinkListItems.removeClass( 'selected' );
+            $( this ).parent().addClass( 'selected' );
+            $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        });
+        $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        $( window ).scroll( function() {
+            if( $( window ).scrollTop() <= 56 ) {
+                sidebar.removeClass( 'fixed' );
+            } else {
+                sidebar.addClass( 'fixed' );
+            }
+        });
+
+        $( 'pre code' ).each( function( i, block ) {
+            hljs.highlightBlock( block );
+        });
+
+        $( 'select.select2-form' ).select2({
+            minimumResultsForSearch: Infinity
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ChooseUX">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+
+
+    <title>Trinity - Grid System - Version 0.1.0</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet">
+    <link href="/trinity/css/globals.css" media="screen, projection" rel="stylesheet">
+    <link href="/trinity/css/styles.css" media="screen, projection" rel="stylesheet">
+
+</head>
+<body class="">
+    <header class="site-header">
+    <nav class="primary-nav">
+        <h1><a href="/trinity/index.html">TRINITY</a></h1>
+        <ul>
+    <li><a href="/trinity/brand/index.html">Brand</a></li>
+    <li><a href="/trinity/patterns/index.html">Patterns</a></li>
+    <li class="selected"><a href="/trinity/components/index.html">Components</a></li>
+    <li><a href="/trinity/code/index.html">Code Guidelines</a></li>
+    <li><a href="/trinity/resources/index.html">Resources</a></li>
+</ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <main class="site-main ">
+            
+
+
+
+
+<div class="site-sidebar">
+    <nav>
+        <ul>
+            <li><a href="/trinity/components/global.html">Global Elements</a>
+                <ul>
+                    <li><a href="#header">Header</a></li>
+                    <li><a href="#footer">Footer</a></li>
+                    <li><a href="#main-nav">Main Nav</a></li>
+                </ul>
+            </li>
+            <li class="selected"><a href="/trinity/components/grid.html">Grid System</a>
+                <ul>
+                    <li><a href="#about">About Our Grid System</a></li>
+                    <li><a href="#how">How to Use</a></li>
+                    <li><a href="#responsive">Responsive Design</a></li>
+                    <li><a href="#utilities">Grid Utilities</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/components/plan-cards.html">Plan Cards</a></li>
+            <li><a href="/trinity/components/navigation.html">Navigation</a>
+                <ul>
+                    <li><a href="#pagination">Pagination</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/components/form-groups.html">Form Groups</a>
+                <ul>
+                    <li><a href="#search">Zip Search</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+
+
+            <div class="site-primary">
+                
+<h2 class="page-title">Grid System</h2>
+
+<p class="callout-text">The Choose Energy custom grid system is intended to be a flexible backbone for all our designs, providing a consistent layout pattern across all our web properties and all screen sizes.</p>
+
+<p>Our grid system is designed to be used to create a set of blocks or tiles of standardized sizes that can be mixed and matched in various patterns to create more complex layouts for content.</p>
+
+
+<h3 class="section-title" id="about">About Our Grid System</h3>
+<p>Our custom grid is built off the foundations of the <a href="http://neat.bourbon.io/">Bourboun Neat</a> grid system. We use Neat mixins to drive most of the logic for our grids and then created our own modified versions of some of the column mixins to meet our specifc need for fixed-width blocks.</p>
+
+<p>Our custom grid mixins can be found in the <code>_grid.scss</code> file in the mixins directory. The inline documentation cover details about implementation as well as the allowed parameters for each mixin. All the grid values that can be passed in as parameters are stored in the <code>_variable.scss</code> file. <b>Do not</b> pass in values for the grid outside of these variables as they cannot be guaranteed to work with our breakpoints otherwise!</p>
+
+<p>Additional information about the availble options for the Bourboun Neat grid can be found in their execelent <a href="http://thoughtbot.github.io/neat-docs/latest/">documentation</a>. In general, we haven't needed to use many of these extra mixins or functions, but some may come in handy for unusual layouts.</p>
+
+
+<h3 class="section-title" id="how">How to Use</h3>
+<p>Using the grid system mixins to create content modules is pretty straightforward. The parent container element should always have the <code>grid-container</code> mixin applied - amongst other things this mixin clears floats, centers the element in the page frame, and most importantly, sets the appropriate container width for each breakpoint.</p>
+
+<h5 class="subsection-title">Grid Columns</h5>
+<p>The actual block elements should have the <code>grid-columns()</code> mixin applied. This mixin takes a couple parameters that adjust how the block is displayed. The first parameter is required and determines the number of grid columns the block spans. Including the <code>omega()</code> mixin on the last item on any row will remove the unneeded right margin and ensure the block stays on the correct line.</p>
+
+<div class="example-block">
+    <div class="example">
+        <div class="grid-example bg-gray text-white">
+            <p>@include grid-container;</p>
+            <div class="block-1">
+                <p>@include grid-columns( 2 );</p>
+            </div>
+
+            <div class="block-2">
+                <p>@include grid-columns( 1 );<br>
+                @include omega();</p>
+            </div>
+        </div>
+    </div>
+
+<pre><code class="language-css">.ce-exampleModule {
+    @include grid-container;
+}
+
+.example-block-1 {
+    @include grid-columns( 2 );
+}
+
+.example-block-2 {
+    @include grid-columns( 1 );
+    @include omega();
+}</code></pre>
+
+</div>
+
+<h5 class="subsection-title">Grid Heights</h5>
+<p>The second optinal parameter sets a fixed height for the block to force it square - use <code>short</code> for a single column square block and <code>tall</code> for a 2 column block. If no parameter is passed in for the height, the block will default to a flexible height that fits the content.</p>
+
+<div class="example-block">
+    <div class="example">
+        <div class="grid-example">
+            <div class="block-3">
+                <p>@include grid-columns( 2, tall );</p>
+            </div>
+
+            <div class="block-4">
+                <p>@include grid-columns( 1, short );
+            </div>
+        </div>
+    </div>
+
+<pre><code class="language-css">.ce-exampleModule {
+    @include grid-container;
+}
+
+.example-block-1 {
+    @include grid-columns( 2 );
+}
+
+.example-block-2 {
+    @include grid-columns( 1 );
+    @include omega();
+}</code></pre>
+
+</div>
+
+<p>You can also use the <a href="/trinity/patterns/utilities.html#flexbox">flexbox utility mixins</a> in conjunction with the grid mixins to align content within fixed height blocks or force side-by-side blocks to match in height.</p>
+
+<div class="example-block">
+    <div class="example">
+        <div class="grid-example flexbox-same-height">
+            <div class="block-5">
+                <p>This block has a lot of text. It's going to force all the other blocks in the row to match it's height.</p>
+            </div>
+
+            <div class="block-5 flexbox-center-vertically">
+                <p>Minimal text centered vertically in the block.</p>
+            </div>
+
+            <div class="block-5 flexbox-center">
+                <h5>Headline</h5>
+            </div>
+        </div>
+    </div>
+
+<pre><code class="language-css">.ce-exampleModule {
+    @include grid-container;
+    @include omega(3n);
+    @include flexbox-same-height;
+}
+
+.example-block-1 {
+    @include grid-columns( 1 );
+}
+
+.example-block-2 {
+    @include grid-columns( 1 );
+    @include flexbox-center-vertically;
+}
+
+.example-block-3 {
+    @include grid-columns( 1 );
+    @include flexbox-center;
+}</code></pre>
+
+</div>
+
+<h5 class="subsection-title">Grid Gutters</h5>
+<p>The gutters between each block in the grid are always 10px/1rem - <b>no exceptions</b>! These gutters are set automatically by the <code>grid-column()</code> mixin and the values are stored in the <code>_variables.scss</code> file.</p>
+
+<h5 class="subsection-title">Block Padding</h5>
+<p>Each block created using the grid mixins will default to a 30px/3rem padding on all sides. This should be maintained as much as possible to ensure content aligns between blocks.</p>
+
+<p>Blocks with no background or border may alternatively remove the padding on the side margins to align the text with the edge of other blocks. This should only be done if there is a large enough block of text to make the alignment obvious.</p>
+
+<div class="example-block">
+    <div class="example">
+        <div class="grid-example flexbox-same-height">
+            <div class="block-6">
+                <p>There is a 1rem gutter between each block...</p>
+            </div>
+
+            <div class="block-6">
+                <p>and 3rem of padding within each block.</p>
+            </div>
+
+            <div class="block-5">
+                <p>This applies to bordered or solid colored blocks.</p>
+            </div>
+        </div>
+
+        <div class="grid-example">
+            <div class="block-7">
+                <h5>This block has no side padding</h5>
+                <p>Since there is no border or background, we can override the default padding on the sides of the block to allow the text to align with the edge of the nearby block. This is an optional layout choice, but one that is recommended if there are large blocks of text.</p>
+            </div>
+        </div>
+    </div>
+
+<pre><code class="language-css">.ce-exampleModule {
+    @include grid-container;
+    @include flexbox-same-height;
+}
+
+.example-block-1 {
+    @include grid-columns( 1 );
+}
+
+.example-block-2 {
+    @include grid-columns( 3 );
+    padding: $grid-padding 0;
+}</code></pre>
+
+</div>
+
+
+<h3 class="section-title" id="responsive">Responsive Design</h3>
+<p>Our grid system creates a set of up to 4 columns of blocks or tiles on desktop layouts. For tablets or smaller laptop screens, that drops to a max of 2 columns. On mobile devices, all blocks span a single, full-width column.</p>
+
+<p>When creating blocks within a module, use the <code>@include media()</code> mixin from Bourboun Neat to create alternate layouts for differing screen sizes. All the breakpoint values are stored in variables in the <code>_variable.scss</code> file and these are the only parameters that should be passed into the media mixin.</p>
+
+<div class="example-block">
+    <div class="example">
+        <div class="grid-example flexbox-same-height">
+            <div class="block-6">
+                <p>On a desktop device, these three blocks will all show up in a row.</p>
+            </div>
+
+            <div class="block-6">
+                <p>On a tablet, these first two blocks will span 2 columns and apear stacked.</p>
+            </div>
+
+            <div class="block-6">
+                <p>This block will not be displayed on tablet or mobile devices.</p>
+            </div>
+        </div>
+    </div>
+
+<pre><code class="language-css">.ce-exampleModule {
+    @include grid-container;
+}
+
+.example-block-1 {
+    @include grid-columns( 1, short );
+
+    @include media( $tablet ) {
+        @include span-columns-fixed( 2, $column-tablet );
+    }
+}
+
+.example-block-3 {
+    @include media( $tablet-down ) {
+        display: none;
+    }
+}</code></pre>
+
+</div>
+
+
+<p>The grid system is not designed to allow nested grids, so the smallest size any grid item should be is a 1 column block. Within an individual block, any further grouping of content should be done on a per-module basis, although even this should be done sparingly to avoid clutter.</p>
+
+
+<h3 class="section-title" id="utilities">Grid Utilities</h3>
+<p>There are also a handful of grid utility mixins that provide shortcuts for creating common types of blocks. These include headline blocks, block with images, and blocks containing icons.</p>
+
+<div class="example-block">
+    <div class="example">
+        <div class="grid-example">
+            <div class="block-10">
+                <h3>Headline block <span>with an icon block next to it</span></h3>
+            </div>
+
+            <div class="block-11">
+                <i class="icon ce-icon-bolt"></i>
+            </div>
+        </div>
+
+        <div class="grid-example">
+            <div class="block-8">
+            </div>
+
+            <div class="block-4">
+                <p>A block with a background image</p>
+                <p>The background image is set to cover the whole block, regardless of size.</p>
+            </div>
+        </div>
+
+        <div class="grid-example flexbox-same-height">
+            <div class="block-4" style="margin-right: 1rem">
+                <p>A block with a content image inside it.</p>
+                <p>The horizontal axis of the image is set to fill 100% of the block (and crop on the vertial axis).</p>
+            </div>
+
+            <div class="block-9">
+                <img src="/trinity/images/woman_kitchen.jpg" alt="Woman in Kitchen">
+            </div>
+        </div>
+    </div>
+
+<pre><code class="language-css">.ce-exampleModule {
+    @include grid-container;
+}
+
+.headline-block {
+    @include grid-columns( 2, short );
+    @include grid-headline;
+}
+
+.icon-block {
+    @include grid-columns( 1, short );
+    @include grid-bigIcon;
+}
+
+.background-image-block {
+    @include grid-columns( 2, short );
+    @include grid-bgImage;
+}
+
+.content-image-block {
+    @include grid-columns( 2, short );
+    @include grid-image( horizontal);
+}</code></pre>
+
+</div>
+
+
+            </div>
+        </main>
+    </div>
+    <footer class="site-footer">
+    <p>&copy; 2016 Choose Energy</p>
+</footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        var sidebar = $( '.site-sidebar' );
+        var nav = $( '.site-sidebar nav' );
+        var navLink = $( '.site-sidebar nav li a[href*=#]' );
+        var navLinkListItems =  $( '.site-sidebar nav li a[href*=#]' ).parent( 'li' );
+
+        $( navLink ).click( function() {
+            navLinkListItems.removeClass( 'selected' );
+            $( this ).parent().addClass( 'selected' );
+            $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        });
+        $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        $( window ).scroll( function() {
+            if( $( window ).scrollTop() <= 56 ) {
+                sidebar.removeClass( 'fixed' );
+            } else {
+                sidebar.addClass( 'fixed' );
+            }
+        });
+
+        $( 'pre code' ).each( function( i, block ) {
+            hljs.highlightBlock( block );
+        });
+
+        $( 'select.select2-form' ).select2({
+            minimumResultsForSearch: Infinity
+        });
+    });
+    </script>
+</body>
+</html>

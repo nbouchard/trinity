@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ChooseUX">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+
+
+    <title>Trinity - Code Guidelines - Version 0.1.0</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet">
+    <link href="/trinity/css/globals.css" media="screen, projection" rel="stylesheet">
+    <link href="/trinity/css/styles.css" media="screen, projection" rel="stylesheet">
+
+</head>
+<body class="">
+    <header class="site-header">
+    <nav class="primary-nav">
+        <h1><a href="/trinity/index.html">TRINITY</a></h1>
+        <ul>
+    <li><a href="/trinity/brand/index.html">Brand</a></li>
+    <li><a href="/trinity/patterns/index.html">Patterns</a></li>
+    <li><a href="/trinity/components/index.html">Components</a></li>
+    <li class="selected"><a href="/trinity/code/index.html">Code Guidelines</a></li>
+    <li><a href="/trinity/resources/index.html">Resources</a></li>
+</ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <main class="site-main ">
+            
+
+
+
+
+
+
+<div class="site-sidebar">
+    <nav>
+        <ul>
+            <li><a href="/trinity/code/general.html">General Standards</a>
+                <ul>
+                    <li><a href="#formatting">Formatting</a></li>
+                    <li><a href="#files">File Organization</a></li>
+                    <li><a href="#browsers">Browser Support</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/code/html.html">HTML Standards</a>
+                <ul>
+                    <li><a href="#elements">HTML Elements</a></li>
+                    <li><a href="#styling">HTML Styling</a></li>
+                </ul>
+            </li>
+           </li>
+            <li><a href="/trinity/code/css.html">CSS & SCSS Standards</a>
+                <ul>
+                    <li><a href="#basic">Basic Formatting</a></li>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#fonts">Font Sizing</a></li>
+                    <li><a href="#naming">Class Naming Conventions</a></li>
+                    <li><a href="#specificity">Nesting & Specificity</a></li>
+                    <li><a href="#selectors">Selectors</a></li>
+                    <li><a href="#performance">Performance</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                    <li><a href="#prefixing">Browser Prefixing</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/code/seo.html">SEO Optimization</a>
+                <ul>
+                    <li><a href="#structured">Structured Data</a></li>
+                    <li><a href="#sitemaps">Sitemaps & URLs</a></li>
+                    <li><a href="#arcitecture">Page Architecture</a></li>
+                    <li><a href="#mobile">Mobile Optimization</a></li>
+                    <li><a href="#testing">Testing Tools</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+            <div class="site-primary">
+                
+<h2 class="page-title">Code Guidelines</h2>
+
+<p class="callout-text">With all the work we've put into creating a beautiful design, it's equally important to keep the code that implements it beautiful as well.</p>
+
+<p>No one likes trying to make updates to disorganized, complex, hard to understand code - that's how we got ourselves in trouble in the first place! In order to make maintaining the UI code as painless as possible, we have documented the standards we used to create this version.</p> 
+
+<p>Most of these guidelines will be second nature to experienced developers, but there are some coding guidelines that are specific to our needs, particularly around our SEO strategy. In general, these guide represent what we consider best practice at this point in time.</p>
+
+<div class="ce-statsModule">
+    <a class="stats-item" href="/trinity/code/general.html">General Standards</a>
+
+    <a class="stats-item" href="/trinity/code/html.html">HTML Standards</a>
+
+    <a class="stats-item" href="/trinity/code/css.html">CSS & SCSS Standards</a>
+
+    <a class="stats-item" href="/trinity/code/seo.html">SEO Optimization</a>
+
+    <div class="stats-icon">
+        <i class="ce-icon-bolt"></i>
+    </div>
+</div>
+
+            </div>
+        </main>
+    </div>
+    <footer class="site-footer">
+    <p>&copy; 2016 Choose Energy</p>
+</footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        var sidebar = $( '.site-sidebar' );
+        var nav = $( '.site-sidebar nav' );
+        var navLink = $( '.site-sidebar nav li a[href*=#]' );
+        var navLinkListItems =  $( '.site-sidebar nav li a[href*=#]' ).parent( 'li' );
+
+        $( navLink ).click( function() {
+            navLinkListItems.removeClass( 'selected' );
+            $( this ).parent().addClass( 'selected' );
+            $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        });
+        $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        $( window ).scroll( function() {
+            if( $( window ).scrollTop() <= 56 ) {
+                sidebar.removeClass( 'fixed' );
+            } else {
+                sidebar.addClass( 'fixed' );
+            }
+        });
+
+        $( 'pre code' ).each( function( i, block ) {
+            hljs.highlightBlock( block );
+        });
+
+        $( 'select.select2-form' ).select2({
+            minimumResultsForSearch: Infinity
+        });
+    });
+    </script>
+</body>
+</html>

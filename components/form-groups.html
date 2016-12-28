@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ChooseUX">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+
+
+    <title>Trinity - Form Groups - Version 0.1.0</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet">
+    <link href="/trinity/css/globals.css" media="screen, projection" rel="stylesheet">
+    <link href="/trinity/css/styles.css" media="screen, projection" rel="stylesheet">
+
+</head>
+<body class="">
+    <header class="site-header">
+    <nav class="primary-nav">
+        <h1><a href="/trinity/index.html">TRINITY</a></h1>
+        <ul>
+    <li><a href="/trinity/brand/index.html">Brand</a></li>
+    <li><a href="/trinity/patterns/index.html">Patterns</a></li>
+    <li class="selected"><a href="/trinity/components/index.html">Components</a></li>
+    <li><a href="/trinity/code/index.html">Code Guidelines</a></li>
+    <li><a href="/trinity/resources/index.html">Resources</a></li>
+</ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <main class="site-main ">
+            
+
+
+
+
+<div class="site-sidebar">
+    <nav>
+        <ul>
+            <li><a href="/trinity/components/global.html">Global Elements</a>
+                <ul>
+                    <li><a href="#header">Header</a></li>
+                    <li><a href="#footer">Footer</a></li>
+                    <li><a href="#main-nav">Main Nav</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/components/grid.html">Grid System</a>
+                <ul>
+                    <li><a href="#about">About Our Grid System</a></li>
+                    <li><a href="#how">How to Use</a></li>
+                    <li><a href="#responsive">Responsive Design</a></li>
+                    <li><a href="#utilities">Grid Utilities</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/components/plan-cards.html">Plan Cards</a></li>
+            <li><a href="/trinity/components/navigation.html">Navigation</a>
+                <ul>
+                    <li><a href="#pagination">Pagination</a></li>
+                </ul>
+            </li>
+            <li class="selected"><a href="/trinity/components/form-groups.html">Form Groups</a>
+                <ul>
+                    <li><a href="#search">Zip Search</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+
+
+            <div class="site-primary">
+                
+<h2 class="page-title">Form Groups</h2>
+
+<h3 class="section-title" id="zip-search">Zip Search</h3>
+<p>The zip search is the primary entry point for the shopping experince and should remain always remain visible in the header of the site. There are two variations that can be swapped between using the "residential" and "commercial" tabs above the search block.</p>
+
+<h5 class="subsection-title">Residential search (default)</h5>
+<p></p>
+
+<div class="example-block">
+    <div class="example">
+        <form class="search-form search-home" >
+            <input class="zip-input" type="tel" placeholder="Enter your zip code">
+            <button class="btn btn-search btn-angle" type="button">Search</button>
+        </form>
+    </div>
+
+<pre><code class="language-html">&lt;form class=&quot;search-form search-home&quot; &gt;
+    &lt;input class=&quot;zip-input&quot; type=&quot;tel&quot; placeholder=&quot;Enter your zip code&quot;&gt;
+    &lt;button class=&quot;btn btn-search btn-angle&quot; type=&quot;button&quot;&gt;Search&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+</div>
+
+<h5 class="subsection-title">Business search</h5>
+<p></p>
+
+<div class="example-block">
+    <div class="example">
+        <form class="search-form search-business">
+            <input class="zip-input" type="tel" placeholder="Enter your zip code">
+            <div class="select-pricing-buckets">
+                <select class="size-select select2-form">
+                    <option value="" disabled selected hidden>Select average bill</option>
+                    <option value="smb_0">$0 &#x2013; $500 / month</option>
+                    <option value="smb_501">$501 &#x2013; $1500 / month</option>
+                    <option value="smb_1501">$1501 &#x2013; $2500 / month</option>
+                    <option value="smb_2501">$2501 &#x2013; $5000 / month</option>
+                    <option value="smb_5001">More than $5000 / month</option>
+                </select>
+            </div>
+            <button class="btn btn-search btn-angle" type="button">Search</button>
+        </form>
+    </div>
+
+<pre><code class="language-html">&lt;form class=&quot;search-form search-business&quot;&gt;
+    &lt;input class=&quot;zip-input&quot; type=&quot;tel&quot; placeholder=&quot;Enter your zip code&quot;&gt;
+    &lt;div class=&quot;select-pricing-buckets&quot;&gt;
+        &lt;select class=&quot;size-select select2-form&quot;&gt;
+            &lt;option value=&quot;&quot; disabled selected hidden&gt;Select average bill&lt;/option&gt;
+            &lt;option value=&quot;smb_0&quot;&gt;$0 &amp;#x2013; $500 / month&lt;/option&gt;
+            &lt;option value=&quot;smb_501&quot;&gt;$501 &amp;#x2013; $1500 / month&lt;/option&gt;
+            &lt;option value=&quot;smb_1501&quot;&gt;$1501 &amp;#x2013; $2500 / month&lt;/option&gt;
+            &lt;option value=&quot;smb_2501&quot;&gt;$2501 &amp;#x2013; $5000 / month&lt;/option&gt;
+            &lt;option value=&quot;smb_5001&quot;&gt;More than $5000 / month&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;btn btn-search btn-angle&quot; type=&quot;button&quot;&gt;Search&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+</div>
+
+<!-- <h3 class="section-title" id="horizontal">Horizontal</h3>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+<pre><code class="language-html">&lt;p&gt;Example&lt;/p&gt;</code></pre>
+
+</div>
+
+<h3 class="section-title" id="inline">Inline</h3>
+<p>Fringilla tortor eros volutpat, in tempor libero a pellentesque, augue nec. Metus aliquam vestibulum donec erat nunc, aut consectetuer suspendisse. Pretium sed fusce nibh nec, imperdiet justo fusce interdum metus amet pellentesque, proin vivamus mauris ac.</p>
+<div class="example-block">
+    <div class="example">
+        <p>Example</p>
+    </div>
+
+<pre><code class="language-html">&lt;p&gt;Example&lt;/p&gt;</code></pre>
+
+</div> -->
+
+            </div>
+        </main>
+    </div>
+    <footer class="site-footer">
+    <p>&copy; 2016 Choose Energy</p>
+</footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        var sidebar = $( '.site-sidebar' );
+        var nav = $( '.site-sidebar nav' );
+        var navLink = $( '.site-sidebar nav li a[href*=#]' );
+        var navLinkListItems =  $( '.site-sidebar nav li a[href*=#]' ).parent( 'li' );
+
+        $( navLink ).click( function() {
+            navLinkListItems.removeClass( 'selected' );
+            $( this ).parent().addClass( 'selected' );
+            $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        });
+        $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        $( window ).scroll( function() {
+            if( $( window ).scrollTop() <= 56 ) {
+                sidebar.removeClass( 'fixed' );
+            } else {
+                sidebar.addClass( 'fixed' );
+            }
+        });
+
+        $( 'pre code' ).each( function( i, block ) {
+            hljs.highlightBlock( block );
+        });
+
+        $( 'select.select2-form' ).select2({
+            minimumResultsForSearch: Infinity
+        });
+    });
+    </script>
+</body>
+</html>

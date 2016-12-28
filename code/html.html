@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ChooseUX">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+
+
+    <title>Trinity - HTML Standards - Version 0.1.0</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet">
+    <link href="/trinity/css/globals.css" media="screen, projection" rel="stylesheet">
+    <link href="/trinity/css/styles.css" media="screen, projection" rel="stylesheet">
+
+</head>
+<body class="">
+    <header class="site-header">
+    <nav class="primary-nav">
+        <h1><a href="/trinity/index.html">TRINITY</a></h1>
+        <ul>
+    <li><a href="/trinity/brand/index.html">Brand</a></li>
+    <li><a href="/trinity/patterns/index.html">Patterns</a></li>
+    <li><a href="/trinity/components/index.html">Components</a></li>
+    <li class="selected"><a href="/trinity/code/index.html">Code Guidelines</a></li>
+    <li><a href="/trinity/resources/index.html">Resources</a></li>
+</ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <main class="site-main ">
+            
+
+
+
+
+
+
+<div class="site-sidebar">
+    <nav>
+        <ul>
+            <li><a href="/trinity/code/general.html">General Standards</a>
+                <ul>
+                    <li><a href="#formatting">Formatting</a></li>
+                    <li><a href="#files">File Organization</a></li>
+                    <li><a href="#browsers">Browser Support</a></li>
+                </ul>
+            </li>
+            <li class="selected"><a href="/trinity/code/html.html">HTML Standards</a>
+                <ul>
+                    <li><a href="#elements">HTML Elements</a></li>
+                    <li><a href="#styling">HTML Styling</a></li>
+                </ul>
+            </li>
+           </li>
+            <li><a href="/trinity/code/css.html">CSS & SCSS Standards</a>
+                <ul>
+                    <li><a href="#basic">Basic Formatting</a></li>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#fonts">Font Sizing</a></li>
+                    <li><a href="#naming">Class Naming Conventions</a></li>
+                    <li><a href="#specificity">Nesting & Specificity</a></li>
+                    <li><a href="#selectors">Selectors</a></li>
+                    <li><a href="#performance">Performance</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                    <li><a href="#prefixing">Browser Prefixing</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/code/seo.html">SEO Optimization</a>
+                <ul>
+                    <li><a href="#structured">Structured Data</a></li>
+                    <li><a href="#sitemaps">Sitemaps & URLs</a></li>
+                    <li><a href="#arcitecture">Page Architecture</a></li>
+                    <li><a href="#mobile">Mobile Optimization</a></li>
+                    <li><a href="#testing">Testing Tools</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+            <div class="site-primary">
+                
+
+<h2 class="page-title">HTML Standards</h2>
+
+<h3 id="elements" class="section-title">HTML5 Elements</h3>
+
+<h5 class="subsection-title">HTML5 Doctype</h5>
+<p>We make use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your pages.</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  ...
+&lt;/html&gt;</code></pre>
+
+
+
+<h5 class="subsection-title">Boolean Attributes</h5>
+<p>Many attributes don’t require a value to be set, like disabled or checked, so don’t set them.</p>
+
+<pre><code class="language-html">&lt;input type=&quot;text&quot; disabled&gt;
+
+&lt;input type=&quot;checkbox&quot; value=&quot;1&quot; checked&gt;
+
+&lt;select&gt;
+  &lt;option value=&quot;1&quot; selected&gt;1&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+
+
+<h5 class="subsection-title">Lists</h5>
+<p>Items in list form should always be in <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, or <code>&lt;dl&gt;</code>. Never use a set of <code>&lt;div&gt;</code> or <code>&lt;p&gt;</code>.</p>
+
+
+<h5 class="subsection-title">Forms</h5>
+<p>Every form input that has text attached should utilize a <code>&lt;label&gt;</code> tag. Especially radio and checkbox elements.</p>
+
+<h3 id="styling" class="section-title">HTML5 Styling</h3>
+
+
+<h5 class="subsection-title">Lean Markup</h5>
+<p>Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. This will help with SEO performance, particularly for content-lite pages.</p>
+
+<pre><code class="language-html">&lt;!-- Not so great --&gt;
+&lt;span class=&quot;avatar&quot;&gt;
+  &lt;img src=&quot;...&quot;&gt;
+&lt;/span&gt;
+
+&lt;!-- Better --&gt;
+&lt;img class=&quot;avatar&quot; src=&quot;...&quot;&gt;</code></pre>
+
+
+
+<h5 class="subsection-title">HTML Quotation Marks</h5>
+<p>Even though quotes around attributes is optional, always put quotes around attributes for readability.</p>
+<p>When quoting attributes values, use double quotation marks ("") rather than single quotation marks ('').</p>
+
+
+<h5 class="subsection-title">Type attributes for scripts & stylesheets</h5>
+<p>Do not use type attributes for style sheets (unless not using CSS) and scripts (unless not using JavaScript).</p>
+
+<p>Specifying type attributes in these contexts is not necessary as HTML5 implies <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-style-type">text/css</a> and <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#attr-script-type">text/javascript</a> as defaults. This can be safely done even for older browsers.</p>
+
+
+<h5 class="subsection-title">Comments</h5>
+<p>Avoid writing closing tag comments, like <code>&lt;!-- /.element --&gt;</code>>. This just adds to page load time. Plus, most editors have indentation guides and open-close tag highlighting.</p>
+            </div>
+        </main>
+    </div>
+    <footer class="site-footer">
+    <p>&copy; 2016 Choose Energy</p>
+</footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        var sidebar = $( '.site-sidebar' );
+        var nav = $( '.site-sidebar nav' );
+        var navLink = $( '.site-sidebar nav li a[href*=#]' );
+        var navLinkListItems =  $( '.site-sidebar nav li a[href*=#]' ).parent( 'li' );
+
+        $( navLink ).click( function() {
+            navLinkListItems.removeClass( 'selected' );
+            $( this ).parent().addClass( 'selected' );
+            $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        });
+        $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        $( window ).scroll( function() {
+            if( $( window ).scrollTop() <= 56 ) {
+                sidebar.removeClass( 'fixed' );
+            } else {
+                sidebar.addClass( 'fixed' );
+            }
+        });
+
+        $( 'pre code' ).each( function( i, block ) {
+            hljs.highlightBlock( block );
+        });
+
+        $( 'select.select2-form' ).select2({
+            minimumResultsForSearch: Infinity
+        });
+    });
+    </script>
+</body>
+</html>

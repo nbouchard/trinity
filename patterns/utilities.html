@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ChooseUX">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+
+
+    <title>Trinity - Utilities - Version 0.1.0</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet">
+    <link href="/trinity/css/globals.css" media="screen, projection" rel="stylesheet">
+    <link href="/trinity/css/styles.css" media="screen, projection" rel="stylesheet">
+
+</head>
+<body class="">
+    <header class="site-header">
+    <nav class="primary-nav">
+        <h1><a href="/trinity/index.html">TRINITY</a></h1>
+        <ul>
+    <li><a href="/trinity/brand/index.html">Brand</a></li>
+    <li class="selected"><a href="/trinity/patterns/index.html">Patterns</a></li>
+    <li><a href="/trinity/components/index.html">Components</a></li>
+    <li><a href="/trinity/code/index.html">Code Guidelines</a></li>
+    <li><a href="/trinity/resources/index.html">Resources</a></li>
+</ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <main class="site-main ">
+            
+
+
+<div class="site-sidebar">
+    <nav>
+        <ul>
+            <li><a href="/trinity/patterns/typography.html">Typography</a>
+                <ul>
+                    <li><a href="#headings">Headings</a></li>
+                    <li><a href="#paragraphs">Paragraph Styles</a></li>
+                    <li><a href="#inline-elements">Inline Elements</a></li>
+                    <li><a href="#links">Links</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/patterns/form-elements.html">Form Elements</a>
+                <ul>
+                    <li><a href="#buttons">Buttons</a></li>
+                    <li><a href="#inputs">Inputs</a></li>
+                    <li><a href="#select">Select / Dropdowns</a></li>
+                    <li><a href="#checkboxes">Checkboxes</a></li>
+                    <li><a href="#radio">Radio Buttons</a></li>
+                    <li><a href="#range">Range Sliders</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/patterns/lists.html">Lists</a>
+                <ul>
+                    <li><a href="#standard-lists">Standard Lists</a></li>
+                    <li><a href="#definition-lists">Definition Lists</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/patterns/tables.html">Tables</a>
+                <ul>
+                    <li><a href="#default">Default Table</a></li>
+                    <li><a href="#header">Table Header Variants</a></li>
+                </ul>
+            </li>
+            <li><a href="/trinity/patterns/icons.html">Icons</a></li>
+            <li class="selected"><a href="/trinity/patterns/utilities.html">Utilities</a>
+                <ul>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#typography">Typography</a></li>
+                    <li><a href="#display">Display &amp; Visibility</a></li>
+                    <li><a href="#floats">Floats & Positioning</a></li>
+                    <li><a href="#flexbox">Flexbox</a></li>
+                    <li><a href="#variables">Global Variables</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+
+
+
+
+            <div class="site-primary">
+                
+<h2 class="page-title">Utilities</h2>
+
+<h3 class="section-title" id="colors">Colors</h3>
+
+<p>There are utility classes (and corresponding mixins) for setting the common font and background colors. The classes should be primarily used for development purposes and only used in production code if no other style edits will be added to a tag. If more than one attribute will be changed, create a custom class for the element and use the mixin to import the color change.</p>
+
+<h5 class="subsection-title">Text Colors</h5>
+<div class="example-block">
+    <div class="example">
+        <p class="text-default">Lorem ipsum dolor sit amet, ipsum commodo eros lacus.</p>
+
+        <p class="text-green">Adipiscing lectus quis eu vel mauris duis, ac tellus mauris cursus et.</p>
+
+        <p class="text-blue">Sed deserunt augue orci lectus purus imperdiet.</p>
+
+        <p class="text-yellow">Lacus mus nunc semper mauris etiam bibendum, tortor sed suscipit .</p>
+
+        <p class="text-gray">Mauris quis metus quam vel euismod faucibus, ante nec erat erat.</p>
+    </div>
+
+<pre><code class="language-html">&lt;p class=&quot;text-default&quot;&gt;Lorem ipsum dolor sit amet, ipsum commodo eros lacus.&lt;/p&gt;
+
+&lt;p class=&quot;text-green&quot;&gt;Adipiscing lectus quis eu vel mauris duis, ac tellus mauris cursus et.&lt;/p&gt;
+
+&lt;p class=&quot;text-blue&quot;&gt;Sed deserunt augue orci lectus purus imperdiet.&lt;/p&gt;
+
+&lt;p class=&quot;text-yellow&quot;&gt;Lacus mus nunc semper mauris etiam bibendum, tortor sed suscipit .&lt;/p&gt;
+
+&lt;p class=&quot;text-gray&quot;&gt;Mauris quis metus quam vel euismod faucibus, ante nec erat erat.&lt;/p&gt;</code></pre>
+
+</div>
+
+<h5 class="subsection-title">Background Colors</h5>
+<div class="example-block">
+    <div class="example">
+        <div class="bg-green color-block"></div>
+        <div class="bg-blue color-block"></div>
+        <div class="bg-yellow color-block"></div>
+        <div class="bg-gray color-block"></div>
+        <div class="bg-white color-block bordered"></div>
+        <div class="bg-black color-block"></div>
+    </div>
+
+<pre><code class="language-html">&lt;div class=&quot;bg-green&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;bg-blue&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;bg-yellow&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;bg-gray&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;bg-white&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;bg-black&quot;&gt;&lt;/div&gt;</code></pre>
+
+</div>
+
+<h3 class="section-title" id="typography">Typography</h3>
+<p>There are a handful of basic typography utilities dealing with alignment, transformation, and wrapping. As with the color utilities, these classes should be primarily used for development purposes and only used in production code if no other style edits will be added to a tag.</p>
+
+<h5 class="subsection-title">Alignment</h5>
+<div class="example-block">
+    <div class="example">
+        <p class="align-left">Align left</p>
+        <p class="align-right">Align right</p>
+        <p class="align-center">Align center</p>
+    </div>
+
+<pre><code class="language-html">&lt;p class=&quot;align-left&quot;&gt;Align left&lt;/p&gt;
+&lt;p class=&quot;align-right&quot;&gt;Align right&lt;/p&gt;
+&lt;p class=&quot;align-center&quot;&gt;Align center&lt;/p&gt;</code></pre>
+
+</div>
+
+<h5 class="subsection-title">Text Transforms</h5>
+<div class="example-block">
+    <div class="example">
+        <p class="lowercase">Lowercase</p>
+        <p class="uppercase">Uppercase</p>
+    </div>
+
+<pre><code class="language-html">&lt;p class=&quot;lowercase&quot;&gt;Lowercase&lt;/p&gt;
+&lt;p class=&quot;uppercase&quot;&gt;Uppercase&lt;/p&gt;</code></pre>
+
+</div>
+
+
+<h5 class="subsection-title">Whitespace & Word Wrap</h5>
+<div class="example-block">
+    <div class="example">
+        <p class="nowrap">No wrap</p>
+        <p class="break-word">Breakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakword</p>
+    </div>
+
+<pre><code class="language-html">&lt;p class=&quot;nowrap&quot;&gt;No wrap.&lt;/p&gt;
+&lt;p class=&quot;break-word&quot;&gt;...&lt;/p&gt;</code></pre>
+
+</div>
+
+<h5 class="subsection-title">Typography Mixins</h5>
+<p>There are also a set of typography mixins that can be used to apply the various paragraph styles to customs classes. These can be used in conjunction with the color mixins to create blocks of important text.</p>
+
+<div class="example-block">
+    <div class="example">
+        <div class="primary text-green">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+        <div class="secondary text-yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+        <div class="tertiary text-white bg-gray" style="padding: 1rem";>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+        <div class="quote text-blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+
+<pre><code class="language-css">.block-1 {
+    @include primary-text();
+    @include text-green();
+}
+
+.block-2 {
+    @include secondary-text();
+    @include text-yellow();
+}
+
+.block-3 {
+    @include tertiary-text();
+    @include bg-gray();
+    @include text-white();
+}
+
+.block-1 {
+    @include quote-text();
+    @include text-blue();
+}</code></pre>
+
+</div>
+
+
+<h3 class="section-title" id="display">Display & Visibility</h3>
+<p>These classes should primarily be used to set a temporary display or visibility state that connected to a user interaction.</p>
+<div class="example-block code-only">
+<pre><code class="language-css"><span class="class">.show</span> <span class="rules">{
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;
+<span class="rule">}</span></span>
+<span class="class">.hide</span> <span class="rules">{
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> none</span></span>;
+<span class="rule">}</span></span>
+<span class="class">.invisible</span> <span class="rules">{
+    <span class="rule"><span class="attribute">visibility</span>:<span class="value"> hidden</span></span>;
+<span class="rule">}</span></span>
+<span class="class">.overflow-hidden</span> <span class="rules">{
+    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden
+</span></span></span>}</code></pre>
+
+</div>
+
+<div class="example-block code-only">
+<pre><code class="language-html">&lt;div class=&quot;show&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;hide&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;invisible&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;overflow-hidden&quot;&gt;...&lt;/div&gt;</code></pre>
+
+</div>
+
+<h3 class="section-title" id="floats">Floats & Positioning</h3>
+<p>The direction pull classes should only be used to add a temporary override in response to a user interaction since they use the otherwise unwanted <code>!important</code> attribute.</p>
+
+<p>The clearfix class can be used in cases where it is the only style change that needs to be applied.</p>
+
+<div class="example-block code-only">
+<pre><code class="language-css">.pull-left {
+    float: left !important;
+}
+.pull-right {
+    float: right !important;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.clearfix {
+    @include clearfix;
+}</code></pre>
+
+</div>
+<div class="example-block code-only">
+<pre><code class="language-html">&lt;div class=&quot;pull-left&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;pull-right&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;center-block&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;clearfix&quot;&gt;...&lt;/div&gt;</code></pre>
+
+</div>
+
+
+<h3 class="section-title" id="flexbox">Flexbox</h3>
+<p>To make aligning and positioning elements in our block grid system easier, we've provide a set of flexbox utility mixin that assist with easily applying standard layouts. These mixins should all be applied to the parent element (the containing div) and not to individual items within the flexbox which may require additional styling to tweak positioning.</p>
+<div class="example-block">
+    <div class="example">
+        <div class="flexbox-1">Lorem ipsum dolor sit amet</div>
+        <div class="flexbox-2">
+            <p>Obcaecati</p>
+            <p>Repudiandae ligendi architecto aperiam reprehenderit</p>
+        </div>
+        <div class="flexbox-3">
+            <h4>Ipsam pariatur suscipit</h4>
+            <p>Facilis explicabo quidem alias mollitia quam, dicta illo quod quas ea totam veniam, necessitatibus reiciendis officiis voluptatum sint quia similique eveniet, tempore.</p>
+        </div>
+        <div class="flexbox-4">
+            <div>Explicabo impedit voluptate aspernatur velit vitae labore numquam</div>
+            <div>Fugit voluptatibus reprehenderit itaque facilis quaerat minus neque, iste deleniti, at rem quos odit voluptates maxime. Quasi excepturi unde impedit laborum sequi!</div>
+        </div>
+    </div>
+
+<pre><code class="language-html">
+.block-1 {
+    // Centers items both horizontally and vertically
+    // Child elements will wrap onto multiple lines if necessary
+    @include flexbox-center();
+}
+
+.block-2 {
+    // Centers a single line of items vertically
+    // Forces all child elements to be on a single line
+    @include flexbox-center-vertically();
+}
+
+.block-3 {
+    // Centers multiple lines of items vertically
+    // Child elements will wrap onto multiple lines and will center within parent
+    @include flexbox-align-vertically();
+}
+
+.block-4 {
+    // Makes child items maintain the same height regardless of content
+    // Content within the child items remains top aligned
+    @include flexbox-same-height();
+}</code></pre>
+
+</div>
+
+
+<h3 class="section-title" id="variables">Global Variables</h3>
+<p>The global <code>_variables.scss</code> file contains the range of options for sizes, lineheights, and weights for fonts and icons, as well as z-index positions, colors, breakpoints, and grid dimensions.</p>
+
+<p>All values for these attributes used across the site should come from these variables to facilitate easy updates and maintenance. <b>Do not</b> use values outside those listed in the <code>_variables.scss</code> file or hardcode any values in individual css files.</p>
+
+<div class="example-block">
+    <div class="example">
+        <div style="font-weight: 700;">$font-weight-bold</div>
+        <div style="font-weight: 500;">$font-weight-medium</div>
+        <div style="font-weight: 400;">$font-weight-regular</div>
+        <div style="font-weight: 200;">$font-weight-light</div>
+        <br>
+        <div style="font-size: 1.2rem;">$font-size-xsmall</div>
+        <div style="font-size: 1.4rem;">$font-size-small</div>
+        <div style="font-size: 1.6rem;">$font-size-normal</div>
+        <div style="font-size: 2.2rem;">$font-size-large</div>
+        <div style="font-size: 2.8rem;">$font-size-xlarge</div>
+    </div>
+
+<pre><code class="language-css">$<span class="tag">font-weight-bold</span>        : 700;
+$<span class="tag">font-weight-medium</span>      : 500;
+$<span class="tag">font-weight-regular</span>     : 400;
+$<span class="tag">font-weight-light</span>       : 200;
+
+$<span class="tag">font-size-xsmall</span>        : 1<span class="class">.2rem</span>;
+$<span class="tag">font-size-small</span>         : 1<span class="class">.4rem</span>;
+$<span class="tag">font-size-normal</span>        : 1<span class="class">.6rem</span>;
+$<span class="tag">font-size-large</span>         : 2<span class="class">.2rem</span>;
+$<span class="tag">font-size-xlarge</span>        : 2<span class="class">.8rem</span>;</code></pre>
+
+</div>
+
+
+            </div>
+        </main>
+    </div>
+    <footer class="site-footer">
+    <p>&copy; 2016 Choose Energy</p>
+</footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        var sidebar = $( '.site-sidebar' );
+        var nav = $( '.site-sidebar nav' );
+        var navLink = $( '.site-sidebar nav li a[href*=#]' );
+        var navLinkListItems =  $( '.site-sidebar nav li a[href*=#]' ).parent( 'li' );
+
+        $( navLink ).click( function() {
+            navLinkListItems.removeClass( 'selected' );
+            $( this ).parent().addClass( 'selected' );
+            $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        });
+        $( 'li.selected' ).parents( 'li' ).addClass( 'selected' );
+
+        $( window ).scroll( function() {
+            if( $( window ).scrollTop() <= 56 ) {
+                sidebar.removeClass( 'fixed' );
+            } else {
+                sidebar.addClass( 'fixed' );
+            }
+        });
+
+        $( 'pre code' ).each( function( i, block ) {
+            hljs.highlightBlock( block );
+        });
+
+        $( 'select.select2-form' ).select2({
+            minimumResultsForSearch: Infinity
+        });
+    });
+    </script>
+</body>
+</html>
